@@ -158,7 +158,7 @@
 
 /* ── Navigeringsmenyer: ljus bakgrundsfärg ──────────────────────────────── */
 
-/* Vänster sidopanel */
+/* Vänster sidopanel (blå bas) */
 .sidebar {
   background-color: #f0f4fa !important;
 }
@@ -168,4 +168,22 @@
   background-color: #f0f4fa;
   padding: 0.75rem 1rem;
   border-radius: 6px;
+}
+
+/* Kurs 1 — ljusgrön */
+.sidebar li.nav-kurs1 {
+  background-color: #e8f5e9;
+}
+.sidebar li.nav-kurs1 a,
+.sidebar li.nav-kurs1.book-part {
+  background-color: #e8f5e9 !important;
+}
+
+/* Kurs 2 — ljusgul/beige */
+.sidebar li.nav-kurs2 {
+  background-color: #fff8e1;
+}
+.sidebar li.nav-kurs2 a,
+.sidebar li.nav-kurs2.book-part {
+  background-color: #fff8e1 !important;
 }

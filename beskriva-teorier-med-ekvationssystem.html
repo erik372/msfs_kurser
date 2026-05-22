@@ -535,10 +535,39 @@
     if (next) next.setAttribute('aria-label', 'Nästa');
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', translateUI);
-  } else {
+  function colorNavSections() {
+    // Hämta alla <li> i sidomenyn
+    var navList = document.querySelector('nav[aria-label="Table of contents"] ul, nav[aria-label="Innehållsförteckning"] ul');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
     translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 })();
 </script><div class="chapter-nav">
