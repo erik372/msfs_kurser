@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>8 Minstakvadratmetoden — fördjupning 2 | Matteboken</title>
+<title>8 Minstakvadratmetoden — fördjupning 2 | Matematik och statistik för samhällsvetare</title>
 <meta name="author" content="">
-<meta name="description" content="8.1 Regressionsanalys med tre variabler  8.1.1 Avsnitt 4.1: Regressionsanalys med tre variabler   8.1.2 Pushtext Avsnittet introducerar regressionsanalys med tre variabler: en förklarad variabel...">
+<meta name="description" content="8.1 Regressionsanalys med tre variabler  8.1.1 Begrepp Inga nya begrepp i detta avsnitt.  8.1.2 Teori Varför behöver vi fler än två variabler? I analytiskt arbete (och i världen överhuvudtaget)...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
-<meta property="og:title" content="8 Minstakvadratmetoden — fördjupning 2 | Matteboken">
+<meta property="og:title" content="8 Minstakvadratmetoden — fördjupning 2 | Matematik och statistik för samhällsvetare">
 <meta property="og:type" content="book">
-<meta property="og:description" content="8.1 Regressionsanalys med tre variabler  8.1.1 Avsnitt 4.1: Regressionsanalys med tre variabler   8.1.2 Pushtext Avsnittet introducerar regressionsanalys med tre variabler: en förklarad variabel...">
+<meta property="og:description" content="8.1 Regressionsanalys med tre variabler  8.1.1 Begrepp Inga nya begrepp i detta avsnitt.  8.1.2 Teori Varför behöver vi fler än två variabler? I analytiskt arbete (och i världen överhuvudtaget)...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="8 Minstakvadratmetoden — fördjupning 2 | Matteboken">
-<meta name="twitter:description" content="8.1 Regressionsanalys med tre variabler  8.1.1 Avsnitt 4.1: Regressionsanalys med tre variabler   8.1.2 Pushtext Avsnittet introducerar regressionsanalys med tre variabler: en förklarad variabel...">
+<meta name="twitter:title" content="8 Minstakvadratmetoden — fördjupning 2 | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="8.1 Regressionsanalys med tre variabler  8.1.1 Begrepp Inga nya begrepp i detta avsnitt.  8.1.2 Teori Varför behöver vi fler än två variabler? I analytiskt arbete (och i världen överhuvudtaget)...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -31,8 +31,7 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="Matematik och statistik för samhällsvetare">Matteboken</a>:
-        <small class="text-muted">Matematik och statistik för samhällsvetare</small>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -71,31 +70,20 @@
 <h2>
 <span class="header-section-number">8.1</span> Regressionsanalys med tre variabler<a class="anchor" aria-label="anchor" href="#k2-4-1"><i class="fas fa-link"></i></a>
 </h2>
-<div id="avsnitt-4.1-regressionsanalys-med-tre-variabler" class="section level3 title" number="8.1.1">
+<div id="begrepp-34" class="section level3" number="8.1.1">
 <h3>
-<span class="header-section-number">8.1.1</span> Avsnitt 4.1: Regressionsanalys med tre variabler<a class="anchor" aria-label="anchor" href="#avsnitt-4.1-regressionsanalys-med-tre-variabler"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="pushtext-32" class="section level3" number="8.1.2">
-<h3>
-<span class="header-section-number">8.1.2</span> Pushtext<a class="anchor" aria-label="anchor" href="#pushtext-32"><i class="fas fa-link"></i></a>
-</h3>
-<p>Avsnittet introducerar regressionsanalys med tre variabler: en förklarad variabel och två förklarande variabler. Detta leder till lite krångligare beräkningar men viktiga insikter om vetenskapliga metoder och logik.</p>
-</div>
-<div id="begrepp-34" class="section level3" number="8.1.3">
-<h3>
-<span class="header-section-number">8.1.3</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-34"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-34"><i class="fas fa-link"></i></a>
 </h3>
 <p><em>Inga nya begrepp i detta avsnitt.</em></p>
 </div>
-<div id="teori-34" class="section level3" number="8.1.4">
+<div id="teori-34" class="section level3" number="8.1.2">
 <h3>
-<span class="header-section-number">8.1.4</span> Teori<a class="anchor" aria-label="anchor" href="#teori-34"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-34"><i class="fas fa-link"></i></a>
 </h3>
 <p>Varför behöver vi fler än två variabler? I analytiskt arbete (och i världen överhuvudtaget) påverkas det vi studerar nästan alltid av flera faktorer samtidigt. Om vi bara inkluderar en förklarande variabel <span class="math inline">\((X)\)</span> men det egentligen finns en annan viktig variabel <span class="math inline">\((Z)\)</span> som också påverkar <span class="math inline">\(Y\)</span>, riskerar vi att få felaktiga resultat. I detta avsnitt ska vi lära oss hur regression fungerar med tre variabler, vilket är grunden för att kunna arbeta med ännu fler variabler senare.</p>
-<div id="vad-händer-när-vi-har-tre-variabler" class="section level4" number="8.1.4.1">
+<div id="vad-händer-när-vi-har-tre-variabler" class="section level4" number="8.1.2.1">
 <h4>
-<span class="header-section-number">8.1.4.1</span> Vad händer när vi har tre variabler?<a class="anchor" aria-label="anchor" href="#vad-h%C3%A4nder-n%C3%A4r-vi-har-tre-variabler"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1.2.1</span> Vad händer när vi har tre variabler?<a class="anchor" aria-label="anchor" href="#vad-h%C3%A4nder-n%C3%A4r-vi-har-tre-variabler"><i class="fas fa-link"></i></a>
 </h4>
 <p>Låt oss nu utgå från en regressionsmodell där den förklarade (beroende) variabeln <span class="math inline">\(Y\)</span> förklaras av de två förklarande (oberoende) variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>:</p>
 <p><span class="math inline">\(Y_{i} = a + bX_{i} + cZ_{i} + V_{i}\)</span> (1)</p>
@@ -107,9 +95,9 @@
 <p>I detta hypotetiska exempel är <span class="math inline">\(Z\)</span> studenternas ambitionsnivå. I en idealisk situation skulle detta innebära att vi nu rensar för betydelsen av studenternas ambitionsnivå <span class="math inline">\(Z\)</span>, när vi uppskattar samvariationen mellan utbildning <span class="math inline">\(X\)</span> och inkomst <span class="math inline">\(Y\)</span>.</p>
 <p>Om vi vill kontrollera för ytterligare andra fenomen kan vi lägga till fler förklarande variabler. Detta är en central aspekt av regressionsanalys och vi återkommer nedan till vad detta innebär.</p>
 </div>
-<div id="minstakvadratroten-med-tre-variabler" class="section level4" number="8.1.4.2">
+<div id="minstakvadratroten-med-tre-variabler" class="section level4" number="8.1.2.2">
 <h4>
-<span class="header-section-number">8.1.4.2</span> Minstakvadratroten med tre variabler<a class="anchor" aria-label="anchor" href="#minstakvadratroten-med-tre-variabler"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1.2.2</span> Minstakvadratroten med tre variabler<a class="anchor" aria-label="anchor" href="#minstakvadratroten-med-tre-variabler"><i class="fas fa-link"></i></a>
 </h4>
 <p>Låt oss återvända till regressionsmodellen i ekvation 1. Precis som när vi endast hade en förklarande variabel i regressionsmodellen ska vi nu, när vi har två förklarande variabler, hitta de värden för de konstanta koefficienterna <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> som minimerar de kvadrerade residualerna <span class="math inline">\(\sum_{}^{}{\widehat{V}}^{2}\)</span>. Vi kan därför beskriva vår beräkning som ett minimeringsproblem:</p>
 <p><span class="math inline">\(\ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}\ = \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (2)</p>
@@ -135,9 +123,9 @@
 <p>Alla tre koefficienterna <span class="math inline">\(\widehat{a}\)</span>, <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span> beror på de observerade värdena i de tre variablerna <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>. Detta kan vi se eftersom alla tre variablerna ingår i respektive ekvation (estimator).</p>
 <p>Detta innebär att även om <span class="math inline">\(\widehat{b}\)</span> mäter samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är <span class="math inline">\(\widehat{b}\)</span> en funktion av både <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>. Och trots att lutningskoefficienten <span class="math inline">\(\widehat{c}\)</span> mäter samvariationen mellan variablerna <span class="math inline">\(Y\)</span> och <span class="math inline">\(Z\)</span> är även <span class="math inline">\(\widehat{c}\)</span> en funktion av observationer i alla tre variablerna <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>.</p>
 </div>
-<div id="vad-spelar-allt-det-här-för-roll" class="section level4" number="8.1.4.3">
+<div id="vad-spelar-allt-det-här-för-roll" class="section level4" number="8.1.2.3">
 <h4>
-<span class="header-section-number">8.1.4.3</span> Vad spelar allt det här för roll?<a class="anchor" aria-label="anchor" href="#vad-spelar-allt-det-h%C3%A4r-f%C3%B6r-roll"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1.2.3</span> Vad spelar allt det här för roll?<a class="anchor" aria-label="anchor" href="#vad-spelar-allt-det-h%C3%A4r-f%C3%B6r-roll"><i class="fas fa-link"></i></a>
 </h4>
 <p>Huvudpoängen är enkel men avgörande: När vi lägger till eller tar bort variabler i en regressionsmodell ändras resultaten för de andra variablerna.</p>
 <p>I detta exempel såg vi att lutningskoefficienten för <span class="math inline">\(X\)</span> gick från <span class="math inline">\(0,5\)</span> till <span class="math inline">\(0,28\)</span> när vi lade till <span class="math inline">\(Z\)</span>. Detta betyder att om vi inte inkluderar viktiga variabler får vi felaktiga resultat.</p>
@@ -145,9 +133,9 @@
 <p>Om vi tillför en variabel till vår analys kan detta påverka resultaten för alla koefficienter som ingår i modellen. Säg att variabeln <span class="math inline">\(Z\)</span> bör ingå i modellen men att denna av någon anledning inte är med i analysen. I så fall kommer resultatet för variabeln <span class="math inline">\(X\)</span> att bli missvisande.</p>
 <p>Det korrekta resultatet får vi inte förrän vi inkluderar <span class="math inline">\(Z\)</span>. Detta är centralt för att förstå den här typen av metoder, forskning och analytiskt arbete i största allmänhet.</p>
 </div>
-<div id="estimera-en-modell" class="section level4" number="8.1.4.4">
+<div id="estimera-en-modell" class="section level4" number="8.1.2.4">
 <h4>
-<span class="header-section-number">8.1.4.4</span> Estimera en modell<a class="anchor" aria-label="anchor" href="#estimera-en-modell"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1.2.4</span> Estimera en modell<a class="anchor" aria-label="anchor" href="#estimera-en-modell"><i class="fas fa-link"></i></a>
 </h4>
 <p>Nu ska vi estimera en regressionsmodell utifrån några observationer. För detta återanvänder vi de påhittade variablerna <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> med de fyra observationer vardera som vi använde tidigare när vi introducerade minstakvadratmetoden. Alla tre variablerna redovisas i tabell 1 med lite beräkningar som vi behöver.</p>
 <p><strong>Tabell 1: Variablerna Y, X och Z med lite beräkningar</strong></p>
@@ -274,9 +262,9 @@
 <p><span class="math inline">\(\widehat{b} = \frac{(5)(9) - ( - 6)( - 4)}{(10)(9) - ( - 4)^{2}} \approx 0,28\)</span> (9)</p>
 <p><span class="math display">\<span class="math display">\[\\widehat{c} = \\frac{( - 6)(10) - (5)( - 4)}{(10)(9) - ( - 4)\^{2}} \\approx - 0,54\\\]</span></span></p>
 </div>
-<div id="vad-blev-det-för-skillnad" class="section level4" number="8.1.4.5">
+<div id="vad-blev-det-för-skillnad" class="section level4" number="8.1.2.5">
 <h4>
-<span class="header-section-number">8.1.4.5</span> Vad blev det för skillnad?<a class="anchor" aria-label="anchor" href="#vad-blev-det-f%C3%B6r-skillnad"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1.2.5</span> Vad blev det för skillnad?<a class="anchor" aria-label="anchor" href="#vad-blev-det-f%C3%B6r-skillnad"><i class="fas fa-link"></i></a>
 </h4>
 <p>När vi estimerade regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> fann vi att <span class="math inline">\(\widehat{b} = 0,5\)</span>. När vi nu lade till variabeln <span class="math inline">\(Z\)</span> i regressionsmodellen ser vi hur resultatet för lutningskoefficienten <span class="math inline">\(\widehat{b}\)</span> går från 0,5 till 0,3. Resultaten för <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span> använder vi för att estimera <span class="math inline">\(\widehat{a}\)</span>:</p>
 <p><span class="math inline">\(\widehat{a} = 3,5 - \widehat{b}*5 - \widehat{c}*1,5\)</span> (10)<span class="math inline">\( \)</span><span class="math display">\<span class="math display">\[= 3,5 - 0,28\*5 - ( - 0,54)\*1,5 \\approx 2,89\\\]</span></span></p>
@@ -331,9 +319,9 @@
 </tbody>
 </table></div>
 </div>
-<div id="ett-försök-att-illustrera-resultatet-i-diagram" class="section level4" number="8.1.4.6">
+<div id="ett-försök-att-illustrera-resultatet-i-diagram" class="section level4" number="8.1.2.6">
 <h4>
-<span class="header-section-number">8.1.4.6</span> Ett försök att illustrera resultatet i diagram<a class="anchor" aria-label="anchor" href="#ett-f%C3%B6rs%C3%B6k-att-illustrera-resultatet-i-diagram"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1.2.6</span> Ett försök att illustrera resultatet i diagram<a class="anchor" aria-label="anchor" href="#ett-f%C3%B6rs%C3%B6k-att-illustrera-resultatet-i-diagram"><i class="fas fa-link"></i></a>
 </h4>
 <p>När vi har tre variabler är det svårare att illustrera samvariation i ett diagram. Trots detta görs ett försök i figur 1 där de fyra observationerna är placerade i diagrammet utifrån deras värden för <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>.</p>
 <p>Den vertikala axeln är <span class="math inline">\(Y\)</span>-axeln medan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> har varsin horisontell axel. Den svarta pricken högst upp i diagrammet är observation 3 vars värden är <span class="math inline">\((Y,X,Z) = (5,6,0)\)</span>.</p>
@@ -342,9 +330,9 @@
 <p><em><mark>Sideeg &gt; Jag sparade ett 3d-diagram som html i katalogen</mark><a href="https://www.dropbox.com/scl/fo/2i2ntlsxmg2g3u0mjwg93/AGRmmFsd9k7y02ZW2EYyPyo?rlkey=oadbjo86p3expplymcnzfshu1&amp;dl=0">Eriks_3d_graf</a>. <mark>Om ni har möjlighet att göra det snyggare får ni jättegärna göra det</mark></em>😊</p>
 <p>Förklaring: Diagrammet illustrerar <span class="math inline">\(\widehat{Y} = 2,89 + 0,28X - 0,54Z\)</span>. Klicka och dra i diagrammet för att vrida på det.</p>
 </div>
-<div id="vad-spelar-allt-det-här-för-roll-1" class="section level4" number="8.1.4.7">
+<div id="vad-spelar-allt-det-här-för-roll-1" class="section level4" number="8.1.2.7">
 <h4>
-<span class="header-section-number">8.1.4.7</span> Vad spelar allt det här för roll?<a class="anchor" aria-label="anchor" href="#vad-spelar-allt-det-h%C3%A4r-f%C3%B6r-roll-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1.2.7</span> Vad spelar allt det här för roll?<a class="anchor" aria-label="anchor" href="#vad-spelar-allt-det-h%C3%A4r-f%C3%B6r-roll-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>När vi la till en ny variabel i vår regressionsmodell ändras samvariationen mellan de variabler vi hade i regressionsmodellen sedan innan. Poängen med denna genomgång är att visa att detta även gäller om vi skulle lägga till ytterligare variabler förutom de tre vi använt här. Och om vi tar bort en variabel från en regressionstabell så kan detta leda till att samvariationen för de kvarvarande variablerna ändras.</p>
 <p>Syftet med regressionsanalys är att studera mönster i data. Att saker samvarierar betyder inte nödvändigtvis någonting alls. Men i många situationer tolkar vi samvariation som tecken på orsakssamband. Ibland har vi goda skäl att göra så. Ibland inte.</p>
@@ -352,14 +340,14 @@
 <p>För att få bättre svar på dessa frågor behöver våra analysmetoder vara noggranna och genomtänkta på samma gång.</p>
 </div>
 </div>
-<div id="video-33" class="section level3" number="8.1.5">
+<div id="video-33" class="section level3" number="8.1.3">
 <h3>
-<span class="header-section-number">8.1.5</span> Video<a class="anchor" aria-label="anchor" href="#video-33"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1.3</span> Video<a class="anchor" aria-label="anchor" href="#video-33"><i class="fas fa-link"></i></a>
 </h3>
 </div>
-<div id="uppgifter-34" class="section level3" number="8.1.6">
+<div id="uppgifter-34" class="section level3" number="8.1.4">
 <h3>
-<span class="header-section-number">8.1.6</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-34"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1.4</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-34"><i class="fas fa-link"></i></a>
 </h3>
 <div class="ex-section-title">
 <p>Övningar</p>
@@ -373,44 +361,33 @@
 <h2>
 <span class="header-section-number">8.2</span> Faktorvariabler<a class="anchor" aria-label="anchor" href="#k2-4-2"><i class="fas fa-link"></i></a>
 </h2>
-<div id="avsnitt-4.2-faktorvariabler" class="section level3 title" number="8.2.1">
+<div id="begrepp-35" class="section level3" number="8.2.1">
 <h3>
-<span class="header-section-number">8.2.1</span> Avsnitt 4.2: Faktorvariabler<a class="anchor" aria-label="anchor" href="#avsnitt-4.2-faktorvariabler"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="pushtext-33" class="section level3" number="8.2.2">
-<h3>
-<span class="header-section-number">8.2.2</span> Pushtext<a class="anchor" aria-label="anchor" href="#pushtext-33"><i class="fas fa-link"></i></a>
-</h3>
-<p>Avsnittet introducerar faktorvariabler, även kallat kategoriska variabler, som antar diskreta värden till exempel för att beskriva kategorier.</p>
-</div>
-<div id="begrepp-35" class="section level3" number="8.2.3">
-<h3>
-<span class="header-section-number">8.2.3</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-35"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-35"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li><p><strong>Faktorvariabel:</strong> Kallas även kategoriska variabler. Variabler som beskriver grupper (kategorier), till exempel kön, kommuner, yrkesgrupper, utbildningsnivåer med mera.</p></li>
 <li><p><strong>Dummyvariabel:</strong> Kallas även indikatorvariabel. Förklarande variabler som endast antar värdet 0 eller 1. Används ofta för att beskriva kategorier, som till exempel 0 för män och 1 för kvinnor.</p></li>
 </ul>
 </div>
-<div id="teori-35" class="section level3" number="8.2.4">
+<div id="teori-35" class="section level3" number="8.2.2">
 <h3>
-<span class="header-section-number">8.2.4</span> Teori<a class="anchor" aria-label="anchor" href="#teori-35"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-35"><i class="fas fa-link"></i></a>
 </h3>
 <p>Regressionsanalys är en kvantitativ metod i den mening att vi använder kvantitativa data för att skapa kvantitativa resultat. Vi kan även använda <em>kvalitativa data</em> i vår analys, information som inte ursprungligen är angiven i siffror, så länge vi sätter siffror på denna.</p>
 <p>Ett exempel på detta är <em>faktorvariabler</em>, även kallat <em>kategoriska variabler</em>. Faktorvariabler beskriver grupper (kategorier), som kön, kommuner, yrkesgrupper.</p>
-<div id="faktorvariabler-med-två-unika-värden" class="section level4" number="8.2.4.1">
+<div id="faktorvariabler-med-två-unika-värden" class="section level4" number="8.2.2.1">
 <h4>
-<span class="header-section-number">8.2.4.1</span> Faktorvariabler med två unika värden<a class="anchor" aria-label="anchor" href="#faktorvariabler-med-tv%C3%A5-unika-v%C3%A4rden"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.2.1</span> Faktorvariabler med två unika värden<a class="anchor" aria-label="anchor" href="#faktorvariabler-med-tv%C3%A5-unika-v%C3%A4rden"><i class="fas fa-link"></i></a>
 </h4>
 <p>Låt oss börja med faktorvariabler som endast antar två olika värden, till exempel om vi skickar ut en enkät och ber mottagarna svara “Ja” eller “Nej”. En vanlig metod är då att ersätta det ena svarsalternativet med siffran 0 och det andra med siffran 1. Det spelar ingen roll vilket variabelvärde som får vilken siffra, så länge vi håller koll på vad som representerar vad när vi räknar.</p>
 <p>Ett annat exempel är en variabel som anger om en rad i en tabell innehåller information om en man eller en kvinna, varpå variabeln kan anta värdet 0 för det ena könet och 1 för det andra könet.</p>
 <p>En förklarande variabel i en regressionsmodell som endast antar värdena 0 eller 1 kallas för <em>dummyvariabel</em> eller <em>indikatorvariabel, kategorisk variabel</em>. Namnet "dummyvariabel" kommer från engelskans "dummy" som betyder "ersättning" eller "ställföreträdare". Vi ersätter kvalitativa kategorier (man/kvinna) med siffror (0/1) så att vi kan använda dem i regressionsanalys.</p>
 <p>Data som endast kan anta två värden kallas för binär. Ofta används just 0 eller 1 för att beskriva informationen i en binär variabel, även om 0 och 1 symboliserar något annat, till exempel 0=män och 1=kvinnor.</p>
 </div>
-<div id="exempel-på-tre-kommuner" class="section level4" number="8.2.4.2">
+<div id="exempel-på-tre-kommuner" class="section level4" number="8.2.2.2">
 <h4>
-<span class="header-section-number">8.2.4.2</span> Exempel på tre kommuner<a class="anchor" aria-label="anchor" href="#exempel-p%C3%A5-tre-kommuner"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.2.2</span> Exempel på tre kommuner<a class="anchor" aria-label="anchor" href="#exempel-p%C3%A5-tre-kommuner"><i class="fas fa-link"></i></a>
 </h4>
 <p>Tabell 1 redovisar genomsnittlig årsinkomst för män respektive kvinnor i tre kommuner för år 2019, räknat i tusentals kronor.</p>
 <p><strong>Tabell 1: Genomsnittlig inkomst 2019, 1 000-tals kr</strong></p>
@@ -543,9 +520,9 @@
 </div>
 <p>Förklaring: Regressionslinjen lutar nedåt vilket indikerar en negativ samvariation. I variabeln G har kvinnor värdet 1 och män värdet 0. Eftersom kvinnor har lägre inkomst i genomsnitt än män, uppstår en negativ samvariation.</p>
 </div>
-<div id="faktorvariabler-med-flera-värden" class="section level4" number="8.2.4.3">
+<div id="faktorvariabler-med-flera-värden" class="section level4" number="8.2.2.3">
 <h4>
-<span class="header-section-number">8.2.4.3</span> Faktorvariabler med flera värden<a class="anchor" aria-label="anchor" href="#faktorvariabler-med-flera-v%C3%A4rden"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.2.3</span> Faktorvariabler med flera värden<a class="anchor" aria-label="anchor" href="#faktorvariabler-med-flera-v%C3%A4rden"><i class="fas fa-link"></i></a>
 </h4>
 <p>Ovan hade vi en dummyvariabel för två värden: män och kvinnor. Dummyvariabler kan även vara användbara för att kategorisera faktorvariabler med flera värdena än två. Låt oss återigen räkna på inkomstskillnader mellan de tre kommunerna i föregående exempel, men i stället för skillnad mellan kvinnor och män ska vi nu beräkna skillnaden i genomsnittlig inkomst mellan kommunerna.</p>
 <p>Tabell 3 redovisar variablerna, där <span class="math inline">\(Y_{i}\)</span> nu anger medelinkomst för alla invånare per kommun. Variablerna <span class="math inline">\(K_{\text{Mörbylånga}}\)</span> och <span class="math inline">\(K_{\text{Oskarshamn}}\)</span> är två dummyvariabler för kommunerna i följande regressionsmodell:</p>
@@ -597,14 +574,14 @@
 <p>Den sista kommunens resultat ges av att alla dummyvariablerna = 0. I dessa situationer kan man ibland se att regressionsmodellen beskrivs som ett exempel: <span class="math inline">\(Y_{i} = c + bK_{i} + v\)</span> där <span class="math inline">\(K\)</span> symboliserar en av de 289 dummyvariablerna. För varje enskild kommun är övriga 288 dummyvariabler lika med 0.</p>
 </div>
 </div>
-<div id="video-34" class="section level3" number="8.2.5">
+<div id="video-34" class="section level3" number="8.2.3">
 <h3>
-<span class="header-section-number">8.2.5</span> Video<a class="anchor" aria-label="anchor" href="#video-34"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.3</span> Video<a class="anchor" aria-label="anchor" href="#video-34"><i class="fas fa-link"></i></a>
 </h3>
 </div>
-<div id="uppgifter-35" class="section level3" number="8.2.6">
+<div id="uppgifter-35" class="section level3" number="8.2.4">
 <h3>
-<span class="header-section-number">8.2.6</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-35"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.4</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-35"><i class="fas fa-link"></i></a>
 </h3>
 <div class="ex-section-title">
 <p>Övningar</p>
@@ -618,36 +595,25 @@
 <h2>
 <span class="header-section-number">8.3</span> Konstannhålla<a class="anchor" aria-label="anchor" href="#k2-4-3"><i class="fas fa-link"></i></a>
 </h2>
-<div id="avsnitt-4.3-konstanthålla" class="section level3 title" number="8.3.1">
+<div id="begrepp-36" class="section level3" number="8.3.1">
 <h3>
-<span class="header-section-number">8.3.1</span> Avsnitt 4.3: Konstanthålla<a class="anchor" aria-label="anchor" href="#avsnitt-4.3-konstanth%C3%A5lla"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="pushtext-34" class="section level3" number="8.3.2">
-<h3>
-<span class="header-section-number">8.3.2</span> Pushtext<a class="anchor" aria-label="anchor" href="#pushtext-34"><i class="fas fa-link"></i></a>
-</h3>
-<p>I detta avsnitt ska vi gå igenom vad det innebär när vi konstanthåller andra fenomen i en regressionsanalys. Vi illustrerar detta och några saker vi gått igenom tidigare med ytterligare ett exempel.</p>
-</div>
-<div id="begrepp-36" class="section level3" number="8.3.3">
-<h3>
-<span class="header-section-number">8.3.3</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-36"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.3.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-36"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
 <strong>Konstanthålla:</strong> Regressionsanalys med modell <span class="math inline">\(Y = a + bX + Z + \epsilon\)</span> innebär att vi uppskattar samvariationen mellan X och Y, med hänsyn till variationer i Z. Detta kallas för att vi konstanthåller Z. När vi uppskattar samvariationen mellan Z och Y konstanthåller vi X.</li>
 </ul>
 </div>
-<div id="teori-36" class="section level3" number="8.3.4">
+<div id="teori-36" class="section level3" number="8.3.2">
 <h3>
-<span class="header-section-number">8.3.4</span> Teori<a class="anchor" aria-label="anchor" href="#teori-36"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.3.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-36"><i class="fas fa-link"></i></a>
 </h3>
 <p>Regressionsanalys med flera förklarande variabler är ofta användbart för att få en korrekt bild av samvariationen mellan flera fenomen. I <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a> såg vi att om vi kontrollerar för flera variabler i vår regressionsmodell kan lutningskoefficienten för en annan variabel i modellen ändras. Detta kallas för att vi <strong>konstanthåller</strong> andra variabler.</p>
 <p>Att konstanthålla en variabel betyder att vi studerar sambandet mellan X och Y med hänsyn till Z. Vi frågar: "Om alla observationer hade samma värde på Z, hur skulle X och Y samvariera då?"</p>
 <p>Exempel: När vi studerar samvariationen mellan inkomst och livslängd med hänsyn till kön, frågar vi: "Hur samvarierar inkomst och livslängd bland kvinnor?" och "Hur samvarierar inkomst och livslängd bland män?" Detta är en av de centrala mekanismerna i regressionsanalys och i analytiskt arbete generellt.</p>
-<div id="illustrera-med-lite-data" class="section level4" number="8.3.4.1">
+<div id="illustrera-med-lite-data" class="section level4" number="8.3.2.1">
 <h4>
-<span class="header-section-number">8.3.4.1</span> Illustrera med lite data<a class="anchor" aria-label="anchor" href="#illustrera-med-lite-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.3.2.1</span> Illustrera med lite data<a class="anchor" aria-label="anchor" href="#illustrera-med-lite-data"><i class="fas fa-link"></i></a>
 </h4>
 <p>Säg att vi har regressionsmodellen <span class="math inline">\(Y = a + bX + cZ + V\)</span>, där <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> är variabler och <span class="math inline">\(V\)</span> är feltermen. Vi kan då beskriva detta som att vi håller variabeln <span class="math inline">\(Z\)</span> konstant när vi estimerar samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>. Och vi håller variabeln <span class="math inline">\(X\)</span> konstant när vi estimerar samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(Z\)</span>.</p>
 <p>Vi ska nu illustrera detta med hjälp av lite data över genomsnittlig livslängd och inkomst för kvinnor respektive män i tre av Sveriges kommuner, vilket beskrivs i tabell 1. Kolumnen längst till höger beskriver en dummyvariabel <span class="math inline">\(G\)</span> för kön där kvinnor = 0 och män = 1.</p>
@@ -715,9 +681,9 @@
 </table></div>
 <p>Förklaring:</p>
 </div>
-<div id="vår-första-regressionsmodell" class="section level4" number="8.3.4.2">
+<div id="vår-första-regressionsmodell" class="section level4" number="8.3.2.2">
 <h4>
-<span class="header-section-number">8.3.4.2</span> Vår första regressionsmodell<a class="anchor" aria-label="anchor" href="#v%C3%A5r-f%C3%B6rsta-regressionsmodell"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.3.2.2</span> Vår första regressionsmodell<a class="anchor" aria-label="anchor" href="#v%C3%A5r-f%C3%B6rsta-regressionsmodell"><i class="fas fa-link"></i></a>
 </h4>
 <p>Låt oss börja med att estimera samvariation mellan livslängd och inkomst med följande regressionsmodell:</p>
 <p><span class="math inline">\(L = a_{1} + a_{2}I + \epsilon\)</span> (1)</p>
@@ -729,9 +695,9 @@
 <p><span class="math inline">\(L = \widehat{a} + \widehat{b}I = 92 - 4,2I\)</span> (4)</p>
 <p>Enligt denna beräkning finns det en negativ samvariation mellan livslängd <span class="math inline">\(L\)</span> och inkomst <span class="math inline">\(I\)</span>, vilket innebär att människor med högre inkomst i genomsnitt lever kortare liv.</p>
 </div>
-<div id="lägger-till-variabeln-g" class="section level4" number="8.3.4.3">
+<div id="lägger-till-variabeln-g" class="section level4" number="8.3.2.3">
 <h4>
-<span class="header-section-number">8.3.4.3</span> Lägger till variabeln <span class="math inline">\(G\)</span><a class="anchor" aria-label="anchor" href="#l%C3%A4gger-till-variabeln-g"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.3.2.3</span> Lägger till variabeln <span class="math inline">\(G\)</span><a class="anchor" aria-label="anchor" href="#l%C3%A4gger-till-variabeln-g"><i class="fas fa-link"></i></a>
 </h4>
 <p>Låt oss nu lägga till variabeln kön <span class="math inline">\(G\)</span> till vår regressionsmodell. I tabell 1 är detta en dummyvariabel som endast antar värdet 0 eller 1. Vi ska nu estimera följande regressionsmodell:</p>
 <p><span class="math inline">\(L = b_{1} + b_{2}I + b_{3}G + V\)</span> (5)</p>
@@ -747,9 +713,9 @@
 <p>Detta är ett exempel på något som kallas <a href="https://en.wikipedia.org/wiki/Simpson%27s_paradox">Simpsons paradox</a>: När vi studerar inkomst och livslängd utan att ta hänsyn till kön får vi negativ samvariation. Men när vi tar hänsyn till kön (konstanthåller kön) får vi positiv samvariation.</p>
 <p>Varför? Kvinnor lever längre och har lägre inkomst. Män lever kortare och har högre inkomst. Om vi inte separerar könen ser det ut som att högre inkomst = kortare liv, vilket är felaktigt. Detta visar varför det är så viktigt att inkludera relevanta variabler i regressionsanalys. Det illustrerar även varför vi måste ta hänsyn till viktiga fenomen när vi vill förstå hur världen fungerar.</p>
 </div>
-<div id="illustration-i-diagram-1" class="section level4" number="8.3.4.4">
+<div id="illustration-i-diagram-1" class="section level4" number="8.3.2.4">
 <h4>
-<span class="header-section-number">8.3.4.4</span> Illustration i diagram<a class="anchor" aria-label="anchor" href="#illustration-i-diagram-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.3.2.4</span> Illustration i diagram<a class="anchor" aria-label="anchor" href="#illustration-i-diagram-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>Figur 1 illustrerar samvariationen mellan livslängd och inkomst i två diagram, varsitt för regressionsmodellerna i ekvation 1 och 5. I båda diagrammen har vi markerat vilka observationer som hör till män respektive kvinnor. Vi har tre prickar för män och tre för kvinnor, eftersom vi har tre kommuner med två observationer per kommun. Det vänstra diagrammet illustrerar resultatet i den första regressionsmodellen i ekvation 1 som vi estimerade till:</p>
 <p><span class="math inline">\(L = \widehat{a_{1}} + \widehat{a_{2}}I = 92 - 4,2I\)</span> (10)</p>
@@ -761,14 +727,14 @@
 <p>Förklaring: I det vänstra diagrammet ser vi resultaten från den estimerade regressionsmodellen i ekvation 1. I det högra diagrammet är regressionsmodellen i ekvation 5 illustrerade för <span class="math inline">\(G = 0\)</span> respektive <span class="math inline">\(G = 1\)</span>.</p>
 </div>
 </div>
-<div id="video-35" class="section level3" number="8.3.5">
+<div id="video-35" class="section level3" number="8.3.3">
 <h3>
-<span class="header-section-number">8.3.5</span> Video<a class="anchor" aria-label="anchor" href="#video-35"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.3.3</span> Video<a class="anchor" aria-label="anchor" href="#video-35"><i class="fas fa-link"></i></a>
 </h3>
 </div>
-<div id="uppgifter-36" class="section level3" number="8.3.6">
+<div id="uppgifter-36" class="section level3" number="8.3.4">
 <h3>
-<span class="header-section-number">8.3.6</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-36"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.3.4</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-36"><i class="fas fa-link"></i></a>
 </h3>
 <div class="ex-section-title">
 <p>Övningar</p>
@@ -782,20 +748,9 @@
 <h2>
 <span class="header-section-number">8.4</span> Regression med matriser<a class="anchor" aria-label="anchor" href="#k2-4-4"><i class="fas fa-link"></i></a>
 </h2>
-<div id="avsnitt-4.4-regression-med-matriser" class="section level3 title" number="8.4.1">
+<div id="begrepp-37" class="section level3" number="8.4.1">
 <h3>
-<span class="header-section-number">8.4.1</span> Avsnitt 4.4: Regression med matriser<a class="anchor" aria-label="anchor" href="#avsnitt-4.4-regression-med-matriser"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="pushtext-35" class="section level3" number="8.4.2">
-<h3>
-<span class="header-section-number">8.4.2</span> Pushtext<a class="anchor" aria-label="anchor" href="#pushtext-35"><i class="fas fa-link"></i></a>
-</h3>
-<p>I detta avsnitt introducerar vi hur vi kan använda regressionsanalys och minstakvadratmetoden med matriser. Matriser gör det enklare att beskriva beräkningar och logik för en regressionsmodell med valfritt antal variabler och koefficienter.</p>
-</div>
-<div id="begrepp-37" class="section level3" number="8.4.3">
-<h3>
-<span class="header-section-number">8.4.3</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-37"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-37"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li><p><strong>Matrisinvers:</strong> Inversen av en matris <span class="math inline">\(A_{n \times n}\)</span> skrivs <span class="math inline">\(A^{- 1}\)</span> och existerar om det finns en matris <span class="math inline">\(B_{n \times n}\)</span> där <span class="math inline">\(AB = BA = I_{n}\)</span> och <span class="math inline">\(I_{n}\)</span> är identitetsmatrisen.</p></li>
@@ -803,17 +758,17 @@
 <li><p><strong>Koefficienternas estimator:</strong> <span class="math inline">\(\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y\)</span></p></li>
 </ul>
 </div>
-<div id="teori-37" class="section level3" number="8.4.4">
+<div id="teori-37" class="section level3" number="8.4.2">
 <h3>
-<span class="header-section-number">8.4.4</span> Teori<a class="anchor" aria-label="anchor" href="#teori-37"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-37"><i class="fas fa-link"></i></a>
 </h3>
 <p>I detta avsnitt ska vi börja använda oss av matriser. Om du är ovan vid detta bör du försäkra dig om att du är bekant med de nödvändiga grunderna under Mattebokens avsnitt för <a href="https://www.matteboken.se/lektioner/matte-1/geometri/rakna-med-vektorer?gad_source=1&amp;gclid=Cj0KCQiA4-y8BhC3ARIsAHmjC_EE4luBpXEIA9dSFbMXRyktZXjcMTbPazinfY10UYe1KPWbXYpX71waAvC4EALw_wcB#!/">vektorer</a> och <a href="https://www.matteboken.se/lektioner/mattespecialisering/linjar-algebra/matriser?gad_source=1&amp;gclid=Cj0KCQiA4-y8BhC3ARIsAHmjC_HqWpw9cEdTu7hflPh5m_Fnb4iWC93EoIgi7FGQA0aPz5cK7yNNnw8aAsN7EALw_wcB#!/">matriser</a>.</p>
 <p>Detta avsnitt introducerar matriser i regressionsanalys. Matriser är ett kraftfullt verktyg men matematiken kan kännas abstrakt. Eftersom beräkningar görs med datorer behöver du inte kunna detta för hand. Du behöver inte heller förstå detaljerna. Fokusera på att förstå vad matriserna representerar. Om du känner dig överväldigad kan du hoppa till sammanfattningen i slutet eller gå till nästa avsnitt. Du kan fortfarande förstå regression utan någon djupare kunskap om matrisräkning.</p>
 <p>Varför du ändå bör försöka lära dig detta: Genom att gå igenom logiken i matrisräkningen på ett övergripande plan kommer du få en djupare förståelse metoden. Logiken i regressionsanalys som presenteras här har en central betydelse för vetenskap generellt och är avgörande för hur vi tänker på orsakssamband och världen i stort. Huvudbudskapet är alltså mer teoretiskt eller filosofiskt, snarare än matematiskt.</p>
 <p>Mer konkret får du dessutom en förståelse för hur statistikprogram faktiskt arbetar, förmåga att generalisera till valfritt antal variabler och grund för senare avancerade koncept (varians-kovariansmatriser).</p>
-<div id="inversen-av-en-matris" class="section level4" number="8.4.4.1">
+<div id="inversen-av-en-matris" class="section level4" number="8.4.2.1">
 <h4>
-<span class="header-section-number">8.4.4.1</span> Inversen av en matris<a class="anchor" aria-label="anchor" href="#inversen-av-en-matris"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.2.1</span> Inversen av en matris<a class="anchor" aria-label="anchor" href="#inversen-av-en-matris"><i class="fas fa-link"></i></a>
 </h4>
 <p>I detta avsnitt ska vi bland annat använda <em>inversen av matriser</em>, även kallat <em>inversmatriser</em>. Om vi dividerar siffran 1 med ett reellt tal <em>a</em> får vi <span class="math inline">\(\frac{1}{a} = a^{- 1}\)</span>. Detta innebär även att <span class="math inline">\(\frac{a}{a} = a^{1}a^{- 1} = 1\)</span>. Talet <span class="math inline">\(a^{- 1}\)</span> kallas för multiplikativa inversen av <span class="math inline">\(a\)</span>. För matriser kan man inte utföra någon division på samma sätt som man gör med vanliga tal. I stället har vi inversen av matriser.</p>
 <p>En <span class="math inline">\(n \times n\)</span> (lika många rader som kolumner) matris <span class="math inline">\(A\)</span> är inverterbar (inversen av A existerar) om det existerar en <span class="math inline">\(n \times n\)</span> matris <span class="math inline">\(B\)</span>, vars egenskaper innebär följande:</p>
@@ -826,9 +781,9 @@
 <p>En viktig egenskap för inversen av matris <span class="math inline">\(A\)</span> är följande: <span class="math inline">\(AA^{- 1} = I\)</span>, det vill säga att matris <span class="math inline">\(A\)</span> matrismultiplicerad med dess invers <span class="math inline">\(A^{- 1}\)</span> är lika med identitetsmatrisen <span class="math inline">\(I\)</span>.</p>
 <p>På <a href="https://www.mathsisfun.com/algebra/matrix-inverse.html">denna webbsida</a> kan du se räkneexempel på engelska. Se även <a href="https://en.wikipedia.org/wiki/Invertible_matrix">Wikipedia</a>. Många datorprogram har färdiga kommandon för att utföra denna typ av beräkningar.</p>
 </div>
-<div id="ett-generellt-uttryck-för-vår-regressionsmodell" class="section level4" number="8.4.4.2">
+<div id="ett-generellt-uttryck-för-vår-regressionsmodell" class="section level4" number="8.4.2.2">
 <h4>
-<span class="header-section-number">8.4.4.2</span> Ett generellt uttryck för vår regressionsmodell<a class="anchor" aria-label="anchor" href="#ett-generellt-uttryck-f%C3%B6r-v%C3%A5r-regressionsmodell"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.2.2</span> Ett generellt uttryck för vår regressionsmodell<a class="anchor" aria-label="anchor" href="#ett-generellt-uttryck-f%C3%B6r-v%C3%A5r-regressionsmodell"><i class="fas fa-link"></i></a>
 </h4>
 <p>I <a href="https://www.dropbox.com/scl/fi/v0a5z69slwsy7pe20fp7d/3-4-H-rled-estimatorerna.docx?rlkey=kdu3tyfzbzhxk9o1g4xhf17x4&amp;dl=0">avsnitt 3.4</a> härledde vi koefficienternas estimatorer för en regressionsmodell med två variabler. I detta avsnitt ska vi härleda ett mer generellt uttryck för estimatorerna utifrån en regressionsmodell med ett valfritt antal koefficienter och variabler. För detta ska vi använda matriser. Vi börjar med förutsättningarna:</p>
 <ul>
@@ -845,9 +800,9 @@
 <p>där <span class="math inline">\(x_{11}\)</span> syftar på första förklarande variabeln och första observationen. <span class="math inline">\(x_{21}\)</span> är andra förklarande variabeln, första observationen.</p>
 <p>I matrisform får vi en kolumnmatris <span class="math inline">\(Y\)</span>, en matris <span class="math inline">\(X\)</span> med konstanten 1 och förklarande variablerna i varsin kolumn, en kolumnmatris <span class="math inline">\(B\)</span> med koefficienterna och en kolumnmatris <span class="math inline">\(V\)</span> med feltermerna. Detta är den linjära relationen i populationen som vi nu ska försöka estimera med hjälp av minstakvadratmetoden.</p>
 </div>
-<div id="formulerad-som-ett-minimeringsproblem" class="section level4" number="8.4.4.3">
+<div id="formulerad-som-ett-minimeringsproblem" class="section level4" number="8.4.2.3">
 <h4>
-<span class="header-section-number">8.4.4.3</span> Formulerad som ett minimeringsproblem<a class="anchor" aria-label="anchor" href="#formulerad-som-ett-minimeringsproblem"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.2.3</span> Formulerad som ett minimeringsproblem<a class="anchor" aria-label="anchor" href="#formulerad-som-ett-minimeringsproblem"><i class="fas fa-link"></i></a>
 </h4>
 <p>Precis som tidigare innebär minstakvadratmetoden att vi vill minimera kvadrerade residualerna. Utifrån vår regressionsmodell kan vi nu formulera vårt minimeringsproblem.</p>
 <p>Vi söker de estimerade koefficienterna <span class="math inline">\(\widehat{B}\)</span> som minimerar summan av de kvadrerade residualerna. Vi börjar med att sätta in <span class="math inline">\(\widehat{B}\)</span> och <span class="math inline">\(\widehat{V}\)</span> i vår ekvation och flyttar om lite så att vi får en ekvation där residualerna <span class="math inline">\(\widehat{V}\)</span> är ett resultat av de andra termerna i modellen:</p>
@@ -872,23 +827,23 @@
 <p><span class="math display">\<span class="math display">\[\\widehat{B} = \\left( X\^{T}X \\right)\^{- 1}X\^{T}Y\\\]</span></span></p>
 <p>Detta är estimatorn för samtliga koefficienter i matris <span class="math inline">\(B\)</span>. Med hjälp av denna ekvation och våra urvalsdata kan vi beräkna uppskattade värden av koefficienterna som återfinns i populationen vi studerar.</p>
 </div>
-<div id="vad-var-poängen-med-allt-det-här" class="section level4" number="8.4.4.4">
+<div id="vad-var-poängen-med-allt-det-här" class="section level4" number="8.4.2.4">
 <h4>
-<span class="header-section-number">8.4.4.4</span> Vad var poängen med allt det här?<a class="anchor" aria-label="anchor" href="#vad-var-po%C3%A4ngen-med-allt-det-h%C3%A4r"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.2.4</span> Vad var poängen med allt det här?<a class="anchor" aria-label="anchor" href="#vad-var-po%C3%A4ngen-med-allt-det-h%C3%A4r"><i class="fas fa-link"></i></a>
 </h4>
 <p>Vi har nu ett uttryck för estimerade koefficienterna <span class="math inline">\(\widehat{B}\)</span> som en funktion av de förklarande variablerna i <span class="math inline">\(X\)</span> och den förklarade variabeln i <span class="math inline">\(Y\)</span>: <span class="math inline">\(\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y\)</span></p>
 <p>Regressionsanalys innebär att vi kan uppskatta samvariationen mellan ett fenomen och ett annat fenomen, samtidigt som vi kontrollerar för andra fenomen. Matriserna ovan beskriver hur detta fungerar när vi har många variabler och koefficienter.</p>
 <p>En viktig sak med denna matematik är att samtliga koefficienter i <span class="math inline">\(\widehat{B}\)</span> är ett resultat av samtliga variabler i <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>, oavsett hur många variabler vi har. I matriserna <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> ingår alla observationer för respektive variabel. Alla variabler i regressionsmodellen kan därför påverka resultaten för alla koefficienter i regressionsmodellen. Detta är centralt för hur vi tänker att världen fungerar, vilket vi ska fördjupa oss i kommande avsnitt.</p>
 </div>
 </div>
-<div id="video-36" class="section level3" number="8.4.5">
+<div id="video-36" class="section level3" number="8.4.3">
 <h3>
-<span class="header-section-number">8.4.5</span> Video<a class="anchor" aria-label="anchor" href="#video-36"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.3</span> Video<a class="anchor" aria-label="anchor" href="#video-36"><i class="fas fa-link"></i></a>
 </h3>
 </div>
-<div id="uppgifter-37" class="section level3" number="8.4.6">
+<div id="uppgifter-37" class="section level3" number="8.4.4">
 <h3>
-<span class="header-section-number">8.4.6</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-37"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.4</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-37"><i class="fas fa-link"></i></a>
 </h3>
 <div class="ex-section-title">
 <p>Övningar</p>
@@ -902,32 +857,21 @@
 <h2>
 <span class="header-section-number">8.5</span> Estimera med matriser<a class="anchor" aria-label="anchor" href="#k2-4-5"><i class="fas fa-link"></i></a>
 </h2>
-<div id="avsnitt-4.5-estimera-med-matriser" class="section level3 title" number="8.5.1">
+<div id="begrepp-38" class="section level3" number="8.5.1">
 <h3>
-<span class="header-section-number">8.5.1</span> Avsnitt 4.5: Estimera med matriser<a class="anchor" aria-label="anchor" href="#avsnitt-4.5-estimera-med-matriser"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="pushtext-36" class="section level3" number="8.5.2">
-<h3>
-<span class="header-section-number">8.5.2</span> Pushtext<a class="anchor" aria-label="anchor" href="#pushtext-36"><i class="fas fa-link"></i></a>
-</h3>
-<p>Avsnittet går igenom några praktiska exempel på regressionsmodeller som vi estimerar med matriser.</p>
-</div>
-<div id="begrepp-38" class="section level3" number="8.5.3">
-<h3>
-<span class="header-section-number">8.5.3</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-38"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.5.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-38"><i class="fas fa-link"></i></a>
 </h3>
 <p><em>Inga nya begrepp i detta avsnitt.</em></p>
 </div>
-<div id="teori-38" class="section level3" number="8.5.4">
+<div id="teori-38" class="section level3" number="8.5.2">
 <h3>
-<span class="header-section-number">8.5.4</span> Teori<a class="anchor" aria-label="anchor" href="#teori-38"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.5.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-38"><i class="fas fa-link"></i></a>
 </h3>
 <p>I tidigare avsnitt räknade vi med formler för 2 och 3 variabler. Men vad händer om vi har 10 variabler? Eller 100? Matriser låter oss sammanfatta denna typ av beräkningar i en enda kompakt kortfattad formel som fungerar för valfritt antal variabler.</p>
 <p>I dessa exempel ser du att matrismetoden ger exakt samma svar som de tidigare metoderna. Men med matriser blir det tydligt att metoden är generaliserbar till valfritt antal variabler eller valfritt antal observationer. Därigenom blir det förhoppningsvis även tydligare vad som är metodens stora fördelar och begränsningar.</p>
-<div id="exempel-nr-1" class="section level4" number="8.5.4.1">
+<div id="exempel-nr-1" class="section level4" number="8.5.2.1">
 <h4>
-<span class="header-section-number">8.5.4.1</span> Exempel nr 1<a class="anchor" aria-label="anchor" href="#exempel-nr-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.5.2.1</span> Exempel nr 1<a class="anchor" aria-label="anchor" href="#exempel-nr-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>I föregående avsnitt definierade vi minstakvadratmetodens estimator för koefficienterna i en regressionsmodell beskriven med matriser. Låt oss prova hur vi kan använda detta för att estimera modeller utifrån data. Här följer tre exempel där vi återanvänder data och regressionsmodeller från tidigare exempel.</p>
 <p>Låt oss nu återanvända den första regressionsmodellen och observationerna för denna som vi introducerade i <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a>: <span class="math inline">\(Y = a + bX + V\)</span>. Men denna gång ska vi estimera modellen med matriser. Samma observationer som vi använt tidigare upprepas i tabell 1.</p>
@@ -980,9 +924,9 @@
 <p><span class="math inline">\(\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbrack = \begin{bmatrix} 4 &amp; 20 \\ 20 &amp; 110 \end{bmatrix}^{- 1}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack\)</span> (4)<span class="math inline">\( \)</span><span class="math display">\<span class="math display">\[{= \\frac{1}{4\*110 - ( - 20)\*( - 20)}\\begin{bmatrix} 110 &amp; - 20 \\\\ - 20 &amp; 4 \\end{bmatrix}\\left\\lbrack \\begin{array}{r} 14 \\\\ 75 \\end{array} \\right\\rbrack }{= \\left( \\frac{1}{440 - 400} \\right)\\begin{bmatrix} 110 &amp; - 20 \\\\ - 20 &amp; 4 \\end{bmatrix}\\left\\lbrack \\begin{array}{r} 14 \\\\ 75 \\end{array} \\right\\rbrack }{= \\begin{bmatrix} \\frac{110}{40} &amp; \\frac{- 20}{40}\\ \\\\ \\frac{- 20}{40} &amp; \\frac{4}{40} \\end{bmatrix}\\left\\lbrack \\begin{array}{r} 14 \\\\ 75 \\end{array} \\right\\rbrack }{= \\begin{bmatrix} \\frac{11}{4} &amp; - \\frac{1}{2} \\\\ - \\frac{1}{2} &amp; \\frac{1}{10} \\end{bmatrix}\\left\\lbrack \\begin{array}{r} 14 \\\\ 75 \\end{array} \\right\\rbrack }{= \\left\\lbrack \\begin{array}{r} 1 \\\\ 0,5 \\end{array} \\right\\rbrack }\\\]</span></span></p>
 <p>Vårt resultat visar att <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>, vilket är samma sak som vi kom fram till tidigare.</p>
 </div>
-<div id="exempel-nr-2" class="section level4" number="8.5.4.2">
+<div id="exempel-nr-2" class="section level4" number="8.5.2.2">
 <h4>
-<span class="header-section-number">8.5.4.2</span> Exempel nr 2<a class="anchor" aria-label="anchor" href="#exempel-nr-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.5.2.2</span> Exempel nr 2<a class="anchor" aria-label="anchor" href="#exempel-nr-2"><i class="fas fa-link"></i></a>
 </h4>
 <p>Låt oss även göra samma sak för regressionsmodellen från <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a>: <span class="math inline">\(Y = a + bX + cZ + V\)</span>, vilket vi kan skriva med matriser som:</p>
 <p><span class="math inline">\(Y = XB + V\)</span> (5)</p>
@@ -1036,9 +980,9 @@
 <p><span class="math display">\<span class="math display">\[\\left\\lbrack \\begin{array}{r} \\widehat{a} \\\\ \\widehat{b} \\\\ \\widehat{c} \\end{array} \\right\\rbrack \\approx \\left\\lbrack \\begin{array}{r} 2,9 \\\\ 0,3 \\\\ - 0,5 \\end{array} \\right\\rbrack\\\]</span></span></p>
 <p>Sista raden innehåller de avrundade resultaten <span class="math inline">\(\widehat{a} \approx 2,9\)</span>, <span class="math inline">\(\widehat{b} \approx 0,3\)</span> och <span class="math inline">\(\widehat{c} \approx - 0,5\)</span>. Detta är samma sak som vi kom fram till i <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a>.</p>
 </div>
-<div id="exempel-nr-3" class="section level4" number="8.5.4.3">
+<div id="exempel-nr-3" class="section level4" number="8.5.2.3">
 <h4>
-<span class="header-section-number">8.5.4.3</span> Exempel nr 3<a class="anchor" aria-label="anchor" href="#exempel-nr-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.5.2.3</span> Exempel nr 3<a class="anchor" aria-label="anchor" href="#exempel-nr-3"><i class="fas fa-link"></i></a>
 </h4>
 <p>I <a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a> använde vi fyra observationer för variablerna <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span> vilka upprepas i tabell 3. Med dessa observationer estimerade vi regressionsmodellen <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>, där <span class="math inline">\(\epsilon\)</span> är feltermen och <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span> är modellens koefficienter, som vi fann var <span class="math inline">\(\widehat{\alpha} = 2,5\)</span> och <span class="math inline">\(\widehat{\beta} = - 0,5\)</span>.</p>
 <p><strong>Tabell 3: Variablerna</strong> <span class="math inline">\(Z\)</span> <strong>och</strong> <span class="math inline">\(K\)</span></p>
@@ -1083,14 +1027,14 @@
 <p>vilket är samma som vi kom fram till i <a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a>.</p>
 </div>
 </div>
-<div id="video-37" class="section level3" number="8.5.5">
+<div id="video-37" class="section level3" number="8.5.3">
 <h3>
-<span class="header-section-number">8.5.5</span> Video<a class="anchor" aria-label="anchor" href="#video-37"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.5.3</span> Video<a class="anchor" aria-label="anchor" href="#video-37"><i class="fas fa-link"></i></a>
 </h3>
 </div>
-<div id="uppgifter-38" class="section level3" number="8.5.6">
+<div id="uppgifter-38" class="section level3" number="8.5.4">
 <h3>
-<span class="header-section-number">8.5.6</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-38"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.5.4</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-38"><i class="fas fa-link"></i></a>
 </h3>
 <div class="ex-section-title">
 <p>Övningar</p>
@@ -1104,29 +1048,18 @@
 <h2>
 <span class="header-section-number">8.6</span> Interaktion<a class="anchor" aria-label="anchor" href="#k2-4-6"><i class="fas fa-link"></i></a>
 </h2>
-<div id="kapitel-4.6-regressionsanalys-med-interaktionseffekt" class="section level3 title" number="8.6.1">
+<div id="begrepp-39" class="section level3" number="8.6.1">
 <h3>
-<span class="header-section-number">8.6.1</span> Kapitel 4.6: Regressionsanalys med interaktionseffekt<a class="anchor" aria-label="anchor" href="#kapitel-4.6-regressionsanalys-med-interaktionseffekt"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="pushtext-37" class="section level3" number="8.6.2">
-<h3>
-<span class="header-section-number">8.6.2</span> Pushtext<a class="anchor" aria-label="anchor" href="#pushtext-37"><i class="fas fa-link"></i></a>
-</h3>
-<p>I detta avsnitt går vi igenom regressionsanalys med interaktionseffekter. Interaktionseffekt syftar på när vi kombinerar två förklarande variabler för att uppskatta hur en variabel kan ha olika effekter, beroende på en annan variabel.</p>
-</div>
-<div id="begrepp-39" class="section level3" number="8.6.3">
-<h3>
-<span class="header-section-number">8.6.3</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-39"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.6.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-39"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
 <strong>Interaktionseffekt:</strong> Analys av hur effekten av ett fenomen beror på tillståndet för ett annat fenomen.</li>
 </ul>
 </div>
-<div id="teori-39" class="section level3" number="8.6.4">
+<div id="teori-39" class="section level3" number="8.6.2">
 <h3>
-<span class="header-section-number">8.6.4</span> Teori<a class="anchor" aria-label="anchor" href="#teori-39"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.6.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-39"><i class="fas fa-link"></i></a>
 </h3>
 <p>I detta avsnitt ska vi introducera interaktionseffekt. Hittills har vi antagit att effekten av <span class="math inline">\(X\)</span> på <span class="math inline">\(Y\)</span> är densamma oavsett värdet på <span class="math inline">\(Z\)</span>. Samvariationen (lutningskoefficienten för <span class="math inline">\(X\)</span>) är densamma oavsett om <span class="math inline">\(Z\)</span> har höga eller låga värden.</p>
 <p>Men ibland påverkar andra fenomen (som <span class="math inline">\(Z\)</span>) hur starkt <span class="math inline">\(X\)</span> samvarierar med <span class="math inline">\(Y\)</span>. Detta kallas för interaktionseffekt. Exempel:</p>
@@ -1136,9 +1069,9 @@
 <li><p>Kanske påverkar utbildning inkomst olika mycket i olika länder</p></li>
 </ul>
 <p>Matematiskt innebär interaktionseffekt att vi kombinerar två eller flera av de förklarande variablerna till en ny variabel, som att multiplicera <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>. Därigenom kan vi kontrollera om en förklarande variabels samvariation med den förklarade variabeln varierar beroende på värdena i en annan förklarande variabel.</p>
-<div id="interaktionseffekten-mellan-x-och-z" class="section level4" number="8.6.4.1">
+<div id="interaktionseffekten-mellan-x-och-z" class="section level4" number="8.6.2.1">
 <h4>
-<span class="header-section-number">8.6.4.1</span> Interaktionseffekten mellan x och z<a class="anchor" aria-label="anchor" href="#interaktionseffekten-mellan-x-och-z"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.6.2.1</span> Interaktionseffekten mellan x och z<a class="anchor" aria-label="anchor" href="#interaktionseffekten-mellan-x-och-z"><i class="fas fa-link"></i></a>
 </h4>
 <p>Låt oss utgå från följande regressionsmodell:</p>
 <p><span class="math inline">\(y = a + bx + cz + \epsilon\)</span> (1)</p>
@@ -1155,9 +1088,9 @@
 <p><span class="math inline">\(\frac{\Delta y}{\Delta z} = c + d*x\)</span> (4)</p>
 <p>För värdena <span class="math inline">\(x = 0\)</span> anger lutningskoefficienten <span class="math inline">\(c\)</span> hur mycket <span class="math inline">\(y\)</span> ökar då <span class="math inline">\(z\)</span> ökar med 1. Låt oss illustrera interaktionseffekten med hjälp av data.</p>
 </div>
-<div id="ett-exempel-med-data" class="section level4" number="8.6.4.2">
+<div id="ett-exempel-med-data" class="section level4" number="8.6.2.2">
 <h4>
-<span class="header-section-number">8.6.4.2</span> Ett exempel med data<a class="anchor" aria-label="anchor" href="#ett-exempel-med-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.6.2.2</span> Ett exempel med data<a class="anchor" aria-label="anchor" href="#ett-exempel-med-data"><i class="fas fa-link"></i></a>
 </h4>
 <p>I <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a> estimerade vi samvariationen mellan livslängd och inkomst för män och kvinnor i tre av Sveriges kommuner. Nu ska vi använda samma data igen men denna gång lägga till en interaktionseffekt.</p>
 <p>Tabell 1 beskriver våra variabler (samma som i <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a>). Vi har nu en variabel som skapas genom att multiplicera de två variablerna inkomst <span class="math inline">\(I\)</span> och kön <span class="math inline">\(K\)</span>. Den nya variabeln har rubriken “Interaktion: <span class="math inline">\(I*K\)</span>”. Eftersom <span class="math inline">\(K\)</span> är en dummy där tre av sex observationer har värdet 0 får även den nya variabeln värdet 0 i tre av sex fall.</p>
@@ -1263,9 +1196,9 @@
 <p>rent matematiskt innebär detta att vår regressionsmodell predikterar att en man med 185 000 kronor i årsinkomst i genomsnitt lever lika länge som en kvinna med 0 kronor i inkomst. Detta reflekterar inte nödvändigtvis verkliga mekanismer. I praktiken har nästan ingen 0 kr i inkomst och ingen observation har detta i vårt datamaterial.</p>
 <p>Poängen är att visa var interaktionseffekten byter tecken (från plus till minus och tvärtom). Vi måste alltid vara försiktiga med att tolka resultaten och extra försiktiga att tolka resultat utanför de värden vi har data för. Vid högre inkomster än detta blir <span class="math inline">\(\Delta L\text{/}\Delta G\)</span> negativt, vilket innebär att vid högre inkomster är mäns genomsnittliga livslängd kortare än kvinnor.</p>
 </div>
-<div id="illustration-med-diagram" class="section level4" number="8.6.4.3">
+<div id="illustration-med-diagram" class="section level4" number="8.6.2.3">
 <h4>
-<span class="header-section-number">8.6.4.3</span> Illustration med diagram<a class="anchor" aria-label="anchor" href="#illustration-med-diagram"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.6.2.3</span> Illustration med diagram<a class="anchor" aria-label="anchor" href="#illustration-med-diagram"><i class="fas fa-link"></i></a>
 </h4>
 <p>Figur 1 illustrerar delar av resultaten i ett diagram där vi ser samvariationen mellan livslängd och inkomst. Två regressionslinjer är utritade i diagrammet, en för kvinnor och en för män. Regressionslinjen för kvinnor är ritad med ekvationen:</p>
 <p><span class="math inline">\(L = \widehat{a} + \widehat{b}\left( I \middle| G = 0 \right) = 26,6 + 26,9x\)</span> (18)</p>
@@ -1282,14 +1215,14 @@
 <p>Lutningskoefficienten i regressionsmodellen för enbart män <span class="math inline">\(\widehat{d}\)</span> är samma värde som <span class="math inline">\(\Delta L\text{/}\Delta I\)</span> för <span class="math inline">\(G = 1\)</span> i ekvation 15. Detta innebär även att differensen mellan de två lutningskoefficienterna i regressionsmodellerna för kvinnor respektive män är <span class="math inline">\(\widehat{b} - \widehat{d} = 26,9 - 5,1 = 21,8\)</span>, vilket är samma värde som <span class="math inline">\(\widehat{c_{4}}\)</span> har i ekvation 14.</p>
 </div>
 </div>
-<div id="video-38" class="section level3" number="8.6.5">
+<div id="video-38" class="section level3" number="8.6.3">
 <h3>
-<span class="header-section-number">8.6.5</span> Video<a class="anchor" aria-label="anchor" href="#video-38"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.6.3</span> Video<a class="anchor" aria-label="anchor" href="#video-38"><i class="fas fa-link"></i></a>
 </h3>
 </div>
-<div id="uppgifter-39" class="section level3" number="8.6.6">
+<div id="uppgifter-39" class="section level3" number="8.6.4">
 <h3>
-<span class="header-section-number">8.6.6</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-39"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.6.4</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-39"><i class="fas fa-link"></i></a>
 </h3>
 <div class="ex-section-title">
 <p>Övningar</p>
@@ -1303,35 +1236,24 @@
 <h2>
 <span class="header-section-number">8.7</span> Räkna på orsak och effekt<a class="anchor" aria-label="anchor" href="#k2-4-7"><i class="fas fa-link"></i></a>
 </h2>
-<div id="avsnitt-4.7-räkna-på-orsak-och-verkan" class="section level3 title" number="8.7.1">
+<div id="begrepp-40" class="section level3" number="8.7.1">
 <h3>
-<span class="header-section-number">8.7.1</span> Avsnitt 4.7: Räkna på orsak och verkan<a class="anchor" aria-label="anchor" href="#avsnitt-4.7-r%C3%A4kna-p%C3%A5-orsak-och-verkan"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="pushtext-38" class="section level3" number="8.7.2">
-<h3>
-<span class="header-section-number">8.7.2</span> Pushtext<a class="anchor" aria-label="anchor" href="#pushtext-38"><i class="fas fa-link"></i></a>
-</h3>
-<p>I detta avsnitt ska vi gå in på hur vi kan använda regressionsanalys för att räkna på effekten av en orsak.</p>
-</div>
-<div id="begrepp-40" class="section level3" number="8.7.3">
-<h3>
-<span class="header-section-number">8.7.3</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-40"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-40"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
 <strong>Regressionsdiskontinuitet:</strong> Kvasiexperimentell metod där vi kan utnyttja en brytpunkt kring vilket det förekommer en slumpmässig indelning i behandlings- och kontrollgrupp. Kallas även brytpunktsanalys. Engelska: <em>regression discontinuity design</em>.</li>
 </ul>
 </div>
-<div id="teori-40" class="section level3" number="8.7.4">
+<div id="teori-40" class="section level3" number="8.7.2">
 <h3>
-<span class="header-section-number">8.7.4</span> Teori<a class="anchor" aria-label="anchor" href="#teori-40"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-40"><i class="fas fa-link"></i></a>
 </h3>
 <p>I avsnitt <a href="https://www.dropbox.com/scl/fi/p55pve5puznr5q1pytlp0/1-1-Orsak-och-effekt.docx?rlkey=fhscndx5n8rpsx529fb55liup&amp;dl=0">1.1</a> och <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">1.2</a> introducerade vi kontrafaktisk analys och kvasiexperiment för att studera orsakssamband. I kapitel 1 introducerade vi dessa koncept teoretiskt. Nu, efter att ha arbetat med regressionsanalys med flera variabler i detta kapitel, kan vi förstå den matematiska grunden för varför detta är så viktigt.</p>
 <p>Som vi såg i avsnitt 4-1 och 4-3: när vi lägger till eller tar bort variabler i en regressionsmodell ändras koefficienterna för de andra variablerna. Detta är inte bara ett tekniskt problem - det är kärnan i varför vi måste vara så noggranna när vi studerar orsakssamband.</p>
-<div id="orsakssamband-i-en-regressionsmodell" class="section level4" number="8.7.4.1">
+<div id="orsakssamband-i-en-regressionsmodell" class="section level4" number="8.7.2.1">
 <h4>
-<span class="header-section-number">8.7.4.1</span> Orsakssamband i en regressionsmodell<a class="anchor" aria-label="anchor" href="#orsakssamband-i-en-regressionsmodell"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.2.1</span> Orsakssamband i en regressionsmodell<a class="anchor" aria-label="anchor" href="#orsakssamband-i-en-regressionsmodell"><i class="fas fa-link"></i></a>
 </h4>
 <p>Säg nu, kraftigt förenklat, att vi har en teori om att en medicin <span class="math inline">\((X)\)</span> minskar mängden sjukdomssymptom <span class="math inline">\((Y)\)</span> hos patienter. Vi har hittat en grupp patienter som alla har lika mycket sjukdomssymptom, vilka vi delat in i en behandlingsgrupp (som får medicin) och en kontrollgrupp (som inte får medicin). För att undersöka medicinens effekt på sjukdomssymptom ställer vi upp följande regressionsmodell:</p>
 <p><span class="math inline">\(Y = \alpha + \beta X + \epsilon\)</span> (1)</p>
@@ -1339,9 +1261,9 @@
 <p>Ett problem, bland flera tänkbara, är att för att vi ska kunna tolka <span class="math inline">\(\widehat{\beta}\)</span> som ett korrekt mått på effekten av medicinen så måste vi vara säkra på att inga andra fenomen påverkar medicinen och sjukdomssymptomen.</p>
 <p>Säg att vi till exempel vet från tidigare forskning att det finns flera andra saker som både påverkar medicinens effekt och själva sjukdomssymptomet. Det kan handla om sådant som kön, ålder med mera. Dessa saker kan vi mäta och lägga till som variabler i vår regressionsmodell. Genom att kontrollera för till exempel kön kan vi i så fall estimera medicins effekt korrekt.</p>
 </div>
-<div id="illustration-med-diagram-1" class="section level4" number="8.7.4.2">
+<div id="illustration-med-diagram-1" class="section level4" number="8.7.2.2">
 <h4>
-<span class="header-section-number">8.7.4.2</span> Illustration med diagram<a class="anchor" aria-label="anchor" href="#illustration-med-diagram-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.2.2</span> Illustration med diagram<a class="anchor" aria-label="anchor" href="#illustration-med-diagram-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>Men det finns även ytterligare några fenomen som vi har starka skäl att tro att de är viktiga för både medicinen och symptomen, men som vi saknar data för. Om vi saknar data så kan vi inte kontrollera för det i regressionsmodellen.</p>
 <p>Figur 1 illustrerar ett exempel på hur den här sortens problem kan se ut. Pilen från <span class="math inline">\(X\)</span> till <span class="math inline">\(Y\)</span> beskriver det orsakssamband som vi är intresserade av. Pilar visar påverkans riktning (kausalitet). Så här ska figuren läsas:</p>
@@ -1354,9 +1276,9 @@
 <p>Detta är varför randomiserade experiment är så viktiga: de "bryter" pilarna från <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> till <span class="math inline">\(X\)</span>. För att vi ska kunna uppskatta vilken effekt <span class="math inline">\(X\)</span> har på <span class="math inline">\(Y\)</span> måste vi dels fastställa att när det sker en variation i <span class="math inline">\(X\)</span>, orsakad utan koppling till <span class="math inline">\(Y\)</span>, så sker det även en variation i <span class="math inline">\(Y\)</span>.</p>
 </div>
 </div>
-<div id="exogen-variation-1" class="section level3" number="8.7.5">
+<div id="exogen-variation-1" class="section level3" number="8.7.3">
 <h3>
-<span class="header-section-number">8.7.5</span> Exogen variation<a class="anchor" aria-label="anchor" href="#exogen-variation-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.3</span> Exogen variation<a class="anchor" aria-label="anchor" href="#exogen-variation-1"><i class="fas fa-link"></i></a>
 </h3>
 <p>I detta fall bestämmer vi att behandlingsgruppen tar medicinen, vilket är den framkallade variationen i <span class="math inline">\(X\)</span>. Detta kallas för exogen variation, variation i <span class="math inline">\(X\)</span> som inte orsakas av <span class="math inline">\(Y\)</span> eller av något som påverkar både <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Exempel på exogen variation i medicin <span class="math inline">\(X\)</span>:</p>
 <ul>
@@ -1369,9 +1291,9 @@
 <li><p>Variationen i <span class="math inline">\(X\)</span> beror då på något annat (hälsotillstånd) som också påverkar <span class="math inline">\(Y\)</span></p></li>
 </ul>
 </div>
-<div id="selektionsproblemet-1" class="section level3" number="8.7.6">
+<div id="selektionsproblemet-1" class="section level3" number="8.7.4">
 <h3>
-<span class="header-section-number">8.7.6</span> Selektionsproblemet<a class="anchor" aria-label="anchor" href="#selektionsproblemet-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.4</span> Selektionsproblemet<a class="anchor" aria-label="anchor" href="#selektionsproblemet-1"><i class="fas fa-link"></i></a>
 </h3>
 <p>För att uppskatta effekten av <span class="math inline">\(X\)</span> på <span class="math inline">\(Y\)</span> korrekt måste vi även ta hänsyn till de två fenomenen <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> som påverkar både <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Fenomen <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> påverkar vilka som ingår i behandlingsgruppen och vilka som ingår i kontrollgruppen. Detta kallas för <a href="https://en.wikipedia.org/wiki/Selection_bias"><em>selektionsproblem</em></a> och beskrevs i <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">avsnitt 1-2</a>.</p>
 <p>Fenomen <span class="math inline">\(P\)</span> är observerbart (till exempel kön och ålder) men fenomen <span class="math inline">\(Z\)</span> syftar på något som det saknas data för och som det kanske aldrig kommer att finnas data för.</p>
@@ -1381,17 +1303,17 @@
 </div>
 <p>Förklaring: Fenomen P är observerbart och påverkar X och Y. Fenomen Z kan inte observeras eller mätas men påverkar också X och Y. P kan vi kontrollera för. Z kan vi inte kontrollera för. Vi kommer kanske aldrig kunna kontrollera för Z. Detta är ett centralt argument för vetenskapliga experiment.</p>
 <p>Diagrammet i figur 1 kallas för en <em>riktad acyklisk graf</em> (engelska <em>directed acyclic graph</em>, <em>DAG</em>). Diagrammet beskriver ett exempel och ytterligare utmaningar av liknande slag är också tänkbara, men diskuteras ej här.</p>
-<div id="både-förekomst-och-frånvaron-av-variabler-kan-påverka-våra-resultat" class="section level4" number="8.7.6.1">
+<div id="både-förekomst-och-frånvaron-av-variabler-kan-påverka-våra-resultat" class="section level4" number="8.7.4.1">
 <h4>
-<span class="header-section-number">8.7.6.1</span> Både förekomst och frånvaron av variabler kan påverka våra resultat<a class="anchor" aria-label="anchor" href="#b%C3%A5de-f%C3%B6rekomst-och-fr%C3%A5nvaron-av-variabler-kan-p%C3%A5verka-v%C3%A5ra-resultat"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.4.1</span> Både förekomst och frånvaron av variabler kan påverka våra resultat<a class="anchor" aria-label="anchor" href="#b%C3%A5de-f%C3%B6rekomst-och-fr%C3%A5nvaron-av-variabler-kan-p%C3%A5verka-v%C3%A5ra-resultat"><i class="fas fa-link"></i></a>
 </h4>
 <p>I tidigare avsnitt såg vi hur frånvaron eller närvaron av andra variabler kan påverka alla resultat i regressionsmodellen. Det är därför viktigt att vi funderar noga på hur vi designar vår undersökning.</p>
 <p>Om vi utför ett kontrollerat experiment, till exempel delar in patienterna slumpmässigt i 2 grupper och ger ena gruppen medicin, ökar våra möjligheter att mäta effekten korrekt. Om vi har tillräckligt många patienter kommer alla andra egenskaper förutom själva behandlingen att fördela sig slumpmässigt mellan grupperna.</p>
 <p>För att designa vår undersökning och regressionsmodell kan vi ta fram olika typer av underlag, studera andra samvariationer, pröva olika lösningar och jämföra resultat. Detta arbete är något som analytiker måste avgöra från fall till fall. Oavsett hur avancerad metod eller hur många observationer och variabler vi har finns det ingen metod för att bevisa exakt vilka variabler som bör ingå i en analys.</p>
 </div>
-<div id="vi-kan-inte-använda-teori-i-stället-för-data" class="section level4" number="8.7.6.2">
+<div id="vi-kan-inte-använda-teori-i-stället-för-data" class="section level4" number="8.7.4.2">
 <h4>
-<span class="header-section-number">8.7.6.2</span> Vi kan inte använda teori i stället för data<a class="anchor" aria-label="anchor" href="#vi-kan-inte-anv%C3%A4nda-teori-i-st%C3%A4llet-f%C3%B6r-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.4.2</span> Vi kan inte använda teori i stället för data<a class="anchor" aria-label="anchor" href="#vi-kan-inte-anv%C3%A4nda-teori-i-st%C3%A4llet-f%C3%B6r-data"><i class="fas fa-link"></i></a>
 </h4>
 <p>Ibland är det frestande att tro att om vi hittar någon jättesmart teori som beskriver hur hela världen fungerar, är det i sig ett bevis för hur en regressionsmodell bör utformas. Idéer och teorier är grunden för all analys men det är i sig inget bevis för att inkludera eller exkludera just de variabler vi har till förfogande. Den här typen av svårigheter har varit välkända länge och diskuterats utförligt inom samhällsvetenskap. Två läsvärda texter på temat är <a href="https://www.climateaudit.info/pdf/others/hendry.1980.pdf">Hendry (1980)</a> och <a href="https://uh.edu/hobby/eitm/_docs/past-lectures/2015-Lectures/Harold-Clarke/lets-take-the-con-out-of-econometrics.pdf">Leamer (1983)</a>.</p>
 <p>Som vi gick igenom i avsnitt <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">1.2</a> är det ofta omöjligt att genomföra kontrollerade experiment inom samhällsvetenskap. Det är lätt att tro att detta medför att vi lika gärna kan uttala oss om orsakssamband utan experimentliknande metoder, eftersom ingen ändå vet. Detta är helt enkelt inte sant. Svårigheten att uttala sig om orsakssamband sänker inte kraven på samhällsvetenskap, snarare tvärtom.</p>
@@ -1399,9 +1321,9 @@
 <p>Även i dessa situationer måste vi undersöka om våra antaganden i analysen är rimliga, till exempel att fördelningen mellan kontroll och behandlingen verkligen skett så gott som slumpmässigt. Detta kan vi till exempel göra genom att jämföra behandlings- och kontrollgruppens egenskaper och därigenom kontrollera att den enda viktiga skillnaden mellan grupperna är själva behandlingen.</p>
 <p>Om observerbara egenskaper är likvärdiga kan vi ofta anta att även de icke-observerbara egenskaperna är det. Många sådana metoder bygger just på att inget fenomen ska påverka fördelningen (selektionen) till behandlings- och kontrollgruppen.</p>
 </div>
-<div id="brytpunktsanalys" class="section level4" number="8.7.6.3">
+<div id="brytpunktsanalys" class="section level4" number="8.7.4.3">
 <h4>
-<span class="header-section-number">8.7.6.3</span> Brytpunktsanalys<a class="anchor" aria-label="anchor" href="#brytpunktsanalys"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.4.3</span> Brytpunktsanalys<a class="anchor" aria-label="anchor" href="#brytpunktsanalys"><i class="fas fa-link"></i></a>
 </h4>
 <p>För att studera orsak och verkan när vi studerar människor finns det flera kvasiexperimentella metoder för att identifiera behandlings- och kontrollgrupp. Ett exempel på en sådan metod är <em>regressionsdiskontinuitet</em> (engelska <em>regression discontinuity</em>), eller <em>brytpunktsanalys</em>.</p>
 <p>Detta är en metod för att identifiera och jämföra behandlings- och kontrollgrupp i en observationsstudie. Metoden bygger på att vi kan observera variationer kring en brytpunkt med betydelse för både behandling och utfall. Små variationer kring brytpunkten kan antas vara slumpmässiga, varför denna kan användas för att dela in observationer i behandling och kontroll.</p>
@@ -1410,9 +1332,9 @@
 <p>Tanken är att studenter som fick 91 poäng och studenter som fick 93 poäng är i praktiken lika duktiga. Skillnaden på 2 poäng kan betraktas som “tur” (några hade en bra/dålig dag). Eftersom skillnaden är slumpmässig kring brytpunkten kan vi jämföra dessa två grupper nästan som i ett randomiserat experiment: Behandlingsgrupp: 93 poäng → antagen. Kontrollgrupp: 91 poäng → inte antagen. Men notera att detta fungerar endast nära brytpunkten. Vi kan inte jämföra någon med 50 poäng mot någon med 100 poäng eftersom de är för olika.</p>
 <p>För att kontrollera om behandlings- och kontrollgruppen har likvärdiga färdigheter kan vi jämföra de relevanta egenskaper vi kan observera, som ålder, tidigare prestationer, tidigare utbildning med mera. För exempel på en studie med liknande metod, se <a href="https://www.nationalekonomi.se/wp-content/uploads/2022/09/50-6-doras.pdf">Rooth och Stenberg (2022)</a>.</p>
 </div>
-<div id="alkoholens-skadeverkningar" class="section level4" number="8.7.6.4">
+<div id="alkoholens-skadeverkningar" class="section level4" number="8.7.4.4">
 <h4>
-<span class="header-section-number">8.7.6.4</span> Alkoholens skadeverkningar<a class="anchor" aria-label="anchor" href="#alkoholens-skadeverkningar"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.4.4</span> Alkoholens skadeverkningar<a class="anchor" aria-label="anchor" href="#alkoholens-skadeverkningar"><i class="fas fa-link"></i></a>
 </h4>
 <p>Låt oss ta ett exempel på verklig forskning som applicerar brytpunktsanalys på ett riktigt fall. Vi ska här använda oss av <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a> studie på alkohol och dödlighet. Att alkohol är direkt skadligt och även indirekt ökar risken för olika negativa effekter är välkänt. Samtidigt kan det vara svårt att i detalj skatta de skadliga effekterna (fenomen Y) av ökad tillgång till alkohol (fenomen <span class="math inline">\(X\)</span>) eftersom människor som far illa av alkohol ofta även har andra destruktiva vanor. Vissa av dessa kan vi observera och kontrollera för (fenomen <span class="math inline">\(P\)</span>). Men många dåliga vanor är av sådan art att det är svårt eller omöjligt att kontrollera för allt i analys (fenomen <span class="math inline">\(Z\)</span>).</p>
 <p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a> använder sig av det faktum att i USA är åldersgränsen för att köpa alkohol 21 år. Först visar de att drickandet bland unga vuxna ökar kraftigt strax efter 21-årsdagen samtidigt som olika dödsorsaker som ofta är förknippade med alkoholkonsumtion ökar: trafikolyckor, självmord med mera.</p>
@@ -1425,9 +1347,9 @@
 <p><span class="math inline">\(X*T:Y_{i} = b_{1} + b_{2}X_{i} + b_{3}T_{i} + b_{4}\left( X_{i}*T_{i} \right) + v_{i}\)</span> (3)</p>
 <p>där <span class="math inline">\(b_{1},b_{2},b_{3}\)</span> och <span class="math inline">\(b_{4}\)</span> är koefficienter <span class="math inline">\(Y,X\)</span> och <span class="math inline">\(T\)</span> är samma variabler som i regressionsmodellen i ekvation 2 och <span class="math inline">\(v\)</span> är feltermen. Interaktionstermen <span class="math inline">\(b_{4}\left( X_{i}*T_{i} \right)\)</span> estimerar förändringar i samvariationen mellan alkoholkonsumtion och dödlighet före/efter 21-årsdagen.</p>
 </div>
-<div id="carpenter-och-dobkins-resultat-i-diagram" class="section level4" number="8.7.6.5">
+<div id="carpenter-och-dobkins-resultat-i-diagram" class="section level4" number="8.7.4.5">
 <h4>
-<span class="header-section-number">8.7.6.5</span> Carpenter och Dobkins resultat i diagram<a class="anchor" aria-label="anchor" href="#carpenter-och-dobkins-resultat-i-diagram"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.4.5</span> Carpenter och Dobkins resultat i diagram<a class="anchor" aria-label="anchor" href="#carpenter-och-dobkins-resultat-i-diagram"><i class="fas fa-link"></i></a>
 </h4>
 <p>De två regressionsmodellerna illustreras i figur 2 där båda diagrammen använder samma data, hämtad från <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a>.</p>
 <p>Jämför figur 3 i <span class="math display">\[[carpenter2009theeffect](#LyXCite-carpenter2009theeffect)\]</span>. Data tillgängliga här: <a href="https://github.com/jrnold/masteringmetrics/blob/master/" class="uri">https://github.com/jrnold/masteringmetrics/blob/master/</a></p>
@@ -1441,9 +1363,9 @@
 <p>Förklaring: Brytpunktsanalys rörande alkoholrelaterade dödsfall per åldersgrupp i USA. Se brödtext för förklaring av regressionsmodellerna. Data från <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a>. Genomsnittlig alkolholrelaterad dödlighet ökat skarpt i samband med att människor fyller 21.</p>
 </div>
 </div>
-<div id="sammanfattning" class="section level3" number="8.7.7">
+<div id="sammanfattning" class="section level3" number="8.7.5">
 <h3>
-<span class="header-section-number">8.7.7</span> Sammanfattning<a class="anchor" aria-label="anchor" href="#sammanfattning"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.5</span> Sammanfattning<a class="anchor" aria-label="anchor" href="#sammanfattning"><i class="fas fa-link"></i></a>
 </h3>
 <p>I detta avsnitt har vi gått igenom varför kapitel 4 spelar roll för vetenskap:</p>
 <ol style="list-style-type: decimal">
@@ -1469,14 +1391,14 @@
 </ol>
 <p>Detta är varför metodik och statistik inte bara handlar om matte. Detta är grunden för hur vi förstår världen.</p>
 </div>
-<div id="video-39" class="section level3" number="8.7.8">
+<div id="video-39" class="section level3" number="8.7.6">
 <h3>
-<span class="header-section-number">8.7.8</span> Video<a class="anchor" aria-label="anchor" href="#video-39"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.6</span> Video<a class="anchor" aria-label="anchor" href="#video-39"><i class="fas fa-link"></i></a>
 </h3>
 </div>
-<div id="uppgifter-40" class="section level3" number="8.7.9">
+<div id="uppgifter-40" class="section level3" number="8.7.7">
 <h3>
-<span class="header-section-number">8.7.9</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-40"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.7.7</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-40"><i class="fas fa-link"></i></a>
 </h3>
 <div class="ex-section-title">
 <p>Övningar</p>
@@ -1488,7 +1410,54 @@
 </div>
 </div>
 </div>
-<script src="js/exercises.js"></script><div class="chapter-nav">
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik: "On this page"
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik: "Table of contents"
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält placeholder
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // "View source" länk
+    var src = document.getElementById('book-source');
+    if (src) {
+      src.childNodes[0].textContent = 'Visa källa på GitHub ';
+    }
+
+    // "Edit this page" länk
+    var edit = document.getElementById('book-edit');
+    if (edit) {
+      edit.childNodes[0].textContent = 'Redigera ';
+    }
+
+    // Navigeringspilarna: aria-labels
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', translateUI);
+  } else {
+    translateUI();
+  }
+})();
+</script><div class="chapter-nav">
 <div class="prev"><a href="minstakvadratmetoden-f%C3%B6rdjupning-1.html"><span class="header-section-number">7</span> Minstakvadratmetoden — fördjupning 1</a></div>
 <div class="next"><a href="regressionsanalys-med-sannolikhet.html"><span class="header-section-number">9</span> Regressionsanalys med sannolikhet</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -1497,75 +1466,61 @@
 <li><a class="nav-link" href="#minstakvadratmetoden-f%C3%B6rdjupning-2"><span class="header-section-number">8</span> Minstakvadratmetoden — fördjupning 2</a></li>
 <li>
 <a class="nav-link" href="#k2-4-1"><span class="header-section-number">8.1</span> Regressionsanalys med tre variabler</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#avsnitt-4.1-regressionsanalys-med-tre-variabler"><span class="header-section-number">8.1.1</span> Avsnitt 4.1: Regressionsanalys med tre variabler</a></li>
-<li><a class="nav-link" href="#pushtext-32"><span class="header-section-number">8.1.2</span> Pushtext</a></li>
-<li><a class="nav-link" href="#begrepp-34"><span class="header-section-number">8.1.3</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-34"><span class="header-section-number">8.1.4</span> Teori</a></li>
-<li><a class="nav-link" href="#video-33"><span class="header-section-number">8.1.5</span> Video</a></li>
-<li><a class="nav-link" href="#uppgifter-34"><span class="header-section-number">8.1.6</span> Uppgifter</a></li>
+<li><a class="nav-link" href="#begrepp-34"><span class="header-section-number">8.1.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-34"><span class="header-section-number">8.1.2</span> Teori</a></li>
+<li><a class="nav-link" href="#video-33"><span class="header-section-number">8.1.3</span> Video</a></li>
+<li><a class="nav-link" href="#uppgifter-34"><span class="header-section-number">8.1.4</span> Uppgifter</a></li>
 </ul>
 </li>
 <li>
 <a class="nav-link" href="#k2-4-2"><span class="header-section-number">8.2</span> Faktorvariabler</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#avsnitt-4.2-faktorvariabler"><span class="header-section-number">8.2.1</span> Avsnitt 4.2: Faktorvariabler</a></li>
-<li><a class="nav-link" href="#pushtext-33"><span class="header-section-number">8.2.2</span> Pushtext</a></li>
-<li><a class="nav-link" href="#begrepp-35"><span class="header-section-number">8.2.3</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-35"><span class="header-section-number">8.2.4</span> Teori</a></li>
-<li><a class="nav-link" href="#video-34"><span class="header-section-number">8.2.5</span> Video</a></li>
-<li><a class="nav-link" href="#uppgifter-35"><span class="header-section-number">8.2.6</span> Uppgifter</a></li>
+<li><a class="nav-link" href="#begrepp-35"><span class="header-section-number">8.2.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-35"><span class="header-section-number">8.2.2</span> Teori</a></li>
+<li><a class="nav-link" href="#video-34"><span class="header-section-number">8.2.3</span> Video</a></li>
+<li><a class="nav-link" href="#uppgifter-35"><span class="header-section-number">8.2.4</span> Uppgifter</a></li>
 </ul>
 </li>
 <li>
 <a class="nav-link" href="#k2-4-3"><span class="header-section-number">8.3</span> Konstannhålla</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#avsnitt-4.3-konstanth%C3%A5lla"><span class="header-section-number">8.3.1</span> Avsnitt 4.3: Konstanthålla</a></li>
-<li><a class="nav-link" href="#pushtext-34"><span class="header-section-number">8.3.2</span> Pushtext</a></li>
-<li><a class="nav-link" href="#begrepp-36"><span class="header-section-number">8.3.3</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-36"><span class="header-section-number">8.3.4</span> Teori</a></li>
-<li><a class="nav-link" href="#video-35"><span class="header-section-number">8.3.5</span> Video</a></li>
-<li><a class="nav-link" href="#uppgifter-36"><span class="header-section-number">8.3.6</span> Uppgifter</a></li>
+<li><a class="nav-link" href="#begrepp-36"><span class="header-section-number">8.3.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-36"><span class="header-section-number">8.3.2</span> Teori</a></li>
+<li><a class="nav-link" href="#video-35"><span class="header-section-number">8.3.3</span> Video</a></li>
+<li><a class="nav-link" href="#uppgifter-36"><span class="header-section-number">8.3.4</span> Uppgifter</a></li>
 </ul>
 </li>
 <li>
 <a class="nav-link" href="#k2-4-4"><span class="header-section-number">8.4</span> Regression med matriser</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#avsnitt-4.4-regression-med-matriser"><span class="header-section-number">8.4.1</span> Avsnitt 4.4: Regression med matriser</a></li>
-<li><a class="nav-link" href="#pushtext-35"><span class="header-section-number">8.4.2</span> Pushtext</a></li>
-<li><a class="nav-link" href="#begrepp-37"><span class="header-section-number">8.4.3</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-37"><span class="header-section-number">8.4.4</span> Teori</a></li>
-<li><a class="nav-link" href="#video-36"><span class="header-section-number">8.4.5</span> Video</a></li>
-<li><a class="nav-link" href="#uppgifter-37"><span class="header-section-number">8.4.6</span> Uppgifter</a></li>
+<li><a class="nav-link" href="#begrepp-37"><span class="header-section-number">8.4.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-37"><span class="header-section-number">8.4.2</span> Teori</a></li>
+<li><a class="nav-link" href="#video-36"><span class="header-section-number">8.4.3</span> Video</a></li>
+<li><a class="nav-link" href="#uppgifter-37"><span class="header-section-number">8.4.4</span> Uppgifter</a></li>
 </ul>
 </li>
 <li>
 <a class="nav-link" href="#k2-4-5"><span class="header-section-number">8.5</span> Estimera med matriser</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#avsnitt-4.5-estimera-med-matriser"><span class="header-section-number">8.5.1</span> Avsnitt 4.5: Estimera med matriser</a></li>
-<li><a class="nav-link" href="#pushtext-36"><span class="header-section-number">8.5.2</span> Pushtext</a></li>
-<li><a class="nav-link" href="#begrepp-38"><span class="header-section-number">8.5.3</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-38"><span class="header-section-number">8.5.4</span> Teori</a></li>
-<li><a class="nav-link" href="#video-37"><span class="header-section-number">8.5.5</span> Video</a></li>
-<li><a class="nav-link" href="#uppgifter-38"><span class="header-section-number">8.5.6</span> Uppgifter</a></li>
+<li><a class="nav-link" href="#begrepp-38"><span class="header-section-number">8.5.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-38"><span class="header-section-number">8.5.2</span> Teori</a></li>
+<li><a class="nav-link" href="#video-37"><span class="header-section-number">8.5.3</span> Video</a></li>
+<li><a class="nav-link" href="#uppgifter-38"><span class="header-section-number">8.5.4</span> Uppgifter</a></li>
 </ul>
 </li>
 <li>
 <a class="nav-link" href="#k2-4-6"><span class="header-section-number">8.6</span> Interaktion</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#kapitel-4.6-regressionsanalys-med-interaktionseffekt"><span class="header-section-number">8.6.1</span> Kapitel 4.6: Regressionsanalys med interaktionseffekt</a></li>
-<li><a class="nav-link" href="#pushtext-37"><span class="header-section-number">8.6.2</span> Pushtext</a></li>
-<li><a class="nav-link" href="#begrepp-39"><span class="header-section-number">8.6.3</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-39"><span class="header-section-number">8.6.4</span> Teori</a></li>
-<li><a class="nav-link" href="#video-38"><span class="header-section-number">8.6.5</span> Video</a></li>
-<li><a class="nav-link" href="#uppgifter-39"><span class="header-section-number">8.6.6</span> Uppgifter</a></li>
+<li><a class="nav-link" href="#begrepp-39"><span class="header-section-number">8.6.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-39"><span class="header-section-number">8.6.2</span> Teori</a></li>
+<li><a class="nav-link" href="#video-38"><span class="header-section-number">8.6.3</span> Video</a></li>
+<li><a class="nav-link" href="#uppgifter-39"><span class="header-section-number">8.6.4</span> Uppgifter</a></li>
 </ul>
 </li>
 <li>
 <a class="nav-link" href="#k2-4-7"><span class="header-section-number">8.7</span> Räkna på orsak och effekt</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#avsnitt-4.7-r%C3%A4kna-p%C3%A5-orsak-och-verkan"><span class="header-section-number">8.7.1</span> Avsnitt 4.7: Räkna på orsak och verkan</a></li>
-<li><a class="nav-link" href="#pushtext-38"><span class="header-section-number">8.7.2</span> Pushtext</a></li>
-<li><a class="nav-link" href="#begrepp-40"><span class="header-section-number">8.7.3</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-40"><span class="header-section-number">8.7.4</span> Teori</a></li>
-<li><a class="nav-link" href="#exogen-variation-1"><span class="header-section-number">8.7.5</span> Exogen variation</a></li>
-<li><a class="nav-link" href="#selektionsproblemet-1"><span class="header-section-number">8.7.6</span> Selektionsproblemet</a></li>
-<li><a class="nav-link" href="#sammanfattning"><span class="header-section-number">8.7.7</span> Sammanfattning</a></li>
-<li><a class="nav-link" href="#video-39"><span class="header-section-number">8.7.8</span> Video</a></li>
-<li><a class="nav-link" href="#uppgifter-40"><span class="header-section-number">8.7.9</span> Uppgifter</a></li>
+<li><a class="nav-link" href="#begrepp-40"><span class="header-section-number">8.7.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-40"><span class="header-section-number">8.7.2</span> Teori</a></li>
+<li><a class="nav-link" href="#exogen-variation-1"><span class="header-section-number">8.7.3</span> Exogen variation</a></li>
+<li><a class="nav-link" href="#selektionsproblemet-1"><span class="header-section-number">8.7.4</span> Selektionsproblemet</a></li>
+<li><a class="nav-link" href="#sammanfattning"><span class="header-section-number">8.7.5</span> Sammanfattning</a></li>
+<li><a class="nav-link" href="#video-39"><span class="header-section-number">8.7.6</span> Video</a></li>
+<li><a class="nav-link" href="#uppgifter-40"><span class="header-section-number">8.7.7</span> Uppgifter</a></li>
 </ul>
 </li>
 </ul>
@@ -1585,7 +1540,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matteboken</strong>: Matematik och statistik för samhällsvetare" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

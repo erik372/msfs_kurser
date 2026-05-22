@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Välkommen | Matteboken</title>
+<title>Välkommen | Matematik och statistik för samhällsvetare</title>
 <meta name="author" content="">
 <meta name="description" content="&lt;p&gt;Ett interaktivt kursmaterial i matematik och statistik för
 samhällsvetenskapliga studenter.&lt;/p&gt;">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
-<meta property="og:title" content="Välkommen | Matteboken">
+<meta property="og:title" content="Välkommen | Matematik och statistik för samhällsvetare">
 <meta property="og:type" content="book">
 <meta property="og:description" content="&lt;p&gt;Ett interaktivt kursmaterial i matematik och statistik för
 samhällsvetenskapliga studenter.&lt;/p&gt;">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Välkommen | Matteboken">
+<meta name="twitter:title" content="Välkommen | Matematik och statistik för samhällsvetare">
 <meta name="twitter:description" content="&lt;p&gt;Ett interaktivt kursmaterial i matematik och statistik för
 samhällsvetenskapliga studenter.&lt;/p&gt;">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,8 +34,7 @@ samhällsvetenskapliga studenter.&lt;/p&gt;">
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="Matematik och statistik för samhällsvetare">Matteboken</a>:
-        <small class="text-muted">Matematik och statistik för samhällsvetare</small>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -82,7 +81,54 @@ samhällsvetenskapliga studenter.&lt;/p&gt;">
 
 
 
-<script src="js/exercises.js"></script><div class="chapter-nav">
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik: "On this page"
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik: "Table of contents"
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält placeholder
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // "View source" länk
+    var src = document.getElementById('book-source');
+    if (src) {
+      src.childNodes[0].textContent = 'Visa källa på GitHub ';
+    }
+
+    // "Edit this page" länk
+    var edit = document.getElementById('book-edit');
+    if (edit) {
+      edit.childNodes[0].textContent = 'Redigera ';
+    }
+
+    // Navigeringspilarna: aria-labels
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', translateUI);
+  } else {
+    translateUI();
+  }
+})();
+</script><div class="chapter-nav">
 <div class="empty"></div>
 <div class="next"><a href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html"><span class="header-section-number">1</span> Hur använder samhällsvetare matematik</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
@@ -104,7 +150,7 @@ samhällsvetenskapliga studenter.&lt;/p&gt;">
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matteboken</strong>: Matematik och statistik för samhällsvetare" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

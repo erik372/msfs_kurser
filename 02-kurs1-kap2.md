@@ -1,13 +1,6 @@
 # Exempel från samhället
 
-
 ## Räkna med ränta {#k1-2-1}
-
-### Kapitel 2.1: Räkna med ränta {#kapitel-2.1-räkna-med-ränta .title}
-
-### Pushtext
-
-Avsnittet ger exempel på hur vi kan räkna ut ränta och skilja på nominell och effektiv ränta.
 
 ### Begrepp
 
@@ -138,7 +131,6 @@ Observera att detta exempel visar en förenklad beräkning av den totala låneko
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -146,14 +138,7 @@ Observera att detta exempel visar en förenklad beräkning av den totala låneko
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-2-1"]=[  {    "id": "k1-2-1-001",    "name": "Uppgift 1",    "exercise": "Du sätter in 5 000 kr på ett sparkonto med 2 % årsränta. Hur mycket har du på kontot efter <strong>ett år</strong>?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Belopp efter 1 år": "5100" },    "answerformat": "kr",    "error": { "message": "Multiplicera beloppet med \\(1 + 0{,}02 = 1{,}02\\). Det vill säga: \\(5\\ 000 \\times 1{,}02 = ?\\)" },    "correct": { "message": "Rätt! \\(5\\ 000 \\times 1{,}02 = 5\\ 100\\) kr. Räntan för det första året är 100 kr." }  },  {    "id": "k1-2-1-002",    "name": "Uppgift 2",    "exercise": "Du låter 5 000 kr ligga kvar på samma konto (2 % årsränta) i <strong>tre år</strong>. Hur mycket har du efter tre år? Använd formeln \\[5\\ 000 \\times (1{,}02)^3\\] och runda till närmaste krona.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Belopp efter 3 år": "5306" },    "answerformat": "kr",    "error": { "message": "\\((1{,}02)^3 = 1{,}02 \\times 1{,}02 \\times 1{,}02 \\approx 1{,}0612\\). Multiplicera med 5 000." },    "correct": { "message": "Rätt! \\(5\\ 000 \\times (1{,}02)^3 = 5\\ 000 \\times 1{,}0612 \\approx 5\\ 306\\) kr. Ränta på ränta ger lite mer än tre gånger den enkla årsräntan." }  },  {    "id": "k1-2-1-003",    "name": "Uppgift 3",    "exercise": "Vilket av följande uttryck är <em>inte</em> ett synonym för <em>ränta på ränta</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Sammansatt ränta",          "Kumulativ ränta",          "Effektiv ränta",          "Kompound interest"        ],        "correct": "Effektiv ränta"      }    },    "error": { "message": "Tänk på skillnaden: ränta på ränta uppstår av sammansatt beräkning av räntan. Effektiv ränta är ett separat begrepp som inkluderar avgifter och andra kostnader." },    "correct": { "message": "Rätt! Sammansatt ränta, kumulativ ränta och compund interest är alla synonymer för ränta på ränta. Effektiv ränta är ett separat begrepp — det är den totala lånekostnaden inklusive avgifter." }  },  {    "id": "k1-2-1-004",    "name": "Uppgift 4",    "exercise": "Ett kreditkort har 12 % <em>årsränta</em>, men räntan beräknas och läggs på per <em>månad</em>. Hur stor är månadsräntan?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Månadsränta": "1" },    "answerformat": "%",    "error": { "message": "Dela årsräntan med antal månader per år: \\(0{,}12 / 12 = ?\\)" },    "correct": { "message": "Rätt! \\(0{,}12 / 12 = 0{,}01 = 1\\%\\) per månad." }  },  {    "id": "k1-2-1-005",    "name": "Uppgift 5",    "exercise": "En butik erbjuder ett köp på kredit utan angiven ränta, men tar ut en uppläggningsavgift på 500 kr på ett lån om 10 000 kr. Vilket begrepp beskriver vad denna avgift faktiskt innebär ur ett lånekostnadsperspektiv?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Nominell ränta",          "Ränta på ränta",          "Effektiv ränta",          "Kumulativ summa"        ],        "correct": "Effektiv ränta"      }    },    "error": { "message": "Avgiften är en kostnad för att låna pengar, även om butiken inte kallar det ränta. Vilket begrepp fångar <em>alla</em> kostnader för ett lån?" },    "correct": { "message": "Rätt! Effektiv ränta inkluderar alla avgifter — oavsett vad de kallas. Enligt konsumentkreditlagen är långivare skyldiga att redovisa den effektiva räntan." }  }];</script>
 <div class="exercise-section" data-section-id="k1-2-1"></div>
 
-
 ## Nominella och reala priser {#k1-2-2}
-
-### Kapitel 2.2: Nominella och reala priser {#kapitel-2.2-nominella-och-reala-priser .title}
-
-### Pushtext
-
-Detta avsnitt introducerar inflation, nominella och reala värden.
 
 ### Begrepp
 
@@ -304,7 +289,6 @@ Förklaring: Data från [SCB](https://scb.se/). Priser = Konsumentprisindex (KPI
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -312,14 +296,7 @@ Förklaring: Data från [SCB](https://scb.se/). Priser = Konsumentprisindex (KPI
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-2-2"]=[  {    "id": "k1-2-2-001",    "name": "Uppgift 1",    "exercise": "Sveriges befolkning var 7,49 miljoner år 1960 (basår, index = 100) och 8,03 miljoner år 1970. Beräkna befolkningsindexet för år 1970. Runda till en decimal. \\[Index_{1970} = \\frac{8{,}03}{7{,}49} \\times 100\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Index 1970": "107.2" },    "answerformat": "",    "error": { "message": "Dividera befolkningstalet 1970 med basårets befolkningstal och multiplicera med 100: \\(8{,}03 / 7{,}49 \\times 100\\)." },    "correct": { "message": "Rätt! \\(8{,}03 / 7{,}49 \\times 100 \\approx 107{,}2\\). Sveriges befolkning hade ökat med 7,2 % sedan 1960." }  },  {    "id": "k1-2-2-002",    "name": "Uppgift 2",    "exercise": "Vad menas med att <em>deflatera</em> ett pris?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Att sänka ett pris artificiellt för att locka kunder",          "Att justera ett nominellt pris för den allmänna prisutvecklingen i samhället",          "Att beräkna hur mycket ett lån kostar per månad",          "Att räkna om priser från en valuta till en annan"        ],        "correct": "Att justera ett nominellt pris för den allmänna prisutvecklingen i samhället"      }    },    "error": { "message": "Tänk på relationen mellan nominellt och realt pris — vad är syftet med att dividera med KPI?" },    "correct": { "message": "Rätt! Att deflatera innebär att man dividerar ett nominellt pris med ett prisindex (t.ex. KPI) för att få ett realt pris, justerat för hur pengars värde förändrats." }  },  {    "id": "k1-2-2-003",    "name": "Uppgift 3",    "exercise": "En vara kostar 200 kr (nominellt pris) år 2010. KPI för basåret (2000) är 100 och KPI för 2010 är 125. Beräkna varans <em>reala pris</em> i basårets priser: \\[Realt\\ pris = p_t \\times \\frac{KPI_{bas}}{KPI_t}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Realt pris": "160" },    "answerformat": "kr",    "error": { "message": "Sätt in: \\(200 \\times (100 / 125) = ?\\)" },    "correct": { "message": "Rätt! \\(200 \\times (100/125) = 200 \\times 0{,}8 = 160\\) kr. Varan är alltså billigare i reala termer än det nominella priset antyder, eftersom den genomsnittliga prisnivån gått upp." }  },  {    "id": "k1-2-2-004",    "name": "Uppgift 4",    "exercise": "Nominella löner i Sverige ökade med ca 60 % mellan 2004 och 2022, medan KPI ökade med ca 35 %. Vad innebär detta för reallönerna?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Reallönerna minskade, eftersom priserna ökade",          "Reallönerna ökade, men mindre än de nominella lönerna",          "Reallönerna ökade lika mycket som de nominella lönerna",          "Reallönerna och nominella lönerna är alltid desamma"        ],        "correct": "Reallönerna ökade, men mindre än de nominella lönerna"      }    },    "error": { "message": "Reallönen är nominell lön justerad för prisutvecklingen. Om löner ökar mer än priser, vad händer med köpkraften?" },    "correct": { "message": "Rätt! Reallönerna ökade med ca 20 % — lönerna steg mer än priserna, men inte lika mycket som de nominella lönerna. Köpkraften ökade alltså, men inte med 60 %." }  },  {    "id": "k1-2-2-005",    "name": "Uppgift 5",    "exercise": "Vad är syftet med ett <em>prisindex</em> som KPI?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Att mäta hur mycket ett visst företags aktie har förändrats",          "Att visa hur befolkningens storlek förändrats över tid",          "Att spåra den genomsnittliga prisutvecklingen för varor och tjänster som konsumenter köper",          "Att beräkna den effektiva räntan på lån"        ],        "correct": "Att spåra den genomsnittliga prisutvecklingen för varor och tjänster som konsumenter köper"      }    },    "error": { "message": "KPI = Konsumentprisindex. Vad mäter ett index med det namnet?" },    "correct": { "message": "Rätt! KPI mäter hur priset på en hypotetisk 'varukorg' av vanliga konsumentvaror och -tjänster förändras över tid. Det används bl.a. för att beräkna inflation och deflatera löner." }  }];</script>
 <div class="exercise-section" data-section-id="k1-2-2"></div>
 
-
 ## Ekonomiskt välstånd och relativa förändringar {#k1-2-3}
-
-### Kapitel 2.3: Ekonomiskt välstånd och relativa förändringar {#kapitel-2.3-ekonomiskt-välstånd-och-relativa-förändringar .title}
-
-### Pushtext
-
-Detta avsnitt introducerar hur vi kan mäta ekonomiskt välstånd för en hel befolkning.
 
 ### Begrepp
 
@@ -439,7 +416,6 @@ Om linjen i det högra diagrammet hade varit helt rät hade de inneburit att den
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -447,14 +423,7 @@ Om linjen i det högra diagrammet hade varit helt rät hade de inneburit att den
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-2-3"]=[  {    "id": "k1-2-3-001",    "name": "Uppgift 1",    "exercise": "Sveriges reala BNP per capita var 444 800 kr år 2010 och 455 600 kr år 2011. Beräkna den procentuella BNP-tillväxten år 2011 (runda till en decimal): \\[\\frac{y_{2011} - y_{2010}}{y_{2010}} \\times 100\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "BNP-tillväxt 2011": "2.4" },    "answerformat": "%",    "error": { "message": "\\((455\\ 600 - 444\\ 800) / 444\\ 800 \\times 100 = ?\\)" },    "correct": { "message": "Rätt! \\((455\\ 600 - 444\\ 800) / 444\\ 800 \\times 100 = 10\\ 800 / 444\\ 800 \\approx 2{,}4\\%\\)." }  },  {    "id": "k1-2-3-002",    "name": "Uppgift 2",    "exercise": "Vad mäter <em>BNP per capita</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det totala värdet av ett lands export minus import",          "Värdet av alla varor och tjänster som produceras i ett land, dividerat med antal invånare",          "Den genomsnittliga lönen i ett land",          "Statens totala skuld per invånare"        ],        "correct": "Värdet av alla varor och tjänster som produceras i ett land, dividerat med antal invånare"      }    },    "error": { "message": "BNP = Bruttonationalprodukt. 'Per capita' betyder 'per invånare'." },    "correct": { "message": "Rätt! BNP per capita är BNP dividerat med folkmängden och används som ett grovt mått på genomsnittlig levnadsstandard." }  },  {    "id": "k1-2-3-003",    "name": "Uppgift 3",    "exercise": "BNP-tillväxten under åren 2010–2014 var 5,1%, 2,4%, −1,3%, 0,3% och 1,6%. Beräkna den <em>genomsnittliga</em> tillväxten för perioden (runda till en decimal).",    "image": null,    "inputtype": "field",    "expectedanswer": { "Genomsnittlig tillväxt": "1.6" },    "answerformat": "%",    "error": { "message": "Addera alla fem värden och dividera med 5: \\((5{,}1 + 2{,}4 + (-1{,}3) + 0{,}3 + 1{,}6) / 5 = ?\\)" },    "correct": { "message": "Rätt! \\((5{,}1 + 2{,}4 - 1{,}3 + 0{,}3 + 1{,}6) / 5 = 8{,}1 / 5 = 1{,}62 \\approx 1{,}6\\%\\)." }  },  {    "id": "k1-2-3-004",    "name": "Uppgift 4",    "exercise": "Varför används <em>naturliga logaritmen</em> av BNP för att jämföra ekonomisk tillväxt över tid?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Logaritmering gör alla tal negativa, vilket är enklare att räkna med",          "Logaritmering omvandlar absoluta förändringar till relativa, vilket gör det lättare att jämföra tillväxttakten oavsett BNP-nivå",          "Logaritmering tar bort inflationen automatiskt",          "Logaritmering visar alltid en rät linje, oavsett data"        ],        "correct": "Logaritmering omvandlar absoluta förändringar till relativa, vilket gör det lättare att jämföra tillväxttakten oavsett BNP-nivå"      }    },    "error": { "message": "Tänk på vad som händer med linjen i diagrammet när vi logaritmerar BNP. En fördubbling av BNP ger alltid samma förändring i ln(BNP), oavsett absolut nivå." },    "correct": { "message": "Rätt! Med ln(BNP) syns varje fördubbling av BNP som samma stegstorlek (~0,7). Det gör det enkelt att visuellt jämföra relativ tillväxttakt över tid och nivåer." }  }];</script>
 <div class="exercise-section" data-section-id="k1-2-3"></div>
 
-
 ## Leder rikedom till lycka? {#k1-2-4}
-
-### Kapitel 2.4: Leder rikedom till lycka? {#kapitel-2.4-leder-rikedom-till-lycka .title}
-
-### Pushtext
-
-Avsnittet beskriver hur rikedom och lycka samvarierar i alla världens länder och svårigheterna med att dra slutsatser om orsak och verkan.
 
 ### Begrepp
 
@@ -534,7 +503,6 @@ För att kunna mäta vilken förändring av lycka som en förändring av inkomst
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -542,14 +510,7 @@ För att kunna mäta vilken förändring av lycka som en förändring av inkomst
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-2-4"]=[  {    "id": "k1-2-4-001",    "name": "Uppgift 1",    "exercise": "Följande diagram visar samvariationen mellan BNP per capita och genomsnittlig lycka (skala 0–10) för ett stort antal länder. Det vänstra diagrammet visar ologaritmerat BNP per capita; det högra visar logaritmerat BNP per capita. Vilket påstående stämmer bäst?",    "image": "img/k1-2-4-image1.png",    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Lyckan ökar linjärt med BNP per capita i det vänstra diagrammet",          "I det vänstra diagrammet planar sambandet ut för rika länder; det högra diagrammet visar relativa inkomstskillnader och ett mer linjärt mönster",          "Det finns ingen samvariation alls mellan BNP och lycka",          "Rika länder är lyckligare men fattiga länder är mer nöjda med livet"        ],        "correct": "I det vänstra diagrammet planar sambandet ut för rika länder; det högra diagrammet visar relativa inkomstskillnader och ett mer linjärt mönster"      }    },    "error": { "message": "Titta på båda diagrammen. Hur skiljer sig mönstret? Vad innebär det att BNP är logaritmerat i det högra diagrammet?" },    "correct": { "message": "Rätt! I det vänstra diagrammet är sambandet tydligast bland fattigare länder men planar ut för de rikaste. Det högra diagrammet logaritmerar BNP och visar relativa inkomstskillnader, vilket ger ett mer linjärt samband." }  },  {    "id": "k1-2-4-002",    "name": "Uppgift 2",    "exercise": "Givet att \\(\\log_{10}(1) = 0\\), \\(\\log_{10}(2) = 0{,}3\\), \\(\\log_{10}(4) = 0{,}6\\), \\(\\log_{10}(8) = 0{,}9\\). Vad är differensen \\(\\log_{10}(8) - \\log_{10}(4)\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Differens": "0.3" },    "answerformat": "",    "error": { "message": "\\(\\log_{10}(8) = 0{,}9\\) och \\(\\log_{10}(4) = 0{,}6\\). Subtrahera." },    "correct": { "message": "Rätt! \\(0{,}9 - 0{,}6 = 0{,}3\\). En fördubbling (från 4 till 8) ger alltid differensen 0,3 i log₁₀ — oavsett absolut nivå." }  },  {    "id": "k1-2-4-003",    "name": "Uppgift 3",    "exercise": "Bolivia har BNP per capita 8,2 (tusental USD) och \\(\\log_{10}(8{,}2) \\approx 0{,}9\\). Brasilien har BNP per capita 15,1 och \\(\\log_{10}(15{,}1) \\approx 1{,}2\\). Vad är differensen i logaritmerat BNP?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Differens i log₁₀(BNP)": "0.3" },    "answerformat": "",    "error": { "message": "\\(1{,}2 - 0{,}9 = ?\\)" },    "correct": { "message": "Rätt! \\(1{,}2 - 0{,}9 = 0{,}3\\). Brasilien har ungefär dubbelt så hög BNP per capita som Bolivia, och en fördubbling syns alltid som 0,3 i log₁₀." }  },  {    "id": "k1-2-4-004",    "name": "Uppgift 4",    "exercise": "En analys visar en positiv samvariation mellan BNP per capita och lycka bland världens länder. Vad kan vi <em>inte</em> dra för slutsats av detta?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Rikare länder tenderar att ha högre genomsnittlig lycka",          "Det finns ett mönster i data som kan studeras vidare",          "Högre BNP per capita orsakar direkt ökad lycka",          "Logaritmering kan underlätta jämförelser av relativa skillnader"        ],        "correct": "Högre BNP per capita orsakar direkt ökad lycka"      }    },    "error": { "message": "Kom ihåg: samvariation i ett diagram är inte detsamma som orsakssamband. Vad kräver det för att fastställa kausalitet?" },    "correct": { "message": "Rätt! Samvariationen visar ett mönster, men inte orsaken. Rika länder har t.ex. också bättre sjukvård, infrastruktur och rättssystem — det är oklart vad som faktiskt driver lyckan." }  },  {    "id": "k1-2-4-005",    "name": "Uppgift 5",    "exercise": "Vilket av följande beskriver bäst varför logaritmering av BNP ger ett mer <em>linjärt</em> samband med lycka?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Logaritmering tar bort extremvärden och outliers automatiskt",          "För att öka lyckan hos någon med hög inkomst krävs en större inkomstökning än för någon med låg inkomst — en relativ snarare än absolut ökning spelar roll",          "Logaritmering gör alla länders BNP-värden lika stora",          "Logaritmering förbättrar datakvaliteten"        ],        "correct": "För att öka lyckan hos någon med hög inkomst krävs en större inkomstökning än för någon med låg inkomst — en relativ snarare än absolut ökning spelar roll"      }    },    "error": { "message": "Tänk på marginalnytta: vad betyder 1 000 kr extra för en miljonär jämfört med för en person utan inkomst?" },    "correct": { "message": "Rätt! En relativ ökning av inkomsten (t.ex. en fördubbling) spelar störst roll, inte en absolut ökning. Logaritmering fångar just relativa skillnader, vilket förklarar det mer linjära mönstret." }  }];</script>
 <div class="exercise-section" data-section-id="k1-2-4"></div>
 
-
 ## Banadödlighet och flyktingar {#k1-2-5}
-
-### Kapitel 2.5: Barnadödlighet och flyktingar {#kapitel-2.5-barnadödlighet-och-flyktingar .title}
-
-### Pushtext
-
-Detta avsnitt ger exempel på hur vi kan använda matematik för att resonera och jämföra barnadödlighet och flyktingar.
 
 ### Begrepp
 
@@ -630,7 +591,6 @@ Förklaring: Data från [UNHCR](https://www.unhcr.org/refugee-statistics) (asyls
 ### Video
 
 ### Uppgifter
-
 
 ::: {.ex-section-title}
 Övningar

@@ -1,7 +1,5 @@
 hur-använder-samhällsvetare-matematik
 k1-1-1
-kapitel-1.1-kan-vi-mäta-lycka
-pushtext
 begrepp
 teori
 att-mäta-saker
@@ -10,8 +8,6 @@ mäta-lycka
 video
 uppgifter
 k1-1-2
-kapitel-1.2-hur-beskriva-en-teori-med-matte
-pushtext-1
 begrepp-1
 teori-1
 en-teori-om-lycka
@@ -21,8 +17,6 @@ begränsningar
 video-1
 uppgifter-1
 k1-1-3
-kapitel-1.3-hur-testa-om-en-teori-stämmer
-pushtext-2
 begrepp-2
 teori-2
 samvariation
@@ -33,8 +27,6 @@ exempel-från-forskningen
 video-2
 uppgifter-2
 k1-1-4
-kapitel-1.4-men-varför-räkna
-pushtext-3
 begrepp-3
 teori-3
 vi-ljuger-för-både-oss-själv-och-andra
@@ -44,8 +36,6 @@ video-3
 uppgifter-3
 exempel-från-samhället
 k1-2-1
-kapitel-2.1-räkna-med-ränta
-pushtext-4
 begrepp-4
 teori-4
 ränta-på-ränta
@@ -54,8 +44,6 @@ kumulativ-summa
 effektiv-ränta
 uppgifter-4
 k1-2-2
-kapitel-2.2-nominella-och-reala-priser
-pushtext-5
 begrepp-5
 teori-5
 inkomstindex
@@ -65,8 +53,6 @@ inflation-och-löner-historiskt
 video-4
 uppgifter-5
 k1-2-3
-kapitel-2.3-ekonomiskt-välstånd-och-relativa-förändringar
-pushtext-6
 begrepp-6
 teori-6
 real-bnp
@@ -76,8 +62,6 @@ logaritmera-bnp
 video-5
 uppgifter-6
 k1-2-4
-kapitel-2.4-leder-rikedom-till-lycka
-pushtext-7
 begrepp-7
 teori-7
 varför-ändras-mönstret
@@ -86,8 +70,6 @@ hur-mäta-ett-orsakssamband
 video-6
 uppgifter-7
 k1-2-5
-kapitel-2.5-barnadödlighet-och-flyktingar
-pushtext-8
 begrepp-8
 teori-8
 flyktingar
@@ -95,8 +77,6 @@ video-7
 uppgifter-8
 beskriva-teorier-med-ekvationssystem
 k1-3-1
-kapitel-3.1-utbud-efterfrågan-och-kakor
-pushtext-9
 begrepp-9
 teori-9
 utbud-och-efterfrågan
@@ -105,8 +85,6 @@ två-sorters-kakor
 video-8
 uppgifter-9
 k1-3-2
-kapitel-3.2-hur-hitta-den-rätta
-pushtext-10
 begrepp-10
 teori-10
 två-strategier-för-dejting
@@ -114,8 +92,6 @@ samma-exempel-utan-siffror
 video-9
 uppgifter-10
 k1-3-3
-kapitel-3.3-en-teori-om-arbete
-pushtext-11
 begrepp-11
 teori-11
 samma-sak-men-i-logaritmerad-form
@@ -123,8 +99,6 @@ illustration-i-diagram
 video-10
 uppgifter-11
 k1-3-4
-kapitel-3.4-externa-effekter
-pushtext-12
 begrepp-12
 teori-12
 en-marknad-med-en-extern-effekt
@@ -132,14 +106,12 @@ positiva-externa-effekter
 video-11
 uppgifter-12
 k1-3-5
-kapitel-3.5-rökning
 pushtex
 begrepp-13
 teori-13
 video-12
 uppgifter-13
 k1-3-6
-kapitel-3.6-relationer
 pushtex-1
 begrepp-14
 teori-14
@@ -148,8 +120,6 @@ video-13
 uppgifter-14
 hur-få-ut-det-mesta-av-livet
 k1-4-1
-kapitel-4.1-den-optimala-mängden-tårta
-pushtext-13
 begrepp-15
 teori-15
 tårta-som-maximeringsproblem
@@ -158,8 +128,6 @@ en-metafor-för-mänskliga-beslut
 video-14
 uppgifter-15
 k1-4-2
-kapitel-4.2-hur-mycket-jobb-är-lagom-med-jobb
-pushtext-14
 begrepp-16
 teori-16
 nyttomaximering
@@ -170,8 +138,6 @@ maximeringsproblemet
 video-15
 uppgifter-16
 k1-4-3
-kapitel-4.3-hur-höga-skatter-vill-vi-ha
-pushtext-15
 begrepp-17
 teori-17
 ett-påhittat-land
@@ -180,8 +146,6 @@ två-olika-samhällen
 video-16
 uppgifter-17
 k1-4-4
-kapitel-4.4-vinstmaximerande-företag
-pushtext-16
 begrepp-18
 teori-18
 ett-företag
@@ -190,8 +154,6 @@ marginalvinsten
 video-17
 uppgifter-18
 k1-4-5
-kapitel-4.5-nätverksanalys
-pushtext-17
 begrepp-19
 teori-19
 ett-exempel-med-siffror
@@ -202,8 +164,6 @@ video-18
 uppgifter-19
 kontrafaktisk-analys
 k2-1-1
-avsnitt-1.1-orsak-och-effekt
-pushtext-18
 begrepp-20
 teori-20
 kontrafaktisk-analys-1
@@ -215,8 +175,6 @@ det-är-ofta-svårt-att-definiera-det-kontrafaktiska-utfallet
 video-19
 uppgifter-20
 k2-1-2
-avsnitt-1.2-observationsstudie-och-experiment
-pushtext-19
 begrepp-21
 teori-21
 selektionsproblemet
@@ -232,8 +190,6 @@ rikedom-och-lycka-i-alla-världens-länder
 video-20
 uppgifter-21
 k2-1-3
-avsnitt-1.3-information-och-variabler
-pushtext-20
 begrepp-22
 teori-22
 datavariabler
@@ -243,8 +199,6 @@ olika-typer-av-data
 video-21
 uppgifter-22
 k2-1-4
-avsnitt-1.4-population-superpopulation-och-urval
-pushtext-21
 begrepp-23
 teori-23
 population-och-urval
@@ -255,8 +209,6 @@ video-22
 uppgifter-23
 variation-och-samvariation
 k2-2-1
-avsnitt-2.1-frekvens-och-fördelning
-pushtext-22
 begrepp-24
 teori-24
 frekvensfördelning
@@ -265,8 +217,6 @@ uppskattat-medelvärde
 video-23
 uppgifter-24
 k2-2-2
-avsnitt-2.2-avvikelse-varians-och-standardavvikelse
-pushtext-23
 begrepp-25
 teori-25
 absolut-avvikelse
@@ -278,8 +228,6 @@ ett-exempel-1
 video-24
 uppgifter-25
 k2-2-3
-avsnitt-2.3-samvariation-1-kovarians-och-korrelationskoefficient
-pushtext-24
 begrepp-26
 teori-26
 kovarians
@@ -288,8 +236,6 @@ korrelationskoefficienten
 video-25
 uppgifter-26
 k2-2-4
-avsnitt-2.4-samvariation-2-regressionsanalys
-pushtext-25
 begrepp-27
 teori-27
 minstakvadratmetoden
@@ -302,8 +248,6 @@ positiv-och-negativ-samvariation
 video-26
 uppgifter-27
 k2-2-5
-avsnitt-2.5-felterm-residual-och-ett-räkneexempel
-pushtext-26
 begrepp-28
 teori-28
 beräkna-widehatv
@@ -314,8 +258,6 @@ kopplingen-till-kovarians-och-varians
 video-27
 uppgifter-28
 k2-2-6
-avsnitt-2.6-varför-ska-vi-räkna-nu-igen
-pushtext-27
 begrepp-29
 teori-29
 vi-ljuger-för-både-oss-själv-och-andra-1
@@ -326,16 +268,12 @@ video-28
 uppgifter-29
 minstakvadratmetoden-fördjupning-1
 k2-3-1
-avsnitt-3.1-varför-just-denna-linje
-pushtext-28
 begrepp-30
 teori-30
 två-exempel
 video-29
 uppgifter-30
 k2-3-2
-avsnitt-3.2-en-modell-till
-pushtext-29
 begrepp-31
 teori-31
 en-ny-modell
@@ -347,8 +285,6 @@ observera-att-förkortningar-varierar-ibland.-vi-använder-här-ssr-sum-of-squar
 video-30
 uppgifter-31
 k2-3-3
-avsnitt-3.3-jämföra-två-olika-regressionsmodeller
-pushtext-30
 begrepp-32
 teori-32
 medelkvadratsumman
@@ -358,8 +294,6 @@ vi-beräknar-r2-för-båda-modellerna
 video-31
 uppgifter-32
 k2-3-4
-avsnitt-3.4-härledning-av-koefficienternas-estimatorer
-pushtext-31
 begrepp-33
 teori-33
 utgångspunkter
@@ -369,8 +303,6 @@ video-32
 uppgifter-33
 minstakvadratmetoden-fördjupning-2
 k2-4-1
-avsnitt-4.1-regressionsanalys-med-tre-variabler
-pushtext-32
 begrepp-34
 teori-34
 vad-händer-när-vi-har-tre-variabler
@@ -383,8 +315,6 @@ vad-spelar-allt-det-här-för-roll-1
 video-33
 uppgifter-34
 k2-4-2
-avsnitt-4.2-faktorvariabler
-pushtext-33
 begrepp-35
 teori-35
 faktorvariabler-med-två-unika-värden
@@ -393,8 +323,6 @@ faktorvariabler-med-flera-värden
 video-34
 uppgifter-35
 k2-4-3
-avsnitt-4.3-konstanthålla
-pushtext-34
 begrepp-36
 teori-36
 illustrera-med-lite-data
@@ -404,8 +332,6 @@ illustration-i-diagram-1
 video-35
 uppgifter-36
 k2-4-4
-avsnitt-4.4-regression-med-matriser
-pushtext-35
 begrepp-37
 teori-37
 inversen-av-en-matris
@@ -415,8 +341,6 @@ vad-var-poängen-med-allt-det-här
 video-36
 uppgifter-37
 k2-4-5
-avsnitt-4.5-estimera-med-matriser
-pushtext-36
 begrepp-38
 teori-38
 exempel-nr-1
@@ -425,8 +349,6 @@ exempel-nr-3
 video-37
 uppgifter-38
 k2-4-6
-kapitel-4.6-regressionsanalys-med-interaktionseffekt
-pushtext-37
 begrepp-39
 teori-39
 interaktionseffekten-mellan-x-och-z
@@ -435,8 +357,6 @@ illustration-med-diagram
 video-38
 uppgifter-39
 k2-4-7
-avsnitt-4.7-räkna-på-orsak-och-verkan
-pushtext-38
 begrepp-40
 teori-40
 orsakssamband-i-en-regressionsmodell
@@ -453,8 +373,6 @@ video-39
 uppgifter-40
 regressionsanalys-med-sannolikhet
 k2-5-1
-kapitel-5.1-slumpmässiga-variabler-och-diskreta-sannolikhetsfördelningar
-pushtext-39
 begrepp-41
 teori-41
 kopplingen-mellan-sannolikhet-och-kausalitet
@@ -469,8 +387,6 @@ de-stora-talens-lag
 video-40
 uppgifter-41
 k2-5-2
-avsnitt-5.2-kontinuerliga-sannolikhetsfördelningar
-pushtext-40
 begrepp-42
 teori-42
 sannolikhet-och-kumulativ-sannolikhet
@@ -481,8 +397,6 @@ normalfördelningen
 video-41
 uppgifter-42
 k2-5-3
-avsnitt-5.3-statistisk-analys-1
-pushtext-41
 begrepp-43
 teori-43
 statistiskt-test
@@ -492,8 +406,6 @@ standardfel
 video-42
 uppgifter-43
 k2-5-4
-avsnitt-5.4-statistisk-analys-2
-pushtext-42
 begrepp-44
 teori-44
 konfidensintervall
@@ -504,8 +416,6 @@ hypotestest-i-regressionsanalys
 signifikans-alfa-och-p-värde
 video-43
 k2-5-5
-avsnitt-5.5-regressionsanalys-med-statistiskt-test
-pushtext-43
 begrepp-45
 teori-45
 med-urvalsdata-estimerar-vi-regressionsmodellen
@@ -519,8 +429,6 @@ regressionsanalys-med-konfidensintervall
 video-44
 uppgifter-44
 k2-5-6
-avsnitt-5.6-t-test-för-regression-med-flera-variabler
-pushtext-44
 begrepp-46
 teori-46
 utgångspunkter-1
@@ -534,8 +442,6 @@ ett-exempel-2
 video-45
 uppgifter-45
 k2-5-7
-avsnitt-5.7-vad-är-egentligen-regressionsanalys
-pushtext-45
 begrepp-47
 teori-47
 från-mönster-till-kausalitet

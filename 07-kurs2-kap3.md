@@ -1,13 +1,6 @@
 # Minstakvadratmetoden — fördjupning 1
 
-
 ## Andra linjer {#k2-3-1}
-
-### Avsnitt 3.1: Varför just denna linje? {#avsnitt-3.1-varför-just-denna-linje .title}
-
-### Pushtext
-
-I det här avsnittet går vi djupare in på varför varje regressionsmodell har en unik linje. Och varför ingen annan linje kan ersätta regressionslinjen.
 
 ### Begrepp
 
@@ -67,7 +60,6 @@ Förklaring: Diagrammet visar tre linjer. Linje A är regressionslinjen, beräkn
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -75,14 +67,7 @@ Förklaring: Diagrammet visar tre linjer. Linje A är regressionslinjen, beräkn
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-3-1"]=[  {    "id": "k2-3-1-001",    "name": "Uppgift 1",    "exercise": "Vi har fyra observationer med \\(X = 3, 4, 6, 7\\) och \\(Y = 3, 4, 5, 6\\). Medelvärdet för \\(Y\\) är \\(\\overline{Y} = 4,5\\). En horisontell linje dras vid \\(\\widehat{Y} = 4,5\\). Hur stor är summan av de kvadrerade residualerna för den horisontella linjen? Beräkna: \\[(3 - 4{,}5)^2 + (4 - 4{,}5)^2 + (5 - 4{,}5)^2 + (6 - 4{,}5)^2\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "5" },    "answerformat": "",    "error": { "message": "Beräkna varje term för sig: \\((-1{,}5)^2 = 2{,}25\\), \\((-0{,}5)^2 = 0{,}25\\), \\((0{,}5)^2 = 0{,}25\\), \\((1{,}5)^2 = 2{,}25\\). Summera sedan." },    "correct": { "message": "Rätt! \\(2{,}25 + 0{,}25 + 0{,}25 + 2{,}25 = 5\\). Den horisontella linjen vid \\(\\widehat{Y} = 4{,}5\\) ger alltså SSR (summan av de kvadrerade residualerna) = 5 för dessa fyra observationer." }  },  {    "id": "k2-3-1-002",    "name": "Uppgift 2",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) jämför vi en horisontell linje (Linje B) med regressionslinjen (Linje A) för fyra observationer \\(X = 3, 4, 6, 7\\) och \\(Y = 3, 2, 5, 4\\). Regressionslinjen ger summan av kvadrerade residualerna SSR = 2,5. Den horisontella linjen \\(\\widehat{Y} = \\overline{Y} = 3{,}5\\) ger SSR = 5. Vilket påstående är korrekt?",    "image": "img/k2-3-1-image1.png",    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den horisontella linjen passar bättre eftersom 5 > 2,5",          "Regressionslinjen passar bättre eftersom 2,5 < 5",          "Båda linjerna passar lika bra",          "Det går inte att jämföra de två linjerna"        ],        "correct": "Regressionslinjen passar bättre eftersom 2,5 < 5"      }    },    "error": { "message": "Minstakvadratmetoden minimerar summan av de kvadrerade residualerna. En lägre summa innebär ett bättre anpassad linje." },    "correct": { "message": "Rätt! Regressionslinjen ger summan 2,5 och den horisontella linjen ger 5. Eftersom 2,5 < 5 passar regressionslinjen bättre mot data — precis det som minstakvadratmetoden garanterar." }  },  {    "id": "k2-3-1-003",    "name": "Uppgift 3",    "exercise": "En linje (Linje C) ritas genom observationerna \\((X_1, Y_1) = (3, 3)\\) och \\((X_4, Y_4) = (7, 4)\\). Vad är lutningen \\(\\widehat{b}\\) för denna linje? \\[\\widehat{b} = \\frac{Y_4 - Y_1}{X_4 - X_1}\\]",    "image": "img/k2-3-1-image1.png",    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(\\widehat{b} = 1\\)",          "\\(\\widehat{b} = \\frac{1}{2}\\)",          "\\(\\widehat{b} = \\frac{1}{4}\\)",          "\\(\\widehat{b} = 2\\)"        ],        "correct": "\\(\\widehat{b} = \\frac{1}{4}\\)"      }    },    "error": { "message": "Sätt in värdena i formeln: täljaren är \\(4 - 3 = 1\\) och nämnaren är \\(7 - 3 = 4\\)." },    "correct": { "message": "Rätt! \\(\\widehat{b} = \\frac{4 - 3}{7 - 3} = \\frac{1}{4}\\). Linjen passerar per konstruktion genom \\((3, 3)\\) och \\((7, 4)\\)." }  },  {    "id": "k2-3-1-004",    "name": "Uppgift 4",    "exercise": "Med lutningen \\(\\widehat{b} = \\frac{1}{4}\\) och att linjen passerar genom punkten \\((X_1, Y_1) = (3, 3)\\) beräknas konstanttermen: \\[\\widehat{a} = Y_1 - \\widehat{b} \\cdot X_1\\] Vilket värde får \\(\\widehat{a}\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "2.25" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 2.25)",    "error": { "message": "Beräkna \\(\\frac{1}{4} \\cdot 3 = \\frac{3}{4} = 0{,}75\\). Sedan: \\(3 - 0{,}75 = ?\\). Alternativt: \\(\\frac{9}{4} = ?\\)" },    "correct": { "message": "Rätt! \\(\\widehat{a} = 3 - \\frac{3}{4} = \\frac{9}{4} = 2{,}25\\). Linje C har alltså ekvationen \\(\\widehat{Y} = 2{,}25 + 0{,}25 \\cdot X\\). Linjen passerar per konstruktion genom observation 1 och 4, varför residualerna för dessa är noll." }  },  {    "id": "k2-3-1-005",    "name": "Uppgift 5",    "exercise": "Varför kan ingen annan rät linje ersätta regressionslinjen som skattas med minstakvadratmetoden?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Regressionslinjen är den enda linjen som passerar genom alla observationer",          "Alla andra raka linjer resulterar i ett större summerat värde för de kvadrerade residualerna",          "Regressionslinjen är alltid horisontell",          "Andra linjer kräver fler observationer för att beräknas"        ],        "correct": "Alla andra raka linjer resulterar i ett större summerat värde för de kvadrerade residualerna"      }    },    "error": { "message": "Tänk på vad minstakvadratmetoden faktiskt minimerar och vad det innebär för alla andra möjliga linjer." },    "correct": { "message": "Rätt! Alla andra raka linjer resulterar i ett större summerat värde för det kvadrerade avståndet mellan linjen och punkterna. Till exempel ger den horisontella linjen SSR = 5 och Linje C SSR = 3,125 — båda större än regressionslinjen (SSR (summan av de kvadrerade residualerna) = 2,5)." }  }];</script>
 <div class="exercise-section" data-section-id="k2-3-1"></div>
 
-
 ## En modell till {#k2-3-2}
-
-### Avsnitt 3.2: En modell till {#avsnitt-3.2-en-modell-till .title}
-
-### Pushtext
-
-I detta avsnitt repeterar vi vad vi lärt oss om minstakvadratmetoden och går igenom ett nytt exempel med en ny regressionsmodell.
 
 ### Begrepp
 
@@ -219,7 +204,6 @@ Utifrån kvadratsummorna kan vi skatta determinationskoefficienten (på engelska
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -227,14 +211,7 @@ Utifrån kvadratsummorna kan vi skatta determinationskoefficienten (på engelska
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-3-2"]=[  {    "id": "k2-3-2-001",    "name": "Uppgift 1",    "exercise": "En regressionsmodell \\(Z = \\alpha + \\beta K + \\epsilon\\) estimeras med fyra observationer. Givna summor: \\(\\sum(K_i - \\overline{K})(Z_i - \\overline{Z}) = -8\\) och \\(\\sum(K_i - \\overline{K})^2 = 16\\). Beräkna lutningskoefficienten: \\[\\widehat{\\beta} = \\frac{\\sum(K_i - \\overline{K})(Z_i - \\overline{Z})}{\\sum(K_i - \\overline{K})^2}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "-0.5" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. -0.5)",    "error": { "message": "Sätt in värdena direkt: \\(\\widehat{\\beta} = \\frac{-8}{16}\\). Beräkna detta bråk." },    "correct": { "message": "Rätt! \\(\\widehat{\\beta} = \\frac{-8}{16} = -\\frac{1}{2} = -0{,}5\\). Det negativa tecknet innebär att regressionslinjens lutning är negativ — det finns en negativ samvariation mellan \\(Z\\) och \\(K\\)." }  },  {    "id": "k2-3-2-002",    "name": "Uppgift 2",    "exercise": "Med \\(\\widehat{\\beta} = -\\frac{1}{2}\\), \\(\\overline{Z} = 1{,}5\\) och \\(\\overline{K} = 2\\) beräknas konstanttermen: \\[\\widehat{\\alpha} = \\overline{Z} - \\widehat{\\beta}\\,\\overline{K}\\] Vilket värde får \\(\\widehat{\\alpha}\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "2.5" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 2.5)",    "error": { "message": "Sätt in värdena: \\(\\widehat{\\alpha} = 1{,}5 - (-\\frac{1}{2}) \\cdot 2\\). Observera att minus gånger minus ger plus." },    "correct": { "message": "Rätt! \\(\\widehat{\\alpha} = 1{,}5 - (-0{,}5) \\cdot 2 = 1{,}5 + 1 = 2{,}5\\). Regressionslinjen kan därför skrivas som \\(\\widehat{Z}_i = 2{,}5 - \\frac{1}{2}K_i\\)." }  },  {    "id": "k2-3-2-003",    "name": "Uppgift 3",    "exercise": "Med regressionslinjen \\(\\widehat{Z}_i = 2{,}5 - \\frac{1}{2}K_i\\) och observation 3 där \\(K_3 = 4\\) och \\(Z_3 = 0\\): vad är residualen \\(\\widehat{\\epsilon}_3 = Z_3 - \\widehat{Z}_3\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(\\widehat{\\epsilon}_3 = 1{,}5\\)",          "\\(\\widehat{\\epsilon}_3 = -0{,}5\\)",          "\\(\\widehat{\\epsilon}_3 = 0{,}5\\)",          "\\(\\widehat{\\epsilon}_3 = -1{,}5\\)"        ],        "correct": "\\(\\widehat{\\epsilon}_3 = -0{,}5\\)"      }    },    "error": { "message": "Beräkna först \\(\\widehat{Z}_3 = 2{,}5 - \\frac{1}{2} \\cdot 4\\). Sedan är residualen \\(Z_3 - \\widehat{Z}_3 = 0 - \\widehat{Z}_3\\)." },    "correct": { "message": "Rätt! \\(\\widehat{Z}_3 = 2{,}5 - 0{,}5 \\cdot 4 = 2{,}5 - 2 = 0{,}5\\). Residualen är \\(\\widehat{\\epsilon}_3 = 0 - 0{,}5 = -0{,}5\\)." }  },  {    "id": "k2-3-2-004",    "name": "Uppgift 4",    "exercise": "Vilket av följande påståenden om \\(R^2\\) (determinationskoefficienten) är korrekt?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(R^2\\) kan anta negativa värden om modellen passar dåligt",          "\\(R^2\\) mäter andelen av variationen i \\(Y\\) som förklaras av regressionsmodellen och antar värden mellan 0 och 1",          "\\(R^2 = 1\\) innebär alltid att det finns ett kausalt samband",          "Ett högt \\(R^2\\) garanterar alltid att modellen är bra"        ],        "correct": "\\(R^2\\) mäter andelen av variationen i \\(Y\\) som förklaras av regressionsmodellen och antar värden mellan 0 och 1"      }    },    "error": { "message": "Läs definitionerna av \\(R^2\\) i begreppslistan. Tänk på intervallet \\(R^2\\) kan anta och vad det mäter." },    "correct": { "message": "Rätt! \\(R^2\\) antar värden mellan 0 och 1, där 0 betyder att modellen inte förklarar något och 1 att modellen förklarar all variation. Viktigt: ett högt \\(R^2\\) säger ingenting om orsakssamband." }  },  {    "id": "k2-3-2-005",    "name": "Uppgift 5",    "exercise": "För regressionsmodellen \\(\\widehat{Z}_i = 2{,}5 - 0{,}5K_i\\) med observationer \\(K = \\{1, 2, 4, 1\\}\\) och \\(Z = \\{2, 2, 0, 1\\}\\): de fyra residualerna är \\(0\\), \\(-0{,}5\\), \\(-0{,}5\\) och \\(0\\) (avrundade). Beräkna summan av de kvadrerade residualerna: \\[\\sum_{i=1}^{4}\\widehat{\\epsilon}_i^2\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "0.5" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 0.5)",    "error": { "message": "Kvadrera varje residual: \\(0^2 = 0\\), \\((-0{,}5)^2 = 0{,}25\\), \\((-0{,}5)^2 = 0{,}25\\), \\(0^2 = 0\\). Summera sedan." },    "correct": { "message": "Rätt! \\(\\sum\\widehat{\\epsilon}_i^2 = 0 + 0{,}25 + 0{,}25 + 0 = 0{,}5\\). Minstakvadratmetoden garanterar att ingen annan rät linje ger en lägre summa av kvadrerade residualer för dessa data." }  }];</script>
 <div class="exercise-section" data-section-id="k2-3-2"></div>
 
-
 ## Hur väl passar modellerna mot data? {#k2-3-3}
-
-### Avsnitt 3.3: Jämföra två olika regressionsmodeller {#avsnitt-3.3-jämföra-två-olika-regressionsmodeller .title}
-
-### Pushtext
-
-Vi fortsätter här att gå igenom regressionsanalys och hur vi kan jämföra resultaten från vår regressionsmodell.
 
 ### Begrepp
 
@@ -348,7 +325,6 @@ Detta betyder att 50 % av variationen i [\\(Y\\)]{.math .inline} förklaras av [
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -356,14 +332,7 @@ Detta betyder att 50 % av variationen i [\\(Y\\)]{.math .inline} förklaras av [
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-3-3"]=[  {    "id": "k2-3-3-001",    "name": "Uppgift 1",    "exercise": "För en regressionsmodell \\(Y = a + bX + V\\) med fyra observationer gäller: \\(\\sum(Y_i - \\widehat{Y}_i)^2 = 2{,}5\\) och \\(n - p = 4 - 2 = 2\\). Beräkna medelkvadratsumman för residualerna: \\[MSR = \\frac{\\sum(Y_i - \\widehat{Y}_i)^2}{n - p}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "1.25" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 1.25)",    "error": { "message": "Sätt in värdena direkt: \\(MSR = \\frac{2{,}5}{2}\\). Dividera täljaren med nämnaren." },    "correct": { "message": "Rätt! \\(MSR = \\frac{2{,}5}{2} = 1{,}25\\). Frihetsgrader \\(n - p = 4 - 2 = 2\\) eftersom vi har 4 observationer och 2 estimerade koefficienter (\\(a\\) och \\(b\\))." }  },  {    "id": "k2-3-3-002",    "name": "Uppgift 2",    "exercise": "För en regressionsmodell \\(Z = \\alpha + \\beta K + \\epsilon\\) med fyra observationer gäller: \\(\\sum(Z_i - \\widehat{Z}_i)^2 = 5\\) och \\(n - p = 2\\). Beräkna: \\[MSR = \\frac{\\sum(Z_i - \\widehat{Z}_i)^2}{n - p}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "2.5" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 2.5)",    "error": { "message": "Använd formeln \\(MSR = \\frac{SSR}{n-p}\\). Sätt in \\(SSR = 5\\) och \\(n - p = 2\\)." },    "correct": { "message": "Rätt! \\(MSR = \\frac{5}{2} = 2{,}5\\). Jämfört med regressionen Y på X (MSR = 1,25) är MSR här högre (2,5 > 1,25), vilket indikerar att regressionen Y på X har predikterade värden som ligger närmare de observerade." }  },  {    "id": "k2-3-3-003",    "name": "Uppgift 3",    "exercise": "Medelkvadratsumman för residualerna beräknas som \\[MSR = \\frac{\\sum(Y_i - \\widehat{Y}_i)^2}{n - p}\\] Vad innebär ett lägre MSR vid jämförelse av två regressionsmodeller?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Modellen har fler observationer",          "Modellens predikterade värden \\(\\widehat{Y}\\) hamnar relativt nära observationerna \\(Y\\)",          "Modellen har ett mer negativt lutningskoefficient",          "Modellen har fler förklarande variabler"        ],        "correct": "Modellens predikterade värden \\(\\widehat{Y}\\) hamnar relativt nära observationerna \\(Y\\)"      }    },    "error": { "message": "MSR mäter genomsnittlig kvadrerad residual. Tänk på vad en liten residual innebär för hur väl linjen passar mot data." },    "correct": { "message": "Rätt! Ett lägre MSR innebär att regressionsmodellens predikterade \\(\\widehat{Y}\\) i genomsnitt hamnar relativt nära de observerade värdena \\(Y\\). Regressionen Y på X (MSR = 1,25) passar alltså bättre än regressionen Z på K (MSR = 2,5) mot sina respektive data." }  },  {    "id": "k2-3-3-004",    "name": "Uppgift 4",    "exercise": "För en regressionsmodell \\(Y = a + bX + V\\) med fyra observationer gäller \\(\\sum(Y_i - \\widehat{Y}_i)^2 = 2{,}5\\) och \\(\\sum(Y_i - \\overline{Y})^2 = 5\\). Beräkna \\(R^2\\): \\[R^2 = 1 - \\frac{\\sum(Y_i - \\widehat{Y}_i)^2}{\\sum(Y_i - \\overline{Y})^2} = 1 - \\frac{2{,}5}{5}\\] Vilket värde får \\(R^2\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(R^2 = 0{,}25\\)",          "\\(R^2 = 0{,}75\\)",          "\\(R^2 = 0{,}5\\)",          "\\(R^2 = 1\\)"        ],        "correct": "\\(R^2 = 0{,}5\\)"      }    },    "error": { "message": "Beräkna: \\(1 - \\frac{2{,}5}{5} = 1 - 0{,}5 = ?\\)" },    "correct": { "message": "Rätt! \\(R^2 = 1 - \\frac{2{,}5}{5} = 1 - 0{,}5 = 0{,}5\\). Det innebär att 50 % av variationen i \\(Y\\) förklaras av \\(X\\). De övriga 50 % beror på andra faktorer (residualerna)." }  },  {    "id": "k2-3-3-005",    "name": "Uppgift 5",    "exercise": "För en regressionsmodell \\(Z = \\alpha + \\beta K + \\epsilon\\) gäller \\(\\sum(Z_i - \\widehat{Z}_i)^2 = 5\\) och \\(\\sum(Z_i - \\overline{Z})^2 = 9\\), vilket ger \\(R^2 = 1 - \\frac{5}{9} = \\frac{4}{9}\\). Regressionen Y på X (från uppgift 4) hade \\(R^2 = 0{,}5\\). Vilken regression har högst förklaringsgrad och vad kan vi dra för slutsats?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Regressionen Z på K, eftersom \\(\\frac{4}{9} > \\frac{1}{2}\\)",          "Regressionen Y på X, eftersom \\(\\frac{1}{2} > \\frac{4}{9}\\), vilket innebär att den passar bättre mot sin data",          "Regressionen Y på X, och det bevisar att det finns ett kausalt samband",          "Båda regressionerna har samma förklaringsgrad"        ],        "correct": "Regressionen Y på X, eftersom \\(\\frac{1}{2} > \\frac{4}{9}\\), vilket innebär att den passar bättre mot sin data"      }    },    "error": { "message": "Jämför \\(\\frac{1}{2}\\) och \\(\\frac{4}{9}\\): omvandla till decimaltal. \\(\\frac{1}{2} = 0{,}5\\) och \\(\\frac{4}{9} \\approx 0{,}444\\). Vilket är störst?" },    "correct": { "message": "Rätt! \\(\\frac{1}{2} = 0{,}5 > \\frac{4}{9} \\approx 0{,}444\\), så regressionen Y på X har högre \\(R^2\\) och därmed högre förklaringsgrad. Viktigt: ett högt \\(R^2\\) säger inte nödvändigtvis något om orsakssamband, och jämförelsen görs mot respektive regressions egna data." }  }];</script>
 <div class="exercise-section" data-section-id="k2-3-3"></div>
 
-
 ## Härled estimatorerna {#k2-3-4}
-
-### Avsnitt 3.4: Härledning av koefficienternas estimatorer {#avsnitt-3.4-härledning-av-koefficienternas-estimatorer .title}
-
-### Pushtext
-
-I detta avsnitt ska vi härleda estimatorerna för koefficienterna i vår första regressionsmodell. Detta ger oss en bättre förståelse för minstakvadratmetoden.
 
 ### Begrepp
 
@@ -478,7 +447,6 @@ Nu har vi samma sak som ekvation 1.
 ### Video
 
 ### Uppgifter
-
 
 ::: {.ex-section-title}
 Övningar

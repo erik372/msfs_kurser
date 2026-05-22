@@ -1,13 +1,6 @@
 # Variation och samvariation
 
-
 ## Frekvens och fördelning {#k2-2-1}
-
-### Avsnitt 2.1: Frekvens och fördelning {#avsnitt-2.1-frekvens-och-fördelning .title}
-
-### Pushtext
-
-I det här avsnittet börjar vi gå igenom hur vi kan jämföra variation och samvariation i data.
 
 ### Begrepp
 
@@ -87,7 +80,6 @@ Med urvalsdata tar vi [\\(x\_{i} - \\overline{X}\\)]{.math .inline}. Summan av a
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -95,14 +87,7 @@ Med urvalsdata tar vi [\\(x\_{i} - \\overline{X}\\)]{.math .inline}. Summan av a
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-2-1"]=[  {    "id": "k2-2-1-001",    "name": "Uppgift 1",    "exercise": "Vad menas med en <em>frekvensfördelning</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Medelvärdet för alla observationer i ett material",          "Antal observationer som förekommer av varje unikt värde i ett material",          "Differensen mellan det högsta och lägsta värdet i ett material",          "Summan av alla avvikelser från medelvärdet"        ],        "correct": "Antal observationer som förekommer av varje unikt värde i ett material"      }    },    "error": { "message": "Frekvens syftar på hur <em>ofta</em> ett värde förekommer, inte på ett genomsnitt eller en differens." },    "correct": { "message": "Rätt! En frekvensfördelning visar hur många observationer (frekvens) som förekommer av varje unikt värde i ett material." }  },  {    "id": "k2-2-1-002",    "name": "Uppgift 2",    "exercise": "Vad skiljer ett <em>histogram</em> från ett vanligt stapeldiagram?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Ett histogram använder cirklar i stället för staplar",          "I ett histogram representerar varje stapel ofta ett intervall av värden",          "Ett histogram visar bara medelvärdet",          "Ett histogram kan bara användas för kategoriska variabler"        ],        "correct": "I ett histogram representerar varje stapel ofta ett intervall av värden"      }    },    "error": { "message": "Tänk på hur histogrammet används för att ge en överblick – varje stapel samlar ihop en grupp av värden." },    "correct": { "message": "Rätt! I ett histogram representerar varje stapel ofta ett intervall av värden, till skillnad från ett vanligt stapeldiagram där varje stapel representerar ett enskilt värde." }  },  {    "id": "k2-2-1-003",    "name": "Uppgift 3",    "exercise": "Inom statistik finns ett vanligt sätt att beteckna populationens medelvärde för variabeln \\(X\\). Vilket av följande alternativ är vanligast?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(\\overline{X}\\)",          "\\(s_X\\)",          "\\(\\mu_X\\)",          "\\(\\sigma_X\\)"        ],        "correct": "\\(\\mu_X\\)"      }    },    "error": { "message": "Populationens medelvärde betecknas med den grekiska bokstaven mu (\\(\\mu\\)), inte med ett streck ovanpå." },    "correct": { "message": "Rätt! Populationens medelvärde för variabeln \\(X\\) skrivs ofta \\(\\mu_X\\), där \\(\\mu\\) är den grekiska bokstaven mu. Det uppskattade medelvärdet från urvalsdata skrivs däremot \\(\\overline{X}\\)." }  },  {    "id": "k2-2-1-004",    "name": "Uppgift 4",    "exercise": "Du har fyra observationer: 2, 4, 4 och 6. Beräkna det uppskattade medelvärdet \\(\\overline{X}\\) enligt formeln \\[\\overline{X} = \\frac{\\sum_{i}^{} x_i}{n}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "4" },    "answerformat": "",    "error": { "message": "Summera alla värden och dividera med antalet observationer. Summan är 2 + 4 + 4 + 6 = 16, och n = 4." },    "correct": { "message": "Rätt! Summan av alla värden är 2 + 4 + 4 + 6 = 16, och vi har n = 4 observationer. Medelvärdet blir 16/4 = 4." }  },  {    "id": "k2-2-1-005",    "name": "Uppgift 5",    "exercise": "Varför är summan av alla differenser från medelvärdet, \\(\\sum_{i}^{}(x_i - \\overline{X})\\), alltid lika med noll?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Eftersom medelvärdet alltid är noll",          "Eftersom positiva och negativa avvikelser tar ut varandra när de summeras",          "Eftersom alla observationer alltid är lika stora",          "Eftersom vi alltid dividerar med n"        ],        "correct": "Eftersom positiva och negativa avvikelser tar ut varandra när de summeras"      }    },    "error": { "message": "Medelvärdet är det \"balanspunkten\" i datamaterialet – avvikelserna uppåt och nedåt väger ut varandra exakt." },    "correct": { "message": "Rätt! Medelvärdet är definierat som den punkt där positiva och negativa avvikelser tar ut varandra. Matematiskt kan man visa att \\(\\sum(x_i - \\overline{X}) = \\sum x_i - n\\overline{X} = \\sum x_i - \\sum x_i = 0\\)." }  }];</script>
 <div class="exercise-section" data-section-id="k2-2-1"></div>
 
-
 ## Avvikelse, varians och standardavvikelse {#k2-2-2}
-
-### Avsnitt 2.2: Avvikelse, varians och standardavvikelse {#avsnitt-2.2-avvikelse-varians-och-standardavvikelse .title}
-
-### Pushtext
-
-Avsnittet introducerar fler metoder för att studera spridning bland en samling värden, som absolut avvikelse, varians och standardavvikelse.
 
 ### Begrepp
 
@@ -205,8 +190,6 @@ Nu ska vi beräkna (skatta) variansen med fyra observationer för två variabler
 
   4             7                                  4                                  2                                                  0,5                                                4                                                                        0,25
 
-                                                                                                                                                                                                                                                                     
-
   Medelvärde    5                                  3,5                                                                                                                                                                                                               
 
   Summa         20                                 14                                                                                                                                       10                                                                       5
@@ -230,7 +213,6 @@ För att beräkna standardavvikelse för variablerna [\\(x\\)]{.math .inline} oc
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -238,14 +220,7 @@ För att beräkna standardavvikelse för variablerna [\\(x\\)]{.math .inline} oc
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-2-2"]=[  {    "id": "k2-2-2-001",    "name": "Uppgift 1",    "exercise": "Vad kallas korrigeringen som innebär att man dividerar med \\(n - 1\\) i stället för \\(n\\) när man beräknar urvalsvarians?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Standardiseringskorrigeringen",          "Bessels korrigering",          "Gauss-korrigeringen",          "Normaliseringskorrigeringen"        ],        "correct": "Bessels korrigering"      }    },    "error": { "message": "Korrigeringen är uppkallad efter en matematiker och syftar till att undvika att man underskattar populationens varians." },    "correct": { "message": "Rätt! Bessels korrigering innebär att man dividerar med \\(n - 1\\) i stället för \\(n\\), vilket ger en bättre uppskattning av populationens varians när man arbetar med urvalsdata." }  },  {    "id": "k2-2-2-002",    "name": "Uppgift 2",    "exercise": "Om en konstant \\(a\\) multipliceras med en variabel \\(x\\), vad blir variansen för \\(ax\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(a \\cdot \\text{var}(x)\\)",          "\\(a^2 \\cdot \\text{var}(x)\\)",          "\\(\\sqrt{a} \\cdot \\text{var}(x)\\)",          "\\(\\text{var}(x)\\) (konstanten påverkar inte variansen)"        ],        "correct": "\\(a^2 \\cdot \\text{var}(x)\\)"      }    },    "error": { "message": "Kom ihåg att variansen beräknas med kvadrerade avvikelser, vilket innebär att konstanten kvadreras." },    "correct": { "message": "Rätt! Eftersom variansen bygger på kvadrerade avvikelser gäller att \\(\\text{var}(ax) = a^2 \\cdot \\text{var}(x)\\). Standardavvikelsen för \\(ax\\) blir i sin tur \\(|a| \\cdot s_x\\)." }  },  {    "id": "k2-2-2-003",    "name": "Uppgift 3",    "exercise": "Variabeln \\(x\\) har fyra värden: 3, 4, 6 och 7, med medelvärde \\(\\overline{x} = 5\\). Beräkna summan av de kvadrerade avvikelserna: \\[\\sum_{i=1}^{4}(x_i - \\overline{x})^2\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "10" },    "answerformat": "",    "error": { "message": "Beräkna \\((3-5)^2 + (4-5)^2 + (6-5)^2 + (7-5)^2\\) och summera." },    "correct": { "message": "Rätt! \\((3-5)^2 + (4-5)^2 + (6-5)^2 + (7-5)^2 = 4 + 1 + 1 + 4 = 10\\)." }  },  {    "id": "k2-2-2-004",    "name": "Uppgift 4",    "exercise": "Variabeln \\(y\\) har fyra värden: 3, 2, 5 och 4, med medelvärde \\(\\overline{y} = 3{,}5\\). Använd Bessels korrigering och beräkna urvalsvariansen \\[\\text{var}(y) = \\frac{\\sum_{i=1}^{4}(y_i - \\overline{y})^2}{n-1}\\] Summan av kvadrerade avvikelser för \\(y\\) är 5. Ange svaret som ett decimaltal med tre decimaler (avrunda om nödvändigt).",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "1.667" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 1.667",    "error": { "message": "Dividera summan av kvadrerade avvikelser (= 5) med \\(n - 1 = 3\\). Resultatet är 5/3 ≈ 1,667." },    "correct": { "message": "Rätt! Med Bessels korrigering är urvalsvariansen \\(\\text{var}(y) = 5 / (4-1) = 5/3 \\approx 1{,}667\\)." }  },  {    "id": "k2-2-2-005",    "name": "Uppgift 5",    "exercise": "Variansen för variabel \\(x\\) är \\(\\text{var}(x) = 10/3\\). Beräkna standardavvikelsen \\(s_x = \\sqrt{\\text{var}(x)}\\) och runda av till tre decimaler.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "1.826" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 1.826",    "error": { "message": "Ta positiva kvadratroten av \\(10/3\\). Kontrollräkning: \\(\\sqrt{3{,}333...} \\approx 1{,}826\\)." },    "correct": { "message": "Rätt! Standardavvikelsen är \\(s_x = \\sqrt{10/3} \\approx 1{,}826\\). Standardavvikelsen är alltid den positiva kvadratroten av variansen och har samma enhet som den ursprungliga variabeln." }  }];</script>
 <div class="exercise-section" data-section-id="k2-2-2"></div>
 
-
 ## Samvariation 1 {#k2-2-3}
-
-### Avsnitt 2.3: Samvariation 1: kovarians och korrelationskoefficient {#avsnitt-2.3-samvariation-1-kovarians-och-korrelationskoefficient .title}
-
-### Pushtext
-
-Avsnittet introducerar två mått på linjär samvariation: kovarians och korrelationskoefficienten.
 
 ### Begrepp
 
@@ -363,7 +338,6 @@ Detta resultat indikerar en positiv korrelation. Höga värden av [\\(x\\)]{.mat
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -371,14 +345,7 @@ Detta resultat indikerar en positiv korrelation. Höga värden av [\\(x\\)]{.mat
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-2-3"]=[  {    "id": "k2-2-3-001",    "name": "Uppgift 1",    "exercise": "Vad innebär det om kovariansen mellan två variabler \\(x\\) och \\(y\\) är <em>negativ</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Höga värden på \\(x\\) är associerade med höga värden på \\(y\\)",          "Höga värden på \\(x\\) är associerade med låga värden på \\(y\\)",          "Det finns ingen samvariation alls mellan \\(x\\) och \\(y\\)",          "Variansen för \\(x\\) är större än variansen för \\(y\\)"        ],        "correct": "Höga värden på \\(x\\) är associerade med låga värden på \\(y\\)"      }    },    "error": { "message": "Tänk på vad riktningen på samvariationen innebär. Negativt värde = rörelserna går åt motsatt håll." },    "correct": { "message": "Rätt! Negativ kovarians innebär negativ samvariation: höga värden på \\(x\\) är associerade med låga värden på \\(y\\) och vice versa. Om kovariansen är noll finns ingen linjär samvariation." }  },  {    "id": "k2-2-3-002",    "name": "Uppgift 2",    "exercise": "Vad händer om man beräknar kovariansen av en variabel med sig själv, det vill säga \\(\\text{cov}(x, x)\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Man får noll",          "Man får variansen av \\(x\\)",          "Man får standardavvikelsen av \\(x\\)",          "Man får korrelationskoefficienten"        ],        "correct": "Man får variansen av \\(x\\)"      }    },    "error": { "message": "Sätt in \\(y = x\\) i kovariansformeln och se vad du får." },    "correct": { "message": "Rätt! \\(\\text{cov}(x,x) = \\frac{1}{n}\\sum(x_i - \\overline{x})(x_i - \\overline{x}) = \\frac{1}{n}\\sum(x_i - \\overline{x})^2 = \\text{var}(x)\\). Variansen är alltså ett specialfall av kovariansen." }  },  {    "id": "k2-2-3-003",    "name": "Uppgift 3",    "exercise": "Fyra observationer har värdena \\(x = \\{3, 4, 6, 7\\}\\) med \\(\\overline{x} = 5\\), och \\(y = \\{3, 2, 5, 4\\}\\) med \\(\\overline{y} = 3{,}5\\). Summan \\(\\sum_{i=1}^{4}(x_i - \\overline{x})(y_i - \\overline{y}) = 5\\). Beräkna urvalskovariansen: \\[\\text{cov}(x,y) = \\frac{1}{n-1}\\sum_{i}^{}(x_i - \\overline{x})(y_i - \\overline{y})\\] Ange svaret som ett decimaltal med tre decimaler.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "1.667" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 1.667",    "error": { "message": "Dividera summan av produkterna (= 5) med \\(n - 1 = 3\\)." },    "correct": { "message": "Rätt! \\(\\text{cov}(x,y) = 5 / (4-1) = 5/3 \\approx 1{,}667\\). Värdet är positivt, vilket indikerar positiv samvariation." }  },  {    "id": "k2-2-3-004",    "name": "Uppgift 4",    "exercise": "Vad är den viktigaste fördelen med korrelationskoefficienten \\(r_{xy}\\) jämfört med kovariansen \\(\\text{cov}(x,y)\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Korrelationskoefficienten är alltid ett heltal",          "Korrelationskoefficienten är standardiserad och tar värden mellan -1 och 1, vilket underlättar jämförelser mellan olika variabler",          "Korrelationskoefficienten är alltid positiv",          "Korrelationskoefficienten beräknas utan Bessels korrigering"        ],        "correct": "Korrelationskoefficienten är standardiserad och tar värden mellan -1 och 1, vilket underlättar jämförelser mellan olika variabler"      }    },    "error": { "message": "Tänk på att kovariansens värde påverkas av variablernas enheter – vad löser korrelationskoefficienten?" },    "correct": { "message": "Rätt! Korrelationskoefficienten är standardiserad kovarians och kan bara anta värden i intervallet [-1, 1]. Detta gör att vi kan jämföra samvariationens styrka och riktning mellan olika par av variabler, oavsett enhet." }  },  {    "id": "k2-2-3-005",    "name": "Uppgift 5",    "exercise": "Givet \\(\\text{cov}(x,y) = 5/3\\), \\(s_x = \\sqrt{10/3}\\) och \\(s_y = \\sqrt{5/3}\\), beräkna korrelationskoefficienten \\[r_{xy} = \\frac{\\text{cov}(x,y)}{s_x \\cdot s_y}\\] Runda av till två decimaler.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "0.71" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 0.71",    "error": { "message": "Beräkna \\(s_x \\cdot s_y = \\sqrt{10/3} \\cdot \\sqrt{5/3} = \\sqrt{50/9}\\), och dela sedan kovariansen med detta." },    "correct": { "message": "Rätt! \\(r_{xy} = \\frac{5/3}{\\sqrt{10/3} \\cdot \\sqrt{5/3}} \\approx 0{,}71\\). Värdet indikerar en positiv korrelation: höga värden på \\(x\\) sammanfaller med höga värden på \\(y\\)." }  }];</script>
 <div class="exercise-section" data-section-id="k2-2-3"></div>
 
-
 ## Samvariation 2 {#k2-2-4}
-
-### Avsnitt 2.4: Samvariation 2: regressionsanalys {#avsnitt-2.4-samvariation-2-regressionsanalys .title}
-
-### Pushtext
-
-Avsnittet introducerar
 
 ### Begrepp
 
@@ -514,7 +481,6 @@ Estimerade [\\(\\widehat{Y}\\)]{.math .inline} kallas även för *predikterade* 
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -522,14 +488,7 @@ Estimerade [\\(\\widehat{Y}\\)]{.math .inline} kallas även för *predikterade* 
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-2-4"]=[  {    "id": "k2-2-4-001",    "name": "Uppgift 1",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) – vad kallas variabeln \\(Y\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Förklarande variabel",          "Oberoende variabel",          "Förklarad (beroende) variabel",          "Residualvariabel"        ],        "correct": "Förklarad (beroende) variabel"      }    },    "error": { "message": "\\(Y\\) står till vänster om likhetstecknet i regressionsmodellen. Tänk på vad detta innebär för tolkningen." },    "correct": { "message": "Rätt! \\(Y\\) kallas den <em>förklarade</em> eller <em>beroende</em> variabeln. Variabel \\(X\\) till höger om likhetstecknet är den förklarande (oberoende) variabeln." }  },  {    "id": "k2-2-4-002",    "name": "Uppgift 2",    "exercise": "Vad representerar feltermen \\(V\\) i regressionsmodellen \\(Y = a + bX + V\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Differensen mellan de estimerade koefficienterna \\(\\widehat{a}\\) och \\(\\widehat{b}\\)",          "Differensen mellan respektive observations \\(Y\\)-värde och regressionslinjen i populationen",          "Det genomsnittliga felet i hela datasetet",          "Skillnaden mellan populationens och urvalets storlek"        ],        "correct": "Differensen mellan respektive observations \\(Y\\)-värde och regressionslinjen i populationen"      }    },    "error": { "message": "Feltermen är det som modellen inte kan förklara – det vertikala avståndet till regressionslinjen." },    "correct": { "message": "Rätt! Feltermen \\(V\\) anger differenserna i populationen mellan respektive observations \\(Y\\)-värde och regressionslinjen. Estimerade feltermer kallas för residualer och betecknas \\(\\widehat{V}\\)." }  },  {    "id": "k2-2-4-003",    "name": "Uppgift 3",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) estimeras regressionslinjen med \\(\\widehat{b} = 0{,}5\\) och \\(\\widehat{a} = 1\\), det vill säga \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\). Vad blir \\(\\widehat{Y}\\) för observation 3 där \\(X_3 = 6\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "4" },    "answerformat": "",    "error": { "message": "Sätt in \\(X = 6\\) i formeln \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\)." },    "correct": { "message": "Rätt! \\(\\widehat{Y}_3 = 1 + 0{,}5 \\cdot 6 = 1 + 3 = 4\\). Detta är det predikterade \\(Y\\)-värdet längs regressionslinjen för \\(X = 6\\)." }  },  {    "id": "k2-2-4-004",    "name": "Uppgift 4",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\): vad innebär det om lutningskoefficienten \\(\\widehat{b} = 0\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det finns en stark positiv samvariation",          "Det finns en stark negativ samvariation",          "Regressionslinjen är horisontell, vilket indikerar ingen linjär samvariation",          "Modellen är felaktigt specificerad"        ],        "correct": "Regressionslinjen är horisontell, vilket indikerar ingen linjär samvariation"      }    },    "error": { "message": "Tänk på vad \\(b\\) är i räta linjens ekvation \\(Y = a + bX\\)." },    "correct": { "message": "Rätt! Om \\(\\widehat{b} = 0\\) är regressionslinjen horisontell och saknar lutning, vilket indikerar att vi inte finner någon linjär samvariation mellan variablerna \\(X\\) och \\(Y\\)." }  },  {    "id": "k2-2-4-005",    "name": "Uppgift 5",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) estimeras regressionslinjen som \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\). Vad är det predikterade \\(Y\\)-värdet för \\(X = 10\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "6" },    "answerformat": "",    "error": { "message": "Sätt in \\(X = 10\\) i formeln \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\)." },    "correct": { "message": "Rätt! \\(\\widehat{Y} = 1 + 0{,}5 \\cdot 10 = 1 + 5 = 6\\). Vi kan prediktera \\(Y\\)-värden för \\(X\\)-värden som inte finns i datamaterialet – detta kallas prediktion." }  }];</script>
 <div class="exercise-section" data-section-id="k2-2-4"></div>
 
-
 ## Felterm, residual och ett räkneexempel {#k2-2-5}
-
-### Avsnitt 2.5: Felterm, residual och ett räkneexempel {#avsnitt-2.5-felterm-residual-och-ett-räkneexempel .title}
-
-### Pushtext
-
-Detta avsnitt fortsätter att gå igenom grunderna för regressionsanalys med minstakvadratmetoden, med fokus på feltermerna och residualerna.
 
 ### Begrepp
 
@@ -687,7 +646,6 @@ I [avsnitt 2.3](https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvari
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -695,14 +653,7 @@ I [avsnitt 2.3](https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvari
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-2-5"]=[  {    "id": "k2-2-5-001",    "name": "Uppgift 1",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) med fyra observationer \\(X = \\{3, 4, 6, 7\\}\\) och \\(Y = \\{3, 2, 5, 4\\}\\): beräkna lutningskoefficienten \\[\\widehat{b} = \\frac{\\sum_{i}^{}(X_i - \\overline{X})(Y_i - \\overline{Y})}{\\sum_{i}^{}(X_i - \\overline{X})^2}\\] Täljaren är 5 och nämnaren är 10. Ange svaret som ett decimaltal.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "0.5" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 0.5",    "error": { "message": "Dividera täljaren med nämnaren: \\(5 / 10 = ?\\)" },    "correct": { "message": "Rätt! \\(\\widehat{b} = 5/10 = 0{,}5\\). Det innebär att en ökning av \\(X\\) med en enhet i genomsnitt är associerad med ett 0,5 högre \\(Y\\)." }  },  {    "id": "k2-2-5-002",    "name": "Uppgift 2",    "exercise": "Med \\(\\overline{Y} = 3{,}5\\), \\(\\overline{X} = 5\\) och \\(\\widehat{b} = 0{,}5\\), beräkna konstanten: \\[\\widehat{a} = \\overline{Y} - \\widehat{b} \\cdot \\overline{X}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "1" },    "answerformat": "",    "error": { "message": "Sätt in värdena: \\(\\widehat{a} = 3{,}5 - 0{,}5 \\times 5\\)." },    "correct": { "message": "Rätt! \\(\\widehat{a} = 3{,}5 - 0{,}5 \\times 5 = 3{,}5 - 2{,}5 = 1\\). Konstanten anger regressionslinjens y-skärning: för \\(X = 0\\) är \\(\\widehat{Y} = 1\\)." }  },  {    "id": "k2-2-5-003",    "name": "Uppgift 3",    "exercise": "Residualen för observation \\(i\\) definieras som \\(\\widehat{V}_i = Y_i - \\widehat{Y}_i\\). Med \\(\\widehat{Y} = 1 + 0{,}5X\\) och observation 2 som har \\(X_2 = 4\\) och \\(Y_2 = 2\\): vilket värde har residualen \\(\\widehat{V}_2\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "-1" },    "answerformat": "",    "error": { "message": "Beräkna först \\(\\widehat{Y}_2 = 1 + 0{,}5 \\times 4\\), och subtrahera sedan detta från \\(Y_2 = 2\\)." },    "correct": { "message": "Rätt! \\(\\widehat{Y}_2 = 1 + 0{,}5 \\times 4 = 3\\), och \\(\\widehat{V}_2 = 2 - 3 = -1\\). Det negativa tecknet innebär att observation 2 ligger under regressionslinjen." }  },  {    "id": "k2-2-5-004",    "name": "Uppgift 4",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\): vad är summan av alla residualer \\(\\sum_{i}^{}\\widehat{V}_i\\) alltid lika med?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "1",          "Medelvärdet av \\(Y\\)",          "0",          "Standardavvikelsen för \\(Y\\)"        ],        "correct": "0"      }    },    "error": { "message": "Tänk på att minstakvadratmetoden hittar den linje som balanserar positiva och negativa avvikelser från linjen." },    "correct": { "message": "Rätt! Summan av alla residualer är alltid noll: \\(\\sum \\widehat{V}_i = 0\\). I exemplet är residualerna 0,5 + (−1) + 1 + (−0,5) = 0. Däremot är de enskilda residualerna i regel skilda från noll." }  },  {    "id": "k2-2-5-005",    "name": "Uppgift 5",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) kan lutningskoefficienten \\(\\widehat{b}\\) uttryckas som kovariansen mellan \\(X\\) och \\(Y\\) dividerat med variansen för \\(X\\). Med \\(\\text{cov}(X,Y) = 5/3\\) och \\(\\text{var}(X) = 10/3\\): vad ger \\(\\text{cov}(X,Y)/\\text{var}(X)\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "0.5" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 0.5",    "error": { "message": "Dividera täljaren \\(5/3\\) med nämnaren \\(10/3\\). Tips: \\(\\frac{5/3}{10/3} = \\frac{5}{3} \\times \\frac{3}{10}\\)." },    "correct": { "message": "Rätt! \\(\\frac{5/3}{10/3} = \\frac{5}{10} = 0{,}5 = \\widehat{b}\\). Detta visar kopplingen mellan kovarians, varians och OLS-koefficienten: \\(\\widehat{b} = \\text{cov}(X,Y)/\\text{var}(X)\\)." }  }];</script>
 <div class="exercise-section" data-section-id="k2-2-5"></div>
 
-
 ## Varför ska vi räkna nu igen? {#k2-2-6}
-
-### Avsnitt 2.6: Varför ska vi räkna nu igen? {#avsnitt-2.6-varför-ska-vi-räkna-nu-igen .title}
-
-### Pushtext
-
-Detta avsnitt påminner oss om varför vi måste räkna även när vi analyserar orsak och verkan.
 
 ### Begrepp
 
@@ -758,7 +709,6 @@ Men underskatta inte alla de förslag som hade fått större utrymme men som vi 
 ### Video
 
 ### Uppgifter
-
 
 ::: {.ex-section-title}
 Övningar

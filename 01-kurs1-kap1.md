@@ -2,14 +2,7 @@
 
 # Hur använder samhällsvetare matematik
 
-
 ## Kan vi mäta lycka? {#k1-1-1}
-
-### Kapitel 1.1: Kan vi mäta lycka? {#kapitel-1.1-kan-vi-mäta-lycka .title}
-
-### Pushtext
-
-Avsnittet beskriver hur matematik kan användas inom analys och forskning till att (1) mäta saker, (2) beskriva teorier, och (3) jämföra teorier mot verkligheten.
 
 ### Begrepp
 
@@ -83,7 +76,6 @@ Olika insamlingsmetoder har sina för- och nackdelar. En välkänd utmaning i de
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -91,14 +83,7 @@ Olika insamlingsmetoder har sina för- och nackdelar. En välkänd utmaning i de
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-1-1"]=[  {    "id": "k1-1-1-001",    "name": "Uppgift 1",    "exercise": "Vilka av följande påståenden beskriver <em>kvantitativa data</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "En persons namn och födelseort",          "Antalet balkonger i ett höghus",          "En beskrivning av hur det känns att vara ledsen",          "Vilket land en person är född i"        ],        "correct": "Antalet balkonger i ett höghus"      }    },    "error": {      "message": "Tänk på att kvantitativa data är information uttryckt i siffror — något som kan räknas eller mätas numeriskt."    },    "correct": {      "message": "Rätt! Antalet balkonger är ett numeriskt värde och är därmed ett exempel på kvantitativa data. De övriga alternativen – namn, beskrivningar och länder – är exempel på kvalitativa data."    }  },  {    "id": "k1-1-1-002",    "name": "Uppgift 2",    "exercise": "En forskare vill undersöka om en lägenhet har balkong eller inte. Hon bestämmer sig för att koda svaret som 0 (ingen balkong) eller 1 (balkong). Vad kallas denna metod?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Att kvalificera data",          "Att kvantifiera kvalitativa data",          "Att rangordna data",          "Att definiera en teori"        ],        "correct": "Att kvantifiera kvalitativa data"      }    },    "error": {      "message": "Att omvandla ett ja/nej-svar till siffrorna 0 och 1 är ett sätt att göra kvalitativ information numerisk."    },    "correct": {      "message": "Rätt! Att koda ja/nej som 0 och 1 är ett klassiskt sätt att kvantifiera kvalitativa fenomen."    }  },  {    "id": "k1-1-1-003",    "name": "Uppgift 3",    "exercise": "En samhällsvetare vill mäta hur lyckliga invånarna i Sverige är. Vilken av följande utmaningar är <em>inte</em> ett problem för mätningens kvalitet?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det är oklart hur ordet 'lycka' ska definieras",          "Det är svårt att bestämma vilka personer som ska ingå i undersökningen",          "Svaren kan påverkas av hur frågorna är formulerade",          "Det tar lång tid att skriva ned resultaten i ett dokument"        ],        "correct": "Det tar lång tid att skriva ned resultaten i ett dokument"      }    },    "error": {      "message": "Tänk på vilka problem som är kopplade till <em>mätningens kvalitet</em> — hur vi definierar, samlar in och tolkar data."    },    "correct": {      "message": "Rätt! Att skriva ned resultat är ett praktiskt arbetsmoment men påverkar inte mätningens kvalitet. De andra tre är genuina metodproblem."    }  },  {    "id": "k1-1-1-005",    "name": "Uppgift 4",    "exercise": "En journalist vill veta hur bra polisen i Sverige är och väljer att mäta hur många brott polisen löser per år. Vilket problem illustrerar detta exempel bäst?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det är omöjligt att samla in data om brott",          "Måttet fångar inte nödvändigtvis det fenomen man egentligen vill mäta",          "Kvantitativa data är alltid sämre än kvalitativa data",          "Polisen vägrar lämna ut statistik"        ],        "correct": "Måttet fångar inte nödvändigtvis det fenomen man egentligen vill mäta"      }    },    "error": {      "message": "Fundera på kopplingen mellan vad journalisten <em>vill</em> mäta (polisens kvalitet) och vad måttet <em>faktiskt</em> mäter (lösta brott)."    },    "correct": {      "message": "Rätt! Antalet lösta brott är ett <em>indirekt</em> mått på polisens kvalitet. Det påverkas av t.ex. vad som är definierat som olagligt och hur många brott som överhuvudtaget anmäls — inte bara hur bra polisen arbetar."    }  },  {    "id": "k1-1-1-006",    "name": "Uppgift 5",    "exercise": "Att använda <em>antal våldsbrott per 100 000 invånare</em> som mått på samhällets trygghet kallas att operationalisera begreppet. Vad menas med att <strong>operationalisera</strong> ett begrepp?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Att räkna om ett värde till procent",          "Att göra ett abstrakt begrepp mätbart genom att välja ett konkret mått",          "Att ta bort extremvärden ur ett dataset",          "Att sammanfatta ett fenomen i ett medelvärde"        ],        "correct": "Att göra ett abstrakt begrepp mätbart genom att välja ett konkret mått"      }    },    "error": { "message": "Tänk på skillnaden mellan begreppet \"trygghet\" och måttet \"antal våldsbrott\". Vad är relationen mellan dem?" },    "correct": { "message": "Rätt! Att operationalisera innebär att vi väljer ett konkret, mätbart mått för ett abstrakt begrepp. Samma begrepp kan operationaliseras på flera sätt — valet av mått påverkar vad vi faktiskt mäter och vilka slutsatser vi kan dra." }  }];</script>
 <div class="exercise-section" data-section-id="k1-1-1"></div>
 
-
 ## Hur beskriva en teori med matte? {#k1-1-2}
-
-### Kapitel 1.2: Hur beskriva en teori med matte? {#kapitel-1.2-hur-beskriva-en-teori-med-matte .title}
-
-### Pushtext
-
-Avsnittet introducerar det andra användningsområdet för matematik inom samhällsvetenskap: Hur matematik kan användas för att beskriva idéer.
 
 ### Begrepp
 
@@ -182,7 +167,6 @@ Tvärtom används analytiskt arbete och forskning i regel just för att studera 
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -190,14 +174,7 @@ Tvärtom används analytiskt arbete och forskning i regel just för att studera 
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-1-2"]=[  {    "id": "k1-1-2-001",    "name": "Uppgift 1",    "exercise": "Vilken av följande meningar beskriver bäst vad <em>positiv samvariation</em> innebär?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "När ett fenomen ökar, minskar det andra",          "När ett fenomen ökar, ökar även det andra",          "De två fenomenen förändras oberoende av varandra",          "Det ena fenomenet orsakar det andra"        ],        "correct": "När ett fenomen ökar, ökar även det andra"      }    },    "error": {      "message": "Tänk på förledet 'positiv' — det syftar på att båda fenomenen rör sig i <em>samma</em> riktning."    },    "correct": {      "message": "Rätt! Positiv samvariation innebär att båda fenomenen ökar (eller minskar) tillsammans. Observera att detta <em>inte</em> nödvändigtvis betyder att det ena orsakar det andra."    }  },  {    "id": "k1-1-2-002",    "name": "Uppgift 2",    "exercise": "En teori säger att en persons lycka \\(Y\\) beror på personens inkomst \\(X\\) enligt funktionen \\[Y = a \\cdot X\\] Om koefficienten \\(a = 0{,}5\\) och en persons inkomst är \\(X = 60\\), vad är då personens lycka \\(Y\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": {      "Y": "30"    },    "answerformat": "",    "error": {      "message": "Sätt in värdena i formeln: \\(Y = 0{,}5 \\cdot 60\\). Vad ger det?"    },    "correct": {      "message": "Rätt! \\(Y = 0{,}5 \\cdot 60 = 30\\). Koefficienten \\(a\\) anger hur stor effekt en enhets förändring i inkomst har på lyckan."    }  },  {    "id": "k1-1-2-003",    "name": "Uppgift 3",    "exercise": "Vad är den viktigaste skillnaden mellan <em>samvariation</em> och <em>orsakssamband</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Samvariation kräver fler mätningar än orsakssamband",          "Samvariation innebär att fenomenen varierar tillsammans, men det behöver inte finnas en orsak–verkan-relation",          "Orsakssamband är svagare än samvariation",          "Det finns ingen skillnad — de betyder samma sak"        ],        "correct": "Samvariation innebär att fenomenen varierar tillsammans, men det behöver inte finnas en orsak–verkan-relation"      }    },    "error": {      "message": "Fundera på glass och bad: glassförsäljning och antalet badare samvarierar — men orsakar glass att folk badar?"    },    "correct": {      "message": "Rätt! Samvariation beskriver ett mönster i data. Orsakssamband kräver dessutom att det ena faktiskt <em>orsakar</em> det andra, vilket är mycket svårare att belägga."    }  },  {    "id": "k1-1-2-004",    "name": "Uppgift 4",    "exercise": "En teori beskrivs med funktionen \\(Y = a \\cdot X\\). Koefficienten \\(a\\) ökas från 2 till 4, medan \\(X = 10\\) hålls konstant. Hur förändras \\(Y\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": {      "Y ökar med": "20"    },    "answerformat": "enheter",    "error": {      "message": "Beräkna \\(Y\\) för båda värdena på \\(a\\): \\(Y_1 = 2 \\cdot 10\\) och \\(Y_2 = 4 \\cdot 10\\). Hur stor är skillnaden?"    },    "correct": {      "message": "Rätt! \\(Y_1 = 20\\) och \\(Y_2 = 40\\), så \\(Y\\) ökar med 20 enheter. En dubbling av koefficienten \\(a\\) dubblar alltså effekten."    }  },  {    "id": "k1-1-2-005",    "name": "Uppgift 5",    "exercise": "Vilket av följande påståenden beskriver en fördel med att använda matematik för att formulera vetenskapliga teorier?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Matematiska teorier är alltid sanna",          "Matematik gör teorin mer komplex och svårförståelig",          "Matematik gör det tydligt exakt vad teorin påstår och hur den kan förändras",          "Med matematik behöver man inte samla in data"        ],        "correct": "Matematik gör det tydligt exakt vad teorin påstår och hur den kan förändras"      }    },    "error": {      "message": "Tänk på vad som händer när teorin \\(Y = a \\cdot X\\) jämförs med en ren mening som 'inkomst påverkar lycka'."    },    "correct": {      "message": "Rätt! Med en matematisk funktion ser vi exakt vilka variabler som ingår, hur de är relaterade och hur vi kan ändra teorin — till exempel lägga till fler variabler."    }  }];</script>
 <div class="exercise-section" data-section-id="k1-1-2"></div>
 
-
 ## Hur testa om en teori stämmer? {#k1-1-3}
-
-### Kapitel 1.3: Hur testa om en teori stämmer? {#kapitel-1.3-hur-testa-om-en-teori-stämmer .title}
-
-### Pushtext
-
-Detta avsnitt introducerar det tredje användningsområdet för matematik inom samhällsvetenskap: Att jämföra teorier mot verkligheten. Detta innebär ofta att vi studerar samvariationer och prövar orsakssamband.
 
 ### Begrepp
 
@@ -275,7 +252,6 @@ Analys av orsakssamband och samvariation används inom både samhällsvetenskap 
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -283,14 +259,7 @@ Analys av orsakssamband och samvariation används inom både samhällsvetenskap 
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-1-3"]=[  {    "id": "k1-1-3-001",    "name": "Uppgift 1",    "exercise": "På sommaren säljs mer glass och fler människor drunknar. Det råder alltså en samvariation mellan glassförsäljning och drunkningstillbud. Vad är den korrekta slutsatsen?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Glassätning orsakar drunkningsolyckor",          "Drunkningar orsakar ökad glassätning",          "Samvariationen förklaras troligen av en tredje faktor — varmt väder",          "Samvariation och orsakssamband är samma sak i detta fall"        ],        "correct": "Samvariationen förklaras troligen av en tredje faktor — varmt väder"      }    },    "error": {      "message": "Det finns ett klassiskt begrepp för detta: korrelation är <em>inte</em> kausalitet. Vad kan en bakomliggande orsak till båda fenomenen vara?"    },    "correct": {      "message": "Rätt! Varmt väder orsakar både mer badning (och fler drunkningstillbud) och mer glassätning. Glassen orsakar inte drunkningarna — det är en skenkorrelation."    }  },  {    "id": "k1-1-3-002",    "name": "Uppgift 2",    "exercise": "En studie visar att länder med hög genomsnittlig inkomst också har höga mätvärden för medborgarnas lycka. Vilken typ av samvariation beskriver detta?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Negativ samvariation",          "Positiv samvariation",          "Inget samband alls",          "Orsakssamband"        ],        "correct": "Positiv samvariation"      }    },    "error": {      "message": "Tänk på definitionen: när båda fenomenen (inkomst och lycka) ökar <em>tillsammans</em>, vad kallas det?"    },    "correct": {      "message": "Rätt! Eftersom höga inkomstvärden sammanfaller med höga lyckavärden råder positiv samvariation. Observera att detta inte nödvändigtvis bevisar att inkomst <em>orsakar</em> lycka."    }  },  {    "id": "k1-1-3-003",    "name": "Uppgift 3",    "exercise": "Varför räcker det inte med att påvisa samvariation för att hävda ett orsakssamband?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Samvariation kräver för mycket data för att vara användbart",          "Samvariation kan bero på en tredje bakomliggande faktor snarare än en direkt orsak–verkan-relation",          "Orsakssamband är ett äldre begrepp som inte längre används i forskning",          "Samvariation mäts alltid felaktigt"        ],        "correct": "Samvariation kan bero på en tredje bakomliggande faktor snarare än en direkt orsak–verkan-relation"      }    },    "error": {      "message": "Tänk på vad som kunde förklara att två saker samvarierar utan att den ena orsakar den andra."    },    "correct": {      "message": "Rätt! En bakomliggande tredje variabel kan orsaka båda de samvarierande fenomenen. Att påvisa kausalitet kräver därför mer än bara samvariation i data."    }  },  {    "id": "k1-1-3-004",    "name": "Uppgift 4",    "exercise": "Tre forskare studerar sambandet mellan studietid (timmar/vecka) och betyg. De mäter studietid och betyg för 100 studenter och noterar att mer studietid samvarierar med högre betyg. Hur många studenter behöver de mäta till för att <em>visa</em> att studietid <em>orsakar</em> högre betyg?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "500 studenter",          "10 000 studenter",          "Fler mätningar räcker inte — de behöver ett annorlunda studieupplägg, till exempel ett experiment",          "Det räcker redan med 100 studenter om samvariationen är stark"        ],        "correct": "Fler mätningar räcker inte — de behöver ett annorlunda studieupplägg, till exempel ett experiment"      }    },    "error": {      "message": "Tänk på vad som skiljer samvariation från kausalitet. Fler observationer ger mer statistisk styrka men löser inte det grundläggande problemet med orsaksriktning."    },    "correct": {      "message": "Rätt! Fler observationer ger en starkare uppskattning av samvariationen, men de visar inte kausalitet. För att studera orsakssamband behövs ett annat upplägg — idealt ett kontrollerat experiment."    }  },  {    "id": "k1-1-3-005",    "name": "Uppgift 5",    "exercise": "I ett vetenskapligt experiment delas deltagarna in i en <em>behandlingsgrupp</em> och en <em>kontrollgrupp</em>. Vad är syftet med kontrollgruppen?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Att öka antalet deltagare i studien",          "Att ha en jämförelsegrupp som inte utsätts för den undersökta faktorn, så att dess effekt kan isoleras",          "Att kontrollera att deltagarna svarar ärligt",          "Att mäta samvariationen noggrannare"        ],        "correct": "Att ha en jämförelsegrupp som inte utsätts för den undersökta faktorn, så att dess effekt kan isoleras"      }    },    "error": {      "message": "Tänk på vad som är poängen med att ha en grupp som <em>inte</em> behandlas. Vad gör det möjligt att jämföra?"    },    "correct": {      "message": "Rätt! Kontrollgruppen representerar vad som hade hänt om behandlingsgruppen <em>inte</em> hade utsatts för behandlingen. Genom att jämföra de två grupperna kan vi eventuellt studera kausala effekter av behandlingen."    }  }];</script>
 <div class="exercise-section" data-section-id="k1-1-3"></div>
 
-
 ## Varför räkna? {#k1-1-4}
-
-### Kapitel 1.4: Men varför räkna? {#kapitel-1.4-men-varför-räkna .title}
-
-### Pushtext
-
-Detta avsnitt går igenom tre argument för varför vi behöver matematik: Utan matematik riskerar vi att ljuga för oss själva. Utan matematik är det lättare att bli lurad av vilseledande information. Utan matematik riskerar vi att missa viktiga komplicerade samband.
 
 ### Begrepp
 
@@ -338,7 +307,6 @@ Det kan då vara lätt att misströsta användningen av mer tekniskt avancerade 
 ### Video
 
 ### Uppgifter
-
 
 ::: {.ex-section-title}
 Övningar

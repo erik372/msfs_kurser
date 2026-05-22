@@ -1,13 +1,6 @@
 # Hur få ut det mesta av livet
 
-
 ## Den optimala mängden tårta {#k1-4-1}
-
-### Kapitel 4.1: Den optimala mängden tårta {#kapitel-4.1-den-optimala-mängden-tårta .title}
-
-### Pushtext
-
-Avsnittet visar utifrån ett förenklat exempel med tårta hur vi kan resonera om mänskliga beslut.
 
 ### Begrepp
 
@@ -73,7 +66,6 @@ Det kan dock vara bra att påminna sig själv om att oavsett hur snillrik en teo
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -81,14 +73,7 @@ Det kan dock vara bra att påminna sig själv om att oavsett hur snillrik en teo
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-4-1"]=[  {    "id": "k1-4-1-001",    "name": "Uppgift 1",    "exercise": "Lyckofunktionen för tårtätande ges av \\(y = f(x) = 3x - x^2\\). Vad är förstaderivatan \\(f_x'\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(3 - x\\)",          "\\(3 - 2x\\)",          "\\(3x - 2\\)",          "\\(6x - 2\\)"        ],        "correct": "\\(3 - 2x\\)"      }    },    "error": { "message": "Derivera varje term för sig: derivatan av \\(3x\\) är 3, och derivatan av \\(-x^2\\) är \\(-2x\\)." },    "correct": { "message": "Rätt! Förstaderivatan av \\(f(x) = 3x - x^2\\) är \\(f_x' = 3 - 2x\\). Det är denna vi sätter lika med 0 för att hitta maximipunkten." }  },  {    "id": "k1-4-1-002",    "name": "Uppgift 2",    "exercise": "Givet lyckofunktionen \\(f(x) = 3x - x^2\\), där \\(x\\) är mängden tårta: vid vilket värde på \\(x\\) maximeras lyckan? Sätt \\(f_x' = 0\\) och lös för \\(x\\). Ange svaret som ett decimaltal.",    "image": null,    "inputtype": "field",    "expectedanswer": { "q": "1.5" },    "answerformat": "",    "error": { "message": "Förstaderivatan är \\(f_x' = 3 - 2x\\). Sätt \\(3 - 2x = 0\\) och lös: \\(x = \\frac{3}{2}\\)." },    "correct": { "message": "Rätt! \\(3 - 2x = 0\\) ger \\(x^* = 1{,}5\\). En och en halv tårta ger mest lycka." }  },  {    "id": "k1-4-1-003",    "name": "Uppgift 3",    "exercise": "Beräkna mängden lycka vid den optimala tårtmängden \\(x^* = 1{,}5\\) med hjälp av funktionen \\(f(x) = 3x - x^2\\), där \\(x\\) är mängden tårta. Vad är \\(f(1{,}5)\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "q": "2.25" },    "answerformat": "",    "error": { "message": "Sätt in \\(x = 1{,}5\\): \\(f(1{,}5) = 3 \\cdot 1{,}5 - (1{,}5)^2 = 4{,}5 - 2{,}25\\)." },    "correct": { "message": "Rätt! \\(f(1{,}5) = 4{,}5 - 2{,}25 = 2{,}25\\). Den maximala lyckan är 2,25 på en skala från 1 till 5." }  },  {    "id": "k1-4-1-005",    "name": "Uppgift 4",    "exercise": "I modellen \\(f(x) = 3x - x^2\\) för tårtätande, där \\(x\\) är mängden tårta, är förstaderivatan \\(f_x' = 3 - 2x\\) marginaleffekten. Vad beskriver begreppet <em>marginaleffekt</em> generellt?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den totala mängden lycka som uppnås vid optimal tårtmängd",          "Hur mycket den totala lyckan förändras vid en liten förändring i tårtmängden",          "Skillnaden mellan maximal och minimal lycka",          "Antalet tårtor som ger noll lycka"        ],        "correct": "Hur mycket den totala lyckan förändras vid en liten förändring i tårtmängden"      }    },    "error": { "message": "Marginal- syftar på vad som händer vid en liten, ytterligare förändring av en variabel." },    "correct": { "message": "Rätt! Marginaleffekten anger hur resultatet (lyckan) förändras vid en liten förändring av en variabel (tårtmängden). Den optimala mängden tårta hittar vi där marginallyckan = 0, dvs. där \\(f_x' = 0\\)." }  },  {    "id": "k1-4-1-006",    "name": "Uppgift 5",    "exercise": "Lyckofunktionen för tårtätande ges av \\(f(x) = 3x - x^2\\), där \\(x\\) är mängden tårta. Andraderivatan är \\(f_x'' = -2\\). Vad säger detta om punkten \\(x^* = 1{,}5\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det är en minimipunkt, eftersom andraderivatan är negativ",          "Det är en maximipunkt, eftersom andraderivatan är negativ",          "Det är en sadelpunkt, eftersom andraderivatan är konstant",          "Andraderivatan säger ingenting om punktens karaktär"        ],        "correct": "Det är en maximipunkt, eftersom andraderivatan är negativ"      }    },    "error": { "message": "En negativ andraderivatan innebär att funktionen är konkav (kupad nedåt) vid punkten. Vad kallas en vändpunkt på en nedåt-kupad kurva?" },    "correct": { "message": "Rätt! En negativ andraderivatan \\(f_x'' < 0\\) vid en stationär punkt (\\(f_x' = 0\\)) bekräftar att det är ett maximum. Det är det matematiska sättet att verifiera att vi har hittat toppen — inte botten — av funktionen." }  }];</script>
 <div class="exercise-section" data-section-id="k1-4-1"></div>
 
-
 ## Hur mycket jobb är lagom? {#k1-4-2}
-
-### Kapitel 4.2: Hur mycket jobb är lagom med jobb? {#kapitel-4.2-hur-mycket-jobb-är-lagom-med-jobb .title}
-
-### Pushtext
-
-Detta avsnitt introducerar hur vi kan resonera teoretiskt kring nöjdhet (*utility*) utifrån en avvägning mellan arbete, konsumtion och fritid.
 
 ### Begrepp
 
@@ -204,7 +189,6 @@ Detta innebär precis det vi gick igenom ovan, att den nyttomaximerande punkten 
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -212,14 +196,7 @@ Detta innebär precis det vi gick igenom ovan, att den nyttomaximerande punkten 
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-4-2"]=[  {    "id": "k1-4-2-001",    "name": "Uppgift 1",    "exercise": "Eriks nöjdhetsfunktion ges av \\(N = u(C, L) = C^{\\frac{1}{2}} L^{\\frac{1}{2}}\\). Vad representerar variablerna \\(C\\) och \\(L\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "C = kostnad, L = lön",          "C = konsumtion, L = fritid",          "C = centralitet, L = lönsamhet",          "C = kapital, L = arbete"        ],        "correct": "C = konsumtion, L = fritid"      }    },    "error": { "message": "Läs texten om Eriks maximeringsproblem. Vilka två fenomen bestämmer Eriks nöjdhet och står i motsättning till varandra?" },    "correct": { "message": "Rätt! \\(C\\) är Eriks konsumtion (köp av varor och tjänster) och \\(L\\) är fritid. Nöjdhetsfunktionen beskriver avvägningen mellan dessa två." }  },  {    "id": "k1-4-2-002",    "name": "Uppgift 2",    "exercise": "Budgetfunktionen för Erik ges av \\(C = w(T - L)\\). Vad händer med Eriks maximala konsumtion om lönen \\(w\\) ökar?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den maximala konsumtionen minskar",          "Den maximala konsumtionen förblir oförändrad",          "Den maximala konsumtionen ökar",          "Budgetfunktionen slutar gälla"        ],        "correct": "Den maximala konsumtionen ökar"      }    },    "error": { "message": "I budgetfunktionen \\(C = w(T - L)\\): om \\(L = 0\\) (Erik jobbar hela tiden) blir \\(C = wT\\). Vad händer med \\(wT\\) om \\(w\\) ökar?" },    "correct": { "message": "Rätt! Högre lön \\(w\\) ger en brantare budgetlinje och ett högre maxvärde för konsumtion (\\(C = wT\\) när \\(L = 0\\)). Erik kan köpa mer med samma arbetstid." }  },  {    "id": "k1-4-2-003",    "name": "Uppgift 3",    "exercise": "Vad är en <em>indifferenslinje</em> i ett diagram med konsumtion och fritid?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "En linje som visar alla kombinationer av C och L som Erik har råd med",          "En linje längs vilken alla kombinationer av C och L ger samma nöjdhet",          "En linje som visar hur nöjdheten ökar med konsumtionen",          "En linje som beskriver Eriks optimala val"        ],        "correct": "En linje längs vilken alla kombinationer av C och L ger samma nöjdhet"      }    },    "error": { "message": "Ordet 'indifferent' betyder likgiltig. Vad innebär det för Erik längs en sådan linje?" },    "correct": { "message": "Rätt! Längs en indifferenslinje är nöjdheten densamma för alla kombinationer av konsumtion och fritid. Individen är indifferent – det spelar ingen roll exakt vilken kombination det blir, så länge man är kvar på samma linje." }  },  {    "id": "k1-4-2-004",    "name": "Uppgift 4",    "exercise": "Erik har budgetfunktionen \\(C = w(T - L)\\) med \\(w = 100\\) kr/timme och \\(T = 16\\) tillgängliga timmar. Beräkna konsumtionen \\(C\\) för \\(L = 8\\) timmars fritid.",    "image": null,    "inputtype": "field",    "expectedanswer": { "q": "800" },    "answerformat": "",    "error": { "message": "Sätt in värdena: \\(C = 100 \\cdot (16 - 8)\\). Beräkna \\(T - L\\) och multiplicera med \\(w\\)." },    "correct": { "message": "Rätt! \\(C = 100 \\cdot (16 - 8) = 100 \\cdot 8 = 800\\) kr. Med 8 timmars fritid och en lön på 100 kr/timme kan Erik konsumera för 800 kr." }  },  {    "id": "k1-4-2-005",    "name": "Uppgift 5",    "exercise": "Vilken punkt på budgetlinjen väljer en nyttomaximerande individ, enligt teorin om indifferenslinjer och budgetfunktionen?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den punkt på budgetlinjen med mest fritid",          "Den punkt innanför budgetlinjen som ger mest konsumtion",          "Den punkt där en indifferenslinje tangerar budgetlinjen",          "Mittpunkten på budgetlinjen"        ],        "correct": "Den punkt där en indifferenslinje tangerar budgetlinjen"      }    },    "error": { "message": "Tänk på att individen vill nå en indifferenslinje så långt från origo som möjligt, men ändå ha råd (ligga på budgetlinjen)." },    "correct": { "message": "Rätt! Den nyttomaximerande punkten är där en indifferenslinje precis tangerar budgetlinjen. I denna punkt är lutningen på budgetlinjen (bestämd av lönen \\(w\\)) lika med lutningen på indifferenslinjen (\\(w = u_L' / u_C'\\))." }  }];</script>
 <div class="exercise-section" data-section-id="k1-4-2"></div>
 
-
 ## Hur höga skatter vill vi ha? {#k1-4-3}
-
-### Kapitel 4.3: Hur höga skatter vill vi ha? {#kapitel-4.3-hur-höga-skatter-vill-vi-ha .title}
-
-### Pushtext
-
-Detta avsnitt introducerar hur vi kan resonera om skattenivån för hela samhället utifrån det som kallas för Lafferkurvan.
 
 ### Begrepp
 
@@ -305,7 +282,6 @@ Uttryckt som procent motsvarar det cirka 66,6 %. I diagrammet beskrivs detta sam
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -313,14 +289,7 @@ Uttryckt som procent motsvarar det cirka 66,6 %. I diagrammet beskrivs detta sam
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-4-3"]=[  {    "id": "k1-4-3-001",    "name": "Uppgift 1",    "exercise": "Statens skatteintäkter ges av \\(i = ty(1-t)^b\\), där \\(i\\) är skatteintäkterna, \\(t\\) är skattesatsen, \\(y\\) är skattebasens storlek och \\(b\\) är skattebaselasticiteten. Vad händer med skatteintäkterna om skatten sätts till \\(t = 1\\) (100 %)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Skatteintäkterna maximeras",          "Skatteintäkterna blir lika med \\(y\\)",          "Skatteintäkterna blir noll",          "Skatteintäkterna beror enbart på \\(b\\)"        ],        "correct": "Skatteintäkterna blir noll"      }    },    "error": { "message": "Sätt in \\(t = 1\\) i \\(i = ty(1-t)^b\\): vad blir faktorn \\((1 - 1)^b\\)?" },    "correct": { "message": "Rätt! Om \\(t = 1\\) blir \\((1-t)^b = 0^b = 0\\), och därmed \\(i = 0\\). Vid 100 % skatt vill ingen arbeta och skatteintäkterna kollapsar till noll." }  },  {    "id": "k1-4-3-002",    "name": "Uppgift 2",    "exercise": "I skatteintäktsfunktionen \\(i = ty(1-t)^b\\) (där \\(b\\) är skattebaselasticiteten) ges den intäktsmaximerande skattenivån av \\(t^* = \\frac{1}{1+b}\\). Om \\(b = 3\\), vid vilken skattenivå (i procent) maximeras statens skatteintäkter?",    "image": null,    "inputtype": "field",    "expectedanswer": { "q": "25" },    "answerformat": "",    "error": { "message": "Sätt in \\(b = 3\\) i formeln: \\(t^* = \\frac{1}{1+3}\\). Beräkna bråket och omvandla till procent." },    "correct": { "message": "Rätt! \\(t^* = \\frac{1}{1+3} = \\frac{1}{4} = 0{,}25\\), alltså 25 %. Det är det ineffektiva samhällets optimala skattenivå." }  },  {    "id": "k1-4-3-003",    "name": "Uppgift 3",    "exercise": "I skatteintäktsfunktionen \\(i = ty(1-t)^b\\) ges den intäktsmaximerande skattenivån av \\(t^* = \\frac{1}{1+b}\\). Om skattebaselasticiteten är \\(b = 0{,}5\\), beräkna \\(t^*\\) (i procent, avrundat till en decimal).",    "image": null,    "inputtype": "field",    "expectedanswer": { "q": "66.7" },    "answerformat": "",    "error": { "message": "Sätt in \\(b = 0{,}5\\): \\(t^* = \\frac{1}{1+0{,}5} = \\frac{1}{1{,}5} = \\frac{2}{3}\\). Omvandla till procent." },    "correct": { "message": "Rätt! \\(t^* = \\frac{1}{1{,}5} = \\frac{2}{3} \\approx 66{,}7\\%\\). I ett effektivt skattesystem med högt förtroende kan staten ta ut en högre skatt och ändå maximera sina intäkter." }  },  {    "id": "k1-4-3-004",    "name": "Uppgift 4",    "exercise": "I skatteintäktsfunktionen \\(i = ty(1-t)^b\\), där \\(i\\) är skatteintäkterna, \\(t\\) skattesatsen och \\(y\\) skattebasens storlek: vad menas med parametern <em>skattebaselasticitet</em> (\\(b\\))?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det totala skatteuttaget i procent av BNP",          "Hur känsligt skatteunderlaget (skattebasen) är för förändringar i skattenivån",          "Statens totala skatteintäkter",          "Antalet skattebetalare i samhället"        ],        "correct": "Hur känsligt skatteunderlaget (skattebasen) är för förändringar i skattenivån"      }    },    "error": { "message": "Elasticitet beskriver allmänt hur en variabel reagerar på förändringar i en annan. Vad beskriver \\(b\\) i uttrycket \\(i = ty(1-t)^b\\)?" },    "correct": { "message": "Rätt! Skattebaselasticiteten \\(b\\) anger hur mycket skattebasen (och därmed folks vilja att arbeta) påverkas av en skattehöjning. Högt \\(b\\) innebär att folk kraftigt minskar sin arbetslust vid höjda skatter." }  },  {    "id": "k1-4-3-005",    "name": "Uppgift 5",    "exercise": "Vilket av följande stämmer om Lafferkurvan?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Skatteintäkterna ökar alltid när skatten höjs",          "Skatteintäkterna är noll vid både 0 % och 100 % skatt",          "Lafferkurvan gäller bara för land med hög BNP",          "Den optimala skattenivån är alltid 50 %"        ],        "correct": "Skatteintäkterna är noll vid både 0 % och 100 % skatt"      }    },    "error": { "message": "Tänk på vad som händer med \\(i = ty(1-t)^b\\) när \\(t = 0\\) respektive \\(t = 1\\)." },    "correct": { "message": "Rätt! Vid \\(t = 0\\) finns inga skatter och \\(i = 0\\). Vid \\(t = 1\\) vill ingen arbeta och \\(i = 0\\). Däremellan finns en toppunkt som beror på \\(b\\) – den optimala skattenivån \\(t^* = \\frac{1}{1+b}\\)." }  }];</script>
 <div class="exercise-section" data-section-id="k1-4-3"></div>
 
-
 ## Vinstmaximerande företag {#k1-4-4}
-
-### Kapitel 4.4: Vinstmaximerande företag {#kapitel-4.4-vinstmaximerande-företag .title}
-
-### Pushtext
-
-Detta avsnitt ger en förenklad introduktion till hur vi med matematik kan resonera kring kommersiella företag och deras problem att maximera sina vinster.
 
 ### Begrepp
 
@@ -408,7 +377,6 @@ Om företaget producerar kvantiteterna 5 av *x* och 5 av *y* är marginalkostnad
 
 ### Uppgifter
 
-
 ::: {.ex-section-title}
 Övningar
 :::
@@ -416,14 +384,7 @@ Om företaget producerar kvantiteterna 5 av *x* och 5 av *y* är marginalkostnad
 <script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-4-4"]=[  {    "id": "k1-4-4-001",    "name": "Uppgift 1",    "exercise": "Ett företag producerar varor \\(x\\) och \\(y\\) med priser \\(p_x = 10\\) och \\(p_y = 20\\). Totala intäkter ges av \\(TR(x,y) = 10x + 20y\\) och totala kostnader av \\(TC(x,y) = x^2 + 2y^2 + 10\\). Vad är vinsten \\(V(x,y)\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(V = 10x + 20y + x^2 + 2y^2 + 10\\)",          "\\(V = 10x + 20y - x^2 - 2y^2 - 10\\)",          "\\(V = x^2 + 2y^2 - 10x - 20y + 10\\)",          "\\(V = 10x + 20y - 10\\)"        ],        "correct": "\\(V = 10x + 20y - x^2 - 2y^2 - 10\\)"      }    },    "error": { "message": "Vinst = Intäkter \\(-\\) Kostnader. Subtrahera \\(TC\\) från \\(TR\\) och kom ihåg att distribuera minustecknet." },    "correct": { "message": "Rätt! \\(V = TR - TC = 10x + 20y - (x^2 + 2y^2 + 10) = 10x + 20y - x^2 - 2y^2 - 10\\)." }  },  {    "id": "k1-4-4-002",    "name": "Uppgift 2",    "exercise": "Företaget har vinsten \\(V(x,y) = 10x + 20y - x^2 - 2y^2 - 10\\). Förstaderivatan av vinsten med hänsyn till \\(x\\) ges av \\(V_x' = 10 - 2x\\). Vid vilket värde på \\(x\\) är \\(V_x' = 0\\), dvs. vad är \\(x^*\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "q": "5" },    "answerformat": "",    "error": { "message": "Sätt \\(10 - 2x = 0\\) och lös för \\(x\\): \\(2x = 10\\), alltså \\(x = ?\\)" },    "correct": { "message": "Rätt! \\(10 - 2x = 0\\) ger \\(x^* = 5\\). Det är den vinstmaximerande produktionsmängden av produkt X." }  },  {    "id": "k1-4-4-003",    "name": "Uppgift 3",    "exercise": "Företaget har vinsten \\(V(x,y) = 10x + 20y - x^2 - 2y^2 - 10\\). Givet \\(x^* = 5\\) och \\(y^* = 5\\), beräkna den maximala vinsten \\(V(5, 5) = 10 \\cdot 5 + 20 \\cdot 5 - (5^2 + 2 \\cdot 5^2 + 10)\\).",    "image": null,    "inputtype": "field",    "expectedanswer": { "q": "65" },    "answerformat": "",    "error": { "message": "Beräkna: intäkter \\(= 10 \\cdot 5 + 20 \\cdot 5 = 150\\). Kostnader \\(= 25 + 50 + 10 = 85\\). Vinst \\(= 150 - 85\\)." },    "correct": { "message": "Rätt! Intäkter \\(= 150\\), kostnader \\(= 85\\), vinst \\(= 150 - 85 = 65\\) kr. Genom att producera 5 enheter av varje produkt maximeras vinsten till 65 kr." }  },  {    "id": "k1-4-4-004",    "name": "Uppgift 4",    "exercise": "Vad menas med <em>marginalkostnad</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den totala kostnaden för att producera alla enheter",          "Den fasta kostnaden som inte beror på produktionsmängden",          "Kostnaden för att tillverka en extra enhet",          "Skillnaden mellan intäkter och kostnader"        ],        "correct": "Kostnaden för att tillverka en extra enhet"      }    },    "error": { "message": "Prefixet 'marginal-' syftar på en liten extra förändring. Vad händer med kostnaderna om man tillverkar en enhet till?" },    "correct": { "message": "Rätt! Marginalkostnad är kostnaden för att tillverka en extra enhet, matematiskt förstaderivatan av kostnadsfunktionen: \\(MC_x = C_x' = 2x\\) och \\(MC_y = C_y' = 4y\\)." }  },  {    "id": "k1-4-4-006",    "name": "Uppgift 5",    "exercise": "Med vinstfunktionen \\(V(x,y) = 10x + 20y - x^2 - 2y^2 - 10\\) är marginalkostnaden för \\(x\\) definierad som \\(MC_x = C_x' = 2x\\) och marginalintäkten som \\(MR_x = 10\\). Vid \\(x^* = 5\\) är \\(MC_x = 10\\) och \\(MR_x = 10\\). Vad innebär villkoret \\(MR_x = MC_x\\) ekonomiskt?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Kostnaden är noll vid optimal produktion",          "Att producera ytterligare en enhet ger varken mer eller mindre vinst — det är det optimala produktionsläget",          "Totala intäkter och totala kostnader är lika stora",          "Vinsten är noll vid optimum"        ],        "correct": "Att producera ytterligare en enhet ger varken mer eller mindre vinst — det är det optimala produktionsläget"      }    },    "error": { "message": "Vad händer med vinsten om \\(MR > MC\\)? Och om \\(MR < MC\\)?" },    "correct": { "message": "Rätt! Vid \\(MR = MC\\) är marginalvinsten noll — det lönar sig varken att producera mer eller mindre. Om \\(MR > MC\\) ökar vinsten av mer produktion, och om \\(MR < MC\\) minskar den. Vinstmaximum nås alltså exakt när marginalintäkt = marginalkostnad." }  }];</script>
 <div class="exercise-section" data-section-id="k1-4-4"></div>
 
-
 ## Nätverksanalys {#k1-4-5}
-
-### Kapitel 4.5: Nätverksanalys {#kapitel-4.5-nätverksanalys .title}
-
-### Pushtext
-
-I denna kurs sista avsnitt går vi igenom hur vi med hjälp av matematik kan beskriva och resonera om nätverk, som till exempel olika företag som handlar med varandra. Samma matematik kan även beskriva sociala nätverk, till exempel mellan vänner.
 
 ### Begrepp
 
@@ -526,7 +487,6 @@ Förklaring: In- och utflöden från och till de två branscherna A och B. Flöd
 ### Video
 
 ### Uppgifter
-
 
 ::: {.ex-section-title}
 Övningar

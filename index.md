@@ -1,6 +1,5 @@
 ---
-title: "Matteboken"
-subtitle: "Matematik och statistik för samhällsvetare"
+title: "Matematik och statistik för samhällsvetare"
 author: ""
 date: ""
 site: bookdown::bookdown_site
