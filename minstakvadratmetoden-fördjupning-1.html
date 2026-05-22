@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>7 Minstakvadratmetoden — fördjupning 1 | Matteboken</title>
+<meta name="author" content="">
+<meta name="description" content="7.1 Andra linjer  7.1.1 Avsnitt 3.1: Varför just denna linje?   7.1.2 Pushtext I det här avsnittet går vi djupare in på varför varje regressionsmodell har en unik linje. Och varför ingen annan...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="7 Minstakvadratmetoden — fördjupning 1 | Matteboken">
+<meta property="og:type" content="book">
+<meta property="og:description" content="7.1 Andra linjer  7.1.1 Avsnitt 3.1: Varför just denna linje?   7.1.2 Pushtext I det här avsnittet går vi djupare in på varför varje regressionsmodell har en unik linje. Och varför ingen annan...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="7 Minstakvadratmetoden — fördjupning 1 | Matteboken">
+<meta name="twitter:description" content="7.1 Andra linjer  7.1.1 Avsnitt 3.1: Varför just denna linje?   7.1.2 Pushtext I det här avsnittet går vi djupare in på varför varje regressionsmodell har en unik linje. Och varför ingen annan...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Matematik och statistik för samhällsvetare">Matteboken</a>:
+        <small class="text-muted">Matematik och statistik för samhällsvetare</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html"><span class="header-section-number">1</span> Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html"><span class="header-section-number">2</span> Exempel från samhället</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html"><span class="header-section-number">3</span> Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html"><span class="header-section-number">4</span> Hur få ut det mesta av livet</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html"><span class="header-section-number">5</span> Kontrafaktisk analys</a></li>
+<li><a class="" href="variation-och-samvariation.html"><span class="header-section-number">6</span> Variation och samvariation</a></li>
+<li><a class="active" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html"><span class="header-section-number">7</span> Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html"><span class="header-section-number">8</span> Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html"><span class="header-section-number">9</span> Regressionsanalys med sannolikhet</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="minstakvadratmetoden-fördjupning-1" class="section level1" number="7">
+<h1>
+<span class="header-section-number">7</span> Minstakvadratmetoden — fördjupning 1<a class="anchor" aria-label="anchor" href="#minstakvadratmetoden-f%C3%B6rdjupning-1"><i class="fas fa-link"></i></a>
+</h1>
+<div id="k2-3-1" class="section level2" number="7.1">
+<h2>
+<span class="header-section-number">7.1</span> Andra linjer<a class="anchor" aria-label="anchor" href="#k2-3-1"><i class="fas fa-link"></i></a>
+</h2>
+<div id="avsnitt-3.1-varför-just-denna-linje" class="section level3 title" number="7.1.1">
+<h3>
+<span class="header-section-number">7.1.1</span> Avsnitt 3.1: Varför just denna linje?<a class="anchor" aria-label="anchor" href="#avsnitt-3.1-varf%C3%B6r-just-denna-linje"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="pushtext-28" class="section level3" number="7.1.2">
+<h3>
+<span class="header-section-number">7.1.2</span> Pushtext<a class="anchor" aria-label="anchor" href="#pushtext-28"><i class="fas fa-link"></i></a>
+</h3>
+<p>I det här avsnittet går vi djupare in på varför varje regressionsmodell har en unik linje. Och varför ingen annan linje kan ersätta regressionslinjen.</p>
+</div>
+<div id="begrepp-30" class="section level3" number="7.1.3">
+<h3>
+<span class="header-section-number">7.1.3</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-30"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Inga nya begrepp i detta avsnitt.</em></p>
+</div>
+<div id="teori-30" class="section level3" number="7.1.4">
+<h3>
+<span class="header-section-number">7.1.4</span> Teori<a class="anchor" aria-label="anchor" href="#teori-30"><i class="fas fa-link"></i></a>
+</h3>
+<p>I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi inte bara ha valt en annan? I det här avsnittet ska vi visa varför regressionslinjen är unik och bättre än alla andra möjliga raka linjer.</p>
+<p>Vi har regressionsmodellen:</p>
+<p><span class="math inline">\(Y = a + bX + V\)</span> (1)</p>
+<p>där <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är variabler, <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är koefficienter vi vill estimera med minstakvadratmetoden och <span class="math inline">\(V\)</span> är feltermen. Med hjälp av minstakvadratmetoden kan vi hitta den regressionslinje som minimerar summan av det vertikala avståndet mellan regressionslinjen och observationerna.</p>
+<p>Alla andra raka linjer resulterar i ett större summerat värde för det kvadrerade avståndet mellan dessa linjer och punkterna.</p>
+<div id="två-exempel" class="section level4" number="7.1.4.1">
+<h4>
+<span class="header-section-number">7.1.4.1</span> Två exempel<a class="anchor" aria-label="anchor" href="#tv%C3%A5-exempel"><i class="fas fa-link"></i></a>
+</h4>
+<p>Detta kan vi illustrera med hjälp av exempel där vi använder samma fyra observationer för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> i som vi använde i tidigare avsnitt, där <span class="math inline">\(X = 3,\ 4,\ 6,\ 7\)</span> och <span class="math inline">\(Y = 3,\ 4,\ 5,\ 6\)</span>. Men i stället för regressionslinjen som vi skattade utifrån minstakvadratmetoden har vi nu en horisontell linje där <span class="math inline">\(\widehat{Y} = 3,5\)</span> för alla <span class="math inline">\(Y_{i}\)</span>, vilket är samma som medelvärdet för Y i våra fyra observationer: <span class="math inline">\(\overline{Y} = (3 + 4 + 5 + 6)\text{/}4 = 3,5\)</span>.</p>
+<p>En horisontell linje har lutningskoefficient <span class="math inline">\(b = 0\)</span>. Låt oss beräkna summan av de kvadrerade residualerna <span class="math inline">\(\left( \sum_{i}^{}\widehat{{V_{i}}^{2}} \right)\)</span> för denna linje:</p>
+<p><span class="math inline">\(\sum_{i}^{}\widehat{{V_{i}}^{2}} = \sum_{i}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (2)<span class="math inline">\( \)</span><span class="math display">\<span class="math display">\[{= (3 - 3,5)\^{2} + (4 - 3,5)\^{2} + (5 - 3,5)\^{2} + (6 - 3,5)\^{2} }{= 9}\\\]</span></span></p>
+<p>vilket är mer än 2,5. Regressionslinjen vi kunde rita utifrån vår regressionsmodell som vi skattade med minstakvadratmetoden är därför bättre om vi ska minimera det summerade vertikala avståndet.</p>
+<p>Låt oss exemplifiera med en till linje, som passerar observation 1 och 4, det vill säga punkterna <span class="math inline">\((X,Y) = (3,3)\)</span> och (7,4). Utifrån dessa värden för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> vet vi att då <span class="math inline">\(X\)</span> ökar från 3 till 7 är detta associerat med en genomsnittlig förändring i <span class="math inline">\(Y\)</span> från 3 till 4, varför linjens lutning är:</p>
+<p><span class="math inline">\(\widehat{b} = \frac{Y_{4} - Y_{1}}{X_{4} - X_{1}} = \frac{4 - 3}{7 - 3} = \frac{1}{4}\)</span> (3)</p>
+<p>Den andra koefficienten (<span class="math inline">\(\widehat{a}\)</span>) kan vi räkna ut med punkten <span class="math inline">\(\left( X_{1},Y_{1} \right) = (3,3)\)</span>:</p>
+<p><span class="math inline">\(\widehat{a} = Y_{i} - \widehat{b}X_{i} = 3 - \frac{1}{4} \cdot 3 = \frac{9}{4}\)</span> (4)</p>
+<p>Eftersom linjen passerar genom observation 1 och 4 vet vi att residualen för dessa två är <span class="math inline">\(\widehat{V_{i}} = 0\)</span>. För observation 2 har vi att <span class="math inline">\(X = 4\)</span>, vilket ger:</p>
+<p><span class="math inline">\(\widehat{Y_{2}} = \frac{9}{4} + \frac{1}{4} \cdot 4 = \frac{13}{4}\)</span> (5)</p>
+<p>För observation 3 har vi <span class="math inline">\(X = 6\)</span> vilket ger:</p>
+<p><span class="math inline">\(\widehat{Y_{3}} = \frac{9}{4} + \frac{1}{4} \cdot 6 = \frac{15}{4}\)</span> (6)</p>
+<p>För observation 2 och 3 har vi att <span class="math inline">\(\left( Y_{2} = 2 \right)\)</span> och <span class="math inline">\(\left( Y_{3} = 5 \right)\)</span>:</p>
+<p><span class="math inline">\(\sum_{i}^{}{\widehat{V}}_{i}\ = \sum_{i}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (7)<span class="math inline">\( \)</span><span class="math display">\<span class="math display">\[{= \\left( Y\_{1} - \\widehat{Y}1 \\right)\^{2} + \\left( Y2 - \\widehat{Y}2 \\right)\^{2} + \\left( Y3 - \\widehat{Y}3 \\right)\^{2} + \\left( Y4 - \\widehat{Y\_{4}} \\right)\^{2} }{= 0 + \\left( 2 - \\frac{13}{4} \\right)\^{2} + \\left( 5 - \\frac{15}{4} \\right)\^{2} + 0 }{= 3,1875 \&gt; 2,5}\\\]</span></span></p>
+<p>Figur 1 illustrerar de tre linjer vi nu har jämfört. Linje A i diagrammet är den vi skattade utifrån minstakvadratmetoden. Linje B är den horisontella linjen där <span class="math inline">\(\widehat{Y} = \overline{Y} = 3,5\)</span>. Linje C ritas av funktionen <span class="math inline">\(Y = 9\text{/}4 + \frac{1}{4}X\)</span> och går igenom två av punkterna.</p>
+<p><strong>Figur 1. Tre linjer, varav en är regressionslinjen</strong></p>
+<div class="inline-figure"><img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\3%20-%20Minstakvadratmetoden%20f%C3%B6rdjupning%201%20mer%20matte\3-1%20-%20Andra%20linjer/img/k2-3-1-image1.png" style="width:3.27778in;height:3.27778in"></div>
+<p>Förklaring: Diagrammet visar tre linjer. Linje A är regressionslinjen, beräknad med minstakvadratmetoden. Linje B är horisontell och linje C går igenom två av punkterna. Av de tre linjerna har linje A det minstas summerade vertikala avståndet mellan linjen och punkterna.</p>
+</div>
+</div>
+<div id="video-29" class="section level3" number="7.1.5">
+<h3>
+<span class="header-section-number">7.1.5</span> Video<a class="anchor" aria-label="anchor" href="#video-29"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="uppgifter-30" class="section level3" number="7.1.6">
+<h3>
+<span class="header-section-number">7.1.6</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-30"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-3-1"]=[  {    "id": "k2-3-1-001",    "name": "Uppgift 1",    "exercise": "Vi har fyra observationer med \\(X = 3, 4, 6, 7\\) och \\(Y = 3, 4, 5, 6\\). Medelvärdet för \\(Y\\) är \\(\\overline{Y} = 4,5\\). En horisontell linje dras vid \\(\\widehat{Y} = 4,5\\). Hur stor är summan av de kvadrerade residualerna för den horisontella linjen? Beräkna: \\[(3 - 4{,}5)^2 + (4 - 4{,}5)^2 + (5 - 4{,}5)^2 + (6 - 4{,}5)^2\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "5" },    "answerformat": "",    "error": { "message": "Beräkna varje term för sig: \\((-1{,}5)^2 = 2{,}25\\), \\((-0{,}5)^2 = 0{,}25\\), \\((0{,}5)^2 = 0{,}25\\), \\((1{,}5)^2 = 2{,}25\\). Summera sedan." },    "correct": { "message": "Rätt! \\(2{,}25 + 0{,}25 + 0{,}25 + 2{,}25 = 5\\). Den horisontella linjen vid \\(\\widehat{Y} = 4{,}5\\) ger alltså SSR (summan av de kvadrerade residualerna) = 5 för dessa fyra observationer." }  },  {    "id": "k2-3-1-002",    "name": "Uppgift 2",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) jämför vi en horisontell linje (Linje B) med regressionslinjen (Linje A) för fyra observationer \\(X = 3, 4, 6, 7\\) och \\(Y = 3, 2, 5, 4\\). Regressionslinjen ger summan av kvadrerade residualerna SSR = 2,5. Den horisontella linjen \\(\\widehat{Y} = \\overline{Y} = 3{,}5\\) ger SSR = 5. Vilket påstående är korrekt?",    "image": "img/k2-3-1-image1.png",    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den horisontella linjen passar bättre eftersom 5 > 2,5",          "Regressionslinjen passar bättre eftersom 2,5 < 5",          "Båda linjerna passar lika bra",          "Det går inte att jämföra de två linjerna"        ],        "correct": "Regressionslinjen passar bättre eftersom 2,5 < 5"      }    },    "error": { "message": "Minstakvadratmetoden minimerar summan av de kvadrerade residualerna. En lägre summa innebär ett bättre anpassad linje." },    "correct": { "message": "Rätt! Regressionslinjen ger summan 2,5 och den horisontella linjen ger 5. Eftersom 2,5 < 5 passar regressionslinjen bättre mot data — precis det som minstakvadratmetoden garanterar." }  },  {    "id": "k2-3-1-003",    "name": "Uppgift 3",    "exercise": "En linje (Linje C) ritas genom observationerna \\((X_1, Y_1) = (3, 3)\\) och \\((X_4, Y_4) = (7, 4)\\). Vad är lutningen \\(\\widehat{b}\\) för denna linje? \\[\\widehat{b} = \\frac{Y_4 - Y_1}{X_4 - X_1}\\]",    "image": "img/k2-3-1-image1.png",    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(\\widehat{b} = 1\\)",          "\\(\\widehat{b} = \\frac{1}{2}\\)",          "\\(\\widehat{b} = \\frac{1}{4}\\)",          "\\(\\widehat{b} = 2\\)"        ],        "correct": "\\(\\widehat{b} = \\frac{1}{4}\\)"      }    },    "error": { "message": "Sätt in värdena i formeln: täljaren är \\(4 - 3 = 1\\) och nämnaren är \\(7 - 3 = 4\\)." },    "correct": { "message": "Rätt! \\(\\widehat{b} = \\frac{4 - 3}{7 - 3} = \\frac{1}{4}\\). Linjen passerar per konstruktion genom \\((3, 3)\\) och \\((7, 4)\\)." }  },  {    "id": "k2-3-1-004",    "name": "Uppgift 4",    "exercise": "Med lutningen \\(\\widehat{b} = \\frac{1}{4}\\) och att linjen passerar genom punkten \\((X_1, Y_1) = (3, 3)\\) beräknas konstanttermen: \\[\\widehat{a} = Y_1 - \\widehat{b} \\cdot X_1\\] Vilket värde får \\(\\widehat{a}\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "2.25" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 2.25)",    "error": { "message": "Beräkna \\(\\frac{1}{4} \\cdot 3 = \\frac{3}{4} = 0{,}75\\). Sedan: \\(3 - 0{,}75 = ?\\). Alternativt: \\(\\frac{9}{4} = ?\\)" },    "correct": { "message": "Rätt! \\(\\widehat{a} = 3 - \\frac{3}{4} = \\frac{9}{4} = 2{,}25\\). Linje C har alltså ekvationen \\(\\widehat{Y} = 2{,}25 + 0{,}25 \\cdot X\\). Linjen passerar per konstruktion genom observation 1 och 4, varför residualerna för dessa är noll." }  },  {    "id": "k2-3-1-005",    "name": "Uppgift 5",    "exercise": "Varför kan ingen annan rät linje ersätta regressionslinjen som skattas med minstakvadratmetoden?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Regressionslinjen är den enda linjen som passerar genom alla observationer",          "Alla andra raka linjer resulterar i ett större summerat värde för de kvadrerade residualerna",          "Regressionslinjen är alltid horisontell",          "Andra linjer kräver fler observationer för att beräknas"        ],        "correct": "Alla andra raka linjer resulterar i ett större summerat värde för de kvadrerade residualerna"      }    },    "error": { "message": "Tänk på vad minstakvadratmetoden faktiskt minimerar och vad det innebär för alla andra möjliga linjer." },    "correct": { "message": "Rätt! Alla andra raka linjer resulterar i ett större summerat värde för det kvadrerade avståndet mellan linjen och punkterna. Till exempel ger den horisontella linjen SSR = 5 och Linje C SSR = 3,125 — båda större än regressionslinjen (SSR (summan av de kvadrerade residualerna) = 2,5)." }  }];</script><div class="exercise-section" data-section-id="k2-3-1">
+
+</div>
+</div>
+</div>
+<div id="k2-3-2" class="section level2" number="7.2">
+<h2>
+<span class="header-section-number">7.2</span> En modell till<a class="anchor" aria-label="anchor" href="#k2-3-2"><i class="fas fa-link"></i></a>
+</h2>
+<div id="avsnitt-3.2-en-modell-till" class="section level3 title" number="7.2.1">
+<h3>
+<span class="header-section-number">7.2.1</span> Avsnitt 3.2: En modell till<a class="anchor" aria-label="anchor" href="#avsnitt-3.2-en-modell-till"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="pushtext-29" class="section level3" number="7.2.2">
+<h3>
+<span class="header-section-number">7.2.2</span> Pushtext<a class="anchor" aria-label="anchor" href="#pushtext-29"><i class="fas fa-link"></i></a>
+</h3>
+<p>I detta avsnitt repeterar vi vad vi lärt oss om minstakvadratmetoden och går igenom ett nytt exempel med en ny regressionsmodell.</p>
+</div>
+<div id="begrepp-31" class="section level3" number="7.2.3">
+<h3>
+<span class="header-section-number">7.2.3</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-31"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>Från regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> kan vi beräkna följande:</p></li>
+<li><p><strong>Residualernas kvadratsumma</strong> (engelska <em>residual sum of squares, SSR</em>):<br><span class="math inline">\(SSR = \sum_{i}^{n}\widehat{V_{i}^{2}} = \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span></p></li>
+<li><p><strong>Kvadratsumman av den förklarade variationen</strong> (engelska <em>sum of squares explained</em>, SSE): <span class="math inline">\(SSE = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}\)</span></p></li>
+<li><p><strong>Totalsumman av kvadrater</strong> (engelska <em>total sum of squares</em>, SST): <span class="math inline">\(SST = SSE + SSR\)</span>.</p></li>
+<li><p><strong>Determinationskoefficienten</strong> (på engelska <em>coefficient of determination</em>), <span class="math inline">\(R^{2}\)</span>: andel av variationen i <span class="math inline">\(Y\)</span> som kan förklaras av regressionsmodellen, det vill säga variationen i den förklarande variabeln <span class="math inline">\(X\)</span>. <span class="math inline">\(R^{2}\)</span> antar värden mellan 0 och 1, där 0 = modellen förklarar ingenting och 1 = modellen förklarar all variation. <span class="math inline">\(R^{2} = \frac{SSE}{SST} = \frac{SST - SSR}{SST}\)</span>.</p></li>
+</ul>
+</div>
+<div id="teori-31" class="section level3" number="7.2.4">
+<h3>
+<span class="header-section-number">7.2.4</span> Teori<a class="anchor" aria-label="anchor" href="#teori-31"><i class="fas fa-link"></i></a>
+</h3>
+<p>Vi har i tidigare avsnitt introducerat minstakvadratmetoden och gått igenom delar av matematiken bakom. Nu ska vi repetera vad vi lärt oss genom att räkna på en ny regressionsmodell.</p>
+<div id="en-ny-modell" class="section level4" number="7.2.4.1">
+<h4>
+<span class="header-section-number">7.2.4.1</span> En ny modell<a class="anchor" aria-label="anchor" href="#en-ny-modell"><i class="fas fa-link"></i></a>
+</h4>
+<p>Låt oss nu estimera följande regressionsmodell:</p>
+<p><span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span> (1)</p>
+<p>där <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span> är variabler, <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span> är koefficienterna som vi ska estimera utifrån minstakvadratmetoden och <span class="math inline">\(\epsilon\)</span> är feltermen. En del av poängen här är att vi nu använder andra bokstäver men att matematiken ändå är densamma. Låt oss repetera vår metod:</p>
+<ol style="list-style-type: decimal">
+<li><p>Vi har en idé om att <span class="math inline">\(K\)</span> samvarierar med <span class="math inline">\(Z\)</span>. Detta är ett påstående om samvariation, inte en teori om ett orsakssamband. Samvariation kan i sin tur vara baserad på en teori om ett orsakssamband, vilket i så fall i regel brukar formuleras som att den förklarande variabeln <span class="math inline">\(K\)</span> orsakar förändringar i den förklarade variabeln <span class="math inline">\(Z\)</span>.</p></li>
+<li><p>Vi formulerar vårt påstående om samvariation i form av en regressionsmodell i ekvation 1.</p></li>
+<li><p>Vi använder minstakvadratmetoden för att hitta estimatorerna (ekvationerna) för <span class="math inline">\(\widehat{\alpha}\)</span> och <span class="math inline">\(\widehat{\beta}\)</span>. Hattsymbolen <span class="math inline">\(\widehat{}\)</span> indikerar att det är estimerade versioner av koefficienterna <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span> som finns i populationen.</p></li>
+<li><p>Efter att vi har estimerat koefficienterna kan vi estimera regressionslinjens ekvation <span class="math inline">\(\widehat{Z} = \widehat{\alpha} + \widehat{\beta}K\)</span> och rita ut regressionslinjen i ett diagram. Värdena för <span class="math inline">\(\widehat{Z}\)</span> anger regressionslinjens värden på den vertikala axeln.</p></li>
+<li><p>Residualen <span class="math inline">\(\widehat{\epsilon} = Z - \widehat{Z}\)</span> är det vertikala avståndet (y-axeln) mellan regressionslinjens <span class="math inline">\(\widehat{Z}\)</span> och respektive observation <span class="math inline">\(Z\)</span>.</p></li>
+</ol>
+</div>
+<div id="estimera-koefficienterna" class="section level4" number="7.2.4.2">
+<h4>
+<span class="header-section-number">7.2.4.2</span> Estimera koefficienterna<a class="anchor" aria-label="anchor" href="#estimera-koefficienterna"><i class="fas fa-link"></i></a>
+</h4>
+<p>Låt oss nu estimera koefficienterna <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span>. Observationerna för variablerna <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span> beskrivs i tabell 1, tillsammans med beräkningarna vi behöver för våra beräkningar.</p>
+<p><strong>Tabell 1. Underlag för att estimera koefficienterna</strong> <span class="math inline">\(\mathbf{\alpha}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{\beta}\)</span><strong>.</strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="4%">
+<col width="9%">
+<col width="9%">
+<col width="13%">
+<col width="13%">
+<col width="28%">
+<col width="19%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Observation i</th>
+<th align="center"><span class="math display">\<span class="math display">\[Z\_{i}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[K\_{i}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[Z\_{i} - \\overline{Z}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[K\_{i} - \\overline{K}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[\\left( Z\_{i} - \\overline{Z} \\right)\\left( K\_{i} - \\overline{K} \\right)\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[\\left( K\_{i} - \\overline{K} \\right)\^{2}\\\]</span></span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">–0,5</td>
+<td align="center">–2</td>
+<td align="center">1</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">2,5</td>
+<td align="center">–2</td>
+<td align="center">–5</td>
+<td align="center">4</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="center">0</td>
+<td align="center">4</td>
+<td align="center">–1,5</td>
+<td align="center">2</td>
+<td align="center">–3</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="center">1</td>
+<td align="center">4</td>
+<td align="center">–0,5</td>
+<td align="center">2</td>
+<td align="center">–1</td>
+<td align="center">4</td>
+</tr>
+<tr class="odd">
+<td align="left">Summa</td>
+<td align="center">6</td>
+<td align="center">8</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">–8</td>
+<td align="center">16</td>
+</tr>
+</tbody>
+</table></div>
+<p>För lutningskoefficienten <span class="math inline">\(\widehat{\beta}\)</span> får vi:</p>
+<p><span class="math inline">\(\widehat{\beta} = \sum_{i}^{}{\frac{\left( K_{i} - \overline{K} \right)\left( Z_{i} - \overline{Z} \right)}{\sum_{i}^{}\left( K_{i} - \overline{K} \right)^{2}} = - \frac{8}{16} = - \frac{1}{2}}\)</span> (2)</p>
+<p>För koefficienten <span class="math inline">\(\widehat{\alpha}\)</span>:</p>
+<p><span class="math inline">\(\widehat{\alpha} = \overline{Z} - \widehat{\beta}\overline{K} = 1,5 - \left( - \frac{1}{2} \right)2 = 2,5\)</span> (3)</p>
+<p>Att <span class="math inline">\(\widehat{\beta} &lt; 0\)</span> betyder att regressionslinjens lutning är negativ och att vi har en negativ samvariation mellan de fyra observationerna för <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span>. Vi kan nu ställa upp en ekvation för predikterade <span class="math inline">\(\widehat{Z}\)</span>:</p>
+<p><span class="math inline">\(\widehat{Z_{i}} = \widehat{\alpha} + \widehat{\beta}K_{i} = 2,5 - \frac{1}{2}K_{i}\)</span> (4)</p>
+<p>Med hjälp av denna och de observerade värdena för variabeln <span class="math inline">\(K\)</span> kan vi estimera fyra värden för predikterade <span class="math inline">\(\widehat{Z}\)</span>, vilka beskrivs i tabell 2. Med <span class="math inline">\(\widehat{Z}\)</span> kan vi sedan estimera de fyra residualerna <span class="math inline">\(\widehat{\epsilon}\)</span>, vilka beskrivs i samma tabell. De fyra observationerna och regressionslinjen som kan ritas med ekvation 4 illustreras i figur 1.</p>
+<p><strong>Tabell 2. Beräkningar för att estimera</strong> <span class="math inline">\(\widehat{Z}\)</span> <strong>och</strong> <span class="math inline">\(\widehat{\epsilon}\)</span></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="7%">
+<col width="16%">
+<col width="16%">
+<col width="21%">
+<col width="38%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Observation i</th>
+<th align="center"><span class="math display">\<span class="math display">\[Z\_{i}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[K\_{i}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[\\widehat{Z\_{i}}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[\\widehat{\\epsilon\_{i}} = Z\_{i} - \\widehat{Z\_{i}}\\\]</span></span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">2,5</td>
+<td align="center">–1,5</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">2,5</td>
+<td align="center">1,5</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="center">0</td>
+<td align="center">4</td>
+<td align="center">0,5</td>
+<td align="center">–0,5</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="center">1</td>
+<td align="center">4</td>
+<td align="center">0,5</td>
+<td align="center">0,5</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Figur 1. Regressionslinjen för modell</strong> <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span><img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\3%20-%20Minstakvadratmetoden%20f%C3%B6rdjupning%201%20mer%20matte\3-2%20-%20En%20modell%20till/img/k2-3-2-image1.png" style="width:3in;height:3in"></p>
+<p>Förklaring: Vi har regressionsmodellen <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>. Utifrån observationerna för variablerna <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span> och minstakvadratmetoden estimerar vi koefficienterna <span class="math inline">\(\widehat{\alpha}\)</span> och <span class="math inline">\(\widehat{\beta}\)</span>. De estimerade koefficienterna och observationerna från variabel <span class="math inline">\(K\)</span> kan vi använda för att estimera <span class="math inline">\(\widehat{Z}\)</span>, vilket ger värdena för denna variabel längs med regressionslinjen.</p>
+</div>
+<div id="hur-väl-passar-regressionsmodellen-mot-data" class="section level4" number="7.2.4.3">
+<h4>
+<span class="header-section-number">7.2.4.3</span> Hur väl passar regressionsmodellen mot data?<a class="anchor" aria-label="anchor" href="#hur-v%C3%A4l-passar-regressionsmodellen-mot-data"><i class="fas fa-link"></i></a>
+</h4>
+<p>För att jämföra hur väl en regressionsmodell passar de data den syftar till att beskriva mönstret för finns det flera metoder. En viktig del i detta är att jämföra residualerna, det vill säga avståndet mellan de data vi använt i vår förklarade variabel <span class="math inline">\(Y\)</span> och de predikterade värdena för samma variabel  <span class="math inline">\(\widehat{Y}\)</span>.</p>
+<p>Om vi har en regressionsmodell med förklarad variabel <span class="math inline">\(Y\)</span> och feltermen <span class="math inline">\(V\)</span> där residualen beräknas <span class="math inline">\(\widehat{V} = Y - \widehat{Y}\)</span> kan vi till exempel jämföra <em>residualernas kvadratsumma</em> (engelska <em>sum of squared residuals</em>, SSR):</p>
+<p><span class="math inline">\(SSR = \sum_{i}^{n}\widehat{V_{i}^{2}} = \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (1)</p>
+<p>Vi kan tänka på SSR som mängden variation i förklarade variabeln <span class="math inline">\(Y\)</span> som inte kan förklaras av regressionsmodellen.</p>
+<p>Ett annat användbart mått är <em>kvadratsumman av den förklarade variationen</em> (engelska <em>sum of squares explained</em>, SSE):</p>
+<p><span class="math inline">\(SSE = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}\)</span> (2)</p>
+<p>SSE kan beskrivas som den variation i <span class="math inline">\(Y\)</span> som kan förklaras, eller tas bort, av regressionsmodellen. Begreppet “förklaras” innebär i detta sammanhang inte nödvändigtvis “kausal förklaring”.</p>
+<p><em>Totalsumman av kvadrater</em> (engelska <em>total sum of squares</em>, SST) är summan av SSR och SSE. SST kan tolkas som mängden variation som förekommer i <span class="math inline">\(Y\)</span> innan regressionsmodellen estimeras. SST skrivas som summan av den kvadrerade differensen mellan observerade <span class="math inline">\(Y_{i}\)</span> och medelvärdet <span class="math inline">\(\overline{Y}\)</span>:</p>
+<p><span class="math inline">\(SST = SSE + SSR\)</span> (3)</p>
+<p><span class="math inline">\(\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2} = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2} + \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span></p>
+</div>
+<div id="skillnaden-mellan-ssr-sse-och-sst" class="section level4" number="7.2.4.4">
+<h4>
+<span class="header-section-number">7.2.4.4</span> Skillnaden mellan SSR, SSE och SST<a class="anchor" aria-label="anchor" href="#skillnaden-mellan-ssr-sse-och-sst"><i class="fas fa-link"></i></a>
+</h4>
+<p>Ett sätt att illustrera skillnaderna mellan SSR, SSE och SST ges i figur 2. Vi använder här återigen de fyra observationerna för <span class="math inline">\(X = 3,4,6,7\)</span> och <span class="math inline">\(Y = 2,3,4,5\)</span> som vi använde i vårt första exempel på regressionsanalys (se <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a>). I diagrammet i figur 1 markerar vi residualerna med streckade vertikala linjer mellan <span class="math inline">\(Y_{i}\ \)</span> och regressionslinjens <span class="math inline">\(\widehat{Y_{i}}\)</span>.</p>
+<p><strong>Figur 2. Differenserna mellan</strong> <span class="math inline">\(\overline{Y}\)</span>, <span class="math inline">\(\widehat{Y}\)</span> och <span class="math inline">\(Y_{i}\)</span></p>
+<div class="float">
+<img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\3%20-%20Minstakvadratmetoden%20f%C3%B6rdjupning%201%20mer%20matte\3-2%20-%20En%20modell%20till/img/k2-3-2-image2.png" style="width:3.99306in;height:2.88451in" alt="A graph of a function Description automatically generated"><div class="figcaption">A graph of a function Description automatically generated</div>
+</div>
+<p>Förklaring: Figuren illustrerar hur avstånden i diagrammet motsvaras av differenser mellan värdena för observationerna <span class="math inline">\(Y_{i}\)</span>, deras medelvärde <span class="math inline">\(\overline{Y}\)</span> och estimerade <span class="math inline">\(\widehat{Y}\)</span>.</p>
+</div>
+<div id="determinationskoefficienten-r2" class="section level4" number="7.2.4.5">
+<h4>
+<span class="header-section-number">7.2.4.5</span> Determinationskoefficienten, <span class="math inline">\(R^{2}\)</span><a class="anchor" aria-label="anchor" href="#determinationskoefficienten-r2"><i class="fas fa-link"></i></a>
+</h4>
+<p>Utifrån kvadratsummorna kan vi skatta determinationskoefficienten (på engelska <em>coefficient of determination</em>), vilken brukar skrivas som <span class="math inline">\(R^{2}\)</span>:</p>
+<p><span class="math inline">\(R^{2} = \frac{SSE}{SST} = \frac{SST - SSR}{SST} = 1 - \frac{SSR}{SST} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}}\)</span> (4)</p>
+<p><span class="math inline">\(R^{2}\)</span> mäter hur stor andel av variationen i den förklarade variabeln, till exempel <span class="math inline">\(Y\)</span>, som kan förklaras av regressionsmodellen och variationen i den förklarande variabeln, till exempel <span class="math inline">\(X\)</span>. <span class="math inline">\(R^{2}\)</span> kan anta värden mellan 0 och 1.</p>
+<p><span class="math inline">\(R^{2} = 0\)</span> betyder att ingenting av variationen i <span class="math inline">\(Y\)</span> kan förklaras av regressionsmodellen och variationen i <span class="math inline">\(X\)</span>. <span class="math inline">\(R^{2} = 1\)</span> betyder att all variation i variabel <span class="math inline">\(Y\)</span> förklaras av regressionsmodellen och variationen i variabel <span class="math inline">\(X\)</span>.</p>
+</div>
+</div>
+<div id="observera-att-förkortningar-varierar-ibland.-vi-använder-här-ssr-sum-of-squared-residuals.-andra-använder-till-exempel-rss-residual-sum-of-squares.-båda-betyder-samma-sak.-när-du-läser-andra-texter-kontrollera-alltid-vad-en-förkortning-syftar-på-matematiskt." class="section level3" number="7.2.5">
+<h3>
+<span class="header-section-number">7.2.5</span> Observera att förkortningar varierar ibland. Vi använder här SSR = Sum of Squared Residuals. Andra använder till exempel RSS = Residual Sum of Squares. Båda betyder samma sak. När du läser andra texter, kontrollera alltid vad en förkortning syftar på matematiskt.<a class="anchor" aria-label="anchor" href="#observera-att-f%C3%B6rkortningar-varierar-ibland.-vi-anv%C3%A4nder-h%C3%A4r-ssr-sum-of-squared-residuals.-andra-anv%C3%A4nder-till-exempel-rss-residual-sum-of-squares.-b%C3%A5da-betyder-samma-sak.-n%C3%A4r-du-l%C3%A4ser-andra-texter-kontrollera-alltid-vad-en-f%C3%B6rkortning-syftar-p%C3%A5-matematiskt."><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="video-30" class="section level3" number="7.2.6">
+<h3>
+<span class="header-section-number">7.2.6</span> Video<a class="anchor" aria-label="anchor" href="#video-30"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="uppgifter-31" class="section level3" number="7.2.7">
+<h3>
+<span class="header-section-number">7.2.7</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-31"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-3-2"]=[  {    "id": "k2-3-2-001",    "name": "Uppgift 1",    "exercise": "En regressionsmodell \\(Z = \\alpha + \\beta K + \\epsilon\\) estimeras med fyra observationer. Givna summor: \\(\\sum(K_i - \\overline{K})(Z_i - \\overline{Z}) = -8\\) och \\(\\sum(K_i - \\overline{K})^2 = 16\\). Beräkna lutningskoefficienten: \\[\\widehat{\\beta} = \\frac{\\sum(K_i - \\overline{K})(Z_i - \\overline{Z})}{\\sum(K_i - \\overline{K})^2}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "-0.5" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. -0.5)",    "error": { "message": "Sätt in värdena direkt: \\(\\widehat{\\beta} = \\frac{-8}{16}\\). Beräkna detta bråk." },    "correct": { "message": "Rätt! \\(\\widehat{\\beta} = \\frac{-8}{16} = -\\frac{1}{2} = -0{,}5\\). Det negativa tecknet innebär att regressionslinjens lutning är negativ — det finns en negativ samvariation mellan \\(Z\\) och \\(K\\)." }  },  {    "id": "k2-3-2-002",    "name": "Uppgift 2",    "exercise": "Med \\(\\widehat{\\beta} = -\\frac{1}{2}\\), \\(\\overline{Z} = 1{,}5\\) och \\(\\overline{K} = 2\\) beräknas konstanttermen: \\[\\widehat{\\alpha} = \\overline{Z} - \\widehat{\\beta}\\,\\overline{K}\\] Vilket värde får \\(\\widehat{\\alpha}\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "2.5" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 2.5)",    "error": { "message": "Sätt in värdena: \\(\\widehat{\\alpha} = 1{,}5 - (-\\frac{1}{2}) \\cdot 2\\). Observera att minus gånger minus ger plus." },    "correct": { "message": "Rätt! \\(\\widehat{\\alpha} = 1{,}5 - (-0{,}5) \\cdot 2 = 1{,}5 + 1 = 2{,}5\\). Regressionslinjen kan därför skrivas som \\(\\widehat{Z}_i = 2{,}5 - \\frac{1}{2}K_i\\)." }  },  {    "id": "k2-3-2-003",    "name": "Uppgift 3",    "exercise": "Med regressionslinjen \\(\\widehat{Z}_i = 2{,}5 - \\frac{1}{2}K_i\\) och observation 3 där \\(K_3 = 4\\) och \\(Z_3 = 0\\): vad är residualen \\(\\widehat{\\epsilon}_3 = Z_3 - \\widehat{Z}_3\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(\\widehat{\\epsilon}_3 = 1{,}5\\)",          "\\(\\widehat{\\epsilon}_3 = -0{,}5\\)",          "\\(\\widehat{\\epsilon}_3 = 0{,}5\\)",          "\\(\\widehat{\\epsilon}_3 = -1{,}5\\)"        ],        "correct": "\\(\\widehat{\\epsilon}_3 = -0{,}5\\)"      }    },    "error": { "message": "Beräkna först \\(\\widehat{Z}_3 = 2{,}5 - \\frac{1}{2} \\cdot 4\\). Sedan är residualen \\(Z_3 - \\widehat{Z}_3 = 0 - \\widehat{Z}_3\\)." },    "correct": { "message": "Rätt! \\(\\widehat{Z}_3 = 2{,}5 - 0{,}5 \\cdot 4 = 2{,}5 - 2 = 0{,}5\\). Residualen är \\(\\widehat{\\epsilon}_3 = 0 - 0{,}5 = -0{,}5\\)." }  },  {    "id": "k2-3-2-004",    "name": "Uppgift 4",    "exercise": "Vilket av följande påståenden om \\(R^2\\) (determinationskoefficienten) är korrekt?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(R^2\\) kan anta negativa värden om modellen passar dåligt",          "\\(R^2\\) mäter andelen av variationen i \\(Y\\) som förklaras av regressionsmodellen och antar värden mellan 0 och 1",          "\\(R^2 = 1\\) innebär alltid att det finns ett kausalt samband",          "Ett högt \\(R^2\\) garanterar alltid att modellen är bra"        ],        "correct": "\\(R^2\\) mäter andelen av variationen i \\(Y\\) som förklaras av regressionsmodellen och antar värden mellan 0 och 1"      }    },    "error": { "message": "Läs definitionerna av \\(R^2\\) i begreppslistan. Tänk på intervallet \\(R^2\\) kan anta och vad det mäter." },    "correct": { "message": "Rätt! \\(R^2\\) antar värden mellan 0 och 1, där 0 betyder att modellen inte förklarar något och 1 att modellen förklarar all variation. Viktigt: ett högt \\(R^2\\) säger ingenting om orsakssamband." }  },  {    "id": "k2-3-2-005",    "name": "Uppgift 5",    "exercise": "För regressionsmodellen \\(\\widehat{Z}_i = 2{,}5 - 0{,}5K_i\\) med observationer \\(K = \\{1, 2, 4, 1\\}\\) och \\(Z = \\{2, 2, 0, 1\\}\\): de fyra residualerna är \\(0\\), \\(-0{,}5\\), \\(-0{,}5\\) och \\(0\\) (avrundade). Beräkna summan av de kvadrerade residualerna: \\[\\sum_{i=1}^{4}\\widehat{\\epsilon}_i^2\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "0.5" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 0.5)",    "error": { "message": "Kvadrera varje residual: \\(0^2 = 0\\), \\((-0{,}5)^2 = 0{,}25\\), \\((-0{,}5)^2 = 0{,}25\\), \\(0^2 = 0\\). Summera sedan." },    "correct": { "message": "Rätt! \\(\\sum\\widehat{\\epsilon}_i^2 = 0 + 0{,}25 + 0{,}25 + 0 = 0{,}5\\). Minstakvadratmetoden garanterar att ingen annan rät linje ger en lägre summa av kvadrerade residualer för dessa data." }  }];</script><div class="exercise-section" data-section-id="k2-3-2">
+
+</div>
+</div>
+</div>
+<div id="k2-3-3" class="section level2" number="7.3">
+<h2>
+<span class="header-section-number">7.3</span> Hur väl passar modellerna mot data?<a class="anchor" aria-label="anchor" href="#k2-3-3"><i class="fas fa-link"></i></a>
+</h2>
+<div id="avsnitt-3.3-jämföra-två-olika-regressionsmodeller" class="section level3 title" number="7.3.1">
+<h3>
+<span class="header-section-number">7.3.1</span> Avsnitt 3.3: Jämföra två olika regressionsmodeller<a class="anchor" aria-label="anchor" href="#avsnitt-3.3-j%C3%A4mf%C3%B6ra-tv%C3%A5-olika-regressionsmodeller"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="pushtext-30" class="section level3" number="7.3.2">
+<h3>
+<span class="header-section-number">7.3.2</span> Pushtext<a class="anchor" aria-label="anchor" href="#pushtext-30"><i class="fas fa-link"></i></a>
+</h3>
+<p>Vi fortsätter här att gå igenom regressionsanalys och hur vi kan jämföra resultaten från vår regressionsmodell.</p>
+</div>
+<div id="begrepp-32" class="section level3" number="7.3.3">
+<h3>
+<span class="header-section-number">7.3.3</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-32"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>Medelkvadratsumman för residualerna</strong> (engelska <em>mean squared residuals</em>, MSR):<br><span class="math inline">\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\)</span></p></li>
+<li><p><strong>Medelkvadratsumman av den förklarade variationen</strong> (engelska <em>mean sum of squares explained</em>, MSE): **
+<span class="math inline">\(MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}\)</span></p></li>
+</ul>
+</div>
+<div id="teori-32" class="section level3" number="7.3.4">
+<h3>
+<span class="header-section-number">7.3.4</span> Teori<a class="anchor" aria-label="anchor" href="#teori-32"><i class="fas fa-link"></i></a>
+</h3>
+<p>I tidigare avsnitt har vi estimerat två olika regressionsmodeller. Varje modell utgick från fyra observationer vardera. Regressionsanalys är ett sätt att studera mönster i data. Vi kan använda våra regressionsmodeller för att pröva i vilken utsträckning som det mönster som en regressionsmodell beskriver faktiskt återfinns i våra data.</p>
+<p>Att estimera koefficienterna i regressionsmodellen är då endast första steget i en regressionsanalys. Därefter vill vi jämföra hur väl mönstret i vår regressionsmodell faktiskt stämde med det mönster som fanns i observationerna. Detta är ett vanligt tillvägagångssätt och därför viktigt att känna till.</p>
+<div id="medelkvadratsumman" class="section level4" number="7.3.4.1">
+<h4>
+<span class="header-section-number">7.3.4.1</span> Medelkvadratsumman<a class="anchor" aria-label="anchor" href="#medelkvadratsumman"><i class="fas fa-link"></i></a>
+</h4>
+<p>För att studera hur väl en regressionsmodell passar mot data kan vi även jämföra medelkvadratsumman. Medelkvadratsumman för residualerna (engelska <em>mean squared residuals</em>, MSR) beräknas:</p>
+<p><span class="math inline">\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\)</span> (5)</p>
+<p>Nämnaren <span class="math inline">\(n - p\)</span> visar antal frihetsgrader, där <span class="math inline">\(n\)</span> är antal observationer och <span class="math inline">\(p\)</span> är antal estimerade koefficienter i regressionsmodellen. Frihetsgrader anger hur många "fria" värden vi har kvar efter att ha estimerat koefficienterna: <span class="math inline">\(n\)</span> = antal observationer (här 4). <span class="math inline">\(p\)</span> = antal estimerade koefficienter (här 2: <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>). <span class="math inline">\(n - p\)</span> = frihetsgrader <span class="math inline">\((4\ - \ 2\ = \ 2)\)</span>. Med 4 observationer och 2 koefficienter har vi "använt upp" 2 frihetsgrader för att estimera koefficienterna. Vi har 2 frihetsgrader kvar för att mäta variation kring regressionslinjen.</p>
+<p>Förenklat kan ett lågt MSR innebära att regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> hamnar relativt nära observationerna <span class="math inline">\(Y\)</span>.</p>
+</div>
+<div id="medelkvadratsumman-av-den-förklarade-variationen" class="section level4" number="7.3.4.2">
+<h4>
+<span class="header-section-number">7.3.4.2</span> Medelkvadratsumman av den förklarade variationen<a class="anchor" aria-label="anchor" href="#medelkvadratsumman-av-den-f%C3%B6rklarade-variationen"><i class="fas fa-link"></i></a>
+</h4>
+<p>Medelkvadratsumman av den förklarade variationen är SSE dividerat med antal förklarande variabler (engelska mean sum of squares explained, MSE):</p>
+<p><span class="math inline">\(MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}\)</span> (6)</p>
+<p>I täljaren tar vi <span class="math inline">\(p\)</span>, antal estimerade koefficienter, minus 1 eftersom koefficient <span class="math inline">\(a\)</span> inte multipliceras med någon förklarande variabel.</p>
+</div>
+<div id="låt-oss-jämföra-två-regressionsmodeller" class="section level4" number="7.3.4.3">
+<h4>
+<span class="header-section-number">7.3.4.3</span> Låt oss jämföra två regressionsmodeller<a class="anchor" aria-label="anchor" href="#l%C3%A5t-oss-j%C3%A4mf%C3%B6ra-tv%C3%A5-regressionsmodeller"><i class="fas fa-link"></i></a>
+</h4>
+<p>I tidigare avsnitt har vi använt två olika samlingar med observationer för att utifrån minstakvadratmetoden estimera de två regressionsmodellerna från <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a> och <a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a>:</p>
+<p>Modell 1: <span class="math inline">\(Y = a + bX + V\)</span> (7)</p>
+<p>Modell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span></p>
+<p>Tabell 2 och 3 återger observationerna vi använde för att estimera respektive tabell och några beräkningar vi nu ska använda i vår jämförelse.</p>
+<p><strong>Tabell 2: Observationer och beräkningar för modell 1</strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="5%">
+<col width="11%">
+<col width="11%">
+<col width="14%">
+<col width="17%">
+<col width="16%">
+<col width="24%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Observation i</th>
+<th align="center"><span class="math display">\<span class="math display">\[X\_{i}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[Y\_{i}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[\\widehat{Y\_{i}}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[Y\_{i} - \\widehat{Y\_{i}}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[Y\_{i} - \\overline{Y}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[\\left( Y\_{i} - \\widehat{Y\_{i}} \\right)\^{2}\\\]</span></span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">2,5</td>
+<td align="center">0,5</td>
+<td align="center">-0,5</td>
+<td align="center">0,25</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="center">4</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">-1</td>
+<td align="center">-1,5</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="center">6</td>
+<td align="center">5</td>
+<td align="center">4</td>
+<td align="center">1</td>
+<td align="center">1,5</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="center">7</td>
+<td align="center">4</td>
+<td align="center">4,5</td>
+<td align="center">-0,5</td>
+<td align="center">0,5</td>
+<td align="center">0,25</td>
+</tr>
+<tr class="odd">
+<td align="left">Medel</td>
+<td align="center">5</td>
+<td align="center">3,5</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="left">Summa</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">2,5</td>
+<td align="center">5</td>
+</tr>
+</tbody>
+</table></div>
+<p>Förklaring: se text.</p>
+<p><strong>Tabell 3: Observationer och beräkningar för modell 2</strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="4%">
+<col width="10%">
+<col width="10%">
+<col width="13%">
+<col width="23%">
+<col width="16%">
+<col width="22%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Observation i</th>
+<th align="center"><span class="math display">\<span class="math display">\[Z\_{i}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[K\_{i}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[\\widehat{Z\_{i}}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[\\widehat{\\epsilon\_{i}} = Z\_{i} - \\widehat{Z\_{i}}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[Z\_{i} - \\overline{Z\_{i}}\\\]</span></span></th>
+<th align="center"><span class="math display">\<span class="math display">\[\\left( Z\_{i} - \\widehat{Z\_{i}} \\right)\^{2}\\\]</span></span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">2,5</td>
+<td align="center">–1,5</td>
+<td align="center">–0,5</td>
+<td align="center">2,25</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">2,5</td>
+<td align="center">1,5</td>
+<td align="center">2,5</td>
+<td align="center">2,25</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="center">0</td>
+<td align="center">4</td>
+<td align="center">0,5</td>
+<td align="center">-0,5</td>
+<td align="center">–1,5</td>
+<td align="center">0,25</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="center">1</td>
+<td align="center">4</td>
+<td align="center">0,5</td>
+<td align="center">0,5</td>
+<td align="center">–0,5</td>
+<td align="center">0,25</td>
+</tr>
+<tr class="odd">
+<td align="left">Medel</td>
+<td align="center">1,5</td>
+<td align="center">2</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="left">Summa</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">5</td>
+<td align="center">9</td>
+</tr>
+</tbody>
+</table></div>
+<p>Förklaring: se text.</p>
+<p>Nu ska vi jämföra vilken av modellerna som passar bäst mot deras respektive datapunkter. Vi börjar med att beräkna MSR för respektive regressionsmodell. Tabell 2 upprepar observationerna för modell 1 och variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> samt några beräkningar som vi behöver. Detta ger MSR:</p>
+<p><span class="math inline">\(MSR_{modell\ 1} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p} = \frac{2,5}{2} = 1,25\)</span> (8)</p>
+<p>Låt oss beräkna MSR även för regressionsmodell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>. Tabell 3 upprepar variablernas värden och sammanfattar några beräkningar. Detta ger följande MSR:</p>
+<p><span class="math inline">\(MSR_{modell\ 2} = \frac{5}{2} = 2,5\)</span> (9)</p>
+<p>Eftersom <span class="math inline">\(MSR_{modell\ 2} &gt; MSR_{modell\ 1}\)</span> indikerar på att den första regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> ligger närmare observerade <span class="math inline">\(Y\)</span>, jämfört med hur väl den andra regressionsmodellen lyckas prediktera den förklarade variabeln <span class="math inline">\(Z\)</span> i den modellen.</p>
+<p>MSR beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.</p>
+</div>
+</div>
+<div id="vi-beräknar-r2-för-båda-modellerna" class="section level3" number="7.3.5">
+<h3>
+<span class="header-section-number">7.3.5</span> Vi beräknar <span class="math inline">\(R^{2}\)</span> för båda modellerna<a class="anchor" aria-label="anchor" href="#vi-ber%C3%A4knar-r2-f%C3%B6r-b%C3%A5da-modellerna"><i class="fas fa-link"></i></a>
+</h3>
+<p>Låt oss även skatta <span class="math inline">\(R^{2}\)</span>. För den första regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> får vi (se tabell 2):</p>
+<p><span class="math inline">\(R_{modell\ 1}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{2,5}{5} = \frac{1}{2}\)</span> (10)</p>
+<p>Resultat <span class="math inline">\(R^{2} = \frac{1}{2}\)</span> indikerar att hälften av variationen i <span class="math inline">\(Y\)</span> kan förklaras av regressionsmodellen och variationer i <span class="math inline">\(X\)</span>. Låt oss beräkna <span class="math inline">\(R^{2}\ \)</span>för den andra regressionsmodellen <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span> (se tabell 3):</p>
+<p><span class="math inline">\(R_{modell\ 2}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{5}{9} = \frac{4}{9}\)</span> (11)</p>
+<p>Eftersom <span class="math inline">\(\frac{4}{9} &lt; \frac{1}{2}\)</span> indikerar detta att den första regressionsmodellen har högre förklaringsgrad jämfört med den andra modellen. Modell 1 passar därför, enligt detta mått, bättre mot den data som vi använde för att estimera modellen, jämfört med hur modell 2 passar mot den data vi använde för att estimera den modellen.</p>
+<p>Detta betyder att 50 % av variationen i <span class="math inline">\(Y\)</span> förklaras av <span class="math inline">\(X\)</span>. 50 % av variationen i <span class="math inline">\(Y\)</span> beror på andra faktorer (residualerna). Ett högre <span class="math inline">\(R^{2}\)</span> betyder att modellen "passar bättre" mot data, men det betyder inte automatiskt att modellen är bra. Ett högt eller lågt <span class="math inline">\(R^{2}\)</span> säger inte heller nödvändigtvis något om orsakssamband.</p>
+</div>
+<div id="video-31" class="section level3" number="7.3.6">
+<h3>
+<span class="header-section-number">7.3.6</span> Video<a class="anchor" aria-label="anchor" href="#video-31"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="uppgifter-32" class="section level3" number="7.3.7">
+<h3>
+<span class="header-section-number">7.3.7</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-32"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-3-3"]=[  {    "id": "k2-3-3-001",    "name": "Uppgift 1",    "exercise": "För en regressionsmodell \\(Y = a + bX + V\\) med fyra observationer gäller: \\(\\sum(Y_i - \\widehat{Y}_i)^2 = 2{,}5\\) och \\(n - p = 4 - 2 = 2\\). Beräkna medelkvadratsumman för residualerna: \\[MSR = \\frac{\\sum(Y_i - \\widehat{Y}_i)^2}{n - p}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "1.25" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 1.25)",    "error": { "message": "Sätt in värdena direkt: \\(MSR = \\frac{2{,}5}{2}\\). Dividera täljaren med nämnaren." },    "correct": { "message": "Rätt! \\(MSR = \\frac{2{,}5}{2} = 1{,}25\\). Frihetsgrader \\(n - p = 4 - 2 = 2\\) eftersom vi har 4 observationer och 2 estimerade koefficienter (\\(a\\) och \\(b\\))." }  },  {    "id": "k2-3-3-002",    "name": "Uppgift 2",    "exercise": "För en regressionsmodell \\(Z = \\alpha + \\beta K + \\epsilon\\) med fyra observationer gäller: \\(\\sum(Z_i - \\widehat{Z}_i)^2 = 5\\) och \\(n - p = 2\\). Beräkna: \\[MSR = \\frac{\\sum(Z_i - \\widehat{Z}_i)^2}{n - p}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "2.5" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 2.5)",    "error": { "message": "Använd formeln \\(MSR = \\frac{SSR}{n-p}\\). Sätt in \\(SSR = 5\\) och \\(n - p = 2\\)." },    "correct": { "message": "Rätt! \\(MSR = \\frac{5}{2} = 2{,}5\\). Jämfört med regressionen Y på X (MSR = 1,25) är MSR här högre (2,5 > 1,25), vilket indikerar att regressionen Y på X har predikterade värden som ligger närmare de observerade." }  },  {    "id": "k2-3-3-003",    "name": "Uppgift 3",    "exercise": "Medelkvadratsumman för residualerna beräknas som \\[MSR = \\frac{\\sum(Y_i - \\widehat{Y}_i)^2}{n - p}\\] Vad innebär ett lägre MSR vid jämförelse av två regressionsmodeller?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Modellen har fler observationer",          "Modellens predikterade värden \\(\\widehat{Y}\\) hamnar relativt nära observationerna \\(Y\\)",          "Modellen har ett mer negativt lutningskoefficient",          "Modellen har fler förklarande variabler"        ],        "correct": "Modellens predikterade värden \\(\\widehat{Y}\\) hamnar relativt nära observationerna \\(Y\\)"      }    },    "error": { "message": "MSR mäter genomsnittlig kvadrerad residual. Tänk på vad en liten residual innebär för hur väl linjen passar mot data." },    "correct": { "message": "Rätt! Ett lägre MSR innebär att regressionsmodellens predikterade \\(\\widehat{Y}\\) i genomsnitt hamnar relativt nära de observerade värdena \\(Y\\). Regressionen Y på X (MSR = 1,25) passar alltså bättre än regressionen Z på K (MSR = 2,5) mot sina respektive data." }  },  {    "id": "k2-3-3-004",    "name": "Uppgift 4",    "exercise": "För en regressionsmodell \\(Y = a + bX + V\\) med fyra observationer gäller \\(\\sum(Y_i - \\widehat{Y}_i)^2 = 2{,}5\\) och \\(\\sum(Y_i - \\overline{Y})^2 = 5\\). Beräkna \\(R^2\\): \\[R^2 = 1 - \\frac{\\sum(Y_i - \\widehat{Y}_i)^2}{\\sum(Y_i - \\overline{Y})^2} = 1 - \\frac{2{,}5}{5}\\] Vilket värde får \\(R^2\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(R^2 = 0{,}25\\)",          "\\(R^2 = 0{,}75\\)",          "\\(R^2 = 0{,}5\\)",          "\\(R^2 = 1\\)"        ],        "correct": "\\(R^2 = 0{,}5\\)"      }    },    "error": { "message": "Beräkna: \\(1 - \\frac{2{,}5}{5} = 1 - 0{,}5 = ?\\)" },    "correct": { "message": "Rätt! \\(R^2 = 1 - \\frac{2{,}5}{5} = 1 - 0{,}5 = 0{,}5\\). Det innebär att 50 % av variationen i \\(Y\\) förklaras av \\(X\\). De övriga 50 % beror på andra faktorer (residualerna)." }  },  {    "id": "k2-3-3-005",    "name": "Uppgift 5",    "exercise": "För en regressionsmodell \\(Z = \\alpha + \\beta K + \\epsilon\\) gäller \\(\\sum(Z_i - \\widehat{Z}_i)^2 = 5\\) och \\(\\sum(Z_i - \\overline{Z})^2 = 9\\), vilket ger \\(R^2 = 1 - \\frac{5}{9} = \\frac{4}{9}\\). Regressionen Y på X (från uppgift 4) hade \\(R^2 = 0{,}5\\). Vilken regression har högst förklaringsgrad och vad kan vi dra för slutsats?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Regressionen Z på K, eftersom \\(\\frac{4}{9} > \\frac{1}{2}\\)",          "Regressionen Y på X, eftersom \\(\\frac{1}{2} > \\frac{4}{9}\\), vilket innebär att den passar bättre mot sin data",          "Regressionen Y på X, och det bevisar att det finns ett kausalt samband",          "Båda regressionerna har samma förklaringsgrad"        ],        "correct": "Regressionen Y på X, eftersom \\(\\frac{1}{2} > \\frac{4}{9}\\), vilket innebär att den passar bättre mot sin data"      }    },    "error": { "message": "Jämför \\(\\frac{1}{2}\\) och \\(\\frac{4}{9}\\): omvandla till decimaltal. \\(\\frac{1}{2} = 0{,}5\\) och \\(\\frac{4}{9} \\approx 0{,}444\\). Vilket är störst?" },    "correct": { "message": "Rätt! \\(\\frac{1}{2} = 0{,}5 > \\frac{4}{9} \\approx 0{,}444\\), så regressionen Y på X har högre \\(R^2\\) och därmed högre förklaringsgrad. Viktigt: ett högt \\(R^2\\) säger inte nödvändigtvis något om orsakssamband, och jämförelsen görs mot respektive regressions egna data." }  }];</script><div class="exercise-section" data-section-id="k2-3-3">
+
+</div>
+</div>
+</div>
+<div id="k2-3-4" class="section level2" number="7.4">
+<h2>
+<span class="header-section-number">7.4</span> Härled estimatorerna<a class="anchor" aria-label="anchor" href="#k2-3-4"><i class="fas fa-link"></i></a>
+</h2>
+<div id="avsnitt-3.4-härledning-av-koefficienternas-estimatorer" class="section level3 title" number="7.4.1">
+<h3>
+<span class="header-section-number">7.4.1</span> Avsnitt 3.4: Härledning av koefficienternas estimatorer<a class="anchor" aria-label="anchor" href="#avsnitt-3.4-h%C3%A4rledning-av-koefficienternas-estimatorer"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="pushtext-31" class="section level3" number="7.4.2">
+<h3>
+<span class="header-section-number">7.4.2</span> Pushtext<a class="anchor" aria-label="anchor" href="#pushtext-31"><i class="fas fa-link"></i></a>
+</h3>
+<p>I detta avsnitt ska vi härleda estimatorerna för koefficienterna i vår första regressionsmodell. Detta ger oss en bättre förståelse för minstakvadratmetoden.</p>
+</div>
+<div id="begrepp-33" class="section level3" number="7.4.3">
+<h3>
+<span class="header-section-number">7.4.3</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-33"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Inga nya begrepp i detta avsnitt.</em></p>
+</div>
+<div id="teori-33" class="section level3" number="7.4.4">
+<h3>
+<span class="header-section-number">7.4.4</span> Teori<a class="anchor" aria-label="anchor" href="#teori-33"><i class="fas fa-link"></i></a>
+</h3>
+<p>Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att matematiken blir för tung kan du hoppa över detta avsnitt för nu och komma tillbaka senare om du vill förstå metoderna mer på djupet. Fokusera på att förstå vad estimatorerna gör. Det är inte avgörande att förstå varje steg i härledningarna.</p>
+<p>Varför bry sig om härledningen?</p>
+<ol style="list-style-type: decimal">
+<li><p>Det ger djupare förståelse för minstakvadratmetodens logik.</p></li>
+<li><p>Det visar att metoderna bygger på genomtänkt matematik.</p></li>
+<li><p>Det förbereder dig för mer avancerade metoder senare.</p></li>
+</ol>
+<div id="utgångspunkter" class="section level4" number="7.4.4.1">
+<h4>
+<span class="header-section-number">7.4.4.1</span> Utgångspunkter<a class="anchor" aria-label="anchor" href="#utg%C3%A5ngspunkter"><i class="fas fa-link"></i></a>
+</h4>
+<p>För regressionsmodellen <span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> där <span class="math inline">\(Y_{i}\)</span> och <span class="math inline">\(X_{i}\)</span> är variabler och <span class="math inline">\(V_{i}\)</span> är felterm, introducerade vi estimatorer för koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> i avsnitt 2.5:</p>
+<p><span class="math inline">\(\widehat{a} = \overline{Y} - \widehat{b}\overline{X}\)</span> (1)</p>
+<p><span class="math inline">\(\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}}\)</span></p>
+<p>Nu ska vi gå igenom hur vi kan härleda estimatorerna. Minstakvadratmetoden låter oss definiera estimatorerna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> så att vi minimerar summan av de kvadrerade residualerna</p>
+<p><span class="math inline">\(\sum_{i}^{}{\widehat{V}}_{i}^{2} = \sum_{}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (2)</p>
+<p>Estimatorerna kan därför härledas ur ett minimeringsproblem. Om du känner dig osäker på maximeringsproblem och minimeringsproblem, se Mattebokens avsnitt om <a href="https://www.matteboken.se/lektioner/matte-3/derivatan-och-grafen/storsta-och-minsta-varde#!/">största och minsta värde under matte 3</a>.</p>
+<p>Summan av de kvadrerade residualerna blir:</p>
+<p><span class="math inline">\(\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = {\widehat{V}}_{i}^{2} + {\widehat{V}}_{i}^{2} + \ldots + {\widehat{V}}_{i}^{2}\)</span> (3)<span class="math inline">\( \)</span><span class="math display">\<span class="math display">\[{= \\left( Y\_{1} - \\widehat{Y\_{1}} \\right)\^{2} + \\left( Y\_{2} - \\widehat{Y\_{2}} \\right)\^{2} + \\ldots + \\left( Y\_{n} - \\widehat{Y\_{n}} \\right)\^{2} }{= \\sum\_{i = 1}\^{n}\\left( Y\_{i} - \\widehat{Y\_{i}} \\right)\^{2}}\\\]</span></span></p>
+<p>där n är antal observationer, <span class="math inline">\(\widehat{Y}\)</span> är predikterade <span class="math inline">\(Y\)</span>. För att kunna skatta <span class="math inline">\(\widehat{Y} = \widehat{a} + \widehat{b}X\)</span> behöver vi estimera <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Vi börjar med att sätta in denna definition av <span class="math inline">\(\widehat{Y}\)</span> i uttrycket från ekvation 3:</p>
+<p><span class="math inline">\(\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (4)</p>
+<p><span class="math display">\<span class="math display">\[= \\sum\_{i = 1}\^{n}\\left( Y\_{i} - \\left( \\widehat{a} + \\widehat{b}X\_{i} \\right) \\right)\^{2}\\\]</span></span></p>
+<p><span class="math display">\<span class="math display">\[= \\sum\_{i = 1}\^{n}\\left( Y\_{i} - \\widehat{a} - \\widehat{b}X\_{i} \\right)\^{2}\\\]</span></span></p>
+</div>
+<div id="minimera-summan-av-kvadrerade-residualerna" class="section level4" number="7.4.4.2">
+<h4>
+<span class="header-section-number">7.4.4.2</span> Minimera summan av kvadrerade residualerna<a class="anchor" aria-label="anchor" href="#minimera-summan-av-kvadrerade-residualerna"><i class="fas fa-link"></i></a>
+</h4>
+<p>Nu har vi en ekvation där summan av kvadrerade residualerna <span class="math inline">\(\sum_{i}^{}\widehat{{V_{i}}^{2}}\)</span> är en funktion av estimerade <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Det är denna funktion som vi ska minimera med hänsyn till <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>, vilket vi kan skriva som ett minimeringsproblem:</p>
+<p><span class="math inline">\(\min_{\text{m.h.t. }\widehat{a},\widehat{b}}{\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2}} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)^{2}\)</span> (5)</p>
+<p>Vi deriverar högerledet med hänsyn till <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Detta ger oss två ekvationer som kallas "förstagradsvillkor" (eller "första ordningens villkor"), alltså villkor som måste uppfyllas vid en minimumpunkt eller maximumpunkt.</p>
+<p><span class="math inline">\(\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{a}}' = - 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0\)</span> (6)</p>
+<p><span class="math inline">\(\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{b}}' = - 2\sum_{i = 1}^{n}{X_{i}(Y_{i} - \widehat{a} - \widehat{b}X_{i})} = 0\)</span></p>
+<p>där båda resultaten uppstår genom att vi deriverar parentesen (flyttar ned exponent 2) och deriverar innehållet i respektive parentes. När vi deriverar med hänsyn till <span class="math inline">\(\widehat{a}\)</span> får vi –1. När vi deriverar med hänsyn till <span class="math inline">\(\widehat{b}\)</span> får vi <span class="math inline">\(–X_{i}\)</span>. Vi sätter -2 till vänster om summeringstecknet eftersom dessa saker inte berörs av summeringen.</p>
+<p>Notera att det första villkoret i ekvation 6 innebär att <span class="math inline">\(\sum_{i}^{}\widehat{V_{i}} = 0\)</span> och det andra villkoret kan beskrivas som: <span class="math inline">\(\sum_{}^{}X_{i}\widehat{V_{i}} = 0\)</span>. Detta kommer vi att ha användning av längre fram.</p>
+</div>
+<div id="lösa-ut-widehata-och-widehatb" class="section level4" number="7.4.4.3">
+<h4>
+<span class="header-section-number">7.4.4.3</span> Lösa ut <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span><a class="anchor" aria-label="anchor" href="#l%C3%B6sa-ut-widehata-och-widehatb"><i class="fas fa-link"></i></a>
+</h4>
+<p>Från de två förstagradsvillkoren i ekvation 6 kan vi lösa ut <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Vi börjar med det första villkoret:</p>
+<p><span class="math inline">\(- 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0\)</span> (7)</p>
+<p><span class="math inline">\(( - 2)\sum_{i = 1}^{n}{Y_{i} - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}} = 0\)</span></p>
+<p>Eftersom alla termer är multiplicerade med -2 kan vi stryka denna faktor. Eftersom <span class="math inline">\(\widehat{a}\)</span> är konstant över alla observationer är termen <span class="math inline">\(\sum_{i}^{n}\widehat{a}\)</span> samma sak som antal observationer gånger <span class="math inline">\(\widehat{a}\)</span>: <span class="math inline">\(\sum_{i}^{n}\widehat{a} = n\widehat{a}\)</span>. Vi kan nu skriva:</p>
+<p><span class="math inline">\(0 = ( - 2)\sum_{i = 1}^{n}{Y_{i}\ - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}}\)</span> (8)<span class="math inline">\( \)</span><span class="math display">\<span class="math display">\[{0 = \\sum\_{i = 1}\^{n}Y\_{i} - \\sum\_{i = 1}\^{n}\\widehat{a}\\sum\_{i = 1}\^{n}{\\widehat{b}X\_{i}} }{0 = \\sum\_{i = 1}\^{n}Y\_{i} - n\\widehat{a} - \\sum\_{i = 1}\^{n}{\\widehat{b}X\_{i}} }{n\\widehat{a} = \\sum\_{i = 1}\^{n}Y\_{i} - \\sum\_{i = 1}\^{n}{\\widehat{b}X\_{i}}\\ }\\\]</span></span></p>
+<p>Vi dividerar med <span class="math inline">\(n\)</span> så att termen längst till höger blir <span class="math inline">\(\frac{1}{n}\sum_{}^{}{\widehat{b}X_{i}}\)</span>. Medelvärdet för <span class="math inline">\(X\)</span> kan skrivas <span class="math inline">\(\overline{X} = \frac{1}{n}\sum_{i}^{n}X_{i}\)</span> vilket ger:</p>
+<p><span class="math inline">\(\widehat{a} = \frac{1}{n}\sum_{i = 1}^{n}Y_{i} - \frac{1}{n}\sum_{i = 1}^{n}{\widehat{b}X}\)</span> (9)</p>
+<p><span class="math inline">\(\widehat{a} = \overline{Y} - \widehat{b}\overline{X}\)</span></p>
+<p>Nu har vi ett uttryck för <span class="math inline">\(\widehat{a}\)</span>. För att härleda <span class="math inline">\(\widehat{b}\)</span> börjar vi med det andra förstagradsvillkoret i ekvation 7:</p>
+<p><span class="math inline">\(0 = \sum_{i = 1}^{n}{- 2x_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)}\)</span> (10)</p>
+<p><span class="math inline">\(= \sum_{i = 1}^{n}X_{i}Y_{i} - \sum_{i = 1}^{n}X_{i}\widehat{a} - \sum_{i = 1}^{n}X_{i}\widehat{b}X_{i}\)</span></p>
+<p>Eftersom konstanterna inte summeras flyttar vi dessa till vänster om summatecknen. I termen längst till höger har vi <span class="math inline">\(x_{i}*x_{i} = x_{i}^{2}\)</span>. Vi byter ut <span class="math inline">\(\widehat{a}\)</span> mot definitionen från ekvation 9:</p>
+<p><span class="math inline">\(0 = \sum_{i = 1}^{n}X_{i}Y_{i} - \widehat{a}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}X_{i}\)</span> (11)</p>
+<p><span class="math display">\<span class="math display">\[= \\sum\_{i = 1}\^{n}X\_{i}Y\_{i} - \\widehat{a}\\sum\_{i = 1}\^{n}X\_{i} - \\widehat{b}\\sum\_{i = 1}\^{n}X\_{i}\^{2}\\\]</span></span></p>
+<p><span class="math display">\<span class="math display">\[= \\sum\_{i = 1}\^{n}X\_{i}Y\_{i} - \\left( \\overline{Y} - \\widehat{b}\\overline{X} \\right)\\sum\_{i = 1}\^{n}X\_{i} - \\widehat{b}\\sum\_{i = 1}\^{n}X\_{i}\^{2}\\\]</span></span></p>
+<p><span class="math display">\<span class="math display">\[= \\sum\_{i = 1}\^{n}X\_{i}Y\_{i} - \\overline{Y}\\sum\_{i = 1}\^{n}X\_{i} + \\widehat{b}\\overline{X}\\sum\_{i = 1}\^{n}X\_{i} - \\widehat{b}\\sum\_{}\^{}X\_{i}\^{2}\\\]</span></span></p>
+<p><span class="math display">\<span class="math display">\[= \\sum\_{i = 1}\^{n}X\_{i}Y\_{i} - \\overline{Y}\\sum\_{i = 1}\^{n}X\_{i} - \\widehat{b}\\left( \\sum\_{i = 1}\^{n}X\_{i}\^{2} - \\overline{X}\\sum\_{i = 1}\^{n}X\_{i} \\right)\\\]</span></span></p>
+<p>Vi flyttar över <span class="math inline">\(\widehat{b}\)</span> till vänstersidan av likhetstecknet:</p>
+<p><span class="math inline">\(\widehat{b}\left( \sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} \right) = \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i}\)</span> (12)</p>
+<p><span class="math display">\<span class="math display">\[\\widehat{b} = \\frac{\\sum\_{i = 1}\^{n}X\_{i}Y\_{i} - \\overline{Y}\\sum\_{i = 1}\^{n}X\_{i}}{\\sum\_{i = 1}\^{n}X\_{i}\^{2} - \\overline{X}\\sum\_{i = 1}\^{n}X\_{i}}\\\]</span></span></p>
+<p>Nu har vi ett uttryck för <span class="math inline">\(\widehat{b}\)</span>. För att visa att detta är samma som uttrycket i ekvation 1 och <a href="https://www.dropbox.com/scl/fi/fdixvbrl3fwqwuaknz604/2-5-Felterm-residual-och-ett-r-kneexempel.docx?rlkey=qerqdzrn6e5hejx1it85qrtun&amp;st=33su91fr&amp;dl=0">avsnitt 2.5</a> kan vi skriva om täljaren och nämnaren. Detta ger:</p>
+<p><span class="math inline">\(\widehat{b} = \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}Y_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i}}\)</span> (13)</p>
+<p><span class="math display">\<span class="math display">\[= \\frac{\\sum\_{i = 1}\^{n}X\_{i}Y\_{i} - \\overline{Y}\\sum\_{i}\^{}X\_{i} - \\overline{X}\\sum\_{i = 1}\^{n}Y\_{i} + \\overline{X}\\sum\_{i = 1}\^{n}Y\_{i}}{\\sum\_{i = 1}\^{n}X\_{i}\^{2} - \\overline{X}\\sum\_{i = 1}\^{n}X\_{i} - n\\overline{X\^{2}} + n\\overline{X\^{2}}}\\\]</span></span></p>
+<p><span class="math display">\<span class="math display">\[\\frac{\\sum\_{i = 1}\^{n}{\\left( X\_{i} - \\overline{X} \\right)\\left( Y\_{i} - \\overline{Y} \\right)}}{\\sum\_{I = 1}\^{n}\\left( X\_{i} - \\overline{X} \\right)\^{2}}\\\]</span></span></p>
+<p>Nu har vi samma sak som ekvation 1.</p>
+</div>
+</div>
+<div id="video-32" class="section level3" number="7.4.5">
+<h3>
+<span class="header-section-number">7.4.5</span> Video<a class="anchor" aria-label="anchor" href="#video-32"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="uppgifter-33" class="section level3" number="7.4.6">
+<h3>
+<span class="header-section-number">7.4.6</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-33"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-3-4"]=[  {    "id": "k2-3-4-001",    "name": "Uppgift 1",    "exercise": "Minstakvadratmetoden härleder estimatorerna \\(\\widehat{a}\\) och \\(\\widehat{b}\\) genom att minimera ett uttryck. Vilket uttryck minimeras?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(\\sum_{i=1}^{n}(Y_i - \\widehat{Y}_i)\\) — summan av residualerna",          "\\(\\sum_{i=1}^{n}(Y_i - \\widehat{Y}_i)^2\\) — summan av de kvadrerade residualerna",          "\\(\\sum_{i=1}^{n}|Y_i - \\widehat{Y}_i|\\) — summan av absolutbeloppen av residualerna",          "\\(\\sum_{i=1}^{n}(Y_i - \\overline{Y})^2\\) — totalsumman av kvadrater"        ],        "correct": "\\(\\sum_{i=1}^{n}(Y_i - \\widehat{Y}_i)^2\\) — summan av de kvadrerade residualerna"      }    },    "error": { "message": "Metoden heter <em>minsta kvadrat</em>metoden. Tänk på vad som kvadreras och vad som summeras." },    "correct": { "message": "Rätt! Minstakvadratmetoden minimerar summan av de kvadrerade residualerna: \\(\\sum_{i=1}^{n}\\hat{V}_i^2 = \\sum_{i=1}^{n}(Y_i - \\hat{Y}_i)^2\\). Det är detta minimeringsproblem som löses för att hitta estimatorerna \\(\\widehat{a}\\) och \\(\\widehat{b}\\)." }  },  {    "id": "k2-3-4-002",    "name": "Uppgift 2",    "exercise": "Förstagradsvillkoret med avseende på \\(\\widehat{a}\\) för minstakvadratproblemet ger: \\[-2\\sum_{i=1}^{n}(Y_i - \\widehat{a} - \\widehat{b}X_i) = 0\\] Vilket av följande påståenden följer direkt av detta villkor?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(\\sum_{i}^{}\\widehat{V}_i = 0\\) — summan av residualerna är noll",          "\\(\\sum_{i}^{}\\widehat{V}_i^2 = 0\\) — summan av kvadrerade residualerna är noll",          "\\(\\widehat{a} = 0\\) — konstanttermen är alltid noll",          "\\(\\sum_{i}^{}X_i\\widehat{V}_i = 0\\) — detta är det andra förstagradsvillkoret"        ],        "correct": "\\(\\sum_{i}^{}\\widehat{V}_i = 0\\) — summan av residualerna är noll"      }    },    "error": { "message": "Uttrycket \\(Y_i - \\widehat{a} - \\widehat{b}X_i\\) är samma sak som \\(Y_i - \\widehat{Y}_i\\), det vill säga residualen \\(\\widehat{V}_i\\). Vad innebär det att summan av dessa är noll?" },    "correct": { "message": "Rätt! Förstagradsvillkoret \\(-2\\sum(Y_i - \\widehat{a} - \\widehat{b}X_i) = 0\\) innebär att \\(\\sum\\hat{V}_i = 0\\) — summan av residualerna är alltid noll när vi estimerar med minstakvadratmetoden. Detta är en viktig egenskap hos OLS-estimatorn." }  },  {    "id": "k2-3-4-003",    "name": "Uppgift 3",    "exercise": "Från förstagradsvillkoret med avseende på \\(\\widehat{a}\\) härleds estimatorn: \\[\\widehat{a} = \\overline{Y} - \\widehat{b}\\,\\overline{X}\\] Vad innebär denna formel geometriskt?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Regressionslinjen passerar alltid genom origo \\((0, 0)\\)",          "Regressionslinjen passerar alltid genom punkten \\((\\overline{X}, \\overline{Y})\\) — medelvärdespunkten",          "Regressionslinjen har alltid positiv lutning",          "Regressionslinjen minimerar medelvärdet av \\(Y\\)"        ],        "correct": "Regressionslinjen passerar alltid genom punkten \\((\\overline{X}, \\overline{Y})\\) — medelvärdespunkten"      }    },    "error": { "message": "Sätt in \\(X = \\overline{X}\\) i regressionslinjens ekvation \\(\\widehat{Y} = \\widehat{a} + \\widehat{b}X\\) och använd att \\(\\widehat{a} = \\overline{Y} - \\widehat{b}\\overline{X}\\). Vad får du för \\(\\widehat{Y}\\)?" },    "correct": { "message": "Rätt! Om vi sätter \\(X = \\overline{X}\\) i regressionsekvationen: \\(\\widehat{Y} = (\\overline{Y} - \\widehat{b}\\overline{X}) + \\widehat{b}\\overline{X} = \\overline{Y}\\). Regressionslinjen passerar alltså alltid genom medelvärdespunkten \\((\\overline{X}, \\overline{Y})\\)." }  },  {    "id": "k2-3-4-004",    "name": "Uppgift 4",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) ges estimatorn för lutningskoefficienten \\(\\widehat{b}\\) av: \\[\\widehat{b} = \\frac{\\sum_{i=1}^{n}(X_i - \\overline{X})(Y_i - \\overline{Y})}{\\sum_{i=1}^{n}(X_i - \\overline{X})^2}\\] Vad mäter täljaren i detta uttryck?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Variansen för \\(X\\)",          "Kovariansen (samvariationen) mellan \\(X\\) och \\(Y\\) — summan av produkterna av avvikelserna från respektive medelvärde",          "Variansen för \\(Y\\)",          "Summan av de kvadrerade residualerna"        ],        "correct": "Kovariansen (samvariationen) mellan \\(X\\) och \\(Y\\) — summan av produkterna av avvikelserna från respektive medelvärde"      }    },    "error": { "message": "Täljaren innehåller produkten \\((X_i - \\overline{X})(Y_i - \\overline{Y})\\). Nämnaren innehåller \\((X_i - \\overline{X})^2\\) — det är variansen för \\(X\\). Vad mäter täljaren då?" },    "correct": { "message": "Rätt! Täljaren \\(\\sum(X_i - \\overline{X})(Y_i - \\overline{Y})\\) mäter samvariationen (kovariansen, oskalad) mellan \\(X\\) och \\(Y\\). Nämnaren \\(\\sum(X_i - \\overline{X})^2\\) är variansen (oskalad) för \\(X\\). Lutningskoefficienten är alltså kovariansen dividerat med variansen för \\(X\\)." }  },  {    "id": "k2-3-4-005",    "name": "Uppgift 5",    "exercise": "Varför används derivering för att hitta estimatorerna \\(\\widehat{a}\\) och \\(\\widehat{b}\\) i minstakvadratmetoden?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Derivering används för att beräkna medelvärdet av residualerna",          "Vid en minimum- eller maximumpunkt är derivatan noll — vi deriverar SSR och sätter lika med noll för att hitta de värden på \\(\\widehat{a}\\) och \\(\\widehat{b}\\) som minimerar SSR",          "Derivering används för att beräkna \\(R^2\\)",          "Derivering behövs bara om man har fler än 10 observationer"        ],        "correct": "Vid en minimum- eller maximumpunkt är derivatan noll — vi deriverar SSR och sätter lika med noll för att hitta de värden på \\(\\widehat{a}\\) och \\(\\widehat{b}\\) som minimerar SSR"      }    },    "error": { "message": "Tänk på vad ett minimeringsproblem innebär matematiskt. Vid ett minimum är vad noll?" },    "correct": { "message": "Rätt! Vi vill minimera summan av kvadrerade residualerna \\(\\sum\\hat{V}_i^2\\) med avseende på \\(\\widehat{a}\\) och \\(\\widehat{b}\\). Vid en minimumpunkt är derivatan noll. Vi deriverar därför SSR med avseende på \\(\\widehat{a}\\) och \\(\\widehat{b}\\) och sätter derivatorna lika med noll — detta kallas förstagradsvillkor och ger oss ekvationssystem som löses ut till formler för estimatorerna." }  }];</script><div class="exercise-section" data-section-id="k2-3-4">
+
+</div>
+
+</div>
+</div>
+</div>
+<script src="js/exercises.js"></script><div class="chapter-nav">
+<div class="prev"><a href="variation-och-samvariation.html"><span class="header-section-number">6</span> Variation och samvariation</a></div>
+<div class="next"><a href="minstakvadratmetoden-f%C3%B6rdjupning-2.html"><span class="header-section-number">8</span> Minstakvadratmetoden — fördjupning 2</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#minstakvadratmetoden-f%C3%B6rdjupning-1"><span class="header-section-number">7</span> Minstakvadratmetoden — fördjupning 1</a></li>
+<li>
+<a class="nav-link" href="#k2-3-1"><span class="header-section-number">7.1</span> Andra linjer</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#avsnitt-3.1-varf%C3%B6r-just-denna-linje"><span class="header-section-number">7.1.1</span> Avsnitt 3.1: Varför just denna linje?</a></li>
+<li><a class="nav-link" href="#pushtext-28"><span class="header-section-number">7.1.2</span> Pushtext</a></li>
+<li><a class="nav-link" href="#begrepp-30"><span class="header-section-number">7.1.3</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-30"><span class="header-section-number">7.1.4</span> Teori</a></li>
+<li><a class="nav-link" href="#video-29"><span class="header-section-number">7.1.5</span> Video</a></li>
+<li><a class="nav-link" href="#uppgifter-30"><span class="header-section-number">7.1.6</span> Uppgifter</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#k2-3-2"><span class="header-section-number">7.2</span> En modell till</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#avsnitt-3.2-en-modell-till"><span class="header-section-number">7.2.1</span> Avsnitt 3.2: En modell till</a></li>
+<li><a class="nav-link" href="#pushtext-29"><span class="header-section-number">7.2.2</span> Pushtext</a></li>
+<li><a class="nav-link" href="#begrepp-31"><span class="header-section-number">7.2.3</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-31"><span class="header-section-number">7.2.4</span> Teori</a></li>
+<li><a class="nav-link" href="#observera-att-f%C3%B6rkortningar-varierar-ibland.-vi-anv%C3%A4nder-h%C3%A4r-ssr-sum-of-squared-residuals.-andra-anv%C3%A4nder-till-exempel-rss-residual-sum-of-squares.-b%C3%A5da-betyder-samma-sak.-n%C3%A4r-du-l%C3%A4ser-andra-texter-kontrollera-alltid-vad-en-f%C3%B6rkortning-syftar-p%C3%A5-matematiskt."><span class="header-section-number">7.2.5</span> Observera att förkortningar varierar ibland. Vi använder här SSR = Sum of Squared Residuals. Andra använder till exempel RSS = Residual Sum of Squares. Båda betyder samma sak. När du läser andra texter, kontrollera alltid vad en förkortning syftar på matematiskt.</a></li>
+<li><a class="nav-link" href="#video-30"><span class="header-section-number">7.2.6</span> Video</a></li>
+<li><a class="nav-link" href="#uppgifter-31"><span class="header-section-number">7.2.7</span> Uppgifter</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#k2-3-3"><span class="header-section-number">7.3</span> Hur väl passar modellerna mot data?</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#avsnitt-3.3-j%C3%A4mf%C3%B6ra-tv%C3%A5-olika-regressionsmodeller"><span class="header-section-number">7.3.1</span> Avsnitt 3.3: Jämföra två olika regressionsmodeller</a></li>
+<li><a class="nav-link" href="#pushtext-30"><span class="header-section-number">7.3.2</span> Pushtext</a></li>
+<li><a class="nav-link" href="#begrepp-32"><span class="header-section-number">7.3.3</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-32"><span class="header-section-number">7.3.4</span> Teori</a></li>
+<li><a class="nav-link" href="#vi-ber%C3%A4knar-r2-f%C3%B6r-b%C3%A5da-modellerna"><span class="header-section-number">7.3.5</span> Vi beräknar \(R^{2}\) för båda modellerna</a></li>
+<li><a class="nav-link" href="#video-31"><span class="header-section-number">7.3.6</span> Video</a></li>
+<li><a class="nav-link" href="#uppgifter-32"><span class="header-section-number">7.3.7</span> Uppgifter</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#k2-3-4"><span class="header-section-number">7.4</span> Härled estimatorerna</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#avsnitt-3.4-h%C3%A4rledning-av-koefficienternas-estimatorer"><span class="header-section-number">7.4.1</span> Avsnitt 3.4: Härledning av koefficienternas estimatorer</a></li>
+<li><a class="nav-link" href="#pushtext-31"><span class="header-section-number">7.4.2</span> Pushtext</a></li>
+<li><a class="nav-link" href="#begrepp-33"><span class="header-section-number">7.4.3</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-33"><span class="header-section-number">7.4.4</span> Teori</a></li>
+<li><a class="nav-link" href="#video-32"><span class="header-section-number">7.4.5</span> Video</a></li>
+<li><a class="nav-link" href="#uppgifter-33"><span class="header-section-number">7.4.6</span> Uppgifter</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/07-kurs2-kap3.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/07-kurs2-kap3.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matteboken</strong>: Matematik och statistik för samhällsvetare" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

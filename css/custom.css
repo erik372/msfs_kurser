@@ -1,0 +1,157 @@
+/* ── Exercise widget ────────────────────────────────────────────────────── */
+
+.ex-section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a3a6b;
+  margin: 2.5rem 0 0.8rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid #1d87e4;
+}
+
+.ex-container { margin: 0.5rem 0 2rem; }
+
+.ex-card {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.4rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+.ex-header { margin-bottom: 0.75rem; }
+
+.ex-num {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a3a6b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ex-question {
+  font-size: 1rem;
+  line-height: 1.65;
+  padding: 0.75rem 1rem;
+  background: #f4f7fb;
+  border-left: 4px solid #1d87e4;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 1rem;
+}
+
+.ex-img {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  margin: 0 0 1rem;
+  display: block;
+}
+
+/* Multiple choice */
+.ex-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 0.3rem;
+}
+
+.ex-choice {
+  text-align: left;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background: #fafafa;
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  transition: background 0.12s, border-color 0.12s;
+}
+.ex-choice:hover:not(:disabled) {
+  background: #e8f0fe;
+  border-color: #1d87e4;
+}
+.ex-choice.ex-correct {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+  font-weight: 600;
+}
+.ex-choice.ex-incorrect {
+  background: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+.ex-choice:disabled { cursor: default; }
+
+/* Field input */
+.ex-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+.ex-field-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.ex-field-label {
+  font-size: 0.9rem;
+  color: #555;
+  min-width: 100px;
+}
+.ex-field-input {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 0.38rem 0.7rem;
+  font-size: 0.95rem;
+  width: 130px;
+  transition: border-color 0.12s;
+}
+.ex-field-input:focus { outline: none; border-color: #1d87e4; }
+.ex-field-input.ex-field-ok  { border-color: #28a745; background: #d4edda; }
+.ex-field-input.ex-field-wrong { border-color: #dc3545; background: #f8d7da; }
+.ex-fmt { font-style: italic; color: #888; font-size: 0.85rem; }
+
+/* Buttons */
+.ex-submit,
+.ex-retry-btn {
+  display: inline-block;
+  padding: 0.45rem 1.15rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.12s;
+}
+.ex-submit { background: #1d87e4; color: #fff; margin-top: 0.3rem; }
+.ex-submit:hover:not(:disabled) { background: #1565c0; }
+.ex-submit:disabled { background: #adb5bd; cursor: default; }
+.ex-retry-btn { background: #6c757d; color: #fff; margin-top: 0.3rem; }
+.ex-retry-btn:hover { background: #495057; }
+
+/* Feedback */
+.ex-feedback { margin-top: 0.9rem; }
+.ex-fb-box {
+  padding: 0.8rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.ex-fb-ok  { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+.ex-fb-err { background: #fff3cd; border: 1px solid #ffc107; color: #664d03; }
+
+.ex-retry { margin-top: 0.4rem; }
+
+/* ── Bookdown theme tweaks ──────────────────────────────────────────────── */
+
+/* Slightly wider content on large screens */
+@media (min-width: 1200px) {
+  .page-inner { max-width: 860px; }
+}
+
+/* Better chapter separator */
+.chapter + .chapter { border-top: 1px solid #e9ecef; padding-top: 1rem; }
