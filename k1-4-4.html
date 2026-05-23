@@ -196,12 +196,6 @@
 <script src="js/exercises.js"></script><script>
 (function () {
   function translateUI() {
-    // Höger TOC-rubrik
-    var toc = document.querySelector('#toc h2');
-    if (toc && toc.textContent.trim() === 'On this page') {
-      toc.textContent = 'På denna sida';
-    }
-
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
     if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
@@ -221,36 +215,27 @@
     var next = document.querySelector('.chapter-nav .next');
     if (next) next.setAttribute('aria-label', 'Nästa');
 
-    // Ta bort source/edit-länkarna och deras behållare
+    // Ta bort source/edit-länkarna
     ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
       var el = document.getElementById(id);
       if (!el) return;
       var container = el.closest('li') || el.closest('p') || el.parentElement;
-      if (container && container !== document.body) {
-        container.remove();
-      } else {
-        el.remove();
-      }
+      if (container && container !== document.body) container.remove();
+      else el.remove();
     });
   }
 
   function colorNavSections() {
-    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
     var navList = document.querySelector('ul.book-toc');
     if (!navList) return;
     var items = navList.querySelectorAll('li');
-
     var currentClass = '';
     items.forEach(function (li) {
       if (li.classList.contains('book-part')) {
         var text = li.textContent || '';
-        if (text.indexOf('Kurs 1') !== -1) {
-          currentClass = 'nav-kurs1';
-        } else if (text.indexOf('Kurs 2') !== -1) {
-          currentClass = 'nav-kurs2';
-        } else {
-          currentClass = '';
-        }
+        if (text.indexOf('Kurs 1') !== -1) currentClass = 'nav-kurs1';
+        else if (text.indexOf('Kurs 2') !== -1) currentClass = 'nav-kurs2';
+        else currentClass = '';
         li.classList.add(currentClass);
       } else if (currentClass) {
         li.classList.add(currentClass);
@@ -258,9 +243,73 @@
     });
   }
 
+  // Gör kapitellistan kollapsbar: avsnitt döljs under sin kapitelrubrik.
+  // Avsnittssidor har href-mönstret k1-1-1.html / k2-3-4.html.
+  function buildCollapsibleTOC() {
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+
+    var sectionRe = /^k[12]-\d+-\d+\.html/;
+    var items = Array.from(navList.children);
+
+    var chapterLi = null;
+    var pending = [];
+
+    function flush() {
+      if (!chapterLi || pending.length === 0) { pending = []; return; }
+
+      // Expandera om ett avsnitt i kapitlet är aktivt, eller om kapitelövervyn är aktiv
+      var hasActive = chapterLi.querySelector('a.active') !== null ||
+        pending.some(function (li) { return li.querySelector('a.active') !== null; });
+
+      var sub = document.createElement('ul');
+      sub.className = 'toc-sections';
+      sub.style.display = hasActive ? '' : 'none';
+
+      pending.forEach(function (li) {
+        navList.removeChild(li);
+        sub.appendChild(li);
+      });
+      chapterLi.appendChild(sub);
+
+      if (hasActive) chapterLi.classList.add('toc-chapter-open');
+
+      var a = chapterLi.querySelector('a');
+      if (a) {
+        a.classList.add('toc-chapter-toggle');
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          var isOpen = sub.style.display !== 'none';
+          sub.style.display = isOpen ? 'none' : '';
+          chapterLi.classList.toggle('toc-chapter-open', !isOpen);
+        });
+      }
+      pending = [];
+    }
+
+    items.forEach(function (li) {
+      var a = li.querySelector('a');
+      if (!a) {
+        // book-part-delare: avsluta föregående kapitel
+        flush();
+        chapterLi = null;
+        return;
+      }
+      var href = decodeURIComponent(a.getAttribute('href') || '');
+      if (sectionRe.test(href)) {
+        if (chapterLi) pending.push(li);
+      } else {
+        flush();
+        chapterLi = li;
+      }
+    });
+    flush();
+  }
+
   function init() {
     translateUI();
-    colorNavSections();
+    colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
+    buildCollapsibleTOC();
   }
 
   if (document.readyState === 'loading') {

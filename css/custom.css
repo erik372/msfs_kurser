@@ -148,26 +148,33 @@
 
 /* ── Bookdown theme tweaks ──────────────────────────────────────────────── */
 
-/* Slightly wider content on large screens */
-@media (min-width: 1200px) {
-  .page-inner { max-width: 860px; }
-}
-
 /* Better chapter separator */
 .chapter + .chapter { border-top: 1px solid #e9ecef; padding-top: 1rem; }
+
+/* ── Dölj höger sidopanel ───────────────────────────────────────────────── */
+.sidebar-chapter {
+  display: none !important;
+}
+
+/* Expandera innehållskolumnen till resten av bredden */
+@media (min-width: 992px) {
+  main#content {
+    flex: 0 0 75% !important;
+    max-width: 75% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  main#content {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
 
 /* ── Navigeringsmenyer: ljus bakgrundsfärg ──────────────────────────────── */
 
 /* Vänster sidopanel (blå bas) */
 .sidebar {
   background-color: #f0f4fa !important;
-}
-
-/* Höger TOC-panel */
-#toc {
-  background-color: #f0f4fa;
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
 }
 
 /* Kurs 1 — ljusgrön */
@@ -184,7 +191,42 @@
   background-color: #fff8e1 !important;
 }
 
-/* Nästa avsnitt-länk längst ner på varje avsnittssida */
+/* ── Kollapsbar kapitel-TOC ─────────────────────────────────────────────── */
+
+/* Avsnitts-underlista (dold som standard, JS visar/döljer) */
+.toc-sections {
+  list-style: none;
+  padding: 0 0 0.25rem 0.9rem;
+  margin: 0;
+  border-left: 2px solid #c5d5e8;
+}
+.toc-sections li a {
+  font-size: 0.875rem !important;
+  padding-top: 0.18rem !important;
+  padding-bottom: 0.18rem !important;
+  opacity: 0.9;
+}
+
+/* Pil-indikator på kapitelrubrik med underpunkter */
+.toc-chapter-toggle {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.toc-chapter-toggle::after {
+  content: '▸';
+  font-size: 0.7em;
+  opacity: 0.55;
+  margin-left: 0.4rem;
+  flex-shrink: 0;
+  transition: transform 0.15s;
+}
+.toc-chapter-open > a.toc-chapter-toggle::after {
+  content: '▾';
+}
+
+/* ── Nästa avsnitt-länk längst ner på varje avsnittssida ───────────────── */
 .next-section-link {
   margin-top: 2rem;
   padding: 0.8rem 1.2rem;
