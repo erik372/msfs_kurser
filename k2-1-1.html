@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Orsak och effekt | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.0.84 Begrepp Kontrafaktiskt utfall: Kallas även potentiellt utfall. Kontrafaktiskt utfall syftar på det som kunde ha hänt men inte hände. När vi studerar människor och mänskliga fenomen kan det...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Orsak och effekt | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.0.84 Begrepp Kontrafaktiskt utfall: Kallas även potentiellt utfall. Kontrafaktiskt utfall syftar på det som kunde ha hänt men inte hände. När vi studerar människor och mänskliga fenomen kan det...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Orsak och effekt | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.0.84 Begrepp Kontrafaktiskt utfall: Kallas även potentiellt utfall. Kontrafaktiskt utfall syftar på det som kunde ha hänt men inte hände. När vi studerar människor och mänskliga fenomen kan det...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="active" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-1-1" class="section level1 unnumbered">
+<h1>Orsak och effekt<a class="anchor" aria-label="anchor" href="#k2-1-1"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-20" class="section level3" number="0.0.84">
+<h3>
+<span class="header-section-number">0.0.84</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-20"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>Kontrafaktiskt utfall:</strong> Kallas även potentiellt utfall. Kontrafaktiskt utfall syftar på det som kunde ha hänt men inte hände. När vi studerar människor och mänskliga fenomen kan det kontrafaktiska utfallet aldrig observeras i strikt mening.</p></li>
+<li><p><strong>Behandling:</strong> Det fenomen (orsaken) vi vill studera effekten av. Till exempel en medicin, en politisk åtgärd som en kommun genomför, en förändring av skatterna.</p></li>
+<li><p><strong>Behandlingsgrupp:</strong> Den grupp som utsätts för orsaken/behandlingen. Behandlingsgruppen kan bestå av människor, djur eller saker.</p></li>
+<li><p><strong>Kontroll och kontrollgrupp:</strong> Kontrollgruppen utsätts inte för någon behandling. I en analys med en behandlings- och en kontrollgrupp ska kontrollgruppen visa vad som hade hänt om orsaken aldrig hade hänt (det kontrafaktiska utfallet).</p></li>
+<li><p><strong>Analysenhet:</strong> Det vi studerar, till exempel individer eller kommuner.</p></li>
+</ul>
+</div>
+<div id="teori-20" class="section level3" number="0.0.85">
+<h3>
+<span class="header-section-number">0.0.85</span> Teori<a class="anchor" aria-label="anchor" href="#teori-20"><i class="fas fa-link"></i></a>
+</h3>
+<p>Forskning och analys är fina ord för att studera saker noggrant. I denna kurs ska vi gå igenom hur vi kan analysera orsakssamband. Orsakssamband syftar på när någonting inträffar som en följd av något annat. Ofta inträffar något på grund av flera orsaker, men när vi analyserar orsakssamband vill vi ofta studera en orsak i taget. Att studera orsakssamband är en central del av forskning.</p>
+<p>Inom samhällsvetenskap studerar vi människor och mänskliga sammanhang. Ofta är vi därför intresserade av fenomen som påverkar eller påverkas av människor, hur vi beter oss, känner eller tänker.</p>
+<p>Rent generellt kan en orsak kan vara vad som helst som kan tänkas påverka någonting annat, till exempel mänskligt beteende eller en förändring i naturen, en händelse, ett tillstånd eller en process.</p>
+<p>I vårt vardagliga liv utgår vi hela tiden från olika typer av orsakssamband. Vi dricker vatten för att bli mindre törstiga. Vi utbildar oss för att lära oss saker, för att kunna söka nya jobb eller få högre lön. Vi äter medicin för att lindra sjukdom.</p>
+<p>Vissa orsakssamband i vår vardag är inbillade och bygger på felaktiga uppfattningar. Men vi tror ändå på dom och handlar därefter.</p>
+<p>Ett annat ord för orsakssamband är <em>kausalt samband</em> eller <em>kausalitet</em>.</p>
+<div id="kontrafaktisk-analys-1" class="section level4" number="0.0.85.1">
+<h4>
+<span class="header-section-number">0.0.85.1</span> Kontrafaktisk analys<a class="anchor" aria-label="anchor" href="#kontrafaktisk-analys-1"><i class="fas fa-link"></i></a>
+</h4>
+<p>För att kunna studera orsakssamband behöver vi jämföra det som hände på grund av en <em>orsak</em> med det som skulle ha hänt om orsaken aldrig hade ägt rum. Det som inte hände, men kunde ha hänt, kallas för det <em>kontrafaktiska utfall</em>et. Ett annat uttryck för samma sak är <em>potentiellt utfall</em>.</p>
+<p>Orsakssamband medför en <em>effekt</em>: skillnaden mellan det som hände på grund av orsaken och vad som hade hänt om orsaken inte hade ägt rum (det kontrafaktiska utfallet).</p>
+<p>Figur 1 illustrerar den grundläggande tanken bakom kontrafaktisk analys. Orsak A inträffar vid en tidpunkt och påverkar ett fenomen B. Fenomen B följer utvecklingen längs den heldragna linjen snett upp till höger i diagrammet.</p>
+<p>Men om A aldrig hade inträffat hade B i stället följt den streckade svarta linjen. Denna streckade linje representerar det kontrafaktiska utfallet. Skillnaden i nivå mellan den streckade linjen och den svarta heldragna linjen är effekten av orsaken A.</p>
+<p>Ett vanligt missförstånd är att i stället jämföra denna förändring som vi kan observera i fenomen B över tid, vilket i figur 1 är skillnaden mellan den horisontella grå linjen och den heldragna svarta linjen.</p>
+<p><strong>Figur 1. Kontrafaktisk analys</strong><img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\1%20-%20Kontrafaktisk%20analys\1-1%20-%20Orsak%20och%20effekt/img/k2-1-1-image1.png" style="width:5in;height:3in"></p>
+</div>
+<div id="kontroll-och-behandling" class="section level4" number="0.0.85.2">
+<h4>
+<span class="header-section-number">0.0.85.2</span> Kontroll och behandling<a class="anchor" aria-label="anchor" href="#kontroll-och-behandling"><i class="fas fa-link"></i></a>
+</h4>
+<p>Problemet är att vi per definition inte kan observera det kontrafaktiska utfallet, eftersom det skulle kräva att vi har tillgång till ett parallellt universum där den enda skillnaden mot vårt universum är att orsaken aldrig hände. För varje observation kan vi endast studera ett resultat åt gången.</p>
+<p>För att studera orsakssamband använder forskningen därför i stället ofta <em>behandlingsgrupp</em> och <em>kontrollgrupp</em>. Ordet <em>behandling</em> syftar på orsaken som vi vill studera effekten av. Till exempel en medicin, en skattesänkning, en politisk åtgärd. Idealiskt sett ska den enda skillnaden mellan behandlings- och kontrollgrupperna vara just själva behandlingen. Alla andra skillnader ska vara slumpmässigt fördelade. I så fall kan den eventuella skillnaden mellan grupperna efter behandling tolkas som en effekt av behandlingen (orsaken).</p>
+<p>Om fenomen A orsakar fenomen B, kallar vi A för <em>aktiv behandling</em>. Det alternativa scenariot kallar vi för <em>kontrollbehandling</em>. Kontrollbehandlingen är i regel det passiva alternativet där vi inte genomför en handling, till exempel inte tar en medicin eller inte genomför en politisk åtgärd. Ofta framgår av sammanhanget vad som är orsak och verkan, varför man ofta bara säger <em>behandling</em> och <em>kontroll</em>.</p>
+<p>Observera att orden behandlings- och kontrollgrupp används även om vi inte studerar människor. Vår <em>analysenhet</em> kan i praktiken vara vad som helst. Om vi undersöker medicinska effekter på patienter så är vår analysenhet patienter. Om vi studerar effekterna av en skattesänkning på företag, så är vår analysenhet företag. Om vi studerar hur olika bevattningstekniker påverkar skörden på olika åkrar så är vår analysenhet åkrar.</p>
+</div>
+<div id="ett-exempel" class="section level4" number="0.0.85.3">
+<h4>
+<span class="header-section-number">0.0.85.3</span> Ett exempel<a class="anchor" aria-label="anchor" href="#ett-exempel"><i class="fas fa-link"></i></a>
+</h4>
+<p>Säg som exempel att vi ska studera effekten av hur en ny medicin påverkar sjukdomssymptom hos patienter. Vi har en grupp patienter som får medicin (behandlingsgruppen) och en annan grupp som inte får medicin (kontrollgruppen). Vi jämför hur deras sjukdomssymptom utvecklas och tolkar skillnaden mellan grupperna som en effekt av medicinen.</p>
+<p>Genom att studera kontrollgruppen hoppas vi, idealiskt sett, kunna observera ett resultat som beskriver det kontrafaktiska utfallet, hur symptomen hade utvecklats för patienterna som fick medicin om de aldrig hade fått det.</p>
+<p>Det är viktigt att det är just grupper med flera observationer. Genom att jämföra flera observationer minskar risken för att de mönster vi kan observera är ett resultat av slump. Vi återkommer till frågor om sannolikhet och slump längre fram i denna kurs.</p>
+</div>
+<div id="det-är-inte-idealiskt-att-jämföra-en-och-samma-person" class="section level4" number="0.0.85.4">
+<h4>
+<span class="header-section-number">0.0.85.4</span> Det är inte idealiskt att jämföra en och samma person<a class="anchor" aria-label="anchor" href="#det-%C3%A4r-inte-idealiskt-att-j%C3%A4mf%C3%B6ra-en-och-samma-person"><i class="fas fa-link"></i></a>
+</h4>
+<p>Idealiskt sett vill vi studera hur en patient mår efter att ha tagit medicinen, jämfört med hur samma patient hade mått om denna aldrig hade tagit medicinen. Om det är en medicin som ska behandla ett återkommande tillstånd, till exempel huvudvärk, är det frestande att pröva detta genom att be samma patient att ta medicinen ena dagen och låta bli att ta medicinen nästa gång, och jämföra skillnaden.</p>
+<p>Men detta är inte det kontrafaktiska utfallet. Effekten av medicinen kanske varierar för en och samma patient över tid. Patienten kanske är i bättre eller sämre form vid den ena tidpunkten, vilket både påverkar huvudvärken och vilken effekt medicinen har. Patienten kanske vänjer sig vid medicinen, vilket också påverkar både patientens upplevelse och den verkliga effekten.</p>
+</div>
+<div id="ett-exempel-med-ekonomisk-politik" class="section level4" number="0.0.85.5">
+<h4>
+<span class="header-section-number">0.0.85.5</span> Ett exempel med ekonomisk politik<a class="anchor" aria-label="anchor" href="#ett-exempel-med-ekonomisk-politik"><i class="fas fa-link"></i></a>
+</h4>
+<p>Samma utmaningar som medicinsk forskning brottas med har vi inom samhällsvetenskap. Säg att vi ska studera vilken effekt som regeringens nya politik (orsaken) har på mängden arbetstillfällen i Sverige (utfallet). För att analysera detta vill vi jämföra verkligheten med hur världen hade sett ut om politiken aldrig hade ägt rum (det kontrafaktiska utfallet). Detta är i strikt mening omöjligt.</p>
+<p>Vi kan observera hur världen såg ut före och efter regeringens politik, men detta är två separata observationer. Situationen före är inte det kontrafaktiska utfallet. Det händer saker under tidsperioden som kan påverka hur världen ser ut och vi kan inte vara säkra på vad som orsakar de förändringar vi ser. Vi kan inte heller vara säkra på att den förändring vi kan uppmäta är ett bra mått på politikens effekt, vilket är vad vi vill mäta.</p>
+</div>
+<div id="det-är-ofta-svårt-att-definiera-det-kontrafaktiska-utfallet" class="section level4" number="0.0.85.6">
+<h4>
+<span class="header-section-number">0.0.85.6</span> Det är ofta svårt att definiera det kontrafaktiska utfallet<a class="anchor" aria-label="anchor" href="#det-%C3%A4r-ofta-sv%C3%A5rt-att-definiera-det-kontrafaktiska-utfallet"><i class="fas fa-link"></i></a>
+</h4>
+<p>Ofta finns det olika metoder vi kan använda för att ändå komma nära en kontrafaktisk analys. Men inte alltid. I praktiken är omöjligt att exakt avgöra vad som är det kontrafaktiska utfallet. I stället får vi från fall till fall resonera oss fram till tänkbara alternativ.</p>
+<p>Om vi är intresserade av effekten av att en patient tar en medicin jämfört med om en patient inte tar en medicin kan det låta självklart. Men ska patienten som inte tar medicinen ligga helt stilla under tiden eller gå en promenad? Ska båda patienterna ta en springtur eller dricka och äta något särskilt?</p>
+<p>Samma problem har vi om vi vill studera effekter av regeringens politik. Skulle regeringen, i det kontrafaktiska utfallet, ha genomfört någon annan politik eller skulle hela regeringen ha avgått?</p>
+<p>Om politiken endast berör en mindre del av samhället, till exempel endast företagen i en bransch, kan vi ibland behandla den berörda branschen som behandlingsgrupp och andra branscher som kontrollgrupp och jämföra deras utvecklingar.</p>
+<p>Denna typ av frågor innebär ofta knepiga utmaningar som saknar exakt facit. Under den här kursen ska vi gå igenom grunderna för hur vi kan hantera detta.</p>
+</div>
+</div>
+<div id="uppgifter-20" class="section level3" number="0.0.86">
+<h3>
+<span class="header-section-number">0.0.86</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-20"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-1-1"]=[  {    "id": "k2-1-1-001",    "name": "Uppgift 1",    "exercise": "Vad menas med ett <em>kontrafaktiskt utfall</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det utfall som faktiskt observerades efter en behandling",          "Det som kunde ha hänt men inte hände – det som inte kan observeras i strikt mening",          "Genomsnittet av alla möjliga utfall",          "Det sämsta tänkbara utfallet i ett experiment"        ],        "correct": "Det som kunde ha hänt men inte hände – det som inte kan observeras i strikt mening"      }    },    "error": { "message": "Tänk på vad 'kontrafaktisk' betyder: mot fakta, dvs. något som inte inträffade. Det kontrafaktiska utfallet är vad som hade hänt om orsaken aldrig ägt rum." },    "correct": { "message": "Rätt! Det kontrafaktiska utfallet (eller potentiella utfallet) syftar på vad som hade hänt om orsaken aldrig ägt rum. Eftersom det aldrig hände kan det per definition inte observeras direkt." }  },  {    "id": "k2-1-1-002",    "name": "Uppgift 2",    "exercise": "Varför är det inte idealiskt att studera en och samma patients reaktion på en medicin vid två olika tidpunkter för att mäta medicinens effekt?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det är etiskt problematiskt att ge samma patient medicin två gånger",          "Patientens tillstånd och medicinens effekt kan variera över tid, vilket försvårar en ren jämförelse",          "Det är för dyrt att genomföra sådana studier",          "Patienten kan inte minnas hur de mådde vid det första tillfället"        ],        "correct": "Patientens tillstånd och medicinens effekt kan variera över tid, vilket försvårar en ren jämförelse"      }    },    "error": { "message": "Tänk på att patienten kan vara i bättre eller sämre form vid olika tillfällen, och att kroppen kan vänja sig vid medicinen. Är situationen verkligen identisk vid de två tillfällena?" },    "correct": { "message": "Rätt! Patienten kan befinna sig i olika skick vid de två tillfällena, och kroppen kan dessutom vänja sig vid medicinen. Situationen är alltså inte den samma, vilket gör att det inte är ett korrekt kontrafaktiskt utfall." }  },  {    "id": "k2-1-1-003",    "name": "Uppgift 3",    "exercise": "I detta diagram visas det faktiska utfallet av en orsak som en heldragen linje, och det hypotetiska utfallet (vad som hade hänt utan orsaken) som en streckad linje. Vad representerar <em>skillnaden</em> i nivå mellan dessa linjer?",    "image": "img/k2-1-1-image1.png",    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den totala förändringen i fenomen B över hela tidsperioden",          "Effekten av orsaken A på fenomen B",          "Mätfelet i studien",          "Skillnaden i startläge mellan behandlings- och kontrollgrupp"        ],        "correct": "Effekten av orsaken A på fenomen B"      }    },    "error": { "message": "Tänk på vad de två linjerna representerar: en visar vad som faktiskt hände, den andra vad som hade hänt utan orsaken. Vad är skillnaden mellan dem?" },    "correct": { "message": "Rätt! Skillnaden i nivå mellan den heldragna linjen (faktiskt utfall) och den streckade linjen (kontrafaktiskt utfall) är just effekten av orsaken A på fenomen B." }  },  {    "id": "k2-1-1-004",    "name": "Uppgift 4",    "exercise": "Säg att vi studerar effekten av en ny skattepolitik på arbetslösheten i Sverige. Politiken genomfördes år 2020. Vi jämför arbetslösheten år 2019 med arbetslösheten år 2021 och tolkar skillnaden som politikens effekt. Vad är det centrala problemet med detta angreppssätt?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Vi behöver minst fem år av data för att kunna dra slutsatser",          "Situationen år 2019 är inte det kontrafaktiska utfallet – andra saker kan ha hänt under perioden som påverkar arbetslösheten",          "Det är omöjligt att mäta arbetslöshet på ett tillförlitligt sätt",          "Skatterna är en alltför liten faktor för att påverka arbetslösheten"        ],        "correct": "Situationen år 2019 är inte det kontrafaktiska utfallet – andra saker kan ha hänt under perioden som påverkar arbetslösheten"      }    },    "error": { "message": "Tänk på vad som krävs för ett kontrafaktiskt utfall. Det kontrafaktiska utfallet är hur världen hade sett ut om politiken aldrig genomförts – inte hur den såg ut ett år tidigare." },    "correct": { "message": "Rätt! Situationen år 2019 är inte det kontrafaktiska utfallet. Mycket kan ha hänt mellan 2019 och 2021 (t.ex. en pandemi, en konjunkturförändring) som påverkar arbetslösheten oberoende av politiken." }  },  {    "id": "k2-1-1-005",    "name": "Uppgift 5",    "exercise": "I en studie av en ny medicin har vi en behandlingsgrupp och en kontrollgrupp. För att kunna tolka skillnaden mellan grupperna som en effekt av medicinen – vad ska i idealfallet vara den <em>enda</em> skillnaden mellan grupperna?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Grupperna ska ha olika ålder och kön",          "Behandlingsgruppen ska vara friskare från start",          "Alla skillnader utom behandlingen (medicinen) ska vara slumpmässigt fördelade",          "Kontrollgruppen ska vara större än behandlingsgruppen"        ],        "correct": "Alla skillnader utom behandlingen (medicinen) ska vara slumpmässigt fördelade"      }    },    "error": { "message": "Om grupperna skiljer sig åt på andra sätt än bara behandlingen, hur kan vi då veta om det är medicinen eller de andra skillnaderna som orsakar det vi observerar?" },    "correct": { "message": "Rätt! Idealiskt sett ska den enda skillnaden vara själva behandlingen. Alla andra egenskaper ska vara slumpmässigt fördelade mellan grupperna, så att vi kan tolka eventuella skillnader i utfall som en effekt av medicinen." }  }];</script><div class="exercise-section" data-section-id="k2-1-1">
+
+</div>
+<hr>
+<div class="next-section-link">
+<p><a href="sec-k2-1-2.html">→ Nästa avsnitt: <strong>Experiment och observationsstudie</strong></a></p>
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></div>
+<div class="next"><a href="k2-1-2.html">Experiment och observationsstudie</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-1-1">Orsak och effekt</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-20"><span class="header-section-number">0.0.84</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-20"><span class="header-section-number">0.0.85</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-20"><span class="header-section-number">0.0.86</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-1-1.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-1-1.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Hur testa om en teori stämmer? | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.0.7 Begrepp Samvariation: Samvariation syftar på att 2 eller flera fenomen varierar i någon form av mönster eller med någon form av regelbundenhet. Positiv samvariation mellan 2 fenomen råder om...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Hur testa om en teori stämmer? | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.0.7 Begrepp Samvariation: Samvariation syftar på att 2 eller flera fenomen varierar i någon form av mönster eller med någon form av regelbundenhet. Positiv samvariation mellan 2 fenomen råder om...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hur testa om en teori stämmer? | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.0.7 Begrepp Samvariation: Samvariation syftar på att 2 eller flera fenomen varierar i någon form av mönster eller med någon form av regelbundenhet. Positiv samvariation mellan 2 fenomen råder om...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="active" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k1-1-3" class="section level1 unnumbered">
+<h1>Hur testa om en teori stämmer?<a class="anchor" aria-label="anchor" href="#k1-1-3"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-2" class="section level3" number="0.0.7">
+<h3>
+<span class="header-section-number">0.0.7</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-2"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>Samvariation:</strong> Samvariation syftar på att 2 eller flera fenomen varierar i någon form av mönster eller med någon form av regelbundenhet.</p></li>
+<li><p><strong>Positiv samvariation</strong> mellan 2 fenomen råder om båda fenomenen ökar samtidigt.</p></li>
+<li><p><strong>Negativ samvariation</strong> mellan 2 fenomen råder om det ena fenomenet ökar samtidigt som det andra minskar, och tvärtom.</p></li>
+<li><p><strong>Samband, orsakssamband eller kausalt samband:</strong> Orsakssamband syftar på att ett fenomen orsakar en förändring eller ett tillstånd i ett eller flera andra fenomen.</p></li>
+<li><p><strong>Experiment:</strong> undersökning av orsakssamband.</p></li>
+</ul>
+</div>
+<div id="teori-2" class="section level3" number="0.0.8">
+<h3>
+<span class="header-section-number">0.0.8</span> Teori<a class="anchor" aria-label="anchor" href="#teori-2"><i class="fas fa-link"></i></a>
+</h3>
+<p>Oavsett hur smart och genomtänkt en teori är, så är detta i sig inget bevis för hur världen fungerar. Och hur fiffigt vi än beskriver en teori med matematik, så är inte heller matematiken ett bevis för att världen fungerar på det sätt som teorin beskriver.</p>
+<p>All vetenskap måste använda någon form av information om verkligheten (data) för att kontrollera i vilken utsträckning teorin är korrekt. Även här kan matematiken hjälpa oss att avgöra hur väl teorin ger en korrekt beskrivning av världen.</p>
+<div id="samvariation" class="section level4" number="0.0.8.1">
+<h4>
+<span class="header-section-number">0.0.8.1</span> Samvariation<a class="anchor" aria-label="anchor" href="#samvariation"><i class="fas fa-link"></i></a>
+</h4>
+<p>En stor mängd analytiskt arbete består av att jämföra variationer i ett fenomen med variationer i ett eller flera andra fenomen. Säg att vi vill pröva teorin att högre inkomst i genomsnitt leder till högre lycka.</p>
+<p>Vi samlar in information och mäter båda fenomenen noga på ett jämförbart sätt. För att pröva vår teori jämför vi sedan om människor med hög inkomst även har hög lycka.</p>
+<p>Vi vill veta om inkomst och lycka <strong>samvarierar</strong>. <strong>Positiv samvariation</strong> innebär att högre värden av ett fenomen i genomsnitt är associerade med högre värden av ett annat fenomen. Annorlunda uttryckt: när det ena fenomenet ökar, så sammanfaller detta även med att högre värden av det andra fenomenet. Och omvänt, att samma fenomen minskar samtidigt som det andra fenomenet minskar.</p>
+<p><strong>Negativ samvariation</strong> innebär att när ett fenomen ökar så minskar det andra fenomenet, och när ett fenomen minskar så ökar det andra fenomenet.</p>
+</div>
+<div id="korrelation-och-kausalitet" class="section level4" number="0.0.8.2">
+<h4>
+<span class="header-section-number">0.0.8.2</span> Korrelation och kausalitet<a class="anchor" aria-label="anchor" href="#korrelation-och-kausalitet"><i class="fas fa-link"></i></a>
+</h4>
+<p>För att vi ska kunna hävda att vår teori ger en korrekt bild av verkligheten så behöver vi finna en positiv samvariation i den data vi studerar. Att två olika fenomen samvarierar betyder dock inte nödvändigtvis att det råder något orsakssamband mellan dessa.</p>
+<p>Detta kan vi enkelt se genom exempel. På sommaren badar vi mer utomhus och äter mer glass. Men det är inte vår kontakt med vatten utomhus som orsakar glassförsäljningen, utan (troligen) att vädret är varmare som orsakar både ökat badande och ökad glassätning.</p>
+<p>Alltså: även om vi har korrelation betyder det inte att vi har ett samband. Inom vetenskap och analys är därför en viktig poäng följande: korrelation är <strong><u>inte</u></strong> samma sak som orsakssamband (kausalitet). Se även avsnittet <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/korrelation-och-kausalitet#!/">Korrelation och kausalitet från Matte 1</a>.</p>
+</div>
+<div id="varför-behöver-vi-vetenskapliga-experiment" class="section level4" number="0.0.8.3">
+<h4>
+<span class="header-section-number">0.0.8.3</span> Varför behöver vi vetenskapliga experiment?<a class="anchor" aria-label="anchor" href="#varf%C3%B6r-beh%C3%B6ver-vi-vetenskapliga-experiment"><i class="fas fa-link"></i></a>
+</h4>
+<p>Även om två fenomen samvarierar är det ofta mycket svårt att veta om det ena fenomenet orsakar det andra. För att mer noga studera om ett fenomen påverkar (orsakar) ett annat fenomen vill vi idealiskt sett försäkra oss om att inga andra fenomen påverkar samvariationen när vi studerar den.</p>
+<p>Ett sätt att göra detta är att utföra <strong>vetenskapliga experiment</strong> i skyddade miljöer, som laboratorier. Ofta med en kontrollgrupp och en behandlingsgrupp.</p>
+<p>Säg att vi tror att förändringar i fenomen A orsakar förändringar i fenomen B. Med ett vetenskapligt experiment vill vi då isolera relationen mellan A och B. Vi som genomför experimentet kontrollerar när experimentet startar, så vi kan mäta i vilken utsträckning en förändring i B kan förklaras av A.</p>
+<p>I samhällsvetenskap går det sällan att studera saker i skyddade miljöer eller fullt ut kontrollerade experiment. I stället använder man metoder där man försöker komma så nära det vetenskapliga experimentet som möjligt. I dessa situationer har vi hjälp av matematiken. Hur vi gör ska vi gå igenom mer noga längre fram i kursen.</p>
+</div>
+<div id="utrymme-för-tolkning" class="section level4" number="0.0.8.4">
+<h4>
+<span class="header-section-number">0.0.8.4</span> Utrymme för tolkning<a class="anchor" aria-label="anchor" href="#utrymme-f%C3%B6r-tolkning"><i class="fas fa-link"></i></a>
+</h4>
+<p>Redan nu kan det dock vara på sin plats att påpeka att matematiken inte kan bevisa orsakssamband. Även i ett kontrollerat experiment i ett laboratorium är vi i regel tvungna att tolka information och resonera teoretiskt.</p>
+<p>Ibland har vi bättre eller sämre argument för våra påståenden. Vetenskapliga metoder och matematik hjälper oss avgöra när vi har bättre eller sämre skäl att tro på ett orsakssamband. Till exempel kan vi med hjälp av matematik och statistisk analys visa varför vetenskapliga experiment är en stark metod för att studera orsakssamband. Och vi kan visa varför våra fördomar om världen ofta slår fel.</p>
+<p>Våra fördomar bygger ofta på att vi observerar samvariationer i världen och tänker att två eller flera saker hänger ihop, fastän de inte gör det. Det är lätt att hitta exempel på saker som samvarierar, som glassförsäljning och bad. Men det är svårt att hitta resultat som ger oss starka skäl att verkligen tro på ett orsakssamband.</p>
+<p>Om vi faktiskt tror på ett orsakssamband mellan två fenomen så blir nästa fråga hur stor effekten är. Orsakar en förändring i A en stor eller liten förändring i B? Vi kanske vill använda sambandet för att föreslå förändringar i världen? Eller ta någon typ av beslut där vi vill kunna väga nytta mot kostnader. I sådana situationer räcker det inte att bara kunna säga att det finns ett samband. Då behöver vi matematik.</p>
+</div>
+<div id="exempel-från-forskningen" class="section level4" number="0.0.8.5">
+<h4>
+<span class="header-section-number">0.0.8.5</span> Exempel från forskningen<a class="anchor" aria-label="anchor" href="#exempel-fr%C3%A5n-forskningen"><i class="fas fa-link"></i></a>
+</h4>
+<p>Analys av orsakssamband och samvariation används inom både samhällsvetenskap och naturvetenskap och har en lång historia. Här är några exempel för att visa att matematik och statistik angår dig oavsett vad du är intresserad av.</p>
+<ul>
+<li><p><strong>Exempel 1:</strong> <strong>Skapar pengar lycka?</strong><br>
+Charles Jones och Peter Klenow publicerade 2016 artikeln <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20110236"><em>Beyond GDP? Welfare across Countries and Time</em></a> (på Svenska ungefär: <em>Bortom bruttonationalprodukt (BNP)? Välfärd i olika länder och tidsperioder</em>). Deras analys visar att den genomsnittliga inkomsten i ett land samvarierar med flera saker som kan förklara människors välmående: konsumtion, fritid, dödlighet och ekonomisk ojämlikhet. En viktig fråga i denna diskussion är hur vi kan mäta dessa saker och vad som orsakar vad.</p></li>
+<li><p><strong>Exempel 2: Hade Einstein</strong> <strong>rätt?</strong><br>
+Albert Einstein (1879—1955) är bland annat känd för sina teorier om relativitet inom fysiken, vilka delvis bygger på observationen att ljusets hastighet i vakuum är konstant oavsett hur ljusets källa rör sig. Tidigare trodde många att ljus färdades i ett ämne kallat eter. 1933 publicerade den amerikanske fysikern Dayton Miller <a href="https://www.nature.com/articles/133162a0">resultat från olika experiment</a> som han menade visade att Einstein hade fel. Utifrån <a href="https://arxiv.org/abs/physics/0608238">diskussioner</a> om bland annat matematik och statistik kom forskningssamhället fram till att Miller hade fel och Einstein rätt.</p></li>
+<li><p><strong>Exempel 3: Orsakar rökning cancer?</strong><br>
+Numera anses det vara ett otvivelaktigt faktum att tobaksrökning orsakar cancer. Tidiga forskningsresultat rörande detta presenterades redan i slutet av 1700-talet, men så sent som på 1950-talet var detta fortfarande omtvistat. <a href="https://pubmed.ncbi.nlm.nih.gov/15183026/">En viktig fråga</a> var hur man kan studera detta orsakssamband och om publicerade resultat var korrekt beräknade.</p></li>
+<li><p><strong>Exempel 4: Påverkar människan klimatet?</strong><br>
+Vetenskapssamhället är idag överens om att jordens stigande medeltemperatur är orsakad av mänsklig aktivitet. Under 1970-talet <a href="https://www.ipcc.ch/site/assets/uploads/2018/03/ar4-wg1-chapter1.pdf">publicerades akademiska artiklar</a> som sades visa att mänsklig påverkan i stället skulle sänka jordens medeltemperatur. Detta har senare avvisats. Även denna diskussion handlade om beräkningsmetoder och om det verkligen fanns ett orsakssamband.</p></li>
+</ul>
+</div>
+</div>
+<div id="uppgifter-2" class="section level3" number="0.0.9">
+<h3>
+<span class="header-section-number">0.0.9</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-2"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-1-3"]=[  {    "id": "k1-1-3-001",    "name": "Uppgift 1",    "exercise": "På sommaren säljs mer glass och fler människor drunknar. Det råder alltså en samvariation mellan glassförsäljning och drunkningstillbud. Vad är den korrekta slutsatsen?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Glassätning orsakar drunkningsolyckor",          "Drunkningar orsakar ökad glassätning",          "Samvariationen förklaras troligen av en tredje faktor — varmt väder",          "Samvariation och orsakssamband är samma sak i detta fall"        ],        "correct": "Samvariationen förklaras troligen av en tredje faktor — varmt väder"      }    },    "error": {      "message": "Det finns ett klassiskt begrepp för detta: korrelation är <em>inte</em> kausalitet. Vad kan en bakomliggande orsak till båda fenomenen vara?"    },    "correct": {      "message": "Rätt! Varmt väder orsakar både mer badning (och fler drunkningstillbud) och mer glassätning. Glassen orsakar inte drunkningarna — det är en skenkorrelation."    }  },  {    "id": "k1-1-3-002",    "name": "Uppgift 2",    "exercise": "En studie visar att länder med hög genomsnittlig inkomst också har höga mätvärden för medborgarnas lycka. Vilken typ av samvariation beskriver detta?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Negativ samvariation",          "Positiv samvariation",          "Inget samband alls",          "Orsakssamband"        ],        "correct": "Positiv samvariation"      }    },    "error": {      "message": "Tänk på definitionen: när båda fenomenen (inkomst och lycka) ökar <em>tillsammans</em>, vad kallas det?"    },    "correct": {      "message": "Rätt! Eftersom höga inkomstvärden sammanfaller med höga lyckavärden råder positiv samvariation. Observera att detta inte nödvändigtvis bevisar att inkomst <em>orsakar</em> lycka."    }  },  {    "id": "k1-1-3-003",    "name": "Uppgift 3",    "exercise": "Varför räcker det inte med att påvisa samvariation för att hävda ett orsakssamband?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Samvariation kräver för mycket data för att vara användbart",          "Samvariation kan bero på en tredje bakomliggande faktor snarare än en direkt orsak–verkan-relation",          "Orsakssamband är ett äldre begrepp som inte längre används i forskning",          "Samvariation mäts alltid felaktigt"        ],        "correct": "Samvariation kan bero på en tredje bakomliggande faktor snarare än en direkt orsak–verkan-relation"      }    },    "error": {      "message": "Tänk på vad som kunde förklara att två saker samvarierar utan att den ena orsakar den andra."    },    "correct": {      "message": "Rätt! En bakomliggande tredje variabel kan orsaka båda de samvarierande fenomenen. Att påvisa kausalitet kräver därför mer än bara samvariation i data."    }  },  {    "id": "k1-1-3-004",    "name": "Uppgift 4",    "exercise": "Tre forskare studerar sambandet mellan studietid (timmar/vecka) och betyg. De mäter studietid och betyg för 100 studenter och noterar att mer studietid samvarierar med högre betyg. Hur många studenter behöver de mäta till för att <em>visa</em> att studietid <em>orsakar</em> högre betyg?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "500 studenter",          "10 000 studenter",          "Fler mätningar räcker inte — de behöver ett annorlunda studieupplägg, till exempel ett experiment",          "Det räcker redan med 100 studenter om samvariationen är stark"        ],        "correct": "Fler mätningar räcker inte — de behöver ett annorlunda studieupplägg, till exempel ett experiment"      }    },    "error": {      "message": "Tänk på vad som skiljer samvariation från kausalitet. Fler observationer ger mer statistisk styrka men löser inte det grundläggande problemet med orsaksriktning."    },    "correct": {      "message": "Rätt! Fler observationer ger en starkare uppskattning av samvariationen, men de visar inte kausalitet. För att studera orsakssamband behövs ett annat upplägg — idealt ett kontrollerat experiment."    }  },  {    "id": "k1-1-3-005",    "name": "Uppgift 5",    "exercise": "I ett vetenskapligt experiment delas deltagarna in i en <em>behandlingsgrupp</em> och en <em>kontrollgrupp</em>. Vad är syftet med kontrollgruppen?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Att öka antalet deltagare i studien",          "Att ha en jämförelsegrupp som inte utsätts för den undersökta faktorn, så att dess effekt kan isoleras",          "Att kontrollera att deltagarna svarar ärligt",          "Att mäta samvariationen noggrannare"        ],        "correct": "Att ha en jämförelsegrupp som inte utsätts för den undersökta faktorn, så att dess effekt kan isoleras"      }    },    "error": {      "message": "Tänk på vad som är poängen med att ha en grupp som <em>inte</em> behandlas. Vad gör det möjligt att jämföra?"    },    "correct": {      "message": "Rätt! Kontrollgruppen representerar vad som hade hänt om behandlingsgruppen <em>inte</em> hade utsatts för behandlingen. Genom att jämföra de två grupperna kan vi eventuellt studera kausala effekter av behandlingen."    }  }];</script><div class="exercise-section" data-section-id="k1-1-3">
+
+</div>
+<hr>
+<div class="next-section-link">
+<p><a href="sec-k1-1-4.html">→ Nästa avsnitt: <strong>Varför räkna?</strong></a></p>
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k1-1-2.html">Hur beskriva en teori med matte?</a></div>
+<div class="next"><a href="k1-1-4.html">Varför räkna?</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k1-1-3">Hur testa om en teori stämmer?</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-2"><span class="header-section-number">0.0.7</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-2"><span class="header-section-number">0.0.8</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-2"><span class="header-section-number">0.0.9</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k1-1-3.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k1-1-3.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

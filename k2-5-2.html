@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Kontinuerliga sannolikhetsfördelningar | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.1.46 Begrepp Täthetsfunktion: Beskriver sannolikheten för enskilda utfall för en kontinuerlig slumpmässig variabel. Betecknas här \(f\). Kumulativa fördelningsfunktionen: Beskriver sannolikheten...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Kontinuerliga sannolikhetsfördelningar | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.1.46 Begrepp Täthetsfunktion: Beskriver sannolikheten för enskilda utfall för en kontinuerlig slumpmässig variabel. Betecknas här \(f\). Kumulativa fördelningsfunktionen: Beskriver sannolikheten...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kontinuerliga sannolikhetsfördelningar | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.1.46 Begrepp Täthetsfunktion: Beskriver sannolikheten för enskilda utfall för en kontinuerlig slumpmässig variabel. Betecknas här \(f\). Kumulativa fördelningsfunktionen: Beskriver sannolikheten...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="active" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-5-2" class="section level1 unnumbered">
+<h1>Kontinuerliga sannolikhetsfördelningar<a class="anchor" aria-label="anchor" href="#k2-5-2"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-42" class="section level3" number="0.1.46">
+<h3>
+<span class="header-section-number">0.1.46</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-42"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>Täthetsfunktion:</strong> Beskriver sannolikheten för enskilda utfall för en kontinuerlig slumpmässig variabel. Betecknas här <span class="math inline">\(f\)</span>.</p></li>
+<li><p><strong>Kumulativa fördelningsfunktionen:</strong> Beskriver sannolikheten för intervall för en kontinuerlig slumpmässig variabel. Betecknas här <span class="math inline">\(F\)</span>.</p></li>
+<li><p><strong>Likformig kontinuerlig sannolikhetsfördelning:</strong> Alla utfall har samma sannolikhet.</p></li>
+<li><p><strong>Standardnormalfördelningen:</strong> En normalfördelning med medelvärdet 0 och standardavvikelse 1. Betecknas <span class="math inline">\(N(0,1)\)</span>. Kallas även för standardiserad normalfördelning eller Z-fördelning.</p></li>
+</ul>
+</div>
+<div id="teori-42" class="section level3" number="0.1.47">
+<h3>
+<span class="header-section-number">0.1.47</span> Teori<a class="anchor" aria-label="anchor" href="#teori-42"><i class="fas fa-link"></i></a>
+</h3>
+<p>Som vi beskrev i föregående avsnitt kan kontinuerliga sannolikhetsfördelningar anta alla möjliga värden inom ett intervall och har därför ett oändligt antal möjliga utfall. I <a href="https://www.matteboken.se/lektioner/matte-2/statistik/normalfordelning#!/">matte 2</a> och <a href="https://www.matteboken.se/lektioner/matte-4/integraler-och-tillampningar/sannolikhetsfordelning#!/">matte 4</a> introduceras kontinuerliga sannolikhetsfördelningar och bland annat normalfördelningen.</p>
+<div id="sannolikhet-och-kumulativ-sannolikhet" class="section level4" number="0.1.47.1">
+<h4>
+<span class="header-section-number">0.1.47.1</span> Sannolikhet och kumulativ sannolikhet<a class="anchor" aria-label="anchor" href="#sannolikhet-och-kumulativ-sannolikhet"><i class="fas fa-link"></i></a>
+</h4>
+<p>För en diskret variabel använder vi en <em>sannolikhetsfunktion</em> för att beskriva sannolikheten för enskilda utfall. Motsvarande funktion som beskriver sannolikheten för möjliga utfall i en kontinuerlig variabel kallas för <em>täthetsfunktion</em> (engelska <em>probability density function</em>), vilken vi förkortar <span class="math inline">\(f\)</span>.</p>
+<p>För att beräkna den kumulativa sannolikheten för en kontinuerlig slumpmässig variabel använder vi en <em>kumulativ fördelningsfunktion</em>, som vi kallar <span class="math inline">\(F\)</span>. Det vill säga, samma förkortningar som vi använde i föregående avsnitt för att beskriva motsvarande funktioner för diskreta sannolikhetsfördelningar.</p>
+<p>För en slumpmässig kontinuerlig variabel <span class="math inline">\(X\)</span> beskriver täthetsfunktionen <span class="math inline">\(f(x)\)</span> sannolikheten för ett specifikt utfall <span class="math inline">\(X = x\)</span>, medan kumulativa fördelningsfunktionen <span class="math inline">\(F(x)\)</span> beskriver sannolikheten att <span class="math inline">\(X\)</span> antar ett värde lägre eller lika med <span class="math inline">\(x\)</span>.</p>
+</div>
+<div id="ett-exempel-med-diagram" class="section level4" number="0.1.47.2">
+<h4>
+<span class="header-section-number">0.1.47.2</span> Ett exempel med diagram<a class="anchor" aria-label="anchor" href="#ett-exempel-med-diagram"><i class="fas fa-link"></i></a>
+</h4>
+<p>Säg att vi har en kontinuerlig sannolikhetsfördelning <span class="math inline">\(X\)</span> där alla värden mellan 0 och 1 har samma sannolikhet. Det vill säga, vi har samma sannolikhet att få någon av alla de oändligt många decimaler som finns mellan 0 och 1. Om varje sådant värde mellan 0 och 1 hade en sannolikhet &gt; 0, skulle summan bli oändligt stor. I stället är sannolikheten för ett specifikt värde inom ett kontinuerlig intervall (med ett oändligt antal värden), till exempel 0,0934720630257, definierat till noll.</p>
+<p>Däremot finns det en positiv sannolikhet att få ett värde inom ett intervall. Till exempel är sannolikheten för att <span class="math inline">\(X\)</span> ska anta ett värde mellan 0 och 0,5 lika med 50 %, eftersom det motsvarar hälften av sannolikhetsfördelningen. Det är denna sannolikhet vi får av kumulativa fördelningsfunktionen <span class="math inline">\(F(x)\)</span>.</p>
+<p>Alltså: sannolikheten att få ett specifikt värde, som 0,5, är noll. Sannolikheten för att få ett värde inom ett intervall, som 0,4 – 0,6, vilket här motsvarar 20 % av intervallet, är just 20 %.</p>
+<p>Figur 1 illustrerar täthetsfunktionen och kumulativa fördelningsfunktionen för den likformiga kontinuerliga sannolikhetsfördelningen <span class="math inline">\(X\)</span>, där alla utfall mellan 0 och 1 har samma sannolikhet.</p>
+<p>Det vänstra diagrammet illustrerar täthetsfunktionen <span class="math inline">\(f\)</span> och det högra diagrammet kumulativa fördelningsfunktionen <span class="math inline">\(F\)</span>. Sannolikheten för att <span class="math inline">\(X\)</span> antar ett värde mellan 0 och 0,5 är 0,5, vilket vi kan se i det högre diagrammet genom att jämföra 0,5 på den horisontella axeln (<span class="math inline">\(x\)</span>-värdet) och den kumulativa sannolikheten på vertikala axeln. Det vill säga:</p>
+<p><span class="math display">\[F(x = 0,5) = P(X \leq 0,5) = 0,5\]</span></p>
+<p><strong>Figur 1: Täthetsfunktionen och kumulativa fördelningsfunktionen för en likformig kontinuerlig sannolikhetsfördelning</strong><br><img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\5%20-%20Regressionsanalys%20med%20sannolikhet\5-2%20-%20Kontinuerliga%20sannolikhetsf%C3%B6rdelningar/img/k2-5-2-image1.png" style="width:5.38889in;height:2.92963in"></p>
+<p>Förklaring: Vänstra diagrammet beskriver sannolikheten för varje utfall mellan 0 och 1. Högra diagrammet beskriver kumulativa sannolikheten att få ett värde på horisontella x-axeln eller lägre. Sannolikheten att få ett värde under 0 är noll. Sannolikheten att få ett värde mellan 0 och 0,5 är 0,5, det vill säga 50 %. Sannolikheten att få värdet 1 eller lägre är 100 %.</p>
+</div>
+<div id="väntevärde-för-kontinuerliga-variabler" class="section level4" number="0.1.47.3">
+<h4>
+<span class="header-section-number">0.1.47.3</span> Väntevärde för kontinuerliga variabler<a class="anchor" aria-label="anchor" href="#v%C3%A4ntev%C3%A4rde-f%C3%B6r-kontinuerliga-variabler"><i class="fas fa-link"></i></a>
+</h4>
+<p>I föregående avsnitt introducerade vi väntevärde för diskreta slumpmässiga variabler som summan av utfall multiplicerat med deras sannolikhet, <span class="math inline">\(E(X) = \sum_{}^{}{xP(x)}\)</span>. Väntevärdet för en kontinuerlig slumpmässig variabel är på liknande sätt summan av utfall multiplicerat med sannolikheterna.</p>
+<p>Säg att vi har en slumpmässig likformig kontinuerlig variabel <span class="math inline">\(X\)</span>, vars lägsta respektive högsta värden är <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>. Eftersom vi nu ska summera ett kontinuerligt intervall kan vi använda <a href="https://www.matteboken.se/lektioner/matte-3/integraler?gad_source=1&amp;gclid=CjwKCAiAwaG9BhAREiwAdhv6Y2KYZCxYMa4BwTrcLl7ZKGEB3v3OAesqY9bL4uQRR9bVbVEpx1Ls0BoCJyQQAvD_BwE#!/">integraler</a>:</p>
+<p><span class="math inline">\(E(X) = \int_{a}^{b}{xf(x)dx}\)</span> (1)</p>
+<p>vilket ska läsas som att vi över intervallet <span class="math inline">\(a\)</span> till <span class="math inline">\(b\)</span> summerar alla möjliga utfall <span class="math inline">\(x\)</span> multiplicerat med sannolikheten för respektive värde <span class="math inline">\(f(x)\)</span>.</p>
+</div>
+<div id="varians-för-kontinuerliga-sannolikhetsfördelningar" class="section level4" number="0.1.47.4">
+<h4>
+<span class="header-section-number">0.1.47.4</span> Varians för kontinuerliga sannolikhetsfördelningar<a class="anchor" aria-label="anchor" href="#varians-f%C3%B6r-kontinuerliga-sannolikhetsf%C3%B6rdelningar"><i class="fas fa-link"></i></a>
+</h4>
+<p>Varians för en kontinuerlig slumpmässig variabel <span class="math inline">\(X\)</span> kan beskrivas:</p>
+<p><span class="math inline">\(var(X) = E\left( \left( X - \mu_{X} \right)^{2} \right) = \sigma_{X}^{2}\)</span> (2)</p>
+<p>Om vi skriver ut definitionen av väntevärdet från ekvation 1 får vi:</p>
+<p><span class="math inline">\(E\left( \left( X - \mu_{X} \right)^{2} \right) = \int_{- \infty}^{\infty}\left( X - \mu_{X} \right)^{2}f(x)dx\)</span> (3)</p>
+<p>Standardavvikelsen är, liksom för diskreta variabler, kvadratroten av variansen:</p>
+<p><span class="math inline">\(\sigma_{X} = \sqrt{var(X)} = \sqrt{\sigma_{X}^{2}}\)</span> (4)</p>
+<p>Betingat väntevärde för kontinuerliga slumpmässiga variabler <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> skrivs:</p>
+<p><span class="math inline">\(E\left( Y \middle\| X \right) = \int_{- \infty}^{\infty}{\int_{- \infty}^{\infty}{xyf(x,y)dxdy}}\)</span> (5)</p>
+<p>där <span class="math inline">\(f(x,y)\)</span> är den gemensamma sannolikhetsfördelningen. Lagen om totalt väntevärde gäller även för kontinuerliga fördelningar, <span class="math inline">\(E\left( E\left( X \middle\| Y \right) \right) = E(X)\)</span>, liksom regeln att <span class="math inline">\(E\left( XY \middle\| X \right) = XE\left( Y \middle\| X \right)\)</span>.</p>
+</div>
+<div id="normalfördelningen" class="section level4" number="0.1.47.5">
+<h4>
+<span class="header-section-number">0.1.47.5</span> Normalfördelningen<a class="anchor" aria-label="anchor" href="#normalf%C3%B6rdelningen"><i class="fas fa-link"></i></a>
+</h4>
+<p>Ett exempel på en kontinuerlig sannolikhetsfördelning är det som kallas för normalfördelningen. Se <a href="https://www.matteboken.se/lektioner/matte-2/statistik/normalfordelning#!/">matte 2</a> och <a href="https://www.matteboken.se/lektioner/matte-4/integraler-och-tillampningar/sannolikhetsfordelning#!/">matte 4</a>.</p>
+<p>En normalfördelning som har medelvärde 0 och standardavvikelse 1 kallas för <em>standardiserad normalfördelning, standardnormalfördelningen</em> eller <em>Z-fördelningen</em>. Vi stöter sällan på några verkliga data som av naturliga skäl följer en normalfördelning med medelvärde 0 och standardavvikelse 1. Däremot kan vi räkna om en samling värden så att dessa får medelvärde 0 och standardavvikelse 1, vilket kallas för att standardisera. För att standardisera variabel <span class="math inline">\(X\)</span> tar vi:</p>
+<p>Standardiserade <span class="math inline">\(X = Z = \frac{X_{i} - \overline{X}}{s_{X}}\)</span> (6)</p>
+<p>där <span class="math inline">\(X_{i} - \overline{X}\)</span> innebär att vi subtraherar medelvärdet <span class="math inline">\(\overline{X}\)</span> från varje värde <span class="math inline">\(X_{i}\)</span> och dividerar med estimerad standardavvikelse <span class="math inline">\(s_{X}\)</span>.</p>
+<p>Genom att omvandla vilken normalfördelning som helst till medelvärde 0 och standardavvikelse 1 kan vi använda samma tabell och matematiska funktion för alla normalfördelningar. Detta är mycket praktiskt.</p>
+<p>Standardiserade normalfördelningar används ofta och kallas därför ibland för variabel <span class="math inline">\(Z\)</span>. Denna sannolikhetsfördelning har flera kända sannolikhetsmått utifrån dess standardavvikelser, vilka ofta används i statistisk analys. Figur 2 illustrerar detta, där det övre diagrammet beskriver standardnormalfördelningens täthetsfunktion <span class="math inline">\(f\)</span> och det nedre diagrammet beskriver kumulativa fördelningsfunktionen <span class="math inline">\(F\)</span>.</p>
+<p>I det övre diagrammet är några av standardavvikelserna under och över medelvärdet 0 markerade. Kumulativa fördelningsfunktionen <span class="math inline">\(F(Z \leq z)\)</span> beskriver liksom tidigare hur stor andel av alla värden i variabel <span class="math inline">\(Z\)</span> som är mindre eller lika med utfall <span class="math inline">\(z\)</span> (ett enskilt värde i <span class="math inline">\(Z\)</span>).</p>
+<p>Eftersom standardnormalfördelningen även kallas <span class="math inline">\(Z\)</span>-fördelningen beskrivs denna typ av sannolikheter ofta som just <span class="math inline">\(Z\)</span>-värden (engelska <em>z-score</em>).</p>
+<p>Standardiserade normalfördelningen är så välanvänd att det finns flera färdigberäknade sannolikheter från denna fördelning som ofta används i statistisk analys. Några av dessa visas i figur 2, där vi i det övre diagrammet bland annat kan se att 95 % av fördelningen täcks av avståndet från -1,96 standardavvikelser till +1,96 standardavvikelser från medelvärdet.</p>
+<p><strong>Figur 2: Standardiserade normalfördelningens täthetsfunktion</strong> <span class="math inline">\(\mathbf{f(z)}\)</span> <strong>och kumulativa fördelningsfunktion</strong> <span class="math inline">\(\mathbf{F(Z \leq z)}\)</span>**.**
+<img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\5%20-%20Regressionsanalys%20med%20sannolikhet\5-2%20-%20Kontinuerliga%20sannolikhetsf%C3%B6rdelningar/img/k2-5-2-image2.png" style="width:3.85417in;height:5.13889in"></p>
+<p>Förklaring: Övre diagrammet illustrerar täthetsfunktionen <span class="math inline">\(f(z)\)</span>, där vertikala axeln anger sannolikheten för ett specifikt värde i standardiserade normalfördelningen. Nedre diagrammet illustrerar kumulativa fördelningsfunktionen <span class="math inline">\(F(Z \leq z)\)</span>, som beskriver sannolikheten för värdet <span class="math inline">\(z\)</span> eller lägre.</p>
+</div>
+</div>
+<div id="uppgifter-42" class="section level3" number="0.1.48">
+<h3>
+<span class="header-section-number">0.1.48</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-42"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-5-2"]=[  {    "id": "k2-5-2-001",    "name": "Uppgift 1",    "exercise": "Vad är sannolikheten för ett <em>specifikt</em> utfall i en kontinuerlig sannolikhetsfördelning, till exempel att \\(X = 0{,}5\\) exakt?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "50 %, eftersom 0,5 är mitt i intervallet 0–1",          "Noll, eftersom det finns oändligt många möjliga värden i ett kontinuerligt intervall",          "1/100, eftersom decimaler har lika sannolikhet",          "Kan inte beräknas utan mer information"        ],        "correct": "Noll, eftersom det finns oändligt många möjliga värden i ett kontinuerligt intervall"      }    },    "error": { "message": "Om varje enskilt värde hade en positiv sannolikhet i ett kontinuerligt intervall – vad skulle hända med summan av alla sannolikheter?" },    "correct": { "message": "Rätt! I en kontinuerlig fördelning är sannolikheten för ett exakt värde definierad till noll. Om varje värde hade sannolikhet > 0 skulle summan av oändligt många sådana bli oändlig. Sannolikhet gäller istället för intervall." }  },  {    "id": "k2-5-2-002",    "name": "Uppgift 2",    "exercise": "Standardnormalfördelningen betecknas \\(N(0,1)\\). Vilket medelvärde och vilken standardavvikelse har den?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Medelvärde 1 och standardavvikelse 0",          "Medelvärde 0 och standardavvikelse 1",          "Medelvärde 0,5 och standardavvikelse 0,5",          "Medelvärde 0 och standardavvikelse 0"        ],        "correct": "Medelvärde 0 och standardavvikelse 1"      }    },    "error": { "message": "Notationen \\(N(\\mu, \\sigma)\\) anger medelvärde och standardavvikelse. Vad är värdena i \\(N(0,1)\\)?" },    "correct": { "message": "Rätt! Standardnormalfördelningen \\(N(0,1)\\) har medelvärde 0 och standardavvikelse 1. Den kallas också Z-fördelningen och är grundläggande för statistiska test." }  },  {    "id": "k2-5-2-003",    "name": "Uppgift 3",    "exercise": "Vi standardiserar en variabel \\(X\\) med formeln \\[Z = \\frac{X_i - \\overline{X}}{s_X}\\] Vad uppnår vi med denna omvandling?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Vi gör variabeln logaritmisk",          "Vi omvandlar variabeln till medelvärde 0 och standardavvikelse 1",          "Vi tar bort extremvärden ur variabeln",          "Vi omvandlar variabeln till en diskret fördelning"        ],        "correct": "Vi omvandlar variabeln till medelvärde 0 och standardavvikelse 1"      }    },    "error": { "message": "Vad gör det att subtrahera medelvärdet och dividera med standardavvikelsen för fördelningens centrum och spridning?" },    "correct": { "message": "Rätt! Standardisering innebär att vi centrerar variabeln (subtraherar medelvärdet) och skalar den (dividerar med standardavvikelsen), vilket ger medelvärde 0 och standardavvikelse 1. Alla normalfördelningar kan därigenom jämföras mot samma tabell." }  },  {    "id": "k2-5-2-004",    "name": "Uppgift 4",    "exercise": "En variabel \\(X\\) följer en likformig kontinuerlig fördelning på intervallet \\([0, 1]\\). Vad är den kumulativa sannolikheten \\(F(0{,}5) = P(X \\leq 0{,}5)\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "0.5" },    "answerformat": "Ange ett tal mellan 0 och 1, t.ex. 0.5",    "error": { "message": "I en likformig kontinuerlig fördelning på \\([0,1]\\) är sannolikheten proportionell mot intervallets längd. Hur stor del av intervallet \\([0,1]\\) är \\([0, 0{,}5]\\)?" },    "correct": { "message": "Rätt! \\(F(0{,}5) = P(X \\leq 0{,}5) = 0{,}5\\). Intervallet \\([0; 0{,}5]\\) utgör hälften av hela intervallet \\([0;1]\\), och i en likformig fördelning är sannolikheten för ett intervall proportionell mot dess längd." }  },  {    "id": "k2-5-2-005",    "name": "Uppgift 5",    "exercise": "Hur många procent av en standardnormalfördelnings värden täcks av intervallet från \\(-1{,}96\\) till \\(+1{,}96\\) standardavvikelser från medelvärdet?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "95" },    "answerformat": "Ange ett heltal (procent)",    "error": { "message": "Detta är ett centralt värde som används bland annat för 95-procentiga konfidensintervall. Tänk på hur stor andel av en normalfördelnings värden som befinner sig inom ±1,96 standardavvikelser från medelvärdet." },    "correct": { "message": "Rätt! 95 % av standardnormalfördelningens värden finns inom intervallet \\([-1{,}96; +1{,}96]\\). Detta värde är centralt i statistisk analys och används bland annat för att beräkna 95 %-konfidensintervall." }  }];</script><div class="exercise-section" data-section-id="k2-5-2">
+
+</div>
+<hr>
+<div class="next-section-link">
+<p><a href="sec-k2-5-3.html">→ Nästa avsnitt: <strong>Statistisk analys 1</strong></a></p>
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></div>
+<div class="next"><a href="k2-5-3.html">Statistisk analys 1</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-5-2">Kontinuerliga sannolikhetsfördelningar</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-42"><span class="header-section-number">0.1.46</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-42"><span class="header-section-number">0.1.47</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-42"><span class="header-section-number">0.1.48</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-5-2.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-5-2.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

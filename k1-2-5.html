@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Banadödlighet och flyktingar | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.0.33 Begrepp Inga nya matematiska begrepp i detta avsnitt.  0.0.34 Teori De senaste decennierna har barnadödligheten i hela världen sjunkit kraftigt. Den varierar dock fortfarande stort bland...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Banadödlighet och flyktingar | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.0.33 Begrepp Inga nya matematiska begrepp i detta avsnitt.  0.0.34 Teori De senaste decennierna har barnadödligheten i hela världen sjunkit kraftigt. Den varierar dock fortfarande stort bland...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Banadödlighet och flyktingar | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.0.33 Begrepp Inga nya matematiska begrepp i detta avsnitt.  0.0.34 Teori De senaste decennierna har barnadödligheten i hela världen sjunkit kraftigt. Den varierar dock fortfarande stort bland...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="active" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k1-2-5" class="section level1 unnumbered">
+<h1>Banadödlighet och flyktingar<a class="anchor" aria-label="anchor" href="#k1-2-5"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-8" class="section level3" number="0.0.33">
+<h3>
+<span class="header-section-number">0.0.33</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-8"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Inga nya matematiska begrepp i detta avsnitt.</em></p>
+</div>
+<div id="teori-8" class="section level3" number="0.0.34">
+<h3>
+<span class="header-section-number">0.0.34</span> Teori<a class="anchor" aria-label="anchor" href="#teori-8"><i class="fas fa-link"></i></a>
+</h3>
+<p>De senaste decennierna har barnadödligheten i hela världen sjunkit kraftigt. Den varierar dock fortfarande stort bland världens länder. Tabell 1 beskriver den genomsnittliga barnadödligheten per kontinent år 1950 och 2016. Både år 1950 och 2016 var barnadödligheten störst i Afrika.</p>
+<p>Barnadödligheten har dock även minskat som mest i de afrikanska länderna, från cirka 300 per 1 000 barn år 1950, till att år 2016 vara nere på 62,7 avlidna barn per 1 000 under 5 års ålder. Under samma period minskade barnadödligheten i länderna i Europa från 86,7 år 1950 till 4,9 år 2016.</p>
+<p><strong>Tabell 1: Antal avlidna barn per 1 000 barn under 5 år</strong></p>
+<div class="inline-table"><table style="width:62%;" class="table table-sm">
+<colgroup>
+<col width="20%">
+<col width="20%">
+<col width="20%">
+</colgroup>
+<thead><tr class="header">
+<th></th>
+<th align="left"><strong>År 1950</strong></th>
+<th align="left"><strong>År 2016</strong></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Afrika</td>
+<td align="left">302</td>
+<td align="left">62,7</td>
+</tr>
+<tr class="even">
+<td>Asien</td>
+<td align="left">234</td>
+<td align="left">22,8</td>
+</tr>
+<tr class="odd">
+<td>Europa</td>
+<td align="left">86,7</td>
+<td align="left">4,9</td>
+</tr>
+<tr class="even">
+<td>Nordamerika</td>
+<td align="left">152</td>
+<td align="left">15,9</td>
+</tr>
+<tr class="odd">
+<td>Oceanien</td>
+<td align="left">140</td>
+<td align="left">22,7</td>
+</tr>
+<tr class="even">
+<td>Sydamerika</td>
+<td align="left">181</td>
+<td align="left">17,8</td>
+</tr>
+</tbody>
+</table></div>
+<p>Källa: Gapminder, <a href="http://www.ourworldindata.org">www.ourworldindata.org</a>.</p>
+<p>Sedan början av 1800-talet har den genomsnittliga barnadödligheten i världen minskat från i genomsnitt över 400 döda per 1 000 barn (40 %), ned till cirka 20 % år 1950 och till cirka 4 % år 2016. Det vill säga, en minskning med 16 procentenheter:</p>
+<p><span class="math inline">\(4 - 20 = - 16\)</span> procentenheter</p>
+<p>Länderna i Afrika har under perioden sett barnadödligheten minska från 302 till 62,7 per 1 000 barn. Räknat i procentenheter blir detta:</p>
+<p><span class="math display">\[\frac{62,7 - 300}{1\ 000} = - \frac{237,3}{1\ 000} = - 0,2372 = - 23,73\ \text{procentenheter}\]</span></p>
+<p>I Europa minskade den genomsnittliga barnadödligheten från 86,7 till 4,9 per 1 000 barn. Uttryckt i procentenheter:</p>
+<p><span class="math display">\[\frac{4,9 - 86,7}{1000} = - \frac{81,8}{1000} = - 0,0818 = - 8,18\ \text{procentenheter}\]</span></p>
+<div id="flyktingar" class="section level4" number="0.0.34.1">
+<h4>
+<span class="header-section-number">0.0.34.1</span> Flyktingar<a class="anchor" aria-label="anchor" href="#flyktingar"><i class="fas fa-link"></i></a>
+</h4>
+<p>Enligt FN:s organisation <a href="https://www.unhcr.org/">UNHCR</a> (förkortning för <em>United Nations High Commissioner for Refugees</em>) är cirka 1,5 % av världens befolkning flyktingar (siffran för 2024). Världens befolkning uppskattades 2024 vara 8,2 miljarder. Antal flyktingar 2024 var alltså enligt UNHCR:s bedömning:</p>
+<p><span class="math display">\[8\ 200\ 000\ 000\*0,015 = 123\ 000\ 000\]</span></p>
+<p>Ett annat sätt att beskriva denna uträkning är på följande sätt:</p>
+<p>1,5 % av 8,2 miljarder <span class="math inline">\(= 0,123\)</span> miljarder = 123 miljoner</p>
+<p>En person som befinner sig på flykt i ett annat land än sitt hemland kan söka asyl, fristad, i det land där personen befinner sig. Tabell 2 beskriver befolkning 2023 samt antal asylsökande 2023 för de fyra länder som hade flest sökande samt Sverige. Sverige är endast med som jämförelse. Jämfört med alla länder som ingår i data från <a href="https://www.unhcr.org/refugee-statistics">UNHCR</a> så var det 53 andra länder som tog emot fler flyktingar än Sverige.</p>
+<p>Den fjärde kolumnen (<strong>Asylsökande / befolkning</strong>) visar antal asylsökande dividerat med antal invånare i respektive land, uttryckt som procent. Jämfört med landets inhemska befolkning tog Peru emot flest asylsökande och Sverige minst, bland länderna i denna tabell.</p>
+<p>Låt oss nu beräkna hur stor procentuell andel som respektive land tar emot av hela gruppen asylsökande i denna tabell. Resultaten redovisas i kolumnen längst till höger. Räknat på detta sätt tar USA emot störst andel och Sverige tar emot minst, bland länderna i tabellen.</p>
+<p><strong>Tabell 2: Befolkning och antal asylsökande per land</strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="8%">
+<col width="17%">
+<col width="16%">
+<col width="22%">
+<col width="34%">
+</colgroup>
+<thead><tr class="header">
+<th align="left"><strong>Land</strong></th>
+<th align="right"><strong>Asylsökande 2023</strong></th>
+<th align="right"><strong>Befolkning 2023</strong></th>
+<th align="right"><strong>Asylsökande / befolkning</strong></th>
+<th align="right"><strong>Andel av de asylsökanden i denna tabell</strong></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">USA</td>
+<td align="right">2 601 467</td>
+<td align="right">334 914 895</td>
+<td align="right">0,78%</td>
+<td align="right">69,6%</td>
+</tr>
+<tr class="even">
+<td align="left">Peru</td>
+<td align="right">508 429</td>
+<td align="right">33 845 617</td>
+<td align="right">1,50%</td>
+<td align="right">13,6%</td>
+</tr>
+<tr class="odd">
+<td align="left">Tyskland</td>
+<td align="right">361 493</td>
+<td align="right">83 280 000</td>
+<td align="right">0,43%</td>
+<td align="right">9,7%</td>
+</tr>
+<tr class="even">
+<td align="left">Mexiko</td>
+<td align="right">257 396</td>
+<td align="right">129 739 759</td>
+<td align="right">0,20%</td>
+<td align="right">6,9%</td>
+</tr>
+<tr class="odd">
+<td align="left">Sverige</td>
+<td align="right">11 271</td>
+<td align="right">10 536 632</td>
+<td align="right">0,11%</td>
+<td align="right">0,3%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Förklaring: Data från <a href="https://www.unhcr.org/refugee-statistics">UNHCR</a> (asylsökande) och <a href="https://data.worldbank.org/">Världsbanken</a> (befolkning).</p>
+</div>
+</div>
+<div id="uppgifter-8" class="section level3" number="0.0.35">
+<h3>
+<span class="header-section-number">0.0.35</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-8"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-2-5"]=[  {    "id": "k1-2-5-001",    "name": "Uppgift 1",    "exercise": "Barnadödligheten i Afrika var 302 per 1 000 barn år 1950 och 62,7 per 1 000 barn år 2016. Beräkna förändringen i <em>procentenheter</em> (negativ = minskning): \\[\\frac{62{,}7 - 302}{10}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Förändring": "-23.93" },    "answerformat": "procentenheter",    "error": { "message": "Rater angivna per 1 000 omvandlas till procent genom division med 10 (inte 1 000): \\((62{,}7 - 302) / 10 = -239{,}3 / 10 = ?\\)" },    "correct": { "message": "Rätt! \\(-239{,}3 / 10 = -23{,}93\\) procentenheter. (302 per 1 000 = 30,2 %; 62,7 per 1 000 = 6,27 %; skillnaden är 6,27 − 30,2 = −23,93 procentenheter.) Barnadödligheten i Afrika minskade med nästan 24 procentenheter — en remarkabel förbättring." }  },  {    "id": "k1-2-5-002",    "name": "Uppgift 2",    "exercise": "Barnadödligheten i Europa sjönk från 86,7 till 4,9 per 1 000 barn (1950–2016). Afrika sjönk från 302 till 62,7. Vilken kontinent hade den största minskningen, mätt i antalet färre döda per 1 000 barn?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Europa, med en minskning på 81,8 per 1 000",          "Afrika, med en minskning på 239,3 per 1 000",          "De minskade lika mycket",          "Det går inte att jämföra utan mer data"        ],        "correct": "Afrika, med en minskning på 239,3 per 1 000"      }    },    "error": { "message": "Beräkna den absoluta minskningen för varje kontinent: 302 − 62,7 respektive 86,7 − 4,9." },    "correct": { "message": "Rätt! Afrika: \\(302 - 62{,}7 = 239{,}3\\). Europa: \\(86{,}7 - 4{,}9 = 81{,}8\\). Afrikas minskning mätt i antalet färre döda per 1 000 barn var alltså nästan tre gånger större." }  },  {    "id": "k1-2-5-003",    "name": "Uppgift 3",    "exercise": "Enligt UNHCR var ca 1,5 % av världens befolkning flyktingar år 2024. Världens befolkning var då 8,2 miljarder. Hur många miljoner flyktingar var det?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Antal flyktingar": "123" },    "answerformat": "miljoner",    "error": { "message": "\\(8\\ 200\\ 000\\ 000 \\times 0{,}015 = ?\\). Ange svaret i miljoner." },    "correct": { "message": "Rätt! \\(8{,}2 \\times 10^9 \\times 0{,}015 = 1{,}23 \\times 10^8 = 123\\) miljoner flyktingar." }  },  {    "id": "k1-2-5-004",    "name": "Uppgift 4",    "exercise": "År 2023 tog USA emot 2 601 467 asylsökande med en befolkning på ca 335 miljoner. Peru tog emot 508 429 asylsökande med en befolkning på ca 34 miljoner. Vilket land tog emot <em>störst andel relativt sin befolkning</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "USA, som tog emot flest i absoluta tal",          "Peru, vars andel asylsökande av befolkningen (1,50%) var högre än USA:s (0,78%)",          "Sverige, som är ett litet land",          "Tyskland, som är ett rikt europeiskt land"        ],        "correct": "Peru, vars andel asylsökande av befolkningen (1,50%) var högre än USA:s (0,78%)"      }    },    "error": { "message": "Beräkna andelen för varje land: asylsökande dividerat med befolkning. Jämför inte de absoluta talen." },    "correct": { "message": "Rätt! USA tog emot flest i absoluta tal, men Peru tog emot störst andel relativt befolkningens storlek (1,50 % mot USA:s 0,78 %). Detta är ett bra exempel på varför relativa mått ibland är mer informativa än absoluta." }  },  {    "id": "k1-2-5-005",    "name": "Uppgift 5",    "exercise": "Den globala barnadödligheten år 1950 var ca 20 % och år 2016 ca 4 %. Hur stor var minskningen i <em>procentenheter</em>?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Minskning": "16" },    "answerformat": "procentenheter",    "error": { "message": "Procentenheter beräknas som enkel subtraktion: \\(4 - 20 = ?\\)" },    "correct": { "message": "Rätt! \\(4 - 20 = -16\\) procentenheter. Observera skillnaden: minskningen är 16 <em>procentenheter</em>, men i procent av ursprungsvärdet är minskningen \\(16/20 = 80\\%\\) — ett mycket vanligt missförstånd." }  }];</script><div class="exercise-section" data-section-id="k1-2-5">
+
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k1-2-4.html">Leder rikedom till lycka?</a></div>
+<div class="next"><a href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k1-2-5">Banadödlighet och flyktingar</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-8"><span class="header-section-number">0.0.33</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-8"><span class="header-section-number">0.0.34</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-8"><span class="header-section-number">0.0.35</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k1-2-5.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k1-2-5.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

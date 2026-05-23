@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Statistisk analys 1 | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.1.49 Begrepp Statistiskt test: Beräkning rörande sannolikheten om ett påstående stämmer eller ej. Punktestimat: Estimat av ett specifikt värde från populationen, som medelvärde eller varians....">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Statistisk analys 1 | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.1.49 Begrepp Statistiskt test: Beräkning rörande sannolikheten om ett påstående stämmer eller ej. Punktestimat: Estimat av ett specifikt värde från populationen, som medelvärde eller varians....">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Statistisk analys 1 | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.1.49 Begrepp Statistiskt test: Beräkning rörande sannolikheten om ett påstående stämmer eller ej. Punktestimat: Estimat av ett specifikt värde från populationen, som medelvärde eller varians....">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="active" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-5-3" class="section level1 unnumbered">
+<h1>Statistisk analys 1<a class="anchor" aria-label="anchor" href="#k2-5-3"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-43" class="section level3" number="0.1.49">
+<h3>
+<span class="header-section-number">0.1.49</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-43"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>Statistiskt test:</strong> Beräkning rörande sannolikheten om ett påstående stämmer eller ej.</p></li>
+<li><p><strong>Punktestimat:</strong> Estimat av ett specifikt värde från populationen, som medelvärde eller varians.</p></li>
+<li><p><strong>Standardfel:</strong> Mått på osäkerheten i ett punktestimat (engelska <em>standard error</em>).</p></li>
+<li><p><strong>Medelvärdets standardfel:</strong> Estimerad osäkerhet i medelvärdets estimat. Beräknas som <span class="math inline">\(s_{x}/n^{\frac{1}{2}}\)</span> där <span class="math inline">\(s_{x}\)</span> är estimerad standardavvikelse och <span class="math inline">\(n\)</span> är antal observationer i urvalet.</p></li>
+</ul>
+</div>
+<div id="teori-43" class="section level3" number="0.1.50">
+<h3>
+<span class="header-section-number">0.1.50</span> Teori<a class="anchor" aria-label="anchor" href="#teori-43"><i class="fas fa-link"></i></a>
+</h3>
+<p>Under denna kurs har vi introducerat skillnaden mellan det vi kallar populationen (det vi vill studera), vars värden i regel är okända, och den urvalsdata vi har tillgång till (det vi kan studera). Nu ska vi närmare koppla ihop dessa begrepp med det vi gått igenom om sannolikhetsfördelningar.</p>
+<div id="statistiskt-test" class="section level4" number="0.1.50.1">
+<h4>
+<span class="header-section-number">0.1.50.1</span> Statistiskt test<a class="anchor" aria-label="anchor" href="#statistiskt-test"><i class="fas fa-link"></i></a>
+</h4>
+<p>Ett statistiskt test är en kvantitativ beräkning där vi räknar på sannolikheten för om ett påstående stämmer eller ej. Vi kommer gå igenom två typer av test: Punktestimat och intervallskattning. Punktestimat innebär att vi räknar på ett enda värde, som medelvärde = 82 år. Intervallskattning syftar på att vi räknar på sannolikheten att ett värde (till exempel medelvärdet) befinner sig inom ett intervall, som 80 och 84 år. I detta avsnitt går vi igenom punktestimat. I nästa avsnitt lär vi oss intervallskattning.</p>
+<p>Vi ska demonstrera vad ett statistiskt test är genom att jämföra två medelvärden. Figur 1 illustrerar den genomsnittliga livslängden för män respektive kvinnor i Sveriges 290 kommuner. De streckade vertikala linjerna mitt i staplarna beskriver medelvärdet för kvinnor respektive män i observationerna i diagrammet. Lite förenklat kan vi se att observationerna för män respektive kvinnor följer ungefär en normalfördelning vardera.</p>
+<p>Medelvärdet för kvinnor ligger tydligt högre än medelvärdet för männen. Men det vi tittar på här är medelvärden per kommun. Och det är medelvärden beräknade vid en specifik tidpunkt, som avser att beskriva hur det såg ut i Sverige 2022.</p>
+<p>Säg nu att detta är urvalsdata för en större population. Vi kan till exempel tänka oss att det är en uppskattning av hur det ser ut i Sveriges befolkning idag. Eller kanske är ett exempel på män och kvinnor i de nordiska länderna. Eller kanske ett exempel på skillnaden i livslängd mellan män och kvinnor under hela 2020-talet. Utifrån våra urvalsdata vill nu veta om medelvärdet i livslängd för den större populationen kvinnor och män verkligen skiljer sig.</p>
+<p><strong>Figur 1: Genomsnittlig livslängd för män respektive kvinnor i Sveriges kommuner</strong><img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\5%20-%20Regressionsanalys%20med%20sannolikhet\5-3%20-%20Statitsisk%20analys%201/img/k2-5-3-image1.png" style="width:4.47917in;height:2.98611in" alt="En bild som visar diagram, text, skärmbild, Graf Automatiskt genererad beskrivning"></p>
+<p>Förklaring: Staplarna visar spridningen i genomsnittlig medellivslängd i Sveriges kommuner. En observation = ett medelvärde per kommun. Den genomsnittliga livslängden varierar både bland män och kvinnor. Staplar överlappar varandra något, vilket beror på att i de kommuner där män lever som längst i genomsnitt, är denna livslängd högre jämfört med de kommuner där kvinnor i genomsnitt lever som kortast.</p>
+<p>Detta kan vi pröva genom ett statistiskt test. Vi formulerar detta som att vi vill beräkna sannolikheten för om populationernas medelvärden är desamma: <span class="math inline">\(\mu_{\text{kvinnor}\ } = \mu_{\text{män}}\)</span>. Vi vet inte populationsvärdena. Vi har observationer som eventuellt kan beskrivas som att de är hämtade från två separata populationer, det vill säga populationerna med mäns och kvinnors genomsnittsinkomster per kommun.</p>
+<p>För att skatta sannolikheten för att de två populationerna har samma medelvärde utgår vi från att vi jämför två normalfördelade variabler och beräknar ett <span class="math inline">\(z\)</span>-värde. Vårt beräknade <span class="math inline">\(z\)</span> jämför vi mot standardnormalfördelningen för att därigenom få sannolikheten att de två medelvärdena i våra urvalsdata tillhör samma population. Här är ekvationen för att beräkna detta <span class="math inline">\(z\)</span>-värde:</p>
+<p><span class="math inline">\(z = \frac{{\bar{X}}_{\text{kvinnor}\ } - {\bar{X}}_{\text{män}\ }}{\left( \frac{s_{\text{kvinnor}\ }^{2}}{n_{\text{kvinor}\ }} + \frac{s_{\text{mann}\ }^{2}}{n_{\text{man}\ }} \right)^{\frac{1}{2}}}\)</span> (1)</p>
+<p>där <span class="math inline">\(s^{2}\)</span> är varians (standardavvikelse i kvadrat) för respektive grupp och <span class="math inline">\(n\)</span> är antal observationer. För observationerna i figur 1 har vi följande värden som vi behöver till beräkningen:</p>
+<p><span class="math inline">\({\overline{X}}_{kvinnor} = 83,95\)</span> <span class="math inline">\({\overline{X}}_{män} = 80,38\)</span> (2)</p>
+<p><span class="math inline">\(s_{kvinnor}^{2} = 1,032\)</span> <span class="math inline">\(s_{män}^{2} = 1,663\)</span></p>
+<p><span class="math inline">\(n_{kvinnor} = 290\)</span> <span class="math inline">\(n_{män} = 290\)</span></p>
+<p>Med dessa värden kan vi beräkna följande <span class="math inline">\(z\)</span>-värde:</p>
+<p><span class="math inline">\(z = \frac{{\bar{X}}_{\text{kvinnor}\ } - {\bar{X}}_{\text{män}\ }}{\left( \frac{s_{\text{kvinnor}\ }^{2}}{n_{\text{kvinnor}\ }} + \frac{s_{\text{man}\ }^{2}}{n_{\text{mãn}\ }} \right)^{\frac{1}{2}}} \approx \frac{83,95 - 80,38}{\left( \frac{1,032}{290} + \frac{1,663}{290} \right)^{\frac{1}{2}}} \approx 37,045\)</span> (3)</p>
+<p>Detta <span class="math inline">\(z\)</span>-värde kan vi jämföra mot standardnormalfördelningens kumulativa fördelningsfunktion <span class="math inline">\(F(Z \leq z)\)</span> i det nedre diagrammet i figur 2 i föregående <a href="https://www.dropbox.com/scl/fi/wi8c30n2yna36a7zbiyoh/5-2-Kontinuerliga-sannolikhetsf-rdelningar.docx?rlkey=rmkxixrrun7q0rqeg82lk2kky&amp;dl=0">avsnitt 5.2</a>.</p>
+<p>Vårt beräknade <span class="math inline">\(z\)</span>-värde hamnar långt ut i standardnormalfördelningens svans till höger om (över) medelvärdet. Så långt att detta <span class="math inline">\(z\)</span>-värde inte ryms på diagrammets horisontella axel. Detta indikerar att det är mycket osannolikt att de två populationerna (män och kvinnors livslängd) har samma medelvärde. Detta är resultatet för vårt statistiska test. Testet stödjer alltså inte att populationernas medelvärden är samma. Det verkar alltså finnas en skillnad.</p>
+<p>Notera att det inte säger oss någonting om varför siffrorna ser ut så här. Det visar inte på något orsakssamband eller någon förklaring. Det indikerar endast att det i statistisk bemärkelse, givet den data vi använt, är osannolikt att populationernas medelvärden, <span class="math inline">\(\mu_{män}\)</span> och <span class="math inline">\(\mu_{kvinnor}\)</span>, är lika.</p>
+</div>
+<div id="statistisk-inferens-och-punktestimat" class="section level4" number="0.1.50.2">
+<h4>
+<span class="header-section-number">0.1.50.2</span> Statistisk inferens och punktestimat<a class="anchor" aria-label="anchor" href="#statistisk-inferens-och-punktestimat"><i class="fas fa-link"></i></a>
+</h4>
+<p>Statistisk inferens eller statistisk slutledning, kallas den process där vi med hjälp av ett empiriskt datamaterial försöker dra slutsatser om okända egenskaper i en population. Detta är vad vi gör när vi försöker estimera värdena i en population, genom att beräkna resultat med urvalsdata.</p>
+<p>Vi kan ta medelvärdet som exempel, vilket vi introducerat tidigare. Om vi vill veta populationens medelvärde <span class="math inline">\(\mu_{X}\)</span> för en variabel <span class="math inline">\(X\)</span> estimerar vi detta i urvalsdatan med den vanliga formeln för medelvärde:</p>
+<p><span class="math inline">\(\overline{x} = \sum_{i}^{n}x_{i}\text{/}n\)</span> (4)</p>
+<p>Om det medelvärde vi beräknar syftar till att uttala oss om en (större) population bortom den data vi har tillgång till, så är detta per definition ett estimat av populationens medelvärde.</p>
+<p>I avsnitt <a href="https://www.dropbox.com/scl/fi/f0sm847poizoh98wjzs2w/5-1-Sannolikhet-och-slump.docx?rlkey=bkxlftjmtdnxxyp0ickav3s77&amp;dl=0">5.1</a> och <a href="https://www.dropbox.com/scl/fi/wi8c30n2yna36a7zbiyoh/5-2-V-ntev-rde-varians-slumpm-ssiga-variabler.docx?rlkey=rmkxixrrun7q0rqeg82lk2kky&amp;dl=0">5.2</a> gick vi igenom estimatorer för regressionsmodellers koefficienter. Ekvation 4 är <em>medelvärdets estimator</em>. Alltså, varje estimerat medelvärde är en konstant men ekvationen vi använder för att med en samling urvalsobservationer estimera medelvärdet kallar vi för estimator.</p>
+<p>Om vi vill veta populationens okända varians <span class="math inline">\(\sigma_{X}^{2}\)</span> kan vi estimera detta med urvalsdatan som:</p>
+<p><span class="math inline">\(var(X) = \left( \frac{1}{n - 1} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}\)</span> (5)</p>
+<p>Detta är således estimatorn för variansen. I båda dessa fall estimerar vi specifika värden, vilket kallas för att estimera punkter, punktestimat eller att skatta punkter (engelska <em>point estimation</em>). Både medelvärdet och variansen är exempel på punktestimat.</p>
+</div>
+<div id="medelvärdets-estimator" class="section level4" number="0.1.50.3">
+<h4>
+<span class="header-section-number">0.1.50.3</span> Medelvärdets estimator<a class="anchor" aria-label="anchor" href="#medelv%C3%A4rdets-estimator"><i class="fas fa-link"></i></a>
+</h4>
+<p>Nu ska vi fördjupa oss lite i hur vi kan resonera kring hur och varför våra estimat kan avvika från värdena i populationen som vi vill estimera (se gärna <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/felkallor-och-signifikans#!/">matte 1</a> och introduktionen till <em>felkällor,</em> <em>statistisk signifikans</em>).</p>
+<p>Medelvärdets estimator har ett väntevärde, ett förväntat värde, vilket är definierat som populationens medelvärde:</p>
+<p><span class="math inline">\(E\left( \overline{x} \right) = E\left( \frac{1}{n}\sum_{i}^{n}x_{i} \right) = \mu_{X}\)</span> (6)</p>
+<p>Detta väntevärde innebär alltså, enligt stora talens lag (se <a href="https://www.dropbox.com/scl/fi/f0sm847poizoh98wjzs2w/5-1-Slumpm-ssiga-variabler-och-diskreta-sannolikhetsf-rdelningar.docx?rlkey=bkxlftjmtdnxxyp0ickav3s77&amp;dl=0">avsnitt 5.1</a>), att givet att vi tar oändligt många urval från en population så kommer vårt estimerade medelvärde att närma sig populationens medelvärde.</p>
+<p>När vi estimerar medelvärdet <span class="math inline">\(\overline{x}\)</span> vet vi att detta skiljer sig mer eller mindre från populationsvärdet <span class="math inline">\(\mu_{X}\)</span>. Eftersom vi inte har tillgång till all information om populationen finns det slumpmässiga fel i våra estimat. Dessa kan vara mycket små, men existerar oavsett alltid.</p>
+<p>Skillnaden mellan estimerade <span class="math inline">\(\overline{x}\)</span> och populationens <span class="math inline">\(\mu_{X}\)</span> kan vi beskriva som <span class="math inline">\(\overline{x} - \mu_{X}\)</span>. Så länge vi inte känner till populationsmedelvärdet <span class="math inline">\(\mu_{X}\)</span> kan vi inte beräkna denna differens exakt.</p>
+</div>
+<div id="standardfel" class="section level4" number="0.1.50.4">
+<h4>
+<span class="header-section-number">0.1.50.4</span> Standardfel<a class="anchor" aria-label="anchor" href="#standardfel"><i class="fas fa-link"></i></a>
+</h4>
+<p>För att beräkna ett mått på osäkerheten i en punktskattning kan vi estimera det som kallas för <em>standardfel</em> (engelska <em>standard error</em>). Standardfelet beräknas på olika sätt beroende på vilket punktestimat vi studerar. Medelvärdets standardfel estimeras på följande sätt:</p>
+<p><span class="math inline">\(\text{Standardfel } = \frac{s_{x}}{n^{\frac{1}{2}}} = \frac{s_{x}}{\sqrt{n}} = \sqrt{\frac{s_{x}^{2}}{n}}\)</span> (7)</p>
+<p>där <span class="math inline">\(s_{x}\)</span> är estimerad standardavvikelse för urvalsobservationerna och <span class="math inline">\(n\)</span> är antal observationer i urvalet. Ekvation 7 visar olika sätt att skriva samma sak.</p>
+<p>Ekvationen kan läsas som att ju mindre spridning vi har i observationerna (täljaren), desto mindre blir standardfelet. Eftersom vi har antal observationer <span class="math inline">\(n\)</span> i nämnaren innebär detta att standardfelet tenderar att minska ju fler observationer vi inkluderar i vårt urval.</p>
+<p>Båda dessa saker är logiska. Ju mindre utspridda populationens värden är, desto troligare att vår beräkning träffar rätt. Ju mer vi vet om populationen (fler observationer), desto närmare kommer vår uppskattning av populationens medelvärde vara det korrekta medelvärdet i populationen.</p>
+</div>
+</div>
+<div id="uppgifter-43" class="section level3" number="0.1.51">
+<h3>
+<span class="header-section-number">0.1.51</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-43"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-5-3"]=[  {    "id": "k2-5-3-001",    "name": "Uppgift 1",    "exercise": "Vad är ett <em>punktestimat</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "En beräkning av ett intervall inom vilket populationsvärdet förväntas ligga",          "Estimat av ett specifikt värde från populationen, som medelvärde eller varians",          "En metod för att mäta spridning i residualerna",          "En sannolikhetsfördelning för diskreta variabler"        ],        "correct": "Estimat av ett specifikt värde från populationen, som medelvärde eller varians"      }    },    "error": { "message": "Notera att 'punkt' syftar på att vi estimerar ett enda värde – till skillnad från ett intervall." },    "correct": { "message": "Rätt! Ett punktestimat är när vi beräknar ett specifikt värde, till exempel ett medelvärde eller en varians, som ett estimat av ett okänt populationsvärde. Det skiljer sig från intervallskattning där vi estimerar ett intervall." }  },  {    "id": "k2-5-3-002",    "name": "Uppgift 2",    "exercise": "Vad mäter <em>standardfelet</em> för ett punktestimat?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det exakta felet mellan estimat och populationsvärde",          "Osäkerheten (variationen) i ett punktestimat",          "Storleken på populationens standardavvikelse",          "Signifikansnivån för ett statistiskt test"        ],        "correct": "Osäkerheten (variationen) i ett punktestimat"      }    },    "error": { "message": "Vi kan aldrig beräkna det exakta felet utan att känna till populationsvärdet. Standardfel är ett mått på något annat – vad?" },    "correct": { "message": "Rätt! Standardfelet är ett mått på osäkerheten i ett punktestimat. Det berättar hur mycket estimatet kan förväntas variera vid upprepade urval från populationen." }  },  {    "id": "k2-5-3-003",    "name": "Uppgift 3",    "exercise": "Medelvärdets standardfel beräknas som \\[\\text{Standardfel} = \\frac{s_x}{\\sqrt{n}}\\] Vad händer med standardfelet om vi fördubblar antalet observationer \\(n\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Standardfelet halveras",          "Standardfelet minskar med faktorn \\(1/\\sqrt{2} \\approx 0{,}71\\)",          "Standardfelet fördubblas",          "Standardfelet förblir oförändrat"        ],        "correct": "Standardfelet minskar med faktorn \\(1/\\sqrt{2} \\approx 0{,}71\\)"      }    },    "error": { "message": "\\(n\\) är i nämnaren under ett kvadratrottecken. Vad händer med \\(1/\\sqrt{n}\\) när \\(n\\) dubbleras?" },    "correct": { "message": "Rätt! Om \\(n\\) dubbleras ersätts \\(\\sqrt{n}\\) av \\(\\sqrt{2n} = \\sqrt{2}\\cdot\\sqrt{n}\\), vilket innebär att standardfelet minskar med faktorn \\(1/\\sqrt{2} \\approx 0{,}71\\). För att halvera standardfelet behöver vi fyrdubbla antalet observationer." }  },  {    "id": "k2-5-3-004",    "name": "Uppgift 4",    "exercise": "Anta att vi har urvalsdata om livslängd för två grupper: grupp A med \\(\\overline{X}_A = 83{,}95\\) och grupp B med \\(\\overline{X}_B = 80{,}38\\), samt \\(s^2_A = 1{,}032\\), \\(s^2_B = 1{,}663\\) och \\(n_A = n_B = 290\\).<br><br>Beräkna z-värdet med formeln \\[z = \\frac{\\overline{X}_A - \\overline{X}_B}{\\left(\\frac{s^2_A}{n_A} + \\frac{s^2_B}{n_B}\\right)^{1/2}}\\] Avrunda till närmaste heltal.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "37" },    "answerformat": "Ange ett heltal",    "error": { "message": "Täljaren är \\(83{,}95 - 80{,}38 = 3{,}57\\). Nämnaren är kvadratroten av \\((1{,}032/290 + 1{,}663/290)\\). Beräkna nämnaren och dividera." },    "correct": { "message": "Rätt! \\(z \\approx \\frac{3{,}57}{\\sqrt{0{,}00356 + 0{,}00573}} = \\frac{3{,}57}{\\sqrt{0{,}00929}} \\approx \\frac{3{,}57}{0{,}0963} \\approx 37\\). Detta extremt höga z-värde indikerar att det är mycket osannolikt att de två gruppernas livslängder tillhör samma population." }  },  {    "id": "k2-5-3-005",    "name": "Uppgift 5",    "exercise": "Vilket påstående om medelvärdets estimator \\(\\overline{x} = \\sum x_i / n\\) är korrekt?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Väntevärdet för estimatorn är alltid exakt lika med populationens medelvärde",          "Väntevärdet för estimatorn är definierat som populationens medelvärde: \\(E(\\overline{x}) = \\mu_X\\)",          "Estimatorn ger alltid ett fel på minst 5 %",          "Estimatorn kan inte användas för populationer med hög varians"        ],        "correct": "Väntevärdet för estimatorn är definierat som populationens medelvärde: \\(E(\\overline{x}) = \\mu_X\\)"      }    },    "error": { "message": "Väntevärdet är vad vi förväntar oss i genomsnitt vid oändligt många upprepade urval – inte vad ett enskilt urval ger." },    "correct": { "message": "Rätt! \\(E(\\overline{x}) = \\mu_X\\) innebär att medelvärdets estimator är väntevärdesriktig (engelska: unbiased). Givet oändligt många urval från populationen kommer genomsnittet av alla estimerade medelvärden att konvergera mot det sanna populationsmedelvärdet." }  }];</script><div class="exercise-section" data-section-id="k2-5-3">
+
+</div>
+<hr>
+<div class="next-section-link">
+<p><a href="sec-k2-5-4.html">→ Nästa avsnitt: <strong>Statistisk analys 2</strong></a></p>
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></div>
+<div class="next"><a href="k2-5-4.html">Statistisk analys 2</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-5-3">Statistisk analys 1</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-43"><span class="header-section-number">0.1.49</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-43"><span class="header-section-number">0.1.50</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-43"><span class="header-section-number">0.1.51</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-5-3.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-5-3.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -171,19 +171,32 @@
 }
 
 /* Kurs 1 — ljusgrön */
-.sidebar li.nav-kurs1 {
-  background-color: #e8f5e9;
-}
+.sidebar li.nav-kurs1,
 .sidebar li.nav-kurs1 a,
 .sidebar li.nav-kurs1.book-part {
   background-color: #e8f5e9 !important;
 }
 
 /* Kurs 2 — ljusgul/beige */
-.sidebar li.nav-kurs2 {
-  background-color: #fff8e1;
-}
+.sidebar li.nav-kurs2,
 .sidebar li.nav-kurs2 a,
 .sidebar li.nav-kurs2.book-part {
   background-color: #fff8e1 !important;
+}
+
+/* Nästa avsnitt-länk längst ner på varje avsnittssida */
+.next-section-link {
+  margin-top: 2rem;
+  padding: 0.8rem 1.2rem;
+  background: #f4f7fb;
+  border-left: 4px solid #1d87e4;
+  border-radius: 0 6px 6px 0;
+}
+.next-section-link a {
+  color: #1a3a6b;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.next-section-link a:hover {
+  text-decoration: underline;
 }

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>En teori om arbete | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.0.42 Begrepp Inga nya matematiska begrepp i detta avsnitt.  0.0.43 Teori I detta exempel ska vi beskriva arbetsmarknaden med ett linjärt ekvationssystem. Vårt ekvationssystem består av två...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="En teori om arbete | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.0.42 Begrepp Inga nya matematiska begrepp i detta avsnitt.  0.0.43 Teori I detta exempel ska vi beskriva arbetsmarknaden med ett linjärt ekvationssystem. Vårt ekvationssystem består av två...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="En teori om arbete | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.0.42 Begrepp Inga nya matematiska begrepp i detta avsnitt.  0.0.43 Teori I detta exempel ska vi beskriva arbetsmarknaden med ett linjärt ekvationssystem. Vårt ekvationssystem består av två...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="active" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k1-3-3" class="section level1 unnumbered">
+<h1>En teori om arbete<a class="anchor" aria-label="anchor" href="#k1-3-3"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-11" class="section level3" number="0.0.42">
+<h3>
+<span class="header-section-number">0.0.42</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-11"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Inga nya matematiska begrepp i detta avsnitt.</em></p>
+</div>
+<div id="teori-11" class="section level3" number="0.0.43">
+<h3>
+<span class="header-section-number">0.0.43</span> Teori<a class="anchor" aria-label="anchor" href="#teori-11"><i class="fas fa-link"></i></a>
+</h3>
+<p>I detta exempel ska vi beskriva arbetsmarknaden med ett linjärt ekvationssystem. Vårt ekvationssystem består av två ekvationer som ger en förenklad bild av hur vi kan tänka oss att löner <span class="math inline">\((W)\)</span> och priser <span class="math inline">\((P)\)</span> bestäms:</p>
+<p><span class="math inline">\(\left\{ \begin{matrix} \frac{W}{P} = \frac{a}{U^{b}}, &amp; b \&gt; 0 \\ \frac{P}{W} = \frac{c}{U^{d}}, &amp; c \&gt; 0 \end{matrix} \right.\ \)</span> (1)</p>
+<p>Första ekvationen beskriver hur lönerna <span class="math inline">\(W\)</span> sätts med ett påslag, koefficienten <span class="math inline">\(a\)</span>, över priser <span class="math inline">\(P\)</span>. Så om arbetarna möter högre priser kräver de även högre löner.</p>
+<p>Den andra ekvationen beskriver hur priser <span class="math inline">\(P\)</span> sätts med ett påslag <span class="math inline">\(c\)</span> på lönerna <span class="math inline">\(W\)</span>. Om företagen möter högre löner sätter de högre priser. Arbetslöshet <span class="math inline">\(U\)</span> inverkar negativt både på löner och priser, och denna effekt bestäms av koefficienterna <span class="math inline">\(b\)</span> och <span class="math inline">\(d\)</span>.</p>
+<p>Bokstäverna <span class="math inline">\(a,b,c\)</span> och <span class="math inline">\(d\)</span> är konstanter som sammanfattar de fenomen som påverkar löner och priser. Exakt vad detta symboliserar bekymrar vi oss inte om här. Det kan exempelvis vara skatter, lagstiftning eller hur arbetstagare och arbetsgivare förhandlar löner och villkor via sina fackföreningar och arbetsgivarorganisationer.</p>
+<p>Den första ekvationen <span class="math inline">\((W/P)\)</span> kallas även för lönesättningskurvan, som kan beskrivas som en utbudskurva för arbetskraften. Den andra ekvationen <span class="math inline">\((P/W)\)</span> kallas även för prissättningskurvan och kan beskrivas som en efterfrågekurva för arbetskraften.</p>
+<p>Vi söker nu en lösning för variabeln <span class="math inline">\(W/P\)</span>, reallön (se avsnitt 3.7), och <span class="math inline">\(U\)</span>, procent arbetslöshet. Vi börjar med att skriva om den andra ekvationen och lösa för <span class="math inline">\(W/P = U^{d}/c\)</span>. Vi sätter in detta i den första ekvationen:</p>
+<p><span class="math inline">\(\begin{matrix} \frac{W}{P} &amp; \ = \frac{a}{U^{b}} \\ \frac{U^{d}}{c} &amp; \ = \frac{a}{U^{b}} \\ U^{d + b} &amp; \ = ac \\ U^{\*} &amp; \ = (ac)^{\frac{1}{b + d}} \end{matrix}\)</span> (2)</p>
+<p>Lösningen för <span class="math inline">\(U^{\*}\)</span> kan vi sedan använda för att lösa ut <span class="math inline">\((W/P)^{\*}\)</span>. Vi sätter in <span class="math inline">\(U^{\*}\)</span> i ekvationssystemet i ekvation 1:</p>
+<p><span class="math inline">\(\begin{matrix} \left( \frac{W}{P} \right)^{\*} &amp; \ = \frac{a}{\left( U^{\*} \right)^{b}} \\ &amp; \ = \frac{a}{(ac)^{\frac{b}{b + d}}} \\ &amp; \ = \frac{a^{1 - \frac{b}{b + d}}}{c^{\frac{b}{b + d}}} \\ &amp; \ = a^{\frac{d + b - b}{b + d}}c^{\frac{- b}{b + d}} \\ &amp; \ = a^{\frac{d}{b + d}}c^{\frac{- b}{b + d}} \end{matrix}\)</span> (3)</p>
+<p>Eller så kan vi utgå från vänsterledet i ekvation 2 och sätta in <span class="math inline">\(U^{\*}\)</span> där:</p>
+<p><span class="math inline">\(\left( \frac{W}{P} \right)^{\*} = \frac{\left( U^{\*} \right)^{d}}{c} = \frac{(ac)^{\frac{d}{b + d}}}{c} = a^{\frac{d}{b + d}}c^{\frac{- b}{b + d}}\)</span> (4)</p>
+<p>Nu har vi lösningen för de två variablerna <span class="math inline">\(U\)</span> och <span class="math inline">\(W/P\)</span> :</p>
+<p><span class="math inline">\(\left( U^{\*},(W/P)^{\*} \right) = \left( (ac)^{\frac{1}{b + d}},a^{\frac{d}{b + d}}c^{\frac{- b}{b + d}} \right)\)</span> (5)</p>
+<p>Parentesen i högerledet beskriver lösningarna för respektive variabel. <span class="math inline">\(U^{\*}\)</span> är en definition av det som inom samhällsvetenskap kallas för jämviktsarbetslöshet.</p>
+<div id="samma-sak-men-i-logaritmerad-form" class="section level4" number="0.0.43.1">
+<h4>
+<span class="header-section-number">0.0.43.1</span> Samma sak men i logaritmerad form<a class="anchor" aria-label="anchor" href="#samma-sak-men-i-logaritmerad-form"><i class="fas fa-link"></i></a>
+</h4>
+<p>Detta är inte ett linjärt ekvationssystem men med hjälp av logaritmering kan vi göra det linjärt. Vi tar därför logaritmen av båda sidor av respektive ekvation 1:</p>
+<p><span class="math inline">\(\begin{matrix} \left\{ \begin{matrix} log\left( \frac{W}{P} \right) = log\left( \frac{a}{U^{b}} \right), &amp; b \&gt; 0 \\ log\left( \frac{P}{W} \right) = log\left( \frac{c}{U^{d}} \right), &amp; c \geq 0 \end{matrix} \right.\ \\ \left\{ \begin{matrix} logW - logP = loga - logU^{b} \\ logP - logW = logc - logU^{d} \end{matrix} \right.\ \\ \left\{ \begin{matrix} w - p = loga - bu \\ p - w = logc - du \end{matrix} \right.\ \end{matrix}\)</span> (6)</p>
+<p>där vi nu skriver <span class="math inline">\(\text{log}\ W = w,\ \text{log}\ P = p,\ \text{log}\ U = u.\)</span> I nedersta raden i ekvation 6 har vi därför att <span class="math inline">\(w - p = log\left( \frac{W}{P} \right)\)</span> och <span class="math inline">\(\text{log}b\*u = b\*logU\)</span>. Bokstaven <span class="math inline">\(u\)</span> är logaritmen av procent arbetslöshet och <span class="math inline">\(a,b,c\)</span> och <span class="math inline">\(d\)</span> är koefficienter som definierar hur våra variabler hänger ihop.</p>
+<p>Precis som ovan skriver vi om den andra ekvationen, sätter de två definitionerna av <span class="math inline">\(w - p\)</span> lika med varandra och löser för <span class="math inline">\(u\)</span>. För att spara utrymme definierar vi nu även <span class="math inline">\(\text{log}\ a = \alpha\)</span> och <span class="math inline">\(\text{log}\ c = \gamma\)</span></p>
+<p><span class="math inline">\(\begin{matrix} du - \gamma &amp; \ = \alpha - bu \\ u(b + d) &amp; \ = \alpha + \gamma \\ u^{\*} &amp; \ = \frac{\alpha + \gamma}{b + d} \end{matrix}\)</span> (7)</p>
+<p>Definitionen av <span class="math inline">\(u^{\*}\)</span> är den logaritmerade versionen av lösningen i ekvation 5. För att räkna om till arbetslöshet i procent tar vi exponenten:</p>
+<p><span class="math inline">\(\begin{matrix} exp\left( u^{\*} \right) &amp; \ = \frac{1}{b + d}exp(\alpha + \gamma) \\ U^{\*} &amp; \ = ac^{\frac{1}{b + d}} \end{matrix}\)</span> (8)</p>
+</div>
+<div id="illustration-i-diagram" class="section level4" number="0.0.43.2">
+<h4>
+<span class="header-section-number">0.0.43.2</span> Illustration i diagram<a class="anchor" aria-label="anchor" href="#illustration-i-diagram"><i class="fas fa-link"></i></a>
+</h4>
+<p>Figur 1 visar hur denna modell kan illustreras i diagram. Relationen mellan <span class="math inline">\(W/P\)</span> och <span class="math inline">\(U\)</span> beskrivs med de två funktionerna för utbud och efterfrågan, även kallat löne- och prissättningskurvan.</p>
+<p>Läser vi x-axeln från vänster till höger mäter axeln procent av arbetskraften som har arbete, vilket kallas för sysselsättningsgrad. Sysselsättningsgrad kan definieras som <span class="math inline">\(1 - U\)</span>, där <span class="math inline">\(U\)</span> anger procent arbetslösa. Lösningen för variablerna <span class="math inline">\(U^{\*}\)</span> och <span class="math inline">\((W/P)^{\*}\)</span> är den punkt där linjerna möts.</p>
+<p>I diagrammet till vänster visas hur linjerna ser ut i vanlig form, som i ekvation 1. I diagrammet till höger visas logaritmerade funktionerna, som i ekvation 6.</p>
+<p><strong>Figur 1: Utbud och efterfrågan på arbetsmarknaden enligt vår teoretiska modell</strong></p>
+<div class="inline-figure">
+<img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%201%20-%20Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\3%20-%20Beskriva%20teorier%20med%20ekvationssystem\3-3%20En%20teori%20om%20arbete/img/k1-3-3-image1.png" style="width:4.69861in;height:3in">’</div>
+<p>Förklaring: Diagrammet till vänster illustrerar ekvationssystemet i ekvation 1, när funktionerna skrivs i vanligt format. Diagrammet till höger illustrerar ekvationssystemet med logaritmerade funktioner, som i ekvation 6.</p>
+</div>
+</div>
+<div id="uppgifter-11" class="section level3" number="0.0.44">
+<h3>
+<span class="header-section-number">0.0.44</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-11"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-3-3"]=[  {    "id": "k1-3-3-001",    "name": "Uppgift 1",    "exercise": "Tänk att vi har en enkel modell för arbetsmarknaden. Den första ekvationen, lönesättningskurvan, skrivs \\(W = P \\cdot (a/U^b)\\), där \\(W\\) är nominallönen, \\(P\\) prisnivån, \\(U\\) arbetslöshetsgraden och \\(a, b > 0\\) konstanter. Vad beskriver lönesättningskurvan?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Hur priser sätts med ett påslag på lönerna",          "Hur löner sätts med ett påslag över priser, vilket kan beskrivas som en utbudskurva för arbetskraften",          "Hur staten reglerar minimilöner",          "Hur arbetslösheten bestämmer inflationen"        ],        "correct": "Hur löner sätts med ett påslag över priser, vilket kan beskrivas som en utbudskurva för arbetskraften"      }    },    "error": { "message": "Läs beskrivningen av lönesättningskurvan – vad sätts med ett påslag på vad?" },    "correct": { "message": "Rätt! Lönesättningskurvan \\(W = P \\cdot (a/U^b)\\) beskriver hur löner sätts med koefficienten \\(a\\) som påslag på priserna \\(P\\). Den kan ses som en utbudskurva för arbetskraften." }  },  {    "id": "k1-3-3-002",    "name": "Uppgift 2",    "exercise": "Utöver lönesättningskurvan \\(W = P \\cdot (a/U^b)\\) innehåller modellen en prissättningskurva: \\(P = W \\cdot (c/U^d)\\), där \\(P\\) är prisnivån, \\(W\\) nominallönen, \\(U\\) arbetslöshetsgraden och \\(c, d > 0\\) konstanter. Vad kan prissättningskurvan beskrivas som?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Lönesättningskurvan, en utbudskurva för varor",          "Prissättningskurvan, en efterfrågekurva för arbetskraften",          "Produktionskurvan, en beskrivning av BNP-tillväxt",          "Inflationskurvan, en beskrivning av prisnivåförändringar"        ],        "correct": "Prissättningskurvan, en efterfrågekurva för arbetskraften"      }    },    "error": { "message": "Den andra ekvationen handlar om hur priser sätts – vad kallas en sådan kurva och vad kan den liknas vid?" },    "correct": { "message": "Rätt! Prissättningskurvan \\(P = W \\cdot (c/U^d)\\) kan beskrivas som en efterfrågekurva för arbetskraften. Den visar hur företagen sätter priser med ett påslag \\(c\\) på lönerna." }  },  {    "id": "k1-3-3-003",    "name": "Uppgift 3",    "exercise": "Betrakta modellen med lönesättningskurvan \\(W = P \\cdot (a/U^b)\\) och prissättningskurvan \\(P = W \\cdot (c/U^d)\\), där \\(W\\) är nominallönen, \\(P\\) prisnivån och \\(U\\) arbetslöshetsgraden. En central kvot i modellen är \\(W/P\\). Vad menas med <em>reallön</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den faktiska lönen i kronor som betalas ut varje månad",          "Kvoten \\(W/P\\), det vill säga lönen i förhållande till prisnivån",          "Skillnaden \\(W - P\\) mellan lön och pris",          "Det högsta lönebelopp som kan betalas på marknaden"        ],        "correct": "Kvoten \\(W/P\\), det vill säga lönen i förhållande till prisnivån"      }    },    "error": { "message": "Reallön handlar om köpkraft – vad köper man för sin lön? Tänk på relationen mellan \\(W\\) och \\(P\\)." },    "correct": { "message": "Rätt! Reallönen är \\(W/P\\), det vill säga nominallönen \\(W\\) dividerat med prisnivån \\(P\\). Den mäter köpkraften hos lönen." }  },  {    "id": "k1-3-3-004",    "name": "Uppgift 4",    "exercise": "Betrakta ett icke-linjärt ekvationssystem: \\(W = P \\cdot (a/U^b)\\) och \\(P = W \\cdot (c/U^d)\\). Varför är det fördelaktigt att logaritmera ett sådant system?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "För att logaritmer alltid ger mer exakta beräkningar",          "Eftersom logaritmering omvandlar det icke-linjära systemet till ett linjärt ekvationssystem",          "Därför att logaritmerade värden är lättare att tolka för ekonomer",          "För att eliminera variabeln \\(U\\) ur systemet"        ],        "correct": "Eftersom logaritmering omvandlar det icke-linjära systemet till ett linjärt ekvationssystem"      }    },    "error": { "message": "Det ursprungliga systemet innehåller potenser (\\(U^b\\), \\(U^d\\)). Vad uppnår man med logaritmering?" },    "correct": { "message": "Rätt! Genom logaritmering omvandlas de icke-linjära ekvationerna (med potenser) till linjära ekvationer, vilket gör systemet lättare att lösa analytiskt." }  },  {    "id": "k1-3-3-005",    "name": "Uppgift 5",    "exercise": "Betrakta ekvationssystemet med lönesättningskurvan \\(W = P \\cdot (a/U^b)\\) och prissättningskurvan \\(P = W \\cdot (c/U^d)\\). När systemet logaritmeras erhålls jämviktsarbetslösheten \\[u^* = \\frac{\\alpha + \\gamma}{b + d}\\] där \\(\\alpha = \\log a\\), \\(\\gamma = \\log c\\) och \\(u = \\log U\\). Om \\(\\alpha = 2\\), \\(\\gamma = 3\\), \\(b = 1\\) och \\(d = 4\\), vad är \\(u^*\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "u": "1" },    "answerformat": "",    "error": { "message": "Sätt in värdena i formeln: \\(u^* = (2 + 3) / (1 + 4)\\)." },    "correct": { "message": "Rätt! \\(u^* = (2 + 3)/(1 + 4) = 5/5 = 1\\). Detta är den logaritmerade jämviktsarbetslösheten." }  }];</script><div class="exercise-section" data-section-id="k1-3-3">
+
+</div>
+<hr>
+<div class="next-section-link">
+<p><a href="sec-k1-3-4.html">→ Nästa avsnitt: <strong>Externa effekter</strong></a></p>
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k1-3-2.html">Hur hitta den rätta?</a></div>
+<div class="next"><a href="k1-3-4.html">Externa effekter</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k1-3-3">En teori om arbete</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-11"><span class="header-section-number">0.0.42</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-11"><span class="header-section-number">0.0.43</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-11"><span class="header-section-number">0.0.44</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k1-3-3.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k1-3-3.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Räkna på orsak och effekt | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.1.37 Begrepp  Regressionsdiskontinuitet: Kvasiexperimentell metod där vi kan utnyttja en brytpunkt kring vilket det förekommer en slumpmässig indelning i behandlings- och kontrollgrupp. Kallas...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Räkna på orsak och effekt | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.1.37 Begrepp  Regressionsdiskontinuitet: Kvasiexperimentell metod där vi kan utnyttja en brytpunkt kring vilket det förekommer en slumpmässig indelning i behandlings- och kontrollgrupp. Kallas...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Räkna på orsak och effekt | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.1.37 Begrepp  Regressionsdiskontinuitet: Kvasiexperimentell metod där vi kan utnyttja en brytpunkt kring vilket det förekommer en slumpmässig indelning i behandlings- och kontrollgrupp. Kallas...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="active" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-4-7" class="section level1 unnumbered">
+<h1>Räkna på orsak och effekt<a class="anchor" aria-label="anchor" href="#k2-4-7"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-40" class="section level3" number="0.1.37">
+<h3>
+<span class="header-section-number">0.1.37</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-40"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>
+<strong>Regressionsdiskontinuitet:</strong> Kvasiexperimentell metod där vi kan utnyttja en brytpunkt kring vilket det förekommer en slumpmässig indelning i behandlings- och kontrollgrupp. Kallas även brytpunktsanalys. Engelska: <em>regression discontinuity design</em>.</li>
+</ul>
+</div>
+<div id="teori-40" class="section level3" number="0.1.38">
+<h3>
+<span class="header-section-number">0.1.38</span> Teori<a class="anchor" aria-label="anchor" href="#teori-40"><i class="fas fa-link"></i></a>
+</h3>
+<p>I avsnitt <a href="https://www.dropbox.com/scl/fi/p55pve5puznr5q1pytlp0/1-1-Orsak-och-effekt.docx?rlkey=fhscndx5n8rpsx529fb55liup&amp;dl=0">1.1</a> och <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">1.2</a> introducerade vi kontrafaktisk analys och kvasiexperiment för att studera orsakssamband. I kapitel 1 introducerade vi dessa koncept teoretiskt. Nu, efter att ha arbetat med regressionsanalys med flera variabler i detta kapitel, kan vi förstå den matematiska grunden för varför detta är så viktigt.</p>
+<p>Som vi såg i avsnitt 4-1 och 4-3: när vi lägger till eller tar bort variabler i en regressionsmodell ändras koefficienterna för de andra variablerna. Detta är inte bara ett tekniskt problem - det är kärnan i varför vi måste vara så noggranna när vi studerar orsakssamband.</p>
+<div id="orsakssamband-i-en-regressionsmodell" class="section level4" number="0.1.38.1">
+<h4>
+<span class="header-section-number">0.1.38.1</span> Orsakssamband i en regressionsmodell<a class="anchor" aria-label="anchor" href="#orsakssamband-i-en-regressionsmodell"><i class="fas fa-link"></i></a>
+</h4>
+<p>Säg nu, kraftigt förenklat, att vi har en teori om att en medicin <span class="math inline">\((X)\)</span> minskar mängden sjukdomssymptom <span class="math inline">\((Y)\)</span> hos patienter. Vi har hittat en grupp patienter som alla har lika mycket sjukdomssymptom, vilka vi delat in i en behandlingsgrupp (som får medicin) och en kontrollgrupp (som inte får medicin). För att undersöka medicinens effekt på sjukdomssymptom ställer vi upp följande regressionsmodell:</p>
+<p><span class="math inline">\(Y = \alpha + \beta X + \epsilon\)</span> (1)</p>
+<p>Genom att observera samvariationen mellan medicin och sjukdomssymptom kommer estimerade <span class="math inline">\(\widehat{\beta}\)</span> att ge oss ett mått på medicinens <span class="math inline">\(X\)</span> effekt på sjukdomssymptomen <span class="math inline">\(Y\)</span>. Om medicinen fungerar förväntar vi oss att <span class="math inline">\(\beta\)</span> kommer vara negativ, det vill säga att medicinen <span class="math inline">\(X\)</span> minskar symptom <span class="math inline">\(Y\)</span>.</p>
+<p>Ett problem, bland flera tänkbara, är att för att vi ska kunna tolka <span class="math inline">\(\widehat{\beta}\)</span> som ett korrekt mått på effekten av medicinen så måste vi vara säkra på att inga andra fenomen påverkar medicinen och sjukdomssymptomen.</p>
+<p>Säg att vi till exempel vet från tidigare forskning att det finns flera andra saker som både påverkar medicinens effekt och själva sjukdomssymptomet. Det kan handla om sådant som kön, ålder med mera. Dessa saker kan vi mäta och lägga till som variabler i vår regressionsmodell. Genom att kontrollera för till exempel kön kan vi i så fall estimera medicins effekt korrekt.</p>
+</div>
+<div id="illustration-med-diagram-1" class="section level4" number="0.1.38.2">
+<h4>
+<span class="header-section-number">0.1.38.2</span> Illustration med diagram<a class="anchor" aria-label="anchor" href="#illustration-med-diagram-1"><i class="fas fa-link"></i></a>
+</h4>
+<p>Men det finns även ytterligare några fenomen som vi har starka skäl att tro att de är viktiga för både medicinen och symptomen, men som vi saknar data för. Om vi saknar data så kan vi inte kontrollera för det i regressionsmodellen.</p>
+<p>Figur 1 illustrerar ett exempel på hur den här sortens problem kan se ut. Pilen från <span class="math inline">\(X\)</span> till <span class="math inline">\(Y\)</span> beskriver det orsakssamband som vi är intresserade av. Pilar visar påverkans riktning (kausalitet). Så här ska figuren läsas:</p>
+<ul>
+<li><p><span class="math inline">\(X \rightarrow Y\)</span>: Medicinen påverkar symptom. Det vi vill mäta!</p></li>
+<li><p><span class="math inline">\(P \rightarrow X\)</span> och <span class="math inline">\(P \rightarrow Y\)</span>: Fenomen <span class="math inline">\(P\)</span> (observerbart, som ålder) påverkar både vem som får medicin och sjuka de är</p></li>
+<li><p><span class="math inline">\(Z \rightarrow X\)</span> och <span class="math inline">\(Z \rightarrow Y\)</span>: Fenomen <span class="math inline">\(Z\)</span> (icke-observerbart, som medfödd förmåga) påverkar både vem som får medicin och hur sjuka de är.</p></li>
+</ul>
+<p>Om vi inte kontrollerar för <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> kommer den samvariation vi observerar mellan <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> att vara en blandning av (1) medicinens faktiska effekt (det vi vill mäta), (2) effekten av <span class="math inline">\(P\)</span> (kan vi fixa genom att inkludera <span class="math inline">\(P\)</span> i regressionen) och (3) effekten av Z (kan vi inte fixa).</p>
+<p>Detta är varför randomiserade experiment är så viktiga: de "bryter" pilarna från <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> till <span class="math inline">\(X\)</span>. För att vi ska kunna uppskatta vilken effekt <span class="math inline">\(X\)</span> har på <span class="math inline">\(Y\)</span> måste vi dels fastställa att när det sker en variation i <span class="math inline">\(X\)</span>, orsakad utan koppling till <span class="math inline">\(Y\)</span>, så sker det även en variation i <span class="math inline">\(Y\)</span>.</p>
+</div>
+</div>
+<div id="exogen-variation-1" class="section level3" number="0.1.39">
+<h3>
+<span class="header-section-number">0.1.39</span> Exogen variation<a class="anchor" aria-label="anchor" href="#exogen-variation-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>I detta fall bestämmer vi att behandlingsgruppen tar medicinen, vilket är den framkallade variationen i <span class="math inline">\(X\)</span>. Detta kallas för exogen variation, variation i <span class="math inline">\(X\)</span> som inte orsakas av <span class="math inline">\(Y\)</span> eller av något som påverkar både <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Exempel på exogen variation i medicin <span class="math inline">\(X\)</span>:</p>
+<ul>
+<li><p>Vi bestämmer vem som får medicin, som i ett randomiserat experiment</p></li>
+<li><p>Variationen i <span class="math inline">\(X\)</span> kommer från vårt experimentella upplägg</p></li>
+</ul>
+<p>Exempel på endogen variation (dåligt om vi ska dra slutsatser om orsakssamband):</p>
+<ul>
+<li><p>Patienter som mår bättre väljer att ta medicin</p></li>
+<li><p>Variationen i <span class="math inline">\(X\)</span> beror då på något annat (hälsotillstånd) som också påverkar <span class="math inline">\(Y\)</span></p></li>
+</ul>
+</div>
+<div id="selektionsproblemet-1" class="section level3" number="0.1.40">
+<h3>
+<span class="header-section-number">0.1.40</span> Selektionsproblemet<a class="anchor" aria-label="anchor" href="#selektionsproblemet-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>För att uppskatta effekten av <span class="math inline">\(X\)</span> på <span class="math inline">\(Y\)</span> korrekt måste vi även ta hänsyn till de två fenomenen <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> som påverkar både <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Fenomen <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> påverkar vilka som ingår i behandlingsgruppen och vilka som ingår i kontrollgruppen. Detta kallas för <a href="https://en.wikipedia.org/wiki/Selection_bias"><em>selektionsproblem</em></a> och beskrevs i <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">avsnitt 1-2</a>.</p>
+<p>Fenomen <span class="math inline">\(P\)</span> är observerbart (till exempel kön och ålder) men fenomen <span class="math inline">\(Z\)</span> syftar på något som det saknas data för och som det kanske aldrig kommer att finnas data för.</p>
+<p>Om vi inte justerar vår analys för <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> kommer de variationer vi observerar i <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>, liksom samvariationen mellan dem, helt eller delvis vara orsakade av <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span>. Detta vet vi från när vi tittat på regressionsanalys med tre eller fler variabler i avsnitt <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">4.1</a> och <a href="https://www.dropbox.com/scl/fi/sdnc9eukta9tuiq1y6z0f/4-4-Regression-med-matriser.docx?rlkey=zmc4680olys9qe0zmn7i0vswc&amp;dl=0">4.4</a>.</p>
+<div class="inline-figure">**Figur 1: För att skatta effekten av X på Y måste vi justera för P och Z.**
+<img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\4%20-%20Minstakvadratmetoden%20f%C3%B6rdjupning%202%20fler%20variabler\4-7%20-%20R%C3%A4kna%20p%C3%A5%20orsak%20och%20effekt/img/k2-4-7-image1.png" style="width:2.875in;height:2.48022in">
+</div>
+<p>Förklaring: Fenomen P är observerbart och påverkar X och Y. Fenomen Z kan inte observeras eller mätas men påverkar också X och Y. P kan vi kontrollera för. Z kan vi inte kontrollera för. Vi kommer kanske aldrig kunna kontrollera för Z. Detta är ett centralt argument för vetenskapliga experiment.</p>
+<p>Diagrammet i figur 1 kallas för en <em>riktad acyklisk graf</em> (engelska <em>directed acyclic graph</em>, <em>DAG</em>). Diagrammet beskriver ett exempel och ytterligare utmaningar av liknande slag är också tänkbara, men diskuteras ej här.</p>
+<div id="både-förekomst-och-frånvaron-av-variabler-kan-påverka-våra-resultat" class="section level4" number="0.1.40.1">
+<h4>
+<span class="header-section-number">0.1.40.1</span> Både förekomst och frånvaron av variabler kan påverka våra resultat<a class="anchor" aria-label="anchor" href="#b%C3%A5de-f%C3%B6rekomst-och-fr%C3%A5nvaron-av-variabler-kan-p%C3%A5verka-v%C3%A5ra-resultat"><i class="fas fa-link"></i></a>
+</h4>
+<p>I tidigare avsnitt såg vi hur frånvaron eller närvaron av andra variabler kan påverka alla resultat i regressionsmodellen. Det är därför viktigt att vi funderar noga på hur vi designar vår undersökning.</p>
+<p>Om vi utför ett kontrollerat experiment, till exempel delar in patienterna slumpmässigt i 2 grupper och ger ena gruppen medicin, ökar våra möjligheter att mäta effekten korrekt. Om vi har tillräckligt många patienter kommer alla andra egenskaper förutom själva behandlingen att fördela sig slumpmässigt mellan grupperna.</p>
+<p>För att designa vår undersökning och regressionsmodell kan vi ta fram olika typer av underlag, studera andra samvariationer, pröva olika lösningar och jämföra resultat. Detta arbete är något som analytiker måste avgöra från fall till fall. Oavsett hur avancerad metod eller hur många observationer och variabler vi har finns det ingen metod för att bevisa exakt vilka variabler som bör ingå i en analys.</p>
+</div>
+<div id="vi-kan-inte-använda-teori-i-stället-för-data" class="section level4" number="0.1.40.2">
+<h4>
+<span class="header-section-number">0.1.40.2</span> Vi kan inte använda teori i stället för data<a class="anchor" aria-label="anchor" href="#vi-kan-inte-anv%C3%A4nda-teori-i-st%C3%A4llet-f%C3%B6r-data"><i class="fas fa-link"></i></a>
+</h4>
+<p>Ibland är det frestande att tro att om vi hittar någon jättesmart teori som beskriver hur hela världen fungerar, är det i sig ett bevis för hur en regressionsmodell bör utformas. Idéer och teorier är grunden för all analys men det är i sig inget bevis för att inkludera eller exkludera just de variabler vi har till förfogande. Den här typen av svårigheter har varit välkända länge och diskuterats utförligt inom samhällsvetenskap. Två läsvärda texter på temat är <a href="https://www.climateaudit.info/pdf/others/hendry.1980.pdf">Hendry (1980)</a> och <a href="https://uh.edu/hobby/eitm/_docs/past-lectures/2015-Lectures/Harold-Clarke/lets-take-the-con-out-of-econometrics.pdf">Leamer (1983)</a>.</p>
+<p>Som vi gick igenom i avsnitt <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">1.2</a> är det ofta omöjligt att genomföra kontrollerade experiment inom samhällsvetenskap. Det är lätt att tro att detta medför att vi lika gärna kan uttala oss om orsakssamband utan experimentliknande metoder, eftersom ingen ändå vet. Detta är helt enkelt inte sant. Svårigheten att uttala sig om orsakssamband sänker inte kraven på samhällsvetenskap, snarare tvärtom.</p>
+<p>I stället för experiment är samhällsvetare ofta hänvisade till kvasiexperimentella observationsstudier där behandlings- och kontrollgrupp till exempel skapas genom att analytiker lyckas identifiera en process som, utan avsikt, fördelar en tillräckligt stor mängd observationer slumpmässigt i behandling och kontroll.</p>
+<p>Även i dessa situationer måste vi undersöka om våra antaganden i analysen är rimliga, till exempel att fördelningen mellan kontroll och behandlingen verkligen skett så gott som slumpmässigt. Detta kan vi till exempel göra genom att jämföra behandlings- och kontrollgruppens egenskaper och därigenom kontrollera att den enda viktiga skillnaden mellan grupperna är själva behandlingen.</p>
+<p>Om observerbara egenskaper är likvärdiga kan vi ofta anta att även de icke-observerbara egenskaperna är det. Många sådana metoder bygger just på att inget fenomen ska påverka fördelningen (selektionen) till behandlings- och kontrollgruppen.</p>
+</div>
+<div id="brytpunktsanalys" class="section level4" number="0.1.40.3">
+<h4>
+<span class="header-section-number">0.1.40.3</span> Brytpunktsanalys<a class="anchor" aria-label="anchor" href="#brytpunktsanalys"><i class="fas fa-link"></i></a>
+</h4>
+<p>För att studera orsak och verkan när vi studerar människor finns det flera kvasiexperimentella metoder för att identifiera behandlings- och kontrollgrupp. Ett exempel på en sådan metod är <em>regressionsdiskontinuitet</em> (engelska <em>regression discontinuity</em>), eller <em>brytpunktsanalys</em>.</p>
+<p>Detta är en metod för att identifiera och jämföra behandlings- och kontrollgrupp i en observationsstudie. Metoden bygger på att vi kan observera variationer kring en brytpunkt med betydelse för både behandling och utfall. Små variationer kring brytpunkten kan antas vara slumpmässiga, varför denna kan användas för att dela in observationer i behandling och kontroll.</p>
+<p>Låt oss återigen tänka oss att vi ska studera vilken effekt en utbildning har på deltagarnas framtida inkomster. Om vi jämför deltagarnas inkomster med resten av befolkningen riskerar andra icke-observerbara egenskaper hos deltagarna både förklara varför de deltog i utbildningen och deras inkomster. Vi kan därför inte uppskatta effekten på detta sätt.</p>
+<p>Men antagning till utbildningen sker med ett intagningsprov som man måste få minst 92 poäng på för att bli antagen. Vi tänker nu att de som fick precis över och precis under 92 poäng har likvärdiga färdigheter. Några hade en dålig dag och några hade en ovanligt bra dag. De studenter som hamnade precis över 92 poäng och antogs blir vår behandlingsgrupp. De studenter som hamnade precis under 92 poäng och ej antogs blir vår kontrollgrupp.</p>
+<p>Tanken är att studenter som fick 91 poäng och studenter som fick 93 poäng är i praktiken lika duktiga. Skillnaden på 2 poäng kan betraktas som “tur” (några hade en bra/dålig dag). Eftersom skillnaden är slumpmässig kring brytpunkten kan vi jämföra dessa två grupper nästan som i ett randomiserat experiment: Behandlingsgrupp: 93 poäng → antagen. Kontrollgrupp: 91 poäng → inte antagen. Men notera att detta fungerar endast nära brytpunkten. Vi kan inte jämföra någon med 50 poäng mot någon med 100 poäng eftersom de är för olika.</p>
+<p>För att kontrollera om behandlings- och kontrollgruppen har likvärdiga färdigheter kan vi jämföra de relevanta egenskaper vi kan observera, som ålder, tidigare prestationer, tidigare utbildning med mera. För exempel på en studie med liknande metod, se <a href="https://www.nationalekonomi.se/wp-content/uploads/2022/09/50-6-doras.pdf">Rooth och Stenberg (2022)</a>.</p>
+</div>
+<div id="alkoholens-skadeverkningar" class="section level4" number="0.1.40.4">
+<h4>
+<span class="header-section-number">0.1.40.4</span> Alkoholens skadeverkningar<a class="anchor" aria-label="anchor" href="#alkoholens-skadeverkningar"><i class="fas fa-link"></i></a>
+</h4>
+<p>Låt oss ta ett exempel på verklig forskning som applicerar brytpunktsanalys på ett riktigt fall. Vi ska här använda oss av <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a> studie på alkohol och dödlighet. Att alkohol är direkt skadligt och även indirekt ökar risken för olika negativa effekter är välkänt. Samtidigt kan det vara svårt att i detalj skatta de skadliga effekterna (fenomen Y) av ökad tillgång till alkohol (fenomen <span class="math inline">\(X\)</span>) eftersom människor som far illa av alkohol ofta även har andra destruktiva vanor. Vissa av dessa kan vi observera och kontrollera för (fenomen <span class="math inline">\(P\)</span>). Men många dåliga vanor är av sådan art att det är svårt eller omöjligt att kontrollera för allt i analys (fenomen <span class="math inline">\(Z\)</span>).</p>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a> använder sig av det faktum att i USA är åldersgränsen för att köpa alkohol 21 år. Först visar de att drickandet bland unga vuxna ökar kraftigt strax efter 21-årsdagen samtidigt som olika dödsorsaker som ofta är förknippade med alkoholkonsumtion ökar: trafikolyckor, självmord med mera.</p>
+<p>Carpenter och Dobkin jämför därför mängden dödsfall just kring månaderna före och efter människors 21-årsdag. Alltså, vid 21-årsdagen är den största förändringen just ökad tillgång till alkohol. Och av en tragisk händelse ökar samtidigt mängden dödsfall av orsaker som ofta orsakas av just alkohol.</p>
+<p>Låt oss nu gå igenom grunderna för den regressionsanalys som Carpenter och Dobkin använder för att mäta dessa effekter. Vi illustrerar här två exempel. Vi börjar med följande regressionsmodell:</p>
+<p><span class="math inline">\(Y_{i} = a_{1} + a_{2}X_{i} + a_{3}T_{i} + u_{i}\)</span> (2)</p>
+<p>där <span class="math inline">\(a_{1},a_{2}\)</span> och <span class="math inline">\(a_{3}\)</span> är koefficienter. <span class="math inline">\(Y_{i}\)</span> är antal alkoholrelaterade dödsfall per 100 000 invånare i respektive åldersgrupp i, där varje åldersgrupp är indelad i månader: 19 år och 1 månad, 19 år och 2 månader, och så vidare.</p>
+<p>Variabel <span class="math inline">\(X\)</span> är ålder räknat i månader. <span class="math inline">\(T\)</span> är en dummyvariabel som är <span class="math inline">\(T = 0\)</span> för de åldersgrupper som är under 21 och <span class="math inline">\(T = 1\)</span> för de åldersgrupper som har fyllt 21. <span class="math inline">\(u_{i}\)</span> är felterm för åldersgrupp i. Koefficienten <span class="math inline">\(a_{3}\)</span> som är multiplicerad med <span class="math inline">\(T\)</span> kommer i denna regressionsmodell att beskriva den effekt som 21-årsdagen har på alkoholrelaterad dödlighet.</p>
+<p>Koefficienten <span class="math inline">\(a_{2}\)</span> i regressionsmodellen i ekvation 2 estimerar samvariationen mellan dödlighet <span class="math inline">\((Y)\)</span> och ålder <span class="math inline">\((X)\)</span>. Men denna samvariation kan också tänkas ändras då en person fyller 21. För att kontrollera detta lägger vi till en interaktionsterm <span class="math inline">\(X\*T\)</span>. Vi får nu följande regressionsmodell:</p>
+<p><span class="math inline">\(X\*T:Y_{i} = b_{1} + b_{2}X_{i} + b_{3}T_{i} + b_{4}\left( X_{i}\*T_{i} \right) + v_{i}\)</span> (3)</p>
+<p>där <span class="math inline">\(b_{1},b_{2},b_{3}\)</span> och <span class="math inline">\(b_{4}\)</span> är koefficienter <span class="math inline">\(Y,X\)</span> och <span class="math inline">\(T\)</span> är samma variabler som i regressionsmodellen i ekvation 2 och <span class="math inline">\(v\)</span> är feltermen. Interaktionstermen <span class="math inline">\(b_{4}\left( X_{i}\*T_{i} \right)\)</span> estimerar förändringar i samvariationen mellan alkoholkonsumtion och dödlighet före/efter 21-årsdagen.</p>
+</div>
+<div id="carpenter-och-dobkins-resultat-i-diagram" class="section level4" number="0.1.40.5">
+<h4>
+<span class="header-section-number">0.1.40.5</span> Carpenter och Dobkins resultat i diagram<a class="anchor" aria-label="anchor" href="#carpenter-och-dobkins-resultat-i-diagram"><i class="fas fa-link"></i></a>
+</h4>
+<p>De två regressionsmodellerna illustreras i figur 2 där båda diagrammen använder samma data, hämtad från <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a>.</p>
+<p>Jämför figur 3 i <span class="math display">\[[carpenter2009theeffect](#LyXCite-carpenter2009theeffect)\]</span>. Data tillgängliga här: <a href="https://github.com/jrnold/masteringmetrics/blob/master/" class="uri">https://github.com/jrnold/masteringmetrics/blob/master/</a></p>
+<p>masteringmetrics/data/mlda.rda</p>
+<p>Den vertikala linjen mitt i respektive diagram markerar tidpunkten då personerna i undersökningen fyller 21. Till vänster om linjen visas genomsnittligt antal dödsfall för människor strax under 21 och till höger dödsfall för de som precis fyllt 21. Den högra regressionslinjen i respektive diagrammen skiftar upp vid 21 års ålder, vilket indikerar att dödligheten stiger brant efter 21-årsdagen i och med att människor har möjlighet att köpa alkohol.</p>
+<p>I det vänstra diagrammet ser vi två regressionslinjer, där båda är estimerade med regressionsmodellen i ekvation 2. Regressionslinjen till vänster, för åldersgrupperna under 21, är ritad med <span class="math inline">\(T = 0\)</span> och lutar nedåt. För åldersgrupperna över 21, till höger i det vänstra diagrammet, är regressionslinjen ritad med <span class="math inline">\(T = 1\)</span>. De båda regressionslinjerna i det vänstra diagrammet har samma lutning, eftersom vi endast estimerar en lutningskoefficient för ålder i ekvation 2.</p>
+<p>I det högra diagrammet ser vi också två regressionslinjer som är estimerade utifrån regressionsmodellen i ekvation 3. För åldersgrupperna över 21, till höger i diagrammet, skiftar linjen upp. Lutningen ändras också. För åldersgrupperna under 21, till vänster i det högra diagrammet, syns en positiv korrelation mellan alkoholrelaterad dödlighet och ålder. För åldersgrupperna över 21 syns i stället en negativ korrelation mellan alkoholrelaterad dödlighet och ålder.</p>
+<div class="inline-figure">**Figur 2: Samvariationen mellan ålder och alkoholrelaterad dödlighet**
+<img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\4%20-%20Minstakvadratmetoden%20f%C3%B6rdjupning%202%20fler%20variabler\4-7%20-%20R%C3%A4kna%20p%C3%A5%20orsak%20och%20effekt/img/k2-4-7-image2.png" style="width:6.32639in;height:4.21759in">
+</div>
+<p>Förklaring: Brytpunktsanalys rörande alkoholrelaterade dödsfall per åldersgrupp i USA. Se brödtext för förklaring av regressionsmodellerna. Data från <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a>. Genomsnittlig alkolholrelaterad dödlighet ökat skarpt i samband med att människor fyller 21.</p>
+</div>
+</div>
+<div id="sammanfattning" class="section level3" number="0.1.41">
+<h3>
+<span class="header-section-number">0.1.41</span> Sammanfattning<a class="anchor" aria-label="anchor" href="#sammanfattning"><i class="fas fa-link"></i></a>
+</h3>
+<p>I detta avsnitt har vi gått igenom varför kapitel 4 spelar roll för vetenskap:</p>
+<ol style="list-style-type: decimal">
+<li><p>Regressionsanalys är inte bara en teknisk metod - det är ett verktyg för att studera orsakssamband.</p></li>
+<li>
+<p>För att mäta kausalitet korrekt måste vi:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Antingen göra randomiserade experiment (RCT)</p></li>
+<li><p>Eller hitta kvasiexperimentella metoder (som brytpunktsanalys)</p></li>
+<li><p>Eller åtminstone kontrollera för alla relevanta variabler</p></li>
+</ol>
+</li>
+<li><p>Som vi såg här i kapitel 4 kan alla variabler som ingår eller inte ingår i en analys påverka resultaten. Detta är inte en teknisk detalj. Det är skillnaden mellan korrekta eller felaktiga slutsatser om orsak och verkan.</p></li>
+<li>
+<p>Det finns inga direkta metoder för att objektivt bevisa vilka variabler som ska ingå. Därför behöver vi:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Stark teori</p></li>
+<li><p>Genomtänkt forskningsdesign</p></li>
+<li><p>Kritiskt tänkande</p></li>
+<li><p>Vetenskaplig ödmjukhet</p></li>
+</ol>
+</li>
+</ol>
+<p>Detta är varför metodik och statistik inte bara handlar om matte. Detta är grunden för hur vi förstår världen.</p>
+</div>
+<div id="uppgifter-40" class="section level3" number="0.1.42">
+<h3>
+<span class="header-section-number">0.1.42</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-40"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-4-7"]=[  {    "id": "k2-4-7-001",    "name": "Uppgift 1",    "exercise": "Vad menas med <em>exogen variation</em> i en förklarande variabel X?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Variation i X som orsakas av Y eller av faktorer som påverkar både X och Y",          "Variation i X som inte orsakas av Y eller av faktorer som påverkar både X och Y",          "Variation i X som uppkommer slumpmässigt utan något samband med verkligheten",          "Variation i X som mäter systematiska fel i datainsamlingen"        ],        "correct": "Variation i X som inte orsakas av Y eller av faktorer som påverkar både X och Y"      }    },    "error": { "message": "Tänk på skillnaden mellan ett randomiserat experiment och en observationsstudie. Vad är det som gör exogen variation lämplig för att studera orsakssamband?" },    "correct": { "message": "Rätt! Exogen variation i X är variation som inte orsakas av Y eller av bakgrundsfaktorer som påverkar båda. I ett randomiserat experiment bestäms vem som får behandling av forskarna, inte av deltagarnas egna egenskaper – det skapar exogen variation." }  },  {    "id": "k2-4-7-002",    "name": "Uppgift 2",    "exercise": "Vad kallas det problem som uppstår när fenomen P och Z påverkar vilka som ingår i behandlingsgruppen respektive kontrollgruppen?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Multikolinjäritet",          "Heteroskedasticitet",          "Selektionsproblemet",          "Autokorrelation"        ],        "correct": "Selektionsproblemet"      }    },    "error": { "message": "Tänk på vad det innebär att bakgrundsfaktorer avgör vem som hamnar i behandlings- respektive kontrollgruppen. Vad kallas det problemet i vetenskaplig metod?" },    "correct": { "message": "Rätt! Det kallas selektionsproblemet: om bakgrundsfaktorer (P och Z) påverkar vilka som väljer att delta i behandlingen, kan vi inte avgöra om utfallsskillnader beror på behandlingen eller på dessa bakgrundsfaktorer." }  },  {    "id": "k2-4-7-003",    "name": "Uppgift 3",    "exercise": "Carpenter och Dobkin (2009) studerade alkohol och dödlighet med brytpunktsanalys. Varför är 21-årsåldern en lämplig brytpunkt för denna studie i USA?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "För att hjärnan slutar utvecklas vid 21 år",          "För att USA:s åldersgräns för att köpa alkohol är 21 år, vilket skapar en tydlig förändring i tillgång",          "För att mönstringsålder i USA är 21 år",          "För att rösträtten i USA inträder vid 21 år"        ],        "correct": "För att USA:s åldersgräns för att köpa alkohol är 21 år, vilket skapar en tydlig förändring i tillgång"      }    },    "error": { "message": "Vad är den lagstadgade åldersgränsen för att köpa alkohol i USA, och varför gör just den till en lämplig brytpunkt i en studie om alkohol och dödlighet?" },    "correct": { "message": "Rätt! I USA är åldersgränsen för att köpa alkohol 21 år. Vid 21-årsdagen sker en plötslig och lagstyrd ökning av tillgången till alkohol. De som precis fyllt 21 och de som är precis under 21 är i övrigt likvärdiga, vilket gör detta till en nästan slumpmässig indelning kring brytpunkten." }  },  {    "id": "k2-4-7-004",    "name": "Uppgift 4",    "exercise": "I regressionsmodellen \\(Y_i = a_1 + a_2 X_i + a_3 T_i + u_i\\), där Y är alkoholrelaterad dödlighet, X är ålder och T är en dummyvariabel (0 = åldersgrupp under 21, 1 = åldersgrupp som fyllt 21): vad mäter koefficienten \\(a_3\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Samvariationen mellan ålder och alkoholrelaterad dödlighet",          "Den genomsnittliga dödligheten för alla åldersgrupper",          "Effekten på alkoholrelaterad dödlighet av att ha fyllt 21 år",          "Lutningen av regressionslinjen för åldersgrupper under 21"        ],        "correct": "Effekten på alkoholrelaterad dödlighet av att ha fyllt 21 år"      }    },    "error": { "message": "T är en dummy för om en person har fyllt 21 eller inte. Vad mäter en dummyvariabels koefficient i allmänhet?" },    "correct": { "message": "Rätt! Koefficienten \\(a_3\\) mäter effekten av att ha fyllt 21 år – det vill säga, den genomsnittliga skillnaden i alkoholrelaterad dödlighet mellan åldersgrupper strax under och strax över 21-årsgränsen." }  },  {    "id": "k2-4-7-005",    "name": "Uppgift 5",    "exercise": "Vilket av följande påståenden sammanfattar bäst varför randomiserade experiment är viktiga för att studera orsakssamband?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Randomiserade experiment är alltid billigare och enklare att genomföra",          "Randomisering bryter länkarna från bakgrundsfaktorer till behandlingsvariabeln, vilket möjliggör kausal analys",          "Randomiserade experiment ger alltid statistiskt signifikanta resultat",          "Randomisering eliminerar behovet av regressionsanalys"        ],        "correct": "Randomisering bryter länkarna från bakgrundsfaktorer till behandlingsvariabeln, vilket möjliggör kausal analys"      }    },    "error": { "message": "Tänk på hur slumpmässig tilldelning påverkar sambandet mellan bakgrundsfaktorer (P och Z) och behandlingsvariabeln X. Vad händer med dessa samband när vem som får behandling bestäms av slumpen?" },    "correct": { "message": "Rätt! Randomisering 'bryter' pilarna från bakgrundsfaktorer (P och Z) till behandlingsvariabeln X. När vem som får behandling bestäms slumpmässigt – inte av personernas egna egenskaper – kan vi tolka samvariationen mellan X och Y som ett kausalt samband." }  }];</script><div class="exercise-section" data-section-id="k2-4-7">
+
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k2-4-6.html">Interaktion</a></div>
+<div class="next"><a href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-4-7">Räkna på orsak och effekt</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-40"><span class="header-section-number">0.1.37</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-40"><span class="header-section-number">0.1.38</span> Teori</a></li>
+<li><a class="nav-link" href="#exogen-variation-1"><span class="header-section-number">0.1.39</span> Exogen variation</a></li>
+<li><a class="nav-link" href="#selektionsproblemet-1"><span class="header-section-number">0.1.40</span> Selektionsproblemet</a></li>
+<li><a class="nav-link" href="#sammanfattning"><span class="header-section-number">0.1.41</span> Sammanfattning</a></li>
+<li><a class="nav-link" href="#uppgifter-40"><span class="header-section-number">0.1.42</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-4-7.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-4-7.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Regressionsanalys med tre variabler | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.1.19 Begrepp Inga nya begrepp i detta avsnitt.  0.1.20 Teori Varför behöver vi fler än två variabler? I analytiskt arbete (och i världen överhuvudtaget) påverkas det vi studerar nästan alltid av...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Regressionsanalys med tre variabler | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.1.19 Begrepp Inga nya begrepp i detta avsnitt.  0.1.20 Teori Varför behöver vi fler än två variabler? I analytiskt arbete (och i världen överhuvudtaget) påverkas det vi studerar nästan alltid av...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Regressionsanalys med tre variabler | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.1.19 Begrepp Inga nya begrepp i detta avsnitt.  0.1.20 Teori Varför behöver vi fler än två variabler? I analytiskt arbete (och i världen överhuvudtaget) påverkas det vi studerar nästan alltid av...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="active" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-4-1" class="section level1 unnumbered">
+<h1>Regressionsanalys med tre variabler<a class="anchor" aria-label="anchor" href="#k2-4-1"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-34" class="section level3" number="0.1.19">
+<h3>
+<span class="header-section-number">0.1.19</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-34"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Inga nya begrepp i detta avsnitt.</em></p>
+</div>
+<div id="teori-34" class="section level3" number="0.1.20">
+<h3>
+<span class="header-section-number">0.1.20</span> Teori<a class="anchor" aria-label="anchor" href="#teori-34"><i class="fas fa-link"></i></a>
+</h3>
+<p>Varför behöver vi fler än två variabler? I analytiskt arbete (och i världen överhuvudtaget) påverkas det vi studerar nästan alltid av flera faktorer samtidigt. Om vi bara inkluderar en förklarande variabel <span class="math inline">\((X)\)</span> men det egentligen finns en annan viktig variabel <span class="math inline">\((Z)\)</span> som också påverkar <span class="math inline">\(Y\)</span>, riskerar vi att få felaktiga resultat. I detta avsnitt ska vi lära oss hur regression fungerar med tre variabler, vilket är grunden för att kunna arbeta med ännu fler variabler senare.</p>
+<div id="vad-händer-när-vi-har-tre-variabler" class="section level4" number="0.1.20.1">
+<h4>
+<span class="header-section-number">0.1.20.1</span> Vad händer när vi har tre variabler?<a class="anchor" aria-label="anchor" href="#vad-h%C3%A4nder-n%C3%A4r-vi-har-tre-variabler"><i class="fas fa-link"></i></a>
+</h4>
+<p>Låt oss nu utgå från en regressionsmodell där den förklarade (beroende) variabeln <span class="math inline">\(Y\)</span> förklaras av de två förklarande (oberoende) variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>:</p>
+<p><span class="math inline">\(Y_{i} = a + bX_{i} + cZ_{i} + V_{i}\)</span> (1)</p>
+<p>Bokstäverna <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> är konstanta koefficienter och <span class="math inline">\(V_{i}\)</span> är feltermen för observation <em>i</em>. Vi ska nu använda minstakvadratmetoden för att estimera koefficienterna <span class="math inline">\(\widehat{a}\)</span>, <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span> och därefter <span class="math inline">\(\widehat{Y}\)</span> samt <span class="math inline">\(\widehat{V}\)</span>.</p>
+<p>Koefficienten <span class="math inline">\(\widehat{b}\)</span> kommer att ge oss den genomsnittliga förändringen i <span class="math inline">\(Y\)</span> som är associerad med en ökning av <span class="math inline">\(X\)</span> med en enhet, givet värdena i <span class="math inline">\(Z\)</span>. Koefficient <span class="math inline">\(\widehat{c}\)</span> visar den genomsnittliga förändringen i <span class="math inline">\(Y\)</span> som är associerad med en ökning av <span class="math inline">\(Z\)</span> med en enhet, givet värdena i <span class="math inline">\(X\)</span>.</p>
+<p>I och med att vi använder båda de förklarande variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> i samma regressionsmodell kommer beräkningen visa samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>, med hänsyn till variationer i <span class="math inline">\(Z\)</span>. Samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(Z\)</span> kommer att uppskattas med hänsyn till variationer i <span class="math inline">\(X\)</span>.</p>
+<p>Säg som exempel, att vi vill veta vilken inverkan en utbildning har på studenternas inkomster senare i livet (jmf exemplet i <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">avsnitt 1.2</a>). Vi ställer upp en regressionsmodell av typen <span class="math inline">\(Y = \alpha_{1} + \alpha_{2}X + \epsilon\)</span> där <span class="math inline">\(Y\)</span> är inkomst och <span class="math inline">\(X\)</span> är en variabel som indikerar om en person har läst utbildningen eller inte.</p>
+<p>Men nu vill vi även kontrollera för om studenterna är ovanligt ambitiösa. Låt oss för tankeexperimentets skull anta att vi faktiskt har bra information rörande detta i form av variabel <span class="math inline">\(Z\)</span>. I så fall kan vi lägga till det som en ny förklarande variabel i regressionsmodellen så att vi nu får en sådan regressionsmodell med samma form som den i ekvation 1: <span class="math inline">\(Y = \alpha_{1} + \alpha_{2}X + \alpha_{2}Z + \epsilon\)</span>.</p>
+<p>I detta hypotetiska exempel är <span class="math inline">\(Z\)</span> studenternas ambitionsnivå. I en idealisk situation skulle detta innebära att vi nu rensar för betydelsen av studenternas ambitionsnivå <span class="math inline">\(Z\)</span>, när vi uppskattar samvariationen mellan utbildning <span class="math inline">\(X\)</span> och inkomst <span class="math inline">\(Y\)</span>.</p>
+<p>Om vi vill kontrollera för ytterligare andra fenomen kan vi lägga till fler förklarande variabler. Detta är en central aspekt av regressionsanalys och vi återkommer nedan till vad detta innebär.</p>
+</div>
+<div id="minstakvadratroten-med-tre-variabler" class="section level4" number="0.1.20.2">
+<h4>
+<span class="header-section-number">0.1.20.2</span> Minstakvadratroten med tre variabler<a class="anchor" aria-label="anchor" href="#minstakvadratroten-med-tre-variabler"><i class="fas fa-link"></i></a>
+</h4>
+<p>Låt oss återvända till regressionsmodellen i ekvation 1. Precis som när vi endast hade en förklarande variabel i regressionsmodellen ska vi nu, när vi har två förklarande variabler, hitta de värden för de konstanta koefficienterna <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> som minimerar de kvadrerade residualerna <span class="math inline">\(\sum_{}^{}{\widehat{V}}^{2}\)</span>. Vi kan därför beskriva vår beräkning som ett minimeringsproblem:</p>
+<p><span class="math inline">\(\ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}\ = \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (2)</p>
+<p>Predikterade <span class="math inline">\(\widehat{Y}\)</span> kan vi utifrån vår regressionsmodell definiera som:</p>
+<p><span class="math inline">\(\widehat{Y_{i}} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i}\)</span> (3)</p>
+<p>Denna definition av <span class="math inline">\(\widehat{Y}\)</span> kan vi sätta in i vårt minimeringsproblem:</p>
+<p><span class="math inline">\(\min_{\widehat{a},\widehat{b},\widehat{c}}{\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}} = \min_{\widehat{a},\widehat{b},\widehat{c}}{\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}} = \ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)^{2}\)</span> (4)</p>
+<p>I denna ekvation känner vi till <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>, eftersom detta är våra observerade data. Vi har tre faktorer att ta hänsyn till i form av de tre konstanterna <span class="math inline">\(\widehat{a}\)</span>, <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>.</p>
+<p>Vi beräknar förstagradsvillkoren genom att derivera uttrycket i ekvation 4 med hänsyn till <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> samt <span class="math inline">\(c\)</span> var för sig och sätta respektive resultat lika med 0. Eftersom vi har tre faktorer får vi följande tre resultat:</p>
+<p><span class="math inline">\(\frac{\partial}{\partial\widehat{a}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}} \right) = \sum_{}^{}{- 2\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)}\)</span> (5)</p>
+<p><span class="math display">\[\frac{\partial}{\partial\widehat{b}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}} \right) = \sum_{}^{}{- 2X_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)}\]</span></p>
+<p><span class="math display">\[\frac{\partial}{\partial\widehat{c}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}} \right) = \sum_{}^{}{- 2Z_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)}\]</span></p>
+<p>På liknande sätt som vi gjorde i <a href="https://www.dropbox.com/scl/fi/v0a5z69slwsy7pe20fp7d/3-4-H-rled-estimatorerna.docx?rlkey=kdu3tyfzbzhxk9o1g4xhf17x4&amp;dl=0">avsnitt 3.4</a> kan vi sätta första villkoret lika med 0 och lösa ut en definition för <span class="math inline">\(\widehat{a}\)</span>:</p>
+<p><span class="math inline">\(0 = - 2\sum_{}^{}Y + \sum_{}^{}â + \sum_{}^{}\widehat{b}X_{i} + \sum_{}^{}{\widehat{c}Z_{i}}\)</span> (6)</p>
+<p><span class="math display">\[n\widehat{a} = nY - \widehat{b}nX_{i} - \widehat{c}nZ_{i}\]</span></p>
+<p><span class="math display">\[\widehat{a} = \overline{Y} - \widehat{b}\overline{X} - \widehat{c}\overline{Z}\]</span></p>
+<p>Koefficient <span class="math inline">\(\widehat{a}\)</span> är en funktion av observationerna i alla tre variabler i regressionsmodellen: <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>.</p>
+<p>Härifrån kan vi fortsätta lösa ut lutningskoefficienterna <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. Här nöjer vi oss dock med att enbart jämföra slutresultaten, alltså deras estimatorer, och hoppar över själva härledningarna.</p>
+<p>För att estimera lutningskoefficienterna med tre variabler behöver vi mer komplexa formler än tidigare. Oroa dig inte om formeln ser skrämmande ut. Poängen är att förstå principen här, nämligen att varje koefficient beräknas med hänsyn till de andra variablerna i regressionsmodellen.</p>
+<p>Ekvationerna nedan beskriver estimatorerna för lutningskoefficienterna <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. För att komprimera algebran skriver vi <span class="math inline">\(\widetilde{X_{i}} = X_{i} - \overline{X}\)</span> och motsvarande för <span class="math inline">\(\widetilde{Y_{i}}\)</span> och <span class="math inline">\(\widetilde{Z_{i}}\)</span>. Detta innebär att koefficienternas estimatorer beskrivs utifrån observationernas avvikelser från respektive medelvärde:</p>
+<p><span class="math inline">\(\widehat{b} = \frac{\left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{X_{i}}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{Z_{i}}} \right)\left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)}{\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)^{2}}\)</span> (7)</p>
+<p><span class="math display">\[\widehat{c} = \frac{\left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{Z_{i}}} \right)\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{X}} \right)\left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)}{\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)^{2}}\]</span></p>
+<p>Alla tre koefficienterna <span class="math inline">\(\widehat{a}\)</span>, <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span> beror på de observerade värdena i de tre variablerna <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>. Detta kan vi se eftersom alla tre variablerna ingår i respektive ekvation (estimator).</p>
+<p>Detta innebär att även om <span class="math inline">\(\widehat{b}\)</span> mäter samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är <span class="math inline">\(\widehat{b}\)</span> en funktion av både <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>. Och trots att lutningskoefficienten <span class="math inline">\(\widehat{c}\)</span> mäter samvariationen mellan variablerna <span class="math inline">\(Y\)</span> och <span class="math inline">\(Z\)</span> är även <span class="math inline">\(\widehat{c}\)</span> en funktion av observationer i alla tre variablerna <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>.</p>
+</div>
+<div id="vad-spelar-allt-det-här-för-roll" class="section level4" number="0.1.20.3">
+<h4>
+<span class="header-section-number">0.1.20.3</span> Vad spelar allt det här för roll?<a class="anchor" aria-label="anchor" href="#vad-spelar-allt-det-h%C3%A4r-f%C3%B6r-roll"><i class="fas fa-link"></i></a>
+</h4>
+<p>Huvudpoängen är enkel men avgörande: När vi lägger till eller tar bort variabler i en regressionsmodell ändras resultaten för de andra variablerna.</p>
+<p>I detta exempel såg vi att lutningskoefficienten för <span class="math inline">\(X\)</span> gick från <span class="math inline">\(0,5\)</span> till <span class="math inline">\(0,28\)</span> när vi lade till <span class="math inline">\(Z\)</span>. Detta betyder att om vi inte inkluderar viktiga variabler får vi felaktiga resultat.</p>
+<p>Hade vi haft fler variabler och koefficienter i vår regressionsmodell hade ekvationerna blivit ännu mer omfattande. Längre fram ska vi gå igenom hur vi kan räkna när vi har en regressionsmodell med valfritt antal variabler och koefficienter.</p>
+<p>Om vi tillför en variabel till vår analys kan detta påverka resultaten för alla koefficienter som ingår i modellen. Säg att variabeln <span class="math inline">\(Z\)</span> bör ingå i modellen men att denna av någon anledning inte är med i analysen. I så fall kommer resultatet för variabeln <span class="math inline">\(X\)</span> att bli missvisande.</p>
+<p>Det korrekta resultatet får vi inte förrän vi inkluderar <span class="math inline">\(Z\)</span>. Detta är centralt för att förstå den här typen av metoder, forskning och analytiskt arbete i största allmänhet.</p>
+</div>
+<div id="estimera-en-modell" class="section level4" number="0.1.20.4">
+<h4>
+<span class="header-section-number">0.1.20.4</span> Estimera en modell<a class="anchor" aria-label="anchor" href="#estimera-en-modell"><i class="fas fa-link"></i></a>
+</h4>
+<p>Nu ska vi estimera en regressionsmodell utifrån några observationer. För detta återanvänder vi de påhittade variablerna <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> med de fyra observationer vardera som vi använde tidigare när vi introducerade minstakvadratmetoden. Alla tre variablerna redovisas i tabell 1 med lite beräkningar som vi behöver.</p>
+<p><strong>Tabell 1: Variablerna Y, X och Z med lite beräkningar</strong></p>
+<hr>
+<p><span class="math display">\[i\]</span></p>
+<p><span class="math display">\[Y_{i}\]</span></p>
+<p><span class="math display">\[X_{i}\]</span></p>
+<p><span class="math display">\[Z_{i}\]</span></p>
+<p><span class="math display">\[\widetilde{Y_{i}}\]</span></p>
+<p><span class="math display">\[\widetilde{X_{i}}\]</span></p>
+<p><span class="math display">\[\widetilde{Z_{i}}\]</span></p>
+<p><span class="math display">\[\widetilde{Y_{i}}\widetilde{X_{i}}\]</span></p>
+<p><span class="math display">\[\widetilde{Y_{i}}\widetilde{Z_{i}}\]</span></p>
+<p><span class="math display">\[\widetilde{X_{i}}\widetilde{Z_{i}}\]</span></p>
+<p><span class="math display">\[\widetilde{{X_{i}}^{2}}\]</span></p>
+<p><span class="math display">\[\widetilde{{Z_{i}}^{2}}\]</span></p>
+<div class="inline-table"><table style="width:100%;" class="table table-sm">
+<colgroup>
+<col width="7%">
+<col width="5%">
+<col width="5%">
+<col width="5%">
+<col width="7%">
+<col width="7%">
+<col width="7%">
+<col width="11%">
+<col width="11%">
+<col width="11%">
+<col width="9%">
+<col width="9%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">1</td>
+<td align="center">–0,5</td>
+<td align="center">–2</td>
+<td align="center">–0,5</td>
+<td align="center">1</td>
+<td align="center">0,25</td>
+<td align="center">1</td>
+<td align="center">4</td>
+<td align="center">0,25</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">–1,5</td>
+<td align="center">-1</td>
+<td align="center">2,5</td>
+<td align="center">1,5</td>
+<td align="center">–3,75</td>
+<td align="center">–2,5</td>
+<td align="center">1</td>
+<td align="center">6,25</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">0</td>
+<td align="center">1,5</td>
+<td align="center">1</td>
+<td align="center">–1,5</td>
+<td align="center">1,5</td>
+<td align="center">–2,25</td>
+<td align="center">–1,5</td>
+<td align="center">1</td>
+<td align="center">2,25</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="center">4</td>
+<td align="center">7</td>
+<td align="center">1</td>
+<td align="center">0,5</td>
+<td align="center">2</td>
+<td align="center">0,5</td>
+<td align="center">1</td>
+<td align="center">–0,25</td>
+<td align="center">–1</td>
+<td align="center">4</td>
+<td align="center">0,25</td>
+</tr>
+<tr class="odd">
+<td align="left">Medel</td>
+<td align="center">3,5</td>
+<td align="center">5</td>
+<td align="center">1,5</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="left">_{}^{}{}$$</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">5</td>
+<td align="center">–6</td>
+<td align="center">–4</td>
+<td align="center">10</td>
+<td align="center">9</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Förklaring: <span class="math inline">\(\widetilde{Y_{i}} = Y_{i} - \overline{Y}\)</span> och motsvarande för <span class="math inline">\(\widetilde{X_{i}}\)</span> och <span class="math inline">\(\widetilde{Z_{i}}\)</span>.</p>
+<p>I <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a> använde vi variablerna <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> för att estimera regressionsmodellen <span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> och fann då att <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>. Nu ska vi estimera koefficienterna för följande regressionsmodell:</p>
+<p><span class="math inline">\(Y_{i} = a + bX_{i} + cZ_{i} + V_{i}\)</span> (8)</p>
+<p>där <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> är variablerna, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> är koefficienterna vi ska estimera och <span class="math inline">\(V\)</span> är feltermen. I ekvation 7 har vi definitionerna för hur vi kan estimera <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. Utifrån uppgifterna i tabell 1 kan vi nu beräkna följande estimat för koefficienterna:</p>
+<p><span class="math inline">\(\widehat{b} = \frac{(5)(9) - ( - 6)( - 4)}{(10)(9) - ( - 4)^{2}} \approx 0,28\)</span> (9)</p>
+<p><span class="math display">\[\widehat{c} = \frac{( - 6)(10) - (5)( - 4)}{(10)(9) - ( - 4)^{2}} \approx - 0,54\]</span></p>
+</div>
+<div id="vad-blev-det-för-skillnad" class="section level4" number="0.1.20.5">
+<h4>
+<span class="header-section-number">0.1.20.5</span> Vad blev det för skillnad?<a class="anchor" aria-label="anchor" href="#vad-blev-det-f%C3%B6r-skillnad"><i class="fas fa-link"></i></a>
+</h4>
+<p>När vi estimerade regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> fann vi att <span class="math inline">\(\widehat{b} = 0,5\)</span>. När vi nu lade till variabeln <span class="math inline">\(Z\)</span> i regressionsmodellen ser vi hur resultatet för lutningskoefficienten <span class="math inline">\(\widehat{b}\)</span> går från 0,5 till 0,3. Resultaten för <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span> använder vi för att estimera <span class="math inline">\(\widehat{a}\)</span>:</p>
+<p><span class="math inline">\(\widehat{a} = 3,5 - \widehat{b}\*5 - \widehat{c}\*1,5\)</span> (10)$ $</p>
+<p><span class="math display">\[= 3,5 - 0,28\*5 - ( - 0,54)\*1,5 \approx 2,89\]</span></p>
+<p>Vi kan sammanfatta våra estimerade koefficienter genom att sätta in resultaten i vår regressionsmodell:</p>
+<p><span class="math inline">\(Y_{i} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} + V_{i} = 2,89 + 0,28X_{i} - 0,54Z_{i} + V_{i}\)</span> (11)</p>
+<p>Nu kan vi även estimera predikterade <span class="math inline">\(\widehat{Y_{i}}\)</span> och residualen <span class="math inline">\(\widehat{V_{i}}\)</span>, vilket sammanfattas i tabell 2 med avrundade resultat.</p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="16%">
+<col width="15%">
+<col width="15%">
+<col width="15%">
+<col width="37%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Observation <span class="math inline">\(i\)</span>
+</th>
+<th align="left">} - 0,54Z_{i}$$</th>
+<th></th>
+<th></th>
+<th></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">3</td>
+<td>3</td>
+<td>1</td>
+<td>3,2</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">2</td>
+<td>4</td>
+<td>4</td>
+<td>1,86</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">5</td>
+<td>6</td>
+<td>0</td>
+<td>4,59</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">4</td>
+<td>7</td>
+<td>1</td>
+<td>4,34</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="ett-försök-att-illustrera-resultatet-i-diagram" class="section level4" number="0.1.20.6">
+<h4>
+<span class="header-section-number">0.1.20.6</span> Ett försök att illustrera resultatet i diagram<a class="anchor" aria-label="anchor" href="#ett-f%C3%B6rs%C3%B6k-att-illustrera-resultatet-i-diagram"><i class="fas fa-link"></i></a>
+</h4>
+<p>När vi har tre variabler är det svårare att illustrera samvariation i ett diagram. Trots detta görs ett försök i figur 1 där de fyra observationerna är placerade i diagrammet utifrån deras värden för <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>.</p>
+<p>Den vertikala axeln är <span class="math inline">\(Y\)</span>-axeln medan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> har varsin horisontell axel. Den svarta pricken högst upp i diagrammet är observation 3 vars värden är <span class="math inline">\((Y,X,Z) = (5,6,0)\)</span>.</p>
+<p>Eftersom regressionsmodellen har tre variabler blir regressionslinjen <span class="math inline">\(\left( \widehat{Y} \right)\)</span> nu en plan yta med tre dimensioner, vilket illustreras av rutnätet. Denna plana yta är vinklad med hänsyn till de två variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>, beroende på deras respektive lutningskoefficient. Eftersom lutningskoefficienten <span class="math inline">\(\widehat{c} \&lt; 0\)</span> lutar rutnätet nedåt längs med <span class="math inline">\(Z\)</span>-axeln sett från <span class="math inline">\(Y\)</span>-axeln. Eftersom <span class="math inline">\(\widehat{b} \&gt; 0\)</span> lutar rutnätet uppåt längs med <span class="math inline">\(X\)</span>-axeln sett från <span class="math inline">\(Y\)</span>-axeln.</p>
+<p><strong>Figur 1. Regressionsresultat med tre variabler</strong></p>
+<p><em><mark>Sideeg &gt; Jag sparade ett 3d-diagram som html i katalogen</mark><a href="https://www.dropbox.com/scl/fo/2i2ntlsxmg2g3u0mjwg93/AGRmmFsd9k7y02ZW2EYyPyo?rlkey=oadbjo86p3expplymcnzfshu1&amp;dl=0">Eriks_3d_graf</a>. <mark>Om ni har möjlighet att göra det snyggare får ni jättegärna göra det</mark></em>😊</p>
+<p>Förklaring: Diagrammet illustrerar <span class="math inline">\(\widehat{Y} = 2,89 + 0,28X - 0,54Z\)</span>. Klicka och dra i diagrammet för att vrida på det.</p>
+</div>
+<div id="vad-spelar-allt-det-här-för-roll-1" class="section level4" number="0.1.20.7">
+<h4>
+<span class="header-section-number">0.1.20.7</span> Vad spelar allt det här för roll?<a class="anchor" aria-label="anchor" href="#vad-spelar-allt-det-h%C3%A4r-f%C3%B6r-roll-1"><i class="fas fa-link"></i></a>
+</h4>
+<p>När vi la till en ny variabel i vår regressionsmodell ändras samvariationen mellan de variabler vi hade i regressionsmodellen sedan innan. Poängen med denna genomgång är att visa att detta även gäller om vi skulle lägga till ytterligare variabler förutom de tre vi använt här. Och om vi tar bort en variabel från en regressionstabell så kan detta leda till att samvariationen för de kvarvarande variablerna ändras.</p>
+<p>Syftet med regressionsanalys är att studera mönster i data. Att saker samvarierar betyder inte nödvändigtvis någonting alls. Men i många situationer tolkar vi samvariation som tecken på orsakssamband. Ibland har vi goda skäl att göra så. Ibland inte.</p>
+<p>När vi studerar orsakssamband vill vi inte bara veta om “fenomen A påverkar B”. Ofta vill vi veta mer i detalj vad som händer. Orsakssamband ligger till grund för alla möjliga beslut som människor fattar. Om jag har huvudvärk – ska jag ta 1 tablett, 100 tabletter eller inga tabletter? Ska regeringen spendera 1 miljon kr eller 100 miljarder på att förbättra matematikundervisningen?</p>
+<p>För att få bättre svar på dessa frågor behöver våra analysmetoder vara noggranna och genomtänkta på samma gång.</p>
+</div>
+</div>
+<div id="uppgifter-34" class="section level3" number="0.1.21">
+<h3>
+<span class="header-section-number">0.1.21</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-34"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-4-1"]=[  {    "id": "k2-4-1-001",    "name": "Uppgift 1",    "exercise": "I regressionsmodellen \\(Y_i = a + bX_i + cZ_i + V_i\\) ger koefficienten \\(\\widehat{b}\\) oss:",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den genomsnittliga förändringen i Y per enhet ökning i X, utan hänsyn till Z",          "Den genomsnittliga förändringen i Y per enhet ökning i X, givet värdena i Z",          "Den genomsnittliga förändringen i Z per enhet ökning i X",          "Den totala variationen i Y som förklaras av modellen"        ],        "correct": "Den genomsnittliga förändringen i Y per enhet ökning i X, givet värdena i Z"      }    },    "error": { "message": "Tänk på vad det innebär att ha med Z i modellen. Vad kontrolleras för när vi tolkar b-koefficienten?" },    "correct": { "message": "Rätt! Koefficienten \\(\\widehat{b}\\) ger den genomsnittliga förändringen i Y vid en enhet ökning i X, givet (konstanthållna) värden i Z. Båda de förklarande variablerna ingår i beräkningen." }  },  {    "id": "k2-4-1-002",    "name": "Uppgift 2",    "exercise": "En regressionsmodell \\(Y = a + bX + V\\) estimeras och ger \\(\\widehat{b} = 0{,}5\\). När en tredje variabel Z läggs till i modellen \\(Y = a + bX + cZ + V\\) och alla koefficienter re-estimeras, vad kan vi generellt säga om \\(\\widehat{b}\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(\\widehat{b}\\) förblir alltid oförändrad, eftersom OLS-estimatorn bara beror på X och Y",          "\\(\\widehat{b}\\) kan förändras, eftersom koefficienten nu mäter sambandet mellan X och Y konstanthållet för Z",          "\\(\\widehat{b}\\) ökar alltid när fler variabler läggs till i modellen",          "\\(\\widehat{b}\\) kan bara förändras om Z och X är perfekt korrelerade"        ],        "correct": "\\(\\widehat{b}\\) kan förändras, eftersom koefficienten nu mäter sambandet mellan X och Y konstanthållet för Z"      }    },    "error": { "message": "Tänk på vad det innebär att konstanthålla Z. Fångar \\(\\widehat{b}\\) fortfarande exakt samma samband som utan Z i modellen?" },    "correct": { "message": "Rätt! Lutningskoefficienten \\(\\widehat{b}\\) gick från 0,5 till ungefär 0,28 när Z lades till. Detta illustrerar hur koefficienter ändras när man tillför variabler till modellen." }  },  {    "id": "k2-4-1-003",    "name": "Uppgift 3",    "exercise": "I estimatorformeln för tre variabler med summorna \\(\\sum\\tilde{Y}_i\\tilde{X}_i = 5\\), \\(\\sum\\tilde{Z}_i^2 = 9\\), \\(\\sum\\tilde{Y}_i\\tilde{Z}_i = -6\\), \\(\\sum\\tilde{X}_i\\tilde{Z}_i = -4\\), \\(\\sum\\tilde{X}_i^2 = 10\\): \\[\\widehat{b} = \\frac{\\left(\\sum \\widetilde{Y_i}\\widetilde{X_i}\\right)\\left(\\sum \\widetilde{Z_i}^2\\right) - \\left(\\sum \\widetilde{Y_i}\\widetilde{Z_i}\\right)\\left(\\sum \\widetilde{X_i}\\widetilde{Z_i}\\right)}{\\left(\\sum \\widetilde{X_i}^2\\right)\\left(\\sum \\widetilde{Z_i}^2\\right) - \\left(\\sum \\widetilde{X_i}\\widetilde{Z_i}\\right)^2}\\] Vad är täljaren?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "21" },    "answerformat": "",    "error": { "message": "Beräkna \\((5)(9) - (-6)(-4) = 45 - 24\\). Var noga med tecknen vid multiplikationen av de negativa talen." },    "correct": { "message": "Rätt! Täljaren är \\((5)(9) - (-6)(-4) = 45 - 24 = 21\\). Nämnaren är \\((10)(9) - (-4)^2 = 90 - 16 = 74\\), vilket ger \\(\\widehat{b} \\approx 0{,}28\\)." }  },  {    "id": "k2-4-1-004",    "name": "Uppgift 4",    "exercise": "I regressionsresultatet \\(Y_i = 2{,}89 + 0{,}28X_i - 0{,}54Z_i\\), vad är det predikterade värdet \\(\\widehat{Y}\\) för en observation med \\(X = 6\\) och \\(Z = 0\\)? Avrunda till en decimal.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "4.6" },    "answerformat": "",    "error": { "message": "Sätt in värdena i formeln: \\(\\widehat{Y} = 2{,}89 + 0{,}28 \\cdot 6 - 0{,}54 \\cdot 0\\). Räkna ut termerna var för sig." },    "correct": { "message": "Rätt! \\(\\widehat{Y}_3 = 2{,}89 + 0{,}28 \\cdot 6 - 0{,}54 \\cdot 0 = 2{,}89 + 1{,}68 = 4{,}57 \\approx 4{,}6\\)." }  },  {    "id": "k2-4-1-005",    "name": "Uppgift 5",    "exercise": "Interceptet \\(\\widehat{a}\\) i en regressionsmodell med tre variabler ges av formeln \\(\\widehat{a} = \\overline{Y} - \\widehat{b}\\overline{X} - \\widehat{c}\\overline{Z}\\). Med \\(\\overline{Y} = 3{,}5\\), \\(\\overline{X} = 5\\), \\(\\overline{Z} = 1{,}5\\), \\(\\widehat{b} = 0{,}28\\) och \\(\\widehat{c} = -0{,}54\\): vad är \\(\\widehat{a}\\)? Avrunda till en decimal.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "2.9" },    "answerformat": "",    "error": { "message": "Beräkna: \\(\\widehat{a} = 3{,}5 - 0{,}28 \\cdot 5 - (-0{,}54) \\cdot 1{,}5\\). Kom ihåg att subtrahera en negativ term innebär addition." },    "correct": { "message": "Rätt! \\(\\widehat{a} = 3{,}5 - 0{,}28 \\cdot 5 - (-0{,}54) \\cdot 1{,}5 = 3{,}5 - 1{,}4 + 0{,}81 \\approx 2{,}89 \\approx 2{,}9\\)." }  }];</script><div class="exercise-section" data-section-id="k2-4-1">
+
+</div>
+<hr>
+<div class="next-section-link">
+<p><a href="sec-k2-4-2.html">→ Nästa avsnitt: <strong>Faktorvariabler</strong></a></p>
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></div>
+<div class="next"><a href="k2-4-2.html">Faktorvariabler</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-4-1">Regressionsanalys med tre variabler</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-34"><span class="header-section-number">0.1.19</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-34"><span class="header-section-number">0.1.20</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-34"><span class="header-section-number">0.1.21</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-4-1.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-4-1.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Information och variabler | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.0.90 Begrepp Data: Ett annat ord för information inom analytiskt arbete. Data kan bestå av allting vi kan uppfatta med våra sinnen, som text, ljud, bild etcetera. Datavariabel: Information...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Information och variabler | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.0.90 Begrepp Data: Ett annat ord för information inom analytiskt arbete. Data kan bestå av allting vi kan uppfatta med våra sinnen, som text, ljud, bild etcetera. Datavariabel: Information...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Information och variabler | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.0.90 Begrepp Data: Ett annat ord för information inom analytiskt arbete. Data kan bestå av allting vi kan uppfatta med våra sinnen, som text, ljud, bild etcetera. Datavariabel: Information...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="active" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-1-3" class="section level1 unnumbered">
+<h1>Information och variabler<a class="anchor" aria-label="anchor" href="#k2-1-3"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-22" class="section level3" number="0.0.90">
+<h3>
+<span class="header-section-number">0.0.90</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-22"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>Data:</strong> Ett annat ord för information inom analytiskt arbete. Data kan bestå av allting vi kan uppfatta med våra sinnen, som text, ljud, bild etcetera.</p></li>
+<li><p><strong>Datavariabel:</strong> Information samlad och kategoriserad, till exempel i en kolumn. En datavariabel kan till exempel innehålla information om olika personers längd, vikt och ålder.</p></li>
+<li><p><strong>Nominaldata:</strong> Data som saknar rangordning, ekvidistans och absolut nollpunkt. Till exempel kategoriska data, som kön och adress.</p></li>
+<li><p><strong>Ordinaldata:</strong> Data som kan rangordnas men saknar ekvidistans och absolut nollpunkt. Till exempel placering i en lista eller kö med plats 1, 2 och 3.</p></li>
+<li><p><strong>Intervalldata:</strong> Data som har rangordning och ekvidistans men saknar absolut nollpunkt. Till exempel temperatur angiven i grader Celsius.</p></li>
+<li><p><strong>Kvotdata:</strong> Data som har rangordning, ekvidistans och absolut nollpunkt. Till exempel längd, avstånd, vikt, massa.</p></li>
+</ul>
+</div>
+<div id="teori-22" class="section level3" number="0.0.91">
+<h3>
+<span class="header-section-number">0.0.91</span> Teori<a class="anchor" aria-label="anchor" href="#teori-22"><i class="fas fa-link"></i></a>
+</h3>
+<p>Den här kursen handlar om hur vi kan studera orsak och verkan i verkligheten. Innan vi går vidare behöver vi gå igenom lite om hur information hanteras i analytiskt arbete.</p>
+<div id="datavariabler" class="section level4" number="0.0.91.1">
+<h4>
+<span class="header-section-number">0.0.91.1</span> Datavariabler<a class="anchor" aria-label="anchor" href="#datavariabler"><i class="fas fa-link"></i></a>
+</h4>
+<p>Information kallas inom analytiskt arbete för <em>data</em>. Data kan alltså bestå av vad som helst som vi kan uppfatta med våra sinnen, som siffror, text, bilder, ljudinspelningar.</p>
+<p>Allt analytiskt arbete använder information om verkligheten i någon form eller utsträckning. All data måste i sin tur tolkas. Mycket analytiskt arbete består av att kartlägga verkligheten och samla in data.</p>
+<p>Exakt vilken typ av information som krävs för en analys beror på vad som är undersökningens <em>syfte</em>. Detta är helt centralt för allt analytiskt arbete men kommer inte diskuteras så noga i den här kursen.</p>
+<p>Vi har ofta glädje av att kategorisera information i <em>datavariabler</em>. Datavariabler placeras ofta som kolumner i en tabell med ett värd per rad, till exempel som i följande tabell:</p>
+<div class="inline-table"><table style="width:44%;" class="table table-sm">
+<colgroup>
+<col width="18%">
+<col width="26%">
+</colgroup>
+<thead><tr class="header">
+<th align="left"><strong>Rad</strong></th>
+<th align="left"><strong>Vår variabel</strong></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Datavärde 1</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">Datavärde 2</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="variabler-kan-innehålla-olika-typer-av-information" class="section level4" number="0.0.91.2">
+<h4>
+<span class="header-section-number">0.0.91.2</span> Variabler kan innehålla olika typer av information<a class="anchor" aria-label="anchor" href="#variabler-kan-inneh%C3%A5lla-olika-typer-av-information"><i class="fas fa-link"></i></a>
+</h4>
+<p>Varje värde i en datavariabel kan innehålla vilken typ av information som helst, till exempel gatunummer, namn på barn födda i april, bruttonationalprodukten för olika länder eller alla enskilda ord i en roman organiserade med ett ord per rad. För att använda en datavariabel för beräkningar behöver denna variabel bestå av siffror eller skrivas om till siffror.</p>
+<p>När vi skapar variabler är det viktigt att all information som vi samlar in till en variabel har samma egenskaper. Om vi till exempel samlar in information om personers längd och inkomst bör vi placera denna information i två olika variabler: en variabel för längd och en variabel för inkomst.</p>
+<p>Om vi blandar information i en variabel, till exempel längd och inkomst, blir det omöjligt att göra beräkningar på variabeln. På samma sätt måste värdena inom en variabel använda samma måttenhet. Alla värden för personernas längd måste anges antingen i centimeter eller i meter.</p>
+</div>
+<div id="datatabeller" class="section level4" number="0.0.91.3">
+<h4>
+<span class="header-section-number">0.0.91.3</span> Datatabeller<a class="anchor" aria-label="anchor" href="#datatabeller"><i class="fas fa-link"></i></a>
+</h4>
+<p>Ett vanligt sätt att organisera data är tabeller, där varje kolumn representerar en variabel och varje rad en observation. Tabell 1 visar ett exempel där vi har tre datavariabler och kallar dessa för <span class="math inline">\(x,\ y\)</span> och <span class="math inline">\(z\)</span>.</p>
+<p>Observationerna numrerar vi <span class="math inline">\(y_{1}\)</span> till <span class="math inline">\(y_{4}\)</span>, <span class="math inline">\(x_{1}\)</span> till <span class="math inline">\(x_{4}\)</span> och <span class="math inline">\(z_{1}\)</span> till <span class="math inline">\(z_{4}\)</span>. Det finns inga regler för hur variabler ska namnges eller numreras. Det förekommer även att variabler kallas för samma bokstav och skiljs åt genom numrering, till exempel variablerna <span class="math inline">\(x_{1},\ x_{2}\)</span> och så vidare.</p>
+<p><strong>Tabell 1: Tre variabler med fyra observationer</strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="11%">
+<col width="28%">
+<col width="28%">
+<col width="28%">
+</colgroup>
+<thead><tr class="header">
+<th></th>
+<th>Variabel 1 <span class="math inline">\((y)\)</span> Variabel 2 <span class="math inline">\((x)\)</span> Va</th>
+<th align="left">riabel 3 <span class="math inline">\((z)\)</span>
+</th>
+<th></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Observation 1</td>
+<td>
+<span class="math inline">\(y_{1}\)</span> <span class="math inline">\(x_{1}\)</span> $z_{</td>
+<td align="left">1}$</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Observation 2</td>
+<td>
+<span class="math inline">\(y_{2}\)</span> <span class="math inline">\(x_{2}\)</span> $z_{</td>
+<td align="left">2}$</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Observation 3</td>
+<td>
+<span class="math inline">\(y_{3}\)</span> <span class="math inline">\(x_{3}\)</span> $z_{</td>
+<td align="left">3}$</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Observation 4</td>
+<td>
+<span class="math inline">\(y_{4}\)</span> <span class="math inline">\(x_{4}\)</span> $z_{</td>
+<td align="left">4}$</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>På samma sätt som vi har tydliga kategorier för våra variabler i kolumnerna, behöver vi ha tydliga kategorier för våra observationer. Det observationerna beskriver kallas för <em>observationsenhet</em>. Det kan till exempel vara en observation per individ eller en per land. I regel behöver vi även avgränsa vilken tidpunkt en observation avser.</p>
+<p>Till exempel kan en observation innehålla uppgifter för ett land ett specifikt årtal, säg 2018. Nästa rad innehåller nästa observation. Om hela tabellen beskriver läget för olika länder år 2018 så är nästa observation för ett annat land. Men vi kan även ha flera observationer per land för olika årtal. Nästa observation kan då vara samma land men ett annat årtal: Sverige 2018, Sverige 2019 och så vidare.</p>
+</div>
+<div id="olika-typer-av-data" class="section level4" number="0.0.91.4">
+<h4>
+<span class="header-section-number">0.0.91.4</span> Olika typer av data<a class="anchor" aria-label="anchor" href="#olika-typer-av-data"><i class="fas fa-link"></i></a>
+</h4>
+<p>Data som används för beräkningar brukar delas in i följande datatyper: <em>kvotdata</em>, <em>intervalldata</em>, <em>ordinaldata</em> och <em>nominaldata</em>. Ett sätt att tänka på detta är att vi har en variabel, <span class="math inline">\(x\)</span>, med någon form av information om verkligheten. Indelningen utgår sedan från följande kriterier:</p>
+<ul>
+<li><p><em>Rangordning</em>: Kan observationerna i x rangordnas?</p></li>
+<li><p><em>Ekvidistans</em>: Är avståndet mellan två värden i x alltid lika stort?</p></li>
+<li><p><em>Absolut nollpunkt</em>: Är variabeln definierad så att det finns ett minsta tänkbart värde?</p></li>
+</ul>
+<p>Beroende på svaren på dessa tre frågor kan vi placera vår variabel i någon av de fyra datatyperna. De tre kriterierna och de fyra datatyperna sammanfattas i tabell 2. Låt oss gå igenom de fyra datatyperna och ge några exempel.</p>
+<p><strong>Tabell 2: Fyra datatyper</strong></p>
+<div class="inline-table"><table style="width:89%;" class="table table-sm">
+<colgroup>
+<col width="22%">
+<col width="19%">
+<col width="19%">
+<col width="27%">
+</colgroup>
+<thead><tr class="header">
+<th></th>
+<th align="left">Rangordning</th>
+<th align="left">Ekvidistans</th>
+<th align="left">Absolut nollpunkt</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Nominaldata</td>
+<td align="left">Nej</td>
+<td align="left">Nej</td>
+<td align="left">Nej</td>
+</tr>
+<tr class="even">
+<td>Ordinaldata</td>
+<td align="left">Ja</td>
+<td align="left">Nej</td>
+<td align="left">Nej</td>
+</tr>
+<tr class="odd">
+<td>Intervalldata</td>
+<td align="left">Ja</td>
+<td align="left">Ja</td>
+<td align="left">Nej</td>
+</tr>
+<tr class="even">
+<td>Kvotdata</td>
+<td align="left">Ja</td>
+<td align="left">Ja</td>
+<td align="left">Ja</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Nominaldata</strong> är inte rangordnad, har ingen tydlig distans mellan varje skalsteg och ingen absolut nollpunkt. Typiska exempel på detta är kategoriska variabler, till exempel språk, namn på länder, könstillhörighet.</p>
+<p>I och med att informationen i denna typ av data mest handlar om att gruppera eller kategorisera är möjligheten att använda matematiska operationer begränsad till att främst definiera om en observation hör eller inte hör till den ena eller andra kategorin.</p>
+<p><strong>Ordinaldata</strong> har rangordning men inte ekvidistans eller absolut nollpunkt. Ett typiskt exempel är skolbetyg, eller placering i en lista eller kö, till exempel plats 1, 2, 3 och så vidare. Ett annat exempel kan vara enkätsvar där respondenter ombeds att ranka alternativ från bästa till sämsta.</p>
+<p>Förutom att kategorisera kan vi för denna datatyp även använda matematiska operationer för olikhet. Till exempel kan vi säga att position 1 kommer före position 2, som kommer före position 3. Med denna typ av data kan vi beräkna <a href="https://www.matteboken.se/lektioner/skolar-7/statistik/medelvarde-och-median?gad_source=1&amp;gclid=CjwKCAiA1eO7BhATEiwAm0Ee-Bv25Y0RbebO8qldnUgmrc5WwiJYv0lqJcZlE6T6dwaU9KeoM5ycMBoCtr8QAvD_BwE">median, men vi kan inte beräkna medelvärde</a>.</p>
+<p><strong>Intervalldata</strong> tillåter beräkningar av differens och addition och subtraktion. Dock inte kvoter. Vi kan därför inte på ett meningsfullt sätt jämföra det dubbla värdet av intervalldata.</p>
+<p>Till exempel temperaturer angiven i grader Celsius. Differensen mellan –2 och +3 grader Celsius är densamma som +5 och +10 grader Celsius. Men vi kan inte på samma sätt beräkna dessa avstånd som kvoter.</p>
+<p><strong>Kvotdata</strong> tillåter samma matematiska metoder som de tre andra datatyperna, och även beräkningar av kvoter. Detta inkluderar många vanliga mått inom fysik och teknik, som längd, tid och massa. Till skillnad från de andra datatyperna kan vi använda division för kvotdata och jämföra relativa avstånd, som att 10 meter är dubbelt så långt som 5 meter.</p>
+<p>Denna indelning i fyra typer av data är vanligt förekommande. Andra mer detaljerade indelningar kan också förekomma. Att tänka på data i dessa former kan hjälpa oss att sortera information och se vilka möjligheter och begränsningar som just våra data erbjuder. Allt detta bör främst ses som ett hjälpmedel, inte som ett regelverk.</p>
+</div>
+</div>
+<div id="uppgifter-22" class="section level3" number="0.0.92">
+<h3>
+<span class="header-section-number">0.0.92</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-22"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-1-3"]=[  {    "id": "k2-1-3-001",    "name": "Uppgift 1",    "exercise": "Vilken datatyp har <em>rangordning</em> men saknar <em>ekvidistans</em> och <em>absolut nollpunkt</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Nominaldata",          "Ordinaldata",          "Intervalldata",          "Kvotdata"        ],        "correct": "Ordinaldata"      }    },    "error": { "message": "Tänk på de fyra datatyperna: nominal, ordinal, intervall, kvot. Vilken av dessa har en inbyggd rangordning men saknar ekvidistans (jämna steg)?" },    "correct": { "message": "Rätt! Ordinaldata har rangordning (vi kan säga att plats 1 kommer före plats 2) men saknar ekvidistans (steget från plats 1 till 2 behöver inte vara lika stort som från plats 2 till 3) och absolut nollpunkt." }  },  {    "id": "k2-1-3-002",    "name": "Uppgift 2",    "exercise": "Temperaturen i grader Celsius är ett klassiskt exempel på en specifik datatyp. Vilken datatyp tillhör den?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Nominaldata",          "Ordinaldata",          "Intervalldata",          "Kvotdata"        ],        "correct": "Intervalldata"      }    },    "error": { "message": "Temperatur i Celsius kan rangordnas och har ekvidistans (5 grader är alltid 5 grader). Men finns det en absolut nollpunkt? Kan det vara kallare än absoluta nollpunkten i Celsius-skalan?" },    "correct": { "message": "Rätt! Temperatur i Celsius är intervalldata: den har rangordning och ekvidistans (skillnaden mellan –2°C och +3°C är densamma som mellan +5°C och +10°C), men saknar absolut nollpunkt – noll grader Celsius är inte frånvaron av all temperatur." }  },  {    "id": "k2-1-3-003",    "name": "Uppgift 3",    "exercise": "Vilket påstående om <em>kvotdata</em> är korrekt?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Kvotdata kan rangordnas men saknar ekvidistans",          "Kvotdata har rangordning, ekvidistans och absolut nollpunkt, vilket tillåter division och kvotjämförelser",          "Kvotdata tillåter addition och subtraktion men inte multiplikation",          "Kvotdata är synonymt med nominaldata"        ],        "correct": "Kvotdata har rangordning, ekvidistans och absolut nollpunkt, vilket tillåter division och kvotjämförelser"      }    },    "error": { "message": "Kvotdata uppfyller alla tre kriterier: rangordning, ekvidistans och absolut nollpunkt. Vad möjliggör det matematiskt?" },    "correct": { "message": "Rätt! Kvotdata har alla tre egenskaperna: rangordning, ekvidistans och absolut nollpunkt. Det gör att vi kan beräkna kvoter, till exempel att 10 meter är dubbelt så långt som 5 meter. Exempel inkluderar längd, massa och tid." }  },  {    "id": "k2-1-3-004",    "name": "Uppgift 4",    "exercise": "En tabell innehåller fyra observationer och tre variabler: \\(x\\), \\(y\\) och \\(z\\). Hur många enskilda datavärden (celler) innehåller tabellen totalt?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "12" },    "answerformat": "",    "error": { "message": "Multiplicera antalet rader (observationer) med antalet kolumner (variabler): 4 rader × 3 variabler = ?" },    "correct": { "message": "Rätt! Med 4 observationer (rader) och 3 variabler (kolumner) blir det 4 × 3 = 12 datavärden totalt i tabellen." }  },  {    "id": "k2-1-3-005",    "name": "Uppgift 5",    "exercise": "En variabel innehåller information om personers längd mätt i centimeter. Alla värden utom ett anges i centimeter, men ett värde anges av misstag i meter. Vad är problemet med detta?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det är inget problem eftersom meter och centimeter är samma sak",          "Alla värden i en variabel måste använda samma måttenhet, annars blir beräkningar ogiltiga",          "Variabeln bör i stället anges i decimeter för att undvika problemet",          "Problemet löser sig automatiskt i statistikprogrammet"        ],        "correct": "Alla värden i en variabel måste använda samma måttenhet, annars blir beräkningar ogiltiga"      }    },    "error": { "message": "Tänk på vad som händer om du beräknar medelvärdet: en person på 1,75 (meter) och en annan på 180 (centimeter) – vad blir genomsnittet? Är det meningsfullt?" },    "correct": { "message": "Rätt! Alla värden i en variabel måste använda samma måttenhet. Om ett värde anges i meter (1,75) och resten i centimeter (170, 180 etc.) kommer beräkningar som medelvärde att bli helt felaktiga och meningslösa." }  }];</script><div class="exercise-section" data-section-id="k2-1-3">
+
+</div>
+<hr>
+<div class="next-section-link">
+<p><a href="sec-k2-1-4.html">→ Nästa avsnitt: <strong>Population, superpopulation och urval</strong></a></p>
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k2-1-2.html">Experiment och observationsstudie</a></div>
+<div class="next"><a href="k2-1-4.html">Population, superpopulation och urval</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-1-3">Information och variabler</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-22"><span class="header-section-number">0.0.90</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-22"><span class="header-section-number">0.0.91</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-22"><span class="header-section-number">0.0.92</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-1-3.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-1-3.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Samvariation 1 | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.0.102 Begrepp Kovarians: Ett mått på linjär samvariation mellan två variabler. Korrelationskoefficienten: Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Samvariation 1 | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.0.102 Begrepp Kovarians: Ett mått på linjär samvariation mellan två variabler. Korrelationskoefficienten: Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Samvariation 1 | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.0.102 Begrepp Kovarians: Ett mått på linjär samvariation mellan två variabler. Korrelationskoefficienten: Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="active" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-2-3" class="section level1 unnumbered">
+<h1>Samvariation 1<a class="anchor" aria-label="anchor" href="#k2-2-3"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-26" class="section level3" number="0.0.102">
+<h3>
+<span class="header-section-number">0.0.102</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-26"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>Kovarians:</strong> Ett mått på linjär samvariation mellan två variabler.</p></li>
+<li><p><strong>Korrelationskoefficienten:</strong> Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden mellan 1 och -1, där värde 1 är stark positiv korrelation och -1 är starkt negativ korrelation.</p></li>
+</ul>
+</div>
+<div id="teori-26" class="section level3" number="0.0.103">
+<h3>
+<span class="header-section-number">0.0.103</span> Teori<a class="anchor" aria-label="anchor" href="#teori-26"><i class="fas fa-link"></i></a>
+</h3>
+<p>I kapitel 1 till denna kurs introducerade vi betydelsen av kontrafaktisk analys och hur vi genom att studera samvariation kan diskutera orsak och verkan. I tidigare avsnitt har vi gått igenom olika exempel på hur vi kan beskriva och jämföra spridning och variation i ett material. I detta avsnitt ska vi introducera två mått på linjär samvariation: <em>kovarians och korrelationskoefficient</em>.</p>
+<div id="kovarians" class="section level4" number="0.0.103.1">
+<h4>
+<span class="header-section-number">0.0.103.1</span> Kovarians<a class="anchor" aria-label="anchor" href="#kovarians"><i class="fas fa-link"></i></a>
+</h4>
+<p>Kovarians (engelska <em>covariance</em>) är ett mått på linjär samvariation mellan två variabler, till exempel <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>. För populationsdata har vi:</p>
+<p><span class="math inline">\(cov(x,y) = \frac{1}{n}\sum_{i}^{n}{(x_{i} - \overline{x})(y_{i} - \overline{y})}\)</span> (1)</p>
+<p>Vårt mål är att uppskatta samvariationen i en population och eventuellt en superpopulation. Från vår population kan vi hämta ett urval av observationer som vi kan använda för att uppskatta (estimera) samvariationen.</p>
+<p>I tidigare exempel har vi arbetat med population för en variabel. Eftersom vi nu är intresserade av samvariation består vår population av två variabler. Kovariansen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> i en population betecknas <span class="math inline">\(\sigma_{xy}\)</span> (jämför beteckningen för populationens varians <span class="math inline">\(\sigma_{x}\)</span>).</p>
+<p>Positiv kovarians innebär positiv samvariation: högre värden av <span class="math inline">\(x\)</span> är associerade med högre värden av <span class="math inline">\(y\)</span>. Negativ kovarians innebär negativ samvariation, att högre värden av <span class="math inline">\(x\)</span> är associerade med lägre värden av <span class="math inline">\(y\)</span> och vice versa. Om kovariansen är lika med noll så finns ingen linjär samvariation mellan variablerna.</p>
+<p>Det spelar ingen roll i vilken ordning vi skriver variablerna i parentesen: <span class="math inline">\(cov(x,y) = cov(y,x)\)</span>. Om vi tar kovariansen för <span class="math inline">\(x\)</span> och samma variabel <span class="math inline">\(x\)</span>, får vi variansen av <span class="math inline">\(x\)</span>:</p>
+<p><span class="math inline">\(\text{cov}(x,x) = \left( \frac{1}{n} \right)\sum_{i}^{n}{(x_{i} - \overline{x})(x_{i} - \overline{x})} = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} = \text{var}(x)\)</span> (2)</p>
+<p>I föregående avsnitt använde vi Bessels korrigering <span class="math inline">\(\left( \frac{1}{n - 1} \right)\)</span> för att undvika att underskatta spridningen i populationen alltför mycket. Även här kan vi av samma skäl använda korrigeringen. Detta ger oss det som kallas för <em>urvalskovarians</em> (engelska <em>sample covariance</em>):</p>
+<p><strong>Urvalskovarians:</strong> <span class="math inline">\(cov(x,y) = \left( \frac{1}{n - 1} \right)\sum_{i}^{}{(x_{i} - \overline{x})(y_{i} - \overline{y})}\)</span> (3)</p>
+</div>
+<div id="räkneexempel" class="section level4" number="0.0.103.2">
+<h4>
+<span class="header-section-number">0.0.103.2</span> Räkneexempel<a class="anchor" aria-label="anchor" href="#r%C3%A4kneexempel"><i class="fas fa-link"></i></a>
+</h4>
+<p>Figur 1 beskriver våra fyra observationer i en tabell till vänster och ett diagram till höger. I tabellen har vi en observation per rad och en variabel per kolumn. I diagrammet är varje observation representerad av en punkt. Punkten längst till vänster är observation 1: <span class="math inline">\((x,y) = (3,3)\)</span>. Punkten längst till höger är observation 4: <span class="math inline">\((x,y) = (4,7)\)</span>.</p>
+<p>Rad 1 i tabellen består av första värdet för <span class="math inline">\(x\)</span> respektive <span class="math inline">\(y\)</span> och representerar värden som på något sätt hänger ihop. Om vi arbetar med observerade data, insamlad information, representerar varje observation en observationsenhet, till exempel uppgifter om en person eller kanske ett land. Våra fyra observationer skulle alltså kunna representera fyra personer, fyra länder eller något annat.</p>
+<p><strong>Figur 1. Fyra observationer för att uppskatta kovarians</strong></p>
+<div class="inline-figure"><img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\2%20-%20Variation%20och%20samvariation\2-3%20-%20Samvariation%201/img/k2-2-3-image1.png" style="width:2.47024in;height:2.47024in"></div>
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<colgroup>
+<col width="18%">
+<col width="39%">
+<col width="39%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Observation i</th>
+<th></th>
+<th></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td>6</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td>7</td>
+<td>4</td>
+</tr>
+</tbody>
+</table></div>
+<p>I tabell 1 har vi beräknat de delar vi behöver för att skatta kovariansen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> (ekvation 3):</p>
+<p><span class="math inline">\(cov(x,y) = \left( \frac{1}{n - 1} \right)\sum_{i}^{}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)} = \left( \frac{1}{3} \right) \times 5 = \frac{5}{3}\)</span> (4)</p>
+<p>Vi finner att <span class="math inline">\(cov(x,y) = \frac{5}{3}\)</span>. Detta värde är över 0 och innebär en positiv samvariation. Kovarians är användbart för att få en uppskattning om samvariationen mellan två variabler är positiv eller negativ, men det är svårt att säga så mycket mer än så.</p>
+<p>Det finns inte några begränsningar för vilka värden som kovarians kan anta. Kovariansens värde beror på vilken enhet variablernas värden har. Till exempel kommer vi att få olika resultat beroende på om vi använder en variabel som beskriver inkomst i kronor eller i tusentals kronor.</p>
+<p><strong>Tabell 1. Beräkningar för kovariansen mellan</strong> <span class="math inline">\(\mathbf{x}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{y}\)</span></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="5%">
+<col width="13%">
+<col width="13%">
+<col width="19%">
+<col width="19%">
+<col width="29%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Observation</th>
+<th align="left">ine{x}$$</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">3</td>
+<td>3</td>
+<td>-2</td>
+<td>-0,5</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">4</td>
+<td>2</td>
+<td>-1</td>
+<td>-1,5</td>
+<td>1,5</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">6</td>
+<td>5</td>
+<td>1</td>
+<td>1,5</td>
+<td>1,5</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">7</td>
+<td>4</td>
+<td>2</td>
+<td>0,5</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td align="left">Medelvärde</td>
+<td align="left">5</td>
+<td>3,5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left">Summa</td>
+<td align="left"></td>
+<td></td>
+<td></td>
+<td></td>
+<td>5</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="korrelationskoefficienten" class="section level4" number="0.0.103.3">
+<h4>
+<span class="header-section-number">0.0.103.3</span> Korrelationskoefficienten<a class="anchor" aria-label="anchor" href="#korrelationskoefficienten"><i class="fas fa-link"></i></a>
+</h4>
+<p>Ett annat mått på linjär samvariation är <em>Pearsons r</em>, även kallat <em>Pearsons korrelationskoefficient</em> eller <em>korrelationskoefficienten</em> (jämför <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/korrelation-och-kausalitet#!/">Matte 1</a>). Korrelationskoefficienten för variablerna <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> betecknas för population <span class="math inline">\(\rho_{xy}\)</span> (grekiska rho):</p>
+<p>Korrelationskoefficienten: <span class="math inline">\(\rho_{xy} = \frac{\sigma_{xy}}{\sigma_{x}\sigma_{y}}\)</span> (5)</p>
+<p>där <span class="math inline">\(\sigma_{xy}\)</span> är kovariansen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> i populationen, och <span class="math inline">\(\sigma_{x}\)</span> och <span class="math inline">\(\sigma_{y}\)</span> är standardavvikelse i populationen för respektive variabel. Ett annat sätt att beskriva detta är att korrelationskoefficienten är <em>standardiserad</em> <em>kovarians</em>.</p>
+<p>Korrelationskoefficienten kan endast anta värden mellan <span class="math inline">\(- 1\)</span> och 1, där <span class="math inline">\(- 1\)</span> innebär perfekt negativ korrelation och 1 innebär perfekt positiv korrelation. Om korrelationskoefficienten är lika med 0 indikerar detta att det inte finns någon linjär samvariation mellan variablerna.</p>
+<p>Eftersom alla resultat för korrelationskoefficienten är inom intervallet <span class="math inline">\(\lbrack - 1,1\rbrack\)</span> är olika korrelationskoefficienter jämförbara. Om vi till exempel beräknar två korrelationskoefficienter för två olika par av variabler så kan vi jämföra samvariationens styrka och riktning.</p>
+<p>Om vi arbetar med urvalsdata betecknas korrelationskoefficienten <span class="math inline">\(r_{xy}\)</span> eller <span class="math inline">\(corr(x,y)\)</span>, förkortning för engelska <em>correlation</em>:</p>
+<p><span class="math inline">\(r_{xy} = \frac{cov(x,y)}{s_{x}s_{y}}\)</span> (6)</p>
+<p>där vi i stället har uppskattad kovarians i täljaren och uppskattad standard­avvikelse för de två variablerna i nämnaren. De olika delarna i denna ekvation har vi definierat tidigare i detta kapitel. Vi skriver ut ekvationerna och lägger till Bessels korrigering:</p>
+<p><span class="math inline">\(r_{xy} = \frac{cov(x,y)}{s_{x}s_{y}}\)</span> (7)</p>
+<p><span class="math inline">\(= \frac{\left( \frac{1}{n - 1} \right)\sum_{i}^{}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)}}{\left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} \right)^{\frac{1}{2}}\left( \frac{\sum_{i}^{n}\left( y_{i} - \overline{y} \right)^{2}}{n - 1} \right)^{\frac{1}{2}}}\)</span></p>
+<p><span class="math inline">\(= \frac{(n - 1)^{- 1}\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)}}{(n - 1)^{- 1}\left( \sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}}\left( \sum_{i}^{n}\left( y_{i} - \overline{y} \right)^{2} \right)^{\frac{1}{2}}}\)</span></p>
+<p><span class="math inline">\(= \frac{\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)}}{\left( \sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}}\left( \sum_{i}^{n}\left( y_{i} - \overline{y} \right)^{2} \right)^{\frac{1}{2}}}\)</span></p>
+<p>Eftersom Bessels korrigering ingår i alla tre måtten kan vi i sista raden stryka <span class="math inline">\((n - 1)^{- 1}\)</span> från både täljare och nämnare.</p>
+<p>Låt oss återigen demonstrera genom att uppskatta <span class="math inline">\(r_{xy}\)</span> för de två variablerna <em>x</em> och <em>y</em> och deras fyra observationer från figur 1. Vi återanvänder resultaten för kovarians ovan samt standardavvikelse för <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>, vilket vi beräknade i föregående avsnitt:</p>
+<p><span class="math inline">\(r_{xy} = \frac{cov(x,y)}{s_{x}s_{y}} \approx \frac{\frac{5}{3}}{\left( + \sqrt{\frac{10}{3}} \right)\left( + \sqrt{\frac{5}{3}} \right)} \approx 0,71\)</span> (8)</p>
+<p>Detta resultat indikerar en positiv korrelation. Höga värden av <span class="math inline">\(x\)</span> sammanfaller med höga värden av <span class="math inline">\(y\)</span> och låga värden av <span class="math inline">\(x\)</span> sammanfaller med låga värden av <span class="math inline">\(y\)</span>. Olika korrelationskoefficienter kan jämföras men det är fortfarande svårt att tolka denna typ av resultat mer exakt.</p>
+</div>
+</div>
+<div id="uppgifter-26" class="section level3" number="0.0.104">
+<h3>
+<span class="header-section-number">0.0.104</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-26"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-2-3"]=[  {    "id": "k2-2-3-001",    "name": "Uppgift 1",    "exercise": "Vad innebär det om kovariansen mellan två variabler \\(x\\) och \\(y\\) är <em>negativ</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Höga värden på \\(x\\) är associerade med höga värden på \\(y\\)",          "Höga värden på \\(x\\) är associerade med låga värden på \\(y\\)",          "Det finns ingen samvariation alls mellan \\(x\\) och \\(y\\)",          "Variansen för \\(x\\) är större än variansen för \\(y\\)"        ],        "correct": "Höga värden på \\(x\\) är associerade med låga värden på \\(y\\)"      }    },    "error": { "message": "Tänk på vad riktningen på samvariationen innebär. Negativt värde = rörelserna går åt motsatt håll." },    "correct": { "message": "Rätt! Negativ kovarians innebär negativ samvariation: höga värden på \\(x\\) är associerade med låga värden på \\(y\\) och vice versa. Om kovariansen är noll finns ingen linjär samvariation." }  },  {    "id": "k2-2-3-002",    "name": "Uppgift 2",    "exercise": "Vad händer om man beräknar kovariansen av en variabel med sig själv, det vill säga \\(\\text{cov}(x, x)\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Man får noll",          "Man får variansen av \\(x\\)",          "Man får standardavvikelsen av \\(x\\)",          "Man får korrelationskoefficienten"        ],        "correct": "Man får variansen av \\(x\\)"      }    },    "error": { "message": "Sätt in \\(y = x\\) i kovariansformeln och se vad du får." },    "correct": { "message": "Rätt! \\(\\text{cov}(x,x) = \\frac{1}{n}\\sum(x_i - \\overline{x})(x_i - \\overline{x}) = \\frac{1}{n}\\sum(x_i - \\overline{x})^2 = \\text{var}(x)\\). Variansen är alltså ett specialfall av kovariansen." }  },  {    "id": "k2-2-3-003",    "name": "Uppgift 3",    "exercise": "Fyra observationer har värdena \\(x = \\{3, 4, 6, 7\\}\\) med \\(\\overline{x} = 5\\), och \\(y = \\{3, 2, 5, 4\\}\\) med \\(\\overline{y} = 3{,}5\\). Summan \\(\\sum_{i=1}^{4}(x_i - \\overline{x})(y_i - \\overline{y}) = 5\\). Beräkna urvalskovariansen: \\[\\text{cov}(x,y) = \\frac{1}{n-1}\\sum_{i}^{}(x_i - \\overline{x})(y_i - \\overline{y})\\] Ange svaret som ett decimaltal med tre decimaler.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "1.667" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 1.667",    "error": { "message": "Dividera summan av produkterna (= 5) med \\(n - 1 = 3\\)." },    "correct": { "message": "Rätt! \\(\\text{cov}(x,y) = 5 / (4-1) = 5/3 \\approx 1{,}667\\). Värdet är positivt, vilket indikerar positiv samvariation." }  },  {    "id": "k2-2-3-004",    "name": "Uppgift 4",    "exercise": "Vad är den viktigaste fördelen med korrelationskoefficienten \\(r_{xy}\\) jämfört med kovariansen \\(\\text{cov}(x,y)\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Korrelationskoefficienten är alltid ett heltal",          "Korrelationskoefficienten är standardiserad och tar värden mellan -1 och 1, vilket underlättar jämförelser mellan olika variabler",          "Korrelationskoefficienten är alltid positiv",          "Korrelationskoefficienten beräknas utan Bessels korrigering"        ],        "correct": "Korrelationskoefficienten är standardiserad och tar värden mellan -1 och 1, vilket underlättar jämförelser mellan olika variabler"      }    },    "error": { "message": "Tänk på att kovariansens värde påverkas av variablernas enheter – vad löser korrelationskoefficienten?" },    "correct": { "message": "Rätt! Korrelationskoefficienten är standardiserad kovarians och kan bara anta värden i intervallet [-1, 1]. Detta gör att vi kan jämföra samvariationens styrka och riktning mellan olika par av variabler, oavsett enhet." }  },  {    "id": "k2-2-3-005",    "name": "Uppgift 5",    "exercise": "Givet \\(\\text{cov}(x,y) = 5/3\\), \\(s_x = \\sqrt{10/3}\\) och \\(s_y = \\sqrt{5/3}\\), beräkna korrelationskoefficienten \\[r_{xy} = \\frac{\\text{cov}(x,y)}{s_x \\cdot s_y}\\] Runda av till två decimaler.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "0.71" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 0.71",    "error": { "message": "Beräkna \\(s_x \\cdot s_y = \\sqrt{10/3} \\cdot \\sqrt{5/3} = \\sqrt{50/9}\\), och dela sedan kovariansen med detta." },    "correct": { "message": "Rätt! \\(r_{xy} = \\frac{5/3}{\\sqrt{10/3} \\cdot \\sqrt{5/3}} \\approx 0{,}71\\). Värdet indikerar en positiv korrelation: höga värden på \\(x\\) sammanfaller med höga värden på \\(y\\)." }  }];</script><div class="exercise-section" data-section-id="k2-2-3">
+
+</div>
+<hr>
+<div class="next-section-link">
+<p><a href="sec-k2-2-4.html">→ Nästa avsnitt: <strong>Samvariation 2</strong></a></p>
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></div>
+<div class="next"><a href="k2-2-4.html">Samvariation 2</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-2-3">Samvariation 1</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-26"><span class="header-section-number">0.0.102</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-26"><span class="header-section-number">0.0.103</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-26"><span class="header-section-number">0.0.104</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-2-3.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-2-3.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Statistisk analys 2 | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.1.52 Begrepp Konfidensintervall: Ett intervall mellan två värden inom vilka vi kan förvänta oss en specificerad andel av upprepade stickprov kommer innehålla populationsvärdet vi söker. Beräknas...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Statistisk analys 2 | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.1.52 Begrepp Konfidensintervall: Ett intervall mellan två värden inom vilka vi kan förvänta oss en specificerad andel av upprepade stickprov kommer innehålla populationsvärdet vi söker. Beräknas...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Statistisk analys 2 | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.1.52 Begrepp Konfidensintervall: Ett intervall mellan två värden inom vilka vi kan förvänta oss en specificerad andel av upprepade stickprov kommer innehålla populationsvärdet vi söker. Beräknas...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="active" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-5-4" class="section level1 unnumbered">
+<h1>Statistisk analys 2<a class="anchor" aria-label="anchor" href="#k2-5-4"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-44" class="section level3" number="0.1.52">
+<h3>
+<span class="header-section-number">0.1.52</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-44"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>Konfidensintervall:</strong> Ett intervall mellan två värden inom vilka vi kan förvänta oss en specificerad andel av upprepade stickprov kommer innehålla populationsvärdet vi söker. Beräknas <span class="math inline">\(\overline{x} \pm z{\*s}_{X}n^{\frac{1}{2}}\)</span>, där <span class="math inline">\(\overline{x}\)</span> är medelvärde, <span class="math inline">\(z\)</span> är ett valt värde från standardnormalfördelningen, <span class="math inline">\(s\)</span> är estimerad standardavvikelse och <span class="math inline">\(n\)</span> är antal urvalsobservationer.</p></li>
+<li><p><strong>Nollhypotes och alternativhypotes:</strong> <span class="math inline">\(H_{0}\)</span> respektive <span class="math inline">\(H_{1}\)</span>. Formuleras rörande förhållanden i populationen för statistiska test. I regel formuleras <span class="math inline">\(H_{0}\)</span> som ett nollsamband/icke-korrelation. Därefter beräknas sannolikheten att <span class="math inline">\(H_{0}\)</span> är falsk. Om inte det statistiska testet ger oss tillräckligt starka skäl att förkasta <span class="math inline">\(H_{0}\)</span> godtar vi denna.</p></li>
+<li><p><strong>Signifikansnivå:</strong> sannolikheten att vi förkastar <span class="math inline">\(H_{0}\)</span> när <span class="math inline">\(H_{0}\)</span> är sann. Kallas <span class="math inline">\(\alpha\)</span>, alfavärde.</p></li>
+<li><p><strong>Konfidensnivå:</strong> sannolikheten att vi inte förkastar <span class="math inline">\(H_{0}\)</span> när den är sann.</p></li>
+<li><p><strong>P-värde:</strong> Sannolikheten att <span class="math inline">\(H_{0}\)</span> är sann.</p></li>
+</ul>
+</div>
+<div id="teori-44" class="section level3" number="0.1.53">
+<h3>
+<span class="header-section-number">0.1.53</span> Teori<a class="anchor" aria-label="anchor" href="#teori-44"><i class="fas fa-link"></i></a>
+</h3>
+<p>Vi fortsätter att introducera statistisk analys, först genom att beskriva hur vi kan uppskatta ett intervall av mer eller mindre sannolika utfall.</p>
+<div id="konfidensintervall" class="section level4" number="0.1.53.1">
+<h4>
+<span class="header-section-number">0.1.53.1</span> Konfidensintervall<a class="anchor" aria-label="anchor" href="#konfidensintervall"><i class="fas fa-link"></i></a>
+</h4>
+<p>I föregående <a href="https://www.dropbox.com/scl/fi/12fiw2s4633qjt0d1s0zw/5-3-Statitsisk-analys-1.docx?rlkey=b4urprsp85hxcdp6jm3z9vaw7&amp;dl=0">avsnitt 5.3</a> introducerade vi punktestimat. Ett annat sätt att studera en population är att <em>estimera intervall,</em> vilket även kallas för <em>intervallskattning</em> eller <em>intervallestimat.</em></p>
+<p>Ett särskilt intervall som ofta används i statistisk analys är <em>konfidensintervall</em>, vilket är ett intervall mellan två värden inom vilket en specificerad andel av upprepade stickprov kommer att innehålla populationsvärdet vi söker.</p>
+<p>Vi bestämmer själva för vilken andel av urvalen vi vill estimera konfidensintervallet, till exempel 90 eller 95 %, där procentsatserna alltså anger för hur stor andel av urvalen som intervallet kommer att inkludera populationsvärdet. Procentsatserna kallas för <em>konfidensgrad</em>.</p>
+<p>Vi är intresserade av populationens (okända) medelvärde <span class="math inline">\(\mu_{X}\)</span>. I stället för ett punktestimat, som ett medelvärde, vill vi nu i stället skatta ett konfidensintervall. Vår estimering beror på vilken fördelning populationen har. Vi utgår här från en variabel <span class="math inline">\(X\)</span> som följer en normalfördelning där populationen har medelvärdet <span class="math inline">\(\mu_{X}\)</span> och varians <span class="math inline">\(\sigma_{X}\)</span>. Konfidensintervallet kan då definieras som:</p>
+<p>Konfidensintervall = <span class="math inline">\(\overline{x} \pm z\frac{\sigma_{X}}{n^{\frac{1}{2}}}\)</span> (1)</p>
+<p>där <span class="math inline">\(\overline{x}\)</span> är estimerat medelvärde i en samling urvalsobservationer, n är antal observationer i urvalet och <span class="math inline">\(\sigma_{X}\)</span> är standardavvikelse i populationen.</p>
+<p>Bokstaven <span class="math inline">\(z\)</span> representerar ett värde som vi hämtar från <a href="https://www.dropbox.com/scl/fi/wi8c30n2yna36a7zbiyoh/5-2-Kontinuerliga-sannolikhetsf-rdelningar.docx?rlkey=rmkxixrrun7q0rqeg82lk2kky&amp;dl=0">standardnormalfördelningen</a> beroende på vilken konfidensgrad vi väljer. Konfidensintervallet resulterar i ett värde under medelvärdet <span class="math inline">\(\bar{x}\)</span> och ett värde över, vilket vi kan se eftersom vi har symbolen <span class="math inline">\(\pm\)</span> efter medelvärdet. De två värdena vi beräknar kallas för konfidensintervallets nedre och övre gräns.</p>
+<p>Eftersom populationens standardavvikelse <span class="math inline">\(\sigma\)</span> i regel är okänd kan det estimerade konfidensintervallet skrivas:</p>
+<p>Estimerat konfidensintervall =<span class="math inline">\(\ \ \bar{x} \pm z\frac{s_{x}}{n^{\frac{1}{2}}}\)</span> (2)</p>
+<p>där <span class="math inline">\(s\)</span> representerar estimerad standardavvikelse.</p>
+</div>
+<div id="exempel" class="section level4" number="0.1.53.2">
+<h4>
+<span class="header-section-number">0.1.53.2</span> Exempel<a class="anchor" aria-label="anchor" href="#exempel"><i class="fas fa-link"></i></a>
+</h4>
+<p>Om vi väljer konfidensgrad <span class="math inline">\(90\ \%\)</span> vill vi exkludera <span class="math inline">\(10\%\)</span> av populationens värden: <span class="math inline">\(5\%\)</span> i fördelningens övre svans (över medelvärdet) och <span class="math inline">\(5\%\)</span> i fördelningens nedre svans (under medelvärdet). Detta ger oss $z ,64$5.</p>
+<p>Om vi vill estimera ett <span class="math inline">\(95\ \%\)</span> konfidensintervall har vi <span class="math inline">\(z \approx 1,96\)</span>. För konfidensgrad <span class="math inline">\(99\ \%\)</span> har vi <span class="math inline">\(z \approx 2,58\)</span>. Se figur 2 i <a href="https://www.dropbox.com/scl/fi/wi8c30n2yna36a7zbiyoh/5-2-Kontinuerliga-sannolikhetsf-rdelningar.docx?rlkey=rmkxixrrun7q0rqeg82lk2kky&amp;dl=0">avsnitt 5.2</a>. Det z-värde vi ska använda sätter vi in i ekvation 2.</p>
+<p>Säg som exempel nu att vi har ett dataurval på <span class="math inline">\(n = 28\)</span> observationer och estimerar medelvärdet <span class="math inline">\(\bar{x} = 13\)</span> samt standardavvikelse <span class="math inline">\(s_{x} = 3,7\)</span>. Vi väljer konfidensgrad <span class="math inline">\(90\%\)</span>, varför <span class="math inline">\(z = 1,645\)</span>. Detta ger följande gränser för konfidensintervallet:</p>
+<p><span class="math inline">\(\begin{matrix} &amp; \bar{x} + z\frac{s_{x}}{n^{\frac{1}{2}}} = 13 + 1,645\*\frac{3,7}{\sqrt{28}} \approx 14,15 \\ &amp; \bar{x} - z\frac{s_{x}}{n^{\frac{1}{2}}} = 13 - 1,645\*\frac{3,7}{\sqrt{28}} \approx 11,85 \end{matrix}\)</span> (3)</p>
+<p>Vårt konfidensintervall är <span class="math inline">\(11,85 \&lt; \mu_{X} \&lt; 14,15\)</span>. Detta är ett 90% konfidensintervall, vilket betyder att om vi upprepade denna procedur många gånger, skulle 90% av intervallen innehålla populationens medelvärde. Detta betyder inte att det finns 90% sannolikhet att <span class="math inline">\(\mu_{X}\)</span> ligger i vårt specifika intervall (en vanlig missuppfattning).</p>
+</div>
+<div id="exempel-med-kvinnor-och-mäns-medellivslängd" class="section level4" number="0.1.53.3">
+<h4>
+<span class="header-section-number">0.1.53.3</span> Exempel med kvinnor och mäns medellivslängd<a class="anchor" aria-label="anchor" href="#exempel-med-kvinnor-och-m%C3%A4ns-medellivsl%C3%A4ngd"><i class="fas fa-link"></i></a>
+</h4>
+<p>I föregående <a href="https://www.dropbox.com/scl/fi/12fiw2s4633qjt0d1s0zw/5-3-Statitsisk-analys-1.docx?rlkey=b4urprsp85hxcdp6jm3z9vaw7&amp;dl=0">avsnitt 5.1</a> beräknade vi sannolikheten att två estimerade medelvärden kom från samma population, genom att räkna på differensen mellan genomsnittlig livslängd för män respektive kvinnor.</p>
+<p>Konfidensintervallet för differensen mellan de estimerade medelvärdena för dessa två populationer kan vi estimera med följande ekvation:</p>
+<p><span class="math inline">\(\left( {\bar{X}}_{1} - {\bar{X}}_{2} \right) \pm z\*\sqrt{\frac{s_{X_{1}}^{2}}{n_{1}} + \frac{s_{X_{2}}^{2}}{n_{2}}}\)</span> (4)</p>
+<p>där <span class="math inline">\({\overline{X}}_{1}\)</span> och <span class="math inline">\({\bar{X}}_{2}\)</span> är de två estimerade medelvärdena för män och kvinnor, <span class="math inline">\(z\)</span> är värdet från standardiserade normalfördelningens kumulativa fördelningsfunktion <span class="math inline">\(F\)</span>, <span class="math inline">\(s^{2}\)</span> är estimerad varians (standardavvikelse i kvadrat) och <span class="math inline">\(n\)</span> är antal observationer i respektive urval. Vi får nu:</p>
+<p><span class="math inline">\({\overline{X}}_{män} = 80,38\)</span> <span class="math inline">\({\overline{X}}_{kvinnor} = 83,95\)</span> (5)</p>
+<p><span class="math inline">\(s_{män}^{2} = 1,663\)</span> <span class="math inline">\(s_{kvinnor}^{2} = 1,032\)</span></p>
+<p><span class="math inline">\(n_{män} = 290\)</span> <span class="math inline">\(n_{kvinnor} = 290\)</span></p>
+<p>Vi väljer konfidensgrad <span class="math inline">\(95\ \%\)</span>, vilket ger <span class="math inline">\(z = 1,96\)</span>. Konfidensintervallets nedre och övre gräns blir:</p>
+<p><span class="math inline">\(\begin{matrix} \text{Konfidensintervallets nedre gräns:} &amp; \ (80,38 - 83,95) + 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,76 \\ \text{Konfidensintervallets }\text{övre }\text{gräns:} &amp; \ (80,38 - 83,95) - 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,38 \end{matrix}\)</span> (6)</p>
+<p>Estimatet indikerar att vid upprepade urval (stickprov) från samma population kommer differensen mellan de två populationerna i <span class="math inline">\(95\ \%\)</span> av fallen vara <span class="math inline">\(3,38 \&lt; \left( \mu_{\text{kvinnor}\ } - \mu_{\text{män}\ } \right) \&lt; 3,76\)</span>. Detta indikerar alltså att kvinnor i genomsnitt lever mellan 3,38 och 3,76 år längre än män.</p>
+<p>Detta gäller endast om de upprepade urvalen verkligen kommer från samma population. Om vi till exempel upprepade gånger under en tioårsperiod mäter medellivslängden för män och kvinnor så kommer befolkningen (populationen) och deras livslängd också att förändras.</p>
+</div>
+<div id="hypotesprövning" class="section level4" number="0.1.53.4">
+<h4>
+<span class="header-section-number">0.1.53.4</span> Hypotesprövning<a class="anchor" aria-label="anchor" href="#hypotespr%C3%B6vning"><i class="fas fa-link"></i></a>
+</h4>
+<p>När vi studerar mönster i data och samvariation kan vi göra detta genom att pröva <em>hypoteser</em> med <em>statistiska test</em>. En vetenskaplig hypotes måste vara <em>falsifierbar</em>, vilket betyder att den måste kunna motbevisas med fakta.</p>
+<p>Vi formulerar en hypotes och använder ett statistiskt test för att pröva sannolikheten att hypotesen är falsk. Sannolikheten att en hypotes är falsk kan inte vara under 0 eller över 100 %.</p>
+<p>Statistiska test använder en <em>nollhypotes</em> och en <em>alternativhypotes</em>. Nollhypotes betecknas ofta <span class="math inline">\(H_{0}\)</span> och alternativhypotesen <span class="math inline">\(H_{1}\)</span>. De två hypoteserna formuleras på ett sådant sätt att de är exklusiva. Båda hypoteserna kan inte per definition vara sanna (eller falska) samtidigt.</p>
+<p>Vi formulerar våra hypoteser utifrån den samvariation vi ska studera. Nollhypotesen formuleras i regel som att det inte finns någon samvariation, ett icke-samband. Nollhypotesen beskriver den situation vi måste acceptera tills vi har visat goda skäl att tro något annat.</p>
+<p>Säg till exempel att vi utför ett experiment och studerar hur en medicin samvarierar med sjukdomssymptom hos en grupp patienter, fördelade på behandlingsgrupp (får medicin) och kontrollgrupp (får inte medicin).</p>
+<p>Vår teori är att medicinen kommer att minska patienternas sjukdomstillstånd. Om vi efter behandlingen kan se att sjukdomstillstånden i behandlingsgruppen är mindre än sjukdomstillstånden i kontrollgruppen tolkar vi detta som en effekt av medicinen.</p>
+<p>När vi ska översätta detta till en nollhypotes och en alternativhypotes formulerar vi nollhypotesen som en ickerelation mellan orsak och verkan. Om medicinen inte har någon effekt på sjukdomen kommer behandlingsgruppen vara lika sjuk som kontrollgruppen:</p>
+<p><span class="math inline">\(H_{0}\)</span>: <span class="math inline">\(\text{sjukdom}_{\text{behandling}} \geq \text{sjukdom}_{\text{kontroll}}\)</span> (7)</p>
+<p>Alternativhypotesen <span class="math inline">\(H_{1}\)</span> blir i detta fall den alternativa situationen där sjukdomstillståndet är mindre i behandlingsgruppen än i kontrollgruppen (vilket enligt vår teori beror på medicinen):</p>
+<p><span class="math inline">\(H_{1}:\text{sjukdom}_{\text{behandling}} \&lt; \text{sjukdom}_{\text{kontroll}}\)</span> (8)</p>
+<p>Vi är intresserade av ett orsakssamband, vilket vi studerar genom att observera samvariation mellan medicin och symptom. Orsakssambandet är en tolkning vi lägger till utifrån den samvariation vi kan observera. Hypoteserna formuleras inte rörande orsakssambandet utan för observerbara skillnader.</p>
+<p>Observera även att hypoteserna rör populationen vi är intresserade av – inte urvalsdatan. I detta hypotetiska exempel kan vi tänka oss att populationen är alla patienter i hela världen med samma sjukdomssymptom.</p>
+<p>Säg att vi finner att behandlingsgruppen har 5 % mindre sjukdom. Nästa steg är att då estimera hur säkra vi kan vara på att denna skillnad är tillräcklig för att vi ska betrakta vår nollhypotes (<span class="math inline">\(H_{0}\)</span>) som falsk.</p>
+</div>
+<div id="hypotestest-i-regressionsanalys" class="section level4" number="0.1.53.5">
+<h4>
+<span class="header-section-number">0.1.53.5</span> Hypotestest i regressionsanalys<a class="anchor" aria-label="anchor" href="#hypotestest-i-regressionsanalys"><i class="fas fa-link"></i></a>
+</h4>
+<p>Hypotestest användas ofta i samband med regressionsanalys. Säg att vi ska studera om variationer i ett fenomen <span class="math inline">\(X\)</span> orsakar en viss typ av variationer i fenomen <span class="math inline">\(Y\)</span>, vilket vi gör med hjälp av regressionsmodellen <span class="math inline">\(Y = a + bX + u\)</span> där <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är variabler, <span class="math inline">\(u\)</span> är feltermen och <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är koefficienterna som vi använder minstakvadratmetoden för att estimera.</p>
+<p>Vi har anledning att tro att <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> samvarierar och att <span class="math inline">\(b \neq 0\)</span>. Utifrån detta kan vi formulera en nollhypotes i form av en ickerelation mellan variablerna. En ickerelation mellan X och Y i vår regressionsmodell innebär att <span class="math inline">\(b = 0\)</span>, varför vår nollhypotes och alternativhypotes blir:</p>
+<p><span class="math inline">\(H_{0}:b = 0\)</span> (9)</p>
+<p><span class="math inline">\(H_{1}:b \neq 0\)</span></p>
+<p>Nollhypotesen och alternativhypotesen täcker därigenom alla möjliga alternativ: <span class="math inline">\(b\)</span> är antingen lika med 0 eller inte lika med 0.</p>
+<p>Vi är intresserade av att estimera samvariationen mellan <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> och att estimera sannolikheten att den samvariation vi finner även kunde ha uppstått genom slump.</p>
+<p>Vi prövar våra hypoteser genom att estimera <span class="math inline">\(\widehat{b}\)</span> och därefter beräkna sannolikheten att vi skulle ha fått det resultat vi får, givet att <span class="math inline">\(H_{0}\)</span> är sann egentligen (det vill säga att vi i populationen har <span class="math inline">\(b = 0\)</span>).</p>
+<p>Sannolikheten för detta beror bland annat på vilken sannolikhetsfördelning vi jämför mot, till exempel standardnormalfördelningen, och vilken varians vi kan observera i våra data.</p>
+</div>
+<div id="signifikans-alfa-och-p-värde" class="section level4" number="0.1.53.6">
+<h4>
+<span class="header-section-number">0.1.53.6</span> Signifikans, alfa och p-värde<a class="anchor" aria-label="anchor" href="#signifikans-alfa-och-p-v%C3%A4rde"><i class="fas fa-link"></i></a>
+</h4>
+<p>I klassisk statistik brukar det beskrivas som att vi vid statistiska test bör välja i förväg med vilken sannolikhet vi vill riskera att förkasta en sann <span class="math inline">\(H_{0}\)</span>. Detta kallas för att välja <em>signifikansnivå</em> eller <em>alfavärde</em> (engelska <em>alpha value</em>) och betecknas <span class="math inline">\(\alpha\)</span> (grekiska bokstaven alfa).</p>
+<p>För <span class="math inline">\(10\%\)</span> signifikansnivå, <span class="math inline">\(\alpha = 0,1 = 10\%\)</span>. Ofta används <span class="math inline">\(\alpha = 0,05\)</span>. Ofta används även begreppet <em>konfidensnivå</em>, vilket beräknas genom att ta:</p>
+<p>Konfidensnivå = <span class="math inline">\(1 - \alpha\)</span> (10)</p>
+<p>För <span class="math inline">\(\alpha = 0,05\)</span> har vi <span class="math inline">\(1 - \alpha = 1 - 0,05 = \ 0,95 = 95\ \%\)</span>. De två begreppen kan sammanfattas som:</p>
+<ul>
+<li><p>Signifikansnivå är sannolikheten att vi förkastar nollhypotesen när nollhypotesen är sann.</p></li>
+<li><p>Konfidensnivå är sannolikheten att vi <u>inte</u> förkastar nollhypotesen när den är sann.</p></li>
+</ul>
+<p>Sannolikheten att <span class="math inline">\(H_{0}\)</span> är sann brukar benämnas med det som kallas för <span class="math inline">\(p\)</span> värde. P-värde ger sannolikheten att vi hade fått ett lika extremt värde i ett statistiskt test givet att <span class="math inline">\(H_{0}\)</span> är falsk.</p>
+<p>Medan signifikansnivå och konfidensnivå i regel uppges i avrundade tal, till exempel 95 %, beräknas p-värde exakt genom det statistiska testet.</p>
+<p>Statistiskt test med kvinnor och mäns livslängd</p>
+<p>Låt oss illustrera med ett exempel. Ovan estimerade vi sannolikheten att livslängden för män och kvinnor i Sveriges kommuner skiljer sig genom att beräkna följande z-värde:</p>
+<p><span class="math inline">\(z = \frac{{\bar{X}}_{\text{kvinnor}\ } - {\bar{X}}_{\text{män}\ }}{\left( \frac{s_{man}^{2}}{n_{\text{man}\ }} + \frac{s_{\text{kvinnor}\ }^{2}}{n_{\text{kvinnor}\ }} \right)^{\frac{1}{2}}} \approx \frac{83,95 - 80,38}{\left( \frac{1,663}{290} + \frac{1,032}{290} \right)^{\frac{1}{2}}} \approx 37,045\)</span> (11)</p>
+<p>Låt oss ställa upp detta som ett statistiskt test. Vi har en teori om att livslängd skiljer sig mellan män och kvinnor. Vi formulerar vår nollhypotes som att det inte finns någon skillnad:</p>
+<p><span class="math inline">\(\begin{matrix} &amp; H_{0}:\mu_{\text{män}\ } = \mu_{\text{kvinnor}\ } \\ &amp; H_{1}:\mu_{\text{män}\ } \neq \mu_{\text{kvinnor}\ } \end{matrix}\)</span> (12)</p>
+<p>För att testa trovärdigheten i hypotesen bestämmer vi signifikansnivå <span class="math inline">\(5\%\)</span>, det vill säga (<span class="math inline">\(2,5\%\)</span> från vardera sida av fördelningen, och beräknar <span class="math inline">\(z\)</span>-värdet i ekvation 11, alltså <span class="math inline">\(z = 37,045\)</span>. Detta beräknade <span class="math inline">\(z\)</span>-värde jämför vi mot standardnormalfördelningen.</p>
+<p>Statistiska test kan vara ensidiga eller tvåsidiga. Nollhypotesen är i detta fall formulerad som att både positiv och negativ differens kan innebära att vi har skäl att förkasta <span class="math inline">\(H_{0}\)</span> som falsk. När vi jämför mot standardnormalfördelningen innebär det att både negativa som positiva avvikelser från medelvärdet kan ge oss skäl att förkasta <span class="math inline">\(H_{0}\)</span>. Det vill säga, vårt beräknade z-värde skulle även kunna ha varit negativt.</p>
+<p>Om vårt beräknade z-värde är längre från standardnormalfördelningens medelvärde jämfört med 47,5 % av fördelningen så kallas detta för att resultat är <em>statistiskt signifikant</em>. Vi kan i så fall avfärda <span class="math inline">\(H_{0}\)</span> som falsk för 5 % signifikansnivå. För att veta exakt för vilket z-värde som 47,5 % av fördelningen är under brukar beräknade z-värden jämföras mot kritiska z-värden, vilket skrivs <span class="math inline">\(z^{\*}\)</span>.</p>
+<p>För 5 % nivå har vi <span class="math inline">\(z^{\*} = 1,96\)</span> (se figur 2 i <a href="https://www.dropbox.com/scl/fi/wi8c30n2yna36a7zbiyoh/5-2-Kontinuerliga-sannolikhetsf-rdelningar.docx?rlkey=rmkxixrrun7q0rqeg82lk2kky&amp;dl=0">avsnitt 5.2</a>). Alltså, om vårt beräknade <span class="math inline">\(z\)</span>-värde är högre än detta bör vi förkasta <span class="math inline">\(H_{0}\)</span> som falsk. Som vi noterade ovan är vårt beräknade z -värde 37,045, vilket är så pass högt att det inte syns i diagrammet. Resultatet från vårt statistiska test indikerar med god marginal att <span class="math inline">\(H_{0}\)</span> är falsk.</p>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-5-4"]=[  {    "id": "k2-5-4-001",    "name": "Uppgift 1",    "exercise": "Vad innebär ett 95 %-konfidensintervall korrekt tolkat?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det finns 95 % sannolikhet att populationsvärdet ligger i just det beräknade intervallet",          "Vid upprepade urval kommer 95 % av de beräknade intervallen att innehålla populationsvärdet",          "95 % av alla observationer i urvalet ligger inom intervallet",          "Populationsvärdet är exakt lika med intervallets mittpunkt i 95 % av fallen"        ],        "correct": "Vid upprepade urval kommer 95 % av de beräknade intervallen att innehålla populationsvärdet"      }    },    "error": { "message": "En vanlig missuppfattning är att det är 95 % sannolikhet att det specifika intervallet innehåller populationsvärdet. Konfidensintervall tolkas i termer av upprepade urval." },    "correct": { "message": "Rätt! Korrekt tolkning: om vi upprepade gånger drog urval och beräknade konfidensintervall på samma sätt, skulle 95 % av dessa intervall innehålla det sanna populationsvärdet. Det specifika intervallet vi beräknat antingen innehåller det sanna värdet eller inte." }  },  {    "id": "k2-5-4-002",    "name": "Uppgift 2",    "exercise": "I ett dataurval med \\(n = 28\\) observationer estimeras \\(\\overline{x} = 13\\) och \\(s_x = 3{,}7\\). För ett 90 %-konfidensintervall används \\(z = 1{,}645\\). Beräkna konfidensintervallets <em>övre gräns</em> med formeln \\[\\overline{x} + z\\frac{s_x}{\\sqrt{n}}\\] Avrunda till två decimaler.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "14.15" },    "answerformat": "Ange svaret med två decimaler, t.ex. 14.15",    "error": { "message": "Beräkna \\(1{,}645 \\times 3{,}7 / \\sqrt{28}\\) och addera till 13. \\(\\sqrt{28} \\approx 5{,}292\\)." },    "correct": { "message": "Rätt! \\(13 + 1{,}645 \\times \\frac{3{,}7}{\\sqrt{28}} \\approx 13 + 1{,}645 \\times 0{,}699 \\approx 13 + 1{,}15 \\approx 14{,}15\\). Det 90%-konfidensintervallet är alltså \\(11{,}85 < \\mu_X < 14{,}15\\)." }  },  {    "id": "k2-5-4-003",    "name": "Uppgift 3",    "exercise": "Vad är sambandet mellan signifikansnivå \\(\\alpha\\) och konfidensnivå?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Konfidensnivå = \\(\\alpha\\)",          "Konfidensnivå = \\(1 - \\alpha\\)",          "Konfidensnivå = \\(\\alpha / 2\\)",          "Konfidensnivå = \\(1 + \\alpha\\)"        ],        "correct": "Konfidensnivå = \\(1 - \\alpha\\)"      }    },    "error": { "message": "Om signifikansnivån är sannolikheten att förkasta en sann \\(H_0\\), vad är då konfidensnivån?" },    "correct": { "message": "Rätt! Konfidensnivå = \\(1 - \\alpha\\). Exempel: för \\(\\alpha = 0{,}05\\) är konfidensnivån \\(1 - 0{,}05 = 0{,}95 = 95\\)%. Signifikansnivån är risken att göra fel, konfidensnivån är sannolikheten att inte göra fel." }  },  {    "id": "k2-5-4-004",    "name": "Uppgift 4",    "exercise": "I hypotesprövning för regressionsanalys med modellen \\(Y = a + bX + u\\) — vad är den vanligaste nollhypotesen för lutningskoefficienten \\(b\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(H_0: b = 1\\) (enhetlig effekt)",          "\\(H_0: b > 0\\) (positiv effekt)",          "\\(H_0: b = 0\\) (ingen samvariation)",          "\\(H_0: b < 0\\) (negativ effekt)"        ],        "correct": "\\(H_0: b = 0\\) (ingen samvariation)"      }    },    "error": { "message": "Nollhypotesen formuleras vanligtvis som ett icke-samband. Vad innebär det om lutningskoefficienten i en linjär regressionsmodell är noll?" },    "correct": { "message": "Rätt! \\(H_0: b = 0\\) och \\(H_1: b \\neq 0\\) — dvs. standardinställningen i de flesta statistikprogram. Om \\(b = 0\\) i populationen finns ingen linjär samvariation mellan \\(X\\) och \\(Y\\). Nollhypotesen formuleras som icke-samband, och vi testar om vi har tillräckliga skäl att förkasta den." }  },  {    "id": "k2-5-4-005",    "name": "Uppgift 5",    "exercise": "Vi beräknar z-värdet för skillnaden i medellivslängd mellan männen och kvinnor i Sveriges kommuner och får \\(z \\approx 37{,}045\\). Vid ett tvåsidigt test med signifikansnivå 5 % är det kritiska z-värdet \\(z^* = 1{,}96\\). Vad är slutsatsen?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Vi kan inte förkasta \\(H_0\\) eftersom z-värdet är positivt",          "Vi förkastar \\(H_0\\) eftersom \\(|z| = 37{,}045 > z^* = 1{,}96\\)",          "Vi accepterar \\(H_0\\) eftersom z-värdet är för högt för att vara trovärdigt",          "Testet är ogiltigt eftersom z-värdet är utanför normalfördelningens domän"        ],        "correct": "Vi förkastar \\(H_0\\) eftersom \\(|z| = 37{,}045 > z^* = 1{,}96\\)"      }    },    "error": { "message": "För att förkasta \\(H_0\\) vid ett tvåsidigt test krävs att \\(|z| > z^*\\). Jämför de två värdena." },    "correct": { "message": "Rätt! Eftersom \\(|z| = 37{,}045 \\gg 1{,}96 = z^*\\) förkastar vi \\(H_0: \\mu_{\\text{män}} = \\mu_{\\text{kvinnor}}\\) med god marginal. Resultatet är statistiskt signifikant och indikerar att det finns en verklig skillnad i medellivslängd mellan könen." }  }];</script><div class="exercise-section" data-section-id="k2-5-4">
+
+</div>
+<hr>
+<div class="next-section-link">
+<p><a href="sec-k2-5-5.html">→ Nästa avsnitt: <strong>Regressionsanalys med sannolikhet</strong></a></p>
+</div>
+
+</div>
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k2-5-3.html">Statistisk analys 1</a></div>
+<div class="next"><a href="k2-5-5.html">Regressionsanalys med sannolikhet</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-5-4">Statistisk analys 2</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-44"><span class="header-section-number">0.1.52</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-44"><span class="header-section-number">0.1.53</span> Teori</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-5-4.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-5-4.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

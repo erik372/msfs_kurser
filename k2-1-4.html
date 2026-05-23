@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Population, superpopulation och urval | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.0.93 Begrepp Population: Den grupp av analysenheter (människor eller saker) vi vill studera och uttala oss om. Urval: En delmängd av populationen. Inom samhällsvetenskap arbetar vi i regel med...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Population, superpopulation och urval | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.0.93 Begrepp Population: Den grupp av analysenheter (människor eller saker) vi vill studera och uttala oss om. Urval: En delmängd av populationen. Inom samhällsvetenskap arbetar vi i regel med...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Population, superpopulation och urval | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.0.93 Begrepp Population: Den grupp av analysenheter (människor eller saker) vi vill studera och uttala oss om. Urval: En delmängd av populationen. Inom samhällsvetenskap arbetar vi i regel med...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="active" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-1-4" class="section level1 unnumbered">
+<h1>Population, superpopulation och urval<a class="anchor" aria-label="anchor" href="#k2-1-4"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-23" class="section level3" number="0.0.93">
+<h3>
+<span class="header-section-number">0.0.93</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-23"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>Population:</strong> Den grupp av analysenheter (människor eller saker) vi vill studera och uttala oss om.</p></li>
+<li><p><strong>Urval:</strong> En delmängd av populationen. Inom samhällsvetenskap arbetar vi i regel med urvalsdata och försöker då uppskatta egenskaper hos populationen.</p></li>
+<li><p><strong>Superpopulation:</strong> Den större, ofta mer hypotetiska, populationen av människor eller saker vi vill kunna uttala oss om bortom den population vi hämtar våra urvalsdata från.</p></li>
+</ul>
+</div>
+<div id="teori-23" class="section level3" number="0.0.94">
+<h3>
+<span class="header-section-number">0.0.94</span> Teori<a class="anchor" aria-label="anchor" href="#teori-23"><i class="fas fa-link"></i></a>
+</h3>
+<p>En avgörande fråga i analytiskt arbete är hur vi avgränsar vårt problem och hur stor del av världen och världshistorien som vi vill kunna uttala oss om. Dessa fenomen kan vi beskriva och resonera kring med hjälp av begreppen <em>population,</em> <em>urval</em> och <em>superpopulation</em>. Urval kallas även för <em>stickprov</em>. Se även Mattebokens avsnitt om <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/stickprov-och-urvalsmetoder#!/">Stickprov och urvalsmetoder</a>.</p>
+<div id="population-och-urval" class="section level4" number="0.0.94.1">
+<h4>
+<span class="header-section-number">0.0.94.1</span> Population och urval<a class="anchor" aria-label="anchor" href="#population-och-urval"><i class="fas fa-link"></i></a>
+</h4>
+<p><strong>Population</strong> syftar i statistik på hela den samling av observationer som vi vill veta något om. Till exempel alla människor som just nu bor i Sverige. Eller alla kvinnor mellan 50 och 70 år gamla i Uppsala. Eller alla cancerpatienter i hela världen som just nu har en särskild diagnos. Population i statistik behöver inte vara en samling människor utan kan även bestå av saker, som åkrar eller bilar.</p>
+<p><strong>Urval</strong> är de observationer, det stickprov, vi hämtar från populationen. Vår förhoppning är att de mönster vi kan observera i urvalet är samma mönster som återfinns i hela populationen.</p>
+<p><strong>Superpopulation</strong> är den teoretiska population som vi hoppas kunna uttala oss om bortom undersökningens urval och population. Säg att vi utför en analys på ett urval av observationer som vi hämtar från en population. Ofta vill vi kunna uttala oss både om populationen som existerar idag och olika tänkbara populationer som kan tänkas existera i framtiden.</p>
+</div>
+<div id="prediktera" class="section level4" number="0.0.94.2">
+<h4>
+<span class="header-section-number">0.0.94.2</span> Prediktera<a class="anchor" aria-label="anchor" href="#prediktera"><i class="fas fa-link"></i></a>
+</h4>
+<p>I vissa fall utför vi analyser för att kunna förutspå vad som kommer att hända om något ändras, det vill säga för att kunna <em>prediktera</em> olika tänkbara utfall. Dessa hypotetiska observationer tillhör det som kallas för superpopulationen.</p>
+<p>När vi arbetar med urval, vilket normalt är fallet inom samhällsvetenskap, finns alltid en viss risk att våra resultat är felaktiga och lika gärna kunde ha uppstått av en slump. Ju mindre urval, desto osäkrare resultat. Längre fram i denna kurs ska vi gå igenom hur vi kan arbeta med slump.</p>
+<p>Arbete med data under osäkerhet kallas för <em>statistisk inferens</em>. Ordet inferens betyder slutledning, att dra slutsatser. Att studera orsakssamband (kausalitet) kallas ibland för <em>kausal inferens</em>.</p>
+</div>
+<div id="svårt-att-definiera" class="section level4" number="0.0.94.3">
+<h4>
+<span class="header-section-number">0.0.94.3</span> Svårt att definiera<a class="anchor" aria-label="anchor" href="#sv%C3%A5rt-att-definiera"><i class="fas fa-link"></i></a>
+</h4>
+<p>Det kan ibland vara svårt att exakt definiera vad som är en undersöknings exakta population och superpopulation. Om vi studerar vilken effekt en medicin har på patienters sjukdomssymptom kan populationen till exempel bestå av alla patienter i hela världen med denna sjukdom.</p>
+<p>Från de patienter som existerar idag tar vi ett stickprov på 100 patienter, som vi delar in i behandlings- och kontrollgrupp. Genom att studera samvariationen mellan medicin och symptom i urvalet hoppas vi kunna uttala oss om samma samvariation i populationen. Utifrån dessa observationer vill vi uttala oss om den effekt medicinen har i urvalet, vilket är en uppskattning av den effekt medicinen har i populationen.</p>
+<p>Genom att studera urvalet och uttala oss om populationen vill vi även uppskatta effekterna av medicinen i superpopulationen, som i detta fall är alla jämförbara patienter som kan tänkas komma att existera i framtiden. Eftersom människor är olika är det inte alltid så självklart hur generella våra resultat är och hur långtgående slutsatser vi kan dra.</p>
+</div>
+<div id="exemplet-utbildning" class="section level4" number="0.0.94.4">
+<h4>
+<span class="header-section-number">0.0.94.4</span> Exemplet utbildning<a class="anchor" aria-label="anchor" href="#exemplet-utbildning"><i class="fas fa-link"></i></a>
+</h4>
+<p>Säg att vi i stället är intresserade av vilken effekt en utbildning har på människors framtida inkomster. Populationen skulle i detta fall kunna vara alla personer som kan tänkas delta i utbildningen, till exempel alla vuxna människor i åldrarna 18 till 64 år.</p>
+<p>Eller kanske vi enbart är intresserade av människor med vissa specifika förutsättningar. Beroende på vad som är undersökningens syfte och ambition kan det påverka hur vi definierar populationen.</p>
+<p>På samma sätt måste vi även vara noga med hur vi definierar de fenomen och utfall vi studerar. Studerar vi effekterna av en utbildning, endast utifrån hur den utbildningen såg ut på den platsen detta år? Eller menar vi att våra resultat är jämförbara med motsvarande utbildning på andra platser vid andra tidpunkter?</p>
+<p>Även superpopulation kan vara svårt att definiera. Säg att vi i vår analys finner att utbildningen har en positiv inverkan på deltagarnas framtida inkomster. Om ett stort antal människor läste utbildningen skulle det finnas massor med människor med samma utbildning. Då skulle utbildningen kanske inte ha samma effekt jämfört med en situation där endast en liten andel av befolkningen hade läst utbildningen.</p>
+</div>
+</div>
+<div id="uppgifter-23" class="section level3" number="0.0.95">
+<h3>
+<span class="header-section-number">0.0.95</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-23"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-1-4"]=[  {    "id": "k2-1-4-001",    "name": "Uppgift 1",    "exercise": "Vad är skillnaden mellan <em>population</em> och <em>urval</em> inom statistik?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Population är ett stickprov och urval är hela gruppen",          "Population är hela den grupp vi vill uttala oss om, och urval är den delmängd av populationen vi faktiskt studerar",          "Population och urval är synonyma begrepp",          "Population används bara om grupper av människor, urval används om saker"        ],        "correct": "Population är hela den grupp vi vill uttala oss om, och urval är den delmängd av populationen vi faktiskt studerar"      }    },    "error": { "message": "Tänk på ett exempel: populationen är alla patienter i hela världen med en viss sjukdom, men man tar ett stickprov på 100 patienter. Vad är populationen och vad är urvalet?" },    "correct": { "message": "Rätt! Populationen är hela den samling observationer vi vill veta något om (t.ex. alla cancerpatienter i världen), medan urvalet är det stickprov vi faktiskt hämtar och studerar (t.ex. 100 patienter)." }  },  {    "id": "k2-1-4-002",    "name": "Uppgift 2",    "exercise": "Vad menas med <em>superpopulation</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "En population som är större än 1 000 000 individer",          "Den teoretiska, ofta mer hypotetiska population vi vill kunna uttala oss om bortom det aktuella urvalet och populationen – inklusive framtida tänkbara observationer",          "En population som har studerats under mer än tio år",          "Den del av populationen som inte ingår i urvalet"        ],        "correct": "Den teoretiska, ofta mer hypotetiska population vi vill kunna uttala oss om bortom det aktuella urvalet och populationen – inklusive framtida tänkbara observationer"      }    },    "error": { "message": "I medicinexemplet: urvalet var 100 patienter, populationen var alla nuvarande patienter med sjukdomen, och superpopulationen var ännu bredare. Vad innefattar den?" },    "correct": { "message": "Rätt! Superpopulationen är den mer hypotetiska och vidare grupp vi vill kunna generalisera till, bortom de observationer vi har idag – till exempel alla jämförbara patienter som kan tänkas existera i framtiden." }  },  {    "id": "k2-1-4-003",    "name": "Uppgift 3",    "exercise": "I en medicinstudie tar man ett stickprov på 100 patienter från populationen. Man delar in dem i behandlings- och kontrollgrupp. Varför är det ett problem om urvalet är <em>litet</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Små urval är för dyra att analysera",          "Små urval ger osäkrare resultat – risken ökar att de mönster vi ser beror på slump snarare än på verkliga effekter",          "Små urval kräver mer avancerade statistiska metoder",          "Små urval kan inte användas för kausal analys överhuvudtaget"        ],        "correct": "Små urval ger osäkrare resultat – risken ökar att de mönster vi ser beror på slump snarare än på verkliga effekter"      }    },    "error": { "message": "Tänk på sambandet mellan urvalsstorlek och osäkerhet. Ju mindre urval, desto...?" },    "correct": { "message": "Rätt! Ju mindre urval, desto osäkrare resultat. Det finns alltid en risk att våra resultat lika gärna kunde ha uppstått av en slump, och denna risk är större ju färre observationer vi har." }  },  {    "id": "k2-1-4-004",    "name": "Uppgift 4",    "exercise": "Vi studerar effekten av en utbildning på inkomst. Urvalet består av 200 deltagare. Vi vill uttala oss om alla vuxna i Sverige i åldrarna 18–64 år. Hur stor är populationen om det finns 5 000 000 vuxna i den åldersgruppen och vi har tagit ett urval på 200?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "5000000" },    "answerformat": "",    "error": { "message": "Populationen är den grupp vi vill uttala oss om – inte bara de vi faktiskt studerade. Hur många vuxna i åldrarna 18–64 år finns det i Sverige enligt uppgiften?" },    "correct": { "message": "Rätt! Populationen är alla 5 000 000 vuxna i Sverige i åldrarna 18–64 år. Urvalet på 200 är bara det stickprov vi studerar för att uppskatta egenskaper hos hela denna population." }  },  {    "id": "k2-1-4-005",    "name": "Uppgift 5",    "exercise": "Vad kallas arbete med data under osäkerhet, där vi drar slutsatser om en population utifrån ett urval?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Deskriptiv statistik",          "Statistisk inferens",          "Kausal analys",          "Explorativ dataanalys"        ],        "correct": "Statistisk inferens"      }    },    "error": { "message": "Ordet 'inferens' betyder slutledning. Vad kallas det när vi drar slutsatser om en population utifrån ett urval, under osäkerhet?" },    "correct": { "message": "Rätt! Statistisk inferens (slutledning) är arbetet med att dra slutsatser om en population utifrån ett urval, med insikt om att det alltid finns osäkerhet. Att studera orsakssamband kallas ibland specifikt för kausal inferens." }  }];</script><div class="exercise-section" data-section-id="k2-1-4">
+
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k2-1-3.html">Information och variabler</a></div>
+<div class="next"><a href="variation-och-samvariation.html">Variation och samvariation</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-1-4">Population, superpopulation och urval</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-23"><span class="header-section-number">0.0.93</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-23"><span class="header-section-number">0.0.94</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-23"><span class="header-section-number">0.0.95</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-1-4.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-1-4.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

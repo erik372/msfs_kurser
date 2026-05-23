@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Andra linjer | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.1.5 Begrepp Inga nya begrepp i detta avsnitt.  0.1.6 Teori I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Andra linjer | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.1.5 Begrepp Inga nya begrepp i detta avsnitt.  0.1.6 Teori I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Andra linjer | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.1.5 Begrepp Inga nya begrepp i detta avsnitt.  0.1.6 Teori I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="active" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-3-1" class="section level1 unnumbered">
+<h1>Andra linjer<a class="anchor" aria-label="anchor" href="#k2-3-1"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-30" class="section level3" number="0.1.5">
+<h3>
+<span class="header-section-number">0.1.5</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-30"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Inga nya begrepp i detta avsnitt.</em></p>
+</div>
+<div id="teori-30" class="section level3" number="0.1.6">
+<h3>
+<span class="header-section-number">0.1.6</span> Teori<a class="anchor" aria-label="anchor" href="#teori-30"><i class="fas fa-link"></i></a>
+</h3>
+<p>I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi inte bara ha valt en annan? I det här avsnittet ska vi visa varför regressionslinjen är unik och bättre än alla andra möjliga raka linjer.</p>
+<p>Vi har regressionsmodellen:</p>
+<p><span class="math inline">\(Y = a + bX + V\)</span> (1)</p>
+<p>där <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är variabler, <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är koefficienter vi vill estimera med minstakvadratmetoden och <span class="math inline">\(V\)</span> är feltermen. Med hjälp av minstakvadratmetoden kan vi hitta den regressionslinje som minimerar summan av det vertikala avståndet mellan regressionslinjen och observationerna.</p>
+<p>Alla andra raka linjer resulterar i ett större summerat värde för det kvadrerade avståndet mellan dessa linjer och punkterna.</p>
+<div id="två-exempel" class="section level4" number="0.1.6.1">
+<h4>
+<span class="header-section-number">0.1.6.1</span> Två exempel<a class="anchor" aria-label="anchor" href="#tv%C3%A5-exempel"><i class="fas fa-link"></i></a>
+</h4>
+<p>Detta kan vi illustrera med hjälp av exempel där vi använder samma fyra observationer för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> i som vi använde i tidigare avsnitt, där <span class="math inline">\(X = 3,\ 4,\ 6,\ 7\)</span> och <span class="math inline">\(Y = 3,\ 4,\ 5,\ 6\)</span>. Men i stället för regressionslinjen som vi skattade utifrån minstakvadratmetoden har vi nu en horisontell linje där <span class="math inline">\(\widehat{Y} = 3,5\)</span> för alla <span class="math inline">\(Y_{i}\)</span>, vilket är samma som medelvärdet för Y i våra fyra observationer: <span class="math inline">\(\overline{Y} = (3 + 4 + 5 + 6)\text{/}4 = 3,5\)</span>.</p>
+<p>En horisontell linje har lutningskoefficient <span class="math inline">\(b = 0\)</span>. Låt oss beräkna summan av de kvadrerade residualerna <span class="math inline">\(\left( \sum_{i}^{}\widehat{{V_{i}}^{2}} \right)\)</span> för denna linje:</p>
+<p><span class="math inline">\(\sum_{i}^{}\widehat{{V_{i}}^{2}} = \sum_{i}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (2)$ $</p>
+<p><span class="math display">\[{= (3 - 3,5)^{2} + (4 - 3,5)^{2} + (5 - 3,5)^{2} + (6 - 3,5)^{2} }{= 9}\]</span></p>
+<p>vilket är mer än 2,5. Regressionslinjen vi kunde rita utifrån vår regressionsmodell som vi skattade med minstakvadratmetoden är därför bättre om vi ska minimera det summerade vertikala avståndet.</p>
+<p>Låt oss exemplifiera med en till linje, som passerar observation 1 och 4, det vill säga punkterna <span class="math inline">\((X,Y) = (3,3)\)</span> och (7,4). Utifrån dessa värden för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> vet vi att då <span class="math inline">\(X\)</span> ökar från 3 till 7 är detta associerat med en genomsnittlig förändring i <span class="math inline">\(Y\)</span> från 3 till 4, varför linjens lutning är:</p>
+<p><span class="math inline">\(\widehat{b} = \frac{Y_{4} - Y_{1}}{X_{4} - X_{1}} = \frac{4 - 3}{7 - 3} = \frac{1}{4}\)</span> (3)</p>
+<p>Den andra koefficienten (<span class="math inline">\(\widehat{a}\)</span>) kan vi räkna ut med punkten <span class="math inline">\(\left( X_{1},Y_{1} \right) = (3,3)\)</span>:</p>
+<p><span class="math inline">\(\widehat{a} = Y_{i} - \widehat{b}X_{i} = 3 - \frac{1}{4} \cdot 3 = \frac{9}{4}\)</span> (4)</p>
+<p>Eftersom linjen passerar genom observation 1 och 4 vet vi att residualen för dessa två är <span class="math inline">\(\widehat{V_{i}} = 0\)</span>. För observation 2 har vi att <span class="math inline">\(X = 4\)</span>, vilket ger:</p>
+<p><span class="math inline">\(\widehat{Y_{2}} = \frac{9}{4} + \frac{1}{4} \cdot 4 = \frac{13}{4}\)</span> (5)</p>
+<p>För observation 3 har vi <span class="math inline">\(X = 6\)</span> vilket ger:</p>
+<p><span class="math inline">\(\widehat{Y_{3}} = \frac{9}{4} + \frac{1}{4} \cdot 6 = \frac{15}{4}\)</span> (6)</p>
+<p>För observation 2 och 3 har vi att <span class="math inline">\(\left( Y_{2} = 2 \right)\)</span> och <span class="math inline">\(\left( Y_{3} = 5 \right)\)</span>:</p>
+<p><span class="math inline">\(\sum_{i}^{}{\widehat{V}}_{i}\ = \sum_{i}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (7)$ $</p>
+<p><span class="math display">\[{= \left( Y_{1} - \widehat{Y}1 \right)^{2} + \left( Y2 - \widehat{Y}2 \right)^{2} + \left( Y3 - \widehat{Y}3 \right)^{2} + \left( Y4 - \widehat{Y_{4}} \right)^{2} }{= 0 + \left( 2 - \frac{13}{4} \right)^{2} + \left( 5 - \frac{15}{4} \right)^{2} + 0 }{= 3,1875 \&gt; 2,5}\]</span></p>
+<p>Figur 1 illustrerar de tre linjer vi nu har jämfört. Linje A i diagrammet är den vi skattade utifrån minstakvadratmetoden. Linje B är den horisontella linjen där <span class="math inline">\(\widehat{Y} = \overline{Y} = 3,5\)</span>. Linje C ritas av funktionen <span class="math inline">\(Y = 9\text{/}4 + \frac{1}{4}X\)</span> och går igenom två av punkterna.</p>
+<p><strong>Figur 1. Tre linjer, varav en är regressionslinjen</strong></p>
+<div class="inline-figure"><img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\3%20-%20Minstakvadratmetoden%20f%C3%B6rdjupning%201%20mer%20matte\3-1%20-%20Andra%20linjer/img/k2-3-1-image1.png" style="width:3.27778in;height:3.27778in"></div>
+<p>Förklaring: Diagrammet visar tre linjer. Linje A är regressionslinjen, beräknad med minstakvadratmetoden. Linje B är horisontell och linje C går igenom två av punkterna. Av de tre linjerna har linje A det minstas summerade vertikala avståndet mellan linjen och punkterna.</p>
+</div>
+</div>
+<div id="uppgifter-30" class="section level3" number="0.1.7">
+<h3>
+<span class="header-section-number">0.1.7</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-30"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-3-1"]=[  {    "id": "k2-3-1-001",    "name": "Uppgift 1",    "exercise": "Vi har fyra observationer med \\(X = 3, 4, 6, 7\\) och \\(Y = 3, 4, 5, 6\\). Medelvärdet för \\(Y\\) är \\(\\overline{Y} = 4,5\\). En horisontell linje dras vid \\(\\widehat{Y} = 4,5\\). Hur stor är summan av de kvadrerade residualerna för den horisontella linjen? Beräkna: \\[(3 - 4{,}5)^2 + (4 - 4{,}5)^2 + (5 - 4{,}5)^2 + (6 - 4{,}5)^2\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "5" },    "answerformat": "",    "error": { "message": "Beräkna varje term för sig: \\((-1{,}5)^2 = 2{,}25\\), \\((-0{,}5)^2 = 0{,}25\\), \\((0{,}5)^2 = 0{,}25\\), \\((1{,}5)^2 = 2{,}25\\). Summera sedan." },    "correct": { "message": "Rätt! \\(2{,}25 + 0{,}25 + 0{,}25 + 2{,}25 = 5\\). Den horisontella linjen vid \\(\\widehat{Y} = 4{,}5\\) ger alltså SSR (summan av de kvadrerade residualerna) = 5 för dessa fyra observationer." }  },  {    "id": "k2-3-1-002",    "name": "Uppgift 2",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) jämför vi en horisontell linje (Linje B) med regressionslinjen (Linje A) för fyra observationer \\(X = 3, 4, 6, 7\\) och \\(Y = 3, 2, 5, 4\\). Regressionslinjen ger summan av kvadrerade residualerna SSR = 2,5. Den horisontella linjen \\(\\widehat{Y} = \\overline{Y} = 3{,}5\\) ger SSR = 5. Vilket påstående är korrekt?",    "image": "img/k2-3-1-image1.png",    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den horisontella linjen passar bättre eftersom 5 > 2,5",          "Regressionslinjen passar bättre eftersom 2,5 < 5",          "Båda linjerna passar lika bra",          "Det går inte att jämföra de två linjerna"        ],        "correct": "Regressionslinjen passar bättre eftersom 2,5 < 5"      }    },    "error": { "message": "Minstakvadratmetoden minimerar summan av de kvadrerade residualerna. En lägre summa innebär ett bättre anpassad linje." },    "correct": { "message": "Rätt! Regressionslinjen ger summan 2,5 och den horisontella linjen ger 5. Eftersom 2,5 < 5 passar regressionslinjen bättre mot data — precis det som minstakvadratmetoden garanterar." }  },  {    "id": "k2-3-1-003",    "name": "Uppgift 3",    "exercise": "En linje (Linje C) ritas genom observationerna \\((X_1, Y_1) = (3, 3)\\) och \\((X_4, Y_4) = (7, 4)\\). Vad är lutningen \\(\\widehat{b}\\) för denna linje? \\[\\widehat{b} = \\frac{Y_4 - Y_1}{X_4 - X_1}\\]",    "image": "img/k2-3-1-image1.png",    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(\\widehat{b} = 1\\)",          "\\(\\widehat{b} = \\frac{1}{2}\\)",          "\\(\\widehat{b} = \\frac{1}{4}\\)",          "\\(\\widehat{b} = 2\\)"        ],        "correct": "\\(\\widehat{b} = \\frac{1}{4}\\)"      }    },    "error": { "message": "Sätt in värdena i formeln: täljaren är \\(4 - 3 = 1\\) och nämnaren är \\(7 - 3 = 4\\)." },    "correct": { "message": "Rätt! \\(\\widehat{b} = \\frac{4 - 3}{7 - 3} = \\frac{1}{4}\\). Linjen passerar per konstruktion genom \\((3, 3)\\) och \\((7, 4)\\)." }  },  {    "id": "k2-3-1-004",    "name": "Uppgift 4",    "exercise": "Med lutningen \\(\\widehat{b} = \\frac{1}{4}\\) och att linjen passerar genom punkten \\((X_1, Y_1) = (3, 3)\\) beräknas konstanttermen: \\[\\widehat{a} = Y_1 - \\widehat{b} \\cdot X_1\\] Vilket värde får \\(\\widehat{a}\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "2.25" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 2.25)",    "error": { "message": "Beräkna \\(\\frac{1}{4} \\cdot 3 = \\frac{3}{4} = 0{,}75\\). Sedan: \\(3 - 0{,}75 = ?\\). Alternativt: \\(\\frac{9}{4} = ?\\)" },    "correct": { "message": "Rätt! \\(\\widehat{a} = 3 - \\frac{3}{4} = \\frac{9}{4} = 2{,}25\\). Linje C har alltså ekvationen \\(\\widehat{Y} = 2{,}25 + 0{,}25 \\cdot X\\). Linjen passerar per konstruktion genom observation 1 och 4, varför residualerna för dessa är noll." }  },  {    "id": "k2-3-1-005",    "name": "Uppgift 5",    "exercise": "Varför kan ingen annan rät linje ersätta regressionslinjen som skattas med minstakvadratmetoden?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Regressionslinjen är den enda linjen som passerar genom alla observationer",          "Alla andra raka linjer resulterar i ett större summerat värde för de kvadrerade residualerna",          "Regressionslinjen är alltid horisontell",          "Andra linjer kräver fler observationer för att beräknas"        ],        "correct": "Alla andra raka linjer resulterar i ett större summerat värde för de kvadrerade residualerna"      }    },    "error": { "message": "Tänk på vad minstakvadratmetoden faktiskt minimerar och vad det innebär för alla andra möjliga linjer." },    "correct": { "message": "Rätt! Alla andra raka linjer resulterar i ett större summerat värde för det kvadrerade avståndet mellan linjen och punkterna. Till exempel ger den horisontella linjen SSR = 5 och Linje C SSR = 3,125 — båda större än regressionslinjen (SSR (summan av de kvadrerade residualerna) = 2,5)." }  }];</script><div class="exercise-section" data-section-id="k2-3-1">
+
+</div>
+<hr>
+<div class="next-section-link">
+<p><a href="sec-k2-3-2.html">→ Nästa avsnitt: <strong>En modell till</strong></a></p>
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></div>
+<div class="next"><a href="k2-3-2.html">En modell till</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-3-1">Andra linjer</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-30"><span class="header-section-number">0.1.5</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-30"><span class="header-section-number">0.1.6</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-30"><span class="header-section-number">0.1.7</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-3-1.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-3-1.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

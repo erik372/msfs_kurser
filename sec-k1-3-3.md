@@ -1,0 +1,87 @@
+# En teori om arbete {#k1-3-3 -}
+
+
+### Begrepp
+
+*Inga nya matematiska begrepp i detta avsnitt.*
+
+### Teori
+
+I detta exempel ska vi beskriva arbetsmarknaden med ett linjärt ekvationssystem. Vårt ekvationssystem består av två ekvationer som ger en förenklad bild av hur vi kan tänka oss att löner $(W)$ och priser $(P)$ bestäms:
+
+$\left\{ \begin{matrix} \frac{W}{P} = \frac{a}{U^{b}}, & b \> 0 \\ \frac{P}{W} = \frac{c}{U^{d}}, & c \> 0 \end{matrix} \right.\ $ (1)
+
+Första ekvationen beskriver hur lönerna $W$ sätts med ett påslag, koefficienten $a$, över priser $P$. Så om arbetarna möter högre priser kräver de även högre löner.
+
+Den andra ekvationen beskriver hur priser $P$ sätts med ett påslag $c$ på lönerna $W$. Om företagen möter högre löner sätter de högre priser. Arbetslöshet $U$ inverkar negativt både på löner och priser, och denna effekt bestäms av koefficienterna $b$ och $d$.
+
+Bokstäverna $a,b,c$ och $d$ är konstanter som sammanfattar de fenomen som påverkar löner och priser. Exakt vad detta symboliserar bekymrar vi oss inte om här. Det kan exempelvis vara skatter, lagstiftning eller hur arbetstagare och arbetsgivare förhandlar löner och villkor via sina fackföreningar och arbetsgivarorganisationer.
+
+Den första ekvationen $(W/P)$ kallas även för lönesättningskurvan, som kan beskrivas som en utbudskurva för arbetskraften. Den andra ekvationen $(P/W)$ kallas även för prissättningskurvan och kan beskrivas som en efterfrågekurva för arbetskraften.
+
+Vi söker nu en lösning för variabeln $W/P$, reallön (se avsnitt 3.7), och $U$, procent arbetslöshet. Vi börjar med att skriva om den andra ekvationen och lösa för $W/P = U^{d}/c$. Vi sätter in detta i den första ekvationen:
+
+$\begin{matrix} \frac{W}{P} & \ = \frac{a}{U^{b}} \\ \frac{U^{d}}{c} & \ = \frac{a}{U^{b}} \\ U^{d + b} & \ = ac \\ U^{\*} & \ = (ac)^{\frac{1}{b + d}} \end{matrix}$ (2)
+
+Lösningen för $U^{\*}$ kan vi sedan använda för att lösa ut $(W/P)^{\*}$. Vi sätter in $U^{\*}$ i ekvationssystemet i ekvation 1:
+
+$\begin{matrix} \left( \frac{W}{P} \right)^{\*} & \ = \frac{a}{\left( U^{\*} \right)^{b}} \\ & \ = \frac{a}{(ac)^{\frac{b}{b + d}}} \\ & \ = \frac{a^{1 - \frac{b}{b + d}}}{c^{\frac{b}{b + d}}} \\ & \ = a^{\frac{d + b - b}{b + d}}c^{\frac{- b}{b + d}} \\ & \ = a^{\frac{d}{b + d}}c^{\frac{- b}{b + d}} \end{matrix}$ (3)
+
+Eller så kan vi utgå från vänsterledet i ekvation 2 och sätta in $U^{\*}$ där:
+
+$\left( \frac{W}{P} \right)^{\*} = \frac{\left( U^{\*} \right)^{d}}{c} = \frac{(ac)^{\frac{d}{b + d}}}{c} = a^{\frac{d}{b + d}}c^{\frac{- b}{b + d}}$ (4)
+
+Nu har vi lösningen för de två variablerna $U$ och $W/P$ :
+
+$\left( U^{\*},(W/P)^{\*} \right) = \left( (ac)^{\frac{1}{b + d}},a^{\frac{d}{b + d}}c^{\frac{- b}{b + d}} \right)$ (5)
+
+Parentesen i högerledet beskriver lösningarna för respektive variabel. $U^{\*}$ är en definition av det som inom samhällsvetenskap kallas för jämviktsarbetslöshet.
+
+#### Samma sak men i logaritmerad form
+
+Detta är inte ett linjärt ekvationssystem men med hjälp av logaritmering kan vi göra det linjärt. Vi tar därför logaritmen av båda sidor av respektive ekvation 1:
+
+$\begin{matrix} \left\{ \begin{matrix} log\left( \frac{W}{P} \right) = log\left( \frac{a}{U^{b}} \right), & b \> 0 \\ log\left( \frac{P}{W} \right) = log\left( \frac{c}{U^{d}} \right), & c \geq 0 \end{matrix} \right.\ \\ \left\{ \begin{matrix} logW - logP = loga - logU^{b} \\ logP - logW = logc - logU^{d} \end{matrix} \right.\ \\ \left\{ \begin{matrix} w - p = loga - bu \\ p - w = logc - du \end{matrix} \right.\ \end{matrix}$ (6)
+
+där vi nu skriver $\text{log}\ W = w,\ \text{log}\ P = p,\ \text{log}\ U = u.$ I nedersta raden i ekvation 6 har vi därför att $w - p = log\left( \frac{W}{P} \right)$ och $\text{log}b\*u = b\*logU$. Bokstaven $u$ är logaritmen av procent arbetslöshet och $a,b,c$ och $d$ är koefficienter som definierar hur våra variabler hänger ihop.
+
+Precis som ovan skriver vi om den andra ekvationen, sätter de två definitionerna av $w - p$ lika med varandra och löser för $u$. För att spara utrymme definierar vi nu även $\text{log}\ a = \alpha$ och $\text{log}\ c = \gamma$
+
+$\begin{matrix} du - \gamma & \ = \alpha - bu \\ u(b + d) & \ = \alpha + \gamma \\ u^{\*} & \ = \frac{\alpha + \gamma}{b + d} \end{matrix}$ (7)
+
+Definitionen av $u^{\*}$ är den logaritmerade versionen av lösningen i ekvation 5. För att räkna om till arbetslöshet i procent tar vi exponenten:
+
+$\begin{matrix} exp\left( u^{\*} \right) & \ = \frac{1}{b + d}exp(\alpha + \gamma) \\ U^{\*} & \ = ac^{\frac{1}{b + d}} \end{matrix}$ (8)
+
+#### Illustration i diagram
+
+Figur 1 visar hur denna modell kan illustreras i diagram. Relationen mellan $W/P$ och $U$ beskrivs med de två funktionerna för utbud och efterfrågan, även kallat löne- och prissättningskurvan.
+
+Läser vi x-axeln från vänster till höger mäter axeln procent av arbetskraften som har arbete, vilket kallas för sysselsättningsgrad. Sysselsättningsgrad kan definieras som $1 - U$, där $U$ anger procent arbetslösa. Lösningen för variablerna $U^{\*}$ och $(W/P)^{\*}$ är den punkt där linjerna möts.
+
+I diagrammet till vänster visas hur linjerna ser ut i vanlig form, som i ekvation 1. I diagrammet till höger visas logaritmerade funktionerna, som i ekvation 6.
+
+**Figur 1: Utbud och efterfrågan på arbetsmarknaden enligt vår teoretiska modell**
+
+![](C:\Users\hegel\Dropbox\_MINA%20TEXTER%20_db\Matematik%20för%20samhällsvetare\Matteboken.se\html-output\kurs%201%20-%20Matematik%20för%20samhällsvetare\3%20-%20Beskriva%20teorier%20med%20ekvationssystem\3-3%20En%20teori%20om%20arbete/img/k1-3-3-image1.png){style="width:4.69861in;height:3in"}'
+
+Förklaring: Diagrammet till vänster illustrerar ekvationssystemet i ekvation 1, när funktionerna skrivs i vanligt format. Diagrammet till höger illustrerar ekvationssystemet med logaritmerade funktioner, som i ekvation 6.
+
+### Uppgifter
+
+
+::: {.ex-section-title}
+Övningar
+:::
+
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-3-3"]=[  {    "id": "k1-3-3-001",    "name": "Uppgift 1",    "exercise": "Tänk att vi har en enkel modell för arbetsmarknaden. Den första ekvationen, lönesättningskurvan, skrivs \\(W = P \\cdot (a/U^b)\\), där \\(W\\) är nominallönen, \\(P\\) prisnivån, \\(U\\) arbetslöshetsgraden och \\(a, b > 0\\) konstanter. Vad beskriver lönesättningskurvan?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Hur priser sätts med ett påslag på lönerna",          "Hur löner sätts med ett påslag över priser, vilket kan beskrivas som en utbudskurva för arbetskraften",          "Hur staten reglerar minimilöner",          "Hur arbetslösheten bestämmer inflationen"        ],        "correct": "Hur löner sätts med ett påslag över priser, vilket kan beskrivas som en utbudskurva för arbetskraften"      }    },    "error": { "message": "Läs beskrivningen av lönesättningskurvan – vad sätts med ett påslag på vad?" },    "correct": { "message": "Rätt! Lönesättningskurvan \\(W = P \\cdot (a/U^b)\\) beskriver hur löner sätts med koefficienten \\(a\\) som påslag på priserna \\(P\\). Den kan ses som en utbudskurva för arbetskraften." }  },  {    "id": "k1-3-3-002",    "name": "Uppgift 2",    "exercise": "Utöver lönesättningskurvan \\(W = P \\cdot (a/U^b)\\) innehåller modellen en prissättningskurva: \\(P = W \\cdot (c/U^d)\\), där \\(P\\) är prisnivån, \\(W\\) nominallönen, \\(U\\) arbetslöshetsgraden och \\(c, d > 0\\) konstanter. Vad kan prissättningskurvan beskrivas som?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Lönesättningskurvan, en utbudskurva för varor",          "Prissättningskurvan, en efterfrågekurva för arbetskraften",          "Produktionskurvan, en beskrivning av BNP-tillväxt",          "Inflationskurvan, en beskrivning av prisnivåförändringar"        ],        "correct": "Prissättningskurvan, en efterfrågekurva för arbetskraften"      }    },    "error": { "message": "Den andra ekvationen handlar om hur priser sätts – vad kallas en sådan kurva och vad kan den liknas vid?" },    "correct": { "message": "Rätt! Prissättningskurvan \\(P = W \\cdot (c/U^d)\\) kan beskrivas som en efterfrågekurva för arbetskraften. Den visar hur företagen sätter priser med ett påslag \\(c\\) på lönerna." }  },  {    "id": "k1-3-3-003",    "name": "Uppgift 3",    "exercise": "Betrakta modellen med lönesättningskurvan \\(W = P \\cdot (a/U^b)\\) och prissättningskurvan \\(P = W \\cdot (c/U^d)\\), där \\(W\\) är nominallönen, \\(P\\) prisnivån och \\(U\\) arbetslöshetsgraden. En central kvot i modellen är \\(W/P\\). Vad menas med <em>reallön</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den faktiska lönen i kronor som betalas ut varje månad",          "Kvoten \\(W/P\\), det vill säga lönen i förhållande till prisnivån",          "Skillnaden \\(W - P\\) mellan lön och pris",          "Det högsta lönebelopp som kan betalas på marknaden"        ],        "correct": "Kvoten \\(W/P\\), det vill säga lönen i förhållande till prisnivån"      }    },    "error": { "message": "Reallön handlar om köpkraft – vad köper man för sin lön? Tänk på relationen mellan \\(W\\) och \\(P\\)." },    "correct": { "message": "Rätt! Reallönen är \\(W/P\\), det vill säga nominallönen \\(W\\) dividerat med prisnivån \\(P\\). Den mäter köpkraften hos lönen." }  },  {    "id": "k1-3-3-004",    "name": "Uppgift 4",    "exercise": "Betrakta ett icke-linjärt ekvationssystem: \\(W = P \\cdot (a/U^b)\\) och \\(P = W \\cdot (c/U^d)\\). Varför är det fördelaktigt att logaritmera ett sådant system?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "För att logaritmer alltid ger mer exakta beräkningar",          "Eftersom logaritmering omvandlar det icke-linjära systemet till ett linjärt ekvationssystem",          "Därför att logaritmerade värden är lättare att tolka för ekonomer",          "För att eliminera variabeln \\(U\\) ur systemet"        ],        "correct": "Eftersom logaritmering omvandlar det icke-linjära systemet till ett linjärt ekvationssystem"      }    },    "error": { "message": "Det ursprungliga systemet innehåller potenser (\\(U^b\\), \\(U^d\\)). Vad uppnår man med logaritmering?" },    "correct": { "message": "Rätt! Genom logaritmering omvandlas de icke-linjära ekvationerna (med potenser) till linjära ekvationer, vilket gör systemet lättare att lösa analytiskt." }  },  {    "id": "k1-3-3-005",    "name": "Uppgift 5",    "exercise": "Betrakta ekvationssystemet med lönesättningskurvan \\(W = P \\cdot (a/U^b)\\) och prissättningskurvan \\(P = W \\cdot (c/U^d)\\). När systemet logaritmeras erhålls jämviktsarbetslösheten \\[u^* = \\frac{\\alpha + \\gamma}{b + d}\\] där \\(\\alpha = \\log a\\), \\(\\gamma = \\log c\\) och \\(u = \\log U\\). Om \\(\\alpha = 2\\), \\(\\gamma = 3\\), \\(b = 1\\) och \\(d = 4\\), vad är \\(u^*\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "u": "1" },    "answerformat": "",    "error": { "message": "Sätt in värdena i formeln: \\(u^* = (2 + 3) / (1 + 4)\\)." },    "correct": { "message": "Rätt! \\(u^* = (2 + 3)/(1 + 4) = 5/5 = 1\\). Detta är den logaritmerade jämviktsarbetslösheten." }  }];</script>
+<div class="exercise-section" data-section-id="k1-3-3"></div>
+
+
+---
+
+
+::: {.next-section-link}
+[→ Nästa avsnitt: **Externa effekter**](sec-k1-3-4.html)
+:::
+

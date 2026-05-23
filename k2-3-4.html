@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Härled estimatorerna | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.1.16 Begrepp Inga nya begrepp i detta avsnitt.  0.1.17 Teori Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Härled estimatorerna | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.1.16 Begrepp Inga nya begrepp i detta avsnitt.  0.1.17 Teori Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Härled estimatorerna | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.1.16 Begrepp Inga nya begrepp i detta avsnitt.  0.1.17 Teori Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="active" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-3-4" class="section level1 unnumbered">
+<h1>Härled estimatorerna<a class="anchor" aria-label="anchor" href="#k2-3-4"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-33" class="section level3" number="0.1.16">
+<h3>
+<span class="header-section-number">0.1.16</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-33"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Inga nya begrepp i detta avsnitt.</em></p>
+</div>
+<div id="teori-33" class="section level3" number="0.1.17">
+<h3>
+<span class="header-section-number">0.1.17</span> Teori<a class="anchor" aria-label="anchor" href="#teori-33"><i class="fas fa-link"></i></a>
+</h3>
+<p>Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att matematiken blir för tung kan du hoppa över detta avsnitt för nu och komma tillbaka senare om du vill förstå metoderna mer på djupet. Fokusera på att förstå vad estimatorerna gör. Det är inte avgörande att förstå varje steg i härledningarna.</p>
+<p>Varför bry sig om härledningen?</p>
+<ol style="list-style-type: decimal">
+<li><p>Det ger djupare förståelse för minstakvadratmetodens logik.</p></li>
+<li><p>Det visar att metoderna bygger på genomtänkt matematik.</p></li>
+<li><p>Det förbereder dig för mer avancerade metoder senare.</p></li>
+</ol>
+<div id="utgångspunkter" class="section level4" number="0.1.17.1">
+<h4>
+<span class="header-section-number">0.1.17.1</span> Utgångspunkter<a class="anchor" aria-label="anchor" href="#utg%C3%A5ngspunkter"><i class="fas fa-link"></i></a>
+</h4>
+<p>För regressionsmodellen <span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> där <span class="math inline">\(Y_{i}\)</span> och <span class="math inline">\(X_{i}\)</span> är variabler och <span class="math inline">\(V_{i}\)</span> är felterm, introducerade vi estimatorer för koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> i avsnitt 2.5:</p>
+<p><span class="math inline">\(\widehat{a} = \overline{Y} - \widehat{b}\overline{X}\)</span> (1)</p>
+<p><span class="math inline">\(\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}}\)</span></p>
+<p>Nu ska vi gå igenom hur vi kan härleda estimatorerna. Minstakvadratmetoden låter oss definiera estimatorerna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> så att vi minimerar summan av de kvadrerade residualerna</p>
+<p><span class="math inline">\(\sum_{i}^{}{\widehat{V}}_{i}^{2} = \sum_{}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (2)</p>
+<p>Estimatorerna kan därför härledas ur ett minimeringsproblem. Om du känner dig osäker på maximeringsproblem och minimeringsproblem, se Mattebokens avsnitt om <a href="https://www.matteboken.se/lektioner/matte-3/derivatan-och-grafen/storsta-och-minsta-varde#!/">största och minsta värde under matte 3</a>.</p>
+<p>Summan av de kvadrerade residualerna blir:</p>
+<p><span class="math inline">\(\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = {\widehat{V}}_{i}^{2} + {\widehat{V}}_{i}^{2} + \ldots + {\widehat{V}}_{i}^{2}\)</span> (3)$ $</p>
+<p><span class="math display">\[{= \left( Y_{1} - \widehat{Y_{1}} \right)^{2} + \left( Y_{2} - \widehat{Y_{2}} \right)^{2} + \ldots + \left( Y_{n} - \widehat{Y_{n}} \right)^{2} }{= \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}\]</span></p>
+<p>där n är antal observationer, <span class="math inline">\(\widehat{Y}\)</span> är predikterade <span class="math inline">\(Y\)</span>. För att kunna skatta <span class="math inline">\(\widehat{Y} = \widehat{a} + \widehat{b}X\)</span> behöver vi estimera <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Vi börjar med att sätta in denna definition av <span class="math inline">\(\widehat{Y}\)</span> i uttrycket från ekvation 3:</p>
+<p><span class="math inline">\(\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (4)</p>
+<p><span class="math display">\[= \sum_{i = 1}^{n}\left( Y_{i} - \left( \widehat{a} + \widehat{b}X_{i} \right) \right)^{2}\]</span></p>
+<p><span class="math display">\[= \sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)^{2}\]</span></p>
+</div>
+<div id="minimera-summan-av-kvadrerade-residualerna" class="section level4" number="0.1.17.2">
+<h4>
+<span class="header-section-number">0.1.17.2</span> Minimera summan av kvadrerade residualerna<a class="anchor" aria-label="anchor" href="#minimera-summan-av-kvadrerade-residualerna"><i class="fas fa-link"></i></a>
+</h4>
+<p>Nu har vi en ekvation där summan av kvadrerade residualerna <span class="math inline">\(\sum_{i}^{}\widehat{{V_{i}}^{2}}\)</span> är en funktion av estimerade <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Det är denna funktion som vi ska minimera med hänsyn till <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>, vilket vi kan skriva som ett minimeringsproblem:</p>
+<p><span class="math inline">\(\min_{\text{m.h.t. }\widehat{a},\widehat{b}}{\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2}} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)^{2}\)</span> (5)</p>
+<p>Vi deriverar högerledet med hänsyn till <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Detta ger oss två ekvationer som kallas "förstagradsvillkor" (eller "första ordningens villkor"), alltså villkor som måste uppfyllas vid en minimumpunkt eller maximumpunkt.</p>
+<p><span class="math inline">\(\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{a}}\' = - 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0\)</span> (6)</p>
+<p><span class="math inline">\(\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{b}}\' = - 2\sum_{i = 1}^{n}{X_{i}(Y_{i} - \widehat{a} - \widehat{b}X_{i})} = 0\)</span></p>
+<p>där båda resultaten uppstår genom att vi deriverar parentesen (flyttar ned exponent 2) och deriverar innehållet i respektive parentes. När vi deriverar med hänsyn till <span class="math inline">\(\widehat{a}\)</span> får vi –1. När vi deriverar med hänsyn till <span class="math inline">\(\widehat{b}\)</span> får vi <span class="math inline">\(--X_{i}\)</span>. Vi sätter -2 till vänster om summeringstecknet eftersom dessa saker inte berörs av summeringen.</p>
+<p>Notera att det första villkoret i ekvation 6 innebär att <span class="math inline">\(\sum_{i}^{}\widehat{V_{i}} = 0\)</span> och det andra villkoret kan beskrivas som: <span class="math inline">\(\sum_{}^{}X_{i}\widehat{V_{i}} = 0\)</span>. Detta kommer vi att ha användning av längre fram.</p>
+</div>
+<div id="lösa-ut-widehata-och-widehatb" class="section level4" number="0.1.17.3">
+<h4>
+<span class="header-section-number">0.1.17.3</span> Lösa ut <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span><a class="anchor" aria-label="anchor" href="#l%C3%B6sa-ut-widehata-och-widehatb"><i class="fas fa-link"></i></a>
+</h4>
+<p>Från de två förstagradsvillkoren i ekvation 6 kan vi lösa ut <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Vi börjar med det första villkoret:</p>
+<p><span class="math inline">\(- 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0\)</span> (7)</p>
+<p><span class="math inline">\(( - 2)\sum_{i = 1}^{n}{Y_{i} - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}} = 0\)</span></p>
+<p>Eftersom alla termer är multiplicerade med -2 kan vi stryka denna faktor. Eftersom <span class="math inline">\(\widehat{a}\)</span> är konstant över alla observationer är termen <span class="math inline">\(\sum_{i}^{n}\widehat{a}\)</span> samma sak som antal observationer gånger <span class="math inline">\(\widehat{a}\)</span>: <span class="math inline">\(\sum_{i}^{n}\widehat{a} = n\widehat{a}\)</span>. Vi kan nu skriva:</p>
+<p><span class="math inline">\(0 = ( - 2)\sum_{i = 1}^{n}{Y_{i}\ - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}}\)</span> (8)$ $</p>
+<p><span class="math display">\[{0 = \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}\widehat{a}\sum_{i = 1}^{n}{\widehat{b}X_{i}} }{0 = \sum_{i = 1}^{n}Y_{i} - n\widehat{a} - \sum_{i = 1}^{n}{\widehat{b}X_{i}} }{n\widehat{a} = \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}{\widehat{b}X_{i}}\ }\]</span></p>
+<p>Vi dividerar med <span class="math inline">\(n\)</span> så att termen längst till höger blir <span class="math inline">\(\frac{1}{n}\sum_{}^{}{\widehat{b}X_{i}}\)</span>. Medelvärdet för <span class="math inline">\(X\)</span> kan skrivas <span class="math inline">\(\overline{X} = \frac{1}{n}\sum_{i}^{n}X_{i}\)</span> vilket ger:</p>
+<p><span class="math inline">\(\widehat{a} = \frac{1}{n}\sum_{i = 1}^{n}Y_{i} - \frac{1}{n}\sum_{i = 1}^{n}{\widehat{b}X}\)</span> (9)</p>
+<p><span class="math inline">\(\widehat{a} = \overline{Y} - \widehat{b}\overline{X}\)</span></p>
+<p>Nu har vi ett uttryck för <span class="math inline">\(\widehat{a}\)</span>. För att härleda <span class="math inline">\(\widehat{b}\)</span> börjar vi med det andra förstagradsvillkoret i ekvation 7:</p>
+<p><span class="math inline">\(0 = \sum_{i = 1}^{n}{- 2x_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)}\)</span> (10)</p>
+<p><span class="math inline">\(= \sum_{i = 1}^{n}X_{i}Y_{i} - \sum_{i = 1}^{n}X_{i}\widehat{a} - \sum_{i = 1}^{n}X_{i}\widehat{b}X_{i}\)</span></p>
+<p>Eftersom konstanterna inte summeras flyttar vi dessa till vänster om summatecknen. I termen längst till höger har vi <span class="math inline">\(x_{i}\*x_{i} = x_{i}^{2}\)</span>. Vi byter ut <span class="math inline">\(\widehat{a}\)</span> mot definitionen från ekvation 9:</p>
+<p><span class="math inline">\(0 = \sum_{i = 1}^{n}X_{i}Y_{i} - \widehat{a}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}X_{i}\)</span> (11)</p>
+<p><span class="math display">\[= \sum_{i = 1}^{n}X_{i}Y_{i} - \widehat{a}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}^{2}\]</span></p>
+<p><span class="math display">\[= \sum_{i = 1}^{n}X_{i}Y_{i} - \left( \overline{Y} - \widehat{b}\overline{X} \right)\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}^{2}\]</span></p>
+<p><span class="math display">\[= \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i} + \widehat{b}\overline{X}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{}^{}X_{i}^{2}\]</span></p>
+<p><span class="math display">\[= \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i} - \widehat{b}\left( \sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} \right)\]</span></p>
+<p>Vi flyttar över <span class="math inline">\(\widehat{b}\)</span> till vänstersidan av likhetstecknet:</p>
+<p><span class="math inline">\(\widehat{b}\left( \sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} \right) = \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i}\)</span> (12)</p>
+<p><span class="math display">\[\widehat{b} = \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i}}\]</span></p>
+<p>Nu har vi ett uttryck för <span class="math inline">\(\widehat{b}\)</span>. För att visa att detta är samma som uttrycket i ekvation 1 och <a href="https://www.dropbox.com/scl/fi/fdixvbrl3fwqwuaknz604/2-5-Felterm-residual-och-ett-r-kneexempel.docx?rlkey=qerqdzrn6e5hejx1it85qrtun&amp;st=33su91fr&amp;dl=0">avsnitt 2.5</a> kan vi skriva om täljaren och nämnaren. Detta ger:</p>
+<p><span class="math inline">\(\widehat{b} = \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}Y_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i}}\)</span> (13)</p>
+<p><span class="math display">\[= \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i}^{}X_{i} - \overline{X}\sum_{i = 1}^{n}Y_{i} + \overline{X}\sum_{i = 1}^{n}Y_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} - n\overline{X^{2}} + n\overline{X^{2}}}\]</span></p>
+<p><span class="math display">\[\frac{\sum_{i = 1}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{I = 1}^{n}\left( X_{i} - \overline{X} \right)^{2}}\]</span></p>
+<p>Nu har vi samma sak som ekvation 1.</p>
+</div>
+</div>
+<div id="uppgifter-33" class="section level3" number="0.1.18">
+<h3>
+<span class="header-section-number">0.1.18</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-33"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-3-4"]=[  {    "id": "k2-3-4-001",    "name": "Uppgift 1",    "exercise": "Minstakvadratmetoden härleder estimatorerna \\(\\widehat{a}\\) och \\(\\widehat{b}\\) genom att minimera ett uttryck. Vilket uttryck minimeras?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(\\sum_{i=1}^{n}(Y_i - \\widehat{Y}_i)\\) — summan av residualerna",          "\\(\\sum_{i=1}^{n}(Y_i - \\widehat{Y}_i)^2\\) — summan av de kvadrerade residualerna",          "\\(\\sum_{i=1}^{n}|Y_i - \\widehat{Y}_i|\\) — summan av absolutbeloppen av residualerna",          "\\(\\sum_{i=1}^{n}(Y_i - \\overline{Y})^2\\) — totalsumman av kvadrater"        ],        "correct": "\\(\\sum_{i=1}^{n}(Y_i - \\widehat{Y}_i)^2\\) — summan av de kvadrerade residualerna"      }    },    "error": { "message": "Metoden heter <em>minsta kvadrat</em>metoden. Tänk på vad som kvadreras och vad som summeras." },    "correct": { "message": "Rätt! Minstakvadratmetoden minimerar summan av de kvadrerade residualerna: \\(\\sum_{i=1}^{n}\\hat{V}_i^2 = \\sum_{i=1}^{n}(Y_i - \\hat{Y}_i)^2\\). Det är detta minimeringsproblem som löses för att hitta estimatorerna \\(\\widehat{a}\\) och \\(\\widehat{b}\\)." }  },  {    "id": "k2-3-4-002",    "name": "Uppgift 2",    "exercise": "Förstagradsvillkoret med avseende på \\(\\widehat{a}\\) för minstakvadratproblemet ger: \\[-2\\sum_{i=1}^{n}(Y_i - \\widehat{a} - \\widehat{b}X_i) = 0\\] Vilket av följande påståenden följer direkt av detta villkor?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(\\sum_{i}^{}\\widehat{V}_i = 0\\) — summan av residualerna är noll",          "\\(\\sum_{i}^{}\\widehat{V}_i^2 = 0\\) — summan av kvadrerade residualerna är noll",          "\\(\\widehat{a} = 0\\) — konstanttermen är alltid noll",          "\\(\\sum_{i}^{}X_i\\widehat{V}_i = 0\\) — detta är det andra förstagradsvillkoret"        ],        "correct": "\\(\\sum_{i}^{}\\widehat{V}_i = 0\\) — summan av residualerna är noll"      }    },    "error": { "message": "Uttrycket \\(Y_i - \\widehat{a} - \\widehat{b}X_i\\) är samma sak som \\(Y_i - \\widehat{Y}_i\\), det vill säga residualen \\(\\widehat{V}_i\\). Vad innebär det att summan av dessa är noll?" },    "correct": { "message": "Rätt! Förstagradsvillkoret \\(-2\\sum(Y_i - \\widehat{a} - \\widehat{b}X_i) = 0\\) innebär att \\(\\sum\\hat{V}_i = 0\\) — summan av residualerna är alltid noll när vi estimerar med minstakvadratmetoden. Detta är en viktig egenskap hos OLS-estimatorn." }  },  {    "id": "k2-3-4-003",    "name": "Uppgift 3",    "exercise": "Från förstagradsvillkoret med avseende på \\(\\widehat{a}\\) härleds estimatorn: \\[\\widehat{a} = \\overline{Y} - \\widehat{b}\\,\\overline{X}\\] Vad innebär denna formel geometriskt?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Regressionslinjen passerar alltid genom origo \\((0, 0)\\)",          "Regressionslinjen passerar alltid genom punkten \\((\\overline{X}, \\overline{Y})\\) — medelvärdespunkten",          "Regressionslinjen har alltid positiv lutning",          "Regressionslinjen minimerar medelvärdet av \\(Y\\)"        ],        "correct": "Regressionslinjen passerar alltid genom punkten \\((\\overline{X}, \\overline{Y})\\) — medelvärdespunkten"      }    },    "error": { "message": "Sätt in \\(X = \\overline{X}\\) i regressionslinjens ekvation \\(\\widehat{Y} = \\widehat{a} + \\widehat{b}X\\) och använd att \\(\\widehat{a} = \\overline{Y} - \\widehat{b}\\overline{X}\\). Vad får du för \\(\\widehat{Y}\\)?" },    "correct": { "message": "Rätt! Om vi sätter \\(X = \\overline{X}\\) i regressionsekvationen: \\(\\widehat{Y} = (\\overline{Y} - \\widehat{b}\\overline{X}) + \\widehat{b}\\overline{X} = \\overline{Y}\\). Regressionslinjen passerar alltså alltid genom medelvärdespunkten \\((\\overline{X}, \\overline{Y})\\)." }  },  {    "id": "k2-3-4-004",    "name": "Uppgift 4",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) ges estimatorn för lutningskoefficienten \\(\\widehat{b}\\) av: \\[\\widehat{b} = \\frac{\\sum_{i=1}^{n}(X_i - \\overline{X})(Y_i - \\overline{Y})}{\\sum_{i=1}^{n}(X_i - \\overline{X})^2}\\] Vad mäter täljaren i detta uttryck?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Variansen för \\(X\\)",          "Kovariansen (samvariationen) mellan \\(X\\) och \\(Y\\) — summan av produkterna av avvikelserna från respektive medelvärde",          "Variansen för \\(Y\\)",          "Summan av de kvadrerade residualerna"        ],        "correct": "Kovariansen (samvariationen) mellan \\(X\\) och \\(Y\\) — summan av produkterna av avvikelserna från respektive medelvärde"      }    },    "error": { "message": "Täljaren innehåller produkten \\((X_i - \\overline{X})(Y_i - \\overline{Y})\\). Nämnaren innehåller \\((X_i - \\overline{X})^2\\) — det är variansen för \\(X\\). Vad mäter täljaren då?" },    "correct": { "message": "Rätt! Täljaren \\(\\sum(X_i - \\overline{X})(Y_i - \\overline{Y})\\) mäter samvariationen (kovariansen, oskalad) mellan \\(X\\) och \\(Y\\). Nämnaren \\(\\sum(X_i - \\overline{X})^2\\) är variansen (oskalad) för \\(X\\). Lutningskoefficienten är alltså kovariansen dividerat med variansen för \\(X\\)." }  },  {    "id": "k2-3-4-005",    "name": "Uppgift 5",    "exercise": "Varför används derivering för att hitta estimatorerna \\(\\widehat{a}\\) och \\(\\widehat{b}\\) i minstakvadratmetoden?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Derivering används för att beräkna medelvärdet av residualerna",          "Vid en minimum- eller maximumpunkt är derivatan noll — vi deriverar SSR och sätter lika med noll för att hitta de värden på \\(\\widehat{a}\\) och \\(\\widehat{b}\\) som minimerar SSR",          "Derivering används för att beräkna \\(R^2\\)",          "Derivering behövs bara om man har fler än 10 observationer"        ],        "correct": "Vid en minimum- eller maximumpunkt är derivatan noll — vi deriverar SSR och sätter lika med noll för att hitta de värden på \\(\\widehat{a}\\) och \\(\\widehat{b}\\) som minimerar SSR"      }    },    "error": { "message": "Tänk på vad ett minimeringsproblem innebär matematiskt. Vid ett minimum är vad noll?" },    "correct": { "message": "Rätt! Vi vill minimera summan av kvadrerade residualerna \\(\\sum\\hat{V}_i^2\\) med avseende på \\(\\widehat{a}\\) och \\(\\widehat{b}\\). Vid en minimumpunkt är derivatan noll. Vi deriverar därför SSR med avseende på \\(\\widehat{a}\\) och \\(\\widehat{b}\\) och sätter derivatorna lika med noll — detta kallas förstagradsvillkor och ger oss ekvationssystem som löses ut till formler för estimatorerna." }  }];</script><div class="exercise-section" data-section-id="k2-3-4">
+
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k2-3-3.html">Hur väl passar modellerna mot data?</a></div>
+<div class="next"><a href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-3-4">Härled estimatorerna</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-33"><span class="header-section-number">0.1.16</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-33"><span class="header-section-number">0.1.17</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-33"><span class="header-section-number">0.1.18</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-3-4.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-3-4.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

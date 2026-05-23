@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Relationer | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="">
+<meta name="description" content="0.0.52 Pushtex Detta avsnitt beskriver hur vi kan använda matematiken för att beskriva nära relationer.  0.0.53 Begrepp Inga nya matematiska begrepp i detta avsnitt.  0.0.54 Teori Säg nu att Kim...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Relationer | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="0.0.52 Pushtex Detta avsnitt beskriver hur vi kan använda matematiken för att beskriva nära relationer.  0.0.53 Begrepp Inga nya matematiska begrepp i detta avsnitt.  0.0.54 Teori Säg nu att Kim...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Relationer | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="0.0.52 Pushtex Detta avsnitt beskriver hur vi kan använda matematiken för att beskriva nära relationer.  0.0.53 Begrepp Inga nya matematiska begrepp i detta avsnitt.  0.0.54 Teori Säg nu att Kim...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html">Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html">Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html">Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html">Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html">Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html">Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html">Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html">Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html">Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html">Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html">Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html">En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html">Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html">Rökning</a></li>
+<li><a class="active" href="k1-3-6.html">Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html">Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html">Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html">Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html">Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html">Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html">Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html">Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html">Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html">Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html">Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html">Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html">Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html">Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html">Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html">Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html">Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html">En modell till</a></li>
+<li><a class="" href="k2-3-3.html">Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html">Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html">Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html">Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html">Konstannhålla</a></li>
+<li><a class="" href="k2-4-4.html">Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html">Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html">Interaktion</a></li>
+<li><a class="" href="k2-4-7.html">Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-1.html">Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html">Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html">Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html">Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html">T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html">Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k1-3-6" class="section level1 unnumbered">
+<h1>Relationer<a class="anchor" aria-label="anchor" href="#k1-3-6"><i class="fas fa-link"></i></a>
+</h1>
+<div id="pushtex-1" class="section level3" number="0.0.52">
+<h3>
+<span class="header-section-number">0.0.52</span> Pushtex<a class="anchor" aria-label="anchor" href="#pushtex-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>Detta avsnitt beskriver hur vi kan använda matematiken för att beskriva nära relationer.</p>
+</div>
+<div id="begrepp-14" class="section level3" number="0.0.53">
+<h3>
+<span class="header-section-number">0.0.53</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-14"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Inga nya matematiska begrepp i detta avsnitt.</em></p>
+</div>
+<div id="teori-14" class="section level3" number="0.0.54">
+<h3>
+<span class="header-section-number">0.0.54</span> Teori<a class="anchor" aria-label="anchor" href="#teori-14"><i class="fas fa-link"></i></a>
+</h3>
+<p>Säg nu att Kim (från <a href="https://www.dropbox.com/scl/fi/chd3jmpg1wg7lygvgdf1r/3-2-Hur-hitta-den-r-tta.docx?rlkey=hpfajps1dzihyoqroxgxaawuh&amp;dl=0">avsnitt 3.2</a>)har hittat en partner och vill arbeta för att få sin relation att fungera. Men Kim vill inte lägga ned mer arbete på relationen än vad Kims partner gör. Partnern känner detsamma och vill inte heller engagera sig om inte Kim gör det. Detta kan vi beskriva med hjälp av ett ickelinjärt ekvationssystem:</p>
+<p><span class="math inline">\(\left\{ \begin{array}{r} K = P^{2} + 0,1 \\ P = K^{2} + 0,1 \end{array} \right.\ \)</span> , där <span class="math inline">\(K,P \in \lbrack 0,1\rbrack\)</span> (1)</p>
+<p>där <em>K</em> och <em>P</em> symboliserar Kim och Kims partner och 0,1 är en konstant som symboliserar hur mycket arbete de är beredda att lägga ned oavsett hur mycket den andra anstränger sig. Både <span class="math inline">\(K\)</span> och <span class="math inline">\(P\)</span> måste vara inom intervallet <span class="math display">\[0,1\]</span>.</p>
+<p>Från den nedre ekvationen löser vi ett uttryck för <span class="math inline">\(K = (P - 0,1)^{\frac{1}{2}}\ \)</span>. Nu har vi två definitioner av <em>K</em> som vi kan sätta lika med varandra:</p>
+<p><span class="math inline">\((P - 0,1)^{\frac{1}{2}} = P^{2} + 0,1\)</span> (2)</p>
+<p><span class="math inline">\(P - 0,1 = \left( P^{2} + 0,1 \right)^{2}\)</span></p>
+<p><span class="math inline">\(P - 0,1 = P^{4} + 2\*0,1\*P^{2} + (0,1)^{2}\)</span></p>
+<p>När vi kvadrerar båda sidor av en ekvation kan vi få falska rötter. Därför måste alla lösningar verifieras genom att sättas tillbaka i originalekvationen.</p>
+<p>Vi har nu fått följande fjärdegradspolynom:</p>
+<p><span class="math inline">\(P^{4} + 0,2P^{2} - P + 0,11 = 0\)</span> (3)</p>
+<p>Härifrån kan vi fortsätta med att pröva rationella rötter eller olika värden för <em>P</em> och se om vi kan hitta en första rot. Därefter kan vi arbeta vidare med polynomdivision. Vi prövar <span class="math inline">\(P = 0\)</span>, <span class="math inline">\(P = \frac{1}{2}\)</span> samt <span class="math inline">\(P = 1\)</span>:</p>
+<p>För <span class="math inline">\(P = 0:\)</span> <span class="math inline">\(0 + 0 - 0 + 0,11 = 0,11 \neq 0\)</span></p>
+<p>För <span class="math inline">\(P = \frac{1}{2}:\)</span> <span class="math inline">\(\left( \frac{1}{2} \right)^{4} + 0,2\left( \frac{1}{2} \right)^{2} - \frac{1}{2} + 0,11 = - 0,2775 \neq 0\)</span></p>
+<p>För <span class="math inline">\(P = 1:\)</span> <span class="math inline">\(1 + 0,2 - 1 + 0,11 = 0,31 \neq 0\)</span></p>
+<p>Ingen av dessa var en lösning, men notera hur resultaten för polynomet är positivt för <span class="math inline">\(P = 0\)</span> och <span class="math inline">\(P = 1\)</span>, men negativt för <span class="math inline">\(P = \frac{1}{2}\)</span>.</p>
+<p>Detta innebär att det bör finnas ett eller flera värden för P mellan dessa värden som resulterar i att polynomet blir lika med 0. Det bör finnas en lösning för P mellan 0 och <span class="math inline">\(\frac{1}{2}\)</span> samt ytterligare en lösning mellan <span class="math inline">\(\frac{1}{2}\)</span> och 1.</p>
+<div id="illustrerat-med-två-diagram" class="section level4" number="0.0.54.1">
+<h4>
+<span class="header-section-number">0.0.54.1</span> Illustrerat med två diagram<a class="anchor" aria-label="anchor" href="#illustrerat-med-tv%C3%A5-diagram"><i class="fas fa-link"></i></a>
+</h4>
+<p>En annan metod är att rita upp ett diagram för funktionerna i fråga, antingen för hand eller med hjälp av datorn. Figur 1 illustrerar linjen för fjärdegradspolynomet i ekvation 3. Linjen passerar 0 där <em>P</em> är strax över 0,1 och strax under 0,9. Detta illustrerar det vi såg i beräkningarna för <span class="math inline">\(P = 0,\frac{1}{2}\ \text{och}\ 1\)</span>.</p>
+<p>Samma nollpunkter syns i figur 2 där de två ekvationerna i ekvationssystemet i ekvation 1 är illustrerade. Det finns två lösningar till systemet: en lösning med relativt låga värden där både Kim och partnern anstränger sig relativt lite för att få att relationen att fungera, samt en lösning där båda anstränger sig mycket. Lösningarna på systemet är <span class="math inline">\(K_{1} = P_{1} \approx 0,11\)</span> och <span class="math inline">\(K_{2} = P_{2} \approx 0,89\)</span>.</p>
+<p>Vi kontrollerar att lösningarna uppfyller ekvationssystemet i ekvation 1 och ligger inom det tillåtna intervallet <span class="math display">\[0, 1\]</span>:</p>
+<p>För P ≈ 0,11: K = (0,11)² + 0,1 = 0,0121 + 0,1 = 0,1121 ≈ 0,11</p>
+<p>För P ≈ 0,89: K = (0,89)² + 0,1 = 0,7921 + 0,1 = 0,8921 ≈ 0,89</p>
+<p><strong>Figur 1. Linjen för fjärdegradspolynomet i ekvation 3</strong></p>
+<div class="inline-figure"><img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%201%20-%20Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\3%20-%20Beskriva%20teorier%20med%20ekvationssystem\3-6%20Relationer/img/k1-3-6-image1.png" style="width:4in;height:3in"></div>
+<p><strong>Figur 2. De två jämvikterna i Kims relation.</strong></p>
+<div class="inline-figure"><img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%201%20-%20Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\3%20-%20Beskriva%20teorier%20med%20ekvationssystem\3-6%20Relationer/img/k1-3-6-image2.png" style="width:4in;height:3in"></div>
+</div>
+</div>
+<div id="uppgifter-14" class="section level3" number="0.0.55">
+<h3>
+<span class="header-section-number">0.0.55</span> Uppgifter<a class="anchor" aria-label="anchor" href="#uppgifter-14"><i class="fas fa-link"></i></a>
+</h3>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-3-6"]=[  {    "id": "k1-3-6-001",    "name": "Uppgift 1",    "exercise": "Säg att en relation mellan två människor kan beskrivas med ekvationssystemet \\[\\left\\{ \\begin{array}{r} K = P^2 + 0{,}1 \\\\ P = K^2 + 0{,}1 \\end{array} \\right.\\] där \\(K\\) och \\(P\\) är personernas ansträngning i relationen (på en skala 0–1). Vad symboliserar konstanten \\(0{,}1\\) i modellen?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Den maximala ansträngningen som Kim eller partnern kan lägga ned",          "Det arbete de är beredda att lägga ned på relationen oavsett vad den andra gör",          "Sannolikheten att relationen överlever ett år",          "Antalet månader som relationen varat"        ],        "correct": "Det arbete de är beredda att lägga ned på relationen oavsett vad den andra gör"      }    },    "error": { "message": "Konstanten är ett minimivärde – vad händer med \\(K\\) eller \\(P\\) även om den andre inte anstränger sig alls?" },    "correct": { "message": "Rätt! Konstanten \\(0{,}1\\) symboliserar det minimiarbete som Kim respektive partnern lägger ned på relationen oavsett hur mycket den andra anstränger sig." }  },  {    "id": "k1-3-6-002",    "name": "Uppgift 2",    "exercise": "Kontrollera att \\(K_1 = P_1 \\approx 0{,}11\\) är en lösning till \\(K = P^2 + 0{,}1\\). Vad blir \\((0{,}11)^2 + 0{,}1\\)? Ange svaret avrundat till två decimaler.",    "image": null,    "inputtype": "field",    "expectedanswer": { "K": "0.11" },    "answerformat": "Ange svaret med decimalpunkt, t.ex. 0.11",    "error": { "message": "Beräkna \\((0{,}11)^2 = 0{,}0121\\). Addera sedan \\(0{,}1\\) och avrunda." },    "correct": { "message": "Rätt! \\((0{,}11)^2 + 0{,}1 = 0{,}0121 + 0{,}1 = 0{,}1121 \\approx 0{,}11\\). Lösningen stämmer – Kim och partnern anstränger sig ungefär lika lite." }  },  {    "id": "k1-3-6-003",    "name": "Uppgift 3",    "exercise": "Ekvationssystemet \\(K = P^2 + 0{,}1\\), \\(P = K^2 + 0{,}1\\) har två lösningar: \\((K_1, P_1) \\approx (0{,}11, 0{,}11)\\) och \\((K_2, P_2) \\approx (0{,}89, 0{,}89)\\). Vad representerar de två lösningarna?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Att relationen antingen är helt perfekt eller helt trasig",          "En jämvikt där båda anstränger sig lite, och en jämvikt där båda anstränger sig mycket",          "Att Kim anstränger sig mer än partnern i den ena lösningen",          "Att det finns exakt ett optimalt sätt att sköta en relation"        ],        "correct": "En jämvikt där båda anstränger sig lite, och en jämvikt där båda anstränger sig mycket"      }    },    "error": { "message": "Tänk på vad de låga respektive höga värdena för \\(K\\) och \\(P\\) innebär för graden av ansträngning i relationen." },    "correct": { "message": "Rätt! Den första lösningen \\((0{,}11, 0{,}11)\\) innebär att båda anstränger sig relativt lite, medan den andra lösningen \\((0{,}89, 0{,}89)\\) innebär att båda anstränger sig mycket." }  },  {    "id": "k1-3-6-004",    "name": "Uppgift 4",    "exercise": "I ekvationssystemet \\(K = P^2 + 0{,}1\\), \\(P = K^2 + 0{,}1\\): varför måste lösningarna verifieras genom att sättas tillbaka i originalekvationen?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det är bara ett matematiskt formkrav utan praktisk betydelse",          "Kvadrering av båda sidor kan introducera falska rötter som inte uppfyller originalekvationen",          "Datorer gör alltid fel vid andragradsekvationer",          "Variablerna \\(K\\) och \\(P\\) kan vara negativa"        ],        "correct": "Kvadrering av båda sidor kan introducera falska rötter som inte uppfyller originalekvationen"      }    },    "error": { "message": "Tänk på vad som kan gå fel när man kvadrerar båda sidor av en ekvation – kan nya, felaktiga lösningar uppstå?" },    "correct": { "message": "Rätt! När man kvadrerar båda sidor av en ekvation kan man introducera falska rötter (lösningar som uppfyller den kvadrerade ekvationen men inte originalekvationen). Därför måste alla lösningar verifieras." }  },  {    "id": "k1-3-6-005",    "name": "Uppgift 5",    "exercise": "I analysen av ekvationssystemet \\(K = P^2 + 0{,}1\\), \\(P = K^2 + 0{,}1\\) uppstår ekvationen \\(P^4 + 0{,}2P^2 - P + 0{,}11 = 0\\). Vad är det matematiska namnet på denna typ av ekvation?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Ett andragradspolynom",          "Ett tredjegradspolynom",          "Ett fjärdegradspolynom",          "En linjär ekvation"        ],        "correct": "Ett fjärdegradspolynom"      }    },    "error": { "message": "Polynomet benämns efter den högsta potensen av variabeln. Vilken är den högsta potensen av \\(P\\) i ekvationen?" },    "correct": { "message": "Rätt! Ekvationen \\(P^4 + 0{,}2P^2 - P + 0{,}11 = 0\\) är ett fjärdegradspolynom, eftersom den högsta potensen av \\(P\\) är 4." }  }];</script><div class="exercise-section" data-section-id="k1-3-6">
+
+</div>
+
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateUI() {
+    // Höger TOC-rubrik
+    var toc = document.querySelector('#toc h2');
+    if (toc && toc.textContent.trim() === 'On this page') {
+      toc.textContent = 'På denna sida';
+    }
+
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna och deras behållare
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) {
+        container.remove();
+      } else {
+        el.remove();
+      }
+    });
+  }
+
+  function colorNavSections() {
+    // Använd ul.book-toc direkt (ej aria-label som kan ha ändrats av translateUI)
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) {
+          currentClass = 'nav-kurs1';
+        } else if (text.indexOf('Kurs 2') !== -1) {
+          currentClass = 'nav-kurs2';
+        } else {
+          currentClass = '';
+        }
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  function init() {
+    translateUI();
+    colorNavSections();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="k1-3-5.html">Rökning</a></div>
+<div class="next"><a href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k1-3-6">Relationer</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#pushtex-1"><span class="header-section-number">0.0.52</span> Pushtex</a></li>
+<li><a class="nav-link" href="#begrepp-14"><span class="header-section-number">0.0.53</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-14"><span class="header-section-number">0.0.54</span> Teori</a></li>
+<li><a class="nav-link" href="#uppgifter-14"><span class="header-section-number">0.0.55</span> Uppgifter</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k1-3-6.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k1-3-6.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
