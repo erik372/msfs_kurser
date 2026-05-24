@@ -39,8 +39,9 @@ $F(x) = P(X \leq x) = 1 - P(X \> x)$ (4)
 För att beräkna sannolikheten $P(X \> x)$ kan vi därför ta $1 - F(x)$. För variabel $X$ är sannolikheten att få 3 till 6 poäng:
 $P(X \> x) = 1 - F(2) = 1 - \frac{2}{6} = \frac{4}{6}$ (5)
 Figur 1 illustrerar en likformig slumpmässig sannolikhetsfördelning, där alla värden har samma sannolikhet. Övre diagrammet visar funktion $f(x)$. Nedre diagrammet visar $F(x)$, den kumulativa sannolikheten att få ett värde lika med eller mindre än $x$.
-**Figur 1: Sannolikhetsfunktion och kumulativa fördelningsfunktionen\**
+**Figur 1: Sannolikhetsfunktion och kumulativa fördelningsfunktionen**
 ![En bild som visar text, skärmbild, diagram, linje Automatiskt genererad beskrivning](img/k2-5-1-image1.png){style="width:5.13329in;height:6.52784in"}
+
 ::: {.fig-caption}
 Förklaring: Övre diagrammet beskriver sannolikheten 1/6 för respektive utfall i sannolikhetsfördelningen. Nedre diagrammet beskriver den kumulativa sannolikheten att få värdet på horisontella x-axeln eller mindre. Sannolikheten att få under 1 är 0. Sannolikheten att få värdet 3 är 0,5, det vill säga 50 %. Sannolikheten att få 6 eller lägre är 100 %.
 :::

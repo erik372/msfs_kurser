@@ -50,6 +50,7 @@ Låt oss nu beräkna hur stor procentuell andel som respektive land tar emot av 
   Mexiko                    257 396           129 739 759                          0,20%                                          6,9%
   Sverige                    11 271            10 536 632                          0,11%                                          0,3%
   ------------------------------------------------------------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: Data från [UNHCR](https://www.unhcr.org/refugee-statistics) (asylsökande) och [Världsbanken](https://data.worldbank.org/) (befolkning).
 :::

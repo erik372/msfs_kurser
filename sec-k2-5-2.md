@@ -23,6 +23,7 @@ $$F(x = 0,5) = P(X \leq 0,5) = 0,5$$
 
 **Figur 1: Täthetsfunktionen och kumulativa fördelningsfunktionen för en likformig kontinuerlig sannolikhetsfördelning**\
 ![](img/k2-5-2-image1.png){style="width:5.38889in;height:2.92963in"}
+
 ::: {.fig-caption}
 Förklaring: Vänstra diagrammet beskriver sannolikheten för varje utfall mellan 0 och 1. Högra diagrammet beskriver kumulativa sannolikheten att få ett värde på horisontella x-axeln eller lägre. Sannolikheten att få ett värde under 0 är noll. Sannolikheten att få ett värde mellan 0 och 0,5 är 0,5, det vill säga 50 %. Sannolikheten att få värdet 1 eller lägre är 100 %.
 :::
@@ -52,8 +53,9 @@ Standardiserade normalfördelningar används ofta och kallas därför ibland fö
 I det övre diagrammet är några av standardavvikelserna under och över medelvärdet 0 markerade. Kumulativa fördelningsfunktionen $F(Z \leq z)$ beskriver liksom tidigare hur stor andel av alla värden i variabel $Z$ som är mindre eller lika med utfall $z$ (ett enskilt värde i $Z$).
 Eftersom standardnormalfördelningen även kallas $Z$-fördelningen beskrivs denna typ av sannolikheter ofta som just $Z$-värden (engelska *z-score*).
 Standardiserade normalfördelningen är så välanvänd att det finns flera färdigberäknade sannolikheter från denna fördelning som ofta används i statistisk analys. Några av dessa visas i figur 2, där vi i det övre diagrammet bland annat kan se att 95 % av fördelningen täcks av avståndet från -1,96 standardavvikelser till +1,96 standardavvikelser från medelvärdet.
-**Figur 2: Standardiserade normalfördelningens täthetsfunktion** $\mathbf{f(z)}$ **och kumulativa fördelningsfunktion** $\mathbf{F(Z \leq z)}$**.\**
+**Figur 2: Standardiserade normalfördelningens täthetsfunktion** $\mathbf{f(z)}$ **och kumulativa fördelningsfunktion** $\mathbf{F(Z \leq z)}$**.**
 ![](img/k2-5-2-image2.png){style="width:3.85417in;height:5.13889in"}
+
 ::: {.fig-caption}
 Förklaring: Övre diagrammet illustrerar täthetsfunktionen $f(z)$, där vertikala axeln anger sannolikheten för ett specifikt värde i standardiserade normalfördelningen. Nedre diagrammet illustrerar kumulativa fördelningsfunktionen $F(Z \leq z)$, som beskriver sannolikheten för värdet $z$ eller lägre.
 :::

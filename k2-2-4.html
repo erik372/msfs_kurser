@@ -139,10 +139,11 @@ Den linje vi ska rita ut kommer att ge oss en illustration över den genomsnittl
 Minstakvadratmetoden låter oss använda information från värdena för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> (de fyra punkterna) för att hitta just de värden för koefficienterna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> som låter oss rita ut den raka linje genom punkterna där summan av det vertikala kvadrerade avståndet mellan varje punkt och den raka linjen är så liten som möjligt. Vi ska återkomma till innebörden av detta.
 I figurens diagram ges ett exempel på avståndet i form av <span class="math inline">\({\widehat{v}}_{3} = 5 - 4\)</span>. Varje annan rak linje skulle resultera i ett större summerat vertikalt avstånd mellan punkterna och linjen. Om avståndet mellan en punkt och linjen är lika med 5 är det kvadrerade avståndet samma värde i kvadrat, <span class="math inline">\(5^{2} = 25\)</span>. Punkter som ligger under linjen får ett negativt avstånd, till exempel −5, och det kvadrerade värdet blir då <span class="math inline">\(( - 5)^{2} = 25\)</span>.
 <strong>Figur 1. En linje ritad med hjälp av minstakvadratmetoden</strong><img src="img/k2-2-4-image1.png" style="width:3.5in;height:3in">
-::: {.fig-caption}
-Förklaring: Linjen i diagrammet illustrerar den linjära samvariationen mellan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Av alla raka linjer vi kan rita ut i diagrammet är det just denna linje vi ser i diagrammet som minimerar summan av det vertikala avståndet mellan en sådan linje och punkterna.
-:::</li>
+</li>
 </ul>
+<div class="fig-caption">
+<p>Förklaring: Linjen i diagrammet illustrerar den linjära samvariationen mellan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Av alla raka linjer vi kan rita ut i diagrammet är det just denna linje vi ser i diagrammet som minimerar summan av det vertikala avståndet mellan en sådan linje och punkterna.</p>
+</div>
 <div id="regressionsanalys" class="section level4" number="28.0.1.1">
 <h4>
 <span class="header-section-number">28.0.1.1</span> Regressionsanalys<a class="anchor" aria-label="anchor" href="#regressionsanalys"><i class="fas fa-link"></i></a>
@@ -189,33 +190,81 @@ Observation <em>i</em></p>
 <p><span class="math display">\[Y\]</span></p>
 <p><span class="math display">\[\widehat{Y} = 1 + 0,5*X\]</span></p>
 <div class="inline-table"><table style="width:99%;" class="table table-sm">
-<colgroup><col width="98%"></colgroup>
-<thead><tr class="header">
-<th align="left">1 3 3</th>
-</tr></thead>
+<colgroup>
+<col width="12%">
+<col width="21%">
+<col width="21%">
+<col width="42%">
+</colgroup>
 <tbody>
 <tr class="odd">
-<td align="left">: {.fig-caption}
-rklaring: Tabellen visar observationerna för variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> samt estimerade <span class="math inline">\(\widehat{Y}\)</span>, vilket vi får genom att estimera regressionsmodellen.
-:</td>
+<td align="left">1</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td></td>
 </tr>
 <tr class="even">
-<td align="left">## Positiv och negativ samvariation
-figur 1 lutar linjen uppåt åt höger och <span class="math inline">\(\widehat{b} \&gt; 0\)</span>, vilket innebär att vi har en <em>positiv samvariation</em> mellan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Om <span class="math inline">\(\widehat{b} \&lt; 0\)</span> har vi en <em>negativ samvariation</em>, varpå linjen skulle ha lutat nedåt åt höger i diagrammen. Större värden i <span class="math inline">\(X\)</span> samvarierar i så fall med i genomsnitt mindre värden i <span class="math inline">\(Y\)</span> och mindre värden i <span class="math inline">\(X\)</span> sammanfaller med i genomsnitt högre värden i <span class="math inline">\(Y\)</span>.
-<span class="math inline">\(\widehat{b} = 0\)</span> är linjen horisontell och saknar lutning, vilket i så fall indikerar att vi inte finner någon linjär samvariation mellan variablerna.
-timerade <span class="math inline">\(\widehat{Y}\)</span> kallas även för <em>predikterade</em> <span class="math inline">\(Y\)</span>. Ordet prediktion syftar på att förutspå framtida händelser utifrån historisk information. I detta fall innebär det att vi kan estimera <span class="math inline">\(\widehat{Y}\)</span> för <span class="math inline">\(X\)</span>-värden som inte återfinns i vårt material. Till exempel <span class="math inline">\(X = 10\)</span> ger <span class="math inline">\(\widehat{Y} = 1 + 0,5*10 = 6\)</span>.</td>
+<td align="left"> = 1 +</td>
+<td align="center">0,5*3 = 2,5$$</td>
+<td align="center"></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td align="left">: {.ex-section-title}
-ningar
-:</td>
+<td align="left">2</td>
+<td align="center">4</td>
+<td align="center">2</td>
+<td></td>
 </tr>
 <tr class="even">
-<td align="left">cript&gt;window.exerciseData=window.exerciseData||{};window.exerciseData[“k2-2-4”]=[ { “id”: “k2-2-4-001”, “name”: “Uppgift 1”, “exercise”: “I regressionsmodellen \(Y = a + bX + V\) – vad kallas variabeln \(Y\)?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Förklarande variabel”, “Oberoende variabel”, “Förklarad (beroende) variabel”, “Residualvariabel” ], “correct”: “Förklarad (beroende) variabel” } }, “error”: { “message”: “\(Y\) står till vänster om likhetstecknet i regressionsmodellen. Tänk på vad detta innebär för tolkningen.” }, “correct”: { “message”: “Rätt! \(Y\) kallas den <em>förklarade</em> eller <em>beroende</em> variabeln. Variabel \(X\) till höger om likhetstecknet är den förklarande (oberoende) variabeln.” } }, { “id”: “k2-2-4-002”, “name”: “Uppgift 2”, “exercise”: “Vad representerar feltermen \(V\) i regressionsmodellen \(Y = a + bX + V\)?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Differensen mellan de estimerade koefficienterna \(\widehat{a}\) och \(\widehat{b}\)”, “Differensen mellan respektive observations \(Y\)-värde och regressionslinjen i populationen”, “Det genomsnittliga felet i hela datasetet”, “Skillnaden mellan populationens och urvalets storlek” ], “correct”: “Differensen mellan respektive observations \(Y\)-värde och regressionslinjen i populationen” } }, “error”: { “message”: “Feltermen är det som modellen inte kan förklara – det vertikala avståndet till regressionslinjen.” }, “correct”: { “message”: “Rätt! Feltermen \(V\) anger differenserna i populationen mellan respektive observations \(Y\)-värde och regressionslinjen. Estimerade feltermer kallas för residualer och betecknas \(\widehat{V}\).” } }, { “id”: “k2-2-4-003”, “name”: “Uppgift 3”, “exercise”: “I regressionsmodellen \(Y = a + bX + V\) estimeras regressionslinjen med \(\widehat{b} = 0{,}5\) och \(\widehat{a} = 1\), det vill säga \(\widehat{Y} = 1 + 0{,}5 \cdot X\). Vad blir \(\widehat{Y}\) för observation 3 där \(X_3 = 6\)?”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “4” }, “answerformat”: ““,”error”: { “message”: “Sätt in \(X = 6\) i formeln \(\widehat{Y} = 1 + 0{,}5 \cdot X\).” }, “correct”: { “message”: “Rätt! \(\widehat{Y}_3 = 1 + 0{,}5 \cdot 6 = 1 + 3 = 4\). Detta är det predikterade \(Y\)-värdet längs regressionslinjen för \(X = 6\).” } }, { “id”: “k2-2-4-004”, “name”: “Uppgift 4”, “exercise”: “I regressionsmodellen \(Y = a + bX + V\): vad innebär det om lutningskoefficienten \(\widehat{b} = 0\)?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Det finns en stark positiv samvariation”, “Det finns en stark negativ samvariation”, “Regressionslinjen är horisontell, vilket indikerar ingen linjär samvariation”, “Modellen är felaktigt specificerad” ], “correct”: “Regressionslinjen är horisontell, vilket indikerar ingen linjär samvariation” } }, “error”: { “message”: “Tänk på vad \(b\) är i räta linjens ekvation \(Y = a + bX\).” }, “correct”: { “message”: “Rätt! Om \(\widehat{b} = 0\) är regressionslinjen horisontell och saknar lutning, vilket indikerar att vi inte finner någon linjär samvariation mellan variablerna \(X\) och \(Y\).” } }, { “id”: “k2-2-4-005”, “name”: “Uppgift 5”, “exercise”: “I regressionsmodellen \(Y = a + bX + V\) estimeras regressionslinjen som \(\widehat{Y} = 1 + 0{,}5 \cdot X\). Vad är det predikterade \(Y\)-värdet för \(X = 10\)?”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “6” }, “answerformat”: ““,”error”: { “message”: “Sätt in \(X = 10\) i formeln \(\widehat{Y} = 1 + 0{,}5 \cdot X\).” }, “correct”: { “message”: “Rätt! \(\widehat{Y} = 1 + 0{,}5 \cdot 10 = 1 + 5 = 6\). Vi kan prediktera \(Y\)-värden för \(X\)-värden som inte finns i datamaterialet – detta kallas prediktion.” } }];
-iv class=“exercise-section” data-section-id=“k2-2-4”&gt;</td>
+<td align="left"> = 1 +</td>
+<td align="center">0,5*4 = 3$$</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="center">6</td>
+<td align="center">5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left"> = 1 +</td>
+<td align="center">0,5*6 = 4$$</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="center">7</td>
+<td align="center">4</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="left"> = 1 +</td>
+<td align="center">0,5*7 = 4,5$$</td>
+<td align="center"></td>
+<td></td>
 </tr>
 </tbody>
 </table></div>
+<div class="fig-caption">
+<p>Förklaring: Tabellen visar observationerna för variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> samt estimerade <span class="math inline">\(\widehat{Y}\)</span>, vilket vi får genom att estimera regressionsmodellen.</p>
+</div>
+</div>
+<div id="positiv-och-negativ-samvariation" class="section level4" number="28.0.1.2">
+<h4>
+<span class="header-section-number">28.0.1.2</span> Positiv och negativ samvariation<a class="anchor" aria-label="anchor" href="#positiv-och-negativ-samvariation"><i class="fas fa-link"></i></a>
+</h4>
+<p>I figur 1 lutar linjen uppåt åt höger och <span class="math inline">\(\widehat{b} \&gt; 0\)</span>, vilket innebär att vi har en <em>positiv samvariation</em> mellan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Om <span class="math inline">\(\widehat{b} \&lt; 0\)</span> har vi en <em>negativ samvariation</em>, varpå linjen skulle ha lutat nedåt åt höger i diagrammen. Större värden i <span class="math inline">\(X\)</span> samvarierar i så fall med i genomsnitt mindre värden i <span class="math inline">\(Y\)</span> och mindre värden i <span class="math inline">\(X\)</span> sammanfaller med i genomsnitt högre värden i <span class="math inline">\(Y\)</span>.
+Om <span class="math inline">\(\widehat{b} = 0\)</span> är linjen horisontell och saknar lutning, vilket i så fall indikerar att vi inte finner någon linjär samvariation mellan variablerna.
+Estimerade <span class="math inline">\(\widehat{Y}\)</span> kallas även för <em>predikterade</em> <span class="math inline">\(Y\)</span>. Ordet prediktion syftar på att förutspå framtida händelser utifrån historisk information. I detta fall innebär det att vi kan estimera <span class="math inline">\(\widehat{Y}\)</span> för <span class="math inline">\(X\)</span>-värden som inte återfinns i vårt material. Till exempel <span class="math inline">\(X = 10\)</span> ger <span class="math inline">\(\widehat{Y} = 1 + 0,5*10 = 6\)</span>.</p>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-2-4"]=[  {    "id": "k2-2-4-001",    "name": "Uppgift 1",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) – vad kallas variabeln \\(Y\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Förklarande variabel",          "Oberoende variabel",          "Förklarad (beroende) variabel",          "Residualvariabel"        ],        "correct": "Förklarad (beroende) variabel"      }    },    "error": { "message": "\\(Y\\) står till vänster om likhetstecknet i regressionsmodellen. Tänk på vad detta innebär för tolkningen." },    "correct": { "message": "Rätt! \\(Y\\) kallas den <em>förklarade</em> eller <em>beroende</em> variabeln. Variabel \\(X\\) till höger om likhetstecknet är den förklarande (oberoende) variabeln." }  },  {    "id": "k2-2-4-002",    "name": "Uppgift 2",    "exercise": "Vad representerar feltermen \\(V\\) i regressionsmodellen \\(Y = a + bX + V\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Differensen mellan de estimerade koefficienterna \\(\\widehat{a}\\) och \\(\\widehat{b}\\)",          "Differensen mellan respektive observations \\(Y\\)-värde och regressionslinjen i populationen",          "Det genomsnittliga felet i hela datasetet",          "Skillnaden mellan populationens och urvalets storlek"        ],        "correct": "Differensen mellan respektive observations \\(Y\\)-värde och regressionslinjen i populationen"      }    },    "error": { "message": "Feltermen är det som modellen inte kan förklara – det vertikala avståndet till regressionslinjen." },    "correct": { "message": "Rätt! Feltermen \\(V\\) anger differenserna i populationen mellan respektive observations \\(Y\\)-värde och regressionslinjen. Estimerade feltermer kallas för residualer och betecknas \\(\\widehat{V}\\)." }  },  {    "id": "k2-2-4-003",    "name": "Uppgift 3",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) estimeras regressionslinjen med \\(\\widehat{b} = 0{,}5\\) och \\(\\widehat{a} = 1\\), det vill säga \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\). Vad blir \\(\\widehat{Y}\\) för observation 3 där \\(X_3 = 6\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "4" },    "answerformat": "",    "error": { "message": "Sätt in \\(X = 6\\) i formeln \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\)." },    "correct": { "message": "Rätt! \\(\\widehat{Y}_3 = 1 + 0{,}5 \\cdot 6 = 1 + 3 = 4\\). Detta är det predikterade \\(Y\\)-värdet längs regressionslinjen för \\(X = 6\\)." }  },  {    "id": "k2-2-4-004",    "name": "Uppgift 4",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\): vad innebär det om lutningskoefficienten \\(\\widehat{b} = 0\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det finns en stark positiv samvariation",          "Det finns en stark negativ samvariation",          "Regressionslinjen är horisontell, vilket indikerar ingen linjär samvariation",          "Modellen är felaktigt specificerad"        ],        "correct": "Regressionslinjen är horisontell, vilket indikerar ingen linjär samvariation"      }    },    "error": { "message": "Tänk på vad \\(b\\) är i räta linjens ekvation \\(Y = a + bX\\)." },    "correct": { "message": "Rätt! Om \\(\\widehat{b} = 0\\) är regressionslinjen horisontell och saknar lutning, vilket indikerar att vi inte finner någon linjär samvariation mellan variablerna \\(X\\) och \\(Y\\)." }  },  {    "id": "k2-2-4-005",    "name": "Uppgift 5",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) estimeras regressionslinjen som \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\). Vad är det predikterade \\(Y\\)-värdet för \\(X = 10\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "6" },    "answerformat": "",    "error": { "message": "Sätt in \\(X = 10\\) i formeln \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\)." },    "correct": { "message": "Rätt! \\(\\widehat{Y} = 1 + 0{,}5 \\cdot 10 = 1 + 5 = 6\\). Vi kan prediktera \\(Y\\)-värden för \\(X\\)-värden som inte finns i datamaterialet – detta kallas prediktion." }  }];</script><div class="exercise-section" data-section-id="k2-2-4">
+
+</div>
+<hr>
 <div class="next-section-link">
 <p><a href="k2-2-5.html">→ Nästa avsnitt: <strong>Felterm, residual och ett räkneexempel</strong></a></p>
 </div>

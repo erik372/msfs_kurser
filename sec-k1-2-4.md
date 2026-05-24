@@ -11,6 +11,7 @@ I båda diagrammen har vi ritat ut en trendlinje för att mönstret ska synas ty
 I diagrammet till vänster kan vi se att rikare länder i genomsnitt är lyckligare än fattigare länder. Men lyckan är bara högre med högre inkomster upp till en viss inkomstnivå. För de rikaste länderna verkar det inte finnas någon särskilt tydlig samvariation mellan lycka och inkomst.
 I det högra diagrammet, där vi använder logaritmerad BNP, är den genomsnittliga lyckan i genomsnitt högre med högre inkomst, både bland fattiga och rika länder. En stor del av länderna ligger nästan som på en rak linje från nedre vänstra hörnet upp till övre högra hörnet. Förenklat kan vi beskriva detta som att det finns en [positiv samvariation](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/korrelation-och-kausalitet#!/) mellan genomsnittlig inkomst och lycka.
 **Figur 1: BNP och lycka i alla världens länder** ![](img/k1-2-4-image1.png){style="width:6.1076in;height:3.54071in"}
+
 ::: {.fig-caption}
 Förklaring: Data från [www.ourworldindata.org](http://www.ourworldindata.org), hämtad 240930. Lycka mäts som ett enkätsvar på en skala från 1 till 10 där 10 är högsta nivå av nöjdhet med livet. BNP anges i 1 000-tals amerikanska dollar 2017 års priser, köpkraftsjusterad (justerat för prisskillnader mellan länder eller områden). Läs mer på [www.ourworldindata.org/grapher/gdp-vs-happiness](http://www.ourworldindata.org/grapher/gdp-vs-happiness). Varje prick representerar ett land eller område i världen med ett kombinerat värde av lycka och BNP per capita. I det högra diagrammet kan vi se hur lyckan ökar främst bland fattiga länder men planar ut när BNP per capita når en högre nivå. I det högra diagrammet jämför vi logaritmerad BNP per capita och ser då att relativa ökningar av BNP per capita samvarierar mer linjärt med förändringar i lycka.
 :::
@@ -36,6 +37,7 @@ Bolivia har i sin tur dubbelt så stor BNP per capita som Senegal (8,2 respektiv
   Senegal           4,9                     3,6                  0,6
   Sverige           7,4                     55,4                 1,7
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: Data från [www.ourworldindata.org](http://www.ourworldindata.org). Logaritmer underlättar relativa jämförelser, som till exempel för att se hur en fördubbling av BNP per capita samvarierar med lycka i ett land.
 :::

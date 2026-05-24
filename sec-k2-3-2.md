@@ -85,6 +85,7 @@ $$\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}$$
   4                               1                                  4                                       0,5                                                             0,5
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Figur 1. Regressionslinjen för modell** $Z = \alpha + \beta K + \epsilon$![](img/k2-3-2-image1.png){style="width:3in;height:3in"}
+
 ::: {.fig-caption}
 Förklaring: Vi har regressionsmodellen $Z = \alpha + \beta K + \epsilon$. Utifrån observationerna för variablerna $Z$ och $K$ och minstakvadratmetoden estimerar vi koefficienterna $\widehat{\alpha}$ och $\widehat{\beta}$. De estimerade koefficienterna och observationerna från variabel $K$ kan vi använda för att estimera $\widehat{Z}$, vilket ger värdena för denna variabel längs med regressionslinjen.
 :::
@@ -104,6 +105,7 @@ $\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2} = \sum_{i}^{n}\left( \wideh
 Ett sätt att illustrera skillnaderna mellan SSR, SSE och SST ges i figur 2. Vi använder här återigen de fyra observationerna för $X = 3,4,6,7$ och $Y = 2,3,4,5$ som vi använde i vårt första exempel på regressionsanalys (se [avsnitt 2.4](https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&dl=0)). I diagrammet i figur 1 markerar vi residualerna med streckade vertikala linjer mellan $Y_{i}\ $ och regressionslinjens $\widehat{Y_{i}}$.
 **Figur 2. Differenserna mellan** $\overline{Y}$, $\widehat{Y}$ och $Y_{i}$
 ![A graph of a function Description automatically generated](img/k2-3-2-image2.png){style="width:3.99306in;height:2.88451in"}
+
 ::: {.fig-caption}
 Förklaring: Figuren illustrerar hur avstånden i diagrammet motsvaras av differenser mellan värdena för observationerna $Y_{i}$, deras medelvärde $\overline{Y}$ och estimerade $\widehat{Y}$.
 :::

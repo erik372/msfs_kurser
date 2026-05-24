@@ -32,6 +32,7 @@ Läser vi x-axeln från vänster till höger mäter axeln procent av arbetskraft
 I diagrammet till vänster visas hur linjerna ser ut i vanlig form, som i ekvation 1. I diagrammet till höger visas logaritmerade funktionerna, som i ekvation 6.
 **Figur 1: Utbud och efterfrågan på arbetsmarknaden enligt vår teoretiska modell**
 ![](img/k1-3-3-image1.png){style="width:4.69861in;height:3in"}'
+
 ::: {.fig-caption}
 Förklaring: Diagrammet till vänster illustrerar ekvationssystemet i ekvation 1, när funktionerna skrivs i vanligt format. Diagrammet till höger illustrerar ekvationssystemet med logaritmerade funktioner, som i ekvation 6.
 :::

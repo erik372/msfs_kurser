@@ -151,90 +151,112 @@ Tabell 1 beskriver våra variabler (samma som i <a href="https://www.dropbox.com
 —————————————————————————————————————————————————————-
 Kommun, kön Livslängd, <span class="math inline">\(L\)</span> Inkomst, <span class="math inline">\(I\)</span> Kön, <span class="math inline">\(K\)</span></p>
 <p><span class="math display">\[K*I\]</span></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
-<colgroup><col width="98%"></colgroup>
-<thead><tr class="header">
-<th align="left">Jokkmokk, kvinnor 81,55 2,07 0 0
-Jokkmokk, män 79,22 2,40 1 2,40
-Oskarshamn, kvinnor 84,64 2,11 0 0
-Oskarshamn, män 81,26 2,79 1 2,79
-Örebro, kvinnor 84,85 2,18 0 0
-Örebro, män 80,48 2,66 1 2,66</th>
-</tr></thead>
-<tbody>
+<div class="inline-table"><table class="table table-sm"><tbody>
 <tr class="odd">
-<td align="left">: {.fig-caption}
-rklaring: Data från <a href="http://www.kolada.se">www.kolada.se</a>. Medianinkomst i 100 000-tals kr. Förväntad medellivslängd. Alla siffror avser 2019.
-<a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a> estimerade vi två regressionsmodeller. Först en modell för samvariationen mellan livslängd och inkomst, med följande resultat:
-= + I = 92 - 4,2*I$ (5)
-n andra modellen inkluderade även dummyvariabeln kön G:
-= + I + G = 69,6 + 6,64I - 6,66G$ (6)
-ska vi estimera följande regressionsmodell:
-= c_{1} + c_{2}I + c_{3}G + c_{4}GI + v$ (7)
-r <span class="math inline">\(c_{1}\)</span>, <span class="math inline">\(c_{2}\)</span>, <span class="math inline">\(c_{3}\)</span> och <span class="math inline">\(c_{4}\)</span> är koefficienter vi ska estimera med hjälp av minstakvadratmetoden och <span class="math inline">\(v\)</span> är feltermen. Variablerna i modellen känner vi igen från tabell 1: livslängd <span class="math inline">\(L\)</span>, inkomst <span class="math inline">\(I\)</span>, kön <span class="math inline">\(G\)</span> samt interaktionstermen <span class="math inline">\(GI\)</span>. Med matriser kan vi beskriva vår regressionsmodell på följande sätt:
-= CX + V$ (8)
-$ är en kolumnmatris med värdena för förklarade variabeln livslängd <span class="math inline">\(L\)</span>. <span class="math inline">\(C\)</span> är en kolumnmatris med samtliga koefficienterna i modellen, <span class="math inline">\(c_{1}\)</span> till <span class="math inline">\(c_{4}\)</span>. <span class="math inline">\(X\)</span> är en matris med samtliga förklarande variabler i modellen och observationerna för respektive variabel i varsin kolumn. <span class="math inline">\(V\)</span> är en kolumnmatris med feltermerna <span class="math inline">\(v_{1},v_{2},\ldots,v_{n}\)</span> där n är antal observationer.
-r att estimera koefficienterna har vi estimatorn, som liknar de vi använt i tidigare avsnitt:
-widehat{C} = ( X^{T}X )^{- 1}X^{T}L$ (9)
-tris <span class="math inline">\(X\)</span> är i detta fall:
-=</td>
+<td align="left">Jokkmokk, kvinnor</td>
+<td align="left">81,55</td>
+<td align="left">2,07</td>
+<td align="left">0</td>
+<td align="left">0</td>
 </tr>
 <tr class="even">
-<td align="left"></td>
+<td align="left">Jokkmokk, män</td>
+<td align="left">79,22</td>
+<td align="left">2,40</td>
+<td align="left">1</td>
+<td align="left">2,40</td>
 </tr>
 <tr class="odd">
-<td align="left">vi sätter in dessa estimat i vår regressionsmodell får vi:
-= + I + G + GI$ (14)</td>
+<td align="left">Oskarshamn, kvinnor</td>
+<td align="left">84,64</td>
+<td align="left">2,11</td>
+<td align="left">0</td>
+<td align="left">0</td>
 </tr>
 <tr class="even">
-<td align="left">= 26,6 + 26,9I + 40,3G - 21,8GI$$</td>
+<td align="left">Oskarshamn, män</td>
+<td align="left">81,26</td>
+<td align="left">2,79</td>
+<td align="left">1</td>
+<td align="left">2,79</td>
 </tr>
 <tr class="odd">
-<td align="left">r versalerna nu indikerar enskilda variabler, inte matriser. Nu ska vi uppskatta hur interaktionstermen <span class="math inline">\(GI\)</span> bidrar till samvariationen.
-teraktionseffekten för en variabel beskrev vi i ekvation 3 som <span class="math inline">\(\frac{\Delta y}{\Delta x} = b + d*z\)</span>. För att estimera den <strong>totala samvariationen</strong> mellan inkomst <span class="math inline">\(I\)</span> och livslängd <span class="math inline">\(L\)</span> tar vi:
-frac{L}{I} = + G = 26,9 - 21,8<em>G$ (15)
-tal samvariation betyder effekten av inkomst på livslängd inklusive interaktionseffekten. En enhet ökad inkomst motsvarar en ökning av den genomsnittliga årsinkomsten med 100 000 kronor.
-r kvinnor <span class="math inline">\((G = 0)\)</span>: <span class="math inline">\(\Delta L\text{/}\Delta I = 26,9\)</span> → 100 000 kr högre inkomst = 26,9 år längre liv
-r män <span class="math inline">\((G = 1)\)</span>: <span class="math inline">\(\Delta L\text{/}\Delta I = 26,9 - 21,8 = 5,1\)</span> → 100 000 kr högre inkomst = 5,1 år längre liv
-teraktionseffekten <span class="math inline">\(- 21,8\)</span> betyder att sambandet mellan inkomst och livslängd är svagare för män än för kvinnor. Samvariationen mellan livslängd och inkomst är således mer positiv för kvinnor jämfört med för män. Den totala samvariationen mellan kön <span class="math inline">\(G\)</span> och medellivslängd <span class="math inline">\(L\)</span> kan vi från vår regressionsmodell estimera till:
-frac{L}{G} = + </em>I = 40,3 - 21,8*I$ (16)
-efficienten <span class="math inline">\(c_{1}\)</span> i vår regressionsmodell skattade vi till 26,6 i ekvation 13. Detta är den genomsnittliga livslängd som vår regressionsmodell indikerar att kvinnor utan inkomst har, där variablerna <span class="math inline">\(I\)</span> och <span class="math inline">\(G\)</span> är lika med 0, det vill säga en kvinna <span class="math inline">\(G = 0\)</span> utan inkomst <span class="math inline">\(I = 0\)</span>.
-personen utan inkomst är en man, <span class="math inline">\(G = 1\)</span>, indikerar <span class="math inline">\(\widehat{c_{3}} = 40,3\)</span> att vi kan förvänta oss att en sådan person i genomsnitt lever 40,3 år längre. Vid högre inkomster får vi dock ett annorlunda resultat. Vid följande inkomstnivå blir nettoskillnaden av <span class="math inline">\(G\)</span> lika med 0:
-= = 1,85$ (17)
-nt matematiskt innebär detta att vår regressionsmodell predikterar att en man med 185 000 kronor i årsinkomst i genomsnitt lever lika länge som en kvinna med 0 kronor i inkomst. Detta reflekterar inte nödvändigtvis verkliga mekanismer. I praktiken har nästan ingen 0 kr i inkomst och ingen observation har detta i vårt datamaterial.
-ängen är att visa var interaktionseffekten byter tecken (från plus till minus och tvärtom). Vi måste alltid vara försiktiga med att tolka resultaten och extra försiktiga att tolka resultat utanför de värden vi har data för. Vid högre inkomster än detta blir <span class="math inline">\(\Delta L\text{/}\Delta G\)</span> negativt, vilket innebär att vid högre inkomster är mäns genomsnittliga livslängd kortare än kvinnor.
-## Illustration med diagram
-gur 1 illustrerar delar av resultaten i ett diagram där vi ser samvariationen mellan livslängd och inkomst. Två regressionslinjer är utritade i diagrammet, en för kvinnor och en för män. Regressionslinjen för kvinnor är ritad med ekvationen:
-= + ( I | G = 0 ) = 26,6 + 26,9x$ (18)
-r <span class="math inline">\(\left( I \middle\| G = 0 \right)\)</span> betyder att vi enbart använder de observationer för livslängd <span class="math inline">\((I)\)</span> i tabell 1 som representerar kvinnor. Koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> är estimerade utifrån minstakvadratmetoden. Regressionslinjen för män är i diagrammet ritad med ekvationen:
-= + ( I | G = 1 ) = 66,9 + 5,1x$ (19)
-r <span class="math inline">\(\left( I \middle\| G = 1 \right)\)</span> betyder att vi enbart använder de observationer i tabell 1 som representerar män. Genom att estimera samvariationen mellan livslängd och inkomst för män och kvinnor separat kan vi nå samma slutsats som när vi estimerar regressionsmodellen med interaktionseffekter.
-Figur 1: Regressionsresultat med interaktion**
-](img/k2-4-6-image1.png){style=“width:3.78472in;height:3.78472in”}
-: {.fig-caption}
-rklaring: Livslängd och inkomst för kvinnor respektive män.
-gressionsresultaten för enbart kvinnor i ekvation 18 är samma som resultaten från regressionsmodellen i ekvation 14 med <span class="math inline">\(G = 0\)</span>, då de två första koefficienterna i de båda regressionsmodellerna är desamma: <span class="math inline">\(\widehat{c_{1}} = \widehat{a}\)</span> och <span class="math inline">\(\widehat{c_{2}} = \widehat{b}\)</span>.
-sultaten i regressionsmodellen för män i ekvation 19 kan förenklat beskrivas som att vi lägger ihop koefficienterna i ekvation 14. Vi har koefficienterna:
-widehat{c} = + = 26,6 + 40,3 = 60,9$ (20)
-:</td>
+<td align="left">Örebro, kvinnor</td>
+<td align="left">84,85</td>
+<td align="left">2,18</td>
+<td align="left">0</td>
+<td align="left">0</td>
 </tr>
 <tr class="even">
-<td align="left"> = + = 26,9I - 21,8 = 5,1$$</td>
+<td align="left">Örebro, män</td>
+<td align="left">80,48</td>
+<td align="left">2,66</td>
+<td align="left">1</td>
+<td align="left">2,66</td>
 </tr>
-<tr class="odd">
-<td align="left">tningskoefficienten i regressionsmodellen för enbart män <span class="math inline">\(\widehat{d}\)</span> är samma värde som <span class="math inline">\(\Delta L\text{/}\Delta I\)</span> för <span class="math inline">\(G = 1\)</span> i ekvation 15. Detta innebär även att differensen mellan de två lutningskoefficienterna i regressionsmodellerna för kvinnor respektive män är <span class="math inline">\(\widehat{b} - \widehat{d} = 26,9 - 5,1 = 21,8\)</span>, vilket är samma värde som <span class="math inline">\(\widehat{c_{4}}\)</span> har i ekvation 14.</td>
-</tr>
-<tr class="even">
-<td align="left">: {.ex-section-title}
-ningar
-:</td>
-</tr>
-<tr class="odd">
-<td align="left">cript&gt;window.exerciseData=window.exerciseData||{};window.exerciseData[“k2-4-6”]=[ { “id”: “k2-4-6-001”, “name”: “Uppgift 1”, “exercise”: “Vad är en interaktionseffekt i regressionsanalys?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “När två förklarande variabler är perfekt korrelerade med varandra”, “När effekten av en variabel på Y beror på värdet av en annan variabel”, “När residualerna korrelerar med de förklarande variablerna”, “När interceptet i regressionsmodellen är noll” ], “correct”: “När effekten av en variabel på Y beror på värdet av en annan variabel” } }, “error”: { “message”: “Handlar det om hur variabler korrelerar med varandra, eller om hur en variabels effekt på Y beror på värdet av en annan variabel?” }, “correct”: { “message”: “Rätt! En interaktionseffekt innebär att effekten av variabel X på Y beror på värdet av en annan variabel Z. Till exempel kan inkomstens samvariation med livslängd vara olika stark för män och kvinnor.” } }, { “id”: “k2-4-6-002”, “name”: “Uppgift 2”, “exercise”: “Hur skapar man en interaktionsterm i regressionsmodellen \(y = a + bx + cz + \epsilon\)?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Man adderar x och z till en ny variabel k = x + z”, “Man multiplicerar x och z till en ny variabel k = x·z och inkluderar den i modellen”, “Man dividerar x med z och inkluderar kvoten i modellen”, “Man kvadrerar summan av x och z och inkluderar resultatet” ], “correct”: “Man multiplicerar x och z till en ny variabel k = x·z och inkluderar den i modellen” } }, “error”: { “message”: “Vilken matematisk operation kombinerar x och z till en term som fångar hur deras relation påverkar Y? Vad är den rätta operationen?” }, “correct”: { “message”: “Rätt! Interaktionstermen skapas genom att multiplicera de två variablerna: \(k = x \cdot z\). Den nya variabeln \(k\) läggs sedan till i regressionsmodellen med en egen lutningskoefficient: \(y = a + bx + cz + dk\).” } }, { “id”: “k2-4-6-003”, “name”: “Uppgift 3”, “exercise”: “I regressionsmodellen \(y = a + bx + cz + dxz\) ges den totala samvariationen mellan \(x\) och \(y\) av formeln \(\frac{\Delta y}{\Delta x} = b + d \cdot z\). Med koefficienter \(b = \widehat{c_2} = 26{,}9\) och \(d = \widehat{c_4} = -21{,}8\), och \(z\) en dummyvariabel (0 = kvinna, 1 = man): vad är den totala samvariationen för gruppen med \(z = 1\)?”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “5.1” }, “answerformat”: ““,”error”: { “message”: “Använd formeln \(\frac{\Delta y}{\Delta x} = \widehat{c_2} + \widehat{c_4} \cdot z\) och sätt in \(z = 1\).” }, “correct”: { “message”: “Rätt! \(\frac{\Delta y}{\Delta x} = 26{,}9 + (-21{,}8) \cdot 1 = 26{,}9 - 21{,}8 = 5{,}1\).” } }, { “id”: “k2-4-6-004”, “name”: “Uppgift 4”, “exercise”: “I regressionsmodellen \(L = c_1 + c_2 I + c_3 G + c_4 GI\) — där L är livslängd (i år), I är inkomst (i 100 000-tals kr), G är kön (0 = kvinna, 1 = man) och GI är interaktionstermen — estimerades \(\widehat{c_4} = -21{,}8\). Vad innebär ett negativt tecken på interaktionstermen \(GI\)?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Inkomst har ingen effekt på livslängd för vare sig män eller kvinnor”, “Sambandet mellan inkomst och livslängd är svagare för män än för kvinnor”, “Sambandet mellan inkomst och livslängd är starkare för män än för kvinnor”, “Kön har en negativ effekt på livslängd i alla fall” ], “correct”: “Sambandet mellan inkomst och livslängd är svagare för män än för kvinnor” } }, “error”: { “message”: “Interaktionskoefficenten justerar lutningen för en grupp jämfört med en annan. Med G = 1 för män och c4 negativ, vad händer med den totala lutningskoefficienten för inkomst bland männen?” }, “correct”: { “message”: “Rätt! Det negativa tecknet på interaktionstermen innebär att sambandet mellan inkomst och livslängd är svagare för män (G = 1) än för kvinnor (G = 0). För kvinnor är samvariationen 26,9, men för männen minskar den med 21,8 till bara 5,1.” } }, { “id”: “k2-4-6-005”, “name”: “Uppgift 5”, “exercise”: “Regressionsmodellen med interaktion är \(L = 26{,}6 + 26{,}9I + 40{,}3G - 21{,}8GI\), där L är livslängd (i år), I är inkomst (i 100 000-tals kr) och G är kön (0 = kvinna, 1 = man). Vad är interceptet för regressionslinjen specifikt för <em>männen</em> (\(G = 1\))? Dvs. vad är \(\widehat{c} = \widehat{c_1} + \widehat{c_3}\)?”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “66.9” }, “answerformat”: ““,”error”: { “message”: “För männen (G = 1) summeras de två konstanterna i modellen: interceptet \(\widehat{c_1} = 26{,}6\) och könets koefficient \(\widehat{c_3} = 40{,}3\). Vad är deras summa?” }, “correct”: { “message”: “Rätt! \(\widehat{c} = \widehat{c_1} + \widehat{c_3} = 26{,}6 + 40{,}3 = 66{,}9\). Regressionslinjen för männen är alltså \(L = 66{,}9 + 5{,}1I\), medan regressionslinjen för kvinnorna är \(L = 26{,}6 + 26{,}9I\).” } }];
-iv class=“exercise-section” data-section-id=“k2-4-6”&gt;</td>
-</tr>
-</tbody>
-</table></div>
+</tbody></table></div>
+<div class="fig-caption">
+<p>Förklaring: Data från <a href="http://www.kolada.se">www.kolada.se</a>. Medianinkomst i 100 000-tals kr. Förväntad medellivslängd. Alla siffror avser 2019.
+I <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a> estimerade vi två regressionsmodeller. Först en modell för samvariationen mellan livslängd och inkomst, med följande resultat:
+<span class="math inline">\(L = \widehat{a_{1}} + \widehat{a_{2}}I = 92 - 4,2*I\)</span> (5)
+Den andra modellen inkluderade även dummyvariabeln kön G:
+<span class="math inline">\(L = \widehat{b_{1}} + \widehat{b_{2}}I + \widehat{b_{3}}G = 69,6 + 6,64I - 6,66G\)</span> (6)
+Nu ska vi estimera följande regressionsmodell:
+<span class="math inline">\(L = c_{1} + c_{2}I + c_{3}G + c_{4}GI + v\)</span> (7)
+där <span class="math inline">\(c_{1}\)</span>, <span class="math inline">\(c_{2}\)</span>, <span class="math inline">\(c_{3}\)</span> och <span class="math inline">\(c_{4}\)</span> är koefficienter vi ska estimera med hjälp av minstakvadratmetoden och <span class="math inline">\(v\)</span> är feltermen. Variablerna i modellen känner vi igen från tabell 1: livslängd <span class="math inline">\(L\)</span>, inkomst <span class="math inline">\(I\)</span>, kön <span class="math inline">\(G\)</span> samt interaktionstermen <span class="math inline">\(GI\)</span>. Med matriser kan vi beskriva vår regressionsmodell på följande sätt:
+<span class="math inline">\(L = CX + V\)</span> (8)
+<span class="math inline">\(L\)</span> är en kolumnmatris med värdena för förklarade variabeln livslängd <span class="math inline">\(L\)</span>. <span class="math inline">\(C\)</span> är en kolumnmatris med samtliga koefficienterna i modellen, <span class="math inline">\(c_{1}\)</span> till <span class="math inline">\(c_{4}\)</span>. <span class="math inline">\(X\)</span> är en matris med samtliga förklarande variabler i modellen och observationerna för respektive variabel i varsin kolumn. <span class="math inline">\(V\)</span> är en kolumnmatris med feltermerna <span class="math inline">\(v_{1},v_{2},\ldots,v_{n}\)</span> där n är antal observationer.
+För att estimera koefficienterna har vi estimatorn, som liknar de vi använt i tidigare avsnitt:
+<span class="math inline">\(\widehat{C} = \left( X^{T}X \right)^{- 1}X^{T}L\)</span> (9)
+Matris <span class="math inline">\(X\)</span> är i detta fall:
+<span class="math inline">\(X = \begin{bmatrix} 1 &amp; 2,07 &amp; 0 &amp; 0 \\ 1 &amp; 2,4 &amp; 1 &amp; 2,4 \\ 1 &amp; 2,11 &amp; 0 &amp; 0 \\ 1 &amp; 2,79 &amp; 1 &amp; 2,79 \\ 1 &amp; 2,18 &amp; 0 &amp; 0 \\ 1 &amp; 2,66 &amp; 1 &amp; 2,66 \end{bmatrix}\)</span> (10)
+Alla element i första kolumnen i matris <span class="math inline">\(X\)</span> har värdet 1 eftersom första koefficienten i regressionsmodellen (konstanten) inte är multiplicerad med någon variabel. Övriga värden i matrisen är hämtade från observationerna för de tre förklarande variablerna i tabell 1. Transponerade versionen av <span class="math inline">\(X\)</span> skrivs <span class="math inline">\(X^{T}\)</span> och ser ut på följande sätt:
+<span class="math inline">\(X = \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\ 2,07 &amp; 2,4 &amp; 2,11 &amp; 2,79 &amp; 2,18 &amp; 2,66 \\ 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \\ 0 &amp; 2,4 &amp; 0 &amp; 2,79 &amp; 0 &amp; 2,66 \end{bmatrix}\)</span> (11)
+Värdena i matris L hämtas också från tabell 1:
+<span class="math inline">\(L = \begin{bmatrix} 81,55 \\ 79,22 \\ 84,64 \\ 81,26 \\ 84,85 \\ 80,48 \end{bmatrix}\)</span> (12)
+Vi estimerar regressionsmodellens koefficienter med <span class="math inline">\(\widehat{C} = \left( X^{T}X \right)^{- 1}X^{T}L\)</span>. Vårt resultat blir nu:
+<span class="math inline">\(\widehat{C} = \left( X^{T}X \right)^{- 1}X^{T}L\)</span> (13)</p>
+</div>
+<p><span class="math display">\[\left\lbrack \begin{array}{r} c_{1} \\ c_{2} \\ c_{3} \\ c_{4} \end{array} \right\rbrack \approx \left\lbrack \begin{array}{r} 26,6 \\ 26,9 \\ 40,3 \\ - 21,8 \end{array} \right\rbrack\]</span></p>
+<p>Om vi sätter in dessa estimat i vår regressionsmodell får vi:
+<span class="math inline">\(L = \widehat{c_{1}} + \widehat{c_{2}}I + \widehat{c_{3}}G + \widehat{c_{4}}GI\)</span> (14)</p>
+<p><span class="math display">\[= 26,6 + 26,9I + 40,3G - 21,8GI\]</span></p>
+<p>där versalerna nu indikerar enskilda variabler, inte matriser. Nu ska vi uppskatta hur interaktionstermen <span class="math inline">\(GI\)</span> bidrar till samvariationen.
+Interaktionseffekten för en variabel beskrev vi i ekvation 3 som <span class="math inline">\(\frac{\Delta y}{\Delta x} = b + d*z\)</span>. För att estimera den <strong>totala samvariationen</strong> mellan inkomst <span class="math inline">\(I\)</span> och livslängd <span class="math inline">\(L\)</span> tar vi:
+<span class="math inline">\(\frac{\Delta L}{\Delta I} = \widehat{c_{2}} + \widehat{c_{4}}G = 26,9 - 21,8*G\)</span> (15)
+Total samvariation betyder effekten av inkomst på livslängd inklusive interaktionseffekten. En enhet ökad inkomst motsvarar en ökning av den genomsnittliga årsinkomsten med 100 000 kronor.
+För kvinnor <span class="math inline">\((G = 0)\)</span>: <span class="math inline">\(\Delta L\text{/}\Delta I = 26,9\)</span> → 100 000 kr högre inkomst = 26,9 år längre liv
+För män <span class="math inline">\((G = 1)\)</span>: <span class="math inline">\(\Delta L\text{/}\Delta I = 26,9 - 21,8 = 5,1\)</span> → 100 000 kr högre inkomst = 5,1 år längre liv
+Interaktionseffekten <span class="math inline">\(- 21,8\)</span> betyder att sambandet mellan inkomst och livslängd är svagare för män än för kvinnor. Samvariationen mellan livslängd och inkomst är således mer positiv för kvinnor jämfört med för män. Den totala samvariationen mellan kön <span class="math inline">\(G\)</span> och medellivslängd <span class="math inline">\(L\)</span> kan vi från vår regressionsmodell estimera till:
+<span class="math inline">\(\frac{\Delta L}{\Delta G} = \widehat{c_{3}} + \widehat{c_{4}}*I = 40,3 - 21,8*I\)</span> (16)
+Koefficienten <span class="math inline">\(c_{1}\)</span> i vår regressionsmodell skattade vi till 26,6 i ekvation 13. Detta är den genomsnittliga livslängd som vår regressionsmodell indikerar att kvinnor utan inkomst har, där variablerna <span class="math inline">\(I\)</span> och <span class="math inline">\(G\)</span> är lika med 0, det vill säga en kvinna <span class="math inline">\(G = 0\)</span> utan inkomst <span class="math inline">\(I = 0\)</span>.
+Om personen utan inkomst är en man, <span class="math inline">\(G = 1\)</span>, indikerar <span class="math inline">\(\widehat{c_{3}} = 40,3\)</span> att vi kan förvänta oss att en sådan person i genomsnitt lever 40,3 år längre. Vid högre inkomster får vi dock ett annorlunda resultat. Vid följande inkomstnivå blir nettoskillnaden av <span class="math inline">\(G\)</span> lika med 0:
+<span class="math inline">\(I = \frac{40,3}{21,8} = 1,85\)</span> (17)
+rent matematiskt innebär detta att vår regressionsmodell predikterar att en man med 185 000 kronor i årsinkomst i genomsnitt lever lika länge som en kvinna med 0 kronor i inkomst. Detta reflekterar inte nödvändigtvis verkliga mekanismer. I praktiken har nästan ingen 0 kr i inkomst och ingen observation har detta i vårt datamaterial.
+Poängen är att visa var interaktionseffekten byter tecken (från plus till minus och tvärtom). Vi måste alltid vara försiktiga med att tolka resultaten och extra försiktiga att tolka resultat utanför de värden vi har data för. Vid högre inkomster än detta blir <span class="math inline">\(\Delta L\text{/}\Delta G\)</span> negativt, vilket innebär att vid högre inkomster är mäns genomsnittliga livslängd kortare än kvinnor.
+#### Illustration med diagram
+Figur 1 illustrerar delar av resultaten i ett diagram där vi ser samvariationen mellan livslängd och inkomst. Två regressionslinjer är utritade i diagrammet, en för kvinnor och en för män. Regressionslinjen för kvinnor är ritad med ekvationen:
+<span class="math inline">\(L = \widehat{a} + \widehat{b}\left( I \middle\| G = 0 \right) = 26,6 + 26,9x\)</span> (18)
+där <span class="math inline">\(\left( I \middle\| G = 0 \right)\)</span> betyder att vi enbart använder de observationer för livslängd <span class="math inline">\((I)\)</span> i tabell 1 som representerar kvinnor. Koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> är estimerade utifrån minstakvadratmetoden. Regressionslinjen för män är i diagrammet ritad med ekvationen:
+<span class="math inline">\(L = \widehat{c} + \widehat{d}\left( I \middle\| G = 1 \right) = 66,9 + 5,1x\)</span> (19)
+där <span class="math inline">\(\left( I \middle\| G = 1 \right)\)</span> betyder att vi enbart använder de observationer i tabell 1 som representerar män. Genom att estimera samvariationen mellan livslängd och inkomst för män och kvinnor separat kan vi nå samma slutsats som när vi estimerar regressionsmodellen med interaktionseffekter.
+<strong>Figur 1: Regressionsresultat med interaktion</strong>
+<img src="img/k2-4-6-image1.png" style="width:3.78472in;height:3.78472in"></p>
+<div class="fig-caption">
+<p>Förklaring: Livslängd och inkomst för kvinnor respektive män.
+Regressionsresultaten för enbart kvinnor i ekvation 18 är samma som resultaten från regressionsmodellen i ekvation 14 med <span class="math inline">\(G = 0\)</span>, då de två första koefficienterna i de båda regressionsmodellerna är desamma: <span class="math inline">\(\widehat{c_{1}} = \widehat{a}\)</span> och <span class="math inline">\(\widehat{c_{2}} = \widehat{b}\)</span>.
+Resultaten i regressionsmodellen för män i ekvation 19 kan förenklat beskrivas som att vi lägger ihop koefficienterna i ekvation 14. Vi har koefficienterna:
+<span class="math inline">\(\widehat{c} = \widehat{c_{1}} + \widehat{c_{3}} = 26,6 + 40,3 = 60,9\)</span> (20)</p>
+</div>
+<p><span class="math display">\[\widehat{d} = \widehat{c_{2}} + \widehat{c_{4}} = 26,9I - 21,8 = 5,1\]</span></p>
+<p>Lutningskoefficienten i regressionsmodellen för enbart män <span class="math inline">\(\widehat{d}\)</span> är samma värde som <span class="math inline">\(\Delta L\text{/}\Delta I\)</span> för <span class="math inline">\(G = 1\)</span> i ekvation 15. Detta innebär även att differensen mellan de två lutningskoefficienterna i regressionsmodellerna för kvinnor respektive män är <span class="math inline">\(\widehat{b} - \widehat{d} = 26,9 - 5,1 = 21,8\)</span>, vilket är samma värde som <span class="math inline">\(\widehat{c_{4}}\)</span> har i ekvation 14.</p>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-4-6"]=[  {    "id": "k2-4-6-001",    "name": "Uppgift 1",    "exercise": "Vad är en interaktionseffekt i regressionsanalys?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "När två förklarande variabler är perfekt korrelerade med varandra",          "När effekten av en variabel på Y beror på värdet av en annan variabel",          "När residualerna korrelerar med de förklarande variablerna",          "När interceptet i regressionsmodellen är noll"        ],        "correct": "När effekten av en variabel på Y beror på värdet av en annan variabel"      }    },    "error": { "message": "Handlar det om hur variabler korrelerar med varandra, eller om hur en variabels effekt på Y beror på värdet av en annan variabel?" },    "correct": { "message": "Rätt! En interaktionseffekt innebär att effekten av variabel X på Y beror på värdet av en annan variabel Z. Till exempel kan inkomstens samvariation med livslängd vara olika stark för män och kvinnor." }  },  {    "id": "k2-4-6-002",    "name": "Uppgift 2",    "exercise": "Hur skapar man en interaktionsterm i regressionsmodellen \\(y = a + bx + cz + \\epsilon\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Man adderar x och z till en ny variabel k = x + z",          "Man multiplicerar x och z till en ny variabel k = x·z och inkluderar den i modellen",          "Man dividerar x med z och inkluderar kvoten i modellen",          "Man kvadrerar summan av x och z och inkluderar resultatet"        ],        "correct": "Man multiplicerar x och z till en ny variabel k = x·z och inkluderar den i modellen"      }    },    "error": { "message": "Vilken matematisk operation kombinerar x och z till en term som fångar hur deras relation påverkar Y? Vad är den rätta operationen?" },    "correct": { "message": "Rätt! Interaktionstermen skapas genom att multiplicera de två variablerna: \\(k = x \\cdot z\\). Den nya variabeln \\(k\\) läggs sedan till i regressionsmodellen med en egen lutningskoefficient: \\(y = a + bx + cz + dk\\)." }  },  {    "id": "k2-4-6-003",    "name": "Uppgift 3",    "exercise": "I regressionsmodellen \\(y = a + bx + cz + dxz\\) ges den totala samvariationen mellan \\(x\\) och \\(y\\) av formeln \\(\\frac{\\Delta y}{\\Delta x} = b + d \\cdot z\\). Med koefficienter \\(b = \\widehat{c_2} = 26{,}9\\) och \\(d = \\widehat{c_4} = -21{,}8\\), och \\(z\\) en dummyvariabel (0 = kvinna, 1 = man): vad är den totala samvariationen för gruppen med \\(z = 1\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "5.1" },    "answerformat": "",    "error": { "message": "Använd formeln \\(\\frac{\\Delta y}{\\Delta x} = \\widehat{c_2} + \\widehat{c_4} \\cdot z\\) och sätt in \\(z = 1\\)." },    "correct": { "message": "Rätt! \\(\\frac{\\Delta y}{\\Delta x} = 26{,}9 + (-21{,}8) \\cdot 1 = 26{,}9 - 21{,}8 = 5{,}1\\)." }  },  {    "id": "k2-4-6-004",    "name": "Uppgift 4",    "exercise": "I regressionsmodellen \\(L = c_1 + c_2 I + c_3 G + c_4 GI\\) — där L är livslängd (i år), I är inkomst (i 100 000-tals kr), G är kön (0 = kvinna, 1 = man) och GI är interaktionstermen — estimerades \\(\\widehat{c_4} = -21{,}8\\). Vad innebär ett negativt tecken på interaktionstermen \\(GI\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Inkomst har ingen effekt på livslängd för vare sig män eller kvinnor",          "Sambandet mellan inkomst och livslängd är svagare för män än för kvinnor",          "Sambandet mellan inkomst och livslängd är starkare för män än för kvinnor",          "Kön har en negativ effekt på livslängd i alla fall"        ],        "correct": "Sambandet mellan inkomst och livslängd är svagare för män än för kvinnor"      }    },    "error": { "message": "Interaktionskoefficenten justerar lutningen för en grupp jämfört med en annan. Med G = 1 för män och c4 negativ, vad händer med den totala lutningskoefficienten för inkomst bland männen?" },    "correct": { "message": "Rätt! Det negativa tecknet på interaktionstermen innebär att sambandet mellan inkomst och livslängd är svagare för män (G = 1) än för kvinnor (G = 0). För kvinnor är samvariationen 26,9, men för männen minskar den med 21,8 till bara 5,1." }  },  {    "id": "k2-4-6-005",    "name": "Uppgift 5",    "exercise": "Regressionsmodellen med interaktion är \\(L = 26{,}6 + 26{,}9I + 40{,}3G - 21{,}8GI\\), där L är livslängd (i år), I är inkomst (i 100 000-tals kr) och G är kön (0 = kvinna, 1 = man). Vad är interceptet för regressionslinjen specifikt för <em>männen</em> (\\(G = 1\\))? Dvs. vad är \\(\\widehat{c} = \\widehat{c_1} + \\widehat{c_3}\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "66.9" },    "answerformat": "",    "error": { "message": "För männen (G = 1) summeras de två konstanterna i modellen: interceptet \\(\\widehat{c_1} = 26{,}6\\) och könets koefficient \\(\\widehat{c_3} = 40{,}3\\). Vad är deras summa?" },    "correct": { "message": "Rätt! \\(\\widehat{c} = \\widehat{c_1} + \\widehat{c_3} = 26{,}6 + 40{,}3 = 66{,}9\\). Regressionslinjen för männen är alltså \\(L = 66{,}9 + 5{,}1I\\), medan regressionslinjen för kvinnorna är \\(L = 26{,}6 + 26{,}9I\\)." }  }];</script><div class="exercise-section" data-section-id="k2-4-6">
+
+</div>
+<hr>
 <div class="next-section-link">
 <p><a href="k2-4-7.html">→ Nästa avsnitt: <strong>Räkna på orsak och effekt</strong></a></p>
 </div>

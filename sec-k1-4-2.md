@@ -21,6 +21,7 @@ De två axlarna i diagrammet, horisontella och vertikala axeln, mäter konsumtio
 De böjda linjerna i diagrammet kallas för *indifferenslinjer*. Vid olika indifferenslinjer är mängden nytta olika. Men längs med varje indifferenslinje är nöjdheten densamma för olika kombinationer av *C* och *L*. Denna teori innebär att Erik är *indifferent* till exakt vilken kombination av C och L det blir, så länge vi är kvar på samma linje.
 Erik kan acceptera mindre fritid så länge han kan kompensera med större konsumtion, uppe till vänster i diagrammet, och mindre konsumtion om han kan kompensera med mer fritid. Linjerna längre bort från nollpunkten, origo, representerar kombinationer av konsumtion och fritid som sammantaget resulterar i större nytta.
 **Figur 1. Olika kombinationer av C, L och N.**![](img/k1-4-2-image1.png){style="width:4.89431in;height:3.67073in"}
+
 ::: {.fig-caption}
 Förklaring: Konsumtion mäts på vertikala axeln. Fritid mäts på horisontella axeln. Nere i vänstra hörnet är mängden konsumtion och fritid noll. Längre upp till höger i diagrammet är mängden konsumtion och fritid större. Indifferenslinjerna visar olika kombinationer av konsumtion och fritid, där mängden nytta för Erik är densamma längs respektive linje. Olika indifferenslinjer representerar olika mängd nytta. []{.mark}
 :::
@@ -33,6 +34,7 @@ Budgetfunktionen kan användas för att rita en rak linje i diagrammet med indif
 Om Erik spenderade all tillgänglig tid till arbete, $L = 0$, skulle $C = wT$, en punkt längs med den vertikala axeln, konsumtion. Detta är den maximala mängden konsumtion som Erik kan uppnå, givet nuvarande lön. Linjen lutar negativt ned mot horisontella axeln.
 Vi kan tänka oss att budgetlinjen börjar på den horisontella axeln vid punkten för maximal fritid (noll konsumtion). Linjens lutning upp mot vertikala axeln bestäms av lönen *w*. Budgetfunktionen kan därför skrivas ut som ett rakt diagonalt streck. Högre lön ger en brantare linje och möjliggör större konsumtion (ett högre maxvärde på vertikala axeln).
 **Figur 2. Budgetlinjen och indifferenslinjer**![](img/k1-4-2-image2.png){style="width:4.98718in;height:3.74038in"}
+
 ::: {.fig-caption}
 Förklaring: Indifferenslinjerna är fortfarande illustrationer av kombinationer av fritid och konsumtion som ger samma mängd nytta längs med respektive linje. Budgetlinjen illustrerar vad Erik har råd med för konsumtion och fritid. Alla kombinationer av konsumtion och fritid innanför budgetlinjen har Erik råd med.
 :::

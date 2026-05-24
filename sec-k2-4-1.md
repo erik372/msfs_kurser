@@ -123,6 +123,7 @@ $$\sum_{}^{}{}$$
 
                                                                                                                                                                                                                                                                                             5                                                                 --6                                                                --4                                                           10                                                     9
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: $\widetilde{Y_{i}} = Y_{i} - \overline{Y}$ och motsvarande för $\widetilde{X_{i}}$ och $\widetilde{Z_{i}}$.
 I [avsnitt 2.4](https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&dl=0) använde vi variablerna $Y$ och $X$ för att estimera regressionsmodellen $Y_{i} = a + bX_{i} + V_{i}$ och fann då att $\widehat{a} = 1$ och $\widehat{b} = 0,5$. Nu ska vi estimera koefficienterna för följande regressionsmodell:
@@ -173,6 +174,7 @@ Den vertikala axeln är $Y$-axeln medan variablerna $X$ och $Z$ har varsin horis
 Eftersom regressionsmodellen har tre variabler blir regressionslinjen $\left( \widehat{Y} \right)$ nu en plan yta med tre dimensioner, vilket illustreras av rutnätet. Denna plana yta är vinklad med hänsyn till de två variablerna $X$ och $Z$, beroende på deras respektive lutningskoefficient. Eftersom lutningskoefficienten $\widehat{c} \< 0$ lutar rutnätet nedåt längs med $Z$-axeln sett från $Y$-axeln. Eftersom $\widehat{b} \> 0$ lutar rutnätet uppåt längs med $X$-axeln sett från $Y$-axeln.
 **Figur 1. Regressionsresultat med tre variabler**
 *[Sideeg \> Jag sparade ett 3d-diagram som html i katalogen]{.mark} [Eriks_3d_graf](https://www.dropbox.com/scl/fo/2i2ntlsxmg2g3u0mjwg93/AGRmmFsd9k7y02ZW2EYyPyo?rlkey=oadbjo86p3expplymcnzfshu1&dl=0). [Om ni har möjlighet att göra det snyggare får ni jättegärna göra det ]{.mark}*😊
+
 ::: {.fig-caption}
 Förklaring: Diagrammet illustrerar $\widehat{Y} = 2,89 + 0,28X - 0,54Z$. Klicka och dra i diagrammet för att vrida på det.
 :::

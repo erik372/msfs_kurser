@@ -44,6 +44,7 @@ $$K*I$$
   Örebro, kvinnor       84,85                                 2,18                                0                               0
   Örebro, män           80,48                                 2,66                                1                               2,66
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: Data från [www.kolada.se](http://www.kolada.se). Medianinkomst i 100 000-tals kr. Förväntad medellivslängd. Alla siffror avser 2019.
 I [avsnitt 4.3](https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&dl=0) estimerade vi två regressionsmodeller. Först en modell för samvariationen mellan livslängd och inkomst, med följande resultat:
@@ -98,6 +99,7 @@ $L = \widehat{c} + \widehat{d}\left( I \middle\| G = 1 \right) = 66,9 + 5,1x$ (1
 där $\left( I \middle\| G = 1 \right)$ betyder att vi enbart använder de observationer i tabell 1 som representerar män. Genom att estimera samvariationen mellan livslängd och inkomst för män och kvinnor separat kan vi nå samma slutsats som när vi estimerar regressionsmodellen med interaktionseffekter.
 **Figur 1: Regressionsresultat med interaktion**
 ![](img/k2-4-6-image1.png){style="width:3.78472in;height:3.78472in"}
+
 ::: {.fig-caption}
 Förklaring: Livslängd och inkomst för kvinnor respektive män.
 Regressionsresultaten för enbart kvinnor i ekvation 18 är samma som resultaten från regressionsmodellen i ekvation 14 med $G = 0$, då de två första koefficienterna i de båda regressionsmodellerna är desamma: $\widehat{c_{1}} = \widehat{a}$ och $\widehat{c_{2}} = \widehat{b}$.

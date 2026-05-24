@@ -13,6 +13,8 @@ kreditkort
 k1-2-2
 begrepp-5
 inkomstindex
+section
+prisindex-och-deflatering
 k1-2-3
 begrepp-6
 genomsnittlig-tillväxttakt
@@ -69,6 +71,7 @@ begrepp-24
 k2-2-4
 begrepp-25
 regressionsanalys
+positiv-och-negativ-samvariation
 k2-2-5
 begrepp-26
 k2-2-6
@@ -79,13 +82,16 @@ k2-3-2
 begrepp-29
 k2-3-3
 begrepp-30
+vi-beräknar-r2-för-båda-modellerna
 k2-3-4
 begrepp-31
 minimera-summan-av-kvadrerade-residualerna
 k2-4-1
 begrepp-32
+vad-blev-det-för-skillnad
 k2-4-2
 begrepp-33
+faktorvariabler-med-flera-värden
 k2-4-3
 begrepp-34
 vår-första-regressionsmodell

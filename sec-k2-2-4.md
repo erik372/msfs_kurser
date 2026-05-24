@@ -16,6 +16,7 @@ Den linje vi ska rita ut kommer att ge oss en illustration över den genomsnittl
 Minstakvadratmetoden låter oss använda information från värdena för $X$ och $Y$ (de fyra punkterna) för att hitta just de värden för koefficienterna $a$ och $b$ som låter oss rita ut den raka linje genom punkterna där summan av det vertikala kvadrerade avståndet mellan varje punkt och den raka linjen är så liten som möjligt. Vi ska återkomma till innebörden av detta.
 I figurens diagram ges ett exempel på avståndet i form av ${\widehat{v}}_{3} = 5 - 4$. Varje annan rak linje skulle resultera i ett större summerat vertikalt avstånd mellan punkterna och linjen. Om avståndet mellan en punkt och linjen är lika med 5 är det kvadrerade avståndet samma värde i kvadrat, $5^{2} = 25$. Punkter som ligger under linjen får ett negativt avstånd, till exempel −5, och det kvadrerade värdet blir då $( - 5)^{2} = 25$.
 **Figur 1. En linje ritad med hjälp av minstakvadratmetoden**![](img/k2-2-4-image1.png){style="width:3.5in;height:3in"}
+
 ::: {.fig-caption}
 Förklaring: Linjen i diagrammet illustrerar den linjära samvariationen mellan variablerna $X$ och $Y$. Av alla raka linjer vi kan rita ut i diagrammet är det just denna linje vi ser i diagrammet som minimerar summan av det vertikala avståndet mellan en sådan linje och punkterna.
 :::
@@ -88,6 +89,7 @@ $$\widehat{Y} = 1 + 0,5*6 = 4$$
 $$\widehat{Y} = 1 + 0,5*7 = 4,5$$
 
   -----------------------------------------------------------------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: Tabellen visar observationerna för variablerna $X$ och $Y$ samt estimerade $\widehat{Y}$, vilket vi får genom att estimera regressionsmodellen.
 :::

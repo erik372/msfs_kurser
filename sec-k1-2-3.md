@@ -31,6 +31,7 @@ Detta och resultaten för övriga årtal visas i tabell 1. Som syns i tabellen v
   2013                451 100                 2019                488 800
   2014                458 500                        
   ------------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: Data från SCB. BNP deflaterad med BNP-deflatorn, omräknad till 2019 års priser.
 :::
@@ -70,6 +71,7 @@ I tabellen kan vi se hur en lika stor relativ förändring i $ln(BNP)$ motsvaras
   1890      1 477              7,3          2000      2 013 311          14,5
   1900      2 245              7,7                                       
   --------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: Data från [www.historia.se](http://www.historia.se). Ln(BNP) är naturliga logaritmen av talen i kolumnen med BNP räknat i miljoner kr.
 Siffrorna från tabell 2 illustreras i figur 1 med två diagram: I det vänstra diagrammet visas en linje för BNP räknat i miljarder kronor. Under denna period ökade BNP exponentiellt. Från 115 miljoner kronor (0,115 miljarder) år 1800 till 2 013 311 miljoner kr (2 013 miljarder) år 2000. Det högra diagrammet visar samma sak i naturliga logaritmen, $ln(BNP)$, där linjen i stället är mer rak.
@@ -78,6 +80,7 @@ Om linjen i det högra diagrammet hade varit helt rät hade de inneburit att den
 **Figur 1: Sveriges BNP år 1800---2000, i miljarder kronor och uttryckt i naturliga logaritmen.**
 ![](img/k1-2-3-image1.png){style="width:5.78165in;height:3.17857in"}
 :::
+
 
 
 ::: {.fig-caption}

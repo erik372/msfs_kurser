@@ -22,6 +22,7 @@ Vi ska nu illustrera detta med hjälp av lite data över genomsnittlig livsläng
                                                                                                        
   Medelvärde                               82                                    2,368                               0,5
   -------------------------------------------------------------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring:
 :::
@@ -68,6 +69,7 @@ där $G$ är dummy för kön med $G = 0$ för kvinnor och $G = 1$ för män. I d
 Om $G = 0$ får vi den övre regressionslinjen, som löper genom prickarna som illustrerar observationerna för kvinnor. Om dummyvariabeln $G = 1$ har vi i stället den nedre regressionslinjen, som löper genom de tre prickarna för män.
 **Figur 1: Illustration av resultaten från de två regressionsmodellerna**\
 ![](img/k2-4-3-image1.png){style="width:4.5in;height:3in"}
+
 ::: {.fig-caption}
 Förklaring: I det vänstra diagrammet ser vi resultaten från den estimerade regressionsmodellen i ekvation 1. I det högra diagrammet är regressionsmodellen i ekvation 5 illustrerade för $G = 0$ respektive $G = 1$.
 :::

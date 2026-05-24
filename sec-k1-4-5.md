@@ -24,6 +24,7 @@ I raden för bransch A visar siffrorna värdet av den produktion som A säljer t
 +-----------+-----------+-----------+----------------+----------+
 | Summa     | 3         | 4         | 6              | 13       |
 +-----------+-----------+-----------+----------------+----------+
+
 ::: {.fig-caption}
 Förklaring: På raden för bransch A ser vi mängden produktion av varor och tjänster från (output) företagen i bransch A till andra företag i bransch A, företag i bransch B samt till hushållen som står för slutkonsumtion. I kolumnen för bransch A ser vi mängden insatsvaror (input) som företagen i bransch A erhåller från andra företag i bransch A och B. I kolumnen längst till höger ser vi radsumma och i raden längst ned ser vi kolumnsumma.
 Informationen i tabell 1 kan vi använda för att beräkna hur förändrad produktion i en del av samhällsekonomin påverkar övriga delar. Vi börjar med att placera tabellens värden i matriser. Vi samlar flödena till och från branscherna i en $2 \times 2$ matris Z (flödesmatrisen), slutkonsumtion i kolumnmatris C och summan i sista kolumnen i kolumnmatris S:
@@ -65,6 +66,7 @@ Figur 1 visar ett exempel på hur detta kan illustreras i ett *nätverksdiagram*
 Punkternas storlek representerar respektive branschs totala produktion, kolumnen längst till höger i tabellen. I diagrammet har vi inte tagit med någon illustration över den produktion som branscherna skickar till slutkonsumtion.
 **Figur 1. Ett nätverk med de två branscherna A och B.**
 ![](img/k1-4-5-image1.png){style="width:5in;height:3in"}
+
 ::: {.fig-caption}
 Förklaring: In- och utflöden från och till de två branscherna A och B. Flödena beskrivs i tabell 1.
 :::

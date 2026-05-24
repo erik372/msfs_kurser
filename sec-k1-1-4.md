@@ -11,8 +11,9 @@ Ett annat exempel på vilseledande slutsatser är sådana vi ofta ser i olika ty
 Många gånger lurar vi oss själva med diagram. Ett sätt att illustrera hur lätt det blir fel ges i figur 1. I figuren syns åtta pilspetsar med fyra avstånd mellan varje par. Många människor uppfattar det som att avstånden mellan pilspetsarna skiljer sig. Men detta är felaktigt. Alla fyra avstånden mellan respektive par är lika långa.
 I detta exempel kan du kontrollera avstånden mellan pilspetsarna genom att räkna antal rutor. Men många illustrationer av information kan innehålla mycket krångligare synvillor som är svårare att upptäcka. Ännu större risker för missförstånd uppstår när vi försöker studera stora mönster på samhällsnivå. Synvillan i figuren kallas för Müller-Lyer-illusionen, efter en tysk sociolog som forskade på fenomenet i slutet av 1800-talet.
 Matematiken kan här hjälpa oss att göra det svårare för oss att ljuga för oss själva och andra. Genom att räkna mer noga på mönster och variationer i information har vi möjlighet att undvika missförstånd och risken för felaktiga slutsatser minskar.
-**Figur 1. Vilka avstånd är lika långa?\**
+**Figur 1. Vilka avstånd är lika långa?**
 ![](img/k1-1-4-image1.png){style="width:3in;height:3in"}
+
 ::: {.fig-caption}
 Förklaring: Bilden föreställer fyra pilspetsar. I varje par är avståndet mellan spetsarna lika långt. Men många människor uppfattar att avstånden skiljer sig. Exemplet ger ett enkelt exempel på att det är lätt att luras med information och diagram.
 :::

@@ -158,10 +158,10 @@ I kolumnerna till höger ser vi resultatet i form av ett befolkningsindex per la
 | <strong>2010</strong> | 9,38 | 62,44 | 125,2 | 136,8 |
 +———-+————-+—————+————-+—————+
 | <strong>2020</strong> | 10,37 | 64,48 | 138,4 | 141,2 |
-+———-+————-+—————+————-+—————+
-::: {.fig-caption}
-Förklaring: Data från <a href="https://ourworldindata.org/grapher/population">Our World in Data</a>. Antal invånare i Sverige och Frankrike 1960—2020.
-:::</p>
++———-+————-+—————+————-+—————+</p>
+<div class="fig-caption">
+<p>Förklaring: Data från <a href="https://ourworldindata.org/grapher/population">Our World in Data</a>. Antal invånare i Sverige och Frankrike 1960—2020.</p>
+</div>
 </div>
 <div id="inkomstindex" class="section level3" number="6.0.2">
 <h3>
@@ -180,17 +180,17 @@ Inkomsterna i tabellen är beskrivna i kronor per konsumtionsenhet. Kronor per k
 2010 83,3 619,3
 2015 97,9 798,9
 2019 99,6 803,3
-———————————————–
-::: {.fig-caption}
-Förklaring: Data från <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__HE__HE0110__HE0110F/">SCB</a>, genomsnittlig disponibel inkomst inklusive kapitalvinst per konsumtionsenhet. Decilgrupp 1 = den tiondel av befolkningen som respektive år hade lägst inkomster. Decilgrupp 10 = den tiondel av befolkningen som respektive år hade högst inkomster. Enskilda personer kan ha bytt decilgrupp mellan åren.
+———————————————–</p>
+<div class="fig-caption">
+<p>Förklaring: Data från <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__HE__HE0110__HE0110F/">SCB</a>, genomsnittlig disponibel inkomst inklusive kapitalvinst per konsumtionsenhet. Decilgrupp 1 = den tiondel av befolkningen som respektive år hade lägst inkomster. Decilgrupp 10 = den tiondel av befolkningen som respektive år hade högst inkomster. Enskilda personer kan ha bytt decilgrupp mellan åren.
 Decilgrupp 1 hade år 1995 i genomsnitt 63 200 kr. Decilgrupp 10 hade samma år en genomsnittlig inkomst på 311 900 kr. Nu ska vi skapa ett index vardera för de två decilgrupperna 1 och 10 med 1995 som basår. Indexvärdet för respektive grupp kommer år 1995 att bli 100.
 Tabell 3 visar resultatet. Inkomsterna för decilgrupp 1 ökade med 57,6 % och för decilgrupp 10 med 157,6 %. Väljer vi ett annat basår blir resultaten annorlunda.
 <strong>Table 3: Indexerad inkomstutveckling per decilgrupp</strong>
 ————————————————————————————————————————————
   <strong>Decilgrupp 1</strong> <strong>Decilgrupp 10</strong>
 ———- ———————————————————– ————————————————————-
-<strong>1995</strong>
-:::</p>
+<strong>1995</strong></p>
+</div>
 <p><span class="math display">\[\frac{63,2}{63,2}*100 = 100\]</span></p>
 <p><span class="math display">\[\frac{311,9}{311,9}*100 = 100\]</span></p>
 <pre><code>**2000** 117,7                                                       166,5
@@ -200,56 +200,50 @@ Tabell 3 visar resultatet. Inkomsterna för decilgrupp 1 ökade med 57,6 % och f
 **2019** </code></pre>
 <p><span class="math display">\[\frac{99,6}{63,2}*100 = 157,6\]</span></p>
 <p><span class="math display">\[\frac{803,3}{311,9}*100 = 257,6\]</span></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
-<colgroup><col width="98%"></colgroup>
-<tbody>
-<tr class="odd">
-<td align="left">: {.fig-caption}
-rklaring: Inkomstindex för decilgrupp 1 och 10, baserat på data presenterade ovan.
-:</td>
-</tr>
-<tr class="even">
-<td align="left">#
-# Prisindex och deflatering
-t <em>prisindex</em> visar den indexerade prisutvecklingen för en eller flera varor eller tjänster. Ett prisindex som ofta används är <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-konsumtion/konsumentprisindex/konsumentprisindex-kpi/">Konsumentprisindex</a> (KPI) som Statistiska centralbyrån (SCB) beräknar. För att räkna ut KPI samlar SCB in information om pris och andra egenskaper på en stor mängd olika varor och tjänster. Därefter beräknar SCB ett medelvärde för en hypotetisk varukorg. Varukorgen är baserad på vad människor i Sverige spenderar pengar på.
-varorna och tjänsterna ändras, till exempel om en ny mobiltelefon lanseras med ny kvalitet, så justeras KPI-beräkningen för detta. Idealiskt sett mäter därför KPI endast rena prisförändringar. Diagram 1 visar utvecklingen av KPI mellan 1980—2024. Diagrammet visar hur konsumentprisindex under denna period ökade med från nivå 100 till lite mer än 400. En ökning med över 300 procent.
-Diagram 1: Konsumentprisindex för Sverige 1980—2022**
-](img/k1-2-2-image1.png){style=“width:4.61905in;height:2.53941in”}
-: {.fig-caption}
-rklaring: Data från <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-konsumtion/konsumentprisindex/konsumentprisindex-kpi/">SCB</a>. Diagrammet visar konsumentprisindex för Sverige år 1980–2024. Index 100 är satt till år 1980. Diagrammet visar hur konsumentpriserna under perioden i genomsnitt ökade med lite mer än 300 %.
-g att en vara kostar 100 kr år 1 och vi tjänar 100 kr i timmen. Året därpå har alla priser och löner fördubblats. År 2 kostar varan 200 kr och vi tjänar 200 kr i timmen.
-t i denna situation säga att varans pris har fördubblats är inte särskilt informativt om vi inte samtidigt tar hänsyn till att våra inkomster har fördubblats. Att vi har fått fördubblade inkomster säger ingenting om vår levnadsstandard om vi inte samtidigt tar hänsyn till prisutvecklingen.
-vanlig metod för att justera löner och priser för samhällets prisutveckling är att dividera med KPI. Detta kallas för att <em>deflatera</em>. Ett normalt, icke-justerat pris, kallas för <em>nominellt pris</em>. Ett deflaterat pris kallas för <em>realt pris</em>. Deflaterad nominell lön kallas för <em>reallön</em>.
-t prisindex som används för att dividera priserna med kallas för <em>deflator</em>. Det går även att använda andra typer av prisindex för att deflatera. Definitionen av ett realt pris för tidpunkt <em>t</em> är i detta fall:
-:</td>
-</tr>
-<tr class="odd">
-<td align="left">Realt pris_{t} = p_{t}( )$$</td>
-</tr>
-<tr class="even">
-<td align="left">r <span class="math inline">\(p_{t}\)</span> är det nominella priset vi vill deflatera, till exempel priset på en vara eller tjänst. <span class="math inline">\(KPI_{bas}\)</span> är KPI-värdet för det år vi vill använda som basår och <span class="math inline">\(KPI_{t}\)</span> är KPI-värdet för samma år som det aktuella nominella priset vi deflaterar.
-priset på en vara ökar långsammare än priset på andra saker har denna vara blivit billigare relativt andra saker. Varans reala pris har minskat. Om priset på de varor och tjänster vi köper ökar långsammare än våra löner säger vi att vår våra reallöner, och vår reala köpkraft, har ökat.
-## Inflation och löner historiskt
-agram 2 visar tre tidsserier: den genomsnittliga prisnivån, genomsnittliga nominell månadslön och genomsnittlig real månadslön i Sverige mellan åren 2004 och 2022. Alla tre tidsserierna är indexerade och har värdet 100 för år 2004.
-dan 2004 har lönerna ökat nominellt med lite mer än 60 procent, vilket vi kan se på den gröna linjen. Från indexvärde 100 till lite över 160. Priserna, den röda linjen har under samma period ökat med i genomsnitt cirka 35 procent, från 100 till 135. För att beräkna den reala lönenivån i 2022 års priser tar vi för varje år <em>t</em>:
-allön år <em>t</em> = nominell lön år <em>t</em> * ( prisnivån 2022 / prisnivån år <em>t</em>)
-tta ger oss den blå linjen. Där kan vi se att reallönerna ökade lite mer än 20 procent under perioden. Med en nedgång 2022. Jämför vi längre tillbaka har både priser, löner och reallöner ökat mycket mer.
-Diagram 2: Priser och löner i Sverige år 2004—2022** <img src="img/k1-2-2-image2.png" style="width:6in;height:3.29861in">
-: {.fig-caption}
-rklaring: Data från <a href="https://scb.se/">SCB</a>. Priser = Konsumentprisindex (KPI). Nominell lön = genomsnittlig månadslön (SCB Lönestrukturstatistik). Reallön = nominell lön deflaterad med KPI. Under perioden ökade månadslönerna med i genomsnitt lite mer än 60 procent. Konsumentprisindex ökade med lite mer än 30 procent. Reallönerna ökade med i genomsnitt lite mer än 20 procent.
-:</td>
-</tr>
-<tr class="odd">
-<td align="left">: {.ex-section-title}
-ningar
-:</td>
-</tr>
-<tr class="even">
-<td align="left">cript&gt;window.exerciseData=window.exerciseData||{};window.exerciseData[“k1-2-2”]=[ { “id”: “k1-2-2-001”, “name”: “Uppgift 1”, “exercise”: “Sveriges befolkning var 7,49 miljoner år 1960 (basår, index = 100) och 8,03 miljoner år 1970. Beräkna befolkningsindexet för år 1970. Runda till en decimal. \[Index_{1970} = \frac{8{,}03}{7{,}49} \times 100\]”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Index 1970”: “107.2” }, “answerformat”: ““,”error”: { “message”: “Dividera befolkningstalet 1970 med basårets befolkningstal och multiplicera med 100: \(8{,}03 / 7{,}49 \times 100\).” }, “correct”: { “message”: “Rätt! \(8{,}03 / 7{,}49 \times 100 \approx 107{,}2\). Sveriges befolkning hade ökat med 7,2 % sedan 1960.” } }, { “id”: “k1-2-2-002”, “name”: “Uppgift 2”, “exercise”: “Vad menas med att <em>deflatera</em> ett pris?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Att sänka ett pris artificiellt för att locka kunder”, “Att justera ett nominellt pris för den allmänna prisutvecklingen i samhället”, “Att beräkna hur mycket ett lån kostar per månad”, “Att räkna om priser från en valuta till en annan” ], “correct”: “Att justera ett nominellt pris för den allmänna prisutvecklingen i samhället” } }, “error”: { “message”: “Tänk på relationen mellan nominellt och realt pris — vad är syftet med att dividera med KPI?” }, “correct”: { “message”: “Rätt! Att deflatera innebär att man dividerar ett nominellt pris med ett prisindex (t.ex. KPI) för att få ett realt pris, justerat för hur pengars värde förändrats.” } }, { “id”: “k1-2-2-003”, “name”: “Uppgift 3”, “exercise”: “En vara kostar 200 kr (nominellt pris) år 2010. KPI för basåret (2000) är 100 och KPI för 2010 är 125. Beräkna varans <em>reala pris</em> i basårets priser: \[Realt\ pris = p_t \times \frac{KPI_{bas}}{KPI_t}\]”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Realt pris”: “160” }, “answerformat”: “kr”, “error”: { “message”: “Sätt in: \(200 \times (100 / 125) = ?\)” }, “correct”: { “message”: “Rätt! \(200 \times (100/125) = 200 \times 0{,}8 = 160\) kr. Varan är alltså billigare i reala termer än det nominella priset antyder, eftersom den genomsnittliga prisnivån gått upp.” } }, { “id”: “k1-2-2-004”, “name”: “Uppgift 4”, “exercise”: “Nominella löner i Sverige ökade med ca 60 % mellan 2004 och 2022, medan KPI ökade med ca 35 %. Vad innebär detta för reallönerna?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Reallönerna minskade, eftersom priserna ökade”, “Reallönerna ökade, men mindre än de nominella lönerna”, “Reallönerna ökade lika mycket som de nominella lönerna”, “Reallönerna och nominella lönerna är alltid desamma” ], “correct”: “Reallönerna ökade, men mindre än de nominella lönerna” } }, “error”: { “message”: “Reallönen är nominell lön justerad för prisutvecklingen. Om löner ökar mer än priser, vad händer med köpkraften?” }, “correct”: { “message”: “Rätt! Reallönerna ökade med ca 20 % — lönerna steg mer än priserna, men inte lika mycket som de nominella lönerna. Köpkraften ökade alltså, men inte med 60 %.” } }, { “id”: “k1-2-2-005”, “name”: “Uppgift 5”, “exercise”: “Vad är syftet med ett <em>prisindex</em> som KPI?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Att mäta hur mycket ett visst företags aktie har förändrats”, “Att visa hur befolkningens storlek förändrats över tid”, “Att spåra den genomsnittliga prisutvecklingen för varor och tjänster som konsumenter köper”, “Att beräkna den effektiva räntan på lån” ], “correct”: “Att spåra den genomsnittliga prisutvecklingen för varor och tjänster som konsumenter köper” } }, “error”: { “message”: “KPI = Konsumentprisindex. Vad mäter ett index med det namnet?” }, “correct”: { “message”: “Rätt! KPI mäter hur priset på en hypotetisk ‘varukorg’ av vanliga konsumentvaror och -tjänster förändras över tid. Det används bl.a. för att beräkna inflation och deflatera löner.” } }];
-iv class=“exercise-section” data-section-id=“k1-2-2”&gt;</td>
-</tr>
-</tbody>
-</table></div>
+<hr>
+<div class="fig-caption">
+<p>Förklaring: Inkomstindex för decilgrupp 1 och 10, baserat på data presenterade ovan.</p>
+</div>
+</div>
+<div id="section" class="section level3" number="6.0.3">
+<h3>
+<span class="header-section-number">6.0.3</span> <a class="anchor" aria-label="anchor" href="#section"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="prisindex-och-deflatering" class="section level3" number="6.0.4">
+<h3>
+<span class="header-section-number">6.0.4</span> Prisindex och deflatering<a class="anchor" aria-label="anchor" href="#prisindex-och-deflatering"><i class="fas fa-link"></i></a>
+</h3>
+<p>Ett <em>prisindex</em> visar den indexerade prisutvecklingen för en eller flera varor eller tjänster. Ett prisindex som ofta används är <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-konsumtion/konsumentprisindex/konsumentprisindex-kpi/">Konsumentprisindex</a> (KPI) som Statistiska centralbyrån (SCB) beräknar. För att räkna ut KPI samlar SCB in information om pris och andra egenskaper på en stor mängd olika varor och tjänster. Därefter beräknar SCB ett medelvärde för en hypotetisk varukorg. Varukorgen är baserad på vad människor i Sverige spenderar pengar på.
+Om varorna och tjänsterna ändras, till exempel om en ny mobiltelefon lanseras med ny kvalitet, så justeras KPI-beräkningen för detta. Idealiskt sett mäter därför KPI endast rena prisförändringar. Diagram 1 visar utvecklingen av KPI mellan 1980—2024. Diagrammet visar hur konsumentprisindex under denna period ökade med från nivå 100 till lite mer än 400. En ökning med över 300 procent.
+<strong>Diagram 1: Konsumentprisindex för Sverige 1980—2022</strong>
+<img src="img/k1-2-2-image1.png" style="width:4.61905in;height:2.53941in"></p>
+<div class="fig-caption">
+<p>Förklaring: Data från <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-konsumtion/konsumentprisindex/konsumentprisindex-kpi/">SCB</a>. Diagrammet visar konsumentprisindex för Sverige år 1980–2024. Index 100 är satt till år 1980. Diagrammet visar hur konsumentpriserna under perioden i genomsnitt ökade med lite mer än 300 %.
+Säg att en vara kostar 100 kr år 1 och vi tjänar 100 kr i timmen. Året därpå har alla priser och löner fördubblats. År 2 kostar varan 200 kr och vi tjänar 200 kr i timmen.
+Att i denna situation säga att varans pris har fördubblats är inte särskilt informativt om vi inte samtidigt tar hänsyn till att våra inkomster har fördubblats. Att vi har fått fördubblade inkomster säger ingenting om vår levnadsstandard om vi inte samtidigt tar hänsyn till prisutvecklingen.
+En vanlig metod för att justera löner och priser för samhällets prisutveckling är att dividera med KPI. Detta kallas för att <em>deflatera</em>. Ett normalt, icke-justerat pris, kallas för <em>nominellt pris</em>. Ett deflaterat pris kallas för <em>realt pris</em>. Deflaterad nominell lön kallas för <em>reallön</em>.
+Det prisindex som används för att dividera priserna med kallas för <em>deflator</em>. Det går även att använda andra typer av prisindex för att deflatera. Definitionen av ett realt pris för tidpunkt <em>t</em> är i detta fall:</p>
+</div>
+<p><span class="math display">\[Realt\ pris_{t} = p_{t}\left( \frac{KPI_{bas}}{KPI_{t}} \right)\]</span></p>
+<p>där <span class="math inline">\(p_{t}\)</span> är det nominella priset vi vill deflatera, till exempel priset på en vara eller tjänst. <span class="math inline">\(KPI_{bas}\)</span> är KPI-värdet för det år vi vill använda som basår och <span class="math inline">\(KPI_{t}\)</span> är KPI-värdet för samma år som det aktuella nominella priset vi deflaterar.
+Om priset på en vara ökar långsammare än priset på andra saker har denna vara blivit billigare relativt andra saker. Varans reala pris har minskat. Om priset på de varor och tjänster vi köper ökar långsammare än våra löner säger vi att vår våra reallöner, och vår reala köpkraft, har ökat.
+#### Inflation och löner historiskt
+Diagram 2 visar tre tidsserier: den genomsnittliga prisnivån, genomsnittliga nominell månadslön och genomsnittlig real månadslön i Sverige mellan åren 2004 och 2022. Alla tre tidsserierna är indexerade och har värdet 100 för år 2004.
+Sedan 2004 har lönerna ökat nominellt med lite mer än 60 procent, vilket vi kan se på den gröna linjen. Från indexvärde 100 till lite över 160. Priserna, den röda linjen har under samma period ökat med i genomsnitt cirka 35 procent, från 100 till 135. För att beräkna den reala lönenivån i 2022 års priser tar vi för varje år <em>t</em>:
+Reallön år <em>t</em> = nominell lön år <em>t</em> * ( prisnivån 2022 / prisnivån år <em>t</em>)
+Detta ger oss den blå linjen. Där kan vi se att reallönerna ökade lite mer än 20 procent under perioden. Med en nedgång 2022. Jämför vi längre tillbaka har både priser, löner och reallöner ökat mycket mer.
+<strong>Diagram 2: Priser och löner i Sverige år 2004—2022</strong> <img src="img/k1-2-2-image2.png" style="width:6in;height:3.29861in"></p>
+<div class="fig-caption">
+<p>Förklaring: Data från <a href="https://scb.se/">SCB</a>. Priser = Konsumentprisindex (KPI). Nominell lön = genomsnittlig månadslön (SCB Lönestrukturstatistik). Reallön = nominell lön deflaterad med KPI. Under perioden ökade månadslönerna med i genomsnitt lite mer än 60 procent. Konsumentprisindex ökade med lite mer än 30 procent. Reallönerna ökade med i genomsnitt lite mer än 20 procent.</p>
+</div>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k1-2-2"]=[  {    "id": "k1-2-2-001",    "name": "Uppgift 1",    "exercise": "Sveriges befolkning var 7,49 miljoner år 1960 (basår, index = 100) och 8,03 miljoner år 1970. Beräkna befolkningsindexet för år 1970. Runda till en decimal. \\[Index_{1970} = \\frac{8{,}03}{7{,}49} \\times 100\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Index 1970": "107.2" },    "answerformat": "",    "error": { "message": "Dividera befolkningstalet 1970 med basårets befolkningstal och multiplicera med 100: \\(8{,}03 / 7{,}49 \\times 100\\)." },    "correct": { "message": "Rätt! \\(8{,}03 / 7{,}49 \\times 100 \\approx 107{,}2\\). Sveriges befolkning hade ökat med 7,2 % sedan 1960." }  },  {    "id": "k1-2-2-002",    "name": "Uppgift 2",    "exercise": "Vad menas med att <em>deflatera</em> ett pris?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Att sänka ett pris artificiellt för att locka kunder",          "Att justera ett nominellt pris för den allmänna prisutvecklingen i samhället",          "Att beräkna hur mycket ett lån kostar per månad",          "Att räkna om priser från en valuta till en annan"        ],        "correct": "Att justera ett nominellt pris för den allmänna prisutvecklingen i samhället"      }    },    "error": { "message": "Tänk på relationen mellan nominellt och realt pris — vad är syftet med att dividera med KPI?" },    "correct": { "message": "Rätt! Att deflatera innebär att man dividerar ett nominellt pris med ett prisindex (t.ex. KPI) för att få ett realt pris, justerat för hur pengars värde förändrats." }  },  {    "id": "k1-2-2-003",    "name": "Uppgift 3",    "exercise": "En vara kostar 200 kr (nominellt pris) år 2010. KPI för basåret (2000) är 100 och KPI för 2010 är 125. Beräkna varans <em>reala pris</em> i basårets priser: \\[Realt\\ pris = p_t \\times \\frac{KPI_{bas}}{KPI_t}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Realt pris": "160" },    "answerformat": "kr",    "error": { "message": "Sätt in: \\(200 \\times (100 / 125) = ?\\)" },    "correct": { "message": "Rätt! \\(200 \\times (100/125) = 200 \\times 0{,}8 = 160\\) kr. Varan är alltså billigare i reala termer än det nominella priset antyder, eftersom den genomsnittliga prisnivån gått upp." }  },  {    "id": "k1-2-2-004",    "name": "Uppgift 4",    "exercise": "Nominella löner i Sverige ökade med ca 60 % mellan 2004 och 2022, medan KPI ökade med ca 35 %. Vad innebär detta för reallönerna?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Reallönerna minskade, eftersom priserna ökade",          "Reallönerna ökade, men mindre än de nominella lönerna",          "Reallönerna ökade lika mycket som de nominella lönerna",          "Reallönerna och nominella lönerna är alltid desamma"        ],        "correct": "Reallönerna ökade, men mindre än de nominella lönerna"      }    },    "error": { "message": "Reallönen är nominell lön justerad för prisutvecklingen. Om löner ökar mer än priser, vad händer med köpkraften?" },    "correct": { "message": "Rätt! Reallönerna ökade med ca 20 % — lönerna steg mer än priserna, men inte lika mycket som de nominella lönerna. Köpkraften ökade alltså, men inte med 60 %." }  },  {    "id": "k1-2-2-005",    "name": "Uppgift 5",    "exercise": "Vad är syftet med ett <em>prisindex</em> som KPI?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Att mäta hur mycket ett visst företags aktie har förändrats",          "Att visa hur befolkningens storlek förändrats över tid",          "Att spåra den genomsnittliga prisutvecklingen för varor och tjänster som konsumenter köper",          "Att beräkna den effektiva räntan på lån"        ],        "correct": "Att spåra den genomsnittliga prisutvecklingen för varor och tjänster som konsumenter köper"      }    },    "error": { "message": "KPI = Konsumentprisindex. Vad mäter ett index med det namnet?" },    "correct": { "message": "Rätt! KPI mäter hur priset på en hypotetisk 'varukorg' av vanliga konsumentvaror och -tjänster förändras över tid. Det används bl.a. för att beräkna inflation och deflatera löner." }  }];</script><div class="exercise-section" data-section-id="k1-2-2">
+
+</div>
+<hr>
 <div class="next-section-link">
 <p><a href="k1-2-3.html">→ Nästa avsnitt: <strong>Ekonomiskt välstånd och relativa förändringar</strong></a></p>
 </div>
@@ -400,6 +394,8 @@ iv class=“exercise-section” data-section-id=“k1-2-2”&gt;</td>
 <a class="nav-link" href="#k1-2-2"><span class="header-section-number">6</span> Nominella och reala priser</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#begrepp-5"><span class="header-section-number">6.0.1</span> Begrepp</a></li>
 <li><a class="nav-link" href="#inkomstindex"><span class="header-section-number">6.0.2</span> Inkomstindex</a></li>
+<li><a class="nav-link" href="#section"><span class="header-section-number">6.0.3</span></a></li>
+<li><a class="nav-link" href="#prisindex-och-deflatering"><span class="header-section-number">6.0.4</span> Prisindex och deflatering</a></li>
 </ul>
 </li></ul>
 

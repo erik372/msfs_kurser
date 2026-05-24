@@ -21,6 +21,7 @@ Tabell 1 redovisar genomsnittlig årsinkomst för män respektive kvinnor i tre 
   Mörbylånga              277                     219
   Oskarshamn              279                     211
   -----------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: Data från [Kolada](http://www.kolada.se). Inkomst anges i 1 000-tals kronor, medianvärden per kommun och grupp.
 Nu ska vi studera löneskillnaden mellan män och kvinnor genom att använda minstakvadratmetoden. Vi börjar med att formulera en regressionsmodell:
@@ -69,9 +70,10 @@ $$\left( G_{i} - \overline{G_{i}} \right)^{2}$$
   Medelvärde                 289,2                               0,5                                                                                                                                 
   Summa                                                                                                                                                                                                                                   1,5
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: Samma data som i tabell 1 och några beräkningar.
-**Figur 1: Samvariationen mellan inkomst och kön\**
+**Figur 1: Samvariationen mellan inkomst och kön**
 ![](img/k2-4-2-image1.png){style="width:3.01282in;height:3.01282in"}
 Förklaring: Regressionslinjen lutar nedåt vilket indikerar en negativ samvariation. I variabeln G har kvinnor värdet 1 och män värdet 0. Eftersom kvinnor har lägre inkomst i genomsnitt än män, uppstår en negativ samvariation.
 :::
@@ -101,6 +103,7 @@ $$K_{\text{Oskarshamn}}$$
   Mörbylånga                 243,6                                         1                                                   0
   Oskarshamn                  246                                          0                                                   1
   -------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: Data från [Kolada](http://www.kolada.se). Inkomst anges i 1 000-tals kronor, medianvärden per kommun.
 Vår regressionsmodell räknar ut samma sak som vi redan ser i datamaterialet. Syftet med denna övning är att förstå innebörden av dummyvariabler i en regressionsmodell. Vi estimerar regressionsmodellen i ekvation 3 utifrån minstakvadratmetoden:

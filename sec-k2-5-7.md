@@ -48,6 +48,7 @@ Den linjära modellen fångar dock den långsiktiga trenden i logaritmerad BNP r
        1890     1 477           7,3              2000   2 013 311          14,5
        1900     2 245           7,7                                            
   -----------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: Data från [www.historia.se](http://www.historia.se).
 **Figur 1: BNP och logaritmerad BNP**
@@ -71,6 +72,7 @@ Nu är data påhittade men om dessa punkter representerade någon typ av verklig
 Detta innebär inte att regressionsanalys är dåligt. Men vi måste vara noga med hur vi formulerar våra regressionsmodeller. Vi måste inspektera data både genom att beräkna resultat och jämföra dom i diagram och tabeller. Om associationen mellan variabler inte är linjär kan vi behöva transformera variablerna (till exempel ta naturliga logaritmen) eller ändra i vår regressionsmodell. Vi kan till exempel behöva lägga till kvadratiska termer i vår regressionsmodell eller använda andra metoder, vilket inte ryms att gå igenom här.
 **Figur 2: Två exempel på mönster som inte fångas av vår regressionsmodell**
 ![En bild som visar linje, diagram, skärmbild, Rektangel Automatiskt genererad beskrivning](img/k2-5-7-image2.png){style="width:5.33774in;height:2.60709in"}
+
 ::: {.fig-caption}
 Förklaring: Prickarna i diagrammen följer tydliga mönster. Regressionslinjerna i diagrammen är de svarta horisontella linjerna i diagrammen, ritade med regressionsmodellen $Y = a + bX + V$. Lutningskoefficient $b$ är 0. Regressionslinjerna i diagrammen indikerar ingen association mellan $X$ och $Y$, trots att det finns en form av samvariation.
 :::
@@ -87,6 +89,7 @@ Dessa fyra diagram presenterades första gången 1973 av den brittiske statistik
 Trots att punkterna i diagrammen är placerade i olika mönster kan vi få samma positiva linjära samvariation i alla fyra exempel. I det övre vänstra diagrammet kan vi se att punkterna ligger utspridda längs med den diagonala linjen upp mot högra hörnet i diagrammet. I det övre högra diagrammet ligger punkterna i en konkav båge, upp mot diagrammets högra hörn.
 Punkternas mönster är tydligt ickelinjärt, men vi kan ändå beräkna en linjär positiv samvariation. I det nedre vänstra diagrammet ligger alla punkter utom en på en rak linje. I det nedre högra diagrammet ligger alla punkter utom en på en vertikal linje.
 **Figur 3: Fyra exempel på data där regressionsmodellen** $\mathbf{Y = a + bX + V}$ **ger samma resultat**![En bild som visar linje, diagram, Graf, text Automatiskt genererad beskrivning](img/k2-5-7-image3.png){style="width:5.20741in;height:3.4165in"}
+
 ::: {.fig-caption}
 Förklaring: De fyra diagrammen beskriver påhittade data presenterade i [Anscombe 1973](https://www.lithoguru.com/scientist/statistics/Anscombe_Graphs%20in%20Statistical%20Analysis_1973.pdf).
 :::

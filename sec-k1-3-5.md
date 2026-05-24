@@ -23,6 +23,7 @@ Om någon av vännerna prövar rökning med mindre än 1 paket per dag, som till
 Det vill säga om den ena röker ett halvt paket så röker den andra endast ett fjärdedels paket. Eftersom båda vännerna tar efter varandra kommer vi nästa dag att få $x = (0,25)^{2} = 0,0625$, varpå $y = (0,0625)^{2} \approx 0,0039$ och så vidare allt närmare mot 0 i oändlighet. De två funktionerna och lösningarna illustreras i figur 1. Linjerna möts vid de två punkterna $(0,0)$ och $(1,1)$.
 **Figur 1. Två vänners rökvanor**
 ![](img/k1-3-5-image1.png){style="width:3.89744in;height:3.34066in"}
+
 ::: {.fig-caption}
 Förklaring: Den röda linjen beskriver Eriks rökning ($y$) som en funktion av Marias rökning ($x$). Den blå linjen beskriver Marias rökning som en funktion av Eriks rökning. Ekvationssystemet har två stabila jämvikter i punkterna (0, 0), där ingen röker, och i (1, 1) där båda röker.
 :::

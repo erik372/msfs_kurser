@@ -3,7 +3,7 @@
 ### Begrepp
 - **Medelkvadratsumman för residualerna** (engelska *mean squared residuals*, MSR):\
   $MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}$
-- **Medelkvadratsumman av den förklarade variationen** (engelska *mean sum of squares explained*, MSE): *\*
+- **Medelkvadratsumman av den förklarade variationen** (engelska *mean sum of squares explained*, MSE): **
   $MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}$
 ### Teori
 I tidigare avsnitt har vi estimerat två olika regressionsmodeller. Varje modell utgick från fyra observationer vardera. Regressionsanalys är ett sätt att studera mönster i data. Vi kan använda våra regressionsmodeller för att pröva i vilken utsträckning som det mönster som en regressionsmodell beskriver faktiskt återfinns i våra data.
@@ -56,6 +56,7 @@ $$\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$$
   Medel                           5                                 3,5                                                                                                                                                                         
   Summa                                                                                                                                                                                                             2,5                                                              5
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: se text.
 **Tabell 3: Observationer och beräkningar för modell 2**
@@ -94,6 +95,7 @@ $$\left( Z_{i} - \widehat{Z_{i}} \right)^{2}$$
   Medel                          1,5                                 2                                                                                                                                                                                                           
   Summa                                                                                                                                                                                                                                             5                                                                 9
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ::: {.fig-caption}
 Förklaring: se text.
 Nu ska vi jämföra vilken av modellerna som passar bäst mot deras respektive datapunkter. Vi börjar med att beräkna MSR för respektive regressionsmodell. Tabell 2 upprepar observationerna för modell 1 och variablerna $X$ och $Y$ samt några beräkningar som vi behöver. Detta ger MSR:
