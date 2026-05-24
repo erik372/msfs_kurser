@@ -1,4 +1,4 @@
-# Population, superpopulation och urval {#k2-1-4 -}
+# Population, superpopulation och urval {#k2-1-4}
 
 
 ### Begrepp
@@ -47,7 +47,6 @@ På samma sätt måste vi även vara noga med hur vi definierar de fenomen och u
 
 Även superpopulation kan vara svårt att definiera. Säg att vi i vår analys finner att utbildningen har en positiv inverkan på deltagarnas framtida inkomster. Om ett stort antal människor läste utbildningen skulle det finnas massor med människor med samma utbildning. Då skulle utbildningen kanske inte ha samma effekt jämfört med en situation där endast en liten andel av befolkningen hade läst utbildningen.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}

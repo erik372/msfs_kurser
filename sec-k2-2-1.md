@@ -1,4 +1,4 @@
-# Frekvens och fördelning {#k2-2-1 -}
+# Frekvens och fördelning {#k2-2-1}
 
 
 ### Begrepp
@@ -75,7 +75,6 @@ $\sum_{i}^{}\left( x_{i} - \overline{X} \right)\ = \sum_{i}^{}x_{i} - \sum_{i}^{
 >
 > $= 0$
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -90,6 +89,6 @@ $\sum_{i}^{}\left( x_{i} - \overline{X} \right)\ = \sum_{i}^{}x_{i} - \sum_{i}^{
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Avvikelse, varians och standardavvikelse**](sec-k2-2-2.html)
+[→ Nästa avsnitt: **Avvikelse, varians och standardavvikelse**](k2-2-2.html)
 :::
 

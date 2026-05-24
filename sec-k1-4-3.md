@@ -1,4 +1,4 @@
-# Hur höga skatter vill vi ha? {#k1-4-3 -}
+# Hur höga skatter vill vi ha? {#k1-4-3}
 
 
 ### Begrepp
@@ -81,7 +81,6 @@ Uttryckt som procent motsvarar det cirka 66,6 %. I diagrammet beskrivs detta sam
 
 *Matematiken i detta avsnitt är lånad och inspirerad av [Lundberg 2017](https://www.lisdatacenter.org/wps/liswps/711.pdf). Tack till Jacob Lundberg som kommenterade ett tidigare utkast på denna text. Återstående misstag är tyvärr mina egna.*
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -96,6 +95,6 @@ Uttryckt som procent motsvarar det cirka 66,6 %. I diagrammet beskrivs detta sam
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Vinstmaximerande företag**](sec-k1-4-4.html)
+[→ Nästa avsnitt: **Vinstmaximerande företag**](k1-4-4.html)
 :::
 

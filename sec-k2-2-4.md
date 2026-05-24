@@ -1,4 +1,4 @@
-# Samvariation 2 {#k2-2-4 -}
+# Samvariation 2 {#k2-2-4}
 
 
 ### Begrepp
@@ -159,7 +159,6 @@ Om $\widehat{b} = 0$ är linjen horisontell och saknar lutning, vilket i så fal
 
 Estimerade $\widehat{Y}$ kallas även för *predikterade* $Y$. Ordet prediktion syftar på att förutspå framtida händelser utifrån historisk information. I detta fall innebär det att vi kan estimera $\widehat{Y}$ för $X$-värden som inte återfinns i vårt material. Till exempel $X = 10$ ger $\widehat{Y} = 1 + 0,5\*10 = 6$.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -174,6 +173,6 @@ Estimerade $\widehat{Y}$ kallas även för *predikterade* $Y$. Ordet prediktion 
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Felterm, residual och ett räkneexempel**](sec-k2-2-5.html)
+[→ Nästa avsnitt: **Felterm, residual och ett räkneexempel**](k2-2-5.html)
 :::
 

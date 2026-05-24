@@ -1,4 +1,4 @@
-# Slumpmässiga variabler och diskreta sannolikhetsfördelningar {#k2-5-1 -}
+# Slumpmässiga variabler och diskreta sannolikhetsfördelningar {#k2-5-1}
 
 
 ### Begrepp
@@ -172,7 +172,6 @@ där $\left\| \overline{X_{n}} - \mu \right\|$ är absolutbeloppet av medelvärd
 
 Hela ekvationen kan läsas som att sannolikheten för att $\left\| \overline{X_{n}} - \mu \right\|$ är mindre än $\epsilon$ närmar sig 100 % då antalet slumpmässiga variabler $X_{i}$ växer till oändligt många, det vill säga $n \rightarrow \infty$. Ett annat sätt att beskriva detta är att skillnaden mellan $\overline{X_{n}}$ och $\mu$ närmar sig 0 och denna skillnad kommer att vara mindre än det låga värdet $\epsilon$.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -187,6 +186,6 @@ Hela ekvationen kan läsas som att sannolikheten för att $\left\| \overline{X_{
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Kontinuerliga sannolikhetsfördelningar**](sec-k2-5-2.html)
+[→ Nästa avsnitt: **Kontinuerliga sannolikhetsfördelningar**](k2-5-2.html)
 :::
 

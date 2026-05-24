@@ -1,4 +1,4 @@
-# Konstannhålla {#k2-4-3 -}
+# Konstannhålla {#k2-4-3}
 
 
 ### Begrepp
@@ -122,7 +122,6 @@ Om $G = 0$ får vi den övre regressionslinjen, som löper genom prickarna som i
 
 Förklaring: I det vänstra diagrammet ser vi resultaten från den estimerade regressionsmodellen i ekvation 1. I det högra diagrammet är regressionsmodellen i ekvation 5 illustrerade för $G = 0$ respektive $G = 1$.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -137,6 +136,6 @@ Förklaring: I det vänstra diagrammet ser vi resultaten från den estimerade re
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Regression med matriser**](sec-k2-4-4.html)
+[→ Nästa avsnitt: **Regression med matriser**](k2-4-4.html)
 :::
 

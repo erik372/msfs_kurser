@@ -1,4 +1,4 @@
-# Avvikelse, varians och standardavvikelse {#k2-2-2 -}
+# Avvikelse, varians och standardavvikelse {#k2-2-2}
 
 
 ### Begrepp
@@ -147,7 +147,6 @@ För att beräkna standardavvikelse för variablerna $x$ och $y$ tar vi positiva
 
 $s_{y} = + \sqrt{\frac{5}{3}} \approx 1,291$
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -162,6 +161,6 @@ $s_{y} = + \sqrt{\frac{5}{3}} \approx 1,291$
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Samvariation 1**](sec-k2-2-3.html)
+[→ Nästa avsnitt: **Samvariation 1**](k2-2-3.html)
 :::
 

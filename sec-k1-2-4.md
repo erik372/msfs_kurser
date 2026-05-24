@@ -1,4 +1,4 @@
-# Leder rikedom till lycka? {#k1-2-4 -}
+# Leder rikedom till lycka? {#k1-2-4}
 
 
 ### Begrepp
@@ -79,7 +79,6 @@ Givet att vi vill uttala oss om ett orsakssamband, till exempel huruvida inkomst
 
 För att kunna mäta vilken förändring av lycka som en förändring av inkomsterna kan orsaka (mäta *effekten*), måste vi kunna isolera just detta samband. Inom samhällsvetenskap görs detta med hjälp av vetenskapliga experiment och experimentliknande metoder, vilket vi ska återkomma till längre fram.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -94,6 +93,6 @@ För att kunna mäta vilken förändring av lycka som en förändring av inkomst
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Banadödlighet och flyktingar**](sec-k1-2-5.html)
+[→ Nästa avsnitt: **Banadödlighet och flyktingar**](k1-2-5.html)
 :::
 

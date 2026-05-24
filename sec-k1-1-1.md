@@ -1,4 +1,4 @@
-# Kan vi mäta lycka? {#k1-1-1 -}
+# Kan vi mäta lycka? {#k1-1-1}
 
 
 ### Begrepp
@@ -69,7 +69,6 @@ För att svara på denna fråga noggrant måste vi först precisera flera saker:
 
 Olika insamlingsmetoder har sina för- och nackdelar. En välkänd utmaning i dessa sammanhang är att de som svarar på frågorna kan påverkas av insamlingens metod, frågornas form och följd eller annan information. Kan den som svarar vara anonym? Ska deltagarna få någon bakgrundsinformation?
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -84,6 +83,6 @@ Olika insamlingsmetoder har sina för- och nackdelar. En välkänd utmaning i de
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Hur beskriva en teori med matte?**](sec-k1-1-2.html)
+[→ Nästa avsnitt: **Hur beskriva en teori med matte?**](k1-1-2.html)
 :::
 

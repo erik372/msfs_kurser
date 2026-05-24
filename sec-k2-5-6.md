@@ -1,4 +1,4 @@
-# T-test för regression med flera variabler {#k2-5-6 -}
+# T-test för regression med flera variabler {#k2-5-6}
 
 
 ### Begrepp
@@ -177,7 +177,6 @@ $\begin{matrix} \sum_{}^{}\left( x_{i} - \bar{x} \right)^{2} & \ = \sum_{}^{}x_{
 
 där vi i sista raden nu får samma uttryck som återfinns i nämnaren i respektive element i estimerade $\text{var}\left( \widehat{B} \middle\| X \right)$.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -192,6 +191,6 @@ där vi i sista raden nu får samma uttryck som återfinns i nämnaren i respekt
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Vad är egentligen regressionsanalys?**](sec-k2-5-7.html)
+[→ Nästa avsnitt: **Vad är egentligen regressionsanalys?**](k2-5-7.html)
 :::
 

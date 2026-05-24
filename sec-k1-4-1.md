@@ -1,4 +1,4 @@
-# Den optimala mängden tårta {#k1-4-1 -}
+# Den optimala mängden tårta {#k1-4-1}
 
 
 ### Begrepp
@@ -61,7 +61,6 @@ Exemplet är banalt men introducerar de grundläggande logiska utgångspunkterna
 
 Det kan dock vara bra att påminna sig själv om att oavsett hur snillrik en teoretisk modell må vara säger den i sig självt ingenting om hur någon tänker när de ska äta tårta, eller fatta någon annan typ av beslut. För att veta något om verkligheten behöver vi information om verkligheten.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -76,6 +75,6 @@ Det kan dock vara bra att påminna sig själv om att oavsett hur snillrik en teo
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Hur mycket jobb är lagom?**](sec-k1-4-2.html)
+[→ Nästa avsnitt: **Hur mycket jobb är lagom?**](k1-4-2.html)
 :::
 

@@ -1,4 +1,4 @@
-# Estimera med matriser {#k2-4-5 -}
+# Estimera med matriser {#k2-4-5}
 
 
 ### Begrepp
@@ -153,7 +153,6 @@ $\left\lbrack \begin{array}{r} \widehat{\alpha} \\ \widehat{\beta} \end{array} \
 
 vilket är samma som vi kom fram till i [avsnitt 3.2](https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&dl=0).
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -168,6 +167,6 @@ vilket är samma som vi kom fram till i [avsnitt 3.2](https://www.dropbox.com/sc
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Interaktion**](sec-k2-4-6.html)
+[→ Nästa avsnitt: **Interaktion**](k2-4-6.html)
 :::
 

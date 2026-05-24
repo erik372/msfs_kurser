@@ -1,4 +1,4 @@
-# Utbud, efterfrågan och kakor {#k1-3-1 -}
+# Utbud, efterfrågan och kakor {#k1-3-1}
 
 
 ### Begrepp
@@ -125,7 +125,6 @@ Detta illustreras i figur 2, där de två strategierna är utritade med varsin r
 
 Förklaring: Diagrammet illustrerar vid vilken kvantitet sålda kakburkar (33,3 på horisontella x-axeln) som de två strategierna är likvärdiga. Vid denna nivå ger båda strategierna en vinst på 667 kr.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -140,6 +139,6 @@ Förklaring: Diagrammet illustrerar vid vilken kvantitet sålda kakburkar (33,3 
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Hur hitta den rätta?**](sec-k1-3-2.html)
+[→ Nästa avsnitt: **Hur hitta den rätta?**](k1-3-2.html)
 :::
 

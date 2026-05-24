@@ -1,4 +1,4 @@
-# Faktorvariabler {#k2-4-2 -}
+# Faktorvariabler {#k2-4-2}
 
 
 ### Begrepp
@@ -168,7 +168,6 @@ När man har en regressionsmodell där en kategorisk variabel ingår, till exemp
 
 Den sista kommunens resultat ges av att alla dummyvariablerna = 0. I dessa situationer kan man ibland se att regressionsmodellen beskrivs som ett exempel: $Y_{i} = c + bK_{i} + v$ där $K$ symboliserar en av de 289 dummyvariablerna. För varje enskild kommun är övriga 288 dummyvariabler lika med 0.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -183,6 +182,6 @@ Den sista kommunens resultat ges av att alla dummyvariablerna = 0. I dessa situa
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Konstannhålla**](sec-k2-4-3.html)
+[→ Nästa avsnitt: **Konstannhålla**](k2-4-3.html)
 :::
 

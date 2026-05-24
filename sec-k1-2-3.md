@@ -1,4 +1,4 @@
-# Ekonomiskt välstånd och relativa förändringar {#k1-2-3 -}
+# Ekonomiskt välstånd och relativa förändringar {#k1-2-3}
 
 
 ### Begrepp
@@ -131,7 +131,6 @@ Om linjen i det högra diagrammet hade varit helt rät hade de inneburit att den
 
 ![](C:\Users\hegel\Dropbox\_MINA%20TEXTER%20_db\Matematik%20för%20samhällsvetare\Matteboken.se\html-output\kurs%201%20-%20Matematik%20för%20samhällsvetare\2%20-%20Exempel%20från%20samhället\2-3%20-%20Ekonomiskt%20välstånd%20och%20relativa%20förändringar/img/k1-2-3-image1.png){style="width:5.78165in;height:3.17857in"}Förklaring: Data från [www.historia.se](http://www.historia.se). BNP = Bruttonationalprodukt, värdet av alla varor och tjänster som produceras i Sverige under ett år. Diagrammet till vänster visar nominell BNP i miljarder kronor per år för utvalda årtal 1800---2000. Diagrammet till höger visar samma sak som diagrammet till vänster, men uttryckt i naturliga logaritmen.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -146,6 +145,6 @@ Om linjen i det högra diagrammet hade varit helt rät hade de inneburit att den
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Leder rikedom till lycka?**](sec-k1-2-4.html)
+[→ Nästa avsnitt: **Leder rikedom till lycka?**](k1-2-4.html)
 :::
 

@@ -214,16 +214,19 @@
   align-items: center;
   cursor: pointer;
 }
-.toc-chapter-toggle::after {
-  content: '▸';
+.toc-toggle-btn {
   font-size: 0.7em;
   opacity: 0.55;
   margin-left: 0.4rem;
   flex-shrink: 0;
-  transition: transform 0.15s;
+  pointer-events: auto;
+  cursor: pointer;
 }
-.toc-chapter-open > a.toc-chapter-toggle::after {
-  content: '▾';
+
+/* Dölj rubriknumrering i innehållet (H3/H4) men behåll den i menyn */
+.section.level3 .header-section-number,
+.section.level4 .header-section-number {
+  display: none;
 }
 
 /* ── Nästa avsnitt-länk längst ner på varje avsnittssida ───────────────── */

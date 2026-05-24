@@ -1,4 +1,4 @@
-# Information och variabler {#k2-1-3 -}
+# Information och variabler {#k2-1-3}
 
 
 ### Begrepp
@@ -111,7 +111,6 @@ Till exempel temperaturer angiven i grader Celsius. Differensen mellan --2 och +
 
 Denna indelning i fyra typer av data är vanligt förekommande. Andra mer detaljerade indelningar kan också förekomma. Att tänka på data i dessa former kan hjälpa oss att sortera information och se vilka möjligheter och begränsningar som just våra data erbjuder. Allt detta bör främst ses som ett hjälpmedel, inte som ett regelverk.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -126,6 +125,6 @@ Denna indelning i fyra typer av data är vanligt förekommande. Andra mer detalj
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Population, superpopulation och urval**](sec-k2-1-4.html)
+[→ Nästa avsnitt: **Population, superpopulation och urval**](k2-1-4.html)
 :::
 

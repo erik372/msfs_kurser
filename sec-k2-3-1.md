@@ -1,4 +1,4 @@
-# Andra linjer {#k2-3-1 -}
+# Andra linjer {#k2-3-1}
 
 
 ### Begrepp
@@ -63,7 +63,6 @@ Figur 1 illustrerar de tre linjer vi nu har jämfört. Linje A i diagrammet är 
 
 Förklaring: Diagrammet visar tre linjer. Linje A är regressionslinjen, beräknad med minstakvadratmetoden. Linje B är horisontell och linje C går igenom två av punkterna. Av de tre linjerna har linje A det minstas summerade vertikala avståndet mellan linjen och punkterna.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -78,6 +77,6 @@ Förklaring: Diagrammet visar tre linjer. Linje A är regressionslinjen, beräkn
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **En modell till**](sec-k2-3-2.html)
+[→ Nästa avsnitt: **En modell till**](k2-3-2.html)
 :::
 

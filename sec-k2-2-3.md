@@ -1,4 +1,4 @@
-# Samvariation 1 {#k2-2-3 -}
+# Samvariation 1 {#k2-2-3}
 
 
 ### Begrepp
@@ -141,7 +141,6 @@ $r_{xy} = \frac{cov(x,y)}{s_{x}s_{y}} \approx \frac{\frac{5}{3}}{\left( + \sqrt{
 
 Detta resultat indikerar en positiv korrelation. Höga värden av $x$ sammanfaller med höga värden av $y$ och låga värden av $x$ sammanfaller med låga värden av $y$. Olika korrelationskoefficienter kan jämföras men det är fortfarande svårt att tolka denna typ av resultat mer exakt.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -156,6 +155,6 @@ Detta resultat indikerar en positiv korrelation. Höga värden av $x$ sammanfall
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Samvariation 2**](sec-k2-2-4.html)
+[→ Nästa avsnitt: **Samvariation 2**](k2-2-4.html)
 :::
 

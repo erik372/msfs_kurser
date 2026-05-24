@@ -1,4 +1,4 @@
-# Felterm, residual och ett räkneexempel {#k2-2-5 -}
+# Felterm, residual och ett räkneexempel {#k2-2-5}
 
 
 ### Begrepp
@@ -213,7 +213,6 @@ $\frac{cov(X,Y)}{var(X)} = \frac{\frac{1}{n}\sum_{i}^{n}{\left( X_{i} - \overlin
 
 $= \frac{\sum_{i}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{n}\left( X_{i} - \overline{X} \right)} = \widehat{b}$
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -228,6 +227,6 @@ $= \frac{\sum_{i}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overlin
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Varför ska vi räkna nu igen?**](sec-k2-2-6.html)
+[→ Nästa avsnitt: **Varför ska vi räkna nu igen?**](k2-2-6.html)
 :::
 

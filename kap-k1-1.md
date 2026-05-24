@@ -6,11 +6,11 @@
 **Avsnitt i detta kapitel:**
 
 
-- [Kan vi mäta lycka?](sec-k1-1-1.html)
+- [Kan vi mäta lycka?](k1-1-1.html)
 
-- [Hur beskriva en teori med matte?](sec-k1-1-2.html)
+- [Hur beskriva en teori med matte?](k1-1-2.html)
 
-- [Hur testa om en teori stämmer?](sec-k1-1-3.html)
+- [Hur testa om en teori stämmer?](k1-1-3.html)
 
-- [Varför räkna?](sec-k1-1-4.html)
+- [Varför räkna?](k1-1-4.html)
 

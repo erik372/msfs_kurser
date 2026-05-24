@@ -1,4 +1,4 @@
-# Varför ska vi räkna nu igen? {#k2-2-6 -}
+# Varför ska vi räkna nu igen? {#k2-2-6}
 
 
 ### Begrepp
@@ -52,7 +52,6 @@ Ibland kan det verka omöjligt att nå ut med ny kunskap när alla verkar ha bes
 
 Men underskatta inte alla de förslag som hade fått större utrymme men som vi idag kan kväsa vid ritbordet med hjälp av noggrann analys. Sett till de mänskliga samhällenas historia är stora delar av den moderna samhällsvetenskapen ung. Håll ut.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}

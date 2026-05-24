@@ -1,4 +1,4 @@
-# Räkna med ränta {#k1-2-1 -}
+# Räkna med ränta {#k1-2-1}
 
 
 ### Begrepp
@@ -168,7 +168,6 @@ Den effektiva räntan för sms-lånet är 112,6 %. Vissa lån kan ha över 1 000
 
 Observera att detta exempel visar en förenklad beräkning av den totala lånekostnaden. Den officiella effektiva räntan beräknas enligt en standardiserad metod som tar hänsyn till när betalningar sker, och kan därför skilja sig något från detta resultat.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -183,6 +182,6 @@ Observera att detta exempel visar en förenklad beräkning av den totala låneko
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Nominella och reala priser**](sec-k1-2-2.html)
+[→ Nästa avsnitt: **Nominella och reala priser**](k1-2-2.html)
 :::
 

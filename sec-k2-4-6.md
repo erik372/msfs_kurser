@@ -1,4 +1,4 @@
-# Interaktion {#k2-4-6 -}
+# Interaktion {#k2-4-6}
 
 
 ### Begrepp
@@ -195,7 +195,6 @@ $$\widehat{d} = \widehat{c_{2}} + \widehat{c_{4}} = 26,9I - 21,8 = 5,1$$
 
 Lutningskoefficienten i regressionsmodellen för enbart män $\widehat{d}$ är samma värde som $\Delta L\text{/}\Delta I$ för $G = 1$ i ekvation 15. Detta innebär även att differensen mellan de två lutningskoefficienterna i regressionsmodellerna för kvinnor respektive män är $\widehat{b} - \widehat{d} = 26,9 - 5,1 = 21,8$, vilket är samma värde som $\widehat{c_{4}}$ har i ekvation 14.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -210,6 +209,6 @@ Lutningskoefficienten i regressionsmodellen för enbart män $\widehat{d}$ är s
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Räkna på orsak och effekt**](sec-k2-4-7.html)
+[→ Nästa avsnitt: **Räkna på orsak och effekt**](k2-4-7.html)
 :::
 

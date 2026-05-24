@@ -1,4 +1,4 @@
-# Härled estimatorerna {#k2-3-4 -}
+# Härled estimatorerna {#k2-3-4}
 
 
 ### Begrepp
@@ -155,7 +155,6 @@ $$\frac{\sum_{i = 1}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \over
 
 Nu har vi samma sak som ekvation 1.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}

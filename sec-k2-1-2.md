@@ -1,4 +1,4 @@
-# Experiment och observationsstudie {#k2-1-2 -}
+# Experiment och observationsstudie {#k2-1-2}
 
 
 ### Begrepp
@@ -117,7 +117,6 @@ Det är visserligen enkelt att argumentera för att högre inkomster generellt m
 
 Högre inkomster gör människors liv lättare. Men exakt vilken effekt själva inkomstförändringen har beror på vad pengarna kan användas till och hur inkomstökningen uppstår. Många fenomen som bidrar till länders ekonomiska välstånd påverkar även hur nöjda människor är med livet. Till exempel är frånvaron av krig positivt för ekonomin och för människors nöjdhet med livet.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -132,6 +131,6 @@ Högre inkomster gör människors liv lättare. Men exakt vilken effekt själva 
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Information och variabler**](sec-k2-1-3.html)
+[→ Nästa avsnitt: **Information och variabler**](k2-1-3.html)
 :::
 

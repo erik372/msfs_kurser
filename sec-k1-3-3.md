@@ -1,4 +1,4 @@
-# En teori om arbete {#k1-3-3 -}
+# En teori om arbete {#k1-3-3}
 
 
 ### Begrepp
@@ -67,7 +67,6 @@ I diagrammet till vänster visas hur linjerna ser ut i vanlig form, som i ekvati
 
 Förklaring: Diagrammet till vänster illustrerar ekvationssystemet i ekvation 1, när funktionerna skrivs i vanligt format. Diagrammet till höger illustrerar ekvationssystemet med logaritmerade funktioner, som i ekvation 6.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -82,6 +81,6 @@ Förklaring: Diagrammet till vänster illustrerar ekvationssystemet i ekvation 1
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Externa effekter**](sec-k1-3-4.html)
+[→ Nästa avsnitt: **Externa effekter**](k1-3-4.html)
 :::
 

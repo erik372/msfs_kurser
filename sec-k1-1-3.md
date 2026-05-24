@@ -1,4 +1,4 @@
-# Hur testa om en teori stämmer? {#k1-1-3 -}
+# Hur testa om en teori stämmer? {#k1-1-3}
 
 
 ### Begrepp
@@ -73,7 +73,6 @@ Analys av orsakssamband och samvariation används inom både samhällsvetenskap 
 - **Exempel 4: Påverkar människan klimatet?**\
   Vetenskapssamhället är idag överens om att jordens stigande medeltemperatur är orsakad av mänsklig aktivitet. Under 1970-talet [publicerades akademiska artiklar](https://www.ipcc.ch/site/assets/uploads/2018/03/ar4-wg1-chapter1.pdf) som sades visa att mänsklig påverkan i stället skulle sänka jordens medeltemperatur. Detta har senare avvisats. Även denna diskussion handlade om beräkningsmetoder och om det verkligen fanns ett orsakssamband.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -88,6 +87,6 @@ Analys av orsakssamband och samvariation används inom både samhällsvetenskap 
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Varför räkna?**](sec-k1-1-4.html)
+[→ Nästa avsnitt: **Varför räkna?**](k1-1-4.html)
 :::
 

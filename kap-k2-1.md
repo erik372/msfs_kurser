@@ -6,11 +6,11 @@
 **Avsnitt i detta kapitel:**
 
 
-- [Orsak och effekt](sec-k2-1-1.html)
+- [Orsak och effekt](k2-1-1.html)
 
-- [Experiment och observationsstudie](sec-k2-1-2.html)
+- [Experiment och observationsstudie](k2-1-2.html)
 
-- [Information och variabler](sec-k2-1-3.html)
+- [Information och variabler](k2-1-3.html)
 
-- [Population, superpopulation och urval](sec-k2-1-4.html)
+- [Population, superpopulation och urval](k2-1-4.html)
 

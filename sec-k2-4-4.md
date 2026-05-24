@@ -1,4 +1,4 @@
-# Regression med matriser {#k2-4-4 -}
+# Regression med matriser {#k2-4-4}
 
 
 ### Begrepp
@@ -141,7 +141,6 @@ Regressionsanalys innebär att vi kan uppskatta samvariationen mellan ett fenome
 
 En viktig sak med denna matematik är att samtliga koefficienter i $\widehat{B}$ är ett resultat av samtliga variabler i $Y$ och $X$, oavsett hur många variabler vi har. I matriserna $Y$ och $X$ ingår alla observationer för respektive variabel. Alla variabler i regressionsmodellen kan därför påverka resultaten för alla koefficienter i regressionsmodellen. Detta är centralt för hur vi tänker att världen fungerar, vilket vi ska fördjupa oss i kommande avsnitt.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -156,6 +155,6 @@ En viktig sak med denna matematik är att samtliga koefficienter i $\widehat{B}$
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Estimera med matriser**](sec-k2-4-5.html)
+[→ Nästa avsnitt: **Estimera med matriser**](k2-4-5.html)
 :::
 

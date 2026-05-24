@@ -1,4 +1,4 @@
-# Vad är egentligen regressionsanalys? {#k2-5-7 -}
+# Vad är egentligen regressionsanalys? {#k2-5-7}
 
 
 ### Begrepp
@@ -169,7 +169,6 @@ Regressionsanalys är inte matte för mattens skull. Detta är grunden för hur 
 
 Som detta avsnitt förhoppningsvis illustrerar är ett analytiskt verktyg aldrig bättre än analytikern som använder metoden. Regressionsanalys måste därför användas med kritisk reflektion och ödmjukhet om metodens begränsningar. Allt detta är grunden för vetenskapligt tänkande.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}

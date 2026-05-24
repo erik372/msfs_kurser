@@ -1,4 +1,4 @@
-# Hur väl passar modellerna mot data? {#k2-3-3 -}
+# Hur väl passar modellerna mot data? {#k2-3-3}
 
 
 ### Begrepp
@@ -157,7 +157,6 @@ Eftersom $\frac{4}{9} \< \frac{1}{2}$ indikerar detta att den första regression
 
 Detta betyder att 50 % av variationen i $Y$ förklaras av $X$. 50 % av variationen i $Y$ beror på andra faktorer (residualerna). Ett högre $R^{2}$ betyder att modellen \"passar bättre\" mot data, men det betyder inte automatiskt att modellen är bra. Ett högt eller lågt $R^{2}$ säger inte heller nödvändigtvis något om orsakssamband.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -172,6 +171,6 @@ Detta betyder att 50 % av variationen i $Y$ förklaras av $X$. 50 % av variation
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Härled estimatorerna**](sec-k2-3-4.html)
+[→ Nästa avsnitt: **Härled estimatorerna**](k2-3-4.html)
 :::
 

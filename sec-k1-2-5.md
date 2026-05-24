@@ -1,4 +1,4 @@
-# Banadödlighet och flyktingar {#k1-2-5 -}
+# Banadödlighet och flyktingar {#k1-2-5}
 
 
 ### Begrepp
@@ -89,7 +89,6 @@ Låt oss nu beräkna hur stor procentuell andel som respektive land tar emot av 
 
 Förklaring: Data från [UNHCR](https://www.unhcr.org/refugee-statistics) (asylsökande) och [Världsbanken](https://data.worldbank.org/) (befolkning).
 
-### Uppgifter
 
 
 ::: {.ex-section-title}

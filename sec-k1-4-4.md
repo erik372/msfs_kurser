@@ -1,4 +1,4 @@
-# Vinstmaximerande företag {#k1-4-4 -}
+# Vinstmaximerande företag {#k1-4-4}
 
 
 ### Begrepp
@@ -83,7 +83,6 @@ Om företaget producerar kvantiteterna 5 av *x* och 5 av *y* är marginalkostnad
 
 $P^{\*} = MC$ (12)
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -98,6 +97,6 @@ $P^{\*} = MC$ (12)
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Nätverksanalys**](sec-k1-4-5.html)
+[→ Nästa avsnitt: **Nätverksanalys**](k1-4-5.html)
 :::
 

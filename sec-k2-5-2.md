@@ -1,4 +1,4 @@
-# Kontinuerliga sannolikhetsfördelningar {#k2-5-2 -}
+# Kontinuerliga sannolikhetsfördelningar {#k2-5-2}
 
 
 ### Begrepp
@@ -101,7 +101,6 @@ Standardiserade normalfördelningen är så välanvänd att det finns flera fär
 
 Förklaring: Övre diagrammet illustrerar täthetsfunktionen $f(z)$, där vertikala axeln anger sannolikheten för ett specifikt värde i standardiserade normalfördelningen. Nedre diagrammet illustrerar kumulativa fördelningsfunktionen $F(Z \leq z)$, som beskriver sannolikheten för värdet $z$ eller lägre.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -116,6 +115,6 @@ Förklaring: Övre diagrammet illustrerar täthetsfunktionen $f(z)$, där vertik
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Statistisk analys 1**](sec-k2-5-3.html)
+[→ Nästa avsnitt: **Statistisk analys 1**](k2-5-3.html)
 :::
 

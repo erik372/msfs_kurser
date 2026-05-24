@@ -1,4 +1,4 @@
-# Hur mycket jobb är lagom? {#k1-4-2 -}
+# Hur mycket jobb är lagom? {#k1-4-2}
 
 
 ### Begrepp
@@ -111,7 +111,6 @@ $w = \frac{u_{L}\'}{u_{C}\'}$ (8)
 
 Detta innebär precis det vi gick igenom ovan, att den nyttomaximerande punkten på budgetlinjen är den där en av de böjda indifferenslinjerna tangerar budgetlinjen. I denna punkt är lutningen på budgetlinjen som bestäms av *w*, samma som lutningen på den indifferenslinje som tangerar budgetlinjen, vilken bestäms av nöjdhetsfunktionens form.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -126,6 +125,6 @@ Detta innebär precis det vi gick igenom ovan, att den nyttomaximerande punkten 
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Hur höga skatter vill vi ha?**](sec-k1-4-3.html)
+[→ Nästa avsnitt: **Hur höga skatter vill vi ha?**](k1-4-3.html)
 :::
 

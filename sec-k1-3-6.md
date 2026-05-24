@@ -1,4 +1,4 @@
-# Relationer {#k1-3-6 -}
+# Relationer {#k1-3-6}
 
 
 ### Pushtex
@@ -63,7 +63,6 @@ För P ≈ 0,89: K = (0,89)² + 0,1 = 0,7921 + 0,1 = 0,8921 ≈ 0,89
 
 ![](C:\Users\hegel\Dropbox\_MINA%20TEXTER%20_db\Matematik%20för%20samhällsvetare\Matteboken.se\html-output\kurs%201%20-%20Matematik%20för%20samhällsvetare\3%20-%20Beskriva%20teorier%20med%20ekvationssystem\3-6%20Relationer/img/k1-3-6-image2.png){style="width:4in;height:3in"}
 
-### Uppgifter
 
 
 ::: {.ex-section-title}

@@ -1,4 +1,4 @@
-# Orsak och effekt {#k2-1-1 -}
+# Orsak och effekt {#k2-1-1}
 
 
 ### Begrepp
@@ -83,7 +83,6 @@ Om politiken endast berör en mindre del av samhället, till exempel endast för
 
 Denna typ av frågor innebär ofta knepiga utmaningar som saknar exakt facit. Under den här kursen ska vi gå igenom grunderna för hur vi kan hantera detta.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -98,6 +97,6 @@ Denna typ av frågor innebär ofta knepiga utmaningar som saknar exakt facit. Un
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Experiment och observationsstudie**](sec-k2-1-2.html)
+[→ Nästa avsnitt: **Experiment och observationsstudie**](k2-1-2.html)
 :::
 

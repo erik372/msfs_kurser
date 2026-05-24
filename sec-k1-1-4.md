@@ -1,4 +1,4 @@
-# Varför räkna? {#k1-1-4 -}
+# Varför räkna? {#k1-1-4}
 
 
 ### Begrepp
@@ -44,7 +44,6 @@ I samhällsvetenskap arbetar vi ofta med frågor nära ideologi, moral och värd
 
 Det kan då vara lätt att misströsta användningen av mer tekniskt avancerade metoder. Men underskatta inte alla de förslag som hade fått större utrymme men som vi idag kan kväsa vid ritbordet med hjälp av analys. Sett till de mänskliga samhällenas historia är stora delar av den moderna samhällsvetenskapen ung. Håll ut!
 
-### Uppgifter
 
 
 ::: {.ex-section-title}

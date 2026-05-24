@@ -1,4 +1,4 @@
-# Regressionsanalys med sannolikhet {#k2-5-5 -}
+# Regressionsanalys med sannolikhet {#k2-5-5}
 
 
 ### Begrepp
@@ -175,7 +175,6 @@ $\widehat{b} \pm t_{k,\alpha}\*{\widehat{s}}_{\widehat{b}} = 0,5 \pm 4,3\*0,354 
 
 Konfidensintervallet visar inom vilka gränser som $95\ \%$ av koefficienternas estimat skulle befinna sig vid upprepade urval. För $\widehat{b}$ är konfidensintervallets nedre och övre gräns cirka $- 1,02$ samt 2,02.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -190,6 +189,6 @@ Konfidensintervallet visar inom vilka gränser som $95\ \%$ av koefficienternas 
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **T-test för regression med flera variabler**](sec-k2-5-6.html)
+[→ Nästa avsnitt: **T-test för regression med flera variabler**](k2-5-6.html)
 :::
 

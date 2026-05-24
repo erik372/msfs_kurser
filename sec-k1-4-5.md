@@ -1,4 +1,4 @@
-# Nätverksanalys {#k1-4-5 -}
+# Nätverksanalys {#k1-4-5}
 
 
 ### Begrepp
@@ -111,7 +111,6 @@ Punkternas storlek representerar respektive branschs totala produktion, kolumnen
 
 Förklaring: In- och utflöden från och till de två branscherna A och B. Flödena beskrivs i tabell 1.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}

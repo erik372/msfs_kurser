@@ -1,4 +1,4 @@
-# Externa effekter {#k1-3-4 -}
+# Externa effekter {#k1-3-4}
 
 
 ### Begrepp
@@ -49,7 +49,6 @@ Detta skulle i stället innebära att jämvikten är $\left( q^{\*},p^{\*} \righ
 
 Detta exempel skulle i så fall kunna vara ett argument för att staten borde subventionera denna produktion genom att betala mellanskillnaden mellan priset på en fri marknad $(p = 2)$ och det optimala priset med hänsyn till samhällets behov $(p = 5)$. Politiska åtgärder i verkligheten är alltid mer komplexa än enkla hypotetiska exempel.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -64,6 +63,6 @@ Detta exempel skulle i så fall kunna vara ett argument för att staten borde su
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Rökning**](sec-k1-3-5.html)
+[→ Nästa avsnitt: **Rökning**](k1-3-5.html)
 :::
 

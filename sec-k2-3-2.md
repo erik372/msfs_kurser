@@ -1,4 +1,4 @@
-# En modell till {#k2-3-2 -}
+# En modell till {#k2-3-2}
 
 
 ### Begrepp
@@ -172,7 +172,6 @@ $R^{2} = 0$ betyder att ingenting av variationen i $Y$ kan förklaras av regress
 
 ### Observera att förkortningar varierar ibland. Vi använder här SSR = Sum of Squared Residuals. Andra använder till exempel RSS = Residual Sum of Squares. Båda betyder samma sak. När du läser andra texter, kontrollera alltid vad en förkortning syftar på matematiskt.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -187,6 +186,6 @@ $R^{2} = 0$ betyder att ingenting av variationen i $Y$ kan förklaras av regress
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Hur väl passar modellerna mot data?**](sec-k2-3-3.html)
+[→ Nästa avsnitt: **Hur väl passar modellerna mot data?**](k2-3-3.html)
 :::
 

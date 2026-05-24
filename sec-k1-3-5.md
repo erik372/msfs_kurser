@@ -1,4 +1,4 @@
-# Rökning {#k1-3-5 -}
+# Rökning {#k1-3-5}
 
 
 ### Pushtex
@@ -49,7 +49,6 @@ Det vill säga om den ena röker ett halvt paket så röker den andra endast ett
 
 Förklaring: Den röda linjen beskriver Eriks rökning ($y$) som en funktion av Marias rökning ($x$). Den blå linjen beskriver Marias rökning som en funktion av Eriks rökning. Ekvationssystemet har två stabila jämvikter i punkterna (0, 0), där ingen röker, och i (1, 1) där båda röker.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -64,6 +63,6 @@ Förklaring: Den röda linjen beskriver Eriks rökning ($y$) som en funktion av 
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Relationer**](sec-k1-3-6.html)
+[→ Nästa avsnitt: **Relationer**](k1-3-6.html)
 :::
 

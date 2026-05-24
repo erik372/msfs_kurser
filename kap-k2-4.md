@@ -4,17 +4,17 @@
 **Avsnitt i detta kapitel:**
 
 
-- [Regressionsanalys med tre variabler](sec-k2-4-1.html)
+- [Regressionsanalys med tre variabler](k2-4-1.html)
 
-- [Faktorvariabler](sec-k2-4-2.html)
+- [Faktorvariabler](k2-4-2.html)
 
-- [Konstannhålla](sec-k2-4-3.html)
+- [Konstannhålla](k2-4-3.html)
 
-- [Regression med matriser](sec-k2-4-4.html)
+- [Regression med matriser](k2-4-4.html)
 
-- [Estimera med matriser](sec-k2-4-5.html)
+- [Estimera med matriser](k2-4-5.html)
 
-- [Interaktion](sec-k2-4-6.html)
+- [Interaktion](k2-4-6.html)
 
-- [Räkna på orsak och effekt](sec-k2-4-7.html)
+- [Räkna på orsak och effekt](k2-4-7.html)
 

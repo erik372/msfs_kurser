@@ -1,4 +1,4 @@
-# Statistisk analys 2 {#k2-5-4 -}
+# Statistisk analys 2 {#k2-5-4}
 
 
 ### Begrepp
@@ -171,6 +171,6 @@ För 5 % nivå har vi $z^{\*} = 1,96$ (se figur 2 i [avsnitt 5.2](https://www.dr
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Regressionsanalys med sannolikhet**](sec-k2-5-5.html)
+[→ Nästa avsnitt: **Regressionsanalys med sannolikhet**](k2-5-5.html)
 :::
 

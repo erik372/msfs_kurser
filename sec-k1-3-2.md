@@ -1,4 +1,4 @@
-# Hur hitta den rätta? {#k1-3-2 -}
+# Hur hitta den rätta? {#k1-3-2}
 
 
 ### Begrepp
@@ -87,7 +87,6 @@ Det vill säga, för att strategierna ska kunna betraktas som likvärdiga vid n�
 
 Hela exemplet i detta avsnitt är så klart kraftigt förenklat. Med mer invecklad matematik kan vi även föra mer invecklade resonemang. Men det kanske ändå fångar en typ av avvägning som vi alla ställs för då och då i livet. Det vill säga, de situationer då vi känner att vi behöver välja mellan två tråkiga alternativ och mest vill veta vilket som är minst tråkigt.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -102,6 +101,6 @@ Hela exemplet i detta avsnitt är så klart kraftigt förenklat. Med mer inveckl
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **En teori om arbete**](sec-k1-3-3.html)
+[→ Nästa avsnitt: **En teori om arbete**](k1-3-3.html)
 :::
 

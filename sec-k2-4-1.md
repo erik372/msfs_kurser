@@ -1,4 +1,4 @@
-# Regressionsanalys med tre variabler {#k2-4-1 -}
+# Regressionsanalys med tre variabler {#k2-4-1}
 
 
 ### Begrepp
@@ -267,7 +267,6 @@ När vi studerar orsakssamband vill vi inte bara veta om "fenomen A påverkar B"
 
 För att få bättre svar på dessa frågor behöver våra analysmetoder vara noggranna och genomtänkta på samma gång.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -282,6 +281,6 @@ För att få bättre svar på dessa frågor behöver våra analysmetoder vara no
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Faktorvariabler**](sec-k2-4-2.html)
+[→ Nästa avsnitt: **Faktorvariabler**](k2-4-2.html)
 :::
 

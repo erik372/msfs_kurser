@@ -1,4 +1,4 @@
-# Nominella och reala priser {#k1-2-2 -}
+# Nominella och reala priser {#k1-2-2}
 
 
 ### Begrepp
@@ -170,7 +170,6 @@ Detta ger oss den blå linjen. Där kan vi se att reallönerna ökade lite mer �
 
 Förklaring: Data från [SCB](https://scb.se/). Priser = Konsumentprisindex (KPI). Nominell lön = genomsnittlig månadslön (SCB Lönestrukturstatistik). Reallön = nominell lön deflaterad med KPI. Under perioden ökade månadslönerna med i genomsnitt lite mer än 60 procent. Konsumentprisindex ökade med lite mer än 30 procent. Reallönerna ökade med i genomsnitt lite mer än 20 procent.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -185,6 +184,6 @@ Förklaring: Data från [SCB](https://scb.se/). Priser = Konsumentprisindex (KPI
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Ekonomiskt välstånd och relativa förändringar**](sec-k1-2-3.html)
+[→ Nästa avsnitt: **Ekonomiskt välstånd och relativa förändringar**](k1-2-3.html)
 :::
 

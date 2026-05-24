@@ -1,4 +1,4 @@
-# Statistisk analys 1 {#k2-5-3 -}
+# Statistisk analys 1 {#k2-5-3}
 
 
 ### Begrepp
@@ -97,7 +97,6 @@ Ekvationen kan läsas som att ju mindre spridning vi har i observationerna (täl
 
 Båda dessa saker är logiska. Ju mindre utspridda populationens värden är, desto troligare att vår beräkning träffar rätt. Ju mer vi vet om populationen (fler observationer), desto närmare kommer vår uppskattning av populationens medelvärde vara det korrekta medelvärdet i populationen.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -112,6 +111,6 @@ Båda dessa saker är logiska. Ju mindre utspridda populationens värden är, de
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Statistisk analys 2**](sec-k2-5-4.html)
+[→ Nästa avsnitt: **Statistisk analys 2**](k2-5-4.html)
 :::
 

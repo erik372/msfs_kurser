@@ -1,4 +1,4 @@
-# Räkna på orsak och effekt {#k2-4-7 -}
+# Räkna på orsak och effekt {#k2-4-7}
 
 
 ### Begrepp
@@ -171,7 +171,6 @@ I detta avsnitt har vi gått igenom varför kapitel 4 spelar roll för vetenskap
 
 Detta är varför metodik och statistik inte bara handlar om matte. Detta är grunden för hur vi förstår världen.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}

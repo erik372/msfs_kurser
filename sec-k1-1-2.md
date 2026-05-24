@@ -1,4 +1,4 @@
-# Hur beskriva en teori med matte? {#k1-1-2 -}
+# Hur beskriva en teori med matte? {#k1-1-2}
 
 
 ### Begrepp
@@ -83,7 +83,6 @@ Tvärtom används analytiskt arbete och forskning i regel just för att studera 
 
 Även om vi inte lyckas ge en fullständig förklaring till alla tänkbara orsaker bakom människors lycka så kanske vi ändå kan säga något intressant om ett tydligt avgränsat fenomen, som till exempel effekten av inkomst.
 
-### Uppgifter
 
 
 ::: {.ex-section-title}
@@ -98,6 +97,6 @@ Tvärtom används analytiskt arbete och forskning i regel just för att studera 
 
 
 ::: {.next-section-link}
-[→ Nästa avsnitt: **Hur testa om en teori stämmer?**](sec-k1-1-3.html)
+[→ Nästa avsnitt: **Hur testa om en teori stämmer?**](k1-1-3.html)
 :::
 
