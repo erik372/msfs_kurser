@@ -229,6 +229,14 @@
   display: none;
 }
 
+/* ── Bilder i innehållet ────────────────────────────────────────────────── */
+.section img {
+  max-width: 55%;
+  height: auto;
+  display: block;
+  margin: 0.5rem 0;
+}
+
 /* ── Figurtexter (Förklaring:) ──────────────────────────────────────────── */
 .fig-caption {
   font-size: 0.85rem;
