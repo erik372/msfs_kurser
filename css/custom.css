@@ -172,9 +172,9 @@
 
 /* ── Navigeringsmenyer: ljus bakgrundsfärg ──────────────────────────────── */
 
-/* Vänster sidopanel (blå bas) */
+/* Vänster sidopanel */
 .sidebar {
-  background-color: #f0f4fa !important;
+  background-color: #ffffff !important;
 }
 
 /* Kurs 1 — ljusgrön */
