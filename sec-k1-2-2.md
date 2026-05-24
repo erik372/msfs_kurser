@@ -7,6 +7,7 @@
 - **Nominellt pris:** Pris för en vara eller tjänst, som vi är vana att se priser.
 - **Realt pris:** Pris justerat för den genomsnittliga prisutvecklingen för andra varor och tjänster i samhället. Realt pris är justerat för förändringar i pengars värde.
 - **Reallön:** Lön justerad för prisutvecklingen i samhället.
+
 ### Teori
 Ett [index](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/index#!/) används ofta för att jämföra den relativa utvecklingen av olika fenomen över tid. Säg att vi har data med ett värde per år. För att beräkna ett index väljer vi ett basår att jämföra mot. Därefter dividerar vi värdet för respektive år med värdet för basåret, och multiplicerar med 100:
 
@@ -18,6 +19,7 @@ Tabell 1 visar ett exempel där vi jämför befolkningsmängden i Sverige och Fr
 I kolumnerna till höger ser vi resultatet i form av ett befolkningsindex per land. Den relativa ökningen var större i Frankrike, vilket vi kan se genom att jämföra index. Sveriges befolkning ökad med 38,4 procent medan Frankrikes ökade med 41,2 procent under samma period.
 
 **Tabell 1: Befolkning och befolkningsindex i Sverige och Frankrike**
+
 +----------+:-----------:+:-------------:+:-----------:+:-------------:+
 |          | **Befolkning,\              | **Befolkningsindex,\        |
 |          | miljoner invånare**         | index 100 = år 1960**       |
@@ -43,12 +45,14 @@ I kolumnerna till höger ser vi resultatet i form av ett befolkningsindex per la
 Förklaring: Data från [Our World in Data](https://ourworldindata.org/grapher/population). Antal invånare i Sverige och Frankrike 1960---2020.
 :::
 
+
 ### Inkomstindex
 Statistiska centralbyrån (SCB) samlar varje år in uppgifter om hushållens inkomster och presenterar denna uppdelad på tiondelar av befolkningen, vilket kallas för decilgrupper.
 Tabell 2 visar genomsnittlig inkomst räknat i 1 000-tals kronor för decilgrupp 1 och 10, för ett urval av år från 1995 till 2019. Decilgrupp 1 är den tiondel av befolkningen som har lägst inkomster. Decilgrupp 10 är den tiondel med högst inkomster.
 Inkomsterna i tabellen är beskrivna i kronor per konsumtionsenhet. Kronor per konsumtionsenhet är ett sätt att mäta inkomst per person, justerat för det hushåll respektive person tillhör. Till exempel om en person tillhör en rik eller fattig familj. Många människor byter inkomstgrupp mellan åren, till exempel genom att gå från studier till arbete och från arbete till pension.
 
 **Tabell 2: Inkomst per decilgrupp. 1 000-tals kr i 2019 års priser**
+
   -----------------------------------------------
             **Decilgrupp 1**   **Decilgrupp 10**
   -------- ------------------ -------------------
@@ -68,6 +72,7 @@ Tabell 3 visar resultatet. Inkomsterna för decilgrupp 1 ökade med 57,6 % och f
 
 
 **Table 3: Indexerad inkomstutveckling per decilgrupp**
+
   ------------------------------------------------------------------------------------------------------------------------------------
              **Decilgrupp 1**                                            **Decilgrupp 10**
   ---------- ----------------------------------------------------------- -------------------------------------------------------------
@@ -97,7 +102,9 @@ $$\frac{803,3}{311,9}*100 = 257,6$$
 Förklaring: Inkomstindex för decilgrupp 1 och 10, baserat på data presenterade ovan.
 :::
 
+
 ### 
+
 ### Prisindex och deflatering
 Ett *prisindex* visar den indexerade prisutvecklingen för en eller flera varor eller tjänster. Ett prisindex som ofta används är [Konsumentprisindex](https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-konsumtion/konsumentprisindex/konsumentprisindex-kpi/) (KPI) som Statistiska centralbyrån (SCB) beräknar. För att räkna ut KPI samlar SCB in information om pris och andra egenskaper på en stor mängd olika varor och tjänster. Därefter beräknar SCB ett medelvärde för en hypotetisk varukorg. Varukorgen är baserad på vad människor i Sverige spenderar pengar på.
 Om varorna och tjänsterna ändras, till exempel om en ny mobiltelefon lanseras med ny kvalitet, så justeras KPI-beräkningen för detta. Idealiskt sett mäter därför KPI endast rena prisförändringar. Diagram 1 visar utvecklingen av KPI mellan 1980---2024. Diagrammet visar hur konsumentprisindex under denna period ökade med från nivå 100 till lite mer än 400. En ökning med över 300 procent.
@@ -121,6 +128,7 @@ $$Realt\ pris_{t} = p_{t}\left( \frac{KPI_{bas}}{KPI_{t}} \right)$$
 
 där $p_{t}$ är det nominella priset vi vill deflatera, till exempel priset på en vara eller tjänst. $KPI_{bas}$ är KPI-värdet för det år vi vill använda som basår och $KPI_{t}$ är KPI-värdet för samma år som det aktuella nominella priset vi deflaterar.
 Om priset på en vara ökar långsammare än priset på andra saker har denna vara blivit billigare relativt andra saker. Varans reala pris har minskat. Om priset på de varor och tjänster vi köper ökar långsammare än våra löner säger vi att vår våra reallöner, och vår reala köpkraft, har ökat.
+
 #### Inflation och löner historiskt
 Diagram 2 visar tre tidsserier: den genomsnittliga prisnivån, genomsnittliga nominell månadslön och genomsnittlig real månadslön i Sverige mellan åren 2004 och 2022. Alla tre tidsserierna är indexerade och har värdet 100 för år 2004.
 Sedan 2004 har lönerna ökat nominellt med lite mer än 60 procent, vilket vi kan se på den gröna linjen. Från indexvärde 100 till lite över 160. Priserna, den röda linjen har under samma period ökat med i genomsnitt cirka 35 procent, från 100 till 135. För att beräkna den reala lönenivån i 2022 års priser tar vi för varje år *t*:

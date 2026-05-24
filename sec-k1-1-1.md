@@ -4,6 +4,7 @@
 - **Kvantitativa data:** Information beskriven med siffror i någon form. Alla former av information kan vara kvantitativ, så länge den kan räknas, mätas eller ges ett nummer (ett numeriskt värde).
 - **Kvalitativa data:** Information i annat format än siffror, som text. Kvalitativa data kan arrangeras kategoriskt, till exempel kön, men inte rangordnas som siffror kan.
 - **Kvantifiera:** Att använda siffror eller mängder för att mäta något. Exempel: "ett äppel" eller "alla personer i rummet".
+
 ### Teori
 När vi vill studera samhället har vi glädje av matematik. Ingen analys blir garanterat bra för att den använder matematik. Men det finns garanterat saker som är omöjliga att göra utan matematik.
 Forskning och analys är fina ord för att studera saker noga. All samhällsvetenskap är i någon mening en analys av vad människor gör och varför. I denna kurs ska vi gå igenom hur matematik kan användas för att studera människor och det samhälle vi alla lever i. Matematik används till följande inom samhällsvetenskap:
@@ -11,6 +12,7 @@ Forskning och analys är fina ord för att studera saker noga. All samhällsvete
 2.  **Beskriva teorier** och idéer i detalj.
 3.  **Jämföra teorier** mot hur människor beter sig i verkligheten, för att därigenom prova hur trovärdiga och användbara teorierna är.
 I detta första avsnitt av kurskapitlet går vi igenom punkt 1, att mäta saker. I de två avsnitten efter detta går vi igenom punkt 2 och 3.
+
 #### Att mäta saker
 Mänga människor associerar matematik främst som en metod för att mäta saker. Vi kan sätta siffror på ting vi observerar runt omkring oss, som antal ägg i kylen eller mängden pengar på ett bankkonto. Detta kallas för att *kvantifiera*, att mäta kvantiteten av något.
 I analytiskt arbete kallas information om verkligheten för *data*. Data kan bestå av alla typer av information och all form av information kan i någon mening kvantifieras. Data som inte mäts i siffror kallas för *kvalitativa* eller *kategoriska* data. Till exempel en persons namn, födelseland eller kön.
@@ -18,12 +20,14 @@ I analytiskt arbete kallas information om verkligheten för *data*. Data kan bes
 Som exempel, om vi jämför alla lägenheter i ett höghus kan vi notera om varje lägenhet har en balkong som nej (0) eller ja (1). Huruvida en person är född i Sverige kan betecknas med värdet 0, och om personen är född i något annat land med 1.
 En viktig del av analytiskt arbete är hur vi definierar de saker vi mäter. Om vi vill till exempel vill jämföra antal lägenheter med balkonger i olika hus kan det vara viktigt att vi definierar fenomenen "lägenhet" och "balkong" på exakt samma sätt. Ska vi till exempel endast räkna bostadslägenheter eller även butikslokaler och allmänna utrymmen? Ska vi räkna en liten balkong på samma sätt som en stor terrass?
 Säg att vi i stället vill jämföra människors inkomster. Då måste vi bestämma oss för vilka inkomster som ska jämföras, till exempel löneinkomster, bidrag eller andra former av ersättningar.
+
 #### Omätbara saker
 Det finns saker som är vaga eller dåligt definierade och därför omöjliga att mäta. Till exempel "den svenska kulturen", min kärlek till choklad eller hur tråkigt det är att fiska. En vanlig metod för att samla in information om saker som är omöjliga att mäta är att definiera om fenomenet eller frågan.
 Säg att vi låter människor sätta poäng på hur mycket de gillar choklad. Vi mäter i så fall svaret på denna fråga men vi mäter egentligen inte hur människor känner, själva känslan i kroppen. En annan metod skulle kunna vara att mäta vad som händer i kroppen när man äter choklad. Eller räkna på hur stor del av inkomsten som människor spenderar på choklad.
 Det finns även fenomen som är omöjliga att mäta av praktiska skäl, eller skulle vara för dyra att samla in information om. Till exempel "hur många kolhydrater alla invånare i Europa åt mellan kl. 10 och 11 den 14 augusti 1996?"
 Ofta är det svårt att mäta eller observera exakt det fenomen vi egentligen vill studera. Säg att vi vill veta hur bra polisen i Sverige är. Ett mått på framgångsrikt polisarbete är att se hur många brott som polisen löser. Ett annat mått kanske skulle vara frånvaron av brott. Men hur mycket brott som (inte) begås beror bland annat på vad som är definierat som olagligt. Vår kunskap om brottslighet är sin tur starkt beroende av hur många brott som upptäcks och leder till påföljder.
 Det finns inget enkelt svar på hur vi löser dessa saker. I vissa fall kan vi hitta godtagbara lösningar, men världen är full av svåra frågor där siffror bara kommer att ge oss ytlig vägledning.
+
 #### Mäta lycka
 Inom samhällsvetenskap vill vi ofta resonera om relativt abstrakta och svårmätbara fenomen. Till exempel hur många människor som känner något eller hyser en åsikt. Ofta tvingas vi använda ett ungefärligt mått på det fenomen vi ska undersöka. Säg som exempel att vi vill besvara följande fråga:
 - *Hur lyckliga är människor i Sverige idag?*

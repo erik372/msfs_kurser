@@ -3,8 +3,10 @@
 ### Begrepp
 - **Kovarians:** Ett mått på linjär samvariation mellan två variabler.
 - **Korrelationskoefficienten:** Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden mellan 1 och -1, där värde 1 är stark positiv korrelation och -1 är starkt negativ korrelation.
+
 ### Teori
 I kapitel 1 till denna kurs introducerade vi betydelsen av kontrafaktisk analys och hur vi genom att studera samvariation kan diskutera orsak och verkan. I tidigare avsnitt har vi gått igenom olika exempel på hur vi kan beskriva och jämföra spridning och variation i ett material. I detta avsnitt ska vi introducera två mått på linjär samvariation: *kovarians och korrelationskoefficient*.
+
 #### Kovarians
 Kovarians (engelska *covariance*) är ett mått på linjär samvariation mellan två variabler, till exempel $x$ och $y$. För populationsdata har vi:
 $cov(x,y) = \frac{1}{n}\sum_{i}^{n}{(x_{i} - \overline{x})(y_{i} - \overline{y})}$ (1)
@@ -15,6 +17,7 @@ Det spelar ingen roll i vilken ordning vi skriver variablerna i parentesen: $cov
 $\text{cov}(x,x) = \left( \frac{1}{n} \right)\sum_{i}^{n}{(x_{i} - \overline{x})(x_{i} - \overline{x})} = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} = \text{var}(x)$ (2)
 I föregående avsnitt använde vi Bessels korrigering $\left( \frac{1}{n - 1} \right)$ för att undvika att underskatta spridningen i populationen alltför mycket. Även här kan vi av samma skäl använda korrigeringen. Detta ger oss det som kallas för *urvalskovarians* (engelska *sample covariance*):
 **Urvalskovarians:** $cov(x,y) = \left( \frac{1}{n - 1} \right)\sum_{i}^{}{(x_{i} - \overline{x})(y_{i} - \overline{y})}$ (3)
+
 #### Räkneexempel
 Figur 1 beskriver våra fyra observationer i en tabell till vänster och ett diagram till höger. I tabellen har vi en observation per rad och en variabel per kolumn. I diagrammet är varje observation representerad av en punkt. Punkten längst till vänster är observation 1: $(x,y) = (3,3)$. Punkten längst till höger är observation 4: $(x,y) = (4,7)$.
 Rad 1 i tabellen består av första värdet för $x$ respektive $y$ och representerar värden som på något sätt hänger ihop. Om vi arbetar med observerade data, insamlad information, representerar varje observation en observationsenhet, till exempel uppgifter om en person eller kanske ett land. Våra fyra observationer skulle alltså kunna representera fyra personer, fyra länder eller något annat.
@@ -72,6 +75,7 @@ $$(x_{i} - \overline{x})(y_{i} - \overline{y})$$
   Medelvärde                    5                                 3,5                                                                                                                       
   Summa                                                                                                                                                                                                                          5
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #### Korrelationskoefficienten
 Ett annat mått på linjär samvariation är *Pearsons r*, även kallat *Pearsons korrelationskoefficient* eller *korrelationskoefficienten* (jämför [Matte 1](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/korrelation-och-kausalitet#!/)). Korrelationskoefficienten för variablerna $x$ och $y$ betecknas för population $\rho_{xy}$ (grekiska rho):
 Korrelationskoefficienten: $\rho_{xy} = \frac{\sigma_{xy}}{\sigma_{x}\sigma_{y}}$ (5)

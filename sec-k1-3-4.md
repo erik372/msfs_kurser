@@ -4,10 +4,12 @@
 - **Extern effekt:** En kostnad eller förtjänst för samhällsekonomin som uppstår till följd av handel med varor och tjänster, men som inte ingår i syftet eller priset för varorna/tjänsterna.
 - **Negativ extern effekt:** En indirekt kostnad för samhällsekonomin som ej ingår i priset för varan/tjänsten som orsakar den externa effekten.
 - **Positiv extern effekt:** En indirekt förtjänst, något som samhällsekonomin har nytta av, utan att det återspeglas i priset för den aktuella varan/tjänsten.
+
 ### Teori
 Detta avsnitt introducerar begreppet *externa effekter*. En extern effekt är en indirekt kostnad eller indirekt förtjänst, som uppstår till följd av handel med varor och tjänster, men som inte ingår i syftet med varan eller tjänsten.
 Ett vanligt exempel är utsläpp från biltrafik. Konsumenten som köper bilen gillar att köra bil och vill ta sig från punkt A till punkt B. Men syftet med att köpa bilen och köra den är inte att skapa utsläpp som förstör miljö och klimat. Utsläppen är en indirekt effekt, även kallat extern effekt eller externalitet.
 I förlängningen skapar miljöförstöringen kostnader för samhället i sin helhet. Men i detta hypotetiska exempel ingår inte samhällskostnaden i det pris som konsumenten betalar för att köpa och köra bilen. Utsläppen från biltrafiken kan därför beskrivas som en negativ extern effekt, en indirekt kostnad för samhällsekonomin.
+
 #### En marknad med en extern effekt
 Säg nu att vi har en helt oreglerad marknad, utan skatter eller avgifter, för en produkt där utbud och efterfrågan kan beskrivas med ekvationssystemet:
 $\left\{ \begin{array}{r} \text{Utbud}:\ q = 2 + p \\ \text{Efterfrågan}:\ q = 20 - p \end{array} \right.\ \ $ (1)
@@ -17,6 +19,7 @@ Nu har forskare räknat fram vad den verkliga kostnaden för samhället är och 
 $\left\{ \begin{array}{r} \text{Utbud inklusive samhällskostnaden}:\ q = p \\ \text{Efterfrågan}:\ q = 20 - p \end{array} \right.\ $ (2)
 Lösningen på detta nya system är $\left( q^{*},p^{*} \right) = (10,10)$. Efterfrågekurvan är densamma i båda exemplen. Priset, med hänsyn till samhällets verkliga kostnader, blir 10 i stället för 9. När vi tar hänsyn till samhällets verkliga kostnader blir priset högre och vi producerar mindre.
 Ett sätt att höja priset skulle till exempel vara att införa en skatt på de klimatskadliga utsläppen på ett sådant sätt att priset för produkten tar hänsyn till de totala samhällskostnaderna. I verkligheten är dessa fenomen så klart ofta mer komplicerade.
+
 #### Positiva externa effekter
 Externa effekter behöver inte vara negativa. Om vi tänker oss att utbud och efterfrågan på en utbildning i matematik för samhällsvetare på en helt fri marknad skulle kunna beskrivas med följande ekvationssystem:
 $\left\{ \begin{array}{r} \text{Utbud}:\ q = 1 + p \\ \text{Efterfrågan}:\ q = 7 - 2p \end{array} \right.\ $ (3)

@@ -2,15 +2,18 @@
 
 ### Begrepp
 *Inga nya begrepp i detta avsnitt.*
+
 ### Teori
 Vi började denna kurs med att studera orsakssamband (kapitel 1), där vi gick igenom kontrafaktisk analys, behandling och kontroll samt experiment och observationsstudier. I kapitel 2 och 3 gick vi igenom hur vi kan mäta och jämföra samvariation, introducerade kovarians och korrelation samt regressionsanalys med minstakvadratmetoden.
 I kapitel 4 utökade vi regressionsanalysen till flera variabler för att kunna konstanthålla andra faktorer, använda dummyvariabler och interaktion, samt utföra regressionsanalys med matriser, vilket gav oss en generalisering av minstakvadratmetoden för valfritt antal variabler och observationer. Vi har gått igenom hur regressionsanalys är nära förknippat med analys av orsakssamband.
 I kapitel 5 har vi introducerade analys under osäkerhet och hur vi kan hantera detta genom att arbeta med sannolikhetsfördelningar, statistiska test, punktestimat samt skatta konfidensintervall. Vi har även gått igenom hur vi kan kombinera regressionsanalys med sannolikhet.
 I detta sista avsnitt ska vi nu reflektera över vad som egentligen är poängen med allt detta?
+
 ### Från mönster till kausalitet
 I denna kurs har vi utgått från att vi ska använda regressionsanalys för att förstå orsakssamband. Men som vi gått igenom flera gånger är själva orsakssambandet något vi lägger till som en tolkning.
 Regressionsanalysen är i grund och botten en metod för att spåra mönster i information (data). Vi berörde detta i [avsnitt 2.3](https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&dl=0), där vi även kort gick igenom andra metoder för att studera samvariation.
 Men kombinerat med rätt forskningsdesign, med kontroll och behandling, är dock regressionsanalys ett kraftfullt verktyg för att studera orsak och verkan.
+
 #### Linjära associationer
 I denna kurs har vi gått igenom hur vi kan estimera regressionsmodeller med minstakvadratmetoden. Det vi gör då är att estimera *linjära regressionsmodeller*.
 Linjära regressionsmodeller prövar om den genomsnittliga relationen mellan två eller flera variabler kan beskrivas med en linjär ekvation. Genom att estimera regressionsmodellen, utföra statistiska test och jämföra hur regressionslinjen blir jämfört med data, kan vi se om regressionsmodellen ger en godtagbar linjär approximation (en ungefärlig bild) av verkligheten (de data vi studerar).
@@ -20,6 +23,7 @@ $\begin{matrix} Y & \ = a + \frac{1}{b}X + e \\ logZ & \ = \alpha + \beta D + \e
 I den första regressionsmodellen har vi $\frac{1}{b} = b^{- 1}$. I den andra modellen har vi att $log\left( Z_{1} + Z_{2} \right) \neq log\left( Z_{1} \right) + log\left( Z_{2} \right)$, där $Z_{1}$ och $Z_{2}$ är två valfria värden i variabel $Z$. Detta innebär att modellen inte är linjär.
 Linjära regressionsmodeller har många fördelar. Det är till exempel ofta relativt enkelt att tolka vad varje koefficient i modellen innebär. Det kan snabbt bli mer komplicerat om vi arbetar ickelinjär samvariation.
 Men det finns även nackdelar med linjära regressionsmodeller -- eftersom de enbart kan användas för att fånga just linjär samvariation. Risken finns då att vi missar samvariation som existerar i data men som inte är linjär.
+
 #### BNP och logaritmerad BNP
 Även om modellen BLIR ickelinjär i originalskala, kan vi ofta estimera den med minstakvadratmetoden genom att transformera variablerna först.
 Ett sätt att illustrera detta är att jämföra BNP för Sverige var tionde år under perioden 1800--2000, se tabell 1 med årtal, BNP och logaritmerad BNP. I figur 1 illustreras den linjära trenden över tid för BNP respektive $ln(BNP)$ i varsitt diagram.
@@ -34,6 +38,7 @@ Detta innebär att regressionsmodellen predikterar att BNP var negativ alla år 
 Den linjära modellen fångar dock den långsiktiga trenden i logaritmerad BNP relativt väl, vilket syns i det högra diagrammet där punkterna följer regressionslinjen för alla åren 1800--2000.
 
 **Tabell 1: BNP och logarimterad BNP**
+
   -----------------------------------------------------------------------------
      **År**   **BNP**   **ln(BNP)** ** **      **År**     **BNP**   **ln(BNP)**
   --------- --------- ------------- ------- --------- ----------- -------------
@@ -60,12 +65,14 @@ Förklaring: Data från [www.historia.se](http://www.historia.se).
 ![En bild som visar diagram, linje, Graf, skärmbild Automatiskt genererad beskrivning](img/k2-5-7-image1.png){style="width:4.89251in;height:2.7008in"}
 
 Förklaring. Data från [www.historia.se](http://www.historia.se), samma som i tabell 1.
+
 ### Varför fungerar logaritm för BNP?
 BNP växer exponentiellt: Varje år ökar BNP i genomsnitt med en viss procentsats, inte ett fast belopp i kronor. Exponentiell tillväxt kan beskrivas matematiskt med följande ekvation:
 $Y_{t} = Y_{0}*\ e^{rt}$ (4)
 där $Y_{t}$ är BNP valfritt år $t$. $Y_{0}$ är BNP år noll (startåret). Faktorn $e^{rt}$ är Eulers tal $e$. Exponenten $rt$ är tillväxttakten $r$ multiplicerad med antal år $t$. Tar vi naturliga logaritmen av detta uttryck får vi:
 $\ln\left( Y_{t} \right) = ln\left( Y_{0} \right) + rt$ (5)
 När vi tar naturliga logaritmen av BNP blir den exponentiella tillväxten linjär, vilket gör att vår linjära regressionsmodell fungerar. Detta är vanligt för många ekonomiska variabler som växer kjust procentuellt.
+
 #### En regressionsmodell fångar inte allt
 Låt oss gå igenom ett exempel till, men denna gång med påhittade data. Figur 2 beskriver två diagram där prickarna återigen visar kombinerade värden av variablerna $x$ och $y$. De räta linjerna är regressionslinjer beräknade utifrån minstakvadratmetoden för regressionsmodeller av typen:
 $y = a + bx + v$ (6)
@@ -84,10 +91,12 @@ Detta innebär inte att regressionsanalys är dåligt. Men vi måste vara noga m
 Förklaring: Prickarna i diagrammen följer tydliga mönster. Regressionslinjerna i diagrammen är de svarta horisontella linjerna i diagrammen, ritade med regressionsmodellen $Y = a + bX + V$. Lutningskoefficient $b$ är 0. Regressionslinjerna i diagrammen indikerar ingen association mellan $X$ och $Y$, trots att det finns en form av samvariation.
 :::
 
+
 #### Linjära regressioner är ändå väldigt användbara
 Utifrån ovanstående beskrivning kanske vissa får känslan att det är meningslöst med linjära regressioner. Men ickelinjära regressionsmodeller är inte heller en universallösning.
 På samma sätt som vi riskerar att missa viktiga delar när vi använder linjära regressionsmodeller riskerar vi att missa viktiga slutsatser om vi enbart använder ickelinjära regressionsmodeller.
 Linjära regressioner är mycket användbara -- till rätt typ av problem. Många gånger är vi intresserade av samvariationen inom ett avgränsat område, där just den linjära samvariationen är det intressanta.
+
 #### Vi behöver både diagram och beräkningar
 Det är även viktigt att studera data noga på flera sätt, både i diagram och beräkningar, även när vi faktiskt finner samvariation. Ett sätt att illustrera detta ges i figur 3.
 Figur 3 visar fyra exempel där kombinerade värden för variablerna X (horisontella axeln) och Y (vertikala axeln) är uppritade. y-variabeln och x-variabeln samma medelvärde: $\overline{Y} = 7,5$ och $\overline{X} = 9$. Koefficienterna $a$ och $b$ i regressionsmodellen $Y = a + bX + V$ som ritar ut regressionslinjerna i respektive diagram har samma värden i alla fyra diagrammen: $\widehat{a} = 3$ och $\widehat{b} = 0,5$. Linjerna lutar upp mot höger i respektive diagram, vilket ges av att $\widehat{b} \> 0$.
@@ -100,6 +109,7 @@ Punkternas mönster är tydligt ickelinjärt, men vi kan ändå beräkna en linj
 ::: {.fig-caption}
 Förklaring: De fyra diagrammen beskriver påhittade data presenterade i [Anscombe 1973](https://www.lithoguru.com/scientist/statistics/Anscombe_Graphs%20in%20Statistical%20Analysis_1973.pdf).
 :::
+
 
 ### Vad är egentligen regressionsanalys?
 Regressionsanalys är ett verktyg för att mäta samvariation och en grund för kausal inferens, när den kombineras med bra forskningsdesign. Regressionsanalys är ett sätt att testa teorier om hur världen fungerar men som samtidigt kräver både matematisk precision och kritiskt tänkande.

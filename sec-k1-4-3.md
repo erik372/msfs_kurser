@@ -3,8 +3,10 @@
 ### Begrepp
 - **Skattekvot, skattenivå, skattetryck:** Totala mängden skatteintäkter dividerat med BNP. Olika begrepp brukar användas för att beskriva samma fenomen.
 - **Lafferkurvan:** En kurva som beskriver tänkbara teoretiska samband mellan totala skattenivån i samhället och skatteintäkterna. Grundläggande teorier beskriver ofta kurvan som att högre skatter ökar skatteintäkterna, men ju högre skatter, desto mindre vill folk arbeta - vilket påverkar skatteintäkterna negativt.
+
 ### Teori
 En stor mängd samhällsvetenskap handlar om skatter och hur de påverkar människors liv. Ett känt exempel är den så kallade [*Lafferkurvan*](https://en.wikipedia.org/wiki/Laffer_curve), uppkallad efter den amerikanske nationalekonomen [Arthur Laffer](https://en.wikipedia.org/wiki/Arthur_Laffer). Liknande teorier inom samhällsvetenskap kan spåras tillbaka till åtminstone 1400-talet.
+
 ### Ett påhittat land
 Vi börjar med att tänka oss att vi har ett samhälle utan skatter. Matematiken i detta avsnitt är lånad och inspirerad av \[[lundberg2017thelaffer](#LyXCite-lundberg2017thelaffer)\]
 Folk arbetar och producerar varor och tjänster som köps och säljs. Totala inkomsterna i samhället kallar vi för *y*, vars värde ej är avgörande för exemplet.
@@ -14,6 +16,7 @@ Om alla inkomster i samhället summerar till 1 000 kr och skatten är 5 % blir s
 Skatten påverkar människors vilja att arbeta och betala skatt. Ju högre skatten blir, desto mindre vill människor arbeta, vilket i sin tur drar ned statens skatteintäkter. Denna mekanism vill vi ta hänsyn till i vår ekvation över skatteintäkterna. Vi skriver därför om ekvation 1 så att vi i stället får följande uttryck:
 $i = ty(1 - t)^{b}$ (2)
 Bokstaven *b* anger hur människorna i samhället reagerar på en skattehöjning, vilket även kallas för *skattebaselasticitet*. Om *b* är 0 arbetar människor exakt lika mycket oavsett hur hög skatten är. Ett högre positivt värde på b innebär att skattehöjningar har en större negativ effekt på människors arbetslust. Ett negativt värde $b \< 0$ innebär att människor arbetar mer vid högre skatt.
+
 ### Lafferkurvan
 Ekvation 2 är ett exempel på Lafferkurvan. Från denna ekvation kan vi se att om skatten sätts till 100 % blir t = 1 och i så fall blir skatteintäkterna $i = 0$. Så om staten vill maximera sina skatteintäkter måste skatten sättas någonstans mellan 0 och 100 %. För att hitta den skattenivå som ger mesta möjliga skatteintäkter kan vi ställa upp detta som ett maximeringsproblem där vi ska beräkna maximum av skatteintäkterna i med hänsyn till skattenivån *t*:
 $\max_{m.h.t.\ \ t}{i = ty(1 - t)^{b}}$ (3)
@@ -27,6 +30,7 @@ ${Ln}\left( \frac{1 - t}{t} \right) = \ln b$
 $\frac{1}{t} - 1 = b$
 $t^{*} = \frac{1}{1 + b}$
 Definitionen av $t^{*}$ i sista raden ger oss ett uttryck för mesta möjliga skatteintäkt, alltså det värde för *t* som maximerar variabeln *i*. Mesta möjliga skatteintäkter beror på skattebaselasticiteten *b*.
+
 ### Två olika samhällen
 Regeringen i vårt påhittade samhälle vill införa skatt men är osäkra på värdet på *b*. För att få mer klarhet jämför de med två andra länder. Figur 1 beskriver Lafferkurvorna för dessa två samhällen som representerar två olika samhällstyper. I figuren går båda linjerna mot 0 skatteintäkter då skattenivån närmar sig 100 %, där vi tänker oss att ingen vill betala skatt.
 I det första landet fungerar offentlig sektor ineffektivt. Människor har lågt förtroende för det politiska systemet och de skatter som staten tar ut används inte till något som människor har glädje av. Skatterna är utformade på ett krångligt och ineffektivt sätt. Skattebaselasticiteten är i detta fall $b = 3$. Mesta möjliga skatteintäkter uppnås i detta fall vid en skattenivå på:

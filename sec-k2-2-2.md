@@ -5,22 +5,27 @@
 - **Varians:** För en variabel $x$ har vi: $var(x) = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}$.
 - **Standardavvikelse:** För variabel $x$ har vi: $s_{x} = + \sqrt{var(x)} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n} \right)^{\frac{1}{2}}$
 - **Bessels korrigering:** För att undvika att vi underskattar populationsvärden kan vi dividera estimatorerna med $n - 1$ i stället för $n$.
+
 ### Teori
 I föregående avsnitt beskrev vi hur vi med urvalsdata kan uppskatta populationens medelvärde. Vi såg även exempel på hur vi kan beskriva spridning i en samling värden. I detta avsnitt ska vi nu introducera andra vanliga statistiska metoder för att studera spridning.
+
 #### Absolut avvikelse
 Ett sätt att mäta avvikelser från medelvärdet är att uppskatta *genomsnittlig absolut avvikelse* (engelska *mean absolute deviation*):
 Genomsnittlig absolut avvikelse $= \frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|$ (1)
 Vi kan även byta ut medelvärdet $\overline{x}$ mot annat genomsnittsmått som median eller typvärde.
+
 #### Varians
 Ett annat sätt att summera avvikelser från medelvärdet till ett positivt värde är att kvadrera avvikelserna: $\left( x_{i} - \overline{x} \right)^{2}$. Dividerar vi summan av de kvadrerade differenserna med antal observationer $n$ får vi *variansen* för variabel *x*:
 > Varians:  $var(x) = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}$ (2)
 Parentesen $\left( x_{i} - \overline{x} \right)^{2}$ ska beräknas för varje observation och summeras:
 $\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)^{2} =}\left( x_{i} - \overline{x} \right)^{2} + \left( x_{i} - \overline{x} \right)^{2} + \ldots + \left( x_{i} - \overline{x} \right)^{2}$ (3)
 På samma sätt som att medelvärdet $\overline{x}$ är en uppskattning av populationens $\mu_{x}$ är $var(x)$ en uppskattning av variansen i populationen. Variansen i populationen för variabeln $x$ betecknas ofta med den grekiska bokstaven lilla sigma i kvadrat, $\sigma_{x}^{2}$.
+
 #### Standardavvikelse
 *Standardavvikelse* för en samling observationer är positiva kvadratroten av variansen. För population betecknas ofta standardavvikelse $\sigma_{x}$.
 Uppskattad standardavvikelse för variabel $x$ kan skrivas ${\widehat{\sigma}}_{x}$, $sd_{x}$ eller $s_{x}$:
 Standardavvikelse:  $s_{x} = + \sqrt{var(x)} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n} \right)^{\frac{1}{2}}$ (4)
+
 #### Bessels korrigering
 När vi estimerar medelvärdet med urvalsdata ($\overline{x}$) avviker ofta detta från populationens medelvärde ($\mu_{x}$). Denna avvikelse tenderar att leda till att vår uppskattning av populationens varians blir för liten.
 För att justera för detta när vi estimerar varians (ekvation 2) dividera med $n - 1$ i stället för $n$. Detta kallas för *korrigerad varians* eller *urvalsvarians* (engelska *sample variance*):
@@ -28,6 +33,7 @@ Varians urval: $var(x) = \left( \frac{1}{n - 1} \right)\sum_{i}^{n}\left( x_{i}
 Division med $n - 1$ kallas för *Bessels korrigering* och medför ofta att den uppskattade variansen hamnar närmare populationens varians.
 Många datorprogram har färdiga kommandon för att estimera (beräkna) varians och använder då Bessels korrigering, som i ekvation 5. Även för standardavvikelse kan vi använda Bessels korrigering:
 Standardavvikelse urval: $s_{x} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} \right)^{\frac{1}{2}}$ (6)
+
 #### Varians och standardavvikelse med konstant
 Om vi har en konstant $a$, ett valfritt värde, är variansen för denna $var(a) = 0$. Detta eftersom ett enskilt värde inte har någon spridning. Om $a$ är multiplicerad med en variabel $x$ är variansen för $ax$ lika med $a^{2}var(x)$. Detta kan vi se genom att ta:
 $var(ax) = \left( \frac{1}{n} \right)\sum_{i}^{}\left( {ax}_{i} - a\overline{x} \right)^{2}$ (7)
@@ -42,6 +48,7 @@ $= \left( \frac{1}{n}\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a
 $= \left( a^{2} \right)^{\frac{1}{2}}\left( \frac{1}{n}\sum\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}}$
 $= \|a\|s_{x}$
 där $\|a\|$ är absolutbeloppet av konstanten $a$.
+
 #### Ett exempel
 Nu ska vi beräkna (skatta) variansen med fyra observationer för två variabler: $x$ och $y$. Variabel $x$ har värdena 3, 4, 6 och 7. Variabeln $y$ har värdena 3, 2, 5 och 4. Tabell 1 sammanfattar beräkningarna vi behöver.
 **Tabell 1: Några beräkningar för variablerna** $\mathbf{x}$ **och** $\mathbf{y}$

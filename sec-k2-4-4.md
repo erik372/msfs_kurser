@@ -4,11 +4,13 @@
 - **Matrisinvers:** Inversen av en matris $A_{n \times n}$ skrivs $A^{- 1}$ och existerar om det finns en matris $B_{n \times n}$ där $AB = BA = I_{n}$ och $I_{n}$ är identitetsmatrisen.
 - **Regressionsmodell skriven med matriser:** $Y = XB + V$, där kolumnmatris $Y$ innehåller alla observationer av förklarade variabeln, matris $X$ innehåller observationer för samtliga förklarande variabler och kolumnmatris $V$ innehåller samtliga feltermer.
 - **Koefficienternas estimator:** $\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y$
+
 ### Teori
 I detta avsnitt ska vi börja använda oss av matriser. Om du är ovan vid detta bör du försäkra dig om att du är bekant med de nödvändiga grunderna under Mattebokens avsnitt för [vektorer](https://www.matteboken.se/lektioner/matte-1/geometri/rakna-med-vektorer?gad_source=1&gclid=Cj0KCQiA4-y8BhC3ARIsAHmjC_EE4luBpXEIA9dSFbMXRyktZXjcMTbPazinfY10UYe1KPWbXYpX71waAvC4EALw_wcB#!/) och [matriser](https://www.matteboken.se/lektioner/mattespecialisering/linjar-algebra/matriser?gad_source=1&gclid=Cj0KCQiA4-y8BhC3ARIsAHmjC_HqWpw9cEdTu7hflPh5m_Fnb4iWC93EoIgi7FGQA0aPz5cK7yNNnw8aAsN7EALw_wcB#!/).
 Detta avsnitt introducerar matriser i regressionsanalys. Matriser är ett kraftfullt verktyg men matematiken kan kännas abstrakt. Eftersom beräkningar görs med datorer behöver du inte kunna detta för hand. Du behöver inte heller förstå detaljerna. Fokusera på att förstå vad matriserna representerar. Om du känner dig överväldigad kan du hoppa till sammanfattningen i slutet eller gå till nästa avsnitt. Du kan fortfarande förstå regression utan någon djupare kunskap om matrisräkning.
 Varför du ändå bör försöka lära dig detta: Genom att gå igenom logiken i matrisräkningen på ett övergripande plan kommer du få en djupare förståelse metoden. Logiken i regressionsanalys som presenteras här har en central betydelse för vetenskap generellt och är avgörande för hur vi tänker på orsakssamband och världen i stort. Huvudbudskapet är alltså mer teoretiskt eller filosofiskt, snarare än matematiskt.
 Mer konkret får du dessutom en förståelse för hur statistikprogram faktiskt arbetar, förmåga att generalisera till valfritt antal variabler och grund för senare avancerade koncept (varians-kovariansmatriser).
+
 #### Inversen av en matris
 I detta avsnitt ska vi bland annat använda *inversen av matriser*, även kallat *inversmatriser*. Om vi dividerar siffran 1 med ett reellt tal *a* får vi $\frac{1}{a} = a^{- 1}$. Detta innebär även att $\frac{a}{a} = a^{1}a^{- 1} = 1$. Talet $a^{- 1}$ kallas för multiplikativa inversen av $a$. För matriser kan man inte utföra någon division på samma sätt som man gör med vanliga tal. I stället har vi inversen av matriser.
 En $n \times n$ (lika många rader som kolumner) matris $A$ är inverterbar (inversen av A existerar) om det existerar en $n \times n$ matris $B$, vars egenskaper innebär följande:
@@ -20,6 +22,7 @@ där $a$, $b$, $c$ och $d$ är valfria tal. Inversmatrisen $A^{- 1}$ kan då ber
 $A^{- 1} = \frac{1}{ad - cb}\begin{bmatrix} d & - b \\ - c & a \end{bmatrix} = \begin{bmatrix} \frac{d}{ad - cb} & - \frac{b}{ad - cb} \\ - \frac{c}{ad - cb} & \frac{a}{ad - cb} \end{bmatrix}$ (3)
 En viktig egenskap för inversen av matris $A$ är följande: $AA^{- 1} = I$, det vill säga att matris $A$ matrismultiplicerad med dess invers $A^{- 1}$ är lika med identitetsmatrisen $I$.
 På [denna webbsida](https://www.mathsisfun.com/algebra/matrix-inverse.html) kan du se räkneexempel på engelska. Se även [Wikipedia](https://en.wikipedia.org/wiki/Invertible_matrix). Många datorprogram har färdiga kommandon för att utföra denna typ av beräkningar.
+
 #### Ett generellt uttryck för vår regressionsmodell
 I [avsnitt 3.4](https://www.dropbox.com/scl/fi/v0a5z69slwsy7pe20fp7d/3-4-H-rled-estimatorerna.docx?rlkey=kdu3tyfzbzhxk9o1g4xhf17x4&dl=0) härledde vi koefficienternas estimatorer för en regressionsmodell med två variabler. I detta avsnitt ska vi härleda ett mer generellt uttryck för estimatorerna utifrån en regressionsmodell med ett valfritt antal koefficienter och variabler. För detta ska vi använda matriser. Vi börjar med förutsättningarna:
 - Säg att vi har en regressionsmodell med många koefficienter, variabler och observationer. Modellen kan sammanfattas som $y_{i} = b_{1} + b_{2}x_{1} + b_{3}x_{2} + \ldots + b_{k}x_{k} + v_{i}$ där $y_{i}$ är förklarade variabeln för observation $i$. $b_{0}$ till $b_{k}$ är koefficienterna vi ska estimera med hjälp av minstakvadratmetoden.
@@ -36,6 +39,7 @@ $$Y = XB + V$$
 
 där $x_{11}$ syftar på första förklarande variabeln och första observationen. $x_{21}$ är andra förklarande variabeln, första observationen.
 I matrisform får vi en kolumnmatris $Y$, en matris $X$ med konstanten 1 och förklarande variablerna i varsin kolumn, en kolumnmatris $B$ med koefficienterna och en kolumnmatris $V$ med feltermerna. Detta är den linjära relationen i populationen som vi nu ska försöka estimera med hjälp av minstakvadratmetoden.
+
 #### Formulerad som ett minimeringsproblem
 Precis som tidigare innebär minstakvadratmetoden att vi vill minimera kvadrerade residualerna. Utifrån vår regressionsmodell kan vi nu formulera vårt minimeringsproblem.
 Vi söker de estimerade koefficienterna $\widehat{B}$ som minimerar summan av de kvadrerade residualerna. Vi börjar med att sätta in $\widehat{B}$ och $\widehat{V}$ i vår ekvation och flyttar om lite så att vi får en ekvation där residualerna $\widehat{V}$ är ett resultat av de andra termerna i modellen:
@@ -71,6 +75,7 @@ $$I\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y$$
 $$\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y$$
 
 Detta är estimatorn för samtliga koefficienter i matris $B$. Med hjälp av denna ekvation och våra urvalsdata kan vi beräkna uppskattade värden av koefficienterna som återfinns i populationen vi studerar.
+
 #### Vad var poängen med allt det här?
 Vi har nu ett uttryck för estimerade koefficienterna $\widehat{B}$ som en funktion av de förklarande variablerna i $X$ och den förklarade variabeln i $Y$: $\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y$
 Regressionsanalys innebär att vi kan uppskatta samvariationen mellan ett fenomen och ett annat fenomen, samtidigt som vi kontrollerar för andra fenomen. Matriserna ovan beskriver hur detta fungerar när vi har många variabler och koefficienter.

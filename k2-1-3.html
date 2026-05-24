@@ -114,9 +114,9 @@
 <h1>
 <span class="header-section-number">23</span> Information och variabler<a class="anchor" aria-label="anchor" href="#k2-1-3"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-20" class="section level3" number="23.0.1">
+<div id="begrepp-22" class="section level3" number="23.0.1">
 <h3>
-<span class="header-section-number">23.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-20"><i class="fas fa-link"></i></a>
+<span class="header-section-number">23.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-22"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -130,11 +130,19 @@
 <li>
 <strong>Intervalldata:</strong> Data som har rangordning och ekvidistans men saknar absolut nollpunkt. Till exempel temperatur angiven i grader Celsius.</li>
 <li>
-<strong>Kvotdata:</strong> Data som har rangordning, ekvidistans och absolut nollpunkt. Till exempel längd, avstånd, vikt, massa.
-### Teori
-Den här kursen handlar om hur vi kan studera orsak och verkan i verkligheten. Innan vi går vidare behöver vi gå igenom lite om hur information hanteras i analytiskt arbete.
-#### Datavariabler
-Information kallas inom analytiskt arbete för <em>data</em>. Data kan alltså bestå av vad som helst som vi kan uppfatta med våra sinnen, som siffror, text, bilder, ljudinspelningar.
+<strong>Kvotdata:</strong> Data som har rangordning, ekvidistans och absolut nollpunkt. Till exempel längd, avstånd, vikt, massa.</li>
+</ul>
+</div>
+<div id="teori-22" class="section level3" number="23.0.2">
+<h3>
+<span class="header-section-number">23.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-22"><i class="fas fa-link"></i></a>
+</h3>
+<p>Den här kursen handlar om hur vi kan studera orsak och verkan i verkligheten. Innan vi går vidare behöver vi gå igenom lite om hur information hanteras i analytiskt arbete.</p>
+<div id="datavariabler" class="section level4" number="23.0.2.1">
+<h4>
+<span class="header-section-number">23.0.2.1</span> Datavariabler<a class="anchor" aria-label="anchor" href="#datavariabler"><i class="fas fa-link"></i></a>
+</h4>
+<p>Information kallas inom analytiskt arbete för <em>data</em>. Data kan alltså bestå av vad som helst som vi kan uppfatta med våra sinnen, som siffror, text, bilder, ljudinspelningar.
 Allt analytiskt arbete använder information om verkligheten i någon form eller utsträckning. All data måste i sin tur tolkas. Mycket analytiskt arbete består av att kartlägga verkligheten och samla in data.
 Exakt vilken typ av information som krävs för en analys beror på vad som är undersökningens <em>syfte</em>. Detta är helt centralt för allt analytiskt arbete men kommer inte diskuteras så noga i den här kursen.
 Vi har ofta glädje av att kategorisera information i <em>datavariabler</em>. Datavariabler placeras ofta som kolumner i en tabell med ett värd per rad, till exempel som i följande tabell:
@@ -143,51 +151,97 @@ Vi har ofta glädje av att kategorisera information i <em>datavariabler</em>. Da
 ———— ——————
 1 Datavärde 1
 2 Datavärde 2
-——————————-
-#### Variabler kan innehålla olika typer av information
-Varje värde i en datavariabel kan innehålla vilken typ av information som helst, till exempel gatunummer, namn på barn födda i april, bruttonationalprodukten för olika länder eller alla enskilda ord i en roman organiserade med ett ord per rad. För att använda en datavariabel för beräkningar behöver denna variabel bestå av siffror eller skrivas om till siffror.
+——————————-</p>
+</div>
+<div id="variabler-kan-innehålla-olika-typer-av-information" class="section level4" number="23.0.2.2">
+<h4>
+<span class="header-section-number">23.0.2.2</span> Variabler kan innehålla olika typer av information<a class="anchor" aria-label="anchor" href="#variabler-kan-inneh%C3%A5lla-olika-typer-av-information"><i class="fas fa-link"></i></a>
+</h4>
+<p>Varje värde i en datavariabel kan innehålla vilken typ av information som helst, till exempel gatunummer, namn på barn födda i april, bruttonationalprodukten för olika länder eller alla enskilda ord i en roman organiserade med ett ord per rad. För att använda en datavariabel för beräkningar behöver denna variabel bestå av siffror eller skrivas om till siffror.
 När vi skapar variabler är det viktigt att all information som vi samlar in till en variabel har samma egenskaper. Om vi till exempel samlar in information om personers längd och inkomst bör vi placera denna information i två olika variabler: en variabel för längd och en variabel för inkomst.
-Om vi blandar information i en variabel, till exempel längd och inkomst, blir det omöjligt att göra beräkningar på variabeln. På samma sätt måste värdena inom en variabel använda samma måttenhet. Alla värden för personernas längd måste anges antingen i centimeter eller i meter.
-#### Datatabeller
-Ett vanligt sätt att organisera data är tabeller, där varje kolumn representerar en variabel och varje rad en observation. Tabell 1 visar ett exempel där vi har tre datavariabler och kallar dessa för <span class="math inline">\(x,\ y\)</span> och <span class="math inline">\(z\)</span>.
-Observationerna numrerar vi <span class="math inline">\(y_{1}\)</span> till <span class="math inline">\(y_{4}\)</span>, <span class="math inline">\(x_{1}\)</span> till <span class="math inline">\(x_{4}\)</span> och <span class="math inline">\(z_{1}\)</span> till <span class="math inline">\(z_{4}\)</span>. Det finns inga regler för hur variabler ska namnges eller numreras. Det förekommer även att variabler kallas för samma bokstav och skiljs åt genom numrering, till exempel variablerna <span class="math inline">\(x_{1},\ x_{2}\)</span> och så vidare.</li>
-</ul>
-<div class="inline-table"><table class="table table-sm">
+Om vi blandar information i en variabel, till exempel längd och inkomst, blir det omöjligt att göra beräkningar på variabeln. På samma sätt måste värdena inom en variabel använda samma måttenhet. Alla värden för personernas längd måste anges antingen i centimeter eller i meter.</p>
+</div>
+<div id="datatabeller" class="section level4" number="23.0.2.3">
+<h4>
+<span class="header-section-number">23.0.2.3</span> Datatabeller<a class="anchor" aria-label="anchor" href="#datatabeller"><i class="fas fa-link"></i></a>
+</h4>
+<p>Ett vanligt sätt att organisera data är tabeller, där varje kolumn representerar en variabel och varje rad en observation. Tabell 1 visar ett exempel där vi har tre datavariabler och kallar dessa för <span class="math inline">\(x,\ y\)</span> och <span class="math inline">\(z\)</span>.
+Observationerna numrerar vi <span class="math inline">\(y_{1}\)</span> till <span class="math inline">\(y_{4}\)</span>, <span class="math inline">\(x_{1}\)</span> till <span class="math inline">\(x_{4}\)</span> och <span class="math inline">\(z_{1}\)</span> till <span class="math inline">\(z_{4}\)</span>. Det finns inga regler för hur variabler ska namnges eller numreras. Det förekommer även att variabler kallas för samma bokstav och skiljs åt genom numrering, till exempel variablerna <span class="math inline">\(x_{1},\ x_{2}\)</span> och så vidare.</p>
+<p><strong>Tabell 1: Tre variabler med fyra observationer</strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="11%">
+<col width="28%">
+<col width="28%">
+<col width="28%">
+</colgroup>
 <thead><tr class="header">
-<th align="left">Tabell 1: Tre variabler med fyra observationer**</th>
+<th></th>
+<th>Variabel 1 <span class="math inline">\((y)\)</span> Variabel 2 <span class="math inline">\((x)\)</span> Va</th>
+<th align="left">riabel 3 <span class="math inline">\((z)\)</span>
+</th>
+<th></th>
 </tr></thead>
 <tbody><tr class="odd">
-<td align="left">Variabel 1 <span class="math inline">\((y)\)</span> Variabel 2 <span class="math inline">\((x)\)</span> Variabel 3 <span class="math inline">\((z)\)</span>
-</td>
+<td>Observation 1
+Observation 2
+Observation 3
+Observation 4</td>
+<td>
+<span class="math inline">\(y_{1}\)</span> <span class="math inline">\(x_{1}\)</span> <span class="math inline">\(z_{\)</span>y_{2}$ <span class="math inline">\(x_{2}\)</span> <span class="math inline">\(z_{\)</span>y_{3}$ <span class="math inline">\(x_{3}\)</span> <span class="math inline">\(z_{\)</span>y_{4}$ <span class="math inline">\(x_{4}\)</span> $z_{</td>
+<td align="left">1}$
+2}$
+3}$
+4}$</td>
+<td></td>
 </tr></tbody>
 </table></div>
-<p>Observation 1 <span class="math inline">\(y_{1}\)</span> <span class="math inline">\(x_{1}\)</span> <span class="math inline">\(z_{1}\)</span>
-Observation 2 <span class="math inline">\(y_{2}\)</span> <span class="math inline">\(x_{2}\)</span> <span class="math inline">\(z_{2}\)</span>
-Observation 3 <span class="math inline">\(y_{3}\)</span> <span class="math inline">\(x_{3}\)</span> <span class="math inline">\(z_{3}\)</span>
-Observation 4 <span class="math inline">\(y_{4}\)</span> <span class="math inline">\(x_{4}\)</span> <span class="math inline">\(z_{4}\)</span>
-—————————————————————————————————————————————
-På samma sätt som vi har tydliga kategorier för våra variabler i kolumnerna, behöver vi ha tydliga kategorier för våra observationer. Det observationerna beskriver kallas för <em>observationsenhet</em>. Det kan till exempel vara en observation per individ eller en per land. I regel behöver vi även avgränsa vilken tidpunkt en observation avser.
-Till exempel kan en observation innehålla uppgifter för ett land ett specifikt årtal, säg 2018. Nästa rad innehåller nästa observation. Om hela tabellen beskriver läget för olika länder år 2018 så är nästa observation för ett annat land. Men vi kan även ha flera observationer per land för olika årtal. Nästa observation kan då vara samma land men ett annat årtal: Sverige 2018, Sverige 2019 och så vidare.
-#### Olika typer av data
-Data som används för beräkningar brukar delas in i följande datatyper: <em>kvotdata</em>, <em>intervalldata</em>, <em>ordinaldata</em> och <em>nominaldata</em>. Ett sätt att tänka på detta är att vi har en variabel, <span class="math inline">\(x\)</span>, med någon form av information om verkligheten. Indelningen utgår sedan från följande kriterier:
+<p>På samma sätt som vi har tydliga kategorier för våra variabler i kolumnerna, behöver vi ha tydliga kategorier för våra observationer. Det observationerna beskriver kallas för <em>observationsenhet</em>. Det kan till exempel vara en observation per individ eller en per land. I regel behöver vi även avgränsa vilken tidpunkt en observation avser.
+Till exempel kan en observation innehålla uppgifter för ett land ett specifikt årtal, säg 2018. Nästa rad innehåller nästa observation. Om hela tabellen beskriver läget för olika länder år 2018 så är nästa observation för ett annat land. Men vi kan även ha flera observationer per land för olika årtal. Nästa observation kan då vara samma land men ett annat årtal: Sverige 2018, Sverige 2019 och så vidare.</p>
+</div>
+<div id="olika-typer-av-data" class="section level4" number="23.0.2.4">
+<h4>
+<span class="header-section-number">23.0.2.4</span> Olika typer av data<a class="anchor" aria-label="anchor" href="#olika-typer-av-data"><i class="fas fa-link"></i></a>
+</h4>
+<p>Data som används för beräkningar brukar delas in i följande datatyper: <em>kvotdata</em>, <em>intervalldata</em>, <em>ordinaldata</em> och <em>nominaldata</em>. Ett sätt att tänka på detta är att vi har en variabel, <span class="math inline">\(x\)</span>, med någon form av information om verkligheten. Indelningen utgår sedan från följande kriterier:
 - <em>Rangordning</em>: Kan observationerna i x rangordnas?
 - <em>Ekvidistans</em>: Är avståndet mellan två värden i x alltid lika stort?
 - <em>Absolut nollpunkt</em>: Är variabeln definierad så att det finns ett minsta tänkbart värde?
 Beroende på svaren på dessa tre frågor kan vi placera vår variabel i någon av de fyra datatyperna. De tre kriterierna och de fyra datatyperna sammanfattas i tabell 2. Låt oss gå igenom de fyra datatyperna och ge några exempel.</p>
-<div class="inline-table"><table class="table table-sm">
+<p><strong>Tabell 2: Fyra datatyper</strong></p>
+<div class="inline-table"><table style="width:89%;" class="table table-sm">
+<colgroup>
+<col width="22%">
+<col width="19%">
+<col width="19%">
+<col width="27%">
+</colgroup>
 <thead><tr class="header">
-<th align="left">Tabell 2: Fyra datatyper**</th>
+<th></th>
+<th align="left">Rangordning</th>
+<th align="left">Ekvidistans</th>
+<th align="left">Absolut nollpunkt</th>
 </tr></thead>
 <tbody><tr class="odd">
-<td align="left">Rangordning Ekvidistans Absolut nollpunkt</td>
+<td>Nominaldata
+Ordinaldata
+Intervalldata
+Kvotdata</td>
+<td align="left">Nej
+Ja
+Ja
+Ja</td>
+<td align="left">Nej
+Nej
+Ja
+Ja</td>
+<td align="left">Nej
+Nej
+Nej
+Ja</td>
 </tr></tbody>
 </table></div>
-<p>Nominaldata Nej Nej Nej
-Ordinaldata Ja Nej Nej
-Intervalldata Ja Ja Nej
-Kvotdata Ja Ja Ja
-—————————————————————
-<strong>Nominaldata</strong> är inte rangordnad, har ingen tydlig distans mellan varje skalsteg och ingen absolut nollpunkt. Typiska exempel på detta är kategoriska variabler, till exempel språk, namn på länder, könstillhörighet.
+<p><strong>Nominaldata</strong> är inte rangordnad, har ingen tydlig distans mellan varje skalsteg och ingen absolut nollpunkt. Typiska exempel på detta är kategoriska variabler, till exempel språk, namn på länder, könstillhörighet.
 I och med att informationen i denna typ av data mest handlar om att gruppera eller kategorisera är möjligheten att använda matematiska operationer begränsad till att främst definiera om en observation hör eller inte hör till den ena eller andra kategorin.
 <strong>Ordinaldata</strong> har rangordning men inte ekvidistans eller absolut nollpunkt. Ett typiskt exempel är skolbetyg, eller placering i en lista eller kö, till exempel plats 1, 2, 3 och så vidare. Ett annat exempel kan vara enkätsvar där respondenter ombeds att ranka alternativ från bästa till sämsta.
 Förutom att kategorisera kan vi för denna datatyp även använda matematiska operationer för olikhet. Till exempel kan vi säga att position 1 kommer före position 2, som kommer före position 3. Med denna typ av data kan vi beräkna <a href="https://www.matteboken.se/lektioner/skolar-7/statistik/medelvarde-och-median?gad_source=1&amp;gclid=CjwKCAiA1eO7BhATEiwAm0Ee-Bv25Y0RbebO8qldnUgmrc5WwiJYv0lqJcZlE6T6dwaU9KeoM5ycMBoCtr8QAvD_BwE">median, men vi kan inte beräkna medelvärde</a>.
@@ -206,6 +260,7 @@ Denna indelning i fyra typer av data är vanligt förekommande. Andra mer detalj
 <p><a href="k2-1-4.html">→ Nästa avsnitt: <strong>Population, superpopulation och urval</strong></a></p>
 </div>
 
+</div>
 </div>
 </div>
 <script src="js/exercises.js"></script><script>
@@ -349,7 +404,10 @@ Denna indelning i fyra typer av data är vanligt förekommande. Andra mer detalj
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k2-1-3"><span class="header-section-number">23</span> Information och variabler</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-20"><span class="header-section-number">23.0.1</span> Begrepp</a></li></ul>
+<a class="nav-link" href="#k2-1-3"><span class="header-section-number">23</span> Information och variabler</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-22"><span class="header-section-number">23.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-22"><span class="header-section-number">23.0.2</span> Teori</a></li>
+</ul>
 </li></ul>
 
       <div class="book-extra">

@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>48 Vad är egentligen regressionsanalys? | Matematik och statistik för samhällsvetare</title>
 <meta name="author" content="">
-<meta name="description" content="48.0.1 Begrepp Inga nya begrepp i detta avsnitt. ### Teori Vi började denna kurs med att studera orsakssamband (kapitel 1), där vi gick igenom kontrafaktisk analys, behandling och kontroll samt...">
+<meta name="description" content="48.0.1 Begrepp Inga nya begrepp i detta avsnitt.  48.0.2 Teori Vi började denna kurs med att studera orsakssamband (kapitel 1), där vi gick igenom kontrafaktisk analys, behandling och kontroll...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="48 Vad är egentligen regressionsanalys? | Matematik och statistik för samhällsvetare">
 <meta property="og:type" content="book">
-<meta property="og:description" content="48.0.1 Begrepp Inga nya begrepp i detta avsnitt. ### Teori Vi började denna kurs med att studera orsakssamband (kapitel 1), där vi gick igenom kontrafaktisk analys, behandling och kontroll samt...">
+<meta property="og:description" content="48.0.1 Begrepp Inga nya begrepp i detta avsnitt.  48.0.2 Teori Vi började denna kurs med att studera orsakssamband (kapitel 1), där vi gick igenom kontrafaktisk analys, behandling och kontroll...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="48 Vad är egentligen regressionsanalys? | Matematik och statistik för samhällsvetare">
-<meta name="twitter:description" content="48.0.1 Begrepp Inga nya begrepp i detta avsnitt. ### Teori Vi började denna kurs med att studera orsakssamband (kapitel 1), där vi gick igenom kontrafaktisk analys, behandling och kontroll samt...">
+<meta name="twitter:description" content="48.0.1 Begrepp Inga nya begrepp i detta avsnitt.  48.0.2 Teori Vi började denna kurs med att studera orsakssamband (kapitel 1), där vi gick igenom kontrafaktisk analys, behandling och kontroll...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -114,31 +114,46 @@
 <h1>
 <span class="header-section-number">48</span> Vad är egentligen regressionsanalys?<a class="anchor" aria-label="anchor" href="#k2-5-7"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-45" class="section level3" number="48.0.1">
+<div id="begrepp-47" class="section level3" number="48.0.1">
 <h3>
-<span class="header-section-number">48.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-45"><i class="fas fa-link"></i></a>
+<span class="header-section-number">48.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-47"><i class="fas fa-link"></i></a>
 </h3>
-<p><em>Inga nya begrepp i detta avsnitt.</em>
-### Teori
-Vi började denna kurs med att studera orsakssamband (kapitel 1), där vi gick igenom kontrafaktisk analys, behandling och kontroll samt experiment och observationsstudier. I kapitel 2 och 3 gick vi igenom hur vi kan mäta och jämföra samvariation, introducerade kovarians och korrelation samt regressionsanalys med minstakvadratmetoden.
+<p><em>Inga nya begrepp i detta avsnitt.</em></p>
+</div>
+<div id="teori-47" class="section level3" number="48.0.2">
+<h3>
+<span class="header-section-number">48.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-47"><i class="fas fa-link"></i></a>
+</h3>
+<p>Vi började denna kurs med att studera orsakssamband (kapitel 1), där vi gick igenom kontrafaktisk analys, behandling och kontroll samt experiment och observationsstudier. I kapitel 2 och 3 gick vi igenom hur vi kan mäta och jämföra samvariation, introducerade kovarians och korrelation samt regressionsanalys med minstakvadratmetoden.
 I kapitel 4 utökade vi regressionsanalysen till flera variabler för att kunna konstanthålla andra faktorer, använda dummyvariabler och interaktion, samt utföra regressionsanalys med matriser, vilket gav oss en generalisering av minstakvadratmetoden för valfritt antal variabler och observationer. Vi har gått igenom hur regressionsanalys är nära förknippat med analys av orsakssamband.
 I kapitel 5 har vi introducerade analys under osäkerhet och hur vi kan hantera detta genom att arbeta med sannolikhetsfördelningar, statistiska test, punktestimat samt skatta konfidensintervall. Vi har även gått igenom hur vi kan kombinera regressionsanalys med sannolikhet.
-I detta sista avsnitt ska vi nu reflektera över vad som egentligen är poängen med allt detta?
-### Från mönster till kausalitet
-I denna kurs har vi utgått från att vi ska använda regressionsanalys för att förstå orsakssamband. Men som vi gått igenom flera gånger är själva orsakssambandet något vi lägger till som en tolkning.
+I detta sista avsnitt ska vi nu reflektera över vad som egentligen är poängen med allt detta?</p>
+</div>
+<div id="från-mönster-till-kausalitet" class="section level3" number="48.0.3">
+<h3>
+<span class="header-section-number">48.0.3</span> Från mönster till kausalitet<a class="anchor" aria-label="anchor" href="#fr%C3%A5n-m%C3%B6nster-till-kausalitet"><i class="fas fa-link"></i></a>
+</h3>
+<p>I denna kurs har vi utgått från att vi ska använda regressionsanalys för att förstå orsakssamband. Men som vi gått igenom flera gånger är själva orsakssambandet något vi lägger till som en tolkning.
 Regressionsanalysen är i grund och botten en metod för att spåra mönster i information (data). Vi berörde detta i <a href="https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&amp;dl=0">avsnitt 2.3</a>, där vi även kort gick igenom andra metoder för att studera samvariation.
-Men kombinerat med rätt forskningsdesign, med kontroll och behandling, är dock regressionsanalys ett kraftfullt verktyg för att studera orsak och verkan.
-#### Linjära associationer
-I denna kurs har vi gått igenom hur vi kan estimera regressionsmodeller med minstakvadratmetoden. Det vi gör då är att estimera <em>linjära regressionsmodeller</em>.
+Men kombinerat med rätt forskningsdesign, med kontroll och behandling, är dock regressionsanalys ett kraftfullt verktyg för att studera orsak och verkan.</p>
+<div id="linjära-associationer" class="section level4" number="48.0.3.1">
+<h4>
+<span class="header-section-number">48.0.3.1</span> Linjära associationer<a class="anchor" aria-label="anchor" href="#linj%C3%A4ra-associationer"><i class="fas fa-link"></i></a>
+</h4>
+<p>I denna kurs har vi gått igenom hur vi kan estimera regressionsmodeller med minstakvadratmetoden. Det vi gör då är att estimera <em>linjära regressionsmodeller</em>.
 Linjära regressionsmodeller prövar om den genomsnittliga relationen mellan två eller flera variabler kan beskrivas med en linjär ekvation. Genom att estimera regressionsmodellen, utföra statistiska test och jämföra hur regressionslinjen blir jämfört med data, kan vi se om regressionsmodellen ger en godtagbar linjär approximation (en ungefärlig bild) av verkligheten (de data vi studerar).
 Det kan vara svårt att pröva om en regressionsmodell är en bra linjär approximation av data. Ett första steg kan vara att inspektera data i till exempel ett punktdiagram eller histogram, och jämföra olika spridningsmått. Vi kan både jämföra hur den förklarade variabeln samvarierar med våra förklarande variabler, och jämföra hur residualerna fördelar sig kring en regressionslinje.
 Att en regressionsmodell är linjär innebär att alla koefficienter i modellen har exponent 1. Följande modeller är inte linjära:
 <span class="math inline">\(\begin{matrix} Y &amp; \ = a + \frac{1}{b}X + e \\ logZ &amp; \ = \alpha + \beta D + \epsilon \end{matrix}\)</span> (1)
 I den första regressionsmodellen har vi <span class="math inline">\(\frac{1}{b} = b^{- 1}\)</span>. I den andra modellen har vi att <span class="math inline">\(log\left( Z_{1} + Z_{2} \right) \neq log\left( Z_{1} \right) + log\left( Z_{2} \right)\)</span>, där <span class="math inline">\(Z_{1}\)</span> och <span class="math inline">\(Z_{2}\)</span> är två valfria värden i variabel <span class="math inline">\(Z\)</span>. Detta innebär att modellen inte är linjär.
 Linjära regressionsmodeller har många fördelar. Det är till exempel ofta relativt enkelt att tolka vad varje koefficient i modellen innebär. Det kan snabbt bli mer komplicerat om vi arbetar ickelinjär samvariation.
-Men det finns även nackdelar med linjära regressionsmodeller – eftersom de enbart kan användas för att fånga just linjär samvariation. Risken finns då att vi missar samvariation som existerar i data men som inte är linjär.
-#### BNP och logaritmerad BNP
-Även om modellen BLIR ickelinjär i originalskala, kan vi ofta estimera den med minstakvadratmetoden genom att transformera variablerna först.
+Men det finns även nackdelar med linjära regressionsmodeller – eftersom de enbart kan användas för att fånga just linjär samvariation. Risken finns då att vi missar samvariation som existerar i data men som inte är linjär.</p>
+</div>
+<div id="bnp-och-logaritmerad-bnp" class="section level4" number="48.0.3.2">
+<h4>
+<span class="header-section-number">48.0.3.2</span> BNP och logaritmerad BNP<a class="anchor" aria-label="anchor" href="#bnp-och-logaritmerad-bnp"><i class="fas fa-link"></i></a>
+</h4>
+<p>Även om modellen BLIR ickelinjär i originalskala, kan vi ofta estimera den med minstakvadratmetoden genom att transformera variablerna först.
 Ett sätt att illustrera detta är att jämföra BNP för Sverige var tionde år under perioden 1800–2000, se tabell 1 med årtal, BNP och logaritmerad BNP. I figur 1 illustreras den linjära trenden över tid för BNP respektive <span class="math inline">\(ln(BNP)\)</span> i varsitt diagram.
 I det vänstra diagrammet är trenden skattad utifrån följande regressionsmodell:
 <span class="math inline">\(Y_{t} = a + b\text{Å}R_{t} + V_{t}\)</span> (2)
@@ -149,28 +164,106 @@ En linjär modell passar relativt dåligt när vi använder nominell BNP i krono
 Regressionslinjen fångar visserligen den positiva utvecklingen men ger inte en representativ bild av den långsiktiga trenden i BNP. Under åren 1800—1850, till vänster i diagrammet, är regressionslinjen under 0.
 Detta innebär att regressionsmodellen predikterar att BNP var negativ alla år före 1850. Eftersom BNP är ett mått på allting som produceras, köps och säljs, i ett samhälle så är detta inte möjligt.
 Den linjära modellen fångar dock den långsiktiga trenden i logaritmerad BNP relativt väl, vilket syns i det högra diagrammet där punkterna följer regressionslinjen för alla åren 1800–2000.</p>
-<div class="inline-table"><table class="table table-sm">
+<p><strong>Tabell 1: BNP och logarimterad BNP</strong></p>
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<colgroup>
+<col width="12%">
+<col width="12%">
+<col width="17%">
+<col width="10%">
+<col width="12%">
+<col width="15%">
+<col width="17%">
+</colgroup>
 <thead><tr class="header">
-<th align="left">Tabell 1: BNP och logarimterad BNP**</th>
+<th align="right"><strong>År</strong></th>
+<th align="right"><strong>BNP</strong></th>
+<th align="right"><strong>ln(BNP)</strong></th>
+<th align="left"><strong> </strong></th>
+<th align="right"><strong>År</strong></th>
+<th align="right"><strong>BNP</strong></th>
+<th align="right"><strong>ln(BNP)</strong></th>
 </tr></thead>
 <tbody><tr class="odd">
-<td align="left">
-<strong>År</strong> <strong>BNP</strong> <strong>ln(BNP)</strong> <strong> </strong> <strong>År</strong> <strong>BNP</strong> <strong>ln(BNP)</strong>
-</td>
+<td align="right">1800
+1810
+1820
+1830
+1840
+1850
+1860
+1870
+1880
+1890
+1900</td>
+<td align="right">115
+178
+278
+306
+382
+461
+743
+938
+1 314
+1 477
+2 245</td>
+<td align="right">4,7
+5,2
+5,6
+5,7
+5,9
+6,1
+6,6
+6,8
+7,2
+7,3
+7,7</td>
+<td align="left"> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </td>
+<td align="right">1910
+1920
+1930
+1940
+1950
+1960
+1970
+1980
+1990
+2000
+ </td>
+<td align="right">3 302
+12 200
+9 271
+13 979
+31 827
+72 272
+175 222
+531 884
+1 365 700
+2 013 311
+ </td>
+<td align="right">8,1
+9,4
+9,1
+9,5
+10,4
+11,2
+12,1
+13,2
+14,1
+14,5
+ </td>
 </tr></tbody>
 </table></div>
-<pre><code>   1800       115           4,7              1910       3 302           8,1
-   1810       178           5,2              1920      12 200           9,4
-   1820       278           5,6              1930       9 271           9,1
-   1830       306           5,7              1940      13 979           9,5
-   1840       382           5,9              1950      31 827          10,4
-   1850       461           6,1              1960      72 272          11,2
-   1860       743           6,6              1970     175 222          12,1
-   1870       938           6,8              1980     531 884          13,2
-   1880     1 314           7,2              1990   1 365 700          14,1
-   1890     1 477           7,3              2000   2 013 311          14,5
-   1900     2 245           7,7                                            </code></pre>
-<hr>
 <div class="fig-caption">
 <p>Förklaring: Data från <a href="http://www.historia.se">www.historia.se</a>.</p>
 </div>
@@ -178,15 +271,23 @@ Den linjära modellen fångar dock den långsiktiga trenden i logaritmerad BNP r
 <div class="float">
 <img src="img/k2-5-7-image1.png" style="width:4.89251in;height:2.7008in" alt="En bild som visar diagram, linje, Graf, skärmbild Automatiskt genererad beskrivning"><div class="figcaption">En bild som visar diagram, linje, Graf, skärmbild Automatiskt genererad beskrivning</div>
 </div>
-<p>Förklaring. Data från <a href="http://www.historia.se">www.historia.se</a>, samma som i tabell 1.
-### Varför fungerar logaritm för BNP?
-BNP växer exponentiellt: Varje år ökar BNP i genomsnitt med en viss procentsats, inte ett fast belopp i kronor. Exponentiell tillväxt kan beskrivas matematiskt med följande ekvation:
+<p>Förklaring. Data från <a href="http://www.historia.se">www.historia.se</a>, samma som i tabell 1.</p>
+</div>
+</div>
+<div id="varför-fungerar-logaritm-för-bnp" class="section level3" number="48.0.4">
+<h3>
+<span class="header-section-number">48.0.4</span> Varför fungerar logaritm för BNP?<a class="anchor" aria-label="anchor" href="#varf%C3%B6r-fungerar-logaritm-f%C3%B6r-bnp"><i class="fas fa-link"></i></a>
+</h3>
+<p>BNP växer exponentiellt: Varje år ökar BNP i genomsnitt med en viss procentsats, inte ett fast belopp i kronor. Exponentiell tillväxt kan beskrivas matematiskt med följande ekvation:
 <span class="math inline">\(Y_{t} = Y_{0}*\ e^{rt}\)</span> (4)
 där <span class="math inline">\(Y_{t}\)</span> är BNP valfritt år <span class="math inline">\(t\)</span>. <span class="math inline">\(Y_{0}\)</span> är BNP år noll (startåret). Faktorn <span class="math inline">\(e^{rt}\)</span> är Eulers tal <span class="math inline">\(e\)</span>. Exponenten <span class="math inline">\(rt\)</span> är tillväxttakten <span class="math inline">\(r\)</span> multiplicerad med antal år <span class="math inline">\(t\)</span>. Tar vi naturliga logaritmen av detta uttryck får vi:
 <span class="math inline">\(\ln\left( Y_{t} \right) = ln\left( Y_{0} \right) + rt\)</span> (5)
-När vi tar naturliga logaritmen av BNP blir den exponentiella tillväxten linjär, vilket gör att vår linjära regressionsmodell fungerar. Detta är vanligt för många ekonomiska variabler som växer kjust procentuellt.
-#### En regressionsmodell fångar inte allt
-Låt oss gå igenom ett exempel till, men denna gång med påhittade data. Figur 2 beskriver två diagram där prickarna återigen visar kombinerade värden av variablerna <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>. De räta linjerna är regressionslinjer beräknade utifrån minstakvadratmetoden för regressionsmodeller av typen:
+När vi tar naturliga logaritmen av BNP blir den exponentiella tillväxten linjär, vilket gör att vår linjära regressionsmodell fungerar. Detta är vanligt för många ekonomiska variabler som växer kjust procentuellt.</p>
+<div id="en-regressionsmodell-fångar-inte-allt" class="section level4" number="48.0.4.1">
+<h4>
+<span class="header-section-number">48.0.4.1</span> En regressionsmodell fångar inte allt<a class="anchor" aria-label="anchor" href="#en-regressionsmodell-f%C3%A5ngar-inte-allt"><i class="fas fa-link"></i></a>
+</h4>
+<p>Låt oss gå igenom ett exempel till, men denna gång med påhittade data. Figur 2 beskriver två diagram där prickarna återigen visar kombinerade värden av variablerna <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>. De räta linjerna är regressionslinjer beräknade utifrån minstakvadratmetoden för regressionsmodeller av typen:
 <span class="math inline">\(y = a + bx + v\)</span> (6)
 Nu är linjerna horisontella, vilket innebär att lutningskoefficienterna är lika med 0 i båda fallen. När <span class="math inline">\(x\)</span> ökar är detta inte associerat med någon förändring i variabel <span class="math inline">\(y\)</span>.
 Men när vi tittar på diagrammen i figuren kan vi tydligt se att prickarna i de båda diagrammen samvarierar i olika mönster. I det vänstra diagrammet är relationen mellan variablerna tydligt positiv, men endast om vi studerar observationerna som två grupper.
@@ -200,15 +301,20 @@ Detta innebär inte att regressionsanalys är dåligt. Men vi måste vara noga m
 <div class="fig-caption">
 <p>Förklaring: Prickarna i diagrammen följer tydliga mönster. Regressionslinjerna i diagrammen är de svarta horisontella linjerna i diagrammen, ritade med regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span>. Lutningskoefficient <span class="math inline">\(b\)</span> är 0. Regressionslinjerna i diagrammen indikerar ingen association mellan <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>, trots att det finns en form av samvariation.</p>
 </div>
-<div id="linjära-regressioner-är-ändå-väldigt-användbara" class="section level4" number="48.0.1.1">
+</div>
+<div id="linjära-regressioner-är-ändå-väldigt-användbara" class="section level4" number="48.0.4.2">
 <h4>
-<span class="header-section-number">48.0.1.1</span> Linjära regressioner är ändå väldigt användbara<a class="anchor" aria-label="anchor" href="#linj%C3%A4ra-regressioner-%C3%A4r-%C3%A4nd%C3%A5-v%C3%A4ldigt-anv%C3%A4ndbara"><i class="fas fa-link"></i></a>
+<span class="header-section-number">48.0.4.2</span> Linjära regressioner är ändå väldigt användbara<a class="anchor" aria-label="anchor" href="#linj%C3%A4ra-regressioner-%C3%A4r-%C3%A4nd%C3%A5-v%C3%A4ldigt-anv%C3%A4ndbara"><i class="fas fa-link"></i></a>
 </h4>
 <p>Utifrån ovanstående beskrivning kanske vissa får känslan att det är meningslöst med linjära regressioner. Men ickelinjära regressionsmodeller är inte heller en universallösning.
 På samma sätt som vi riskerar att missa viktiga delar när vi använder linjära regressionsmodeller riskerar vi att missa viktiga slutsatser om vi enbart använder ickelinjära regressionsmodeller.
-Linjära regressioner är mycket användbara – till rätt typ av problem. Många gånger är vi intresserade av samvariationen inom ett avgränsat område, där just den linjära samvariationen är det intressanta.
-#### Vi behöver både diagram och beräkningar
-Det är även viktigt att studera data noga på flera sätt, både i diagram och beräkningar, även när vi faktiskt finner samvariation. Ett sätt att illustrera detta ges i figur 3.
+Linjära regressioner är mycket användbara – till rätt typ av problem. Många gånger är vi intresserade av samvariationen inom ett avgränsat område, där just den linjära samvariationen är det intressanta.</p>
+</div>
+<div id="vi-behöver-både-diagram-och-beräkningar" class="section level4" number="48.0.4.3">
+<h4>
+<span class="header-section-number">48.0.4.3</span> Vi behöver både diagram och beräkningar<a class="anchor" aria-label="anchor" href="#vi-beh%C3%B6ver-b%C3%A5de-diagram-och-ber%C3%A4kningar"><i class="fas fa-link"></i></a>
+</h4>
+<p>Det är även viktigt att studera data noga på flera sätt, både i diagram och beräkningar, även när vi faktiskt finner samvariation. Ett sätt att illustrera detta ges i figur 3.
 Figur 3 visar fyra exempel där kombinerade värden för variablerna X (horisontella axeln) och Y (vertikala axeln) är uppritade. y-variabeln och x-variabeln samma medelvärde: <span class="math inline">\(\overline{Y} = 7,5\)</span> och <span class="math inline">\(\overline{X} = 9\)</span>. Koefficienterna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> i regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> som ritar ut regressionslinjerna i respektive diagram har samma värden i alla fyra diagrammen: <span class="math inline">\(\widehat{a} = 3\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>. Linjerna lutar upp mot höger i respektive diagram, vilket ges av att <span class="math inline">\(\widehat{b} \&gt; 0\)</span>.
 I alla fyra diagrammen kan vi alltså med hjälp av minstakvadratmetoden finna en positiv samvariation som i regressionsmodellen ser lika ut. Exemplet illustrerar att trots att mönstren i de fyra diagrammen skiljer sig kraftigt åt kan beräknade resultat lätt ge intryck av att olika samlingar med data har mer gemensamt än de egentligen har.
 Dessa fyra diagram presenterades första gången 1973 av den brittiske statistikern Francis John Anscombe (<a href="https://www.lithoguru.com/scientist/statistics/Anscombe_Graphs%20in%20Statistical%20Analysis_1973.pdf">Anscombe, 1973</a>). Exemplen illustrerar vikten av att både räkna på samvariation och studera data i diagram.
@@ -220,9 +326,9 @@ Punkternas mönster är tydligt ickelinjärt, men vi kan ändå beräkna en linj
 </div>
 </div>
 </div>
-<div id="vad-är-egentligen-regressionsanalys" class="section level3" number="48.0.2">
+<div id="vad-är-egentligen-regressionsanalys" class="section level3" number="48.0.5">
 <h3>
-<span class="header-section-number">48.0.2</span> Vad är egentligen regressionsanalys?<a class="anchor" aria-label="anchor" href="#vad-%C3%A4r-egentligen-regressionsanalys"><i class="fas fa-link"></i></a>
+<span class="header-section-number">48.0.5</span> Vad är egentligen regressionsanalys?<a class="anchor" aria-label="anchor" href="#vad-%C3%A4r-egentligen-regressionsanalys"><i class="fas fa-link"></i></a>
 </h3>
 <p>Regressionsanalys är ett verktyg för att mäta samvariation och en grund för kausal inferens, när den kombineras med bra forskningsdesign. Regressionsanalys är ett sätt att testa teorier om hur världen fungerar men som samtidigt kräver både matematisk precision och kritiskt tänkande.
 Regressionsanalys är inte matte för mattens skull. Detta är grunden för hur vi kan lära oss något pålitligt om orsak och verkan i en komplex värld. Utan dessa metoder skulle vi vara begränsade till anekdoter och gissningar. Med dessa metoder kan vi utvärdera om mediciner fungerar, studera effekter av politiska beslut och förstå ekonomiska samband.
@@ -378,8 +484,11 @@ Som detta avsnitt förhoppningsvis illustrerar är ett analytiskt verktyg aldrig
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
 <a class="nav-link" href="#k2-5-7"><span class="header-section-number">48</span> Vad är egentligen regressionsanalys?</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#begrepp-45"><span class="header-section-number">48.0.1</span> Begrepp</a></li>
-<li><a class="nav-link" href="#vad-%C3%A4r-egentligen-regressionsanalys"><span class="header-section-number">48.0.2</span> Vad är egentligen regressionsanalys?</a></li>
+<li><a class="nav-link" href="#begrepp-47"><span class="header-section-number">48.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-47"><span class="header-section-number">48.0.2</span> Teori</a></li>
+<li><a class="nav-link" href="#fr%C3%A5n-m%C3%B6nster-till-kausalitet"><span class="header-section-number">48.0.3</span> Från mönster till kausalitet</a></li>
+<li><a class="nav-link" href="#varf%C3%B6r-fungerar-logaritm-f%C3%B6r-bnp"><span class="header-section-number">48.0.4</span> Varför fungerar logaritm för BNP?</a></li>
+<li><a class="nav-link" href="#vad-%C3%A4r-egentligen-regressionsanalys"><span class="header-section-number">48.0.5</span> Vad är egentligen regressionsanalys?</a></li>
 </ul>
 </li></ul>
 

@@ -2,11 +2,13 @@
 
 ### Begrepp
 *Inga nya matematiska begrepp i detta avsnitt.*
+
 ### Teori
 De senaste decennierna har barnadödligheten i hela världen sjunkit kraftigt. Den varierar dock fortfarande stort bland världens länder. Tabell 1 beskriver den genomsnittliga barnadödligheten per kontinent år 1950 och 2016. Både år 1950 och 2016 var barnadödligheten störst i Afrika.
 Barnadödligheten har dock även minskat som mest i de afrikanska länderna, från cirka 300 per 1 000 barn år 1950, till att år 2016 vara nere på 62,7 avlidna barn per 1 000 under 5 års ålder. Under samma period minskade barnadödligheten i länderna i Europa från 86,7 år 1950 till 4,9 år 2016.
 
 **Tabell 1: Antal avlidna barn per 1 000 barn under 5 år**
+
   --------------------------------------------
                  **År 1950**    **År 2016**
   -------------- -------------- --------------
@@ -43,6 +45,7 @@ Den fjärde kolumnen (**Asylsökande / befolkning**) visar antal asylsökande di
 Låt oss nu beräkna hur stor procentuell andel som respektive land tar emot av hela gruppen asylsökande i denna tabell. Resultaten redovisas i kolumnen längst till höger. Räknat på detta sätt tar USA emot störst andel och Sverige tar emot minst, bland länderna i tabellen.
 
 **Tabell 2: Befolkning och antal asylsökande per land**
+
   ------------------------------------------------------------------------------------------------------------------------------------
   **Land**     **Asylsökande 2023**   **Befolkning 2023**   **Asylsökande / befolkning**   **Andel av de asylsökanden i denna tabell**
   ---------- ---------------------- --------------------- ------------------------------ ---------------------------------------------

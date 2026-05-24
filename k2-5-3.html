@@ -114,9 +114,9 @@
 <h1>
 <span class="header-section-number">44</span> Statistisk analys 1<a class="anchor" aria-label="anchor" href="#k2-5-3"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-41" class="section level3" number="44.0.1">
+<div id="begrepp-43" class="section level3" number="44.0.1">
 <h3>
-<span class="header-section-number">44.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-41"><i class="fas fa-link"></i></a>
+<span class="header-section-number">44.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-43"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -126,17 +126,23 @@
 <li>
 <strong>Standardfel:</strong> Mått på osäkerheten i ett punktestimat (engelska <em>standard error</em>).</li>
 <li>
-<strong>Medelvärdets standardfel:</strong> Estimerad osäkerhet i medelvärdets estimat. Beräknas som <span class="math inline">\(s_{x}/n^{\frac{1}{2}}\)</span> där <span class="math inline">\(s_{x}\)</span> är estimerad standardavvikelse och <span class="math inline">\(n\)</span> är antal observationer i urvalet.
-### Teori
-Under denna kurs har vi introducerat skillnaden mellan det vi kallar populationen (det vi vill studera), vars värden i regel är okända, och den urvalsdata vi har tillgång till (det vi kan studera). Nu ska vi närmare koppla ihop dessa begrepp med det vi gått igenom om sannolikhetsfördelningar.
-#### Statistiskt test
-Ett statistiskt test är en kvantitativ beräkning där vi räknar på sannolikheten för om ett påstående stämmer eller ej. Vi kommer gå igenom två typer av test: Punktestimat och intervallskattning. Punktestimat innebär att vi räknar på ett enda värde, som medelvärde = 82 år. Intervallskattning syftar på att vi räknar på sannolikheten att ett värde (till exempel medelvärdet) befinner sig inom ett intervall, som 80 och 84 år. I detta avsnitt går vi igenom punktestimat. I nästa avsnitt lär vi oss intervallskattning.
+<strong>Medelvärdets standardfel:</strong> Estimerad osäkerhet i medelvärdets estimat. Beräknas som <span class="math inline">\(s_{x}/n^{\frac{1}{2}}\)</span> där <span class="math inline">\(s_{x}\)</span> är estimerad standardavvikelse och <span class="math inline">\(n\)</span> är antal observationer i urvalet.</li>
+</ul>
+</div>
+<div id="teori-43" class="section level3" number="44.0.2">
+<h3>
+<span class="header-section-number">44.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-43"><i class="fas fa-link"></i></a>
+</h3>
+<p>Under denna kurs har vi introducerat skillnaden mellan det vi kallar populationen (det vi vill studera), vars värden i regel är okända, och den urvalsdata vi har tillgång till (det vi kan studera). Nu ska vi närmare koppla ihop dessa begrepp med det vi gått igenom om sannolikhetsfördelningar.</p>
+<div id="statistiskt-test" class="section level4" number="44.0.2.1">
+<h4>
+<span class="header-section-number">44.0.2.1</span> Statistiskt test<a class="anchor" aria-label="anchor" href="#statistiskt-test"><i class="fas fa-link"></i></a>
+</h4>
+<p>Ett statistiskt test är en kvantitativ beräkning där vi räknar på sannolikheten för om ett påstående stämmer eller ej. Vi kommer gå igenom två typer av test: Punktestimat och intervallskattning. Punktestimat innebär att vi räknar på ett enda värde, som medelvärde = 82 år. Intervallskattning syftar på att vi räknar på sannolikheten att ett värde (till exempel medelvärdet) befinner sig inom ett intervall, som 80 och 84 år. I detta avsnitt går vi igenom punktestimat. I nästa avsnitt lär vi oss intervallskattning.
 Vi ska demonstrera vad ett statistiskt test är genom att jämföra två medelvärden. Figur 1 illustrerar den genomsnittliga livslängden för män respektive kvinnor i Sveriges 290 kommuner. De streckade vertikala linjerna mitt i staplarna beskriver medelvärdet för kvinnor respektive män i observationerna i diagrammet. Lite förenklat kan vi se att observationerna för män respektive kvinnor följer ungefär en normalfördelning vardera.
 Medelvärdet för kvinnor ligger tydligt högre än medelvärdet för männen. Men det vi tittar på här är medelvärden per kommun. Och det är medelvärden beräknade vid en specifik tidpunkt, som avser att beskriva hur det såg ut i Sverige 2022.
 Säg nu att detta är urvalsdata för en större population. Vi kan till exempel tänka oss att det är en uppskattning av hur det ser ut i Sveriges befolkning idag. Eller kanske är ett exempel på män och kvinnor i de nordiska länderna. Eller kanske ett exempel på skillnaden i livslängd mellan män och kvinnor under hela 2020-talet. Utifrån våra urvalsdata vill nu veta om medelvärdet i livslängd för den större populationen kvinnor och män verkligen skiljer sig.
-<strong>Figur 1: Genomsnittlig livslängd för män respektive kvinnor i Sveriges kommuner</strong><img src="img/k2-5-3-image1.png" style="width:4.47917in;height:2.98611in" alt="En bild som visar diagram, text, skärmbild, Graf Automatiskt genererad beskrivning">
-</li>
-</ul>
+<strong>Figur 1: Genomsnittlig livslängd för män respektive kvinnor i Sveriges kommuner</strong><img src="img/k2-5-3-image1.png" style="width:4.47917in;height:2.98611in" alt="En bild som visar diagram, text, skärmbild, Graf Automatiskt genererad beskrivning"></p>
 <div class="fig-caption">
 <p>Förklaring: Staplarna visar spridningen i genomsnittlig medellivslängd i Sveriges kommuner. En observation = ett medelvärde per kommun. Den genomsnittliga livslängden varierar både bland män och kvinnor. Staplar överlappar varandra något, vilket beror på att i de kommuner där män lever som längst i genomsnitt, är denna livslängd högre jämfört med de kommuner där kvinnor i genomsnitt lever som kortast.
 Detta kan vi pröva genom ett statistiskt test. Vi formulerar detta som att vi vill beräkna sannolikheten för om populationernas medelvärden är desamma: <span class="math inline">\(\mu_{\text{kvinnor}\ } = \mu_{\text{män}}\)</span>. Vi vet inte populationsvärdena. Vi har observationer som eventuellt kan beskrivas som att de är hämtade från två separata populationer, det vill säga populationerna med mäns och kvinnors genomsnittsinkomster per kommun.
@@ -152,9 +158,10 @@ Detta <span class="math inline">\(z\)</span>-värde kan vi jämföra mot standar
 Vårt beräknade <span class="math inline">\(z\)</span>-värde hamnar långt ut i standardnormalfördelningens svans till höger om (över) medelvärdet. Så långt att detta <span class="math inline">\(z\)</span>-värde inte ryms på diagrammets horisontella axel. Detta indikerar att det är mycket osannolikt att de två populationerna (män och kvinnors livslängd) har samma medelvärde. Detta är resultatet för vårt statistiska test. Testet stödjer alltså inte att populationernas medelvärden är samma. Det verkar alltså finnas en skillnad.
 Notera att det inte säger oss någonting om varför siffrorna ser ut så här. Det visar inte på något orsakssamband eller någon förklaring. Det indikerar endast att det i statistisk bemärkelse, givet den data vi använt, är osannolikt att populationernas medelvärden, <span class="math inline">\(\mu_{män}\)</span> och <span class="math inline">\(\mu_{kvinnor}\)</span>, är lika.</p>
 </div>
-<div id="statistisk-inferens-och-punktestimat" class="section level4" number="44.0.1.1">
+</div>
+<div id="statistisk-inferens-och-punktestimat" class="section level4" number="44.0.2.2">
 <h4>
-<span class="header-section-number">44.0.1.1</span> Statistisk inferens och punktestimat<a class="anchor" aria-label="anchor" href="#statistisk-inferens-och-punktestimat"><i class="fas fa-link"></i></a>
+<span class="header-section-number">44.0.2.2</span> Statistisk inferens och punktestimat<a class="anchor" aria-label="anchor" href="#statistisk-inferens-och-punktestimat"><i class="fas fa-link"></i></a>
 </h4>
 <p>Statistisk inferens eller statistisk slutledning, kallas den process där vi med hjälp av ett empiriskt datamaterial försöker dra slutsatser om okända egenskaper i en population. Detta är vad vi gör när vi försöker estimera värdena i en population, genom att beräkna resultat med urvalsdata.
 Vi kan ta medelvärdet som exempel, vilket vi introducerat tidigare. Om vi vill veta populationens medelvärde <span class="math inline">\(\mu_{X}\)</span> för en variabel <span class="math inline">\(X\)</span> estimerar vi detta i urvalsdatan med den vanliga formeln för medelvärde:
@@ -163,16 +170,24 @@ Om det medelvärde vi beräknar syftar till att uttala oss om en (större) popul
 I avsnitt <a href="https://www.dropbox.com/scl/fi/f0sm847poizoh98wjzs2w/5-1-Sannolikhet-och-slump.docx?rlkey=bkxlftjmtdnxxyp0ickav3s77&amp;dl=0">5.1</a> och <a href="https://www.dropbox.com/scl/fi/wi8c30n2yna36a7zbiyoh/5-2-V-ntev-rde-varians-slumpm-ssiga-variabler.docx?rlkey=rmkxixrrun7q0rqeg82lk2kky&amp;dl=0">5.2</a> gick vi igenom estimatorer för regressionsmodellers koefficienter. Ekvation 4 är <em>medelvärdets estimator</em>. Alltså, varje estimerat medelvärde är en konstant men ekvationen vi använder för att med en samling urvalsobservationer estimera medelvärdet kallar vi för estimator.
 Om vi vill veta populationens okända varians <span class="math inline">\(\sigma_{X}^{2}\)</span> kan vi estimera detta med urvalsdatan som:
 <span class="math inline">\(var(X) = \left( \frac{1}{n - 1} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}\)</span> (5)
-Detta är således estimatorn för variansen. I båda dessa fall estimerar vi specifika värden, vilket kallas för att estimera punkter, punktestimat eller att skatta punkter (engelska <em>point estimation</em>). Både medelvärdet och variansen är exempel på punktestimat.
-#### Medelvärdets estimator
-Nu ska vi fördjupa oss lite i hur vi kan resonera kring hur och varför våra estimat kan avvika från värdena i populationen som vi vill estimera (se gärna <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/felkallor-och-signifikans#!/">matte 1</a> och introduktionen till <em>felkällor,</em> <em>statistisk signifikans</em>).
+Detta är således estimatorn för variansen. I båda dessa fall estimerar vi specifika värden, vilket kallas för att estimera punkter, punktestimat eller att skatta punkter (engelska <em>point estimation</em>). Både medelvärdet och variansen är exempel på punktestimat.</p>
+</div>
+<div id="medelvärdets-estimator" class="section level4" number="44.0.2.3">
+<h4>
+<span class="header-section-number">44.0.2.3</span> Medelvärdets estimator<a class="anchor" aria-label="anchor" href="#medelv%C3%A4rdets-estimator"><i class="fas fa-link"></i></a>
+</h4>
+<p>Nu ska vi fördjupa oss lite i hur vi kan resonera kring hur och varför våra estimat kan avvika från värdena i populationen som vi vill estimera (se gärna <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/felkallor-och-signifikans#!/">matte 1</a> och introduktionen till <em>felkällor,</em> <em>statistisk signifikans</em>).
 Medelvärdets estimator har ett väntevärde, ett förväntat värde, vilket är definierat som populationens medelvärde:
 <span class="math inline">\(E\left( \overline{x} \right) = E\left( \frac{1}{n}\sum_{i}^{n}x_{i} \right) = \mu_{X}\)</span> (6)
 Detta väntevärde innebär alltså, enligt stora talens lag (se <a href="https://www.dropbox.com/scl/fi/f0sm847poizoh98wjzs2w/5-1-Slumpm-ssiga-variabler-och-diskreta-sannolikhetsf-rdelningar.docx?rlkey=bkxlftjmtdnxxyp0ickav3s77&amp;dl=0">avsnitt 5.1</a>), att givet att vi tar oändligt många urval från en population så kommer vårt estimerade medelvärde att närma sig populationens medelvärde.
 När vi estimerar medelvärdet <span class="math inline">\(\overline{x}\)</span> vet vi att detta skiljer sig mer eller mindre från populationsvärdet <span class="math inline">\(\mu_{X}\)</span>. Eftersom vi inte har tillgång till all information om populationen finns det slumpmässiga fel i våra estimat. Dessa kan vara mycket små, men existerar oavsett alltid.
-Skillnaden mellan estimerade <span class="math inline">\(\overline{x}\)</span> och populationens <span class="math inline">\(\mu_{X}\)</span> kan vi beskriva som <span class="math inline">\(\overline{x} - \mu_{X}\)</span>. Så länge vi inte känner till populationsmedelvärdet <span class="math inline">\(\mu_{X}\)</span> kan vi inte beräkna denna differens exakt.
-#### Standardfel
-För att beräkna ett mått på osäkerheten i en punktskattning kan vi estimera det som kallas för <em>standardfel</em> (engelska <em>standard error</em>). Standardfelet beräknas på olika sätt beroende på vilket punktestimat vi studerar. Medelvärdets standardfel estimeras på följande sätt:
+Skillnaden mellan estimerade <span class="math inline">\(\overline{x}\)</span> och populationens <span class="math inline">\(\mu_{X}\)</span> kan vi beskriva som <span class="math inline">\(\overline{x} - \mu_{X}\)</span>. Så länge vi inte känner till populationsmedelvärdet <span class="math inline">\(\mu_{X}\)</span> kan vi inte beräkna denna differens exakt.</p>
+</div>
+<div id="standardfel" class="section level4" number="44.0.2.4">
+<h4>
+<span class="header-section-number">44.0.2.4</span> Standardfel<a class="anchor" aria-label="anchor" href="#standardfel"><i class="fas fa-link"></i></a>
+</h4>
+<p>För att beräkna ett mått på osäkerheten i en punktskattning kan vi estimera det som kallas för <em>standardfel</em> (engelska <em>standard error</em>). Standardfelet beräknas på olika sätt beroende på vilket punktestimat vi studerar. Medelvärdets standardfel estimeras på följande sätt:
 <span class="math inline">\(\text{Standardfel } = \frac{s_{x}}{n^{\frac{1}{2}}} = \frac{s_{x}}{\sqrt{n}} = \sqrt{\frac{s_{x}^{2}}{n}}\)</span> (7)
 där <span class="math inline">\(s_{x}\)</span> är estimerad standardavvikelse för urvalsobservationerna och <span class="math inline">\(n\)</span> är antal observationer i urvalet. Ekvation 7 visar olika sätt att skriva samma sak.
 Ekvationen kan läsas som att ju mindre spridning vi har i observationerna (täljaren), desto mindre blir standardfelet. Eftersom vi har antal observationer <span class="math inline">\(n\)</span> i nämnaren innebär detta att standardfelet tenderar att minska ju fler observationer vi inkluderar i vårt urval.
@@ -332,7 +347,10 @@ Båda dessa saker är logiska. Ju mindre utspridda populationens värden är, de
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k2-5-3"><span class="header-section-number">44</span> Statistisk analys 1</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-41"><span class="header-section-number">44.0.1</span> Begrepp</a></li></ul>
+<a class="nav-link" href="#k2-5-3"><span class="header-section-number">44</span> Statistisk analys 1</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-43"><span class="header-section-number">44.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-43"><span class="header-section-number">44.0.2</span> Teori</a></li>
+</ul>
 </li></ul>
 
       <div class="book-extra">

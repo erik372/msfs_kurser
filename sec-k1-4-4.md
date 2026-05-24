@@ -4,8 +4,10 @@
 - **Intäkter:** De pengar som företaget får betalt för sina varor och tjänster.
 - **Totala kostnader:** I detta exempel är totala kostnader företagets utgifter för att producera en specifik mängd av sina varor och tjänster.
 - **Marginalkostnad:** Kostnaden för företaget att tillverka en extra enhet. Marginalkostnaden kan variera vid till exempel olika produktionsmängder.
+
 ### Teori
 En stor mängd samhällsvetenskaplig analys studerar hur företag beter sig. Här nöjer vi oss med att introducera en förenklad teori om hur vi med matematik kan beskriva vinstmaximering för ett kommersiellt företag.
+
 ### Ett företag
 Säg att vi har ett företag som tillverkar två olika produkter som vi kallar för *X* och *Y*. Företaget vill maximera sin vinst. Försäljningspriserna för de två varorna styrs av omvärlden (marknaden), vilket företaget inte kan påverka. Företaget är visserligen fri att själv bestämma priset på sina varor, men i detta hypotetiska exempel har företaget ingenting att vinna på att höja eller sänka priserna.
 Detta är inte nödvändigtvis särskilt realistiskt, men förenklar matematiken något. Företaget accepterar därför att priserna är vad det är, men kan däremot välja hur stor mängd av produkterna som ska produceras.
@@ -17,6 +19,7 @@ De totala produktionskostnaderna består av fasta utgifter på 10 kr och rörlig
 $\text{Totala\~kostnader} = TC(x,y) = x^{2} + 2y^{2} + 10$ (3)
 där $TC(\ )$ är namn på den matematiska funktionen. Företagets vinst är lika med intäkter minus kostnader, $TR - TC$, vilket vi kan skriva som en funktion, *V*:
 $V(x,y) = TR - TC = 10x + 20y - (x^{2} + 2y^{2} + 10)$ (4)
+
 ### Maximeringsproblemet
 Vinsten är en funktion av kvantiteterna *x* och *y*, vilket vi kan beskriva som att företaget vill maximera sin vinst genom att välja mängd att producera av *x* och *y*:
 $\max_{m.\ h.t\ \ x,y}{V(x,y)}\ = 10x + 20y - (x^{2} + 2y^{2} + 10)$ (5)
@@ -29,6 +32,7 @@ $y^{*} = 20/4 = 5$
 Vi kan även se att andraderivatan av *V* med hänsyn till *x* och *y* är negativ genom att derivera uttrycken i ekvation 6 en gång till:
 $V_{xx}^{\'\'} = - 2$ (8)
 $V_{yy}^{\'\'} = - 4$
+
 ### Marginalvinsten
 Vinsten maximeras då marginalvinsten är lika med 0, det vill säga då förstaderivatan av V är $V_{x}\' = 0$ och $V_{y}\' = 0$. Låt oss beräkna hur mycket vinst företaget kommer att göra genom att sätta in dessa värden för $x^{*}$ och $y^{*}$ i $V\left( x^{*},y^{*} \right) = V(5,5)$:
 $V(5,5) = 10*5 + 20*5 - \left( 5^{2} + 2*5^{2} + 10 \right) = 65$ (9)

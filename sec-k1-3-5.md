@@ -2,8 +2,10 @@
 
 ### Pushtex
 Detta avsnitt beskriver hur vi kan använda matematiken för att beskriva grupptryck och sociala samspel.
+
 ### Begrepp
 *Inga nya matematiska begrepp i detta avsnitt.*
+
 ### Teori
 Tidigare använde vi linjära ekvationssystem för att beskriva några exempel på samhällsvetenskapliga diskussioner. Även ickelinjära ekvationer och ekvationssystem förekommer rikligt i samhällsvetenskapen.
 Här följer ett exempel där vi har två vänner, Erik och Maria, som gör allt tillsammans. Båda funderar på om de ska börja röka. Eriks relation till rökning kan beskrivas med följande funktion:

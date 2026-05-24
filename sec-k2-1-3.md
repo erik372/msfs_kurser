@@ -7,8 +7,10 @@
 - **Ordinaldata:** Data som kan rangordnas men saknar ekvidistans och absolut nollpunkt. Till exempel placering i en lista eller kö med plats 1, 2 och 3.
 - **Intervalldata:** Data som har rangordning och ekvidistans men saknar absolut nollpunkt. Till exempel temperatur angiven i grader Celsius.
 - **Kvotdata:** Data som har rangordning, ekvidistans och absolut nollpunkt. Till exempel längd, avstånd, vikt, massa.
+
 ### Teori
 Den här kursen handlar om hur vi kan studera orsak och verkan i verkligheten. Innan vi går vidare behöver vi gå igenom lite om hur information hanteras i analytiskt arbete.
+
 #### Datavariabler
 Information kallas inom analytiskt arbete för *data*. Data kan alltså bestå av vad som helst som vi kan uppfatta med våra sinnen, som siffror, text, bilder, ljudinspelningar.
 Allt analytiskt arbete använder information om verkligheten i någon form eller utsträckning. All data måste i sin tur tolkas. Mycket analytiskt arbete består av att kartlägga verkligheten och samla in data.
@@ -20,15 +22,18 @@ Vi har ofta glädje av att kategorisera information i *datavariabler*. Datavaria
   1            Datavärde 1
   2            Datavärde 2
   -------------------------------
+
 #### Variabler kan innehålla olika typer av information
 Varje värde i en datavariabel kan innehålla vilken typ av information som helst, till exempel gatunummer, namn på barn födda i april, bruttonationalprodukten för olika länder eller alla enskilda ord i en roman organiserade med ett ord per rad. För att använda en datavariabel för beräkningar behöver denna variabel bestå av siffror eller skrivas om till siffror.
 När vi skapar variabler är det viktigt att all information som vi samlar in till en variabel har samma egenskaper. Om vi till exempel samlar in information om personers längd och inkomst bör vi placera denna information i två olika variabler: en variabel för längd och en variabel för inkomst.
 Om vi blandar information i en variabel, till exempel längd och inkomst, blir det omöjligt att göra beräkningar på variabeln. På samma sätt måste värdena inom en variabel använda samma måttenhet. Alla värden för personernas längd måste anges antingen i centimeter eller i meter.
+
 #### Datatabeller
 Ett vanligt sätt att organisera data är tabeller, där varje kolumn representerar en variabel och varje rad en observation. Tabell 1 visar ett exempel där vi har tre datavariabler och kallar dessa för $x,\ y$ och $z$.
 Observationerna numrerar vi $y_{1}$ till $y_{4}$, $x_{1}$ till $x_{4}$ och $z_{1}$ till $z_{4}$. Det finns inga regler för hur variabler ska namnges eller numreras. Det förekommer även att variabler kallas för samma bokstav och skiljs åt genom numrering, till exempel variablerna $x_{1},\ x_{2}$ och så vidare.
 
 **Tabell 1: Tre variabler med fyra observationer**
+
   ---------------------------------------------------------------------------------------------------------------------------------------
                   Variabel 1 $(y)$   Variabel 2 $(x)$   Variabel 3 $(z)$
   --------------- --------------------------------------- --------------------------------------- ---------------------------------------
@@ -39,6 +44,7 @@ Observationerna numrerar vi $y_{1}$ till $y_{4}$, $x_{1}$ till $x_{4}$ och $z_{1
   ---------------------------------------------------------------------------------------------------------------------------------------
 På samma sätt som vi har tydliga kategorier för våra variabler i kolumnerna, behöver vi ha tydliga kategorier för våra observationer. Det observationerna beskriver kallas för *observationsenhet*. Det kan till exempel vara en observation per individ eller en per land. I regel behöver vi även avgränsa vilken tidpunkt en observation avser.
 Till exempel kan en observation innehålla uppgifter för ett land ett specifikt årtal, säg 2018. Nästa rad innehåller nästa observation. Om hela tabellen beskriver läget för olika länder år 2018 så är nästa observation för ett annat land. Men vi kan även ha flera observationer per land för olika årtal. Nästa observation kan då vara samma land men ett annat årtal: Sverige 2018, Sverige 2019 och så vidare.
+
 #### Olika typer av data
 Data som används för beräkningar brukar delas in i följande datatyper: *kvotdata*, *intervalldata*, *ordinaldata* och *nominaldata*. Ett sätt att tänka på detta är att vi har en variabel, $x$, med någon form av information om verkligheten. Indelningen utgår sedan från följande kriterier:
 - *Rangordning*: Kan observationerna i x rangordnas?
@@ -47,6 +53,7 @@ Data som används för beräkningar brukar delas in i följande datatyper: *kvot
 Beroende på svaren på dessa tre frågor kan vi placera vår variabel i någon av de fyra datatyperna. De tre kriterierna och de fyra datatyperna sammanfattas i tabell 2. Låt oss gå igenom de fyra datatyperna och ge några exempel.
 
 **Tabell 2: Fyra datatyper**
+
   ---------------------------------------------------------------
                   Rangordning   Ekvidistans   Absolut nollpunkt
   --------------- ------------- ------------- -------------------

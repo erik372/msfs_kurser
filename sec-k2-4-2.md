@@ -3,18 +3,22 @@
 ### Begrepp
 - **Faktorvariabel:** Kallas även kategoriska variabler. Variabler som beskriver grupper (kategorier), till exempel kön, kommuner, yrkesgrupper, utbildningsnivåer med mera.
 - **Dummyvariabel:** Kallas även indikatorvariabel. Förklarande variabler som endast antar värdet 0 eller 1. Används ofta för att beskriva kategorier, som till exempel 0 för män och 1 för kvinnor.
+
 ### Teori
 Regressionsanalys är en kvantitativ metod i den mening att vi använder kvantitativa data för att skapa kvantitativa resultat. Vi kan även använda *kvalitativa data* i vår analys, information som inte ursprungligen är angiven i siffror, så länge vi sätter siffror på denna.
 Ett exempel på detta är *faktorvariabler*, även kallat *kategoriska variabler*. Faktorvariabler beskriver grupper (kategorier), som kön, kommuner, yrkesgrupper.
+
 #### Faktorvariabler med två unika värden
 Låt oss börja med faktorvariabler som endast antar två olika värden, till exempel om vi skickar ut en enkät och ber mottagarna svara "Ja" eller "Nej". En vanlig metod är då att ersätta det ena svarsalternativet med siffran 0 och det andra med siffran 1. Det spelar ingen roll vilket variabelvärde som får vilken siffra, så länge vi håller koll på vad som representerar vad när vi räknar.
 Ett annat exempel är en variabel som anger om en rad i en tabell innehåller information om en man eller en kvinna, varpå variabeln kan anta värdet 0 för det ena könet och 1 för det andra könet.
 En förklarande variabel i en regressionsmodell som endast antar värdena 0 eller 1 kallas för *dummyvariabel* eller *indikatorvariabel, kategorisk variabel*. Namnet \"dummyvariabel\" kommer från engelskans \"dummy\" som betyder \"ersättning\" eller \"ställföreträdare\". Vi ersätter kvalitativa kategorier (man/kvinna) med siffror (0/1) så att vi kan använda dem i regressionsanalys.
 Data som endast kan anta två värden kallas för binär. Ofta används just 0 eller 1 för att beskriva informationen i en binär variabel, även om 0 och 1 symboliserar något annat, till exempel 0=män och 1=kvinnor.
+
 #### Exempel på tre kommuner
 Tabell 1 redovisar genomsnittlig årsinkomst för män respektive kvinnor i tre kommuner för år 2019, räknat i tusentals kronor.
 
 **Tabell 1: Genomsnittlig inkomst 2019, 1 000-tals kr**
+
   -----------------------------------------------------------------------
   Kommun                  Män                     Kvinnor
   ----------------------- ----------------------- -----------------------
@@ -40,6 +44,7 @@ Koefficienten $\widehat{b}$ är negativ, vilket innebär att kön $(G)$ har en n
 Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från män $(G = 0)$ till kvinnor $(G = 1)$ längs den horisontella axeln, går inkomsten nedåt längs den vertikala axeln. Därför är lutningen negativ. Detta betyder att kvinnor $(G = 1)$ har lägre genomsnittsinkomst än män $(G = 0)$ i dessa tre kommuner.
 
 **Tabell 2. Beräkningar för regressionsanalysen**
+
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Kommun        
 
@@ -87,6 +92,7 @@ Förklaring: Samma data som i tabell 1 och några beräkningar.
 Förklaring: Regressionslinjen lutar nedåt vilket indikerar en negativ samvariation. I variabeln G har kvinnor värdet 1 och män värdet 0. Eftersom kvinnor har lägre inkomst i genomsnitt än män, uppstår en negativ samvariation.
 :::
 
+
 #### Faktorvariabler med flera värden
 Ovan hade vi en dummyvariabel för två värden: män och kvinnor. Dummyvariabler kan även vara användbara för att kategorisera faktorvariabler med flera värdena än två. Låt oss återigen räkna på inkomstskillnader mellan de tre kommunerna i föregående exempel, men i stället för skillnad mellan kvinnor och män ska vi nu beräkna skillnaden i genomsnittlig inkomst mellan kommunerna.
 Tabell 3 redovisar variablerna, där $Y_{i}$ nu anger medelinkomst för alla invånare per kommun. Variablerna $K_{\text{Mörbylånga}}$ och $K_{\text{Oskarshamn}}$ är två dummyvariabler för kommunerna i följande regressionsmodell:
@@ -95,6 +101,7 @@ där $e$ är feltermen. Våra dummyvariabler representerar kommunerna Mörbylån
 Om vi har 3 kommuner använder vi bara 2 dummyvariabler. Varför? Om både Mörbylånga-dummyn = 0 OCH Oskarshamn-dummyn = 0, vet vi automatiskt att det måste vara Danderyd. Den tredje kommunen blir \"referenskategori\", i detta fall den kommun vi jämför de andra kommunerna mot. Om vi hade använt 3 dummyvariabler skulle regressionen inte fungera (matematiskt kallas detta \"perfekt multikolinjäritet\"). Datorn kan inte skilja på vilken effekt som kommer från vilken dummy.
 
 **Tabell 3: Genomsnittlig inkomst 2019, 1 000-tals kr**
+
   -------------------------------------------------------------------------------------------------------------------------------------------------------
   Kommun        
 

@@ -6,8 +6,10 @@
 - **Histogram:** En typ av stapeldiagram som ofta används för att redovisa spridning och fördelning. Varje stapel i ett histogram representerar ofta ett intervall av värden.
 - **Populationens medelvärde:** Medelvärdet för populationen av variabeln *X* kan skrivas $\mu_{X}$. Detta värde kan vi endast vara säkra på att vi känner till om vi har tillgång till fullständigt korrekta data över hela populationen. I samhällsvetenskap arbetar vi i regel med urvalsdata.
 - **Uppskattat medelvärde:** Det medelvärde vi kan beräkna med urvalsdata. Detta ger oss en uppskattning av populationens medelvärde. För en variabel *X* kan detta skrivas $\overline{X} = \sum_{i}^{}{x_{i}/n}$.
+
 ### Teori
 I kapitel 1 i denna kurs introducerade vi kontrafaktisk analys som central metod för analytiskt arbete och vetenskap. Vi diskuterade begreppen population, urval och superpopulation. Och i [avsnitt 1.2](https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&dl=0) repeterade vi betydelsen av samvariation och hur detta är vad vi egentligen studerar när vi försöker fastställa om ett fenomen orsakar ett annat fenomen.
+
 #### Frekvensfördelning
 För att studera samvariation mellan variabler måste observationer ha olika värden, det måste förekomma variation inom variablerna. Säg att vi som exempel har tio observationer för variablerna x och y och alla observationerna har värdena $(x,\ y) = (5,\ 23)$. Det finns ingen variation inom vare sig x eller y. Variablerna kan därför inte heller samvariera.
 Ett sätt att studera spridning av värden är att kartlägga *frekvensfördelningen* av en variabel. Säg att vi har följande fyra värden: 4, 5, 5 och 6. Siffran 5 förekommer två gånger. Se även Mattebokens lektioner om [lägesmått](https://www.matteboken.se/lektioner/matte-2/statistik/lagesmatt#!/) och [kvartiler](https://www.matteboken.se/lektioner/matte-2/statistik/kvartiler-och-ladagram#!/).
@@ -22,6 +24,7 @@ Ett sätt att visa spridningen i en samling värden är *stapeldiagram*, ett dia
 Förklaring: På den horisontella axeln ser vi respektive värde i datamängden: 4, 5 och 6. Staplarna visar antal förekomster av respektive värde: en observation har värdet 4, två observationer har värdet 5 och en observation har värdet 6.
 :::
 
+
 #### Förväntad livslängd i Sveriges 290 kommuner
 Ett histogram är en form av stapeldiagram där varje stapel representerar ett intervall av värden. Histogram används ofta för att ge en överblick över spridningen av värdena i en variabel. Se även Mattebokens introduktion till [histogram](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/tolka-diagram#!/).
 Figur 2 visar ett histogram som illustrerar fördelningen av genomsnittlig livslängd för kvinnor respektive män i Sveriges kommuner år 2022, med ett genomsnittsvärde per kommun och kön. Det är 290 observationer för män samt 290 observationer för kvinnor. På den horisontella axeln visas ålder och på den vertikala axeln visas antal observationer.
@@ -34,6 +37,7 @@ Diagrammet illustrerar att kön i någon utsträckning samvarierar med livsläng
 ::: {.fig-caption}
 Förklaring: Data från [Kolada](https://www.kolada.se/). De gröna staplarna visar fördelningen av medellivslängd för män i respektive kommun i Sverige år 2022. De rosa staplarna visar för kvinnor. De streckade vertikala linjerna markerar medelvärden för respektive grupp.
 :::
+
 
 #### Uppskattat medelvärde
 Medelvärde är en form av lägesmått. Se gärna Mattebokens introduktion till [lägesmått](https://www.matteboken.se/lektioner/matte-2/statistik/lagesmatt#!/), som medelvärde, median och typvärde. Nu ska vi börja beskriva hur vi kan tänka på medelvärde och andra mått med hänsyn till population och urval.

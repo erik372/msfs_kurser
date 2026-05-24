@@ -2,12 +2,14 @@
 
 ### Begrepp
 *Inga nya begrepp i detta avsnitt.*
+
 ### Teori
 I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi inte bara ha valt en annan? I det här avsnittet ska vi visa varför regressionslinjen är unik och bättre än alla andra möjliga raka linjer.
 Vi har regressionsmodellen:
 $Y = a + bX + V$ (1)
 där $Y$ och $X$ är variabler, $a$ och $b$ är koefficienter vi vill estimera med minstakvadratmetoden och $V$ är feltermen. Med hjälp av minstakvadratmetoden kan vi hitta den regressionslinje som minimerar summan av det vertikala avståndet mellan regressionslinjen och observationerna.
 Alla andra raka linjer resulterar i ett större summerat värde för det kvadrerade avståndet mellan dessa linjer och punkterna.
+
 #### Två exempel
 Detta kan vi illustrera med hjälp av exempel där vi använder samma fyra observationer för $X$ och $Y$ i som vi använde i tidigare avsnitt, där $X = 3,\ 4,\ 6,\ 7$ och $Y = 3,\ 4,\ 5,\ 6$. Men i stället för regressionslinjen som vi skattade utifrån minstakvadratmetoden har vi nu en horisontell linje där $\widehat{Y} = 3,5$ för alla $Y_{i}$, vilket är samma som medelvärdet för Y i våra fyra observationer: $\overline{Y} = (3 + 4 + 5 + 6)\text{/}4 = 3,5$.
 En horisontell linje har lutningskoefficient $b = 0$. Låt oss beräkna summan av de kvadrerade residualerna $\left( \sum_{i}^{}\widehat{{V_{i}}^{2}} \right)$ för denna linje:

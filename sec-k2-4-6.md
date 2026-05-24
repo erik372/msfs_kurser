@@ -2,6 +2,7 @@
 
 ### Begrepp
 - **Interaktionseffekt:** Analys av hur effekten av ett fenomen beror på tillståndet för ett annat fenomen.
+
 ### Teori
 I detta avsnitt ska vi introducera interaktionseffekt. Hittills har vi antagit att effekten av $X$ på $Y$ är densamma oavsett värdet på $Z$. Samvariationen (lutningskoefficienten för $X$) är densamma oavsett om $Z$ har höga eller låga värden.
 Men ibland påverkar andra fenomen (som $Z$) hur starkt $X$ samvarierar med $Y$. Detta kallas för interaktionseffekt. Exempel:
@@ -9,6 +10,7 @@ Men ibland påverkar andra fenomen (som $Z$) hur starkt $X$ samvarierar med $Y$.
 - Kanske har en medicin olika effekt beroende på patientens ålder
 - Kanske påverkar utbildning inkomst olika mycket i olika länder
 Matematiskt innebär interaktionseffekt att vi kombinerar två eller flera av de förklarande variablerna till en ny variabel, som att multiplicera $X$ och $Z$. Därigenom kan vi kontrollera om en förklarande variabels samvariation med den förklarade variabeln varierar beroende på värdena i en annan förklarande variabel.
+
 #### Interaktionseffekten mellan x och z
 Låt oss utgå från följande regressionsmodell:
 $y = a + bx + cz + \epsilon$ (1)
@@ -27,6 +29,7 @@ där $\Delta y$ betyder förändring i variabeln $y$ och $\Delta x$ är föränd
 På motsvarande sätt får vi den totala samvariationen mellan variabel $z$ och $y$ genom följande uttryck:
 $\frac{\Delta y}{\Delta z} = c + d*x$ (4)
 För värdena $x = 0$ anger lutningskoefficienten $c$ hur mycket $y$ ökar då $z$ ökar med 1. Låt oss illustrera interaktionseffekten med hjälp av data.
+
 #### Ett exempel med data
 I [avsnitt 4.3](https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&dl=0) estimerade vi samvariationen mellan livslängd och inkomst för män och kvinnor i tre av Sveriges kommuner. Nu ska vi använda samma data igen men denna gång lägga till en interaktionseffekt.
 Tabell 1 beskriver våra variabler (samma som i [avsnitt 4.3](https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&dl=0)). Vi har nu en variabel som skapas genom att multiplicera de två variablerna inkomst $I$ och kön $K$. Den nya variabeln har rubriken "Interaktion: $I*K$". Eftersom $K$ är en dummy där tre av sex observationer har värdet 0 får även den nya variabeln värdet 0 i tre av sex fall.
@@ -91,6 +94,7 @@ Om personen utan inkomst är en man, $G = 1$, indikerar $\widehat{c_{3}} = 40,3$
 $I = \frac{40,3}{21,8} = 1,85$ (17)
 rent matematiskt innebär detta att vår regressionsmodell predikterar att en man med 185 000 kronor i årsinkomst i genomsnitt lever lika länge som en kvinna med 0 kronor i inkomst. Detta reflekterar inte nödvändigtvis verkliga mekanismer. I praktiken har nästan ingen 0 kr i inkomst och ingen observation har detta i vårt datamaterial.
 Poängen är att visa var interaktionseffekten byter tecken (från plus till minus och tvärtom). Vi måste alltid vara försiktiga med att tolka resultaten och extra försiktiga att tolka resultat utanför de värden vi har data för. Vid högre inkomster än detta blir $\Delta L\text{/}\Delta G$ negativt, vilket innebär att vid högre inkomster är mäns genomsnittliga livslängd kortare än kvinnor.
+
 #### Illustration med diagram
 Figur 1 illustrerar delar av resultaten i ett diagram där vi ser samvariationen mellan livslängd och inkomst. Två regressionslinjer är utritade i diagrammet, en för kvinnor och en för män. Regressionslinjen för kvinnor är ritad med ekvationen:
 $L = \widehat{a} + \widehat{b}\left( I \middle\| G = 0 \right) = 26,6 + 26,9x$ (18)

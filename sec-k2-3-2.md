@@ -7,8 +7,10 @@
 - **Kvadratsumman av den förklarade variationen** (engelska *sum of squares explained*, SSE): $SSE = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}$
 - **Totalsumman av kvadrater** (engelska *total sum of squares*, SST): $SST = SSE + SSR$.
 - **Determinationskoefficienten** (på engelska *coefficient of determination*), $R^{2}$: andel av variationen i $Y$ som kan förklaras av regressionsmodellen, det vill säga variationen i den förklarande variabeln $X$. $R^{2}$ antar värden mellan 0 och 1, där 0 = modellen förklarar ingenting och 1 = modellen förklarar all variation. $R^{2} = \frac{SSE}{SST} = \frac{SST - SSR}{SST}$.
+
 ### Teori
 Vi har i tidigare avsnitt introducerat minstakvadratmetoden och gått igenom delar av matematiken bakom. Nu ska vi repetera vad vi lärt oss genom att räkna på en ny regressionsmodell.
+
 #### En ny modell
 Låt oss nu estimera följande regressionsmodell:
 $Z = \alpha + \beta K + \epsilon$ (1)
@@ -18,6 +20,7 @@ där $Z$ och $K$ är variabler, $\alpha$ och $\beta$ är koefficienterna som vi 
 3.  Vi använder minstakvadratmetoden för att hitta estimatorerna (ekvationerna) för $\widehat{\alpha}$ och $\widehat{\beta}$. Hattsymbolen $\widehat{}$ indikerar att det är estimerade versioner av koefficienterna $\alpha$ och $\beta$ som finns i populationen.
 4.  Efter att vi har estimerat koefficienterna kan vi estimera regressionslinjens ekvation $\widehat{Z} = \widehat{\alpha} + \widehat{\beta}K$ och rita ut regressionslinjen i ett diagram. Värdena för $\widehat{Z}$ anger regressionslinjens värden på den vertikala axeln.
 5.  Residualen $\widehat{\epsilon} = Z - \widehat{Z}$ är det vertikala avståndet (y-axeln) mellan regressionslinjens $\widehat{Z}$ och respektive observation $Z$.
+
 #### Estimera koefficienterna
 Låt oss nu estimera koefficienterna $\alpha$ och $\beta$. Observationerna för variablerna $Z$ och $K$ beskrivs i tabell 1, tillsammans med beräkningarna vi behöver för våra beräkningar.
 **Tabell 1. Underlag för att estimera koefficienterna** $\mathbf{\alpha}$ **och** $\mathbf{\beta}$**.**
@@ -90,6 +93,7 @@ $$\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}$$
 Förklaring: Vi har regressionsmodellen $Z = \alpha + \beta K + \epsilon$. Utifrån observationerna för variablerna $Z$ och $K$ och minstakvadratmetoden estimerar vi koefficienterna $\widehat{\alpha}$ och $\widehat{\beta}$. De estimerade koefficienterna och observationerna från variabel $K$ kan vi använda för att estimera $\widehat{Z}$, vilket ger värdena för denna variabel längs med regressionslinjen.
 :::
 
+
 #### Hur väl passar regressionsmodellen mot data?
 För att jämföra hur väl en regressionsmodell passar de data den syftar till att beskriva mönstret för finns det flera metoder. En viktig del i detta är att jämföra residualerna, det vill säga avståndet mellan de data vi använt i vår förklarade variabel $Y$ och de predikterade värdena för samma variabel  $\widehat{Y}$.
 Om vi har en regressionsmodell med förklarad variabel $Y$ och feltermen $V$ där residualen beräknas $\widehat{V} = Y - \widehat{Y}$ kan vi till exempel jämföra *residualernas kvadratsumma* (engelska *sum of squared residuals*, SSR):
@@ -101,6 +105,7 @@ SSE kan beskrivas som den variation i $Y$ som kan förklaras, eller tas bort, av
 *Totalsumman av kvadrater* (engelska *total sum of squares*, SST) är summan av SSR och SSE. SST kan tolkas som mängden variation som förekommer i $Y$ innan regressionsmodellen estimeras. SST skrivas som summan av den kvadrerade differensen mellan observerade $Y_{i}$ och medelvärdet $\overline{Y}$:
 $SST = SSE + SSR$ (3)
 $\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2} = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2} + \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$
+
 #### Skillnaden mellan SSR, SSE och SST
 Ett sätt att illustrera skillnaderna mellan SSR, SSE och SST ges i figur 2. Vi använder här återigen de fyra observationerna för $X = 3,4,6,7$ och $Y = 2,3,4,5$ som vi använde i vårt första exempel på regressionsanalys (se [avsnitt 2.4](https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&dl=0)). I diagrammet i figur 1 markerar vi residualerna med streckade vertikala linjer mellan $Y_{i}\ $ och regressionslinjens $\widehat{Y_{i}}$.
 **Figur 2. Differenserna mellan** $\overline{Y}$, $\widehat{Y}$ och $Y_{i}$
@@ -112,11 +117,13 @@ Ett sätt att illustrera skillnaderna mellan SSR, SSE och SST ges i figur 2. Vi 
 Förklaring: Figuren illustrerar hur avstånden i diagrammet motsvaras av differenser mellan värdena för observationerna $Y_{i}$, deras medelvärde $\overline{Y}$ och estimerade $\widehat{Y}$.
 :::
 
+
 #### Determinationskoefficienten, $R^{2}$
 Utifrån kvadratsummorna kan vi skatta determinationskoefficienten (på engelska *coefficient of determination*), vilken brukar skrivas som $R^{2}$:
 $R^{2} = \frac{SSE}{SST} = \frac{SST - SSR}{SST} = 1 - \frac{SSR}{SST} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}}$ (4)
 $R^{2}$ mäter hur stor andel av variationen i den förklarade variabeln, till exempel $Y$, som kan förklaras av regressionsmodellen och variationen i den förklarande variabeln, till exempel $X$. $R^{2}$ kan anta värden mellan 0 och 1.
 $R^{2} = 0$ betyder att ingenting av variationen i $Y$ kan förklaras av regressionsmodellen och variationen i $X$. $R^{2} = 1$ betyder att all variation i variabel $Y$ förklaras av regressionsmodellen och variationen i variabel $X$.
+
 ### Observera att förkortningar varierar ibland. Vi använder här SSR = Sum of Squared Residuals. Andra använder till exempel RSS = Residual Sum of Squares. Båda betyder samma sak. När du läser andra texter, kontrollera alltid vad en förkortning syftar på matematiskt.
 
 

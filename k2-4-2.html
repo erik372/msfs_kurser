@@ -114,38 +114,61 @@
 <h1>
 <span class="header-section-number">36</span> Faktorvariabler<a class="anchor" aria-label="anchor" href="#k2-4-2"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-33" class="section level3" number="36.0.1">
+<div id="begrepp-35" class="section level3" number="36.0.1">
 <h3>
-<span class="header-section-number">36.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-33"><i class="fas fa-link"></i></a>
+<span class="header-section-number">36.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-35"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
 <strong>Faktorvariabel:</strong> Kallas även kategoriska variabler. Variabler som beskriver grupper (kategorier), till exempel kön, kommuner, yrkesgrupper, utbildningsnivåer med mera.</li>
 <li>
-<strong>Dummyvariabel:</strong> Kallas även indikatorvariabel. Förklarande variabler som endast antar värdet 0 eller 1. Används ofta för att beskriva kategorier, som till exempel 0 för män och 1 för kvinnor.
-### Teori
-Regressionsanalys är en kvantitativ metod i den mening att vi använder kvantitativa data för att skapa kvantitativa resultat. Vi kan även använda <em>kvalitativa data</em> i vår analys, information som inte ursprungligen är angiven i siffror, så länge vi sätter siffror på denna.
-Ett exempel på detta är <em>faktorvariabler</em>, även kallat <em>kategoriska variabler</em>. Faktorvariabler beskriver grupper (kategorier), som kön, kommuner, yrkesgrupper.
-#### Faktorvariabler med två unika värden
-Låt oss börja med faktorvariabler som endast antar två olika värden, till exempel om vi skickar ut en enkät och ber mottagarna svara “Ja” eller “Nej”. En vanlig metod är då att ersätta det ena svarsalternativet med siffran 0 och det andra med siffran 1. Det spelar ingen roll vilket variabelvärde som får vilken siffra, så länge vi håller koll på vad som representerar vad när vi räknar.
+<strong>Dummyvariabel:</strong> Kallas även indikatorvariabel. Förklarande variabler som endast antar värdet 0 eller 1. Används ofta för att beskriva kategorier, som till exempel 0 för män och 1 för kvinnor.</li>
+</ul>
+</div>
+<div id="teori-35" class="section level3" number="36.0.2">
+<h3>
+<span class="header-section-number">36.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-35"><i class="fas fa-link"></i></a>
+</h3>
+<p>Regressionsanalys är en kvantitativ metod i den mening att vi använder kvantitativa data för att skapa kvantitativa resultat. Vi kan även använda <em>kvalitativa data</em> i vår analys, information som inte ursprungligen är angiven i siffror, så länge vi sätter siffror på denna.
+Ett exempel på detta är <em>faktorvariabler</em>, även kallat <em>kategoriska variabler</em>. Faktorvariabler beskriver grupper (kategorier), som kön, kommuner, yrkesgrupper.</p>
+<div id="faktorvariabler-med-två-unika-värden" class="section level4" number="36.0.2.1">
+<h4>
+<span class="header-section-number">36.0.2.1</span> Faktorvariabler med två unika värden<a class="anchor" aria-label="anchor" href="#faktorvariabler-med-tv%C3%A5-unika-v%C3%A4rden"><i class="fas fa-link"></i></a>
+</h4>
+<p>Låt oss börja med faktorvariabler som endast antar två olika värden, till exempel om vi skickar ut en enkät och ber mottagarna svara “Ja” eller “Nej”. En vanlig metod är då att ersätta det ena svarsalternativet med siffran 0 och det andra med siffran 1. Det spelar ingen roll vilket variabelvärde som får vilken siffra, så länge vi håller koll på vad som representerar vad när vi räknar.
 Ett annat exempel är en variabel som anger om en rad i en tabell innehåller information om en man eller en kvinna, varpå variabeln kan anta värdet 0 för det ena könet och 1 för det andra könet.
 En förklarande variabel i en regressionsmodell som endast antar värdena 0 eller 1 kallas för <em>dummyvariabel</em> eller <em>indikatorvariabel, kategorisk variabel</em>. Namnet "dummyvariabel" kommer från engelskans "dummy" som betyder "ersättning" eller "ställföreträdare". Vi ersätter kvalitativa kategorier (man/kvinna) med siffror (0/1) så att vi kan använda dem i regressionsanalys.
-Data som endast kan anta två värden kallas för binär. Ofta används just 0 eller 1 för att beskriva informationen i en binär variabel, även om 0 och 1 symboliserar något annat, till exempel 0=män och 1=kvinnor.
-#### Exempel på tre kommuner
-Tabell 1 redovisar genomsnittlig årsinkomst för män respektive kvinnor i tre kommuner för år 2019, räknat i tusentals kronor.</li>
-</ul>
-<div class="inline-table"><table class="table table-sm">
+Data som endast kan anta två värden kallas för binär. Ofta används just 0 eller 1 för att beskriva informationen i en binär variabel, även om 0 och 1 symboliserar något annat, till exempel 0=män och 1=kvinnor.</p>
+</div>
+<div id="exempel-på-tre-kommuner" class="section level4" number="36.0.2.2">
+<h4>
+<span class="header-section-number">36.0.2.2</span> Exempel på tre kommuner<a class="anchor" aria-label="anchor" href="#exempel-p%C3%A5-tre-kommuner"><i class="fas fa-link"></i></a>
+</h4>
+<p>Tabell 1 redovisar genomsnittlig årsinkomst för män respektive kvinnor i tre kommuner för år 2019, räknat i tusentals kronor.</p>
+<p><strong>Tabell 1: Genomsnittlig inkomst 2019, 1 000-tals kr</strong></p>
+<div class="inline-table"><table style="width:97%;" class="table table-sm">
+<colgroup>
+<col width="32%">
+<col width="32%">
+<col width="32%">
+</colgroup>
 <thead><tr class="header">
-<th align="left">Tabell 1: Genomsnittlig inkomst 2019, 1 000-tals kr**</th>
+<th align="left">Kommun</th>
+<th align="left">Män</th>
+<th align="left">Kvinnor</th>
 </tr></thead>
 <tbody><tr class="odd">
-<td align="left">Kommun Män Kvinnor</td>
+<td align="left">Danderyd
+Mörbylånga
+Oskarshamn</td>
+<td align="left">435
+277
+279</td>
+<td align="left">314
+219
+211</td>
 </tr></tbody>
 </table></div>
-<p>Danderyd 435 314
-Mörbylånga 277 219
-Oskarshamn 279 211
-———————————————————————–</p>
 <div class="fig-caption">
 <p>Förklaring: Data från <a href="http://www.kolada.se">Kolada</a>. Inkomst anges i 1 000-tals kronor, medianvärden per kommun och grupp.
 Nu ska vi studera löneskillnaden mellan män och kvinnor genom att använda minstakvadratmetoden. Vi börjar med att formulera en regressionsmodell:
@@ -157,19 +180,7 @@ Vi kan estimera regressionsmodellen på samma sätt som tidigare, där koefficie
 <p><span class="math display">\[\widehat{a} = \overline{w} - \widehat{b\overline{k}} = 289,2 - ( - 82,3)0,5 = 330,3\]</span></p>
 <p>Koefficienten <span class="math inline">\(\widehat{b}\)</span> är negativ, vilket innebär att kön <span class="math inline">\((G)\)</span> har en negativ samvariation med lön <span class="math inline">\((W)\)</span>. Vi valde att definiera vår dummyvariabel <span class="math inline">\(G = 1\)</span> för kvinnor. Variabel W är associerat med ett 82,3 enheter lägre värde för kvinnor jämfört med män. Kvinnor har i genomsnitt 82 300 kr lägre inkomst än män i dessa tre kommuner.
 Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från män <span class="math inline">\((G = 0)\)</span> till kvinnor <span class="math inline">\((G = 1)\)</span> längs den horisontella axeln, går inkomsten nedåt längs den vertikala axeln. Därför är lutningen negativ. Detta betyder att kvinnor <span class="math inline">\((G = 1)\)</span> har lägre genomsnittsinkomst än män <span class="math inline">\((G = 0)\)</span> i dessa tre kommuner.</p>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="left">Tabell 2. Beräkningar för regressionsanalysen**</th>
-</tr></thead>
-<tbody><tr class="odd">
-<td align="left">Kommun</td>
-</tr></tbody>
-</table></div>
-<p><span class="math display">\[W_{i}\]</span></p>
-<p><span class="math display">\[G_{i}\]</span></p>
-<p><span class="math display">\[W_{i} - \overline{W_{i}}\]</span></p>
-<p><span class="math display">\[G_{i} - \overline{G_{i}}\]</span></p>
-<p><span class="math display">\[\left( G_{i} - \overline{G_{i}} \right)^{2}\]</span></p>
+<p><strong>Tabell 2. Beräkningar för regressionsanalysen</strong></p>
 <div class="inline-table"><table style="width:99%;" class="table table-sm">
 <colgroup>
 <col width="4%">
@@ -179,6 +190,14 @@ Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från m�
 <col width="20%">
 <col width="28%">
 </colgroup>
+<thead><tr class="header">
+<th align="left">Kommun</th>
+<th align="left">line{W_{i}}$$</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">Danderyd
@@ -187,31 +206,31 @@ Oskarshamn
 Danderyd
 Mörbylånga
 Oskarshamn</td>
-<td align="center">435
+<td align="left">435
 277
 279
 314
 219
 211</td>
-<td align="center">0
+<td>0
 0
 0
 1
 1
 1</td>
-<td align="center">145,8
+<td>145,8
 -12,2
 -10,2
 24,8
 -70,2
 -78,2</td>
-<td align="center">-0,5
+<td>-0,5
 -0,5
 -0,5
 0,5
 0,5
 0,5</td>
-<td align="center">0,25
+<td>0,25
 0,25
 0,25
 0,25
@@ -221,11 +240,11 @@ Oskarshamn</td>
 <tr class="even">
 <td align="left">Medelvärde
 Summa</td>
-<td align="center">289,2</td>
-<td align="center">0,5</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">1,5</td>
+<td align="left">289,2</td>
+<td>0,5</td>
+<td></td>
+<td></td>
+<td>1,5</td>
 </tr>
 </tbody>
 </table></div>
@@ -237,46 +256,45 @@ Summa</td>
 <div class="fig-caption">
 <p>Förklaring: Regressionslinjen lutar nedåt vilket indikerar en negativ samvariation. I variabeln G har kvinnor värdet 1 och män värdet 0. Eftersom kvinnor har lägre inkomst i genomsnitt än män, uppstår en negativ samvariation.</p>
 </div>
-<div id="faktorvariabler-med-flera-värden" class="section level4" number="36.0.1.1">
+</div>
+<div id="faktorvariabler-med-flera-värden" class="section level4" number="36.0.2.3">
 <h4>
-<span class="header-section-number">36.0.1.1</span> Faktorvariabler med flera värden<a class="anchor" aria-label="anchor" href="#faktorvariabler-med-flera-v%C3%A4rden"><i class="fas fa-link"></i></a>
+<span class="header-section-number">36.0.2.3</span> Faktorvariabler med flera värden<a class="anchor" aria-label="anchor" href="#faktorvariabler-med-flera-v%C3%A4rden"><i class="fas fa-link"></i></a>
 </h4>
 <p>Ovan hade vi en dummyvariabel för två värden: män och kvinnor. Dummyvariabler kan även vara användbara för att kategorisera faktorvariabler med flera värdena än två. Låt oss återigen räkna på inkomstskillnader mellan de tre kommunerna i föregående exempel, men i stället för skillnad mellan kvinnor och män ska vi nu beräkna skillnaden i genomsnittlig inkomst mellan kommunerna.
 Tabell 3 redovisar variablerna, där <span class="math inline">\(Y_{i}\)</span> nu anger medelinkomst för alla invånare per kommun. Variablerna <span class="math inline">\(K_{\text{Mörbylånga}}\)</span> och <span class="math inline">\(K_{\text{Oskarshamn}}\)</span> är två dummyvariabler för kommunerna i följande regressionsmodell:
 <span class="math inline">\(Y_{i} = a + bK_{\text{Mörbylånga}} + cK_{\text{Oskarshamn}} + e_{i}\)</span> (3)
 där <span class="math inline">\(e\)</span> är feltermen. Våra dummyvariabler representerar kommunerna Mörbylånga och Oskarshamn, en dummyvariabel mindre än antal kommuner. När båda dummyvariablerna i modellen är lika med 0 får vi estimaten för den tredje kommunen, Danderyd.
 Om vi har 3 kommuner använder vi bara 2 dummyvariabler. Varför? Om både Mörbylånga-dummyn = 0 OCH Oskarshamn-dummyn = 0, vet vi automatiskt att det måste vara Danderyd. Den tredje kommunen blir "referenskategori", i detta fall den kommun vi jämför de andra kommunerna mot. Om vi hade använt 3 dummyvariabler skulle regressionen inte fungera (matematiskt kallas detta "perfekt multikolinjäritet"). Datorn kan inte skilja på vilken effekt som kommer från vilken dummy.</p>
-<div class="inline-table"><table class="table table-sm">
+<p><strong>Tabell 3: Genomsnittlig inkomst 2019, 1 000-tals kr</strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="8%">
+<col width="22%">
+<col width="33%">
+<col width="33%">
+</colgroup>
 <thead><tr class="header">
-<th align="left">Tabell 3: Genomsnittlig inkomst 2019, 1 000-tals kr**</th>
+<th align="left">Kommun</th>
+<th align="left">ylånga}}$$</th>
+<th></th>
+<th></th>
 </tr></thead>
 <tbody><tr class="odd">
-<td align="left">Kommun</td>
+<td align="left">Danderyd
+Mörbylånga
+Oskarshamn</td>
+<td align="left">364,9
+243,6
+246</td>
+<td>0
+1
+0</td>
+<td>0
+0
+1</td>
 </tr></tbody>
 </table></div>
-<p><span class="math display">\[Y_{i}\]</span></p>
-<p><span class="math display">\[K_{\text{Mörbylånga}}\]</span></p>
-<p><span class="math display">\[K_{\text{Oskarshamn}}\]</span></p>
-<div class="inline-table"><table class="table table-sm"><tbody>
-<tr class="odd">
-<td align="left">Danderyd</td>
-<td align="center">364,9</td>
-<td align="center">0</td>
-<td align="center">0</td>
-</tr>
-<tr class="even">
-<td align="left">Mörbylånga</td>
-<td align="center">243,6</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-<tr class="odd">
-<td align="left">Oskarshamn</td>
-<td align="center">246</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-</tbody></table></div>
 <div class="fig-caption">
 <p>Förklaring: Data från <a href="http://www.kolada.se">Kolada</a>. Inkomst anges i 1 000-tals kronor, medianvärden per kommun.
 Vår regressionsmodell räknar ut samma sak som vi redan ser i datamaterialet. Syftet med denna övning är att förstå innebörden av dummyvariabler i en regressionsmodell. Vi estimerar regressionsmodellen i ekvation 3 utifrån minstakvadratmetoden:
@@ -442,7 +460,10 @@ Den sista kommunens resultat ges av att alla dummyvariablerna = 0. I dessa situa
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k2-4-2"><span class="header-section-number">36</span> Faktorvariabler</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-33"><span class="header-section-number">36.0.1</span> Begrepp</a></li></ul>
+<a class="nav-link" href="#k2-4-2"><span class="header-section-number">36</span> Faktorvariabler</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-35"><span class="header-section-number">36.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-35"><span class="header-section-number">36.0.2</span> Teori</a></li>
+</ul>
 </li></ul>
 
       <div class="book-extra">

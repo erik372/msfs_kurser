@@ -2,10 +2,12 @@
 
 ### Begrepp
 *Inga nya begrepp i detta avsnitt.*
+
 ### Teori
 Vi börjar närma oss slutet på kapitel 2 i denna kurs. I kapitel 1 introducerade vi kontrafaktisk analys och hur vi med hjälp av behandlings- och kontrollgrupper kan studera orsak och verkan. I kapitel 2 introducerade vi olika metoder, bland annat regressionsanalys, för att jämföra variation, spridning och samvariation mellan två variabler.
 Men varför måste vi egentligen räkna? Räcker det inte att bara titta på diagram, eller en enkel jämförelse av hur det gick behandlings- och kontrollgruppen?
 Matematiken är ingen garanti för att våra resonemang om världen blir bättre. Men matematiken ger oss en möjlighet att förbättra våra resonemang på ett sätt som är omöjligt utan. Detta avsnitt går kort igenom några argument för varför avsaknaden av matematik riskerar att leda tanken fel.
+
 #### Vi ljuger för både oss själv och andra
 Människor ser mönster i allt möjligt. Detta är centralt för vår överlevnad men leder ofta till felaktiga slutsatser. Till exempel finns det gott om historier om framgång och förutsägelser: "Här är 10 saker framgångsrika människor gör före frukost" och "Därför kommer politiker A vinna nästa val".
 En stor mängd sådan litteratur bärs framåt av ett magiskt tänkande. Vi kan alla ha glädje av inspirerande berättelser. Men många människor gör samma sak som framgångsrika kändisar utan att resultaten blir lika lyckat. Många tvärsäkra uttalanden om politik och framtid är rena fantasier.
@@ -21,10 +23,12 @@ I detta exempel kan vi kontrollera avstånden mellan pilspetsarna genom att räk
 #### Två dimensioner är för lite
 Diagrammet i figur 1 har två dimensioner: höjd och bredd. En kub har tre dimensioner: höjd, bredd och djup. I bilder är det ofta svårt att illustrera fler än två dimensioner. Men verkligheten är full av relationer som är mer komplexa än vad som går att visa i diagram. I våra egna liv kan vi hitta många exempel som är resultatet av tre eller fler faktorer.
 Effekten av ett fenomen kan även påverka effekten av andra fenomen. Denna typ av samband går sällan att illustrera enkelt och tydligt i bilder eller diagram. I dessa fall blir i stället de enkla illustrationerna vilseledande. I senare kapitel går vi igenom för- och nackdelarna med diagram och hur vi med hjälp av matematik kan jämföra relationer mellan flera fenomen samtidigt.
+
 #### Vi vill veta mer
 En central fråga i kausal analys är om det ens finns något samband mellan orsak och verkan. Det vill säga -- kan vi ens hävda att det finns ett kausalt samband, ett orsakssamband. Till exempel mellan en utbildning och studenternas framtida inkomster? Påverkar medicin sjukdomen den ska åtgärda?
 Men ofta vill vi veta mycket mer än så. Säg att vi har ett sjukdomssymptom och ska ta en medicin. Ska vi ta 1 tablett eller 10? Samma krav bör kunna ställas på samhällsvetenskap.
 Många fenomen inom samhällsvetenskap kommer troligen aldrig få fullt så exakta svar som de vi är vana att få för medicin. Men med matematik kan vi åtminstone närma oss mer exakta svar, än vad som hade varit fallet annars. Utan matematik är detta omöjligt.
+
 #### Vetenskapen behövs
 I samhällsvetenskap arbetar vi ofta med frågor nära ideologi och värderingar. Det är ibland svårt för analytiker att hålla isär vad vi vet om världen och vad vi önskar att vi visste.
 Ibland kan det verka omöjligt att nå ut med ny kunskap när alla verkar ha bestämt sig för vad de tror om världen. Då kan det vara lätt att misströsta användningen av mer tekniskt avancerade metoder.

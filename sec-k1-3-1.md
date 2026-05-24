@@ -4,9 +4,11 @@
 - **Marknad:** Utbytet mellan säljare och köpare av varor eller tjänster. En marknad är inte nödvändigtvis en tydligt avgränsad plats. En marknad kan bestå av två restauranger bredvid varandra som konkurrerar om samma kunder (restaurangmarknaden på den gatan). En marknad kan även bestå av alla platser på internet där du kan beställa t-shirtar (t-shirtmarknaden på nätet), vilka i sin tur även konkurrerar med fysiska affärer (t-shirtmarknaden i Sverige).
 - **Utbud:** Mängden varor eller tjänster som säljarna på en tänkt marknad vill sälja. Utifrån hur vi vet eller tror att säljarna på marknaden beter sig kan vi formulera en matematisk funktion som beskriver utbudet. Denna funktion kan vi kalla utbudsfunktionen, med vilken vi kan rita utbudskurvan i ett diagram.
 - **Efterfrågan:** Mängden varor/tjänster som kunder/spekulanter på en marknad vill köpa. Med hjälp av matematik kan vi formulera efterfrågefunktionen, med vilken vi kan rita ut efterfrågekurvan i ett diagram.
+
 ### Teori
 I [kapitel 1](https://www.dropbox.com/scl/fo/fv2fit971nmctypdeaa50/APZx8Ttw2hGbroWapyjK7lQ?rlkey=ybaos5j7bcdqd5rzgxe7rcfh6&dl=0) gick vi kort igenom att matematik kan användas för att beskriva idéer och teorier. Det tål att understryka att det inte finns några regler för exakt hur detta ska göras eller vilken typ av idéer som kan eller bör beskrivas med matematik.
 I detta kapitel ska vi gå igenom några exempel. Vissa av dom är vanligt förekommande medan andra mer syftar till att inspirera och illustrera samhällsvetenskapens bredd.
+
 #### Utbud och efterfrågan
 Vi börjar med ett vanligt förekommande exempel: Hur påverkar villkoren för säljare och köpare priset på varor och tjänster?
 Om vi tänker oss att det existerar en vara eller tjänst med en avgränsad marknad med många köpare och många säljare. Ingen enskild person eller aktör är tillräckligt mäktig för att själv kunna bestämma priset på marknaden. Däremot kan säljarna välja hur mycket de vill sälja.
@@ -19,6 +21,7 @@ Vi har nu två linjära ekvationer för utbud respektive efterfrågan. Medan var
 För att resonera om detta kan vi använda de matematiska funktionerna i ekvation 1 och 2. Vi börjar med att sätta ihop dessa i ett [linjärt ekvationssystem](https://www.matteboken.se/lektioner/matte-2/linjara-ekvationssystem#!/):
 $\left\{ \begin{array}{r} q_{\text{utbud}} = 3p \\ q_{\text{efterfrågan}} = 20 - 2p \end{array} \right.\ $ (3)
 där *q* och *p* är våra variabler och siffrorna är våra koefficienter. Ekvationssystemet består av två definitioner av *q*: en mängd för utbud och en mängd för efterfrågan på marknaden. Våra koefficienter beskriver hur vi tänker oss att utbud och efterfrågan fungerar för en vara eller tjänst.
+
 #### Jämviktspriset
 Nu söker vi jämviktspriset, vilket är det värde för *p* som ger att $q_{\text{utbud}} = q_{\text{efterfrågan}}$. I denna situation är alltså utbud och efterfrågan lika och marknaden är i jämvikt.
 Vi kan börja med att rita upp ekvationssystemet i ett diagram, se figur 1. I diagrammet har vi två linjer, en per ekvation i ekvationssystemet. Kurvan som lutar uppåt till höger är den första ekvationen i systemet, funktionen för $q_{\text{utbud}}$. Den andra linjen, som lutar ned åt höger i bilden, är funktionen för $q_{\text{efterfrågan}}$. I diagrammet möts linjerna vid en unik punkt, som definierar jämviktspriset $p^{*}$ och jämviktskvantiteten $q^{*}$.
@@ -51,6 +54,7 @@ $q_{\text{utbud}} = 3p = 12$ (5)
 $$q_{\text{efterfrågan}} = 20 - 2p = 12$$
 
 Båda ekvationerna visar att $q^{*} = 12$, varför vi nu har systemets lösning. Vi kan kontrollera med hjälp av insättning, vilket vi lämnar till läsaren (alltså du).
+
 #### Två sorters kakor
 Linjära ekvationer kan även användas till att beskriva alternativ i en valsituation. Till exempel: Inför årets stora kakförsäljning ska lokala scoutföreningen välja strategi i det stora baket.
 Den första strategin är att scouterna bakar riktiga kakor med dyra ingredienser. Kakorna kommer i så fall att bli utsökta, men dyra att tillverka. Vinsten per såld förpackning kommer vara 20 kr. Vi kan beskriva detta med följande ekvation:

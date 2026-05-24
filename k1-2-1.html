@@ -126,13 +126,21 @@
 <li>
 <strong>Effektiv ränta:</strong> Total lånekostnad för ett lån, inklusive olika typer av avgifter oavsett vad dessa avgifter kallas för.</li>
 <li>
-<strong>Kumulativ summa:</strong> Summan av en samling tal där vi adderar talen i tur och ordning.
-### Teori
-<a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/ranta#!/">Ränta</a> kallas den ersättning man får för att låna ut pengar. Räntesats är storleken på räntan på ett lån eller sparande, uttryckt i procent. Räntesats syftar ofta på räntan per år. Ränta kan beskrivas som ett pris på lånade pengar, en ersättning för att vi låter bli att använda våra pengar här och nu.
+<strong>Kumulativ summa:</strong> Summan av en samling tal där vi adderar talen i tur och ordning.</li>
+</ul>
+</div>
+<div id="teori-4" class="section level3" number="5.0.2">
+<h3>
+<span class="header-section-number">5.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-4"><i class="fas fa-link"></i></a>
+</h3>
+<p><a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/ranta#!/">Ränta</a> kallas den ersättning man får för att låna ut pengar. Räntesats är storleken på räntan på ett lån eller sparande, uttryckt i procent. Räntesats syftar ofta på räntan per år. Ränta kan beskrivas som ett pris på lånade pengar, en ersättning för att vi låter bli att använda våra pengar här och nu.
 När vi sätter in pengar på banken lånar vi ut pengar till banken. Som ersättning betalar banken ränta. Nu ska vi räkna ut hur mycket vi får tillbaka om vi sätter in pengar på ett bankkonto med 2 <a href="https://www.matteboken.se/lektioner/skolar-6/statistik/procent">procents</a> räntesats per år. Två procent kan vi skriva som 2 % eller 0,02. Om vi sätter in 100 kr blir räntan första året <span class="math inline">\(100*0,02 = 2\)</span> kr. Efter ett år har vi 100 kr + räntan som banken ger oss: <span class="math inline">\(100 + 2 = 102\)</span>.
-Ett annat sätt att räkna ut detta är: <span class="math inline">\(100*1,02 = 102\)</span>. Vi multiplicerar våra sparpengar med 1 plus räntesatsen 2 %: <span class="math inline">\(1\ + \ 0,02\ = \ 1,02\)</span>.
-#### Ränta på ränta
-Om vi låter pengarna ligga kvar på kontot ytterligare ett år kommer vi få ränta även på det nya beloppet, alltså ränta på 102 kr. Resultatet efter det andra året blir då <span class="math inline">\(102*1,02 = 104,04\)</span>. Ett annat sätt att beskriva räntan för både år 1 och år 2 är:
+Ett annat sätt att räkna ut detta är: <span class="math inline">\(100*1,02 = 102\)</span>. Vi multiplicerar våra sparpengar med 1 plus räntesatsen 2 %: <span class="math inline">\(1\ + \ 0,02\ = \ 1,02\)</span>.</p>
+<div id="ränta-på-ränta" class="section level4" number="5.0.2.1">
+<h4>
+<span class="header-section-number">5.0.2.1</span> Ränta på ränta<a class="anchor" aria-label="anchor" href="#r%C3%A4nta-p%C3%A5-r%C3%A4nta"><i class="fas fa-link"></i></a>
+</h4>
+<p>Om vi låter pengarna ligga kvar på kontot ytterligare ett år kommer vi få ränta även på det nya beloppet, alltså ränta på 102 kr. Resultatet efter det andra året blir då <span class="math inline">\(102*1,02 = 104,04\)</span>. Ett annat sätt att beskriva räntan för både år 1 och år 2 är:
 <span class="math inline">\(102*1,02\ \)</span> <span class="math inline">\(= (100*1,02)*1,02\)</span>
 <span class="math inline">\(= 100*1,02*1,02\ \)</span>
 <span class="math inline">\(= 100*\ (1,02)^{2}\ \)</span>
@@ -144,8 +152,7 @@ Sparbelopp efter år 1 <span class="math inline">\(= 5\ 000*1,02\)</span>
 <span class="math inline">\(= 5\ 000*1 + 5\ 000*0,02\ \)</span>
 <span class="math inline">\(= 5\ 000 + 100\ \)</span>
 <span class="math inline">\(= 5\ 100\ \)</span>
-År 2 och 3 får vi ränta både på våra ursprungliga sparpengar plus ränta på de pengar vi fått in i ränta tidigare år. Låt oss skriva det med en ekvation per år. Efter år 1 har vi:</li>
-</ul>
+År 2 och 3 får vi ränta både på våra ursprungliga sparpengar plus ränta på de pengar vi fått in i ränta tidigare år. Låt oss skriva det med en ekvation per år. Efter år 1 har vi:</p>
 <p><span class="math display">\[5\ 000*1,02 = 5\ 100\]</span></p>
 <p>Efter år 2 får vi ränta på pengarna vi har vid slutet av år 1, det vill säga ränta på räntan:</p>
 <p><span class="math display">\[5\ 100*1,02\ = 5\ 202\ \]</span></p>
@@ -153,37 +160,59 @@ Sparbelopp efter år 1 <span class="math inline">\(= 5\ 000*1,02\)</span>
 <p><span class="math display">\[5\ 202\ *\ 1,02\ = 5\ 306,04\ \ \]</span></p>
 <p>Precis som ovan kan vi använda potenser för att beskriva detta. Vi sätter 1,02 som bas i ett potensuttryck. Exponenten är lika med antal år: 3. Vårt totalbelopp efter tre år kan då skrivas:</p>
 <p><span class="math display">\[5\ 000\ *\ 1,02\ *\ 1,02\ *\ 1,02 = 5\ 000\ *\ {1,02}^{3}\ = \ 5\ 306,04\ \]</span></p>
-<div id="kreditkort" class="section level4" number="5.0.1.1">
+</div>
+<div id="kreditkort" class="section level4" number="5.0.2.2">
 <h4>
-<span class="header-section-number">5.0.1.1</span> Kreditkort<a class="anchor" aria-label="anchor" href="#kreditkort"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.0.2.2</span> Kreditkort<a class="anchor" aria-label="anchor" href="#kreditkort"><i class="fas fa-link"></i></a>
 </h4>
 <p>När vi tar ett lån kan vi i stället få betala ränta på ränta. Kreditkort innebär att när du handlar med kortet lånar du av banken och betalar ränta på lånet. Säg att du använder ett kreditkort med 12 % årsränta, men räntan tillförs per månad. Många kreditkort har särskilda regler som räntefria månader, vilket vi ignorerar för att förenkla exemplet. För att beräkna månadsräntan tar vi årsräntan 12 % och dividerar med antal månader på ett år, 12:
 Ränta per månad:  <span class="math inline">\(0,12/12\ = 0,01 = 1\%\)</span>
 Säg nu att du använder kreditkortet för att handla för 20 000 kr och väntar 3 månader med att betala. Hur mycket blir räntan?
 Räntan börjar i detta exempel läggas på ditt lån genast vid början av varje månad på den skuld som då gäller. Ny ränta läggs på gammal ränta för varje månad som lånet inte återbetalas. Efter 3 månader har ditt lån vuxit till följande belopp:</p>
 <p><span class="math display">\[20\ 000*{1,01}^{3}\ = \ 20\ 606,02\ \]</span></p>
-<p>Räntekostnaden för att låna i tre månader på kreditkortet blir i detta fall:<br><span class="math inline">\(20\ 606,02\ --20\ 000 = 606,02\)</span> kr.
-### Kumulativ summa
-Uttrycket “kumulativ ränta” syftar på att ränta läggs på ränta och bildar en ny total ränta, en ny summa som vi måste betala eller får betalt som ersättning för att vi lånar eller lånar ut pengar.
+<p>Räntekostnaden för att låna i tre månader på kreditkortet blir i detta fall:<br><span class="math inline">\(20\ 606,02\ --20\ 000 = 606,02\)</span> kr.</p>
+</div>
+</div>
+<div id="kumulativ-summa" class="section level3" number="5.0.3">
+<h3>
+<span class="header-section-number">5.0.3</span> Kumulativ summa<a class="anchor" aria-label="anchor" href="#kumulativ-summa"><i class="fas fa-link"></i></a>
+</h3>
+<p>Uttrycket “kumulativ ränta” syftar på att ränta läggs på ränta och bildar en ny total ränta, en ny summa som vi måste betala eller får betalt som ersättning för att vi lånar eller lånar ut pengar.
 Ett närliggande begrepp är <em>kumulativ summa</em>, vilket beskriver en summa som beräknas per värde i en serie, inklusive alla värden i serien fram till dess. Tabell 1 visar några tal och en kolumn med en kumulativ summa och en kolumn med en vanlig summa.</p>
-<div class="inline-table"><table class="table table-sm">
+<p><strong>Tabell 1: Illustration av kumulativ summa.</strong></p>
+<div class="inline-table"><table style="width:78%;" class="table table-sm">
+<colgroup>
+<col width="29%">
+<col width="18%">
+<col width="30%">
+</colgroup>
 <thead><tr class="header">
-<th align="left">Tabell 1: Illustration av kumulativ summa.**</th>
+<th align="left"><strong>Observation nr</strong></th>
+<th align="left"><strong>Värde</strong></th>
+<th align="left"><strong>Kumulativ summa</strong></th>
 </tr></thead>
 <tbody><tr class="odd">
-<td align="left">
-<strong>Observation nr</strong> <strong>Värde</strong> <strong>Kumulativ summa</strong>
-</td>
+<td align="left">1
+2
+3
+4</td>
+<td align="left">23
+32
+11
+14
+Summa: 80</td>
+<td align="left">23
+23+32=55
+23+32+11=66
+23+32+11+14=80</td>
 </tr></tbody>
 </table></div>
-<p>1 23 23
-2 32 23+32=55
-3 11 23+32+11=66
-4 14 23+32+11+14=80
-Summa: 80<br>
-——————————————————-
-### Effektiv ränta
-Enligt <a href="https://www.konsumentverket.se/for-foretag/prissattning-och-ta-betalt/konsumentkreditlagen/">konsumentkreditlagen</a> är långivare skyldiga att informera om ett låns <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/lan#!/"><em>effektiva ränta</em></a>. Effektiv ränta är den totala kostnaden för ett lån inklusive eventuella extraavgifter, beräknat som årlig procentuell ränta på lånebeloppet.
+</div>
+<div id="effektiv-ränta" class="section level3" number="5.0.4">
+<h3>
+<span class="header-section-number">5.0.4</span> Effektiv ränta<a class="anchor" aria-label="anchor" href="#effektiv-r%C3%A4nta"><i class="fas fa-link"></i></a>
+</h3>
+<p>Enligt <a href="https://www.konsumentverket.se/for-foretag/prissattning-och-ta-betalt/konsumentkreditlagen/">konsumentkreditlagen</a> är långivare skyldiga att informera om ett låns <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/lan#!/"><em>effektiva ränta</em></a>. Effektiv ränta är den totala kostnaden för ett lån inklusive eventuella extraavgifter, beräknat som årlig procentuell ränta på lånebeloppet.
 Många lån kommer med tilläggsavgifter, till exempel avgift för att skapa lånet (uppläggningsavgift) eller avgift för att långivaren ska skicka avier (aviavgift). I praktiken innebär detta att när det står i en annons att du kan köpa något och betala “räntefritt” senare, betalar du ofta i praktiken en <em>effektiv ränta</em>, trots att företaget som säljer produkten inte kallar detta för ränta.
 Ett exempel: En butik erbjuder dig att köpa en tv för 10 000 kr och skjuta upp betalningen utan ränta i 24 månader. För detta tar butiken ut en avgift på 700 kr och en “administrativ avgift” på 40 kr för varje månad, totalt <span class="math inline">\(40 \times 24 = 960\)</span>. Totala mängden extrakostnader: <span class="math inline">\(700 + 40\ \times \ 24 = 1\ 660\)</span>. Allt detta läggs på lånet direkt vid köp. Uttryckt i procent av lånet (10 000 kr) ger detta följande effektiva ränta:</p>
 <p><span class="math display">\[\frac{1\ 660}{10\ 000} = 16,6\%\]</span></p>
@@ -208,7 +237,6 @@ Observera att detta exempel visar en förenklad beräkning av den totala låneko
 <p><a href="k1-2-2.html">→ Nästa avsnitt: <strong>Nominella och reala priser</strong></a></p>
 </div>
 
-</div>
 </div>
 </div>
 <script src="js/exercises.js"></script><script>
@@ -352,7 +380,12 @@ Observera att detta exempel visar en förenklad beräkning av den totala låneko
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k1-2-1"><span class="header-section-number">5</span> Räkna med ränta</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-4"><span class="header-section-number">5.0.1</span> Begrepp</a></li></ul>
+<a class="nav-link" href="#k1-2-1"><span class="header-section-number">5</span> Räkna med ränta</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-4"><span class="header-section-number">5.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-4"><span class="header-section-number">5.0.2</span> Teori</a></li>
+<li><a class="nav-link" href="#kumulativ-summa"><span class="header-section-number">5.0.3</span> Kumulativ summa</a></li>
+<li><a class="nav-link" href="#effektiv-r%C3%A4nta"><span class="header-section-number">5.0.4</span> Effektiv ränta</a></li>
+</ul>
 </li></ul>
 
       <div class="book-extra">

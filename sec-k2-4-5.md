@@ -2,9 +2,11 @@
 
 ### Begrepp
 *Inga nya begrepp i detta avsnitt.*
+
 ### Teori
 I tidigare avsnitt räknade vi med formler för 2 och 3 variabler. Men vad händer om vi har 10 variabler? Eller 100? Matriser låter oss sammanfatta denna typ av beräkningar i en enda kompakt kortfattad formel som fungerar för valfritt antal variabler.
 I dessa exempel ser du att matrismetoden ger exakt samma svar som de tidigare metoderna. Men med matriser blir det tydligt att metoden är generaliserbar till valfritt antal variabler eller valfritt antal observationer. Därigenom blir det förhoppningsvis även tydligare vad som är metodens stora fördelar och begränsningar.
+
 #### Exempel nr 1
 I föregående avsnitt definierade vi minstakvadratmetodens estimator för koefficienterna i en regressionsmodell beskriven med matriser. Låt oss prova hur vi kan använda detta för att estimera modeller utifrån data. Här följer tre exempel där vi återanvänder data och regressionsmodeller från tidigare exempel.
 Låt oss nu återanvända den första regressionsmodellen och observationerna för denna som vi introducerade i [avsnitt 2.4](https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&dl=0): $Y = a + bX + V$. Men denna gång ska vi estimera modellen med matriser. Samma observationer som vi använt tidigare upprepas i tabell 1.
@@ -38,6 +40,7 @@ $\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbr
 $${= \frac{1}{4*110 - ( - 20)*( - 20)}\begin{bmatrix} 110 & - 20 \\ - 20 & 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left( \frac{1}{440 - 400} \right)\begin{bmatrix} 110 & - 20 \\ - 20 & 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{110}{40} & \frac{- 20}{40}\ \\ \frac{- 20}{40} & \frac{4}{40} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{11}{4} & - \frac{1}{2} \\ - \frac{1}{2} & \frac{1}{10} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left\lbrack \begin{array}{r} 1 \\ 0,5 \end{array} \right\rbrack }$$
 
 Vårt resultat visar att $\widehat{a} = 1$ och $\widehat{b} = 0,5$, vilket är samma sak som vi kom fram till tidigare.
+
 #### Exempel nr 2
 Låt oss även göra samma sak för regressionsmodellen från [avsnitt 4.1](https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&dl=0): $Y = a + bX + cZ + V$, vilket vi kan skriva med matriser som:
 $Y = XB + V$ (5)
@@ -77,6 +80,7 @@ $$\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \\ \widehat{c} \end{a
 $$\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \\ \widehat{c} \end{array} \right\rbrack \approx \left\lbrack \begin{array}{r} 2,9 \\ 0,3 \\ - 0,5 \end{array} \right\rbrack$$
 
 Sista raden innehåller de avrundade resultaten $\widehat{a} \approx 2,9$, $\widehat{b} \approx 0,3$ och $\widehat{c} \approx - 0,5$. Detta är samma sak som vi kom fram till i [avsnitt 4.1](https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&dl=0).
+
 #### Exempel nr 3
 I [avsnitt 3.2](https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&dl=0) använde vi fyra observationer för variablerna $Z$ och $K$ vilka upprepas i tabell 3. Med dessa observationer estimerade vi regressionsmodellen $Z = \alpha + \beta K + \epsilon$, där $\epsilon$ är feltermen och $\alpha$ och $\beta$ är modellens koefficienter, som vi fann var $\widehat{\alpha} = 2,5$ och $\widehat{\beta} = - 0,5$.
 **Tabell 3: Variablerna** $Z$ **och** $K$

@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>20 Nätverksanalys | Matematik och statistik för samhällsvetare</title>
 <meta name="author" content="">
-<meta name="description" content="20.0.1 Begrepp Nätverk: Input-output: ### Teori I detta avsnitt ska vi använda linjär algebra för att beskriva ett nätverk av företag i olika branscher som handlar med varandra. För detta kan vi...">
+<meta name="description" content="20.0.1 Begrepp Nätverk: Input-output:  20.0.2 Teori I detta avsnitt ska vi använda linjär algebra för att beskriva ett nätverk av företag i olika branscher som handlar med varandra. För detta kan...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="20 Nätverksanalys | Matematik och statistik för samhällsvetare">
 <meta property="og:type" content="book">
-<meta property="og:description" content="20.0.1 Begrepp Nätverk: Input-output: ### Teori I detta avsnitt ska vi använda linjär algebra för att beskriva ett nätverk av företag i olika branscher som handlar med varandra. För detta kan vi...">
+<meta property="og:description" content="20.0.1 Begrepp Nätverk: Input-output:  20.0.2 Teori I detta avsnitt ska vi använda linjär algebra för att beskriva ett nätverk av företag i olika branscher som handlar med varandra. För detta kan...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20 Nätverksanalys | Matematik och statistik för samhällsvetare">
-<meta name="twitter:description" content="20.0.1 Begrepp Nätverk: Input-output: ### Teori I detta avsnitt ska vi använda linjär algebra för att beskriva ett nätverk av företag i olika branscher som handlar med varandra. För detta kan vi...">
+<meta name="twitter:description" content="20.0.1 Begrepp Nätverk: Input-output:  20.0.2 Teori I detta avsnitt ska vi använda linjär algebra för att beskriva ett nätverk av företag i olika branscher som handlar med varandra. För detta kan...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -114,36 +114,73 @@
 <h1>
 <span class="header-section-number">20</span> Nätverksanalys<a class="anchor" aria-label="anchor" href="#k1-4-5"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-17" class="section level3" number="20.0.1">
+<div id="begrepp-19" class="section level3" number="20.0.1">
 <h3>
-<span class="header-section-number">20.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-17"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-19"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li><strong>Nätverk:</strong></li>
-<li>
-<strong>Input-output:</strong>
-### Teori
-I detta avsnitt ska vi använda linjär algebra för att beskriva ett nätverk av företag i olika branscher som handlar med varandra. För detta kan vi använda det som kallas för <a href="https://en.wikipedia.org/wiki/Input%E2%80%93output_model"><em>input-output-</em>analys</a> (IO).
+<li><strong>Input-output:</strong></li>
+</ul>
+</div>
+<div id="teori-19" class="section level3" number="20.0.2">
+<h3>
+<span class="header-section-number">20.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-19"><i class="fas fa-link"></i></a>
+</h3>
+<p>I detta avsnitt ska vi använda linjär algebra för att beskriva ett nätverk av företag i olika branscher som handlar med varandra. För detta kan vi använda det som kallas för <a href="https://en.wikipedia.org/wiki/Input%E2%80%93output_model"><em>input-output-</em>analys</a> (IO).
 IO-analys utgår från en beskrivning av in- och utflödet (input och output) av varor och tjänster mellan olika branscher. Samma matematiska metoder kan användas för att beskriva och resonera om andra typer av nätverk, som till exempel ett nätverk av vänner.
 Vi kan även lägga till annan information till våra matriser och beräkna andra mekanismer. Input-output-analys används bland annat för att beskriva hur en produktionskedja påverkar och påverkas av andra delar av ekonomin.
 Till exempel hur förändringar för företagen i en del av ekonomin kan påverka mängden jobb i andra branscher. Eller vilken klimatpåverkan som företagen i en bransch har indirekt genom deras handel med andra företag och branscher.
-Dessa metoder har en lång historia men började framför allt spridas inom samhällsvetenskap under 1920-talet, tack vare bland andra nationalekonomen <a href="https://en.wikipedia.org/wiki/Wassily_Leontief">Wassily Leontief</a>.
-#### Ett exempel med siffror
-Tabell 1 visar ett exempel på en IO-tabell med de två branscherna A och B. Respektive bransch har en egen rad och en egen kolumn. Siffrorna i tabellen visar värdet av den produktion som levereras till respektive bransch samt till slutkonsumtion hos hushåll och offentlig sektor.
-I raden för bransch A visar siffrorna värdet av den produktion som A säljer till andra företag i samma bransch (värdet 2) och till företag i bransch B (värdet 1). Den fjärde kolumnen beskriver mängden produktion till slutkonsumtion medan den femte kolumnen summerar kolumn 2–4.</li>
-</ul>
-<p><strong>Tabell 1. Input och output från och till företagen i de två branscherna A och B.</strong>
-+———–+———–+———–+—————-+———-+
-| Till | Bransch A | Bransch B | Slutkonsumtion | Summa |
-| | | | | |
-| Från | | | | |
-+===========+===========+===========+================+==========+
-| Bransch A | 2 | 1 | 3 | 6 |
-+———–+———–+———–+—————-+———-+
-| Bransch B | 1 | 3 | 3 | 7 |
-+———–+———–+———–+—————-+———-+
-| Summa | 3 | 4 | 6 | 13 |
-+———–+———–+———–+—————-+———-+</p>
+Dessa metoder har en lång historia men började framför allt spridas inom samhällsvetenskap under 1920-talet, tack vare bland andra nationalekonomen <a href="https://en.wikipedia.org/wiki/Wassily_Leontief">Wassily Leontief</a>.</p>
+<div id="ett-exempel-med-siffror" class="section level4" number="20.0.2.1">
+<h4>
+<span class="header-section-number">20.0.2.1</span> Ett exempel med siffror<a class="anchor" aria-label="anchor" href="#ett-exempel-med-siffror"><i class="fas fa-link"></i></a>
+</h4>
+<p>Tabell 1 visar ett exempel på en IO-tabell med de två branscherna A och B. Respektive bransch har en egen rad och en egen kolumn. Siffrorna i tabellen visar värdet av den produktion som levereras till respektive bransch samt till slutkonsumtion hos hushåll och offentlig sektor.
+I raden för bransch A visar siffrorna värdet av den produktion som A säljer till andra företag i samma bransch (värdet 2) och till företag i bransch B (värdet 1). Den fjärde kolumnen beskriver mängden produktion till slutkonsumtion medan den femte kolumnen summerar kolumn 2–4.</p>
+<p><strong>Tabell 1. Input och output från och till företagen i de två branscherna A och B.</strong></p>
+<div class="inline-table"><table style="width:89%;" class="table table-sm">
+<colgroup>
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="23%">
+<col width="15%">
+</colgroup>
+<thead><tr class="header">
+<th>
+<p>Till</p>
+<p>Från</p>
+</th>
+<th>Bransch A</th>
+<th>Bransch B</th>
+<th>Slutkonsumtion</th>
+<th>Summa</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Bransch A</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Bransch B</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>Summa</td>
+<td>3</td>
+<td>4</td>
+<td>6</td>
+<td>13</td>
+</tr>
+</tbody>
+</table></div>
 <div class="fig-caption">
 <p>Förklaring: På raden för bransch A ser vi mängden produktion av varor och tjänster från (output) företagen i bransch A till andra företag i bransch A, företag i bransch B samt till hushållen som står för slutkonsumtion. I kolumnen för bransch A ser vi mängden insatsvaror (input) som företagen i bransch A erhåller från andra företag i bransch A och B. I kolumnen längst till höger ser vi radsumma och i raden längst ned ser vi kolumnsumma.
 Informationen i tabell 1 kan vi använda för att beräkna hur förändrad produktion i en del av samhällsekonomin påverkar övriga delar. Vi börjar med att placera tabellens värden i matriser. Vi samlar flödena till och från branscherna i en <span class="math inline">\(2 \times 2\)</span> matris Z (flödesmatrisen), slutkonsumtion i kolumnmatris C och summan i sista kolumnen i kolumnmatris S:
@@ -152,9 +189,10 @@ Flödena till och från branscherna, som beskrivs i Z, kan vi dividera med respe
 <span class="math inline">\(a_{ij} = \frac{y_{ij}}{y_{j}}\)</span> (2)
 där <span class="math inline">\(y_{ij}\)</span> är produktion från bransch <em>i</em> som levereras till bransch <em>j</em>, medan <span class="math inline">\(y_{j}\)</span> är den produktion som bransch <em>j</em> producerar. För varje värde i matris <em>Z</em> kan vi beräkna ett värde <span class="math inline">\(a_{ij}\)</span> och samla i en 2 × 2 matris A.</p>
 </div>
-<div id="räkna-med-matriser" class="section level4" number="20.0.1.1">
+</div>
+<div id="räkna-med-matriser" class="section level4" number="20.0.2.2">
 <h4>
-<span class="header-section-number">20.0.1.1</span> Räkna med matriser<a class="anchor" aria-label="anchor" href="#r%C3%A4kna-med-matriser"><i class="fas fa-link"></i></a>
+<span class="header-section-number">20.0.2.2</span> Räkna med matriser<a class="anchor" aria-label="anchor" href="#r%C3%A4kna-med-matriser"><i class="fas fa-link"></i></a>
 </h4>
 <p>För att göra denna beräkning med matriser beräknar vi först den multiplikativa inversen av varje element i S, det vill säga placerar värdena som nämnare i varsitt bråk med täljaren 1. Bransch A får <span class="math inline">\(\frac{1}{6}\)</span> och bransch B <span class="math inline">\(\frac{1}{7}\)</span>. Dessa värden samlar vi i en kolumnmatris <span class="math inline">\(S_{m}\)</span> och placerar i en diagonalmatris, vilket vi kan beskriva som <span class="math inline">\(diag(S_{m})\)</span>:
 <span class="math inline">\(diag\left( S_{m} \right) = \begin{bmatrix} \frac{1}{6} &amp; 0 \\ 0 &amp; \frac{1}{7} \end{bmatrix}\)</span> (3)
@@ -169,15 +207,23 @@ Vi vet inte värdena för <span class="math inline">\(y_{j}\)</span> än men vi 
 <p><span class="math display">\[{Y - AY = C }{IY - AY = C }{(I - A)Y = C }{Y = (I - A)^{- 1}C}\]</span></p>
 <p>Identitetsmatris <em>I</em> har samma dimensioner som <em>A</em>. Kolumnmatris <em>Y</em> beskriver hur mycket produktion som krävs från respektive bransch till företagen i samma och andra branscher samt till slutkonsumtion:
 <span class="math inline">\(Y = (I - A)^{- 1}C = \begin{bmatrix} \frac{8}{5} &amp; \frac{2}{5} \\ \frac{7}{15} &amp; \frac{28}{15} \end{bmatrix}\begin{bmatrix} 3 \\ 3 \end{bmatrix} \approx \begin{bmatrix} 6 \\ 7 \end{bmatrix}\)</span> (7)
-Detta resultat är konsistent med tabell 1, där vi ser att bransch A producerar totalt 6 enheter och bransch B producerar totalt 7 enheter. Detta visar hur mycket bransch A och B måste producera totalt för insatsvaror och slutkonsumtion. Vi kallar den inverterade matrisen för <span class="math inline">\(B = (I - A) - 1\)</span>. Matris <em>B</em> har samma dimensioner som matris <em>A</em>.
-#### Produktions- och insatsmultiplikatorerna
-Låt oss beräkna <em>B</em> med värdena från tabell 1:
+Detta resultat är konsistent med tabell 1, där vi ser att bransch A producerar totalt 6 enheter och bransch B producerar totalt 7 enheter. Detta visar hur mycket bransch A och B måste producera totalt för insatsvaror och slutkonsumtion. Vi kallar den inverterade matrisen för <span class="math inline">\(B = (I - A) - 1\)</span>. Matris <em>B</em> har samma dimensioner som matris <em>A</em>.</p>
+</div>
+<div id="produktions--och-insatsmultiplikatorerna" class="section level4" number="20.0.2.3">
+<h4>
+<span class="header-section-number">20.0.2.3</span> Produktions- och insatsmultiplikatorerna<a class="anchor" aria-label="anchor" href="#produktions--och-insatsmultiplikatorerna"><i class="fas fa-link"></i></a>
+</h4>
+<p>Låt oss beräkna <em>B</em> med värdena från tabell 1:
 <span class="math inline">\(B = (I - A)^{- 1}\)</span> (8)$ $</p>
 <p><span class="math display">\[{= \left( \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} - \begin{bmatrix} \frac{2}{6} &amp; \frac{1}{7} \\ \frac{1}{6} &amp; \frac{3}{7} \end{bmatrix} \right)^{- 1} }{= \begin{bmatrix} \frac{4}{6} &amp; - \frac{1}{7} \\ - \frac{1}{6} &amp; \frac{4}{7} \end{bmatrix}^{- 1} }{= \begin{bmatrix} \frac{8}{5} &amp; \frac{2}{5} \\ \frac{7}{15} &amp; \frac{28}{15} \end{bmatrix}\ }\]</span></p>
 <p>Om vi nu i matris <span class="math inline">\(B\)</span> beräknar summan av en kolumn för en bransch <span class="math inline">\(j\)</span> får vi den totala mängden produktion för alla branscher som skulle krävas om slutkonsumtionen för bransch <span class="math inline">\(j\)</span> skulle öka med en enhet. Detta visar hur mycket andra branscher måste leverera i insatsvaror till branschen <span class="math inline">\(j\)</span>. Detta mått kallas i det här sammanhanget för <em>produktionsmultiplikator</em>.
-Om vi för matris <span class="math inline">\(B\)</span> beräknar summan av en rad för en bransch <span class="math inline">\(j\)</span> i matris <span class="math inline">\(B\)</span> får vi ett mått på hur mycket extra produktion totalt i samhället som möjliggörs om branschen <span class="math inline">\(j\)</span> ökar sin produktion av insatsvaror med en enhet. Detta kallas för <em>insatsmultiplikator</em>.
-#### Illustrera nätverk i diagram
-Figur 1 visar ett exempel på hur detta kan illustreras i ett <em>nätverksdiagram</em>. Punkterna beskriver de två branscherna A och B och pilarna beskriver flödena till och från de två branscherna. Värdena vid respektive pil representerar värdena i tabell 1.
+Om vi för matris <span class="math inline">\(B\)</span> beräknar summan av en rad för en bransch <span class="math inline">\(j\)</span> i matris <span class="math inline">\(B\)</span> får vi ett mått på hur mycket extra produktion totalt i samhället som möjliggörs om branschen <span class="math inline">\(j\)</span> ökar sin produktion av insatsvaror med en enhet. Detta kallas för <em>insatsmultiplikator</em>.</p>
+</div>
+<div id="illustrera-nätverk-i-diagram" class="section level4" number="20.0.2.4">
+<h4>
+<span class="header-section-number">20.0.2.4</span> Illustrera nätverk i diagram<a class="anchor" aria-label="anchor" href="#illustrera-n%C3%A4tverk-i-diagram"><i class="fas fa-link"></i></a>
+</h4>
+<p>Figur 1 visar ett exempel på hur detta kan illustreras i ett <em>nätverksdiagram</em>. Punkterna beskriver de två branscherna A och B och pilarna beskriver flödena till och från de två branscherna. Värdena vid respektive pil representerar värdena i tabell 1.
 Punkternas storlek representerar respektive branschs totala produktion, kolumnen längst till höger i tabellen. I diagrammet har vi inte tagit med någon illustration över den produktion som branscherna skickar till slutkonsumtion.</p>
 <p><strong>Figur 1. Ett nätverk med de två branscherna A och B.</strong></p>
 <div class="inline-figure"><img src="img/k1-4-5-image1.png" style="width:5in;height:3in"></div>
@@ -338,7 +384,10 @@ Punkternas storlek representerar respektive branschs totala produktion, kolumnen
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k1-4-5"><span class="header-section-number">20</span> Nätverksanalys</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-17"><span class="header-section-number">20.0.1</span> Begrepp</a></li></ul>
+<a class="nav-link" href="#k1-4-5"><span class="header-section-number">20</span> Nätverksanalys</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-19"><span class="header-section-number">20.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-19"><span class="header-section-number">20.0.2</span> Teori</a></li>
+</ul>
 </li></ul>
 
       <div class="book-extra">

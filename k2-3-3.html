@@ -114,9 +114,9 @@
 <h1>
 <span class="header-section-number">33</span> Hur väl passar modellerna mot data?<a class="anchor" aria-label="anchor" href="#k2-3-3"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-30" class="section level3" number="33.0.1">
+<div id="begrepp-32" class="section level3" number="33.0.1">
 <h3>
-<span class="header-section-number">33.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-30"><i class="fas fa-link"></i></a>
+<span class="header-section-number">33.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-32"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -125,167 +125,153 @@
 <li>
 <strong>Medelkvadratsumman av den förklarade variationen</strong> (engelska <em>mean sum of squares explained</em>, MSE): **
 <span class="math inline">\(MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}\)</span>
-### Teori
-I tidigare avsnitt har vi estimerat två olika regressionsmodeller. Varje modell utgick från fyra observationer vardera. Regressionsanalys är ett sätt att studera mönster i data. Vi kan använda våra regressionsmodeller för att pröva i vilken utsträckning som det mönster som en regressionsmodell beskriver faktiskt återfinns i våra data.
-Att estimera koefficienterna i regressionsmodellen är då endast första steget i en regressionsanalys. Därefter vill vi jämföra hur väl mönstret i vår regressionsmodell faktiskt stämde med det mönster som fanns i observationerna. Detta är ett vanligt tillvägagångssätt och därför viktigt att känna till.
-#### Medelkvadratsumman
-För att studera hur väl en regressionsmodell passar mot data kan vi även jämföra medelkvadratsumman. Medelkvadratsumman för residualerna (engelska <em>mean squared residuals</em>, MSR) beräknas:
+</li>
+</ul>
+</div>
+<div id="teori-32" class="section level3" number="33.0.2">
+<h3>
+<span class="header-section-number">33.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-32"><i class="fas fa-link"></i></a>
+</h3>
+<p>I tidigare avsnitt har vi estimerat två olika regressionsmodeller. Varje modell utgick från fyra observationer vardera. Regressionsanalys är ett sätt att studera mönster i data. Vi kan använda våra regressionsmodeller för att pröva i vilken utsträckning som det mönster som en regressionsmodell beskriver faktiskt återfinns i våra data.
+Att estimera koefficienterna i regressionsmodellen är då endast första steget i en regressionsanalys. Därefter vill vi jämföra hur väl mönstret i vår regressionsmodell faktiskt stämde med det mönster som fanns i observationerna. Detta är ett vanligt tillvägagångssätt och därför viktigt att känna till.</p>
+<div id="medelkvadratsumman" class="section level4" number="33.0.2.1">
+<h4>
+<span class="header-section-number">33.0.2.1</span> Medelkvadratsumman<a class="anchor" aria-label="anchor" href="#medelkvadratsumman"><i class="fas fa-link"></i></a>
+</h4>
+<p>För att studera hur väl en regressionsmodell passar mot data kan vi även jämföra medelkvadratsumman. Medelkvadratsumman för residualerna (engelska <em>mean squared residuals</em>, MSR) beräknas:
 <span class="math inline">\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\)</span> (5)
 Nämnaren <span class="math inline">\(n - p\)</span> visar antal frihetsgrader, där <span class="math inline">\(n\)</span> är antal observationer och <span class="math inline">\(p\)</span> är antal estimerade koefficienter i regressionsmodellen. Frihetsgrader anger hur många "fria" värden vi har kvar efter att ha estimerat koefficienterna: <span class="math inline">\(n\)</span> = antal observationer (här 4). <span class="math inline">\(p\)</span> = antal estimerade koefficienter (här 2: <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>). <span class="math inline">\(n - p\)</span> = frihetsgrader <span class="math inline">\((4\ - \ 2\ = \ 2)\)</span>. Med 4 observationer och 2 koefficienter har vi "använt upp" 2 frihetsgrader för att estimera koefficienterna. Vi har 2 frihetsgrader kvar för att mäta variation kring regressionslinjen.
-Förenklat kan ett lågt MSR innebära att regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> hamnar relativt nära observationerna <span class="math inline">\(Y\)</span>.
-#### Medelkvadratsumman av den förklarade variationen
-Medelkvadratsumman av den förklarade variationen är SSE dividerat med antal förklarande variabler (engelska mean sum of squares explained, MSE):
+Förenklat kan ett lågt MSR innebära att regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> hamnar relativt nära observationerna <span class="math inline">\(Y\)</span>.</p>
+</div>
+<div id="medelkvadratsumman-av-den-förklarade-variationen" class="section level4" number="33.0.2.2">
+<h4>
+<span class="header-section-number">33.0.2.2</span> Medelkvadratsumman av den förklarade variationen<a class="anchor" aria-label="anchor" href="#medelkvadratsumman-av-den-f%C3%B6rklarade-variationen"><i class="fas fa-link"></i></a>
+</h4>
+<p>Medelkvadratsumman av den förklarade variationen är SSE dividerat med antal förklarande variabler (engelska mean sum of squares explained, MSE):
 <span class="math inline">\(MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}\)</span> (6)
-I täljaren tar vi <span class="math inline">\(p\)</span>, antal estimerade koefficienter, minus 1 eftersom koefficient <span class="math inline">\(a\)</span> inte multipliceras med någon förklarande variabel.
-#### Låt oss jämföra två regressionsmodeller
-I tidigare avsnitt har vi använt två olika samlingar med observationer för att utifrån minstakvadratmetoden estimera de två regressionsmodellerna från <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a> och <a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a>:
+I täljaren tar vi <span class="math inline">\(p\)</span>, antal estimerade koefficienter, minus 1 eftersom koefficient <span class="math inline">\(a\)</span> inte multipliceras med någon förklarande variabel.</p>
+</div>
+<div id="låt-oss-jämföra-två-regressionsmodeller" class="section level4" number="33.0.2.3">
+<h4>
+<span class="header-section-number">33.0.2.3</span> Låt oss jämföra två regressionsmodeller<a class="anchor" aria-label="anchor" href="#l%C3%A5t-oss-j%C3%A4mf%C3%B6ra-tv%C3%A5-regressionsmodeller"><i class="fas fa-link"></i></a>
+</h4>
+<p>I tidigare avsnitt har vi använt två olika samlingar med observationer för att utifrån minstakvadratmetoden estimera de två regressionsmodellerna från <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a> och <a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a>:
 Modell 1: <span class="math inline">\(Y = a + bX + V\)</span> (7)
 Modell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>
-Tabell 2 och 3 återger observationerna vi använde för att estimera respektive tabell och några beräkningar vi nu ska använda i vår jämförelse.</li>
-</ul>
-<div class="inline-table"><table class="table table-sm">
+Tabell 2 och 3 återger observationerna vi använde för att estimera respektive tabell och några beräkningar vi nu ska använda i vår jämförelse.</p>
+<p><strong>Tabell 2: Observationer och beräkningar för modell 1</strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="5%">
+<col width="11%">
+<col width="11%">
+<col width="14%">
+<col width="17%">
+<col width="16%">
+<col width="24%">
+</colgroup>
 <thead><tr class="header">
-<th align="left">Tabell 2: Observationer och beräkningar för modell 1**</th>
+<th align="left">Observation i</th>
+<th align="left">$</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
 </tr></thead>
 <tbody><tr class="odd">
-<td align="left">Observation i</td>
+<td align="left">1
+2
+3
+4
+Medel
+Summa</td>
+<td align="left">3
+4
+6
+7
+5</td>
+<td>3
+2
+5
+4
+3,5</td>
+<td>2,5
+3
+4
+4,5</td>
+<td>0,5
+-1
+1
+-0,5</td>
+<td>-0,5
+-1,5
+1,5
+0,5</td>
+<td>0,25
+1
+1
+0,25</td>
 </tr></tbody>
 </table></div>
-<p><span class="math display">\[X_{i}\]</span></p>
-<p><span class="math display">\[Y_{i}\]</span></p>
-<p><span class="math display">\[\widehat{Y_{i}}\]</span></p>
-<p><span class="math display">\[Y_{i} - \widehat{Y_{i}}\]</span></p>
-<p><span class="math display">\[Y_{i} - \overline{Y}\]</span></p>
-<p><span class="math display">\[\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\]</span></p>
-<div class="inline-table"><table class="table table-sm"><tbody>
-<tr class="odd">
-<td align="left">1</td>
-<td align="center">3</td>
-<td align="center">3</td>
-<td align="center">2,5</td>
-<td align="center">0,5</td>
-<td align="center">-0,5</td>
-<td align="center">0,25</td>
-</tr>
-<tr class="even">
-<td align="left">2</td>
-<td align="center">4</td>
-<td align="center">2</td>
-<td align="center">3</td>
-<td align="center">-1</td>
-<td align="center">-1,5</td>
-<td align="center">1</td>
-</tr>
-<tr class="odd">
-<td align="left">3</td>
-<td align="center">6</td>
-<td align="center">5</td>
-<td align="center">4</td>
-<td align="center">1</td>
-<td align="center">1,5</td>
-<td align="center">1</td>
-</tr>
-<tr class="even">
-<td align="left">4</td>
-<td align="center">7</td>
-<td align="center">4</td>
-<td align="center">4,5</td>
-<td align="center">-0,5</td>
-<td align="center">0,5</td>
-<td align="center">0,25</td>
-</tr>
-<tr class="odd">
-<td align="left">Medel</td>
-<td align="center">5</td>
-<td align="center">3,5</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="left">Summa</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">2,5</td>
-<td align="center">5</td>
-</tr>
-</tbody></table></div>
 <div class="fig-caption">
 <p>Förklaring: se text.</p>
 </div>
-<div class="inline-table"><table class="table table-sm">
+<p><strong>Tabell 3: Observationer och beräkningar för modell 2</strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="4%">
+<col width="10%">
+<col width="10%">
+<col width="13%">
+<col width="23%">
+<col width="16%">
+<col width="22%">
+</colgroup>
 <thead><tr class="header">
-<th align="left">Tabell 3: Observationer och beräkningar för modell 2**</th>
+<th align="left">Observation i</th>
+<th align="left">$</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
 </tr></thead>
 <tbody><tr class="odd">
-<td align="left">Observation i</td>
+<td align="left">1
+2
+3
+4
+Medel
+Summa</td>
+<td align="left">1
+4
+0
+1
+1,5</td>
+<td>0
+0
+4
+4
+2</td>
+<td>2,5
+2,5
+0,5
+0,5</td>
+<td>–1,5
+1,5
+-0,5
+0,5</td>
+<td>–0,5
+2,5
+–1,5
+–0,5</td>
+<td>2,25
+2,25
+0,25
+0,25</td>
 </tr></tbody>
 </table></div>
-<p><span class="math display">\[Z_{i}\]</span></p>
-<p><span class="math display">\[K_{i}\]</span></p>
-<p><span class="math display">\[\widehat{Z_{i}}\]</span></p>
-<p><span class="math display">\[\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}\]</span></p>
-<p><span class="math display">\[Z_{i} - \overline{Z_{i}}\]</span></p>
-<p><span class="math display">\[\left( Z_{i} - \widehat{Z_{i}} \right)^{2}\]</span></p>
-<div class="inline-table"><table class="table table-sm"><tbody>
-<tr class="odd">
-<td align="left">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">2,5</td>
-<td align="center">–1,5</td>
-<td align="center">–0,5</td>
-<td align="center">2,25</td>
-</tr>
-<tr class="even">
-<td align="left">2</td>
-<td align="center">4</td>
-<td align="center">0</td>
-<td align="center">2,5</td>
-<td align="center">1,5</td>
-<td align="center">2,5</td>
-<td align="center">2,25</td>
-</tr>
-<tr class="odd">
-<td align="left">3</td>
-<td align="center">0</td>
-<td align="center">4</td>
-<td align="center">0,5</td>
-<td align="center">-0,5</td>
-<td align="center">–1,5</td>
-<td align="center">0,25</td>
-</tr>
-<tr class="even">
-<td align="left">4</td>
-<td align="center">1</td>
-<td align="center">4</td>
-<td align="center">0,5</td>
-<td align="center">0,5</td>
-<td align="center">–0,5</td>
-<td align="center">0,25</td>
-</tr>
-<tr class="odd">
-<td align="left">Medel</td>
-<td align="center">1,5</td>
-<td align="center">2</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="left">Summa</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">5</td>
-<td align="center">9</td>
-</tr>
-</tbody></table></div>
 <div class="fig-caption">
 <p>Förklaring: se text.
 Nu ska vi jämföra vilken av modellerna som passar bäst mot deras respektive datapunkter. Vi börjar med att beräkna MSR för respektive regressionsmodell. Tabell 2 upprepar observationerna för modell 1 och variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> samt några beräkningar som vi behöver. Detta ger MSR:
@@ -296,9 +282,10 @@ Eftersom <span class="math inline">\(MSR_{modell\ 2} \&gt; MSR_{modell\ 1}\)</sp
 MSR beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.</p>
 </div>
 </div>
-<div id="vi-beräknar-r2-för-båda-modellerna" class="section level3" number="33.0.2">
+</div>
+<div id="vi-beräknar-r2-för-båda-modellerna" class="section level3" number="33.0.3">
 <h3>
-<span class="header-section-number">33.0.2</span> Vi beräknar <span class="math inline">\(R^{2}\)</span> för båda modellerna<a class="anchor" aria-label="anchor" href="#vi-ber%C3%A4knar-r2-f%C3%B6r-b%C3%A5da-modellerna"><i class="fas fa-link"></i></a>
+<span class="header-section-number">33.0.3</span> Vi beräknar <span class="math inline">\(R^{2}\)</span> för båda modellerna<a class="anchor" aria-label="anchor" href="#vi-ber%C3%A4knar-r2-f%C3%B6r-b%C3%A5da-modellerna"><i class="fas fa-link"></i></a>
 </h3>
 <p>Låt oss även skatta <span class="math inline">\(R^{2}\)</span>. För den första regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> får vi (se tabell 2):
 <span class="math inline">\(R_{modell\ 1}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{2,5}{5} = \frac{1}{2}\)</span> (10)
@@ -461,8 +448,9 @@ Detta betyder att 50 % av variationen i <span class="math inline">\(Y\)</span> f
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
 <a class="nav-link" href="#k2-3-3"><span class="header-section-number">33</span> Hur väl passar modellerna mot data?</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#begrepp-30"><span class="header-section-number">33.0.1</span> Begrepp</a></li>
-<li><a class="nav-link" href="#vi-ber%C3%A4knar-r2-f%C3%B6r-b%C3%A5da-modellerna"><span class="header-section-number">33.0.2</span> Vi beräknar \(R^{2}\) för båda modellerna</a></li>
+<li><a class="nav-link" href="#begrepp-32"><span class="header-section-number">33.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-32"><span class="header-section-number">33.0.2</span> Teori</a></li>
+<li><a class="nav-link" href="#vi-ber%C3%A4knar-r2-f%C3%B6r-b%C3%A5da-modellerna"><span class="header-section-number">33.0.3</span> Vi beräknar \(R^{2}\) för båda modellerna</a></li>
 </ul>
 </li></ul>
 

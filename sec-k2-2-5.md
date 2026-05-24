@@ -2,6 +2,7 @@
 
 ### Begrepp
 *Inga nya begrepp i detta avsnitt.*
+
 ### Teori
 Vi har regressionsmodellen:
 $Y = a + bX + V$ (1)
@@ -11,6 +12,7 @@ I föregående avsnitt definierade vi predikterade ${\widehat{Y}}_{i} = \widehat
 Vi sätter nu in definitionen av ${\widehat{Y}}_{i}$ i vår ekvation för residualen ${\widehat{V}}_{i}$:
 $\widehat{V_{i}} = Y_{i} - \widehat{Y_{i}} = Y_{i} - \left( \widehat{a} + \widehat{b}X_{i} \right) = Y_{i} - \widehat{a} - \widehat{b}X_{i}$ (2)
 Detta visar att ${\widehat{V}}_{i}$ är en funktion av observationerna i variablerna $Y_{i}$ och $X_{i}$ samt de skattade koefficienterna $\widehat{a}$ och $\widehat{b}$.
+
 #### Beräkna $\widehat{V}$
 Figur 1 visar skattade resultat för $\widehat{Y}$ och $\widehat{V}$ från observationerna vi använde i föregående avsnitt. Diagrammet till höger i figuren är samma diagram som vi såg i föregående avsnitt. Värdena för residualen $\widehat{V}$ kan beskrivas som det vertikala avståndet mellan den diagonala linjen i diagrammet och respektive punkt. För observation 3 i diagrammet har vi skrivit ut beräkningen:
 ${\widehat{V}}_{3} = Y_{3} - {\widehat{Y}}_{3} = 5 - 4 = 1$ (3)
@@ -46,6 +48,7 @@ $${\widehat{V}}_{i} = Y_{i} - {\widehat{Y}}_{i}$$
   Summa                                                                                                                                    0
   Medelvärde                                                                                                                               0
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #### Räkna med minstakvadratmetoden
 Vi uppskattade tidigare $\widehat{a}$ och $\widehat{b}$ genom att jämföra en regressionslinje i ett diagram. Nu ska vi med hjälp av minstakvadratmetoden estimera koefficienterna $\widehat{a}$ och $\widehat{b}$ utifrån observationerna i våra variabler $X$ och $Y$.
 I praktiken utförs beräkningarna vanligtvis av en dator och många analysprogram har färdiga kommandon för detta. Metoden kräver ingen avancerad matematik men när vi har många variabler och observationer kan beräkningarna ta lång tid om vi gör det för hand.
@@ -60,6 +63,7 @@ Definitionen av $\widehat{b}$:
 - $\sum_{i}^{}{}$ betyder summan av alla observationer, där bokstaven $i$ syftar på hur observationerna är indexerade: observation 1 till 4. Vi summerar alla observationer från 1 till 4, varför vi i detta fall har $\sum_{i}^{}{} = \sum_{i = 1}^{n = 4}{}$
 - Parentesen $(X_{i} - \overline{X})$ innebär att vi för varje observation $i$ av $X$ subtraherar medelvärdet $\overline{X}$. Parentesen $\left( Y_{i} - \overline{Y} \right)$ innebär samma sak för respektive observation $i$ av $Y$. För varje observation multiplicerar vi $(X_{i} - \overline{X})(Y_{i} - \overline{Y})$.
 - Täljaren i definitionen för $\widehat{b}$ innebär att vi för varje observation beräknar $(X_{i} - \overline{X})(Y_{i} - \overline{Y})$ och summerar dessa. Detta dividerar vi med $\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}$, där vi för respektive observation tar parentesen $\left( X_{i} - \overline{X} \right)$ i kvadrat och summerar över alla observationer.
+
 #### Beräkna $\widehat{a}$ och $\widehat{b}$
 Tabell 1 beskriver beräkningarna vi behöver för $\widehat{a}$ och $\widehat{b}$. Gå noga igenom varje steg i tabellen och försäkra dig om att du förstår vad som sker i varje kolumn.
 **Tabell 1. Beräkningar för att estimera** $\widehat{\mathbf{a}}$ **och** $\widehat{\mathbf{b}}$
@@ -135,7 +139,9 @@ $$\left( \widehat{V_{i}} \right)^{2}$$
 $$\sum_{i}^{}{{\widehat{V}}_{i}}^{2} = 2,5$$
 
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## 
+
 #### Kopplingen till kovarians och varians
 I [avsnitt 2.3](https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&dl=0) introducerade vi kovarians. Estimatorn för koefficient $\widehat{b}$ för regressionsmodellen $Y = a + bX + V$ kan även definieras som kovariansen mellan $X$ och $Y$ dividerat med variansen för förklarande variabeln $X$:
 $\frac{cov(X,Y)}{var(X)} = \frac{\frac{1}{n}\sum_{i}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\frac{1}{n}\sum_{i}^{n}\left( X_{i} - \overline{X} \right)}\ $ (9)

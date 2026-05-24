@@ -2,12 +2,14 @@
 
 ### Begrepp
 *Inga nya begrepp i detta avsnitt.*
+
 ### Teori
 Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att matematiken blir för tung kan du hoppa över detta avsnitt för nu och komma tillbaka senare om du vill förstå metoderna mer på djupet. Fokusera på att förstå vad estimatorerna gör. Det är inte avgörande att förstå varje steg i härledningarna.
 Varför bry sig om härledningen?
 1.  Det ger djupare förståelse för minstakvadratmetodens logik.
 2.  Det visar att metoderna bygger på genomtänkt matematik.
 3.  Det förbereder dig för mer avancerade metoder senare.
+
 #### Utgångspunkter
 För regressionsmodellen $Y_{i} = a + bX_{i} + V_{i}$ där $Y_{i}$ och $X_{i}$ är variabler och $V_{i}$ är felterm, introducerade vi estimatorer för koefficienterna $\widehat{a}$ och $\widehat{b}$ i avsnitt 2.5:
 $\widehat{a} = \overline{Y} - \widehat{b}\overline{X}$ (1)
@@ -38,6 +40,7 @@ $\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{a}}\
 $\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{b}}\' = - 2\sum_{i = 1}^{n}{X_{i}(Y_{i} - \widehat{a} - \widehat{b}X_{i})} = 0$
 där båda resultaten uppstår genom att vi deriverar parentesen (flyttar ned exponent 2) och deriverar innehållet i respektive parentes. När vi deriverar med hänsyn till $\widehat{a}$ får vi --1. När vi deriverar med hänsyn till $\widehat{b}$ får vi $--X_{i}$. Vi sätter -2 till vänster om summeringstecknet eftersom dessa saker inte berörs av summeringen.
 Notera att det första villkoret i ekvation 6 innebär att $\sum_{i}^{}\widehat{V_{i}} = 0$ och det andra villkoret kan beskrivas som: $\sum_{}^{}X_{i}\widehat{V_{i}} = 0$. Detta kommer vi att ha användning av längre fram.
+
 #### Lösa ut $\widehat{a}$ och $\widehat{b}$
 Från de två förstagradsvillkoren i ekvation 6 kan vi lösa ut $\widehat{a}$ och $\widehat{b}$. Vi börjar med det första villkoret:
 $- 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0$ (7)

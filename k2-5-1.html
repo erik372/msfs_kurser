@@ -114,9 +114,9 @@
 <h1>
 <span class="header-section-number">42</span> Slumpmässiga variabler och diskreta sannolikhetsfördelningar<a class="anchor" aria-label="anchor" href="#k2-5-1"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-39" class="section level3" number="42.0.1">
+<div id="begrepp-41" class="section level3" number="42.0.1">
 <h3>
-<span class="header-section-number">42.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-39"><i class="fas fa-link"></i></a>
+<span class="header-section-number">42.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-41"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -130,30 +130,48 @@
 <li>
 <strong>Kontinuerlig sannolikhetsfördelning:</strong> En sannolikhetsfördelning där en slumpmässig variabel kan anta en oändlig mängd värden. Varje enskilt utfall har noll sannolikhet, medan intervall av utfall har en sannolikhet över noll.</li>
 <li>
-<strong>De stora talens lag:</strong> medelvärdet av en stor samling slumpmässiga urval kommer närma sig det sanna medelvärdet.
-### Teori
-I <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">avsnitt 1.2</a> introducerade vi experiment och kvasiexperiment samt hur vi med hjälp av behandlings- och kontrollgrupp kan studera orsakssamband och effekter.
-#### Kopplingen mellan sannolikhet och kausalitet
-Säg att vi utformar ett experiment där vi vill studera effekterna av en medicin och har två patienter till vårt förfogande. Den ena patienten får medicinen (behandlingen) och den andra får inte någon medicin (kontroll).
+<strong>De stora talens lag:</strong> medelvärdet av en stor samling slumpmässiga urval kommer närma sig det sanna medelvärdet.</li>
+</ul>
+</div>
+<div id="teori-41" class="section level3" number="42.0.2">
+<h3>
+<span class="header-section-number">42.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-41"><i class="fas fa-link"></i></a>
+</h3>
+<p>I <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">avsnitt 1.2</a> introducerade vi experiment och kvasiexperiment samt hur vi med hjälp av behandlings- och kontrollgrupp kan studera orsakssamband och effekter.</p>
+<div id="kopplingen-mellan-sannolikhet-och-kausalitet" class="section level4" number="42.0.2.1">
+<h4>
+<span class="header-section-number">42.0.2.1</span> Kopplingen mellan sannolikhet och kausalitet<a class="anchor" aria-label="anchor" href="#kopplingen-mellan-sannolikhet-och-kausalitet"><i class="fas fa-link"></i></a>
+</h4>
+<p>Säg att vi utformar ett experiment där vi vill studera effekterna av en medicin och har två patienter till vårt förfogande. Den ena patienten får medicinen (behandlingen) och den andra får inte någon medicin (kontroll).
 Eftersom vi endast jämför två personer är risken stor att studiens resultat lika gärna kan vara ett resultat av slump. När vi studerar verkligheten kan vi aldrig undvika denna osäkerhet fullständigt. Men vi kan räkna på <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/sannolikhet-for-en-handelse#!/">sannolikheten</a> för att våra resultat är en slump och därigenom bedöma hur trovärdig vår analys är.
-I detta kapitel ska vi gå igenom hur vi med hjälp av sannolikhetslära och matematiska beräkningar kan arbeta med denna typ av frågor. Delar av det som beskrivs här känner du igen från <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet#!/">Matte 1: Statistik och sannolikhet</a>, <a href="https://www.matteboken.se/lektioner/matte-2/statistik#!/">Matte 2: Statistik</a> och <a href="https://www.matteboken.se/lektioner/matte-4/integraler-och-tillampningar/sannolikhetsfordelning#!/">Matte 4: Sannolikhetsfördelning</a>.
-#### Slumpmässiga variabler och sannolikhetsfördelningar
-Tidigare har vi arbetat med variabler definierade av en matematisk funktion över en domän, till exempel funktionen <span class="math inline">\(y = x^{2}\)</span> definierad över alla reella tal. Vi har arbetat med datavariabler bestående av insamlade uppgifter, observationer. När vi gick igenom regressionsanalys i tidigare avsnitt arbetade vi med variabler som vi predikterade med hjälp av regressionsmodeller.
+I detta kapitel ska vi gå igenom hur vi med hjälp av sannolikhetslära och matematiska beräkningar kan arbeta med denna typ av frågor. Delar av det som beskrivs här känner du igen från <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet#!/">Matte 1: Statistik och sannolikhet</a>, <a href="https://www.matteboken.se/lektioner/matte-2/statistik#!/">Matte 2: Statistik</a> och <a href="https://www.matteboken.se/lektioner/matte-4/integraler-och-tillampningar/sannolikhetsfordelning#!/">Matte 4: Sannolikhetsfördelning</a>.</p>
+</div>
+<div id="slumpmässiga-variabler-och-sannolikhetsfördelningar" class="section level4" number="42.0.2.2">
+<h4>
+<span class="header-section-number">42.0.2.2</span> Slumpmässiga variabler och sannolikhetsfördelningar<a class="anchor" aria-label="anchor" href="#slumpm%C3%A4ssiga-variabler-och-sannolikhetsf%C3%B6rdelningar"><i class="fas fa-link"></i></a>
+</h4>
+<p>Tidigare har vi arbetat med variabler definierade av en matematisk funktion över en domän, till exempel funktionen <span class="math inline">\(y = x^{2}\)</span> definierad över alla reella tal. Vi har arbetat med datavariabler bestående av insamlade uppgifter, observationer. När vi gick igenom regressionsanalys i tidigare avsnitt arbetade vi med variabler som vi predikterade med hjälp av regressionsmodeller.
 När vi nu ska arbeta med sannolikhet och slump ska vi använda <em>slumpmässiga variabler</em>. En slumpmässig variabel är en variabel vars resultat bestäms av en slumpmässig process. Slumpmässiga variabler definieras av matematiska funktioner som beskriver sannolikheten för de värden (utfall) som variabeln kan anta.
 Sannolikhetsfördelning beskriver med hjälp av en matematisk funktion alla möjliga utfall för en slumpmässig variabel. Sannolikhetsfördelningar kan vara <em>diskreta</em> och <em>kontinuerliga</em>. Diskreta sannolikhetsfördelningar har ett begränsat antal möjliga utfall, som en tärning. Kontinuerliga sannolikhetsfördelningar har ett oändligt antal möjliga utfall, som alla decimaler mellan 0 och 1.
-Det finns oändligt många sannolikhetsfördelningar. För att hitta på en ny sannolikhetsfördelning behöver vi bara beskriva den. Vissa sannolikhetsfördelningar har fått kända namn, till exempel <a href="https://www.matteboken.se/lektioner/matte-2/statistik/normalfordelning#!/">normalfördelningen</a>. Även normalfördelningen är namnet på en oändlig mängd sannolikhetsfördelningar som alla har vissa gemensamma egenskaper.
-#### Funktionerna <span class="math inline">\(P\)</span>, <span class="math inline">\(f\)</span> och <span class="math inline">\(F\)</span>
-Funktionen <span class="math inline">\(P()\)</span> används ofta för att beskriva sannolikheten för ett utfall. Från och med nu ska vi använda funktionen <span class="math inline">\(f()\)</span> för att beskriva sannolikheten för ett specifikt värde i en slumpmässig variabel. De två funktionerna <span class="math inline">\(f\)</span> och <span class="math inline">\(P\)</span> beskriver så här långt samma sak: <span class="math inline">\(f(m) = P(M = m)\)</span>.
+Det finns oändligt många sannolikhetsfördelningar. För att hitta på en ny sannolikhetsfördelning behöver vi bara beskriva den. Vissa sannolikhetsfördelningar har fått kända namn, till exempel <a href="https://www.matteboken.se/lektioner/matte-2/statistik/normalfordelning#!/">normalfördelningen</a>. Även normalfördelningen är namnet på en oändlig mängd sannolikhetsfördelningar som alla har vissa gemensamma egenskaper.</p>
+</div>
+<div id="funktionerna-p-f-och-f" class="section level4" number="42.0.2.3">
+<h4>
+<span class="header-section-number">42.0.2.3</span> Funktionerna <span class="math inline">\(P\)</span>, <span class="math inline">\(f\)</span> och <span class="math inline">\(F\)</span><a class="anchor" aria-label="anchor" href="#funktionerna-p-f-och-f"><i class="fas fa-link"></i></a>
+</h4>
+<p>Funktionen <span class="math inline">\(P()\)</span> används ofta för att beskriva sannolikheten för ett utfall. Från och med nu ska vi använda funktionen <span class="math inline">\(f()\)</span> för att beskriva sannolikheten för ett specifikt värde i en slumpmässig variabel. De två funktionerna <span class="math inline">\(f\)</span> och <span class="math inline">\(P\)</span> beskriver så här långt samma sak: <span class="math inline">\(f(m) = P(M = m)\)</span>.
 För diskreta sannolikhetsfördelningar kallas sannolikhetsfunktionen <span class="math inline">\(f\)</span> för <em>probability mass function</em>, PMF. En annan central funktion är det som kallas för kumulativa fördelningsfunktionen (engelska <em>cumulative distribtuion function</em>, CDF), eller bara <em>fördelningsfunktionen</em>.
 Fördelningsfunktionen beskriver sannolikheten att en slumpvis variabel antar ett värde lika med eller mindre än värdet <span class="math inline">\(m\)</span>, vilket vi kan beskriva <span class="math inline">\(P(M \leq m)\)</span>. Vi kallar fördelningsfunktionen för <span class="math inline">\(F\)</span>:
 <span class="math inline">\(F(m) = P(M \leq m)\)</span> (1)
-Varför har vi tre olika funktioner för sannolikhet? Notera att funktionerna beskriver olika saker:</li>
-<li>
-<span class="math inline">\(P()\)</span> eller <span class="math inline">\(f()\)</span>: Sannolikheten för ett specifikt utfall, till exempel exakt 3 på tärningen.</li>
-<li>
-<span class="math inline">\(F()\)</span>: Den kumulativa sannolikheten, som 3 eller lägre på tärningen
-#### Exempel med likformig sannolikhetsfördelning
-Nu ska vi gå igenom lite matematik rörande slumpmässiga variabler och sannolikhetsfördelningar. Syftet med detta är enbart för att få en bättre förståelse för vad fenomenet innebär. Om något känns extra krångligt – prova att hoppa över detta för nu och kanske prova att läsa det senare.
+Varför har vi tre olika funktioner för sannolikhet? Notera att funktionerna beskriver olika saker:
+- <span class="math inline">\(P()\)</span> eller <span class="math inline">\(f()\)</span>: Sannolikheten för ett specifikt utfall, till exempel exakt 3 på tärningen.
+- <span class="math inline">\(F()\)</span>: Den kumulativa sannolikheten, som 3 eller lägre på tärningen</p>
+</div>
+<div id="exempel-med-likformig-sannolikhetsfördelning" class="section level4" number="42.0.2.4">
+<h4>
+<span class="header-section-number">42.0.2.4</span> Exempel med likformig sannolikhetsfördelning<a class="anchor" aria-label="anchor" href="#exempel-med-likformig-sannolikhetsf%C3%B6rdelning"><i class="fas fa-link"></i></a>
+</h4>
+<p>Nu ska vi gå igenom lite matematik rörande slumpmässiga variabler och sannolikhetsfördelningar. Syftet med detta är enbart för att få en bättre förståelse för vad fenomenet innebär. Om något känns extra krångligt – prova att hoppa över detta för nu och kanske prova att läsa det senare.
 Säg att vi har en variabel <span class="math inline">\(X\)</span> som följer en diskret sannolikhetsfördelning som kan anta utfall <span class="math inline">\(\{ 1,2,3,4,5,6\}\)</span> med samma sannolikhet. När alla utfall har samma sannolikhet kallas det för att sannolikhetsfördelningen är likformig.
 Fördelningsfunktionen för en likformig diskret sannolikhetsfördelning kan generellt beskrivas som:
 <span class="math inline">\(F(x) = P(X \leq x) = \frac{x - a + 1}{b - a + 1},\,\, x = a,a + 1,\ldots,b\)</span> (2)
@@ -164,8 +182,7 @@ Den kumulativa sannolikheten <span class="math inline">\(P(X \leq x)\)</span> m�
 <span class="math inline">\(F(x) = P(X \leq x) = 1 - P(X \&gt; x)\)</span> (4)
 För att beräkna sannolikheten <span class="math inline">\(P(X \&gt; x)\)</span> kan vi därför ta <span class="math inline">\(1 - F(x)\)</span>. För variabel <span class="math inline">\(X\)</span> är sannolikheten att få 3 till 6 poäng:
 <span class="math inline">\(P(X \&gt; x) = 1 - F(2) = 1 - \frac{2}{6} = \frac{4}{6}\)</span> (5)
-Figur 1 illustrerar en likformig slumpmässig sannolikhetsfördelning, där alla värden har samma sannolikhet. Övre diagrammet visar funktion <span class="math inline">\(f(x)\)</span>. Nedre diagrammet visar <span class="math inline">\(F(x)\)</span>, den kumulativa sannolikheten att få ett värde lika med eller mindre än <span class="math inline">\(x\)</span>.</li>
-</ul>
+Figur 1 illustrerar en likformig slumpmässig sannolikhetsfördelning, där alla värden har samma sannolikhet. Övre diagrammet visar funktion <span class="math inline">\(f(x)\)</span>. Nedre diagrammet visar <span class="math inline">\(F(x)\)</span>, den kumulativa sannolikheten att få ett värde lika med eller mindre än <span class="math inline">\(x\)</span>.</p>
 <p><strong>Figur 1: Sannolikhetsfunktion och kumulativa fördelningsfunktionen</strong></p>
 <div class="float">
 <img src="img/k2-5-1-image1.png" style="width:5.13329in;height:6.52784in" alt="En bild som visar text, skärmbild, diagram, linje Automatiskt genererad beskrivning"><div class="figcaption">En bild som visar text, skärmbild, diagram, linje Automatiskt genererad beskrivning</div>
@@ -173,9 +190,10 @@ Figur 1 illustrerar en likformig slumpmässig sannolikhetsfördelning, där alla
 <div class="fig-caption">
 <p>Förklaring: Övre diagrammet beskriver sannolikheten 1/6 för respektive utfall i sannolikhetsfördelningen. Nedre diagrammet beskriver den kumulativa sannolikheten att få värdet på horisontella x-axeln eller mindre. Sannolikheten att få under 1 är 0. Sannolikheten att få värdet 3 är 0,5, det vill säga 50 %. Sannolikheten att få 6 eller lägre är 100 %.</p>
 </div>
-<div id="väntevärde-i-stället-för-medelvärde" class="section level4" number="42.0.1.1">
+</div>
+<div id="väntevärde-i-stället-för-medelvärde" class="section level4" number="42.0.2.5">
 <h4>
-<span class="header-section-number">42.0.1.1</span> Väntevärde i stället för medelvärde<a class="anchor" aria-label="anchor" href="#v%C3%A4ntev%C3%A4rde-i-st%C3%A4llet-f%C3%B6r-medelv%C3%A4rde"><i class="fas fa-link"></i></a>
+<span class="header-section-number">42.0.2.5</span> Väntevärde i stället för medelvärde<a class="anchor" aria-label="anchor" href="#v%C3%A4ntev%C3%A4rde-i-st%C3%A4llet-f%C3%B6r-medelv%C3%A4rde"><i class="fas fa-link"></i></a>
 </h4>
 <p>För en slumpmässig variabel kan vi inte beräkna ett medelvärde på det sätt som vi kan göra för en samling diskreta värden, som en samling tal. För en tärning kan vi inte beräkna medelvärde förrän vi kastat den. Men vi kan beräkna vad vi förväntar oss, alltså det "genomsnitt" vi skulle få om vi kastade oändligt många gånger. Detta kallas för väntevärde, eller förväntat värde (engelska <em>expected value</em>).
 Väntevärdet för en slumpmässig variabel är summan av varje utfall multiplicerat med dess sannolikhet. Matematiskt är väntevärde en generalisering av <a href="https://www.matteboken.se/lektioner/matte-1/ovningsexempel/betygssnitt#!/">viktat medelvärde</a>. För en diskret slumpmässig variabel <span class="math inline">\(X\)</span> kan detta beskrivas som:
@@ -183,30 +201,46 @@ Väntevärdet för en slumpmässig variabel är summan av varje utfall multiplic
 där <span class="math inline">\(E()\)</span> kallas för väntevärdesfunktionen, vilket även kan skrivas <span class="math inline">\(E\lbrack X\rbrack\)</span>, <span class="math inline">\(E(X)\)</span> eller <span class="math inline">\(EX\)</span>. I <a href="https://www.dropbox.com/scl/fi/clzr656ksjz2ut13zw9wx/2-1-Frekvens-och-f-rdelning.docx?rlkey=4ybbva8mkt5aj3envb6sb6xu3&amp;dl=0">avsnitt 2.1</a> introducerade vi populationens medelvärde <span class="math inline">\(\mu\)</span>. Detta är samma sak som väntevärdet för populationen för den slumpmässiga variabeln <span class="math inline">\(X\)</span>, det vill säga: <span class="math inline">\(E(X) = \mu_{X}\)</span>.
 Säg som exempel att vi har en slumpmässig variabel <span class="math inline">\(X\)</span> med utfallen 1, 2, 3, 4, 5 och 6, alla med sannolikheten 1/6. Väntevärdet för variabeln <span class="math inline">\(X\)</span> blir då:
 <span class="math inline">\(E(X) = x_{1}*P\left( x_{1} \right) + x_{2}*P\left( x_{2} \right) + x_{3}*P\left( x_{3} \right) + x_{4}*P\left( x_{4} \right) + x_{5}*P\left( x_{5} \right) + x_{6}*P\left( x_{6} \right)\)</span> (7)
-<span class="math inline">\(= 1*\frac{1}{6} + 2*\frac{1}{6} + *\frac{1}{6} + 3*\frac{1}{6} + 4*\frac{1}{6} + 5*\frac{1}{6} + 6*\frac{1}{6} = 3,5\)</span>
-#### Väntevärdet av en konstant
-Väntevärdesfunktionen <span class="math inline">\(E()\)</span> är en linjär funktion. Om vi har de slumpmässiga variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> så gäller följande:
+<span class="math inline">\(= 1*\frac{1}{6} + 2*\frac{1}{6} + *\frac{1}{6} + 3*\frac{1}{6} + 4*\frac{1}{6} + 5*\frac{1}{6} + 6*\frac{1}{6} = 3,5\)</span></p>
+</div>
+<div id="väntevärdet-av-en-konstant" class="section level4" number="42.0.2.6">
+<h4>
+<span class="header-section-number">42.0.2.6</span> Väntevärdet av en konstant<a class="anchor" aria-label="anchor" href="#v%C3%A4ntev%C3%A4rdet-av-en-konstant"><i class="fas fa-link"></i></a>
+</h4>
+<p>Väntevärdesfunktionen <span class="math inline">\(E()\)</span> är en linjär funktion. Om vi har de slumpmässiga variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> så gäller följande:
 <span class="math inline">\(E(X + Y) = E(X) + E(Y)\)</span> (8)
 Säg nu att vi har en valfri konstant, <span class="math inline">\(a\)</span>. Om vi multiplicerar väntevärdet <span class="math inline">\(E(X)\)</span> med <span class="math inline">\(a\)</span> är detta samma sak som <span class="math inline">\(a\)</span> multiplicerat med respektive enskilt värde i variabeln <span class="math inline">\(X\)</span>:
 <span class="math inline">\(E(aX) = aE(X)\)</span> (9)
 Om vi adderar en konstant <span class="math inline">\(b\)</span> kan vi flytta ut även denna ur väntevärdesfunktionen:
-<span class="math inline">\(E(aX + b) = aE(X) + b\)</span> (10)
-#### Varians och standardavvikelse för slumpmässiga variabler
-I <a href="https://www.dropbox.com/scl/fi/1esn74n4y0c48moczz9mj/2-2-Avvikelse-varians-och-standardavvikelse.docx?rlkey=uv8lf1wj3u89yrguwkkss5ck6&amp;dl=0">avsnitt 2.2</a> introducerade vi varians som ett sätt att mäta spridning. Vi gick igenom hur vi kan uppskatta variansen i en population genom att räkna på observationer i ett urval.
+<span class="math inline">\(E(aX + b) = aE(X) + b\)</span> (10)</p>
+</div>
+<div id="varians-och-standardavvikelse-för-slumpmässiga-variabler" class="section level4" number="42.0.2.7">
+<h4>
+<span class="header-section-number">42.0.2.7</span> Varians och standardavvikelse för slumpmässiga variabler<a class="anchor" aria-label="anchor" href="#varians-och-standardavvikelse-f%C3%B6r-slumpm%C3%A4ssiga-variabler"><i class="fas fa-link"></i></a>
+</h4>
+<p>I <a href="https://www.dropbox.com/scl/fi/1esn74n4y0c48moczz9mj/2-2-Avvikelse-varians-och-standardavvikelse.docx?rlkey=uv8lf1wj3u89yrguwkkss5ck6&amp;dl=0">avsnitt 2.2</a> introducerade vi varians som ett sätt att mäta spridning. Vi gick igenom hur vi kan uppskatta variansen i en population genom att räkna på observationer i ett urval.
 Även för slumpmässiga variabler kan vi beskriva varians, men då på ett lite annorlunda sätt. För en slumpmässig diskret variabel <span class="math inline">\(X\)</span> kan varians definieras som:
 <span class="math inline">\(var(X) = \sum_{i}^{n}\left( x_{i} - \mu_{X} \right)^{2}P\left( x_{i} \right)\)</span> (11)
 där <span class="math inline">\(\mu_{X} = E(X)\)</span> och <span class="math inline">\(P\left( x_{i} \right)\)</span> är sannolikheten för respektive värde <span class="math inline">\(x_{i}\)</span>, där vi från ekvation 6 vet att <span class="math inline">\(E(X) = \sum_{i}^{n}x_{i}P\left( x_{i} \right)\)</span>.
 Standardavvikelse ges, liksom tidigare, av positiva kvadratroten av variansen:
 <span class="math inline">\(\sigma_{x} = s(x) = \sqrt{var(x)}\)</span> (12)
-där <span class="math inline">\(\sigma\)</span> representerar variansen i populationen.
-#### Varians för en konstant
-Om vi har <span class="math inline">\(var(aX + b)\)</span>, där <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är konstanter, får vi:
+där <span class="math inline">\(\sigma\)</span> representerar variansen i populationen.</p>
+</div>
+<div id="varians-för-en-konstant" class="section level4" number="42.0.2.8">
+<h4>
+<span class="header-section-number">42.0.2.8</span> Varians för en konstant<a class="anchor" aria-label="anchor" href="#varians-f%C3%B6r-en-konstant"><i class="fas fa-link"></i></a>
+</h4>
+<p>Om vi har <span class="math inline">\(var(aX + b)\)</span>, där <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är konstanter, får vi:
 <span class="math inline">\(var(aX + b) = a^{2}\text{var}(X)\)</span> (13)
 Det vill säga en konstant <span class="math inline">\(a\)</span> som multipliceras med den slumpmässiga variabeln kan flyttas ut ur variansfunktionen <span class="math inline">\(var()\)</span> och multipliceras med sig själv. Konstant <span class="math inline">\(b\)</span> försvinner. För standardavvikelse gäller att:
 <span class="math inline">\(s(aX + b) = \|a\|s(X)\)</span> (14)
-där <span class="math inline">\(\|a\|\)</span> är absolutvärdet av <span class="math inline">\(a\)</span>. Detta innebär att om vi multiplicerar en slumpmässig variabel <span class="math inline">\(X\)</span> med en konstant <span class="math inline">\(a\)</span> så multipliceras dess varians och standardavvikelse, men det förändrar inte spridningens form (jämför <a href="https://www.dropbox.com/scl/fi/1esn74n4y0c48moczz9mj/2-2-Avvikelse-varians-och-standardavvikelse.docx?rlkey=uv8lf1wj3u89yrguwkkss5ck6&amp;dl=0">avsnitt 2.2</a>).
-#### De stora talens lag
-Säg nu att vi har en sexsidig perfekt balanserad tärning och kastar denna 1 000 gånger. Givet att tärningen verkligen är perfekt balanserad och fortsätter att vara så under hela processen så är sannolikheten hög att vi kommer att få ungefär lika många utfall för varje sida (1 till 6).
+där <span class="math inline">\(\|a\|\)</span> är absolutvärdet av <span class="math inline">\(a\)</span>. Detta innebär att om vi multiplicerar en slumpmässig variabel <span class="math inline">\(X\)</span> med en konstant <span class="math inline">\(a\)</span> så multipliceras dess varians och standardavvikelse, men det förändrar inte spridningens form (jämför <a href="https://www.dropbox.com/scl/fi/1esn74n4y0c48moczz9mj/2-2-Avvikelse-varians-och-standardavvikelse.docx?rlkey=uv8lf1wj3u89yrguwkkss5ck6&amp;dl=0">avsnitt 2.2</a>).</p>
+</div>
+<div id="de-stora-talens-lag" class="section level4" number="42.0.2.9">
+<h4>
+<span class="header-section-number">42.0.2.9</span> De stora talens lag<a class="anchor" aria-label="anchor" href="#de-stora-talens-lag"><i class="fas fa-link"></i></a>
+</h4>
+<p>Säg nu att vi har en sexsidig perfekt balanserad tärning och kastar denna 1 000 gånger. Givet att tärningen verkligen är perfekt balanserad och fortsätter att vara så under hela processen så är sannolikheten hög att vi kommer att få ungefär lika många utfall för varje sida (1 till 6).
 Medelvärdet av våra 1 000 resultat kommer att vara mycket nära 3,5, vilket är medelvärdet om varje tärningssida kommer upp exakt lika många gånger: (1+2+3+4+5+6)/6 = 3,5.
 Detta fenomen kallas inom statistik för <a href="https://sv.wikipedia.org/wiki/De_stora_talens_lag">De stora talens lag</a>. Lagen säger att medelvärdet av en stor samling slumpmässiga urval kommer närma sig det väntevärdet (det sanna medelvärdet).
 Små samlingar med värden, som till exempel 3 kast, löper större risk att avvika från medelvärdet, jämfört med samlingar med många värden.
@@ -375,7 +409,10 @@ Hela ekvationen kan läsas som att sannolikheten för att <span class="math inli
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k2-5-1"><span class="header-section-number">42</span> Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-39"><span class="header-section-number">42.0.1</span> Begrepp</a></li></ul>
+<a class="nav-link" href="#k2-5-1"><span class="header-section-number">42</span> Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-41"><span class="header-section-number">42.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-41"><span class="header-section-number">42.0.2</span> Teori</a></li>
+</ul>
 </li></ul>
 
       <div class="book-extra">

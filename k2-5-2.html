@@ -114,9 +114,9 @@
 <h1>
 <span class="header-section-number">43</span> Kontinuerliga sannolikhetsfördelningar<a class="anchor" aria-label="anchor" href="#k2-5-2"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-40" class="section level3" number="43.0.1">
+<div id="begrepp-42" class="section level3" number="43.0.1">
 <h3>
-<span class="header-section-number">43.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-40"><i class="fas fa-link"></i></a>
+<span class="header-section-number">43.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-42"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -126,36 +126,52 @@
 <li>
 <strong>Likformig kontinuerlig sannolikhetsfördelning:</strong> Alla utfall har samma sannolikhet.</li>
 <li>
-<strong>Standardnormalfördelningen:</strong> En normalfördelning med medelvärdet 0 och standardavvikelse 1. Betecknas <span class="math inline">\(N(0,1)\)</span>. Kallas även för standardiserad normalfördelning eller Z-fördelning.
-### Teori
-Som vi beskrev i föregående avsnitt kan kontinuerliga sannolikhetsfördelningar anta alla möjliga värden inom ett intervall och har därför ett oändligt antal möjliga utfall. I <a href="https://www.matteboken.se/lektioner/matte-2/statistik/normalfordelning#!/">matte 2</a> och <a href="https://www.matteboken.se/lektioner/matte-4/integraler-och-tillampningar/sannolikhetsfordelning#!/">matte 4</a> introduceras kontinuerliga sannolikhetsfördelningar och bland annat normalfördelningen.
-#### Sannolikhet och kumulativ sannolikhet
-För en diskret variabel använder vi en <em>sannolikhetsfunktion</em> för att beskriva sannolikheten för enskilda utfall. Motsvarande funktion som beskriver sannolikheten för möjliga utfall i en kontinuerlig variabel kallas för <em>täthetsfunktion</em> (engelska <em>probability density function</em>), vilken vi förkortar <span class="math inline">\(f\)</span>.
+<strong>Standardnormalfördelningen:</strong> En normalfördelning med medelvärdet 0 och standardavvikelse 1. Betecknas <span class="math inline">\(N(0,1)\)</span>. Kallas även för standardiserad normalfördelning eller Z-fördelning.</li>
+</ul>
+</div>
+<div id="teori-42" class="section level3" number="43.0.2">
+<h3>
+<span class="header-section-number">43.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-42"><i class="fas fa-link"></i></a>
+</h3>
+<p>Som vi beskrev i föregående avsnitt kan kontinuerliga sannolikhetsfördelningar anta alla möjliga värden inom ett intervall och har därför ett oändligt antal möjliga utfall. I <a href="https://www.matteboken.se/lektioner/matte-2/statistik/normalfordelning#!/">matte 2</a> och <a href="https://www.matteboken.se/lektioner/matte-4/integraler-och-tillampningar/sannolikhetsfordelning#!/">matte 4</a> introduceras kontinuerliga sannolikhetsfördelningar och bland annat normalfördelningen.</p>
+<div id="sannolikhet-och-kumulativ-sannolikhet" class="section level4" number="43.0.2.1">
+<h4>
+<span class="header-section-number">43.0.2.1</span> Sannolikhet och kumulativ sannolikhet<a class="anchor" aria-label="anchor" href="#sannolikhet-och-kumulativ-sannolikhet"><i class="fas fa-link"></i></a>
+</h4>
+<p>För en diskret variabel använder vi en <em>sannolikhetsfunktion</em> för att beskriva sannolikheten för enskilda utfall. Motsvarande funktion som beskriver sannolikheten för möjliga utfall i en kontinuerlig variabel kallas för <em>täthetsfunktion</em> (engelska <em>probability density function</em>), vilken vi förkortar <span class="math inline">\(f\)</span>.
 För att beräkna den kumulativa sannolikheten för en kontinuerlig slumpmässig variabel använder vi en <em>kumulativ fördelningsfunktion</em>, som vi kallar <span class="math inline">\(F\)</span>. Det vill säga, samma förkortningar som vi använde i föregående avsnitt för att beskriva motsvarande funktioner för diskreta sannolikhetsfördelningar.
-För en slumpmässig kontinuerlig variabel <span class="math inline">\(X\)</span> beskriver täthetsfunktionen <span class="math inline">\(f(x)\)</span> sannolikheten för ett specifikt utfall <span class="math inline">\(X = x\)</span>, medan kumulativa fördelningsfunktionen <span class="math inline">\(F(x)\)</span> beskriver sannolikheten att <span class="math inline">\(X\)</span> antar ett värde lägre eller lika med <span class="math inline">\(x\)</span>.
-#### Ett exempel med diagram
-Säg att vi har en kontinuerlig sannolikhetsfördelning <span class="math inline">\(X\)</span> där alla värden mellan 0 och 1 har samma sannolikhet. Det vill säga, vi har samma sannolikhet att få någon av alla de oändligt många decimaler som finns mellan 0 och 1. Om varje sådant värde mellan 0 och 1 hade en sannolikhet &gt; 0, skulle summan bli oändligt stor. I stället är sannolikheten för ett specifikt värde inom ett kontinuerlig intervall (med ett oändligt antal värden), till exempel 0,0934720630257, definierat till noll.
+För en slumpmässig kontinuerlig variabel <span class="math inline">\(X\)</span> beskriver täthetsfunktionen <span class="math inline">\(f(x)\)</span> sannolikheten för ett specifikt utfall <span class="math inline">\(X = x\)</span>, medan kumulativa fördelningsfunktionen <span class="math inline">\(F(x)\)</span> beskriver sannolikheten att <span class="math inline">\(X\)</span> antar ett värde lägre eller lika med <span class="math inline">\(x\)</span>.</p>
+</div>
+<div id="ett-exempel-med-diagram" class="section level4" number="43.0.2.2">
+<h4>
+<span class="header-section-number">43.0.2.2</span> Ett exempel med diagram<a class="anchor" aria-label="anchor" href="#ett-exempel-med-diagram"><i class="fas fa-link"></i></a>
+</h4>
+<p>Säg att vi har en kontinuerlig sannolikhetsfördelning <span class="math inline">\(X\)</span> där alla värden mellan 0 och 1 har samma sannolikhet. Det vill säga, vi har samma sannolikhet att få någon av alla de oändligt många decimaler som finns mellan 0 och 1. Om varje sådant värde mellan 0 och 1 hade en sannolikhet &gt; 0, skulle summan bli oändligt stor. I stället är sannolikheten för ett specifikt värde inom ett kontinuerlig intervall (med ett oändligt antal värden), till exempel 0,0934720630257, definierat till noll.
 Däremot finns det en positiv sannolikhet att få ett värde inom ett intervall. Till exempel är sannolikheten för att <span class="math inline">\(X\)</span> ska anta ett värde mellan 0 och 0,5 lika med 50 %, eftersom det motsvarar hälften av sannolikhetsfördelningen. Det är denna sannolikhet vi får av kumulativa fördelningsfunktionen <span class="math inline">\(F(x)\)</span>.
 Alltså: sannolikheten att få ett specifikt värde, som 0,5, är noll. Sannolikheten för att få ett värde inom ett intervall, som 0,4 – 0,6, vilket här motsvarar 20 % av intervallet, är just 20 %.
 Figur 1 illustrerar täthetsfunktionen och kumulativa fördelningsfunktionen för den likformiga kontinuerliga sannolikhetsfördelningen <span class="math inline">\(X\)</span>, där alla utfall mellan 0 och 1 har samma sannolikhet.
-Det vänstra diagrammet illustrerar täthetsfunktionen <span class="math inline">\(f\)</span> och det högra diagrammet kumulativa fördelningsfunktionen <span class="math inline">\(F\)</span>. Sannolikheten för att <span class="math inline">\(X\)</span> antar ett värde mellan 0 och 0,5 är 0,5, vilket vi kan se i det högre diagrammet genom att jämföra 0,5 på den horisontella axeln (<span class="math inline">\(x\)</span>-värdet) och den kumulativa sannolikheten på vertikala axeln. Det vill säga:</li>
-</ul>
+Det vänstra diagrammet illustrerar täthetsfunktionen <span class="math inline">\(f\)</span> och det högra diagrammet kumulativa fördelningsfunktionen <span class="math inline">\(F\)</span>. Sannolikheten för att <span class="math inline">\(X\)</span> antar ett värde mellan 0 och 0,5 är 0,5, vilket vi kan se i det högre diagrammet genom att jämföra 0,5 på den horisontella axeln (<span class="math inline">\(x\)</span>-värdet) och den kumulativa sannolikheten på vertikala axeln. Det vill säga:</p>
 <p><span class="math display">\[F(x = 0,5) = P(X \leq 0,5) = 0,5\]</span></p>
 <p><strong>Figur 1: Täthetsfunktionen och kumulativa fördelningsfunktionen för en likformig kontinuerlig sannolikhetsfördelning</strong><br></p>
 <div class="inline-figure"><img src="img/k2-5-2-image1.png" style="width:5.38889in;height:2.92963in"></div>
 <div class="fig-caption">
 <p>Förklaring: Vänstra diagrammet beskriver sannolikheten för varje utfall mellan 0 och 1. Högra diagrammet beskriver kumulativa sannolikheten att få ett värde på horisontella x-axeln eller lägre. Sannolikheten att få ett värde under 0 är noll. Sannolikheten att få ett värde mellan 0 och 0,5 är 0,5, det vill säga 50 %. Sannolikheten att få värdet 1 eller lägre är 100 %.</p>
 </div>
-<div id="väntevärde-för-kontinuerliga-variabler" class="section level4" number="43.0.1.1">
+</div>
+<div id="väntevärde-för-kontinuerliga-variabler" class="section level4" number="43.0.2.3">
 <h4>
-<span class="header-section-number">43.0.1.1</span> Väntevärde för kontinuerliga variabler<a class="anchor" aria-label="anchor" href="#v%C3%A4ntev%C3%A4rde-f%C3%B6r-kontinuerliga-variabler"><i class="fas fa-link"></i></a>
+<span class="header-section-number">43.0.2.3</span> Väntevärde för kontinuerliga variabler<a class="anchor" aria-label="anchor" href="#v%C3%A4ntev%C3%A4rde-f%C3%B6r-kontinuerliga-variabler"><i class="fas fa-link"></i></a>
 </h4>
 <p>I föregående avsnitt introducerade vi väntevärde för diskreta slumpmässiga variabler som summan av utfall multiplicerat med deras sannolikhet, <span class="math inline">\(E(X) = \sum_{}^{}{xP(x)}\)</span>. Väntevärdet för en kontinuerlig slumpmässig variabel är på liknande sätt summan av utfall multiplicerat med sannolikheterna.
 Säg att vi har en slumpmässig likformig kontinuerlig variabel <span class="math inline">\(X\)</span>, vars lägsta respektive högsta värden är <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>. Eftersom vi nu ska summera ett kontinuerligt intervall kan vi använda <a href="https://www.matteboken.se/lektioner/matte-3/integraler?gad_source=1&amp;gclid=CjwKCAiAwaG9BhAREiwAdhv6Y2KYZCxYMa4BwTrcLl7ZKGEB3v3OAesqY9bL4uQRR9bVbVEpx1Ls0BoCJyQQAvD_BwE#!/">integraler</a>:
 <span class="math inline">\(E(X) = \int_{a}^{b}{xf(x)dx}\)</span> (1)
-vilket ska läsas som att vi över intervallet <span class="math inline">\(a\)</span> till <span class="math inline">\(b\)</span> summerar alla möjliga utfall <span class="math inline">\(x\)</span> multiplicerat med sannolikheten för respektive värde <span class="math inline">\(f(x)\)</span>.
-#### Varians för kontinuerliga sannolikhetsfördelningar
-Varians för en kontinuerlig slumpmässig variabel <span class="math inline">\(X\)</span> kan beskrivas:
+vilket ska läsas som att vi över intervallet <span class="math inline">\(a\)</span> till <span class="math inline">\(b\)</span> summerar alla möjliga utfall <span class="math inline">\(x\)</span> multiplicerat med sannolikheten för respektive värde <span class="math inline">\(f(x)\)</span>.</p>
+</div>
+<div id="varians-för-kontinuerliga-sannolikhetsfördelningar" class="section level4" number="43.0.2.4">
+<h4>
+<span class="header-section-number">43.0.2.4</span> Varians för kontinuerliga sannolikhetsfördelningar<a class="anchor" aria-label="anchor" href="#varians-f%C3%B6r-kontinuerliga-sannolikhetsf%C3%B6rdelningar"><i class="fas fa-link"></i></a>
+</h4>
+<p>Varians för en kontinuerlig slumpmässig variabel <span class="math inline">\(X\)</span> kan beskrivas:
 <span class="math inline">\(var(X) = E\left( \left( X - \mu_{X} \right)^{2} \right) = \sigma_{X}^{2}\)</span> (2)
 Om vi skriver ut definitionen av väntevärdet från ekvation 1 får vi:
 <span class="math inline">\(E\left( \left( X - \mu_{X} \right)^{2} \right) = \int_{- \infty}^{\infty}\left( X - \mu_{X} \right)^{2}f(x)dx\)</span> (3)
@@ -163,9 +179,13 @@ Standardavvikelsen är, liksom för diskreta variabler, kvadratroten av varianse
 <span class="math inline">\(\sigma_{X} = \sqrt{var(X)} = \sqrt{\sigma_{X}^{2}}\)</span> (4)
 Betingat väntevärde för kontinuerliga slumpmässiga variabler <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> skrivs:
 <span class="math inline">\(E\left( Y \middle\| X \right) = \int_{- \infty}^{\infty}{\int_{- \infty}^{\infty}{xyf(x,y)dxdy}}\)</span> (5)
-där <span class="math inline">\(f(x,y)\)</span> är den gemensamma sannolikhetsfördelningen. Lagen om totalt väntevärde gäller även för kontinuerliga fördelningar, <span class="math inline">\(E\left( E\left( X \middle\| Y \right) \right) = E(X)\)</span>, liksom regeln att <span class="math inline">\(E\left( XY \middle\| X \right) = XE\left( Y \middle\| X \right)\)</span>.
-#### Normalfördelningen
-Ett exempel på en kontinuerlig sannolikhetsfördelning är det som kallas för normalfördelningen. Se <a href="https://www.matteboken.se/lektioner/matte-2/statistik/normalfordelning#!/">matte 2</a> och <a href="https://www.matteboken.se/lektioner/matte-4/integraler-och-tillampningar/sannolikhetsfordelning#!/">matte 4</a>.
+där <span class="math inline">\(f(x,y)\)</span> är den gemensamma sannolikhetsfördelningen. Lagen om totalt väntevärde gäller även för kontinuerliga fördelningar, <span class="math inline">\(E\left( E\left( X \middle\| Y \right) \right) = E(X)\)</span>, liksom regeln att <span class="math inline">\(E\left( XY \middle\| X \right) = XE\left( Y \middle\| X \right)\)</span>.</p>
+</div>
+<div id="normalfördelningen" class="section level4" number="43.0.2.5">
+<h4>
+<span class="header-section-number">43.0.2.5</span> Normalfördelningen<a class="anchor" aria-label="anchor" href="#normalf%C3%B6rdelningen"><i class="fas fa-link"></i></a>
+</h4>
+<p>Ett exempel på en kontinuerlig sannolikhetsfördelning är det som kallas för normalfördelningen. Se <a href="https://www.matteboken.se/lektioner/matte-2/statistik/normalfordelning#!/">matte 2</a> och <a href="https://www.matteboken.se/lektioner/matte-4/integraler-och-tillampningar/sannolikhetsfordelning#!/">matte 4</a>.
 En normalfördelning som har medelvärde 0 och standardavvikelse 1 kallas för <em>standardiserad normalfördelning, standardnormalfördelningen</em> eller <em>Z-fördelningen</em>. Vi stöter sällan på några verkliga data som av naturliga skäl följer en normalfördelning med medelvärde 0 och standardavvikelse 1. Däremot kan vi räkna om en samling värden så att dessa får medelvärde 0 och standardavvikelse 1, vilket kallas för att standardisera. För att standardisera variabel <span class="math inline">\(X\)</span> tar vi:
 Standardiserade <span class="math inline">\(X = Z = \frac{X_{i} - \overline{X}}{s_{X}}\)</span> (6)
 där <span class="math inline">\(X_{i} - \overline{X}\)</span> innebär att vi subtraherar medelvärdet <span class="math inline">\(\overline{X}\)</span> från varje värde <span class="math inline">\(X_{i}\)</span> och dividerar med estimerad standardavvikelse <span class="math inline">\(s_{X}\)</span>.
@@ -334,7 +354,10 @@ Standardiserade normalfördelningen är så välanvänd att det finns flera fär
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k2-5-2"><span class="header-section-number">43</span> Kontinuerliga sannolikhetsfördelningar</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-40"><span class="header-section-number">43.0.1</span> Begrepp</a></li></ul>
+<a class="nav-link" href="#k2-5-2"><span class="header-section-number">43</span> Kontinuerliga sannolikhetsfördelningar</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-42"><span class="header-section-number">43.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-42"><span class="header-section-number">43.0.2</span> Teori</a></li>
+</ul>
 </li></ul>
 
       <div class="book-extra">

@@ -2,6 +2,7 @@
 
 ### Begrepp
 *Inga nya matematiska begrepp i detta avsnitt.*
+
 ### Teori
 I detta exempel ska vi beskriva arbetsmarknaden med ett linjärt ekvationssystem. Vårt ekvationssystem består av två ekvationer som ger en förenklad bild av hur vi kan tänka oss att löner $(W)$ och priser $(P)$ bestäms:
 $\left\{ \begin{matrix} \frac{W}{P} = \frac{a}{U^{b}}, & b \> 0 \\ \frac{P}{W} = \frac{c}{U^{d}}, & c \> 0 \end{matrix} \right.\ $ (1)
@@ -18,6 +19,7 @@ $\left( \frac{W}{P} \right)^{*} = \frac{\left( U^{*} \right)^{d}}{c} = \frac{(ac
 Nu har vi lösningen för de två variablerna $U$ och $W/P$ :
 $\left( U^{*},(W/P)^{*} \right) = \left( (ac)^{\frac{1}{b + d}},a^{\frac{d}{b + d}}c^{\frac{- b}{b + d}} \right)$ (5)
 Parentesen i högerledet beskriver lösningarna för respektive variabel. $U^{*}$ är en definition av det som inom samhällsvetenskap kallas för jämviktsarbetslöshet.
+
 #### Samma sak men i logaritmerad form
 Detta är inte ett linjärt ekvationssystem men med hjälp av logaritmering kan vi göra det linjärt. Vi tar därför logaritmen av båda sidor av respektive ekvation 1:
 $\begin{matrix} \left\{ \begin{matrix} log\left( \frac{W}{P} \right) = log\left( \frac{a}{U^{b}} \right), & b \> 0 \\ log\left( \frac{P}{W} \right) = log\left( \frac{c}{U^{d}} \right), & c \geq 0 \end{matrix} \right.\ \\ \left\{ \begin{matrix} logW - logP = loga - logU^{b} \\ logP - logW = logc - logU^{d} \end{matrix} \right.\ \\ \left\{ \begin{matrix} w - p = loga - bu \\ p - w = logc - du \end{matrix} \right.\ \end{matrix}$ (6)
@@ -26,6 +28,7 @@ Precis som ovan skriver vi om den andra ekvationen, sätter de två definitioner
 $\begin{matrix} du - \gamma & \ = \alpha - bu \\ u(b + d) & \ = \alpha + \gamma \\ u^{*} & \ = \frac{\alpha + \gamma}{b + d} \end{matrix}$ (7)
 Definitionen av $u^{*}$ är den logaritmerade versionen av lösningen i ekvation 5. För att räkna om till arbetslöshet i procent tar vi exponenten:
 $\begin{matrix} exp\left( u^{*} \right) & \ = \frac{1}{b + d}exp(\alpha + \gamma) \\ U^{*} & \ = ac^{\frac{1}{b + d}} \end{matrix}$ (8)
+
 #### Illustration i diagram
 Figur 1 visar hur denna modell kan illustreras i diagram. Relationen mellan $W/P$ och $U$ beskrivs med de två funktionerna för utbud och efterfrågan, även kallat löne- och prissättningskurvan.
 Läser vi x-axeln från vänster till höger mäter axeln procent av arbetskraften som har arbete, vilket kallas för sysselsättningsgrad. Sysselsättningsgrad kan definieras som $1 - U$, där $U$ anger procent arbetslösa. Lösningen för variablerna $U^{*}$ och $(W/P)^{*}$ är den punkt där linjerna möts.

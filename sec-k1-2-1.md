@@ -5,10 +5,12 @@
 - **Ränta på ränta**: Kallas även sammansatt ränta eller kumulativ ränta. Beskriver den ränta vi betalar eller får på ett lån som växer till följd av ränta.
 - **Effektiv ränta:** Total lånekostnad för ett lån, inklusive olika typer av avgifter oavsett vad dessa avgifter kallas för.
 - **Kumulativ summa:** Summan av en samling tal där vi adderar talen i tur och ordning.
+
 ### Teori
 [Ränta](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/ranta#!/) kallas den ersättning man får för att låna ut pengar. Räntesats är storleken på räntan på ett lån eller sparande, uttryckt i procent. Räntesats syftar ofta på räntan per år. Ränta kan beskrivas som ett pris på lånade pengar, en ersättning för att vi låter bli att använda våra pengar här och nu.
 När vi sätter in pengar på banken lånar vi ut pengar till banken. Som ersättning betalar banken ränta. Nu ska vi räkna ut hur mycket vi får tillbaka om vi sätter in pengar på ett bankkonto med 2 [procents](https://www.matteboken.se/lektioner/skolar-6/statistik/procent) räntesats per år. Två procent kan vi skriva som 2 % eller 0,02. Om vi sätter in 100 kr blir räntan första året $100*0,02 = 2$ kr. Efter ett år har vi 100 kr + räntan som banken ger oss: $100 + 2 = 102$.
 Ett annat sätt att räkna ut detta är: $100*1,02 = 102$. Vi multiplicerar våra sparpengar med 1 plus räntesatsen 2 %: $1\ + \ 0,02\ = \ 1,02$.
+
 #### Ränta på ränta
 Om vi låter pengarna ligga kvar på kontot ytterligare ett år kommer vi få ränta även på det nya beloppet, alltså ränta på 102 kr. Resultatet efter det andra året blir då $102*1,02 = 104,04$. Ett annat sätt att beskriva räntan för både år 1 och år 2 är:
 $102*1,02\ $ $= (100*1,02)*1,02$
@@ -53,11 +55,13 @@ $$20\ 000*{1,01}^{3}\ = \ 20\ 606,02\ $$
 
 Räntekostnaden för att låna i tre månader på kreditkortet blir i detta fall:\
 $20\ 606,02\ --20\ 000 = 606,02$ kr.
+
 ### Kumulativ summa
 Uttrycket "kumulativ ränta" syftar på att ränta läggs på ränta och bildar en ny total ränta, en ny summa som vi måste betala eller får betalt som ersättning för att vi lånar eller lånar ut pengar.
 Ett närliggande begrepp är *kumulativ summa*, vilket beskriver en summa som beräknas per värde i en serie, inklusive alla värden i serien fram till dess. Tabell 1 visar några tal och en kolumn med en kumulativ summa och en kolumn med en vanlig summa.
 
 **Tabell 1: Illustration av kumulativ summa.**
+
   -------------------------------------------------------
   **Observation nr**   **Värde**    **Kumulativ summa**
   -------------------- ------------ ---------------------
@@ -67,6 +71,7 @@ Ett närliggande begrepp är *kumulativ summa*, vilket beskriver en summa som be
   4                    14           23+32+11+14=80
                        Summa: 80    
   -------------------------------------------------------
+
 ### Effektiv ränta
 Enligt [konsumentkreditlagen](https://www.konsumentverket.se/for-foretag/prissattning-och-ta-betalt/konsumentkreditlagen/) är långivare skyldiga att informera om ett låns [*effektiva ränta*](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/lan#!/). Effektiv ränta är den totala kostnaden för ett lån inklusive eventuella extraavgifter, beräknat som årlig procentuell ränta på lånebeloppet.
 Många lån kommer med tilläggsavgifter, till exempel avgift för att skapa lånet (uppläggningsavgift) eller avgift för att långivaren ska skicka avier (aviavgift). I praktiken innebär detta att när det står i en annons att du kan köpa något och betala "räntefritt" senare, betalar du ofta i praktiken en *effektiv ränta*, trots att företaget som säljer produkten inte kallar detta för ränta.

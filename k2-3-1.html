@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>31 Andra linjer | Matematik och statistik för samhällsvetare</title>
 <meta name="author" content="">
-<meta name="description" content="31.0.1 Begrepp Inga nya begrepp i detta avsnitt. ### Teori I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi...">
+<meta name="description" content="31.0.1 Begrepp Inga nya begrepp i detta avsnitt.  31.0.2 Teori I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="31 Andra linjer | Matematik och statistik för samhällsvetare">
 <meta property="og:type" content="book">
-<meta property="og:description" content="31.0.1 Begrepp Inga nya begrepp i detta avsnitt. ### Teori I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi...">
+<meta property="og:description" content="31.0.1 Begrepp Inga nya begrepp i detta avsnitt.  31.0.2 Teori I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="31 Andra linjer | Matematik och statistik för samhällsvetare">
-<meta name="twitter:description" content="31.0.1 Begrepp Inga nya begrepp i detta avsnitt. ### Teori I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi...">
+<meta name="twitter:description" content="31.0.1 Begrepp Inga nya begrepp i detta avsnitt.  31.0.2 Teori I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -114,19 +114,26 @@
 <h1>
 <span class="header-section-number">31</span> Andra linjer<a class="anchor" aria-label="anchor" href="#k2-3-1"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-28" class="section level3" number="31.0.1">
+<div id="begrepp-30" class="section level3" number="31.0.1">
 <h3>
-<span class="header-section-number">31.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-28"><i class="fas fa-link"></i></a>
+<span class="header-section-number">31.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-30"><i class="fas fa-link"></i></a>
 </h3>
-<p><em>Inga nya begrepp i detta avsnitt.</em>
-### Teori
-I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi inte bara ha valt en annan? I det här avsnittet ska vi visa varför regressionslinjen är unik och bättre än alla andra möjliga raka linjer.
+<p><em>Inga nya begrepp i detta avsnitt.</em></p>
+</div>
+<div id="teori-30" class="section level3" number="31.0.2">
+<h3>
+<span class="header-section-number">31.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-30"><i class="fas fa-link"></i></a>
+</h3>
+<p>I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi inte bara ha valt en annan? I det här avsnittet ska vi visa varför regressionslinjen är unik och bättre än alla andra möjliga raka linjer.
 Vi har regressionsmodellen:
 <span class="math inline">\(Y = a + bX + V\)</span> (1)
 där <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är variabler, <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är koefficienter vi vill estimera med minstakvadratmetoden och <span class="math inline">\(V\)</span> är feltermen. Med hjälp av minstakvadratmetoden kan vi hitta den regressionslinje som minimerar summan av det vertikala avståndet mellan regressionslinjen och observationerna.
-Alla andra raka linjer resulterar i ett större summerat värde för det kvadrerade avståndet mellan dessa linjer och punkterna.
-#### Två exempel
-Detta kan vi illustrera med hjälp av exempel där vi använder samma fyra observationer för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> i som vi använde i tidigare avsnitt, där <span class="math inline">\(X = 3,\ 4,\ 6,\ 7\)</span> och <span class="math inline">\(Y = 3,\ 4,\ 5,\ 6\)</span>. Men i stället för regressionslinjen som vi skattade utifrån minstakvadratmetoden har vi nu en horisontell linje där <span class="math inline">\(\widehat{Y} = 3,5\)</span> för alla <span class="math inline">\(Y_{i}\)</span>, vilket är samma som medelvärdet för Y i våra fyra observationer: <span class="math inline">\(\overline{Y} = (3 + 4 + 5 + 6)\text{/}4 = 3,5\)</span>.
+Alla andra raka linjer resulterar i ett större summerat värde för det kvadrerade avståndet mellan dessa linjer och punkterna.</p>
+<div id="två-exempel" class="section level4" number="31.0.2.1">
+<h4>
+<span class="header-section-number">31.0.2.1</span> Två exempel<a class="anchor" aria-label="anchor" href="#tv%C3%A5-exempel"><i class="fas fa-link"></i></a>
+</h4>
+<p>Detta kan vi illustrera med hjälp av exempel där vi använder samma fyra observationer för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> i som vi använde i tidigare avsnitt, där <span class="math inline">\(X = 3,\ 4,\ 6,\ 7\)</span> och <span class="math inline">\(Y = 3,\ 4,\ 5,\ 6\)</span>. Men i stället för regressionslinjen som vi skattade utifrån minstakvadratmetoden har vi nu en horisontell linje där <span class="math inline">\(\widehat{Y} = 3,5\)</span> för alla <span class="math inline">\(Y_{i}\)</span>, vilket är samma som medelvärdet för Y i våra fyra observationer: <span class="math inline">\(\overline{Y} = (3 + 4 + 5 + 6)\text{/}4 = 3,5\)</span>.
 En horisontell linje har lutningskoefficient <span class="math inline">\(b = 0\)</span>. Låt oss beräkna summan av de kvadrerade residualerna <span class="math inline">\(\left( \sum_{i}^{}\widehat{{V_{i}}^{2}} \right)\)</span> för denna linje:
 <span class="math inline">\(\sum_{i}^{}\widehat{{V_{i}}^{2}} = \sum_{i}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (2)$ $</p>
 <p><span class="math display">\[{= (3 - 3,5)^{2} + (4 - 3,5)^{2} + (5 - 3,5)^{2} + (6 - 3,5)^{2} }{= 9}\]</span></p>
@@ -159,6 +166,7 @@ För observation 2 och 3 har vi att <span class="math inline">\(\left( Y_{2} = 2
 <p><a href="k2-3-2.html">→ Nästa avsnitt: <strong>En modell till</strong></a></p>
 </div>
 
+</div>
 </div>
 </div>
 <script src="js/exercises.js"></script><script>
@@ -302,7 +310,10 @@ För observation 2 och 3 har vi att <span class="math inline">\(\left( Y_{2} = 2
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k2-3-1"><span class="header-section-number">31</span> Andra linjer</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-28"><span class="header-section-number">31.0.1</span> Begrepp</a></li></ul>
+<a class="nav-link" href="#k2-3-1"><span class="header-section-number">31</span> Andra linjer</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-30"><span class="header-section-number">31.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-30"><span class="header-section-number">31.0.2</span> Teori</a></li>
+</ul>
 </li></ul>
 
       <div class="book-extra">

@@ -6,8 +6,10 @@
 - **Signifikansnivå:** sannolikheten att vi förkastar $H_{0}$ när $H_{0}$ är sann. Kallas $\alpha$, alfavärde.
 - **Konfidensnivå:** sannolikheten att vi inte förkastar $H_{0}$ när den är sann.
 - **P-värde:** Sannolikheten att $H_{0}$ är sann.
+
 ### Teori
 Vi fortsätter att introducera statistisk analys, först genom att beskriva hur vi kan uppskatta ett intervall av mer eller mindre sannolika utfall.
+
 #### Konfidensintervall
 I föregående [avsnitt 5.3](https://www.dropbox.com/scl/fi/12fiw2s4633qjt0d1s0zw/5-3-Statitsisk-analys-1.docx?rlkey=b4urprsp85hxcdp6jm3z9vaw7&dl=0) introducerade vi punktestimat. Ett annat sätt att studera en population är att *estimera intervall,* vilket även kallas för *intervallskattning* eller *intervallestimat.*
 Ett särskilt intervall som ofta används i statistisk analys är *konfidensintervall*, vilket är ett intervall mellan två värden inom vilket en specificerad andel av upprepade stickprov kommer att innehålla populationsvärdet vi söker.
@@ -19,12 +21,14 @@ Bokstaven $z$ representerar ett värde som vi hämtar från [standardnormalförd
 Eftersom populationens standardavvikelse $\sigma$ i regel är okänd kan det estimerade konfidensintervallet skrivas:
 Estimerat konfidensintervall =$\ \ \bar{x} \pm z\frac{s_{x}}{n^{\frac{1}{2}}}$ (2)
 där $s$ representerar estimerad standardavvikelse.
+
 #### Exempel
 Om vi väljer konfidensgrad $90\ \%$ vill vi exkludera $10\%$ av populationens värden: $5\%$ i fördelningens övre svans (över medelvärdet) och $5\%$ i fördelningens nedre svans (under medelvärdet). Detta ger oss $z \approx 1,64$5.
 Om vi vill estimera ett $95\ \%$ konfidensintervall har vi $z \approx 1,96$. För konfidensgrad $99\ \%$ har vi $z \approx 2,58$. Se figur 2 i [avsnitt 5.2](https://www.dropbox.com/scl/fi/wi8c30n2yna36a7zbiyoh/5-2-Kontinuerliga-sannolikhetsf-rdelningar.docx?rlkey=rmkxixrrun7q0rqeg82lk2kky&dl=0). Det z-värde vi ska använda sätter vi in i ekvation 2.
 Säg som exempel nu att vi har ett dataurval på $n = 28$ observationer och estimerar medelvärdet $\bar{x} = 13$ samt standardavvikelse $s_{x} = 3,7$. Vi väljer konfidensgrad $90\%$, varför $z = 1,645$. Detta ger följande gränser för konfidensintervallet:
 $\begin{matrix} & \bar{x} + z\frac{s_{x}}{n^{\frac{1}{2}}} = 13 + 1,645*\frac{3,7}{\sqrt{28}} \approx 14,15 \\ & \bar{x} - z\frac{s_{x}}{n^{\frac{1}{2}}} = 13 - 1,645*\frac{3,7}{\sqrt{28}} \approx 11,85 \end{matrix}$ (3)
 Vårt konfidensintervall är $11,85 \< \mu_{X} \< 14,15$. Detta är ett 90% konfidensintervall, vilket betyder att om vi upprepade denna procedur många gånger, skulle 90% av intervallen innehålla populationens medelvärde. Detta betyder inte att det finns 90% sannolikhet att $\mu_{X}$ ligger i vårt specifika intervall (en vanlig missuppfattning).
+
 #### Exempel med kvinnor och mäns medellivslängd
 I föregående [avsnitt 5.1](https://www.dropbox.com/scl/fi/12fiw2s4633qjt0d1s0zw/5-3-Statitsisk-analys-1.docx?rlkey=b4urprsp85hxcdp6jm3z9vaw7&dl=0) beräknade vi sannolikheten att två estimerade medelvärden kom från samma population, genom att räkna på differensen mellan genomsnittlig livslängd för män respektive kvinnor.
 Konfidensintervallet för differensen mellan de estimerade medelvärdena för dessa två populationer kan vi estimera med följande ekvation:
@@ -37,6 +41,7 @@ Vi väljer konfidensgrad $95\ \%$, vilket ger $z = 1,96$. Konfidensintervallets 
 $\begin{matrix} \text{Konfidensintervallets nedre gräns:} & \ (80,38 - 83,95) + 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,76 \\ \text{Konfidensintervallets }\text{övre }\text{gräns:} & \ (80,38 - 83,95) - 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,38 \end{matrix}$ (6)
 Estimatet indikerar att vid upprepade urval (stickprov) från samma population kommer differensen mellan de två populationerna i $95\ \%$ av fallen vara $3,38 \< \left( \mu_{\text{kvinnor}\ } - \mu_{\text{män}\ } \right) \< 3,76$. Detta indikerar alltså att kvinnor i genomsnitt lever mellan 3,38 och 3,76 år längre än män.
 Detta gäller endast om de upprepade urvalen verkligen kommer från samma population. Om vi till exempel upprepade gånger under en tioårsperiod mäter medellivslängden för män och kvinnor så kommer befolkningen (populationen) och deras livslängd också att förändras.
+
 #### Hypotesprövning
 När vi studerar mönster i data och samvariation kan vi göra detta genom att pröva *hypoteser* med *statistiska test*. En vetenskaplig hypotes måste vara *falsifierbar*, vilket betyder att den måste kunna motbevisas med fakta.
 Vi formulerar en hypotes och använder ett statistiskt test för att pröva sannolikheten att hypotesen är falsk. Sannolikheten att en hypotes är falsk kan inte vara under 0 eller över 100 %.
@@ -51,6 +56,7 @@ $H_{1}:\text{sjukdom}_{\text{behandling}} \< \text{sjukdom}_{\text{kontroll}}$ (
 Vi är intresserade av ett orsakssamband, vilket vi studerar genom att observera samvariation mellan medicin och symptom. Orsakssambandet är en tolkning vi lägger till utifrån den samvariation vi kan observera. Hypoteserna formuleras inte rörande orsakssambandet utan för observerbara skillnader.
 Observera även att hypoteserna rör populationen vi är intresserade av -- inte urvalsdatan. I detta hypotetiska exempel kan vi tänka oss att populationen är alla patienter i hela världen med samma sjukdomssymptom.
 Säg att vi finner att behandlingsgruppen har 5 % mindre sjukdom. Nästa steg är att då estimera hur säkra vi kan vara på att denna skillnad är tillräcklig för att vi ska betrakta vår nollhypotes ($H_{0}$) som falsk.
+
 #### Hypotestest i regressionsanalys
 Hypotestest användas ofta i samband med regressionsanalys. Säg att vi ska studera om variationer i ett fenomen $X$ orsakar en viss typ av variationer i fenomen $Y$, vilket vi gör med hjälp av regressionsmodellen $Y = a + bX + u$ där $Y$ och $X$ är variabler, $u$ är feltermen och $a$ och $b$ är koefficienterna som vi använder minstakvadratmetoden för att estimera.
 Vi har anledning att tro att $X$ och $Y$ samvarierar och att $b \neq 0$. Utifrån detta kan vi formulera en nollhypotes i form av en ickerelation mellan variablerna. En ickerelation mellan X och Y i vår regressionsmodell innebär att $b = 0$, varför vår nollhypotes och alternativhypotes blir:
@@ -60,6 +66,7 @@ Nollhypotesen och alternativhypotesen täcker därigenom alla möjliga alternati
 Vi är intresserade av att estimera samvariationen mellan $X$ och $Y$ och att estimera sannolikheten att den samvariation vi finner även kunde ha uppstått genom slump.
 Vi prövar våra hypoteser genom att estimera $\widehat{b}$ och därefter beräkna sannolikheten att vi skulle ha fått det resultat vi får, givet att $H_{0}$ är sann egentligen (det vill säga att vi i populationen har $b = 0$).
 Sannolikheten för detta beror bland annat på vilken sannolikhetsfördelning vi jämför mot, till exempel standardnormalfördelningen, och vilken varians vi kan observera i våra data.
+
 #### Signifikans, alfa och p-värde
 I klassisk statistik brukar det beskrivas som att vi vid statistiska test bör välja i förväg med vilken sannolikhet vi vill riskera att förkasta en sann $H_{0}$. Detta kallas för att välja *signifikansnivå* eller *alfavärde* (engelska *alpha value*) och betecknas $\alpha$ (grekiska bokstaven alfa).
 För $10\%$ signifikansnivå, $\alpha = 0,1 = 10\%$. Ofta används $\alpha = 0,05$. Ofta används även begreppet *konfidensnivå*, vilket beräknas genom att ta:

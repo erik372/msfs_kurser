@@ -2,9 +2,11 @@
 
 ### Begrepp
 *Inga nya matematiska begrepp i detta avsnitt.*
+
 ### Teori
 Matematiken kan hjälpa oss att diskutera verkligheten även när vi är intresserade av fenomen som kan vara svåra eller omöjliga att sätta siffror på. Vi ska nu gå igenom ett exempel där vi vill resonera kring hur kul eller tråkigt något är. Vi börjar med att beskriva detta exempel med siffror, vilket möjligen kan vara enklare att förstå.
 Därefter ska vi gå igenom hur vi kan arbeta med samma typ av teori utan siffror, vilket många gånger är minst lika användbart och ibland bättre. Poängen med detta är att illustrera hur matematiken kan hjälpa oss resonera, även om vi inte kan räkna ut exakta svar.
+
 #### Två strategier för dejting
 Kim vill gifta sig snarast möjligast och överväger olika strategiska alternativ för att träffa den rätta. Kim tänker inte hoppa mellan strategier och giftermålet måste ske i år. Det handlar således om att välja en strategi och hålla sig till den.
 Kim uppskattar idag sin lycka till nivå 80 på en skala från 0 till 100, och hoppas kunna öka sin lycka till 100 genom att träffa en partner. Kim gillar dock inte att dejta och varje dejt drar ned Kims lycka lite.
@@ -41,6 +43,7 @@ Nu är frågan om Kim tror sig kunna hitta den rätta på fler eller färre dejt
 ::: {.fig-caption}
 Förklaring: Den gröna linjen beskriver dejtingstrategi 1, med dejtingappen. Den rosa linjen beskriver dejtingstrategi 2, träffa kompisens kompisar. Vid 2,5 dejter möts de två linjerna, varpå Kims lycka är nere på 25.
 :::
+
 
 #### Samma exempel utan siffror
 Att mäta lycka på en skala från 0 till 100 är lite klumpigt. Genom att ställa upp ekvationer kan vi diskutera vilka villkor som måste vara uppfyllda för att en teori eller ett samband ska gälla.

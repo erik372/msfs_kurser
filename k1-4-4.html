@@ -114,9 +114,9 @@
 <h1>
 <span class="header-section-number">19</span> Vinstmaximerande företag<a class="anchor" aria-label="anchor" href="#k1-4-4"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-16" class="section level3" number="19.0.1">
+<div id="begrepp-18" class="section level3" number="19.0.1">
 <h3>
-<span class="header-section-number">19.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-16"><i class="fas fa-link"></i></a>
+<span class="header-section-number">19.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-18"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -124,11 +124,20 @@
 <li>
 <strong>Totala kostnader:</strong> I detta exempel är totala kostnader företagets utgifter för att producera en specifik mängd av sina varor och tjänster.</li>
 <li>
-<strong>Marginalkostnad:</strong> Kostnaden för företaget att tillverka en extra enhet. Marginalkostnaden kan variera vid till exempel olika produktionsmängder.
-### Teori
-En stor mängd samhällsvetenskaplig analys studerar hur företag beter sig. Här nöjer vi oss med att introducera en förenklad teori om hur vi med matematik kan beskriva vinstmaximering för ett kommersiellt företag.
-### Ett företag
-Säg att vi har ett företag som tillverkar två olika produkter som vi kallar för <em>X</em> och <em>Y</em>. Företaget vill maximera sin vinst. Försäljningspriserna för de två varorna styrs av omvärlden (marknaden), vilket företaget inte kan påverka. Företaget är visserligen fri att själv bestämma priset på sina varor, men i detta hypotetiska exempel har företaget ingenting att vinna på att höja eller sänka priserna.
+<strong>Marginalkostnad:</strong> Kostnaden för företaget att tillverka en extra enhet. Marginalkostnaden kan variera vid till exempel olika produktionsmängder.</li>
+</ul>
+</div>
+<div id="teori-18" class="section level3" number="19.0.2">
+<h3>
+<span class="header-section-number">19.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-18"><i class="fas fa-link"></i></a>
+</h3>
+<p>En stor mängd samhällsvetenskaplig analys studerar hur företag beter sig. Här nöjer vi oss med att introducera en förenklad teori om hur vi med matematik kan beskriva vinstmaximering för ett kommersiellt företag.</p>
+</div>
+<div id="ett-företag" class="section level3" number="19.0.3">
+<h3>
+<span class="header-section-number">19.0.3</span> Ett företag<a class="anchor" aria-label="anchor" href="#ett-f%C3%B6retag"><i class="fas fa-link"></i></a>
+</h3>
+<p>Säg att vi har ett företag som tillverkar två olika produkter som vi kallar för <em>X</em> och <em>Y</em>. Företaget vill maximera sin vinst. Försäljningspriserna för de två varorna styrs av omvärlden (marknaden), vilket företaget inte kan påverka. Företaget är visserligen fri att själv bestämma priset på sina varor, men i detta hypotetiska exempel har företaget ingenting att vinna på att höja eller sänka priserna.
 Detta är inte nödvändigtvis särskilt realistiskt, men förenklar matematiken något. Företaget accepterar därför att priserna är vad det är, men kan däremot välja hur stor mängd av produkterna som ska produceras.
 Mängden producerade enheter av de två produkterna anger vi med <em>x</em> och <em>y</em>. För produkt <em>x</em> har vi pris <span class="math inline">\(p_{x} = 10\)</span> och för produkt <em>y</em> har vi <span class="math inline">\(p_{y} = 20\)</span>. Företagets intäkter kan beskrivas som en funktion av pris multiplicerat med kvantitet. Funktionen för totala intäkter kallar vi <em>TR</em> efter engelskans <em>total revenue:</em>
 <span class="math inline">\(\text{Totala\~intäkter} = TR(x,y) = p_{x}x + p_{y}y = 10x + 20y\)</span> (1)
@@ -137,9 +146,13 @@ Från ekvation 1 kan vi lösa för <em>y</em>:
 De totala produktionskostnaderna består av fasta utgifter på 10 kr och rörliga kostnader för att tillverka produkterna <em>X</em> respektive <em>Y</em>:
 <span class="math inline">\(\text{Totala\~kostnader} = TC(x,y) = x^{2} + 2y^{2} + 10\)</span> (3)
 där <span class="math inline">\(TC(\ )\)</span> är namn på den matematiska funktionen. Företagets vinst är lika med intäkter minus kostnader, <span class="math inline">\(TR - TC\)</span>, vilket vi kan skriva som en funktion, <em>V</em>:
-<span class="math inline">\(V(x,y) = TR - TC = 10x + 20y - (x^{2} + 2y^{2} + 10)\)</span> (4)
-### Maximeringsproblemet
-Vinsten är en funktion av kvantiteterna <em>x</em> och <em>y</em>, vilket vi kan beskriva som att företaget vill maximera sin vinst genom att välja mängd att producera av <em>x</em> och <em>y</em>:
+<span class="math inline">\(V(x,y) = TR - TC = 10x + 20y - (x^{2} + 2y^{2} + 10)\)</span> (4)</p>
+</div>
+<div id="maximeringsproblemet-1" class="section level3" number="19.0.4">
+<h3>
+<span class="header-section-number">19.0.4</span> Maximeringsproblemet<a class="anchor" aria-label="anchor" href="#maximeringsproblemet-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>Vinsten är en funktion av kvantiteterna <em>x</em> och <em>y</em>, vilket vi kan beskriva som att företaget vill maximera sin vinst genom att välja mängd att producera av <em>x</em> och <em>y</em>:
 <span class="math inline">\(\max_{m.\ h.t\ \ x,y}{V(x,y)}\ = 10x + 20y - (x^{2} + 2y^{2} + 10)\)</span> (5)
 Detta maximeringsproblem kan vi lösa genom att ta derivatan av <em>V</em> med hänsyn till <em>x</em> och <em>y</em>. Vi söker en maximipunkt där förstaderivatan är lika med 0 och andraderivatan är negativ. Förstaderivatan av <span class="math inline">\(V(x,y)\)</span> med hänsyn till <em>x</em> respektive <em>y</em>:
 <span class="math inline">\(V_{x}\' = 10 - 2x\)</span> (6)
@@ -149,9 +162,13 @@ Vi har nu två uttryck som beskriver hur <em>V</em> ändras då <em>x</em> respe
 <span class="math inline">\(y^{*} = 20/4 = 5\)</span>
 Vi kan även se att andraderivatan av <em>V</em> med hänsyn till <em>x</em> och <em>y</em> är negativ genom att derivera uttrycken i ekvation 6 en gång till:
 <span class="math inline">\(V_{xx}^{\'\'} = - 2\)</span> (8)
-<span class="math inline">\(V_{yy}^{\'\'} = - 4\)</span>
-### Marginalvinsten
-Vinsten maximeras då marginalvinsten är lika med 0, det vill säga då förstaderivatan av V är <span class="math inline">\(V_{x}\' = 0\)</span> och <span class="math inline">\(V_{y}\' = 0\)</span>. Låt oss beräkna hur mycket vinst företaget kommer att göra genom att sätta in dessa värden för <span class="math inline">\(x^{*}\)</span> och <span class="math inline">\(y^{*}\)</span> i <span class="math inline">\(V\left( x^{*},y^{*} \right) = V(5,5)\)</span>:
+<span class="math inline">\(V_{yy}^{\'\'} = - 4\)</span></p>
+</div>
+<div id="marginalvinsten" class="section level3" number="19.0.5">
+<h3>
+<span class="header-section-number">19.0.5</span> Marginalvinsten<a class="anchor" aria-label="anchor" href="#marginalvinsten"><i class="fas fa-link"></i></a>
+</h3>
+<p>Vinsten maximeras då marginalvinsten är lika med 0, det vill säga då förstaderivatan av V är <span class="math inline">\(V_{x}\' = 0\)</span> och <span class="math inline">\(V_{y}\' = 0\)</span>. Låt oss beräkna hur mycket vinst företaget kommer att göra genom att sätta in dessa värden för <span class="math inline">\(x^{*}\)</span> och <span class="math inline">\(y^{*}\)</span> i <span class="math inline">\(V\left( x^{*},y^{*} \right) = V(5,5)\)</span>:
 <span class="math inline">\(V(5,5) = 10*5 + 20*5 - \left( 5^{2} + 2*5^{2} + 10 \right) = 65\)</span> (9)
 Givet priserna <span class="math inline">\(p_{x} = 10\)</span> och <span class="math inline">\(p_{y} = 20\)</span> och nuvarande produktionskostnader kan företaget maximera sin vinst genom att producera 5 enheter av produkt A och 5 enheter av produkt B, och gör då en vinst på 65 kr.
 Företagets totala kostnader ges av ekvation 3. Tar vi förstaderivatan av totala kostnader med hänsyn till x respektive y får vi företagets <em>marginalkostnader</em>:
@@ -161,8 +178,7 @@ Vinsten optimeras vid <span class="math inline">\(\left( x^{*},y^{*} \right) = (
 <span class="math inline">\(MC_{x} = C_{x}\'\left( x^{*} \right) = 2*5 = 10\)</span> (11)
 <span class="math inline">\(MC_{y} = C_{y}\'\left( y^{*} \right) = 4*5 = 20\)</span>
 Om företaget producerar kvantiteterna 5 av <em>x</em> och 5 av <em>y</em> är marginalkostnaderna, vid just denna produktionsmängd, lika med 10 med hänsyn till <em>x</em> och 20 med hänsyn till <em>y</em>. I inledningen beskriv vi priserna för produkterna <span class="math inline">\(p_{x} = 10\)</span> och <span class="math inline">\(p_{y} = 20\)</span>. Företaget maximerar alltså sin vinst då marginalkostnaden är lika med priset för produkterna vilket vi kan skriva som:
-<span class="math inline">\(P^{*} = MC\)</span> (12)</li>
-</ul>
+<span class="math inline">\(P^{*} = MC\)</span> (12)</p>
 <div class="ex-section-title">
 <p>Övningar</p>
 </div>
@@ -317,7 +333,13 @@ Om företaget producerar kvantiteterna 5 av <em>x</em> och 5 av <em>y</em> är m
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k1-4-4"><span class="header-section-number">19</span> Vinstmaximerande företag</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-16"><span class="header-section-number">19.0.1</span> Begrepp</a></li></ul>
+<a class="nav-link" href="#k1-4-4"><span class="header-section-number">19</span> Vinstmaximerande företag</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-18"><span class="header-section-number">19.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-18"><span class="header-section-number">19.0.2</span> Teori</a></li>
+<li><a class="nav-link" href="#ett-f%C3%B6retag"><span class="header-section-number">19.0.3</span> Ett företag</a></li>
+<li><a class="nav-link" href="#maximeringsproblemet-1"><span class="header-section-number">19.0.4</span> Maximeringsproblemet</a></li>
+<li><a class="nav-link" href="#marginalvinsten"><span class="header-section-number">19.0.5</span> Marginalvinsten</a></li>
+</ul>
 </li></ul>
 
       <div class="book-extra">

@@ -5,18 +5,22 @@
   $MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}$
 - **Medelkvadratsumman av den förklarade variationen** (engelska *mean sum of squares explained*, MSE): **
   $MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}$
+
 ### Teori
 I tidigare avsnitt har vi estimerat två olika regressionsmodeller. Varje modell utgick från fyra observationer vardera. Regressionsanalys är ett sätt att studera mönster i data. Vi kan använda våra regressionsmodeller för att pröva i vilken utsträckning som det mönster som en regressionsmodell beskriver faktiskt återfinns i våra data.
 Att estimera koefficienterna i regressionsmodellen är då endast första steget i en regressionsanalys. Därefter vill vi jämföra hur väl mönstret i vår regressionsmodell faktiskt stämde med det mönster som fanns i observationerna. Detta är ett vanligt tillvägagångssätt och därför viktigt att känna till.
+
 #### Medelkvadratsumman
 För att studera hur väl en regressionsmodell passar mot data kan vi även jämföra medelkvadratsumman. Medelkvadratsumman för residualerna (engelska *mean squared residuals*, MSR) beräknas:
 $MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}$ (5)
 Nämnaren $n - p$ visar antal frihetsgrader, där $n$ är antal observationer och $p$ är antal estimerade koefficienter i regressionsmodellen. Frihetsgrader anger hur många \"fria\" värden vi har kvar efter att ha estimerat koefficienterna: $n$ = antal observationer (här 4). $p$ = antal estimerade koefficienter (här 2: $a$ och $b$). $n - p$ = frihetsgrader $(4\ - \ 2\ = \ 2)$. Med 4 observationer och 2 koefficienter har vi \"använt upp\" 2 frihetsgrader för att estimera koefficienterna. Vi har 2 frihetsgrader kvar för att mäta variation kring regressionslinjen.
 Förenklat kan ett lågt MSR innebära att regressionsmodellens predikterade $\widehat{Y}$ hamnar relativt nära observationerna $Y$.
+
 #### Medelkvadratsumman av den förklarade variationen
 Medelkvadratsumman av den förklarade variationen är SSE dividerat med antal förklarande variabler (engelska mean sum of squares explained, MSE):
 $MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}$ (6)
 I täljaren tar vi $p$, antal estimerade koefficienter, minus 1 eftersom koefficient $a$ inte multipliceras med någon förklarande variabel.
+
 #### Låt oss jämföra två regressionsmodeller
 I tidigare avsnitt har vi använt två olika samlingar med observationer för att utifrån minstakvadratmetoden estimera de två regressionsmodellerna från [avsnitt 2.4](https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&dl=0) och [avsnitt 3.2](https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&dl=0):
 Modell 1: $Y = a + bX + V$ (7)
@@ -24,6 +28,7 @@ Modell 2: $Z = \alpha + \beta K + \epsilon$
 Tabell 2 och 3 återger observationerna vi använde för att estimera respektive tabell och några beräkningar vi nu ska använda i vår jämförelse.
 
 **Tabell 2: Observationer och beräkningar för modell 1**
+
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Observation i    
 
@@ -64,6 +69,7 @@ Förklaring: se text.
 
 
 **Tabell 3: Observationer och beräkningar för modell 2**
+
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Observation i    
 
@@ -107,6 +113,7 @@ $MSR_{modell\ 2} = \frac{5}{2} = 2,5$ (9)
 Eftersom $MSR_{modell\ 2} \> MSR_{modell\ 1}$ indikerar på att den första regressionsmodellens predikterade $\widehat{Y}$ ligger närmare observerade $Y$, jämfört med hur väl den andra regressionsmodellen lyckas prediktera den förklarade variabeln $Z$ i den modellen.
 MSR beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.
 :::
+
 
 ### Vi beräknar $R^{2}$ för båda modellerna
 Låt oss även skatta $R^{2}$. För den första regressionsmodellen $Y = a + bX + V$ får vi (se tabell 2):

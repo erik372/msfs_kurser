@@ -6,9 +6,11 @@
 - **Minstakvadratmetoden:** En vanligt förekommande metod för linjär regressionsanalys. Genom att använda observerad data om variablerna kan minstakvadratmetoden användas för att skatta en regressionsmodells koefficienter.
 - **Felterm:** Anger differenserna i populationen mellan respektive observations $Y$-värde och regressionslinjen.
 - **Residual:** Uppskattade feltermerna, vilka vi skattar med våra urvalsdata.
+
 ### Teori
 Under kurserna [Matte 1](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/korrelation-och-kausalitet#!/) och [Matte 2](https://www.matteboken.se/lektioner/matte-2/statistik/korrelation-och-regressionsanalys#!/) ges en kort introduktion till regressionsanalys. Regressionsanalys är centralt för en stor mängd analytiskt arbete och forskning inom olika fält.
 Grundläggande kunskap om regressionsanalys kan även hjälpa oss förstå poängen med många vetenskapliga metoder. Vi kommer därför ägna mycket möda åt detta och gå igenom hur vi kan använda detta inom samhällsvetenskap. Bitvis kan denna genomgång kännas tekniskt verklighetsfrånvänd, men dess betydelse kan inte överskattas.
+
 #### Minstakvadratmetoden
 I detta avsnitt ger vi först en övergripande beskrivning av minstakvadratmetodens logik, som sedan utvecklas stegvis. Precis som i tidigare exempel där vi studerar samvariation söker vi uppgifterna för en population. Populationens värden är okända, varför vi i stället är hänvisade till urvalsdata, som vi använder för att estimera samvariationen i populationen. Detta är förenat med osäkerhet.
 Alla raka linjer i ett diagram kan beskrivas med en ekvation med formen $Y = a + bX$, det vill säga [räta linjens ekvation](https://www.matteboken.se/lektioner/matte-1/funktioner/rata-linjens-ekvation). Konstanta koefficienten $a$ är linjens y-skärning eller intercept medan konstanta koefficienten $b$ är linjens lutning, eller lutningskoefficient. $Y$ och $X$ är i detta fall våra variabler.
@@ -21,6 +23,7 @@ I figurens diagram ges ett exempel på avståndet i form av ${\widehat{v}}_{3} 
 Förklaring: Linjen i diagrammet illustrerar den linjära samvariationen mellan variablerna $X$ och $Y$. Av alla raka linjer vi kan rita ut i diagrammet är det just denna linje vi ser i diagrammet som minimerar summan av det vertikala avståndet mellan en sådan linje och punkterna.
 :::
 
+
 #### Regressionsanalys
 Minstakvadratmetoden är en av flera metoder för att studera samvariation inom det som kallas för *regressionsanalys*, vilket är ett samlingsnamn för olika statistiska metoder. Vid regressionsanalys bestämmer vi den variabel vars variation vi ska kartlägga (*förklarad* eller *beroende variabel*) utifrån variationen i en eller flera andra variabler (*förklarande* eller *oberoende variabel*).
 Regressionsanalys är en metod för att kartlägga mönster i data, som linjär samvariation. Dessa mönster kan vi sedan använda för att studera orsakssamband. Men ett mönster är inget bevis för ett orsakssamband. Uttrycket "förklarande variabel" betyder därför inte att den ena variabeln nödvändigtvis orsakar den andra variabeln.
@@ -30,19 +33,23 @@ $Y = a + bX + V$ (1)
 Eftersom variabel Y står till vänster om likhetstecknet i regressionsmodellen kan vi se att det är *den förklarade variabeln*. Variabel $X$, till höger om likhetstecknet, är *förklarande variabel*.
 Denna regressionsmodell existerar i vår population, det är *populationsmodellen* eller *populationens regressionsmodell*.
 Med regressionsanalys kan vi uppskatta både linjär och ickelinjär samvariation, men vi kommer här enbart ägna oss åt regressionsanalys för linjär samvariation med minstakvadratmetoden.
+
 #### Koefficenterna $a$ och $b$
 Bokstäverna $a$ och $b$ i regressionsmodellen i ekvation 1 är modellens *koefficienter* eller *parametrar*. Lutningskoefficienten $b$ ska läsas som att en ökning i variabeln $X$ med en enhet (beroende på vad $X$ är för variabel) är associerad med en förändring i variabel $Y$ av storlek $b$. Koefficient $a$, konstanten, är linjens y-skärning.
 Vi vet inte vilka värden $a$ och $b$ har i populationen. Det är det vi vill estimera med regressionsanalys. De estimerade versionerna av koefficienternas populationsvärden $a$ och $b$ kan vi skriva som $\widehat{a}$ och $\widehat{b}$. Hattsymbolen $\left( \widehat{} \right)$ är estimerade värden, det vill säga våra skattningar med urvalsdata av populationsvärden (jämför figur 1). Bokstäver $a$ och $b$ utan hattsymbol syftar på deras populationsvärden.
+
 #### Regressionslinjen
 Linjen vi ska rita ut kallas för *regressionslinje* (redan utritad i figur 1). När vi har estimerat $\widehat{a}$ och $\widehat{b}$ kan vi med hjälp av observationerna i variabel $X$ även uppskatta nya värden för variabel $Y$. Den uppskattade versionen av $Y$ kallar vi $\widehat{Y}$, vilket är $Y$-värdet på regressionslinjen.
 De estimerade koefficienterna $\widehat{a}$ och $\widehat{b}$ som vi söker i detta fall är konstanter, vilket innebär att de har samma värden oavsett vilka värden för variabel $X$ vi jämför mot.
 Alltså: vi har en population med $N$ antal observationer. Vi hämtar $n$ antal observationer till vårt urval. Med urvalsobservationerna estimerar vi koefficienterna $\widehat{a}$ och $\widehat{b}$, och därefter $\widehat{Y}$.
+
 #### Felterm och residual
 I regressionsmodellen representerar bokstaven $V$ det som kallas för *felterm*. Regressionsanalysen syftar till att mäta i vilken utsträckning som variationer i den (de) förklarande variabeln (variablerna) sammanfaller med variationer i den förklarade variabeln $Y$.
 Feltermen anger differensen mellan respektive observations $Y$-värde och regressionslinjen i populationen. Estimerade feltermer kallas för *residualer,* skrivs $\widehat{V}$, och är differensen mellan $Y$-värdena längs regressionslinjen, $\widehat{Y},$ och observerade *Y*:
 ${\widehat{V}}_{i} = Y_{i} - \widehat{Y_{i}}$ (2)
 Om vi sätter in de estimerade koefficienterna, residualerna och variabeln $\widehat{Y}$ i regressionsmodellen i ekvation 1 kan vi skriva:
 $\widehat{Y} = \widehat{a} + \widehat{b}X + \widehat{V}$ (3)
+
 #### Regressionsmodell för observation $i$
 Vår regressionsmodell $Y = a + bX + V$ kan även skrivas:
 $Y_{i} = a + bX_{i} + V_{i}$ (4)
@@ -93,6 +100,7 @@ $$\widehat{Y} = 1 + 0,5*7 = 4,5$$
 ::: {.fig-caption}
 Förklaring: Tabellen visar observationerna för variablerna $X$ och $Y$ samt estimerade $\widehat{Y}$, vilket vi får genom att estimera regressionsmodellen.
 :::
+
 
 #### Positiv och negativ samvariation
 I figur 1 lutar linjen uppåt åt höger och $\widehat{b} \> 0$, vilket innebär att vi har en *positiv samvariation* mellan variablerna $X$ och $Y$. Om $\widehat{b} \< 0$ har vi en *negativ samvariation*, varpå linjen skulle ha lutat nedåt åt höger i diagrammen. Större värden i $X$ samvarierar i så fall med i genomsnitt mindre värden i $Y$ och mindre värden i $X$ sammanfaller med i genomsnitt högre värden i $Y$.

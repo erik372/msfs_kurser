@@ -2,8 +2,10 @@
 
 ### Begrepp
 *Inga nya begrepp i detta avsnitt.*
+
 ### Teori
 Varför behöver vi fler än två variabler? I analytiskt arbete (och i världen överhuvudtaget) påverkas det vi studerar nästan alltid av flera faktorer samtidigt. Om vi bara inkluderar en förklarande variabel $(X)$ men det egentligen finns en annan viktig variabel $(Z)$ som också påverkar $Y$, riskerar vi att få felaktiga resultat. I detta avsnitt ska vi lära oss hur regression fungerar med tre variabler, vilket är grunden för att kunna arbeta med ännu fler variabler senare.
+
 #### Vad händer när vi har tre variabler?
 Låt oss nu utgå från en regressionsmodell där den förklarade (beroende) variabeln $Y$ förklaras av de två förklarande (oberoende) variablerna $X$ och $Z$:
 $Y_{i} = a + bX_{i} + cZ_{i} + V_{i}$ (1)
@@ -14,6 +16,7 @@ Säg som exempel, att vi vill veta vilken inverkan en utbildning har på student
 Men nu vill vi även kontrollera för om studenterna är ovanligt ambitiösa. Låt oss för tankeexperimentets skull anta att vi faktiskt har bra information rörande detta i form av variabel $Z$. I så fall kan vi lägga till det som en ny förklarande variabel i regressionsmodellen så att vi nu får en sådan regressionsmodell med samma form som den i ekvation 1: $Y = \alpha_{1} + \alpha_{2}X + \alpha_{2}Z + \epsilon$.
 I detta hypotetiska exempel är $Z$ studenternas ambitionsnivå. I en idealisk situation skulle detta innebära att vi nu rensar för betydelsen av studenternas ambitionsnivå $Z$, när vi uppskattar samvariationen mellan utbildning $X$ och inkomst $Y$.
 Om vi vill kontrollera för ytterligare andra fenomen kan vi lägga till fler förklarande variabler. Detta är en central aspekt av regressionsanalys och vi återkommer nedan till vad detta innebär.
+
 #### Minstakvadratroten med tre variabler
 Låt oss återvända till regressionsmodellen i ekvation 1. Precis som när vi endast hade en förklarande variabel i regressionsmodellen ska vi nu, när vi har två förklarande variabler, hitta de värden för de konstanta koefficienterna $a$, $b$ och $c$ som minimerar de kvadrerade residualerna $\sum_{}^{}{\widehat{V}}^{2}$. Vi kan därför beskriva vår beräkning som ett minimeringsproblem:
 $\ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}\ = \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$ (2)
@@ -53,16 +56,19 @@ $$\widehat{c} = \frac{\left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{Z_{i}}} \rig
 
 Alla tre koefficienterna $\widehat{a}$, $\widehat{b}$ och $\widehat{c}$ beror på de observerade värdena i de tre variablerna $Y$, $X$ och $Z$. Detta kan vi se eftersom alla tre variablerna ingår i respektive ekvation (estimator).
 Detta innebär att även om $\widehat{b}$ mäter samvariationen mellan $Y$ och $X$ är $\widehat{b}$ en funktion av både $Y$, $X$ och $Z$. Och trots att lutningskoefficienten $\widehat{c}$ mäter samvariationen mellan variablerna $Y$ och $Z$ är även $\widehat{c}$ en funktion av observationer i alla tre variablerna $Y$, $X$ och $Z$.
+
 #### Vad spelar allt det här för roll?
 Huvudpoängen är enkel men avgörande: När vi lägger till eller tar bort variabler i en regressionsmodell ändras resultaten för de andra variablerna.
 I detta exempel såg vi att lutningskoefficienten för $X$ gick från $0,5$ till $0,28$ när vi lade till $Z$. Detta betyder att om vi inte inkluderar viktiga variabler får vi felaktiga resultat.
 Hade vi haft fler variabler och koefficienter i vår regressionsmodell hade ekvationerna blivit ännu mer omfattande. Längre fram ska vi gå igenom hur vi kan räkna när vi har en regressionsmodell med valfritt antal variabler och koefficienter.
 Om vi tillför en variabel till vår analys kan detta påverka resultaten för alla koefficienter som ingår i modellen. Säg att variabeln $Z$ bör ingå i modellen men att denna av någon anledning inte är med i analysen. I så fall kommer resultatet för variabeln $X$ att bli missvisande.
 Det korrekta resultatet får vi inte förrän vi inkluderar $Z$. Detta är centralt för att förstå den här typen av metoder, forskning och analytiskt arbete i största allmänhet.
+
 #### Estimera en modell
 Nu ska vi estimera en regressionsmodell utifrån några observationer. För detta återanvänder vi de påhittade variablerna $Y$, $X$ och $Z$ med de fyra observationer vardera som vi använde tidigare när vi introducerade minstakvadratmetoden. Alla tre variablerna redovisas i tabell 1 med lite beräkningar som vi behöver.
 
 **Tabell 1: Variablerna Y, X och Z med lite beräkningar**
+
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
 
@@ -169,17 +175,20 @@ $$\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} - 0,54Z_{i}$$
   3                                                      5                                  6                                  0                                                          4,59
   4                                                      4                                  7                                  1                                                          4,34
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #### Ett försök att illustrera resultatet i diagram
 När vi har tre variabler är det svårare att illustrera samvariation i ett diagram. Trots detta görs ett försök i figur 1 där de fyra observationerna är placerade i diagrammet utifrån deras värden för $Y$, $X$ och $Z$.
 Den vertikala axeln är $Y$-axeln medan variablerna $X$ och $Z$ har varsin horisontell axel. Den svarta pricken högst upp i diagrammet är observation 3 vars värden är $(Y,X,Z) = (5,6,0)$.
 Eftersom regressionsmodellen har tre variabler blir regressionslinjen $\left( \widehat{Y} \right)$ nu en plan yta med tre dimensioner, vilket illustreras av rutnätet. Denna plana yta är vinklad med hänsyn till de två variablerna $X$ och $Z$, beroende på deras respektive lutningskoefficient. Eftersom lutningskoefficienten $\widehat{c} \< 0$ lutar rutnätet nedåt längs med $Z$-axeln sett från $Y$-axeln. Eftersom $\widehat{b} \> 0$ lutar rutnätet uppåt längs med $X$-axeln sett från $Y$-axeln.
 
 **Figur 1. Regressionsresultat med tre variabler**
+
 *[Sideeg \> Jag sparade ett 3d-diagram som html i katalogen]{.mark} [Eriks_3d_graf](https://www.dropbox.com/scl/fo/2i2ntlsxmg2g3u0mjwg93/AGRmmFsd9k7y02ZW2EYyPyo?rlkey=oadbjo86p3expplymcnzfshu1&dl=0). [Om ni har möjlighet att göra det snyggare får ni jättegärna göra det ]{.mark}*😊
 
 ::: {.fig-caption}
 Förklaring: Diagrammet illustrerar $\widehat{Y} = 2,89 + 0,28X - 0,54Z$. Klicka och dra i diagrammet för att vrida på det.
 :::
+
 
 #### Vad spelar allt det här för roll?
 När vi la till en ny variabel i vår regressionsmodell ändras samvariationen mellan de variabler vi hade i regressionsmodellen sedan innan. Poängen med denna genomgång är att visa att detta även gäller om vi skulle lägga till ytterligare variabler förutom de tre vi använt här. Och om vi tar bort en variabel från en regressionstabell så kan detta leda till att samvariationen för de kvarvarande variablerna ändras.

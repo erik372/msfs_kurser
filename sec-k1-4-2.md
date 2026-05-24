@@ -5,8 +5,10 @@
 - **Nöjdhetsfunktion, nyttofunktion:** Matematisk funktion som beskriver hur en eller flera variabler påverkar en persons nöjdhet (nytta).
 - **Budgetfunktion:** Beskriver tillgängliga resurser och avgränsar därigenom möjliga alternativ.
 - **Indifferenslinje:** En linje som beskriver olika mängder av två produkter (variabler), där varje kombination ger samma nöjdhet för en aktör.
+
 ### Teori
 Exemplet med tårta i föregående avsnitt är en abstrakt illustration av hur en individ måste välja rätt mängd av något för att få bästa möjliga resultat. Nu ska vi titta på ett liknande exempel men kanske med tydligare koppling till samhällsvetenskap.
+
 ### Nyttomaximering
 Säg att Erik ska maximera sin *nöjdhet*, N (kallas på engelska för [*utility*](https://en.wikipedia.org/wiki/Utility), ungefär *nytta*). I detta exempel väljer vi att avgränsa oss till två fenomen som bestämmer *N* och dessutom står i motsättning till varandra, vilka båda påverkar hur nöjd Erik är. Eriks nöjdhet maximeras genom en avvägning av följande två fenomen:
 1.  Eriks köp av varor och tjänster, vilket finansieras genom arbete. Detta fenomen kallar vi *C*.
@@ -15,6 +17,7 @@ Eriks nyttomaximering kan därför beskrivas som ett val mellan arbete (*C*) och
 $N = u(C,L) = C^{\frac{1}{2}}L^{\frac{1}{2}},\ \ \ \ \text{där}\ C,L \> 0$ (1)
 där nöjdheten *N* förklaras av nöjdhetsfunktionen $u\ (\ )$ med de ingående variablerna *C* och *L*. Båda variablerna kan enbart anta positiva värden, eftersom Erik inte kan ha negativ konsumtion eller fritid. Han måste åtminstone sova lite.
 Exponenterna för *C* och *L*, bråket $\frac{1}{2}$ , beskriver hur mycket *N* ökar då respektive variabel förändras med en enhet. Alltså en krona extra konsumtion eller en extra timme ledigt.
+
 ### Maximal nöjdhet
 Frågan är nu vid vilka mängder av *C* och *L* som Eriks nöjdhet *N* maximeras. För att bättre förstå nöjdhetsfunktionen (nyttofunktionen) kan vi börja med att illustrera det teoretiska sambandet, vilket visas i figur 1. Det tvådimensionella diagrammet visar tre variabler: *C*, *L* och *N*.
 De två axlarna i diagrammet, horisontella och vertikala axeln, mäter konsumtion och fritid. Högre upp längs vertikala axeln = mer konsumtion. Längre till höger längs med horisontell axeln = mer fritid. Varje böjd linje representerar ett värde för *N*.
@@ -25,6 +28,7 @@ Erik kan acceptera mindre fritid så länge han kan kompensera med större konsu
 ::: {.fig-caption}
 Förklaring: Konsumtion mäts på vertikala axeln. Fritid mäts på horisontella axeln. Nere i vänstra hörnet är mängden konsumtion och fritid noll. Längre upp till höger i diagrammet är mängden konsumtion och fritid större. Indifferenslinjerna visar olika kombinationer av konsumtion och fritid, där mängden nytta för Erik är densamma längs respektive linje. Olika indifferenslinjer representerar olika mängd nytta. []{.mark}
 :::
+
 
 ### Budgetfunktionen
 Eriks konsumtion och fritid begränsas även av Eriks budget, som bestäms av dels hur mycket han väljer att arbeta, dels hans lön. Detta villkor kan beskrivas med följande *budgetfunktion*:
@@ -39,12 +43,14 @@ Vi kan tänka oss att budgetlinjen börjar på den horisontella axeln vid punkte
 Förklaring: Indifferenslinjerna är fortfarande illustrationer av kombinationer av fritid och konsumtion som ger samma mängd nytta längs med respektive linje. Budgetlinjen illustrerar vad Erik har råd med för konsumtion och fritid. Alla kombinationer av konsumtion och fritid innanför budgetlinjen har Erik råd med.
 :::
 
+
 #### Budgetlinjens relation till indifferenskurvorna
 Ju längre bort från origo (noll konsumtion och noll fritid) som budgetlinjen ligger, desto mer kan Erik konsumera. Alla kombinationer av konsumtion och fritid, *C* och *L*, innanför budgetlinjen har Erik råd med.
 Givet att Erik vill maximera sin nöjdhet och denna fungerar på det sätt som den beskrivs i nöjdhetsfunktionen kommer Erik att välja en kombination av konsumtion och fritid där en av indifferenslinjerna precis *tangerar* budgetlinjen.
 Så länge Erik har samma inkomst, samma budgetlinje, och Eriks nöjdhet kan beskrivas som den görs i nöjdhetsfunktionen, samma form på indifferenslinjerna, är detta det enda logiska resultatet.
 **Varför väljer han inte en punkt innanför budgetlinjen?** Vid varje punkt innanför budgetlinjen, den gråa ytan i figur 2, finns det en annan punkt längre bort från origo där Erik kan få en större mängd nytta.
 **Varför väljer han inte en annan punkt längs med budgetlinjen?** Vid varje punkt på budgetlinjen närmare vertikala eller horisontella axeln kommer Eriks nöjdhet i stället att definieras av en annan indifferenslinje som i sin tur är närmare origo, vilket därmed innebär mindre mängd total nytta.
+
 ### Maximeringsproblemet
 Låt oss nu ställa upp Eriks maximeringsproblem:
 $\max_{m.h.t\ \ C,L}{C^{\frac{1}{2}}L^{\frac{1}{2}}}$ (3)

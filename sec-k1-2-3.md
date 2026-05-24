@@ -4,13 +4,16 @@
 - **BNP**: Värdet av alla varor och tjänster som produceras under en avgränsad tidsperiod, till exempel ett år, och i ett avgränsat område, till exempel ett land.
 - **Real BNP:** Nominell BNP justerad för rena prisförändringar.
 - **Ekonomisk tillväxt:** Syftar ofta på BNP-tillväxt, förändring av BNP. Kan mätas som procentuell förändring av real BNP per år.
+
 ### Teori
 Det finns flera sätt att mäta levnadsstandard, välstånd och rikedom. Ett vanligt mått är *Bruttonationalprodukt (BNP)*, vilket är värdet för alla varor och tjänster som produceras. Ofta anges BNP per land och år. År 2023 var Sveriges BNP ca 6 200 miljarder kronor. I Sverige [beräknas BNP av Statistiska centralbyrån](https://www.scb.se/hitta-statistik/sverige-i-siffror/samhallets-ekonomi/bnp-i-sverige/) (SCB).
 *BNP per invånare* (BNP per capita) beräknas genom att dividera BNP med antal invånare. Ett annat mått som används ibland är BNP per arbetad timme, vilket är BNP dividerat med en uppskattning av den totala mängden arbetstimmar som utfördes i Sverige under ett år.
+
 #### Real BNP
 Säg att BNP ökade med 4 %, men att hälften av detta var rena prishöjningar. Värdet av mängden producerade varor och tjänster ökade i så fall med 2 %.
 För att justera BNP för prisförändringar använder man i regel en [BNP-deflator](https://en.wikipedia.org/wiki/GDP_deflator), vilket är ett annat prisindex än konsumentprisindex (KPI). För att mäta mängden produktion justeras BNP för prisförändringar, deflateras ([här](https://www.scb.se/hitta-statistik/statistik-efter-amne/nationalrakenskaper/nationalrakenskaper/nationalrakenskaper-kvartals-och-arsberakningar/produktrelaterat/Fordjupad-information/vanliga-fragor--nationalrakenskaper/) kan du läsa mer om hur BNP deflateras).
 BNP är ett sätt att mäta inkomsterna i ett land. BNP per invånare är därför ett grovt mått på befolkningens genomsnittliga levnadsstandard. För att jämföra över tid använder vi real BNP, vilket är nominell BNP justerad (deflaterad) för rena prisförändringar. BNP per arbetstimme är ett grovt mått på produktivitet, det vill säga hur mycket som produceras (räknat i pengar) per arbetstimme.
+
 #### Sveriges ekonomiska tillväxt
 Under åren 2010---2019 ökade Sveriges reala BNP per capita från 444,8 tusen kr till 488,8 tusen kr, se tabell 1. Vi börjar med att räkna ut den procentuella förändringen av BNP per capita per år. Vi skriver BNP per capita år *t* som $y_{t}$. Vi kan beräkna årlig procentuell förändringstakt som:
 BNP-tillväxt $= \frac{y_{t}\ --y_{t - 1}}{y_{t\ - 1}}$
@@ -22,6 +25,7 @@ $$\frac{\left( y_{2010}--\ y_{2009} \right)}{y_{2009}} = \frac{444\ 800 - 423\ 4
 Detta och resultaten för övriga årtal visas i tabell 1. Som syns i tabellen varierar tillväxten en del mellan de olika åren. Genom att beräkna ett medelvärde jämnar vi ut förändringarna. Den genomsnittliga tillväxten under hela perioden är 1,5 %.
 
 **Tabell 1: Sveriges BNP år 2010---2019**
+
   ------------------------------------------------------------------------------------
   År      BNP per capita, 2019 års priser     År      BNP per capita, 2019 års priser
   ------ --------------------------------- -- ------ ---------------------------------
@@ -36,6 +40,7 @@ Detta och resultaten för övriga årtal visas i tabell 1. Som syns i tabellen v
 ::: {.fig-caption}
 Förklaring: Data från SCB. BNP deflaterad med BNP-deflatorn, omräknad till 2019 års priser.
 :::
+
 
 #### Genomsnittlig tillväxttakt
 Ett sätt att jämföra olika tidsperioder är att beräkna genomsnittlig BNP-tillväxt för fem år i taget. Ett medelvärde för BNP-tillväxten år 2010--2014 och ett medelvärde för åren 2015--2019. Vi betecknar dessa två medelvärden som $\overline{\Delta y_{1}\ }$ för perioden 2010--2014 och $\overline{\Delta y_{2}\ }$ för perioden 2015--2019. Dessa beräknas på följande sätt:
@@ -58,6 +63,7 @@ Nu ska vi använda naturliga logaritmen för att jämföra BNP över tid. Tabell
 I tabellen kan vi se hur en lika stor relativ förändring i $ln(BNP)$ motsvaras av samma absoluta förändring av den naturliga logaritmen. Varje gång BNP fördubblas, oavsett från vilken nivå, är förändringen i $ln(BNP)$ cirka 0,7. Varje gång BNP tredubblas ökar $\ln(BNP)$ med cirka 1,1. När BNP tiodubblas ökar $ln(BNP)$ med cirka 2,3.
 
 **Tabell 2: BNP och naturliga logaritmen av BNP**
+
   --------------------------------------------------------------------------------
   År        BNP, miljoner kr   ln(BNP)      År        BNP, miljoner kr   ln(BNP)
   --------- ------------------ --------- -- --------- ------------------ ---------
