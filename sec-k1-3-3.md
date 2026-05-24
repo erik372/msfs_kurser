@@ -30,8 +30,11 @@ $\begin{matrix} exp\left( u^{*} \right) & \ = \frac{1}{b + d}exp(\alpha + \gamma
 Figur 1 visar hur denna modell kan illustreras i diagram. Relationen mellan $W/P$ och $U$ beskrivs med de två funktionerna för utbud och efterfrågan, även kallat löne- och prissättningskurvan.
 Läser vi x-axeln från vänster till höger mäter axeln procent av arbetskraften som har arbete, vilket kallas för sysselsättningsgrad. Sysselsättningsgrad kan definieras som $1 - U$, där $U$ anger procent arbetslösa. Lösningen för variablerna $U^{*}$ och $(W/P)^{*}$ är den punkt där linjerna möts.
 I diagrammet till vänster visas hur linjerna ser ut i vanlig form, som i ekvation 1. I diagrammet till höger visas logaritmerade funktionerna, som i ekvation 6.
+
 **Figur 1: Utbud och efterfrågan på arbetsmarknaden enligt vår teoretiska modell**
+
 ![](img/k1-3-3-image1.png){style="width:4.69861in;height:3in"}'
+
 
 ::: {.fig-caption}
 Förklaring: Diagrammet till vänster illustrerar ekvationssystemet i ekvation 1, när funktionerna skrivs i vanligt format. Diagrammet till höger illustrerar ekvationssystemet med logaritmerade funktioner, som i ekvation 6.

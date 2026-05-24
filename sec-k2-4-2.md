@@ -13,6 +13,7 @@ En förklarande variabel i en regressionsmodell som endast antar värdena 0 elle
 Data som endast kan anta två värden kallas för binär. Ofta används just 0 eller 1 för att beskriva informationen i en binär variabel, även om 0 och 1 symboliserar något annat, till exempel 0=män och 1=kvinnor.
 #### Exempel på tre kommuner
 Tabell 1 redovisar genomsnittlig årsinkomst för män respektive kvinnor i tre kommuner för år 2019, räknat i tusentals kronor.
+
 **Tabell 1: Genomsnittlig inkomst 2019, 1 000-tals kr**
   -----------------------------------------------------------------------
   Kommun                  Män                     Kvinnor
@@ -37,6 +38,7 @@ $$\widehat{a} = \overline{w} - \widehat{b\overline{k}} = 289,2 - ( - 82,3)0,5 = 
 
 Koefficienten $\widehat{b}$ är negativ, vilket innebär att kön $(G)$ har en negativ samvariation med lön $(W)$. Vi valde att definiera vår dummyvariabel $G = 1$ för kvinnor. Variabel W är associerat med ett 82,3 enheter lägre värde för kvinnor jämfört med män. Kvinnor har i genomsnitt 82 300 kr lägre inkomst än män i dessa tre kommuner.
 Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från män $(G = 0)$ till kvinnor $(G = 1)$ längs den horisontella axeln, går inkomsten nedåt längs den vertikala axeln. Därför är lutningen negativ. Detta betyder att kvinnor $(G = 1)$ har lägre genomsnittsinkomst än män $(G = 0)$ i dessa tre kommuner.
+
 **Tabell 2. Beräkningar för regressionsanalysen**
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Kommun        
@@ -73,8 +75,15 @@ $$\left( G_{i} - \overline{G_{i}} \right)^{2}$$
 
 ::: {.fig-caption}
 Förklaring: Samma data som i tabell 1 och några beräkningar.
+:::
+
+
 **Figur 1: Samvariationen mellan inkomst och kön**
+
 ![](img/k2-4-2-image1.png){style="width:3.01282in;height:3.01282in"}
+
+
+::: {.fig-caption}
 Förklaring: Regressionslinjen lutar nedåt vilket indikerar en negativ samvariation. I variabeln G har kvinnor värdet 1 och män värdet 0. Eftersom kvinnor har lägre inkomst i genomsnitt än män, uppstår en negativ samvariation.
 :::
 
@@ -84,6 +93,7 @@ Tabell 3 redovisar variablerna, där $Y_{i}$ nu anger medelinkomst för alla inv
 $Y_{i} = a + bK_{\text{Mörbylånga}} + cK_{\text{Oskarshamn}} + e_{i}$ (3)
 där $e$ är feltermen. Våra dummyvariabler representerar kommunerna Mörbylånga och Oskarshamn, en dummyvariabel mindre än antal kommuner. När båda dummyvariablerna i modellen är lika med 0 får vi estimaten för den tredje kommunen, Danderyd.
 Om vi har 3 kommuner använder vi bara 2 dummyvariabler. Varför? Om både Mörbylånga-dummyn = 0 OCH Oskarshamn-dummyn = 0, vet vi automatiskt att det måste vara Danderyd. Den tredje kommunen blir \"referenskategori\", i detta fall den kommun vi jämför de andra kommunerna mot. Om vi hade använt 3 dummyvariabler skulle regressionen inte fungera (matematiskt kallas detta \"perfekt multikolinjäritet\"). Datorn kan inte skilja på vilken effekt som kommer från vilken dummy.
+
 **Tabell 3: Genomsnittlig inkomst 2019, 1 000-tals kr**
   -------------------------------------------------------------------------------------------------------------------------------------------------------
   Kommun        

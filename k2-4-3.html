@@ -120,27 +120,32 @@
 </h3>
 <ul>
 <li>
-<p><strong>Konstanthålla:</strong> Regressionsanalys med modell <span class="math inline">\(Y = a + bX + Z + \epsilon\)</span> innebär att vi uppskattar samvariationen mellan X och Y, med hänsyn till variationer i Z. Detta kallas för att vi konstanthåller Z. När vi uppskattar samvariationen mellan Z och Y konstanthåller vi X.
+<strong>Konstanthålla:</strong> Regressionsanalys med modell <span class="math inline">\(Y = a + bX + Z + \epsilon\)</span> innebär att vi uppskattar samvariationen mellan X och Y, med hänsyn till variationer i Z. Detta kallas för att vi konstanthåller Z. När vi uppskattar samvariationen mellan Z och Y konstanthåller vi X.
 ### Teori
 Regressionsanalys med flera förklarande variabler är ofta användbart för att få en korrekt bild av samvariationen mellan flera fenomen. I <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a> såg vi att om vi kontrollerar för flera variabler i vår regressionsmodell kan lutningskoefficienten för en annan variabel i modellen ändras. Detta kallas för att vi <strong>konstanthåller</strong> andra variabler.
 Att konstanthålla en variabel betyder att vi studerar sambandet mellan X och Y med hänsyn till Z. Vi frågar: "Om alla observationer hade samma värde på Z, hur skulle X och Y samvariera då?"
 Exempel: När vi studerar samvariationen mellan inkomst och livslängd med hänsyn till kön, frågar vi: "Hur samvarierar inkomst och livslängd bland kvinnor?" och "Hur samvarierar inkomst och livslängd bland män?" Detta är en av de centrala mekanismerna i regressionsanalys och i analytiskt arbete generellt.
 #### Illustrera med lite data
 Säg att vi har regressionsmodellen <span class="math inline">\(Y = a + bX + cZ + V\)</span>, där <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> är variabler och <span class="math inline">\(V\)</span> är feltermen. Vi kan då beskriva detta som att vi håller variabeln <span class="math inline">\(Z\)</span> konstant när vi estimerar samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>. Och vi håller variabeln <span class="math inline">\(X\)</span> konstant när vi estimerar samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(Z\)</span>.
-Vi ska nu illustrera detta med hjälp av lite data över genomsnittlig livslängd och inkomst för kvinnor respektive män i tre av Sveriges kommuner, vilket beskrivs i tabell 1. Kolumnen längst till höger beskriver en dummyvariabel <span class="math inline">\(G\)</span> för kön där kvinnor = 0 och män = 1.
-<strong>Tabell 1. Data över män och kvinnor i tre kommuner</strong>
-————————————————————————————————————————————-
-Kommun Livslängd <span class="math inline">\((L)\ \)</span> Inkomst <span class="math inline">\((I)\)</span> Kön <span class="math inline">\((G)\)</span>
-——————— —————————————– ———————————— ——————————–
-Jokkmokk, kvinnor 81,6 2,07 0
+Vi ska nu illustrera detta med hjälp av lite data över genomsnittlig livslängd och inkomst för kvinnor respektive män i tre av Sveriges kommuner, vilket beskrivs i tabell 1. Kolumnen längst till höger beskriver en dummyvariabel <span class="math inline">\(G\)</span> för kön där kvinnor = 0 och män = 1.</li>
+</ul>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left">Tabell 1. Data över män och kvinnor i tre kommuner**</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Kommun Livslängd <span class="math inline">\((L)\ \)</span> Inkomst <span class="math inline">\((I)\)</span> Kön <span class="math inline">\((G)\)</span>
+</td>
+</tr></tbody>
+</table></div>
+<p>Jokkmokk, kvinnor 81,6 2,07 0
 Jokkmokk, män 79,2 2,4 1
 Oskarshamn, kvinnor 84,6 2,11 0
 Oskarshamn, män 81,3 2,79 1
 Örebro, kvinnor 84,8 2,18 0
 Örebro, män 80,5 2,66 1</p>
-<h2 id="medelvärde-82-2368-05">Medelvärde 82 2,368 0,5</h2>
-</li>
-</ul>
+<p>Medelvärde 82 2,368 0,5
+————————————————————————————————————————————-</p>
 <div class="fig-caption">
 <p>Förklaring:</p>
 </div>
@@ -181,7 +186,8 @@ med en negativ samvariation mellan livslängd och inkomst. I diagrammet illustre
 <span class="math inline">\(L = \widehat{b_{1}} + \widehat{b_{2}}I + \widehat{b_{3}}G = 69,6 + 6,64I - 6,66G\)</span> (11)
 där <span class="math inline">\(G\)</span> är dummy för kön med <span class="math inline">\(G = 0\)</span> för kvinnor och <span class="math inline">\(G = 1\)</span> för män. I diagrammet har vi ritat ut två regressionslinjer för att illustrera betydelsen av denna dummyvariabel. De två regressionslinjerna är skattade med samma regressionsmodell, men illustrerar skillnaden mellan <span class="math inline">\(G = 0\)</span> och <span class="math inline">\(G = 1\)</span>.
 Om <span class="math inline">\(G = 0\)</span> får vi den övre regressionslinjen, som löper genom prickarna som illustrerar observationerna för kvinnor. Om dummyvariabeln <span class="math inline">\(G = 1\)</span> har vi i stället den nedre regressionslinjen, som löper genom de tre prickarna för män.
-<strong>Figur 1: Illustration av resultaten från de två regressionsmodellerna</strong><br><img src="img/k2-4-3-image1.png" style="width:4.5in;height:3in"></p>
+<strong>Figur 1: Illustration av resultaten från de två regressionsmodellerna</strong><br></p>
+<div class="inline-figure"><img src="img/k2-4-3-image1.png" style="width:4.5in;height:3in"></div>
 <div class="fig-caption">
 <p>Förklaring: I det vänstra diagrammet ser vi resultaten från den estimerade regressionsmodellen i ekvation 1. I det högra diagrammet är regressionsmodellen i ekvation 5 illustrerade för <span class="math inline">\(G = 0\)</span> respektive <span class="math inline">\(G = 1\)</span>.</p>
 </div>

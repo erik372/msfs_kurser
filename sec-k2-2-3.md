@@ -18,8 +18,11 @@ I föregående avsnitt använde vi Bessels korrigering $\left( \frac{1}{n - 1} \
 #### Räkneexempel
 Figur 1 beskriver våra fyra observationer i en tabell till vänster och ett diagram till höger. I tabellen har vi en observation per rad och en variabel per kolumn. I diagrammet är varje observation representerad av en punkt. Punkten längst till vänster är observation 1: $(x,y) = (3,3)$. Punkten längst till höger är observation 4: $(x,y) = (4,7)$.
 Rad 1 i tabellen består av första värdet för $x$ respektive $y$ och representerar värden som på något sätt hänger ihop. Om vi arbetar med observerade data, insamlad information, representerar varje observation en observationsenhet, till exempel uppgifter om en person eller kanske ett land. Våra fyra observationer skulle alltså kunna representera fyra personer, fyra länder eller något annat.
+
 **Figur 1. Fyra observationer för att uppskatta kovarians**
+
 ![](img/k2-2-3-image1.png){style="width:2.47024in;height:2.47024in"}
+
   -------------------------------------------------------------------------------------
   Observation i    
 

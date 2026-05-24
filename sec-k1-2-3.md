@@ -20,6 +20,7 @@ För år 2010 får vi:
 $$\frac{\left( y_{2010}--\ y_{2009} \right)}{y_{2009}} = \frac{444\ 800 - 423\ 400}{423400} = 5,1\%\ $$
 
 Detta och resultaten för övriga årtal visas i tabell 1. Som syns i tabellen varierar tillväxten en del mellan de olika åren. Genom att beräkna ett medelvärde jämnar vi ut förändringarna. Den genomsnittliga tillväxten under hela perioden är 1,5 %.
+
 **Tabell 1: Sveriges BNP år 2010---2019**
   ------------------------------------------------------------------------------------
   År      BNP per capita, 2019 års priser     År      BNP per capita, 2019 års priser
@@ -55,6 +56,7 @@ $$a = b^{x}$$
 [Tiologaritmen](https://www.matteboken.se/lektioner/matte-2/logaritmer/tiologaritmer#!/) syftar på logaritm med bas 10. [Naturliga logaritmen](https://www.matteboken.se/lektioner/matte-3/derivata/den-naturliga-logaritmen#!/) har basen $e \approx 2,718$, [Eulers tal](https://www.matteboken.se/lektioner/matte-3/derivata/talet-e#!/).
 Nu ska vi använda naturliga logaritmen för att jämföra BNP över tid. Tabell 2 visar Sveriges BNP i miljoner kronor år 1800--2000. Den tredje kolumnen visar [naturliga logaritmen](https://www.matteboken.se/lektioner/matte-3/derivata/den-naturliga-logaritmen#!/) av BNP. Första talet är 115 och $\ln(115) \approx 4,7$, vilket innebär att $e^{4,7} \approx 115$.
 I tabellen kan vi se hur en lika stor relativ förändring i $ln(BNP)$ motsvaras av samma absoluta förändring av den naturliga logaritmen. Varje gång BNP fördubblas, oavsett från vilken nivå, är förändringen i $ln(BNP)$ cirka 0,7. Varje gång BNP tredubblas ökar $\ln(BNP)$ med cirka 1,1. När BNP tiodubblas ökar $ln(BNP)$ med cirka 2,3.
+
 **Tabell 2: BNP och naturliga logaritmen av BNP**
   --------------------------------------------------------------------------------
   År        BNP, miljoner kr   ln(BNP)      År        BNP, miljoner kr   ln(BNP)
@@ -77,9 +79,12 @@ Förklaring: Data från [www.historia.se](http://www.historia.se). Ln(BNP) är n
 Siffrorna från tabell 2 illustreras i figur 1 med två diagram: I det vänstra diagrammet visas en linje för BNP räknat i miljarder kronor. Under denna period ökade BNP exponentiellt. Från 115 miljoner kronor (0,115 miljarder) år 1800 till 2 013 311 miljoner kr (2 013 miljarder) år 2000. Det högra diagrammet visar samma sak i naturliga logaritmen, $ln(BNP)$, där linjen i stället är mer rak.
 I det vänstra diagrammet jämför vi absoluta förändringar, medan det högra diagrammet kan användas för att jämföra relativa förändringar. I det högra diagrammet kan vi se att Sveriges ekonomi växte snabbare under 1900-talet jämfört med 1800-talet.
 Om linjen i det högra diagrammet hade varit helt rät hade de inneburit att den relativa, procentuella, tillväxttakten på lång sikt hade varit konstant. Det finns inga enkla regler för vilket mått som är bäst. Vilket mått du bör använda beror på vad du vill mäta, jämföra eller visa. Men naturliga logaritmen används ofta för att just jämföra relativa skillnader och förändringar.
-**Figur 1: Sveriges BNP år 1800---2000, i miljarder kronor och uttryckt i naturliga logaritmen.**
-![](img/k1-2-3-image1.png){style="width:5.78165in;height:3.17857in"}
 :::
+
+
+**Figur 1: Sveriges BNP år 1800---2000, i miljarder kronor och uttryckt i naturliga logaritmen.**
+
+![](img/k1-2-3-image1.png){style="width:5.78165in;height:3.17857in"}
 
 
 

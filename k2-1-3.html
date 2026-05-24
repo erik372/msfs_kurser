@@ -150,12 +150,18 @@ När vi skapar variabler är det viktigt att all information som vi samlar in ti
 Om vi blandar information i en variabel, till exempel längd och inkomst, blir det omöjligt att göra beräkningar på variabeln. På samma sätt måste värdena inom en variabel använda samma måttenhet. Alla värden för personernas längd måste anges antingen i centimeter eller i meter.
 #### Datatabeller
 Ett vanligt sätt att organisera data är tabeller, där varje kolumn representerar en variabel och varje rad en observation. Tabell 1 visar ett exempel där vi har tre datavariabler och kallar dessa för <span class="math inline">\(x,\ y\)</span> och <span class="math inline">\(z\)</span>.
-Observationerna numrerar vi <span class="math inline">\(y_{1}\)</span> till <span class="math inline">\(y_{4}\)</span>, <span class="math inline">\(x_{1}\)</span> till <span class="math inline">\(x_{4}\)</span> och <span class="math inline">\(z_{1}\)</span> till <span class="math inline">\(z_{4}\)</span>. Det finns inga regler för hur variabler ska namnges eller numreras. Det förekommer även att variabler kallas för samma bokstav och skiljs åt genom numrering, till exempel variablerna <span class="math inline">\(x_{1},\ x_{2}\)</span> och så vidare.
-<strong>Tabell 1: Tre variabler med fyra observationer</strong>
-—————————————————————————————————————————————
-Variabel 1 <span class="math inline">\((y)\)</span> Variabel 2 <span class="math inline">\((x)\)</span> Variabel 3 <span class="math inline">\((z)\)</span>
-————— ————————————— ————————————— —————————————
-Observation 1 <span class="math inline">\(y_{1}\)</span> <span class="math inline">\(x_{1}\)</span> <span class="math inline">\(z_{1}\)</span>
+Observationerna numrerar vi <span class="math inline">\(y_{1}\)</span> till <span class="math inline">\(y_{4}\)</span>, <span class="math inline">\(x_{1}\)</span> till <span class="math inline">\(x_{4}\)</span> och <span class="math inline">\(z_{1}\)</span> till <span class="math inline">\(z_{4}\)</span>. Det finns inga regler för hur variabler ska namnges eller numreras. Det förekommer även att variabler kallas för samma bokstav och skiljs åt genom numrering, till exempel variablerna <span class="math inline">\(x_{1},\ x_{2}\)</span> och så vidare.</li>
+</ul>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left">Tabell 1: Tre variabler med fyra observationer**</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Variabel 1 <span class="math inline">\((y)\)</span> Variabel 2 <span class="math inline">\((x)\)</span> Variabel 3 <span class="math inline">\((z)\)</span>
+</td>
+</tr></tbody>
+</table></div>
+<p>Observation 1 <span class="math inline">\(y_{1}\)</span> <span class="math inline">\(x_{1}\)</span> <span class="math inline">\(z_{1}\)</span>
 Observation 2 <span class="math inline">\(y_{2}\)</span> <span class="math inline">\(x_{2}\)</span> <span class="math inline">\(z_{2}\)</span>
 Observation 3 <span class="math inline">\(y_{3}\)</span> <span class="math inline">\(x_{3}\)</span> <span class="math inline">\(z_{3}\)</span>
 Observation 4 <span class="math inline">\(y_{4}\)</span> <span class="math inline">\(x_{4}\)</span> <span class="math inline">\(z_{4}\)</span>
@@ -163,19 +169,20 @@ Observation 4 <span class="math inline">\(y_{4}\)</span> <span class="math inlin
 På samma sätt som vi har tydliga kategorier för våra variabler i kolumnerna, behöver vi ha tydliga kategorier för våra observationer. Det observationerna beskriver kallas för <em>observationsenhet</em>. Det kan till exempel vara en observation per individ eller en per land. I regel behöver vi även avgränsa vilken tidpunkt en observation avser.
 Till exempel kan en observation innehålla uppgifter för ett land ett specifikt årtal, säg 2018. Nästa rad innehåller nästa observation. Om hela tabellen beskriver läget för olika länder år 2018 så är nästa observation för ett annat land. Men vi kan även ha flera observationer per land för olika årtal. Nästa observation kan då vara samma land men ett annat årtal: Sverige 2018, Sverige 2019 och så vidare.
 #### Olika typer av data
-Data som används för beräkningar brukar delas in i följande datatyper: <em>kvotdata</em>, <em>intervalldata</em>, <em>ordinaldata</em> och <em>nominaldata</em>. Ett sätt att tänka på detta är att vi har en variabel, <span class="math inline">\(x\)</span>, med någon form av information om verkligheten. Indelningen utgår sedan från följande kriterier:</li>
-<li>
-<em>Rangordning</em>: Kan observationerna i x rangordnas?</li>
-<li>
-<em>Ekvidistans</em>: Är avståndet mellan två värden i x alltid lika stort?</li>
-<li>
-<em>Absolut nollpunkt</em>: Är variabeln definierad så att det finns ett minsta tänkbart värde?
-Beroende på svaren på dessa tre frågor kan vi placera vår variabel i någon av de fyra datatyperna. De tre kriterierna och de fyra datatyperna sammanfattas i tabell 2. Låt oss gå igenom de fyra datatyperna och ge några exempel.
-<strong>Tabell 2: Fyra datatyper</strong>
-—————————————————————
-Rangordning Ekvidistans Absolut nollpunkt
-————— ————- ————- ——————-
-Nominaldata Nej Nej Nej
+Data som används för beräkningar brukar delas in i följande datatyper: <em>kvotdata</em>, <em>intervalldata</em>, <em>ordinaldata</em> och <em>nominaldata</em>. Ett sätt att tänka på detta är att vi har en variabel, <span class="math inline">\(x\)</span>, med någon form av information om verkligheten. Indelningen utgår sedan från följande kriterier:
+- <em>Rangordning</em>: Kan observationerna i x rangordnas?
+- <em>Ekvidistans</em>: Är avståndet mellan två värden i x alltid lika stort?
+- <em>Absolut nollpunkt</em>: Är variabeln definierad så att det finns ett minsta tänkbart värde?
+Beroende på svaren på dessa tre frågor kan vi placera vår variabel i någon av de fyra datatyperna. De tre kriterierna och de fyra datatyperna sammanfattas i tabell 2. Låt oss gå igenom de fyra datatyperna och ge några exempel.</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left">Tabell 2: Fyra datatyper**</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Rangordning Ekvidistans Absolut nollpunkt</td>
+</tr></tbody>
+</table></div>
+<p>Nominaldata Nej Nej Nej
 Ordinaldata Ja Nej Nej
 Intervalldata Ja Ja Nej
 Kvotdata Ja Ja Ja
@@ -187,8 +194,7 @@ Förutom att kategorisera kan vi för denna datatyp även använda matematiska o
 <strong>Intervalldata</strong> tillåter beräkningar av differens och addition och subtraktion. Dock inte kvoter. Vi kan därför inte på ett meningsfullt sätt jämföra det dubbla värdet av intervalldata.
 Till exempel temperaturer angiven i grader Celsius. Differensen mellan –2 och +3 grader Celsius är densamma som +5 och +10 grader Celsius. Men vi kan inte på samma sätt beräkna dessa avstånd som kvoter.
 <strong>Kvotdata</strong> tillåter samma matematiska metoder som de tre andra datatyperna, och även beräkningar av kvoter. Detta inkluderar många vanliga mått inom fysik och teknik, som längd, tid och massa. Till skillnad från de andra datatyperna kan vi använda division för kvotdata och jämföra relativa avstånd, som att 10 meter är dubbelt så långt som 5 meter.
-Denna indelning i fyra typer av data är vanligt förekommande. Andra mer detaljerade indelningar kan också förekomma. Att tänka på data i dessa former kan hjälpa oss att sortera information och se vilka möjligheter och begränsningar som just våra data erbjuder. Allt detta bör främst ses som ett hjälpmedel, inte som ett regelverk.</li>
-</ul>
+Denna indelning i fyra typer av data är vanligt förekommande. Andra mer detaljerade indelningar kan också förekomma. Att tänka på data i dessa former kan hjälpa oss att sortera information och se vilka möjligheter och begränsningar som just våra data erbjuder. Allt detta bör främst ses som ett hjälpmedel, inte som ett regelverk.</p>
 <div class="ex-section-title">
 <p>Övningar</p>
 </div>

@@ -12,8 +12,11 @@ I kapitel 1 i denna kurs introducerade vi kontrafaktisk analys som central metod
 För att studera samvariation mellan variabler måste observationer ha olika värden, det måste förekomma variation inom variablerna. Säg att vi som exempel har tio observationer för variablerna x och y och alla observationerna har värdena $(x,\ y) = (5,\ 23)$. Det finns ingen variation inom vare sig x eller y. Variablerna kan därför inte heller samvariera.
 Ett sätt att studera spridning av värden är att kartlägga *frekvensfördelningen* av en variabel. Säg att vi har följande fyra värden: 4, 5, 5 och 6. Siffran 5 förekommer två gånger. Se även Mattebokens lektioner om [lägesmått](https://www.matteboken.se/lektioner/matte-2/statistik/lagesmatt#!/) och [kvartiler](https://www.matteboken.se/lektioner/matte-2/statistik/kvartiler-och-ladagram#!/).
 Ett sätt att visa spridningen i en samling värden är *stapeldiagram*, ett diagram där frekvensen av respektive värde redovisas med staplar. Figur 1 visar frekvensfördelningen för de fyra värdena.
+
 **Figur 1: Stapeldiagram**
+
 ![](img/k2-2-1-image1.png){style="width:3in;height:3in"}****
+
 
 ::: {.fig-caption}
 Förklaring: På den horisontella axeln ser vi respektive värde i datamängden: 4, 5 och 6. Staplarna visar antal förekomster av respektive värde: en observation har värdet 4, två observationer har värdet 5 och en observation har värdet 6.

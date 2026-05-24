@@ -42,8 +42,11 @@ Har vi tillräckligt många frihetsgrader blir t-fördelningen identisk med stan
 #### T-test
 Med hjälp av t-fördelningen kan vi nu utföra ett statistiskt test som kallas för t-test. För vårt statistiska test behöver vi även välja signifikansnivå, till exempel $\alpha = 0,05$ (jämför [avsnitt 5.4](https://www.dropbox.com/scl/fi/zgjhgsqmkmnetk8xr2be1/5-4-Statistisk-analys-2.docx?rlkey=i7dzeoowrf1rh2oritsv8fl5n&dl=0)). I det övre diagrammet i figur 2 är avstånden i standardavvikelser från medelvärdet 0 markerade för 90 respektive 95 % av fördelningen.
 T-fördelningen är, liksom normalfördelningen, jämnt fördelad kring medelvärdet. Vi kan använda både en- och tvåsidiga statistiska test. Det vanligaste vid regressionsanalys är tvåsidiga test. Som vår nollhypotesen är formulerad använder vi ett tvåsidigt test. Både negativa och positiva avvikelser i estimerade $\widehat{b}$ kan därför resultera i att vi förkastar nollhypotesen $H_{0}$.
+
 **Figur 2: T-fördelningens täthetsfunktion och kumulativa sannolikhetsfunktion.**
+
 ![](img/k2-5-5-image2.png){style="width:4.82292in;height:6.43056in"}
+
 
 ::: {.fig-caption}
 Förklaring: Diagrammen visar tre exempel på t-fördelningen med olika antal frihetsgrader: 2 och 1 000. Övre diagrammet visar täthetsfunktionen, där båda fördelningarna har medelvärdet 0. I det övre diagrammet är de avstånd från medelvärdet som täcker 90 respektive 95 % av t(2)-fördelningen. Nedre diagrammet visar kumulativa sannolikhetsfunktionen för de två t-fördelningarna.
@@ -65,6 +68,7 @@ Kvadratroten av detta är standardfelet för $\widehat{b}$.
 #### Ett exempel med regressionsanalys med t-test
 Nu ska vi använda några observationer för att illustrera hur vi kan använda t-testet och $t = \widehat{b}/s_{\widehat{b}}$ för att pröva nollhypotesen $H_{0}:b = 0$ mot alternativhypotesen $H_{1}:b \neq 0$.
 Detta exempel syftar enbart till att illustrera metoden. För att göra det mer lättöverskådligt ska vi endast använda de fyra observationerna för $X$ och $Y$ från avsnitt [2.3](https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&dl=0) och [2.4](https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&dl=0), där vi såg att $\widehat{b} = 0,5$ och $\widehat{a} = 1$.
+
 **Tabell 1. Fyra observationer för X och Y**
   -----------------------------------------------------------------------------
   Observation *i*    

@@ -168,9 +168,9 @@ För att utföra ett statistiskt test och pröva våra hypoteser om lutningskoef
 Har vi tillräckligt många frihetsgrader blir t-fördelningen identisk med standardnormalfördelningen. Figur 2 illustrerar två exempel på t-fördelningar med olika antal frihetsgrader: 2 respektive 1 000 frihetsgrader. Övre diagrammet visar täthetsfunktionen. Nedre diagrammet visar kumulativa sannolikhetsfunktionen. Jämför standardnormalfördelningen i <a href="https://www.dropbox.com/scl/fi/wi8c30n2yna36a7zbiyoh/5-2-Kontinuerliga-sannolikhetsf-rdelningar.docx?rlkey=rmkxixrrun7q0rqeg82lk2kky&amp;dl=0">avsnitt 5.2</a>.
 #### T-test
 Med hjälp av t-fördelningen kan vi nu utföra ett statistiskt test som kallas för t-test. För vårt statistiska test behöver vi även välja signifikansnivå, till exempel <span class="math inline">\(\alpha = 0,05\)</span> (jämför <a href="https://www.dropbox.com/scl/fi/zgjhgsqmkmnetk8xr2be1/5-4-Statistisk-analys-2.docx?rlkey=i7dzeoowrf1rh2oritsv8fl5n&amp;dl=0">avsnitt 5.4</a>). I det övre diagrammet i figur 2 är avstånden i standardavvikelser från medelvärdet 0 markerade för 90 respektive 95 % av fördelningen.
-T-fördelningen är, liksom normalfördelningen, jämnt fördelad kring medelvärdet. Vi kan använda både en- och tvåsidiga statistiska test. Det vanligaste vid regressionsanalys är tvåsidiga test. Som vår nollhypotesen är formulerad använder vi ett tvåsidigt test. Både negativa och positiva avvikelser i estimerade <span class="math inline">\(\widehat{b}\)</span> kan därför resultera i att vi förkastar nollhypotesen <span class="math inline">\(H_{0}\)</span>.
-<strong>Figur 2: T-fördelningens täthetsfunktion och kumulativa sannolikhetsfunktion.</strong>
-<img src="img/k2-5-5-image2.png" style="width:4.82292in;height:6.43056in"></p>
+T-fördelningen är, liksom normalfördelningen, jämnt fördelad kring medelvärdet. Vi kan använda både en- och tvåsidiga statistiska test. Det vanligaste vid regressionsanalys är tvåsidiga test. Som vår nollhypotesen är formulerad använder vi ett tvåsidigt test. Både negativa och positiva avvikelser i estimerade <span class="math inline">\(\widehat{b}\)</span> kan därför resultera i att vi förkastar nollhypotesen <span class="math inline">\(H_{0}\)</span>.</p>
+<p><strong>Figur 2: T-fördelningens täthetsfunktion och kumulativa sannolikhetsfunktion.</strong></p>
+<div class="inline-figure"><img src="img/k2-5-5-image2.png" style="width:4.82292in;height:6.43056in"></div>
 <div class="fig-caption">
 <p>Förklaring: Diagrammen visar tre exempel på t-fördelningen med olika antal frihetsgrader: 2 och 1 000. Övre diagrammet visar täthetsfunktionen, där båda fördelningarna har medelvärdet 0. I det övre diagrammet är de avstånd från medelvärdet som täcker 90 respektive 95 % av t(2)-fördelningen. Nedre diagrammet visar kumulativa sannolikhetsfunktionen för de två t-fördelningarna.</p>
 </div>
@@ -193,10 +193,16 @@ Om vi byter ut populationsvärdet <span class="math inline">\(\sigma_{V}^{2}\)</
 Kvadratroten av detta är standardfelet för <span class="math inline">\(\widehat{b}\)</span>.
 #### Ett exempel med regressionsanalys med t-test
 Nu ska vi använda några observationer för att illustrera hur vi kan använda t-testet och <span class="math inline">\(t = \widehat{b}/s_{\widehat{b}}\)</span> för att pröva nollhypotesen <span class="math inline">\(H_{0}:b = 0\)</span> mot alternativhypotesen <span class="math inline">\(H_{1}:b \neq 0\)</span>.
-Detta exempel syftar enbart till att illustrera metoden. För att göra det mer lättöverskådligt ska vi endast använda de fyra observationerna för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> från avsnitt <a href="https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&amp;dl=0">2.3</a> och <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">2.4</a>, där vi såg att <span class="math inline">\(\widehat{b} = 0,5\)</span> och <span class="math inline">\(\widehat{a} = 1\)</span>.
-<strong>Tabell 1. Fyra observationer för X och Y</strong>
-—————————————————————————–
-Observation <em>i</em></p>
+Detta exempel syftar enbart till att illustrera metoden. För att göra det mer lättöverskådligt ska vi endast använda de fyra observationerna för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> från avsnitt <a href="https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&amp;dl=0">2.3</a> och <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">2.4</a>, där vi såg att <span class="math inline">\(\widehat{b} = 0,5\)</span> och <span class="math inline">\(\widehat{a} = 1\)</span>.</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left">Tabell 1. Fyra observationer för X och Y**</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Observation <em>i</em>
+</td>
+</tr></tbody>
+</table></div>
 <p><span class="math display">\[X\]</span></p>
 <p><span class="math display">\[Y\]</span></p>
 <div class="inline-table"><table style="width:98%;" class="table table-sm">

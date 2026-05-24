@@ -9,6 +9,7 @@ Exempel: När vi studerar samvariationen mellan inkomst och livslängd med häns
 #### Illustrera med lite data
 Säg att vi har regressionsmodellen $Y = a + bX + cZ + V$, där $Y$, $X$ och $Z$ är variabler och $V$ är feltermen. Vi kan då beskriva detta som att vi håller variabeln $Z$ konstant när vi estimerar samvariationen mellan $Y$ och $X$. Och vi håller variabeln $X$ konstant när vi estimerar samvariationen mellan $Y$ och $Z$.
 Vi ska nu illustrera detta med hjälp av lite data över genomsnittlig livslängd och inkomst för kvinnor respektive män i tre av Sveriges kommuner, vilket beskrivs i tabell 1. Kolumnen längst till höger beskriver en dummyvariabel $G$ för kön där kvinnor = 0 och män = 1.
+
 **Tabell 1. Data över män och kvinnor i tre kommuner**
   -------------------------------------------------------------------------------------------------------------------------------------
   Kommun                 Livslängd $(L)\ $   Inkomst $(I)$   Kön $(G)$
@@ -68,7 +69,9 @@ $L = \widehat{b_{1}} + \widehat{b_{2}}I + \widehat{b_{3}}G = 69,6 + 6,64I - 6,66
 där $G$ är dummy för kön med $G = 0$ för kvinnor och $G = 1$ för män. I diagrammet har vi ritat ut två regressionslinjer för att illustrera betydelsen av denna dummyvariabel. De två regressionslinjerna är skattade med samma regressionsmodell, men illustrerar skillnaden mellan $G = 0$ och $G = 1$.
 Om $G = 0$ får vi den övre regressionslinjen, som löper genom prickarna som illustrerar observationerna för kvinnor. Om dummyvariabeln $G = 1$ har vi i stället den nedre regressionslinjen, som löper genom de tre prickarna för män.
 **Figur 1: Illustration av resultaten från de två regressionsmodellerna**\
+
 ![](img/k2-4-3-image1.png){style="width:4.5in;height:3in"}
+
 
 ::: {.fig-caption}
 Förklaring: I det vänstra diagrammet ser vi resultaten från den estimerade regressionsmodellen i ekvation 1. I det högra diagrammet är regressionsmodellen i ekvation 5 illustrerade för $G = 0$ respektive $G = 1$.

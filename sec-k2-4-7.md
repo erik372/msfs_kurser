@@ -30,8 +30,11 @@ Exempel på endogen variation (dåligt om vi ska dra slutsatser om orsakssamband
 För att uppskatta effekten av $X$ på $Y$ korrekt måste vi även ta hänsyn till de två fenomenen $P$ och $Z$ som påverkar både $X$ och $Y$. Fenomen $P$ och $Z$ påverkar vilka som ingår i behandlingsgruppen och vilka som ingår i kontrollgruppen. Detta kallas för [*selektionsproblem*](https://en.wikipedia.org/wiki/Selection_bias) och beskrevs i [avsnitt 1-2](https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&dl=0).
 Fenomen $P$ är observerbart (till exempel kön och ålder) men fenomen $Z$ syftar på något som det saknas data för och som det kanske aldrig kommer att finnas data för.
 Om vi inte justerar vår analys för $P$ och $Z$ kommer de variationer vi observerar i $X$ och $Y$, liksom samvariationen mellan dem, helt eller delvis vara orsakade av $P$ och $Z$. Detta vet vi från när vi tittat på regressionsanalys med tre eller fler variabler i avsnitt [4.1](https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&dl=0) och [4.4](https://www.dropbox.com/scl/fi/sdnc9eukta9tuiq1y6z0f/4-4-Regression-med-matriser.docx?rlkey=zmc4680olys9qe0zmn7i0vswc&dl=0).
+
 **Figur 1: För att skatta effekten av X på Y måste vi justera för P och Z.**
+
 ![](img/k2-4-7-image1.png){style="width:2.875in;height:2.48022in"}
+
 
 ::: {.fig-caption}
 Förklaring: Fenomen P är observerbart och påverkar X och Y. Fenomen Z kan inte observeras eller mätas men påverkar också X och Y. P kan vi kontrollera för. Z kan vi inte kontrollera för. Vi kommer kanske aldrig kunna kontrollera för Z. Detta är ett centralt argument för vetenskapliga experiment.
@@ -73,8 +76,11 @@ masteringmetrics/data/mlda.rda
 Den vertikala linjen mitt i respektive diagram markerar tidpunkten då personerna i undersökningen fyller 21. Till vänster om linjen visas genomsnittligt antal dödsfall för människor strax under 21 och till höger dödsfall för de som precis fyllt 21. Den högra regressionslinjen i respektive diagrammen skiftar upp vid 21 års ålder, vilket indikerar att dödligheten stiger brant efter 21-årsdagen i och med att människor har möjlighet att köpa alkohol.
 I det vänstra diagrammet ser vi två regressionslinjer, där båda är estimerade med regressionsmodellen i ekvation 2. Regressionslinjen till vänster, för åldersgrupperna under 21, är ritad med $T = 0$ och lutar nedåt. För åldersgrupperna över 21, till höger i det vänstra diagrammet, är regressionslinjen ritad med $T = 1$. De båda regressionslinjerna i det vänstra diagrammet har samma lutning, eftersom vi endast estimerar en lutningskoefficient för ålder i ekvation 2.
 I det högra diagrammet ser vi också två regressionslinjer som är estimerade utifrån regressionsmodellen i ekvation 3. För åldersgrupperna över 21, till höger i diagrammet, skiftar linjen upp. Lutningen ändras också. För åldersgrupperna under 21, till vänster i det högra diagrammet, syns en positiv korrelation mellan alkoholrelaterad dödlighet och ålder. För åldersgrupperna över 21 syns i stället en negativ korrelation mellan alkoholrelaterad dödlighet och ålder.
+
 **Figur 2: Samvariationen mellan ålder och alkoholrelaterad dödlighet**
+
 ![](img/k2-4-7-image2.png){style="width:6.32639in;height:4.21759in"}
+
 
 ::: {.fig-caption}
 Förklaring: Brytpunktsanalys rörande alkoholrelaterade dödsfall per åldersgrupp i USA. Se brödtext för förklaring av regressionsmodellerna. Data från [Carpenter och Dobkin (2009)](https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&utm_medium=blog&utm_campaign=causal-inference-part-i). Genomsnittlig alkolholrelaterad dödlighet ökat skarpt i samband med att människor fyller 21.

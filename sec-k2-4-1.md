@@ -61,6 +61,7 @@ Om vi tillför en variabel till vår analys kan detta påverka resultaten för a
 Det korrekta resultatet får vi inte förrän vi inkluderar $Z$. Detta är centralt för att förstå den här typen av metoder, forskning och analytiskt arbete i största allmänhet.
 #### Estimera en modell
 Nu ska vi estimera en regressionsmodell utifrån några observationer. För detta återanvänder vi de påhittade variablerna $Y$, $X$ och $Z$ med de fyra observationer vardera som vi använde tidigare när vi introducerade minstakvadratmetoden. Alla tre variablerna redovisas i tabell 1 med lite beräkningar som vi behöver.
+
 **Tabell 1: Variablerna Y, X och Z med lite beräkningar**
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
@@ -172,6 +173,7 @@ $$\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} - 0,54Z_{i}$$
 När vi har tre variabler är det svårare att illustrera samvariation i ett diagram. Trots detta görs ett försök i figur 1 där de fyra observationerna är placerade i diagrammet utifrån deras värden för $Y$, $X$ och $Z$.
 Den vertikala axeln är $Y$-axeln medan variablerna $X$ och $Z$ har varsin horisontell axel. Den svarta pricken högst upp i diagrammet är observation 3 vars värden är $(Y,X,Z) = (5,6,0)$.
 Eftersom regressionsmodellen har tre variabler blir regressionslinjen $\left( \widehat{Y} \right)$ nu en plan yta med tre dimensioner, vilket illustreras av rutnätet. Denna plana yta är vinklad med hänsyn till de två variablerna $X$ och $Z$, beroende på deras respektive lutningskoefficient. Eftersom lutningskoefficienten $\widehat{c} \< 0$ lutar rutnätet nedåt längs med $Z$-axeln sett från $Y$-axeln. Eftersom $\widehat{b} \> 0$ lutar rutnätet uppåt längs med $X$-axeln sett från $Y$-axeln.
+
 **Figur 1. Regressionsresultat med tre variabler**
 *[Sideeg \> Jag sparade ett 3d-diagram som html i katalogen]{.mark} [Eriks_3d_graf](https://www.dropbox.com/scl/fo/2i2ntlsxmg2g3u0mjwg93/AGRmmFsd9k7y02ZW2EYyPyo?rlkey=oadbjo86p3expplymcnzfshu1&dl=0). [Om ni har möjlighet att göra det snyggare får ni jättegärna göra det ]{.mark}*😊
 

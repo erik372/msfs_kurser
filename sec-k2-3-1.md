@@ -30,8 +30,11 @@ $\sum_{i}^{}{\widehat{V}}_{i}\ = \sum_{i}^{}\left( Y_{i} - \widehat{Y_{i}} \righ
 $${= \left( Y_{1} - \widehat{Y}1 \right)^{2} + \left( Y2 - \widehat{Y}2 \right)^{2} + \left( Y3 - \widehat{Y}3 \right)^{2} + \left( Y4 - \widehat{Y_{4}} \right)^{2} }{= 0 + \left( 2 - \frac{13}{4} \right)^{2} + \left( 5 - \frac{15}{4} \right)^{2} + 0 }{= 3,1875 \> 2,5}$$
 
 Figur 1 illustrerar de tre linjer vi nu har jämfört. Linje A i diagrammet är den vi skattade utifrån minstakvadratmetoden. Linje B är den horisontella linjen där $\widehat{Y} = \overline{Y} = 3,5$. Linje C ritas av funktionen $Y = 9\text{/}4 + \frac{1}{4}X$ och går igenom två av punkterna.
+
 **Figur 1. Tre linjer, varav en är regressionslinjen**
+
 ![](img/k2-3-1-image1.png){style="width:3.27778in;height:3.27778in"}
+
 
 ::: {.fig-caption}
 Förklaring: Diagrammet visar tre linjer. Linje A är regressionslinjen, beräknad med minstakvadratmetoden. Linje B är horisontell och linje C går igenom två av punkterna. Av de tre linjerna har linje A det minstas summerade vertikala avståndet mellan linjen och punkterna.

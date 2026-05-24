@@ -22,6 +22,7 @@ I tidigare avsnitt har vi använt två olika samlingar med observationer för at
 Modell 1: $Y = a + bX + V$ (7)
 Modell 2: $Z = \alpha + \beta K + \epsilon$
 Tabell 2 och 3 återger observationerna vi använde för att estimera respektive tabell och några beräkningar vi nu ska använda i vår jämförelse.
+
 **Tabell 2: Observationer och beräkningar för modell 1**
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Observation i    
@@ -59,11 +60,12 @@ $$\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$$
 
 ::: {.fig-caption}
 Förklaring: se text.
+:::
+
+
 **Tabell 3: Observationer och beräkningar för modell 2**
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Observation i    
-:::
-
 
 $$Z_{i}$$
 

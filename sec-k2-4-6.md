@@ -97,8 +97,11 @@ $L = \widehat{a} + \widehat{b}\left( I \middle\| G = 0 \right) = 26,6 + 26,9x$ (
 där $\left( I \middle\| G = 0 \right)$ betyder att vi enbart använder de observationer för livslängd $(I)$ i tabell 1 som representerar kvinnor. Koefficienterna $\widehat{a}$ och $\widehat{b}$ är estimerade utifrån minstakvadratmetoden. Regressionslinjen för män är i diagrammet ritad med ekvationen:
 $L = \widehat{c} + \widehat{d}\left( I \middle\| G = 1 \right) = 66,9 + 5,1x$ (19)
 där $\left( I \middle\| G = 1 \right)$ betyder att vi enbart använder de observationer i tabell 1 som representerar män. Genom att estimera samvariationen mellan livslängd och inkomst för män och kvinnor separat kan vi nå samma slutsats som när vi estimerar regressionsmodellen med interaktionseffekter.
+
 **Figur 1: Regressionsresultat med interaktion**
+
 ![](img/k2-4-6-image1.png){style="width:3.78472in;height:3.78472in"}
+
 
 ::: {.fig-caption}
 Förklaring: Livslängd och inkomst för kvinnor respektive män.

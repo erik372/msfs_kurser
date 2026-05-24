@@ -21,8 +21,11 @@ Andraderivatan $f_{xx}^{\'\'}$ i ekvation 4 är negativ. Detta indikerar att $x 
 $f\left( x^{*} = 1,5 \right) = 3*1,5 - (1,5)^{2} = 4,5 - 2,25 = 2,25$ (6)
 En och en halv tårta ger 2,25 i lycka, där lycka mäts på en skala från 1 till 5. Exakt hur stor lycka som uppnås genom tårtätande är dock i detta exempel inte centralt.
 Figur 1 illustrerar detta exempel och dess lösning. Till vänster och höger om $x = 1,5$ kan vi se att lyckan är mindre än 2,25. Vid noll mängd tårta (0 på horisontella axeln) är lyckan lika med noll. På samma sätt är lyckan lika noll när mängden tårta är 3, vilket i det här hypotetiska exemplet innebär att vi då ätit så mycket tårta att vi inte längre njuter av det alls.
+
 **Figur 1. Den optimala mängden tårta.**
+
 ![](img/k1-4-1-image1.png){style="width:4in;height:3in"}
+
 ### Marginaleffekten
 Ett annat sätt att beskriva detta fenomen är med hjälp av begreppet *marginaleffekt*. Generellt syftar begreppet marginaleffekt på hur ett resultat förändras vid små förändringar i en variabel. I detta fall hur mycket den totala mängden lycka ändras vid små förändringar av mängden tårta.
 Vi söker den mängd tårta där marginallyckan är lika med 0, där förstaderivatan av funktion *f* är 0, $f_{x}\' = 0$. Det värde av x där $f_{x}\' = 0$ är en extrempunkt. Om andraderivatan är negativ innebär små förändringar av x vid $x^{*}$ att lyckan minskar. I så fall är extrempunkten en lokal maximipunkt.

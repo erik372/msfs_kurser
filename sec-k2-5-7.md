@@ -32,6 +32,7 @@ En linjär modell passar relativt dåligt när vi använder nominell BNP i krono
 Regressionslinjen fångar visserligen den positiva utvecklingen men ger inte en representativ bild av den långsiktiga trenden i BNP. Under åren 1800---1850, till vänster i diagrammet, är regressionslinjen under 0.
 Detta innebär att regressionsmodellen predikterar att BNP var negativ alla år före 1850. Eftersom BNP är ett mått på allting som produceras, köps och säljs, i ett samhälle så är detta inte möjligt.
 Den linjära modellen fångar dock den långsiktiga trenden i logaritmerad BNP relativt väl, vilket syns i det högra diagrammet där punkterna följer regressionslinjen för alla åren 1800--2000.
+
 **Tabell 1: BNP och logarimterad BNP**
   -----------------------------------------------------------------------------
      **År**   **BNP**   **ln(BNP)** ** **      **År**     **BNP**   **ln(BNP)**
@@ -51,11 +52,14 @@ Den linjära modellen fångar dock den långsiktiga trenden i logaritmerad BNP r
 
 ::: {.fig-caption}
 Förklaring: Data från [www.historia.se](http://www.historia.se).
-**Figur 1: BNP och logaritmerad BNP**
-![En bild som visar diagram, linje, Graf, skärmbild Automatiskt genererad beskrivning](img/k2-5-7-image1.png){style="width:4.89251in;height:2.7008in"}
-Förklaring. Data från [www.historia.se](http://www.historia.se), samma som i tabell 1.
 :::
 
+
+**Figur 1: BNP och logaritmerad BNP**
+
+![En bild som visar diagram, linje, Graf, skärmbild Automatiskt genererad beskrivning](img/k2-5-7-image1.png){style="width:4.89251in;height:2.7008in"}
+
+Förklaring. Data från [www.historia.se](http://www.historia.se), samma som i tabell 1.
 ### Varför fungerar logaritm för BNP?
 BNP växer exponentiellt: Varje år ökar BNP i genomsnitt med en viss procentsats, inte ett fast belopp i kronor. Exponentiell tillväxt kan beskrivas matematiskt med följande ekvation:
 $Y_{t} = Y_{0}*\ e^{rt}$ (4)
@@ -70,8 +74,11 @@ Men när vi tittar på diagrammen i figuren kan vi tydligt se att prickarna i de
 I det högra diagrammet syns en ickelinjär samvariation när vi tittar på alla observationer. Tittar vi enbart på den vänstra halvan av diagrammet syns en positiv samvariation, medan punkterna i den högra halvan av diagrammet har en negativ samvariation.
 Nu är data påhittade men om dessa punkter representerade någon typ av verklig information skulle det till exempel kunna vara en indikation på ett kausalt samband -- som vår linjära regressionsmodell alltså missar.
 Detta innebär inte att regressionsanalys är dåligt. Men vi måste vara noga med hur vi formulerar våra regressionsmodeller. Vi måste inspektera data både genom att beräkna resultat och jämföra dom i diagram och tabeller. Om associationen mellan variabler inte är linjär kan vi behöva transformera variablerna (till exempel ta naturliga logaritmen) eller ändra i vår regressionsmodell. Vi kan till exempel behöva lägga till kvadratiska termer i vår regressionsmodell eller använda andra metoder, vilket inte ryms att gå igenom här.
+
 **Figur 2: Två exempel på mönster som inte fångas av vår regressionsmodell**
+
 ![En bild som visar linje, diagram, skärmbild, Rektangel Automatiskt genererad beskrivning](img/k2-5-7-image2.png){style="width:5.33774in;height:2.60709in"}
+
 
 ::: {.fig-caption}
 Förklaring: Prickarna i diagrammen följer tydliga mönster. Regressionslinjerna i diagrammen är de svarta horisontella linjerna i diagrammen, ritade med regressionsmodellen $Y = a + bX + V$. Lutningskoefficient $b$ är 0. Regressionslinjerna i diagrammen indikerar ingen association mellan $X$ och $Y$, trots att det finns en form av samvariation.

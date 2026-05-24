@@ -148,35 +148,39 @@ där <span class="math inline">\(lnY_{t}\)</span> är logaritmerad BNP år <span
 En linjär modell passar relativt dåligt när vi använder nominell BNP i kronor, vilket vi kan se i det vänstra diagrammet. Datapunkterna i diagrammet är placerade ungefär i formen av ett liggande <span class="math inline">\(L\)</span>. Utvecklingen är exponentiell och inte linjär.
 Regressionslinjen fångar visserligen den positiva utvecklingen men ger inte en representativ bild av den långsiktiga trenden i BNP. Under åren 1800—1850, till vänster i diagrammet, är regressionslinjen under 0.
 Detta innebär att regressionsmodellen predikterar att BNP var negativ alla år före 1850. Eftersom BNP är ett mått på allting som produceras, köps och säljs, i ett samhälle så är detta inte möjligt.
-Den linjära modellen fångar dock den långsiktiga trenden i logaritmerad BNP relativt väl, vilket syns i det högra diagrammet där punkterna följer regressionslinjen för alla åren 1800–2000.
-<strong>Tabell 1: BNP och logarimterad BNP</strong>
-—————————————————————————–
+Den linjära modellen fångar dock den långsiktiga trenden i logaritmerad BNP relativt väl, vilket syns i det högra diagrammet där punkterna följer regressionslinjen för alla åren 1800–2000.</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left">Tabell 1: BNP och logarimterad BNP**</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">
 <strong>År</strong> <strong>BNP</strong> <strong>ln(BNP)</strong> <strong> </strong> <strong>År</strong> <strong>BNP</strong> <strong>ln(BNP)</strong>
-——— ——— ————- ——- ——— ———– ————-
-1800 115 4,7   1910 3 302 8,1
-1810 178 5,2   1920 12 200 9,4
-1820 278 5,6   1930 9 271 9,1
-1830 306 5,7   1940 13 979 9,5
-1840 382 5,9   1950 31 827 10,4
-1850 461 6,1   1960 72 272 11,2
-1860 743 6,6   1970 175 222 12,1
-1870 938 6,8   1980 531 884 13,2
-1880 1 314 7,2   1990 1 365 700 14,1
-1890 1 477 7,3   2000 2 013 311 14,5
-1900 2 245 7,7        
-—————————————————————————–</p>
+</td>
+</tr></tbody>
+</table></div>
+<pre><code>   1800       115           4,7              1910       3 302           8,1
+   1810       178           5,2              1920      12 200           9,4
+   1820       278           5,6              1930       9 271           9,1
+   1830       306           5,7              1940      13 979           9,5
+   1840       382           5,9              1950      31 827          10,4
+   1850       461           6,1              1960      72 272          11,2
+   1860       743           6,6              1970     175 222          12,1
+   1870       938           6,8              1980     531 884          13,2
+   1880     1 314           7,2              1990   1 365 700          14,1
+   1890     1 477           7,3              2000   2 013 311          14,5
+   1900     2 245           7,7                                            </code></pre>
+<hr>
 <div class="fig-caption">
-<p>Förklaring: Data från <a href="http://www.historia.se">www.historia.se</a>.
-<strong>Figur 1: BNP och logaritmerad BNP</strong>
-<img src="img/k2-5-7-image1.png" style="width:4.89251in;height:2.7008in" alt="En bild som visar diagram, linje, Graf, skärmbild Automatiskt genererad beskrivning">
-Förklaring. Data från <a href="http://www.historia.se">www.historia.se</a>, samma som i tabell 1.</p>
+<p>Förklaring: Data från <a href="http://www.historia.se">www.historia.se</a>.</p>
 </div>
+<p><strong>Figur 1: BNP och logaritmerad BNP</strong></p>
+<div class="float">
+<img src="img/k2-5-7-image1.png" style="width:4.89251in;height:2.7008in" alt="En bild som visar diagram, linje, Graf, skärmbild Automatiskt genererad beskrivning"><div class="figcaption">En bild som visar diagram, linje, Graf, skärmbild Automatiskt genererad beskrivning</div>
 </div>
-<div id="varför-fungerar-logaritm-för-bnp" class="section level3" number="48.0.2">
-<h3>
-<span class="header-section-number">48.0.2</span> Varför fungerar logaritm för BNP?<a class="anchor" aria-label="anchor" href="#varf%C3%B6r-fungerar-logaritm-f%C3%B6r-bnp"><i class="fas fa-link"></i></a>
-</h3>
-<p>BNP växer exponentiellt: Varje år ökar BNP i genomsnitt med en viss procentsats, inte ett fast belopp i kronor. Exponentiell tillväxt kan beskrivas matematiskt med följande ekvation:
+<p>Förklaring. Data från <a href="http://www.historia.se">www.historia.se</a>, samma som i tabell 1.
+### Varför fungerar logaritm för BNP?
+BNP växer exponentiellt: Varje år ökar BNP i genomsnitt med en viss procentsats, inte ett fast belopp i kronor. Exponentiell tillväxt kan beskrivas matematiskt med följande ekvation:
 <span class="math inline">\(Y_{t} = Y_{0}*\ e^{rt}\)</span> (4)
 där <span class="math inline">\(Y_{t}\)</span> är BNP valfritt år <span class="math inline">\(t\)</span>. <span class="math inline">\(Y_{0}\)</span> är BNP år noll (startåret). Faktorn <span class="math inline">\(e^{rt}\)</span> är Eulers tal <span class="math inline">\(e\)</span>. Exponenten <span class="math inline">\(rt\)</span> är tillväxttakten <span class="math inline">\(r\)</span> multiplicerad med antal år <span class="math inline">\(t\)</span>. Tar vi naturliga logaritmen av detta uttryck får vi:
 <span class="math inline">\(\ln\left( Y_{t} \right) = ln\left( Y_{0} \right) + rt\)</span> (5)
@@ -188,15 +192,17 @@ Nu är linjerna horisontella, vilket innebär att lutningskoefficienterna är li
 Men när vi tittar på diagrammen i figuren kan vi tydligt se att prickarna i de båda diagrammen samvarierar i olika mönster. I det vänstra diagrammet är relationen mellan variablerna tydligt positiv, men endast om vi studerar observationerna som två grupper.
 I det högra diagrammet syns en ickelinjär samvariation när vi tittar på alla observationer. Tittar vi enbart på den vänstra halvan av diagrammet syns en positiv samvariation, medan punkterna i den högra halvan av diagrammet har en negativ samvariation.
 Nu är data påhittade men om dessa punkter representerade någon typ av verklig information skulle det till exempel kunna vara en indikation på ett kausalt samband – som vår linjära regressionsmodell alltså missar.
-Detta innebär inte att regressionsanalys är dåligt. Men vi måste vara noga med hur vi formulerar våra regressionsmodeller. Vi måste inspektera data både genom att beräkna resultat och jämföra dom i diagram och tabeller. Om associationen mellan variabler inte är linjär kan vi behöva transformera variablerna (till exempel ta naturliga logaritmen) eller ändra i vår regressionsmodell. Vi kan till exempel behöva lägga till kvadratiska termer i vår regressionsmodell eller använda andra metoder, vilket inte ryms att gå igenom här.
-<strong>Figur 2: Två exempel på mönster som inte fångas av vår regressionsmodell</strong>
-<img src="img/k2-5-7-image2.png" style="width:5.33774in;height:2.60709in" alt="En bild som visar linje, diagram, skärmbild, Rektangel Automatiskt genererad beskrivning"></p>
+Detta innebär inte att regressionsanalys är dåligt. Men vi måste vara noga med hur vi formulerar våra regressionsmodeller. Vi måste inspektera data både genom att beräkna resultat och jämföra dom i diagram och tabeller. Om associationen mellan variabler inte är linjär kan vi behöva transformera variablerna (till exempel ta naturliga logaritmen) eller ändra i vår regressionsmodell. Vi kan till exempel behöva lägga till kvadratiska termer i vår regressionsmodell eller använda andra metoder, vilket inte ryms att gå igenom här.</p>
+<p><strong>Figur 2: Två exempel på mönster som inte fångas av vår regressionsmodell</strong></p>
+<div class="float">
+<img src="img/k2-5-7-image2.png" style="width:5.33774in;height:2.60709in" alt="En bild som visar linje, diagram, skärmbild, Rektangel Automatiskt genererad beskrivning"><div class="figcaption">En bild som visar linje, diagram, skärmbild, Rektangel Automatiskt genererad beskrivning</div>
+</div>
 <div class="fig-caption">
 <p>Förklaring: Prickarna i diagrammen följer tydliga mönster. Regressionslinjerna i diagrammen är de svarta horisontella linjerna i diagrammen, ritade med regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span>. Lutningskoefficient <span class="math inline">\(b\)</span> är 0. Regressionslinjerna i diagrammen indikerar ingen association mellan <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>, trots att det finns en form av samvariation.</p>
 </div>
-<div id="linjära-regressioner-är-ändå-väldigt-användbara" class="section level4" number="48.0.2.1">
+<div id="linjära-regressioner-är-ändå-väldigt-användbara" class="section level4" number="48.0.1.1">
 <h4>
-<span class="header-section-number">48.0.2.1</span> Linjära regressioner är ändå väldigt användbara<a class="anchor" aria-label="anchor" href="#linj%C3%A4ra-regressioner-%C3%A4r-%C3%A4nd%C3%A5-v%C3%A4ldigt-anv%C3%A4ndbara"><i class="fas fa-link"></i></a>
+<span class="header-section-number">48.0.1.1</span> Linjära regressioner är ändå väldigt användbara<a class="anchor" aria-label="anchor" href="#linj%C3%A4ra-regressioner-%C3%A4r-%C3%A4nd%C3%A5-v%C3%A4ldigt-anv%C3%A4ndbara"><i class="fas fa-link"></i></a>
 </h4>
 <p>Utifrån ovanstående beskrivning kanske vissa får känslan att det är meningslöst med linjära regressioner. Men ickelinjära regressionsmodeller är inte heller en universallösning.
 På samma sätt som vi riskerar att missa viktiga delar när vi använder linjära regressionsmodeller riskerar vi att missa viktiga slutsatser om vi enbart använder ickelinjära regressionsmodeller.
@@ -214,9 +220,9 @@ Punkternas mönster är tydligt ickelinjärt, men vi kan ändå beräkna en linj
 </div>
 </div>
 </div>
-<div id="vad-är-egentligen-regressionsanalys" class="section level3" number="48.0.3">
+<div id="vad-är-egentligen-regressionsanalys" class="section level3" number="48.0.2">
 <h3>
-<span class="header-section-number">48.0.3</span> Vad är egentligen regressionsanalys?<a class="anchor" aria-label="anchor" href="#vad-%C3%A4r-egentligen-regressionsanalys"><i class="fas fa-link"></i></a>
+<span class="header-section-number">48.0.2</span> Vad är egentligen regressionsanalys?<a class="anchor" aria-label="anchor" href="#vad-%C3%A4r-egentligen-regressionsanalys"><i class="fas fa-link"></i></a>
 </h3>
 <p>Regressionsanalys är ett verktyg för att mäta samvariation och en grund för kausal inferens, när den kombineras med bra forskningsdesign. Regressionsanalys är ett sätt att testa teorier om hur världen fungerar men som samtidigt kräver både matematisk precision och kritiskt tänkande.
 Regressionsanalys är inte matte för mattens skull. Detta är grunden för hur vi kan lära oss något pålitligt om orsak och verkan i en komplex värld. Utan dessa metoder skulle vi vara begränsade till anekdoter och gissningar. Med dessa metoder kan vi utvärdera om mediciner fungerar, studera effekter av politiska beslut och förstå ekonomiska samband.
@@ -373,8 +379,7 @@ Som detta avsnitt förhoppningsvis illustrerar är ett analytiskt verktyg aldrig
       <ul class="nav navbar-nav"><li>
 <a class="nav-link" href="#k2-5-7"><span class="header-section-number">48</span> Vad är egentligen regressionsanalys?</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#begrepp-45"><span class="header-section-number">48.0.1</span> Begrepp</a></li>
-<li><a class="nav-link" href="#varf%C3%B6r-fungerar-logaritm-f%C3%B6r-bnp"><span class="header-section-number">48.0.2</span> Varför fungerar logaritm för BNP?</a></li>
-<li><a class="nav-link" href="#vad-%C3%A4r-egentligen-regressionsanalys"><span class="header-section-number">48.0.3</span> Vad är egentligen regressionsanalys?</a></li>
+<li><a class="nav-link" href="#vad-%C3%A4r-egentligen-regressionsanalys"><span class="header-section-number">48.0.2</span> Vad är egentligen regressionsanalys?</a></li>
 </ul>
 </li></ul>
 

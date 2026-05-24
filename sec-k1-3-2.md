@@ -32,8 +32,11 @@ $$\text{lycka}_{2}^{*} = 80 - 22*2,5 = 25$$
 
 Lösningen för systemet är $\text{dejt}^{*} = 2,5$ och $\text{lycka}^{*} = 25$. Figur 1 illustrerar de två strategierna som raka linjer med jämvikten som den punkt där de två linjerna möts. Vid denna punkt leder de två strategierna till samma nivå av lycka.
 Nu är frågan om Kim tror sig kunna hitta den rätta på fler eller färre dejter än så. Om Kim tror det krävs färre dejter med kompisars kompisar är den strategin minst olycksframkallande. Om Kim tror det krävs fler är den andra strategin minst olycksframkallande.
+
 **Figur 1. Två dejtingstrategier i ett diagram**
+
 ![](img/k1-3-2-image1.png){style="width:4in;height:3in"}
+
 
 ::: {.fig-caption}
 Förklaring: Den gröna linjen beskriver dejtingstrategi 1, med dejtingappen. Den rosa linjen beskriver dejtingstrategi 2, träffa kompisens kompisar. Vid 2,5 dejter möts de två linjerna, varpå Kims lycka är nere på 25.

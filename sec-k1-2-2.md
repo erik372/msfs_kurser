@@ -16,6 +16,7 @@ $$Index_{t} = \frac{Värde_{t}}{Värde_{basår}}*100$$
 där $Index_{t}$ är indexvärdet för valfritt år *t*. Multiplikation med 100 är valfritt men används ofta.
 Tabell 1 visar ett exempel där vi jämför befolkningsmängden i Sverige och Frankrike mellan 1960 och 2020. Sveriges befolkning ökade under perioden från 7,49 miljoner invånare till 10,37 miljoner. Frankrikes befolkning ökade från 45,66 miljoner till 64,48.
 I kolumnerna till höger ser vi resultatet i form av ett befolkningsindex per land. Den relativa ökningen var större i Frankrike, vilket vi kan se genom att jämföra index. Sveriges befolkning ökad med 38,4 procent medan Frankrikes ökade med 41,2 procent under samma period.
+
 **Tabell 1: Befolkning och befolkningsindex i Sverige och Frankrike**
 +----------+:-----------:+:-------------:+:-----------:+:-------------:+
 |          | **Befolkning,\              | **Befolkningsindex,\        |
@@ -46,6 +47,7 @@ Förklaring: Data från [Our World in Data](https://ourworldindata.org/grapher/p
 Statistiska centralbyrån (SCB) samlar varje år in uppgifter om hushållens inkomster och presenterar denna uppdelad på tiondelar av befolkningen, vilket kallas för decilgrupper.
 Tabell 2 visar genomsnittlig inkomst räknat i 1 000-tals kronor för decilgrupp 1 och 10, för ett urval av år från 1995 till 2019. Decilgrupp 1 är den tiondel av befolkningen som har lägst inkomster. Decilgrupp 10 är den tiondel med högst inkomster.
 Inkomsterna i tabellen är beskrivna i kronor per konsumtionsenhet. Kronor per konsumtionsenhet är ett sätt att mäta inkomst per person, justerat för det hushåll respektive person tillhör. Till exempel om en person tillhör en rik eller fattig familj. Många människor byter inkomstgrupp mellan åren, till exempel genom att gå från studier till arbete och från arbete till pension.
+
 **Tabell 2: Inkomst per decilgrupp. 1 000-tals kr i 2019 års priser**
   -----------------------------------------------
             **Decilgrupp 1**   **Decilgrupp 10**
@@ -62,13 +64,14 @@ Inkomsterna i tabellen är beskrivna i kronor per konsumtionsenhet. Kronor per k
 Förklaring: Data från [SCB](https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__HE__HE0110__HE0110F/), genomsnittlig disponibel inkomst inklusive kapitalvinst per konsumtionsenhet. Decilgrupp 1 = den tiondel av befolkningen som respektive år hade lägst inkomster. Decilgrupp 10 = den tiondel av befolkningen som respektive år hade högst inkomster. Enskilda personer kan ha bytt decilgrupp mellan åren.
 Decilgrupp 1 hade år 1995 i genomsnitt 63 200 kr. Decilgrupp 10 hade samma år en genomsnittlig inkomst på 311 900 kr. Nu ska vi skapa ett index vardera för de två decilgrupperna 1 och 10 med 1995 som basår. Indexvärdet för respektive grupp kommer år 1995 att bli 100.
 Tabell 3 visar resultatet. Inkomsterna för decilgrupp 1 ökade med 57,6 % och för decilgrupp 10 med 157,6 %. Väljer vi ett annat basår blir resultaten annorlunda.
+:::
+
+
 **Table 3: Indexerad inkomstutveckling per decilgrupp**
   ------------------------------------------------------------------------------------------------------------------------------------
              **Decilgrupp 1**                                            **Decilgrupp 10**
   ---------- ----------------------------------------------------------- -------------------------------------------------------------
     **1995** 
-:::
-
 
 $$\frac{63,2}{63,2}*100 = 100$$
 
@@ -98,8 +101,11 @@ Förklaring: Inkomstindex för decilgrupp 1 och 10, baserat på data presenterad
 ### Prisindex och deflatering
 Ett *prisindex* visar den indexerade prisutvecklingen för en eller flera varor eller tjänster. Ett prisindex som ofta används är [Konsumentprisindex](https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-konsumtion/konsumentprisindex/konsumentprisindex-kpi/) (KPI) som Statistiska centralbyrån (SCB) beräknar. För att räkna ut KPI samlar SCB in information om pris och andra egenskaper på en stor mängd olika varor och tjänster. Därefter beräknar SCB ett medelvärde för en hypotetisk varukorg. Varukorgen är baserad på vad människor i Sverige spenderar pengar på.
 Om varorna och tjänsterna ändras, till exempel om en ny mobiltelefon lanseras med ny kvalitet, så justeras KPI-beräkningen för detta. Idealiskt sett mäter därför KPI endast rena prisförändringar. Diagram 1 visar utvecklingen av KPI mellan 1980---2024. Diagrammet visar hur konsumentprisindex under denna period ökade med från nivå 100 till lite mer än 400. En ökning med över 300 procent.
+
 **Diagram 1: Konsumentprisindex för Sverige 1980---2022**
+
 ![](img/k1-2-2-image1.png){style="width:4.61905in;height:2.53941in"}
+
 
 ::: {.fig-caption}
 Förklaring: Data från [SCB](https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-konsumtion/konsumentprisindex/konsumentprisindex-kpi/). Diagrammet visar konsumentprisindex för Sverige år 1980--2024. Index 100 är satt till år 1980. Diagrammet visar hur konsumentpriserna under perioden i genomsnitt ökade med lite mer än 300 %.

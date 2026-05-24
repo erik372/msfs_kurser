@@ -33,8 +33,11 @@ I det första landet fungerar offentlig sektor ineffektivt. Människor har lågt
 $t(b = 3) = \frac{1}{1 + 3} = 0,25$ (6)
 Detta betyder att om staten vill maximera skatteuttaget måste den sätta skatten på 25 %. Alla andra skattenivåer resulterar i mindre totala skatteintäkter.
 I diagrammet illustreras detta med den heldragna linjen vid "Ineffektivt system". Kurvans högsta punkt är vid $t = 0,25$. Detta innebär att redan vid en relativt låg skattenivå medför ytterligare höjningar av skatten att de totala skatteintäkterna kommer att minska.
+
 **Figur 1. Två Lafferkurvor**
+
 ![En bild som visar text, diagram, Graf, linje Automatiskt genererad beskrivning](img/k1-4-3-image1.png){style="width:4.46269in;height:3.34702in"}
+
 
 ::: {.fig-caption}
 Förklaring: De två kurvorna i diagrammet illustrerar två teoretiska samhällsekonomier som fungerar olika. I det ena samhället fungerar samhället på ett sådant sätt att den maximala skattenivån är 66,6 %. I den andra ekonomin är den optimala skattenivån 25 %. Trots att skattenivån är lägre i den andra samhällsekonomin är totala skatteintäkterna mindre på grund av olika ineffektiviteter.

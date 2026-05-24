@@ -56,6 +56,7 @@ $20\ 606,02\ --20\ 000 = 606,02$ kr.
 ### Kumulativ summa
 Uttrycket "kumulativ ränta" syftar på att ränta läggs på ränta och bildar en ny total ränta, en ny summa som vi måste betala eller får betalt som ersättning för att vi lånar eller lånar ut pengar.
 Ett närliggande begrepp är *kumulativ summa*, vilket beskriver en summa som beräknas per värde i en serie, inklusive alla värden i serien fram till dess. Tabell 1 visar några tal och en kolumn med en kumulativ summa och en kolumn med en vanlig summa.
+
 **Tabell 1: Illustration av kumulativ summa.**
   -------------------------------------------------------
   **Observation nr**   **Värde**    **Kumulativ summa**

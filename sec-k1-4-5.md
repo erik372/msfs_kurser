@@ -12,6 +12,7 @@ Dessa metoder har en lång historia men började framför allt spridas inom samh
 #### Ett exempel med siffror
 Tabell 1 visar ett exempel på en IO-tabell med de två branscherna A och B. Respektive bransch har en egen rad och en egen kolumn. Siffrorna i tabellen visar värdet av den produktion som levereras till respektive bransch samt till slutkonsumtion hos hushåll och offentlig sektor.
 I raden för bransch A visar siffrorna värdet av den produktion som A säljer till andra företag i samma bransch (värdet 2) och till företag i bransch B (värdet 1). Den fjärde kolumnen beskriver mängden produktion till slutkonsumtion medan den femte kolumnen summerar kolumn 2--4.
+
 **Tabell 1. Input och output från och till företagen i de två branscherna A och B.**
 +-----------+-----------+-----------+----------------+----------+
 | Till      | Bransch A | Bransch B | Slutkonsumtion | Summa    |
@@ -64,8 +65,11 @@ Om vi för matris $B$ beräknar summan av en rad för en bransch $j$ i matris $B
 #### Illustrera nätverk i diagram
 Figur 1 visar ett exempel på hur detta kan illustreras i ett *nätverksdiagram*. Punkterna beskriver de två branscherna A och B och pilarna beskriver flödena till och från de två branscherna. Värdena vid respektive pil representerar värdena i tabell 1.
 Punkternas storlek representerar respektive branschs totala produktion, kolumnen längst till höger i tabellen. I diagrammet har vi inte tagit med någon illustration över den produktion som branscherna skickar till slutkonsumtion.
+
 **Figur 1. Ett nätverk med de två branscherna A och B.**
+
 ![](img/k1-4-5-image1.png){style="width:5in;height:3in"}
+
 
 ::: {.fig-caption}
 Förklaring: In- och utflöden från och till de två branscherna A och B. Flödena beskrivs i tabell 1.

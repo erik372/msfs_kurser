@@ -27,6 +27,7 @@ $$\log_{10}(1) = 0.\ \ \log_{10}(2) = 0,3.\ \ \log_{10}{(4)} = 0,6.\ \ \log_{10}
 En fördubbling från 1 till 2 till 4 till 8 motsvaras av differensen 0,3 mellan de logaritmerade värdena (så länge vi använder bas 10 för våra logartimer).
 Tabell 1 visar värdena för länderna som är färgmarkerade i de båda diagrammen: Bolivia, Brasilien, Liberia, Senegal och Sverige. Brasilien har ungefär dubbelt så stort BNP per capita som Bolivia (cirka 15,1 respektive 8,2). Differensen mellan deras BNP-värden i logaritmerad form är cirka 0,3, vilket vi får om vi tar 1,2 -- 0,9.
 Bolivia har i sin tur dubbelt så stor BNP per capita som Senegal (8,2 respektive 3,6). Differensen mellan deras BNP-värden i logaritmerad form: 0,9 -- 0,6 = 0,3. Som syns tydligt i diagrammen är det för dessa länder även så att ju högre BNP per capita landet har, desto mer nöjda med livet är invånarna.
+
 **Tabell 1: Lycka och BNP i sex länder.**
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **Land**          **Nöjdhet med livet**   **BNP per capita**   $\mathbf{lo}\mathbf{g}_{\mathbf{10}}\mathbf{(}\mathbf{BNP\ per\ capita}\mathbf{)}$

@@ -27,10 +27,15 @@ Samma nollpunkter syns i figur 2 där de två ekvationerna i ekvationssystemet i
 Vi kontrollerar att lösningarna uppfyller ekvationssystemet i ekvation 1 och ligger inom det tillåtna intervallet \[0, 1\]:
 För P ≈ 0,11: K = (0,11)² + 0,1 = 0,0121 + 0,1 = 0,1121 ≈ 0,11
 För P ≈ 0,89: K = (0,89)² + 0,1 = 0,7921 + 0,1 = 0,8921 ≈ 0,89
+
 **Figur 1. Linjen för fjärdegradspolynomet i ekvation 3**
+
 ![](img/k1-3-6-image1.png){style="width:4in;height:3in"}
+
 **Figur 2. De två jämvikterna i Kims relation.**
+
 ![](img/k1-3-6-image2.png){style="width:4in;height:3in"}
+
 
 
 ::: {.ex-section-title}

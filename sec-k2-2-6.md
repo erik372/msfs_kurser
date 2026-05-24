@@ -13,8 +13,11 @@ Ett annat exempel på vilseledande slutsatser är sådana vi ofta ser i olika ty
 Men vid sidan av mer eller mindre medvetet missvisande information är det även lätt att vi lurar oss själva med diagram. Ett sätt att illustrera hur lätt det blir fel ges i figur 1. I diagrammet syns åtta pilspetsar med fyra avstånd mellan varje par.
 Många människor uppfattar det som att avstånden mellan pilspetsarna skiljer sig. Men detta är felaktigt. Alla fyra avstånden mellan respektive par är lika långa. Denna typ av synvilla kallas Müller-Lyer-illusionen, efter en tysk sociolog som forskade på fenomenet i slutet av 1800-talet.
 I detta exempel kan vi kontrollera avstånden mellan pilspetsarna genom att räkna antal rutor. Men många illustrationer av information kan innehålla mycket krångligare synvillor som är svårare att genomskåda. Om vi endast skulle använda diagram och bilder för att göra våra analyser skulle många analyser bli sämre. Matematiken kan gör det svårare att ljuga, både för oss själva och för andra.
+
 **Figur 1: Åtta pilspetsar**
+
 ![](img/k2-2-6-image1.png){style="width:3in;height:3in"}
+
 #### Två dimensioner är för lite
 Diagrammet i figur 1 har två dimensioner: höjd och bredd. En kub har tre dimensioner: höjd, bredd och djup. I bilder är det ofta svårt att illustrera fler än två dimensioner. Men verkligheten är full av relationer som är mer komplexa än vad som går att visa i diagram. I våra egna liv kan vi hitta många exempel som är resultatet av tre eller fler faktorer.
 Effekten av ett fenomen kan även påverka effekten av andra fenomen. Denna typ av samband går sällan att illustrera enkelt och tydligt i bilder eller diagram. I dessa fall blir i stället de enkla illustrationerna vilseledande. I senare kapitel går vi igenom för- och nackdelarna med diagram och hur vi med hjälp av matematik kan jämföra relationer mellan flera fenomen samtidigt.

@@ -21,7 +21,9 @@ så är de ENSKILDA residualerna i regel skilda från noll. Om varje enskild res
 - Att vi endast har två observationer (en linje genom två punkter är alltid perfekt)
 - Att sambandet är deterministiskt (inget slumpmässigt brus)
 I praktiken har vi nästan alltid variation kring regressionslinjen, vilket är normalt och förväntat.
+
 ![](img/k2-2-5-image1.png){style="width:2.75625in;height:2.3625in"}
+
 **Figur 1 Estimera** $\widehat{\mathbf{V}}$
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Observation i    

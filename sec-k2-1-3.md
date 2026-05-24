@@ -27,6 +27,7 @@ Om vi blandar information i en variabel, till exempel längd och inkomst, blir d
 #### Datatabeller
 Ett vanligt sätt att organisera data är tabeller, där varje kolumn representerar en variabel och varje rad en observation. Tabell 1 visar ett exempel där vi har tre datavariabler och kallar dessa för $x,\ y$ och $z$.
 Observationerna numrerar vi $y_{1}$ till $y_{4}$, $x_{1}$ till $x_{4}$ och $z_{1}$ till $z_{4}$. Det finns inga regler för hur variabler ska namnges eller numreras. Det förekommer även att variabler kallas för samma bokstav och skiljs åt genom numrering, till exempel variablerna $x_{1},\ x_{2}$ och så vidare.
+
 **Tabell 1: Tre variabler med fyra observationer**
   ---------------------------------------------------------------------------------------------------------------------------------------
                   Variabel 1 $(y)$   Variabel 2 $(x)$   Variabel 3 $(z)$
@@ -44,6 +45,7 @@ Data som används för beräkningar brukar delas in i följande datatyper: *kvot
 - *Ekvidistans*: Är avståndet mellan två värden i x alltid lika stort?
 - *Absolut nollpunkt*: Är variabeln definierad så att det finns ett minsta tänkbart värde?
 Beroende på svaren på dessa tre frågor kan vi placera vår variabel i någon av de fyra datatyperna. De tre kriterierna och de fyra datatyperna sammanfattas i tabell 2. Låt oss gå igenom de fyra datatyperna och ge några exempel.
+
 **Tabell 2: Fyra datatyper**
   ---------------------------------------------------------------
                   Rangordning   Ekvidistans   Absolut nollpunkt

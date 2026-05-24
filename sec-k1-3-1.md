@@ -24,8 +24,11 @@ Nu söker vi jämviktspriset, vilket är det värde för *p* som ger att $q_{\te
 Vi kan börja med att rita upp ekvationssystemet i ett diagram, se figur 1. I diagrammet har vi två linjer, en per ekvation i ekvationssystemet. Kurvan som lutar uppåt till höger är den första ekvationen i systemet, funktionen för $q_{\text{utbud}}$. Den andra linjen, som lutar ned åt höger i bilden, är funktionen för $q_{\text{efterfrågan}}$. I diagrammet möts linjerna vid en unik punkt, som definierar jämviktspriset $p^{*}$ och jämviktskvantiteten $q^{*}$.
 Så länge beteendet hos säljare och köpare är konstant kommer jämviktspriset och jämviktsutbudet att vara detsamma. Om villkoren för köpare och säljare ändras, så ändras också marknadens pris och kvantitet.
 Vi kan tänka på denna teoretiska figur som ett resonemang om var pris och såld kvantitet kommer att befinna sig i genomsnitt på lång sikt, så länge de mer långsiktiga villkoren för köpare och säljare inte ändras.
+
 **Figur 1. Utbud, efterfrågan, jämviktspris och jämviktsutbud.**
+
 ![](img/k1-3-1-image1.png){style="width:4in;height:3in"}
+
 
 ::: {.fig-caption}
 Förklaring: Diagrammet illustrerar ett ekvationssystem med två funktioner och en linje i diagrammet per funktion. Linjerna för utbud och efterfrågan kallas ofta för utbudskurvan och efterfrågekurvan. Där linjerna möts är systemet i jämvikt. I detta fall har vi jämviktspris $p^{*} = 4$ och jämviktsutbud $q^{*} = 12$.
@@ -68,8 +71,11 @@ $\text{vinst}_{1}^{*} = 20*\frac{100}{3} \approx 667$ (10)$ $
 $$\text{vinst}_{2}^{*} = 50*\frac{100}{3} - 1000 \approx 667$$
 
 Detta illustreras i figur 2, där de två strategierna är utritade med varsin rak linje. Linjerna möts vid den punkt där de två strategierna ger likvärdig vinst: 33,3 sålda kakburkar och cirka 667 kr vinst.
+
 **Figur 2. Vinst med hänsyn till antal sålda kakburkar enligt två strategier**
+
 ![](img/k1-3-1-image2.png){style="width:4in;height:3in"}
+
 
 ::: {.fig-caption}
 Förklaring: Diagrammet illustrerar vid vilken kvantitet sålda kakburkar (33,3 på horisontella x-axeln) som de två strategierna är likvärdiga. Vid denna nivå ger båda strategierna en vinst på 667 kr.
