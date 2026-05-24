@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>26 Avvikelse, varians och standardavvikelse | Matematik och statistik för samhällsvetare</title>
 <meta name="author" content="">
-<meta name="description" content="26.0.1 Begrepp Absolut avvikelse: För variabel \(x\) population: \(\frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|\). Varians: För en variabel \(x\) har vi: \(var(x) = \left( \frac{1}{n}...">
+<meta name="description" content="26.0.1 Begrepp  Absolut avvikelse: För variabel \(x\) population: \(\frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|\). Varians: För en variabel \(x\) har vi: \(var(x) = \left( \frac{1}{n}...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="26 Avvikelse, varians och standardavvikelse | Matematik och statistik för samhällsvetare">
 <meta property="og:type" content="book">
-<meta property="og:description" content="26.0.1 Begrepp Absolut avvikelse: För variabel \(x\) population: \(\frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|\). Varians: För en variabel \(x\) har vi: \(var(x) = \left( \frac{1}{n}...">
+<meta property="og:description" content="26.0.1 Begrepp  Absolut avvikelse: För variabel \(x\) population: \(\frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|\). Varians: För en variabel \(x\) har vi: \(var(x) = \left( \frac{1}{n}...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="26 Avvikelse, varians och standardavvikelse | Matematik och statistik för samhällsvetare">
-<meta name="twitter:description" content="26.0.1 Begrepp Absolut avvikelse: För variabel \(x\) population: \(\frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|\). Varians: För en variabel \(x\) har vi: \(var(x) = \left( \frac{1}{n}...">
+<meta name="twitter:description" content="26.0.1 Begrepp  Absolut avvikelse: För variabel \(x\) population: \(\frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|\). Varians: För en variabel \(x\) har vi: \(var(x) = \left( \frac{1}{n}...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -114,182 +114,102 @@
 <h1>
 <span class="header-section-number">26</span> Avvikelse, varians och standardavvikelse<a class="anchor" aria-label="anchor" href="#k2-2-2"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-25" class="section level3" number="26.0.1">
+<div id="begrepp-23" class="section level3" number="26.0.1">
 <h3>
-<span class="header-section-number">26.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-25"><i class="fas fa-link"></i></a>
+<span class="header-section-number">26.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-23"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
-<li><p><strong>Absolut avvikelse:</strong> För variabel <span class="math inline">\(x\)</span> population: <span class="math inline">\(\frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|\)</span>.</p></li>
-<li><p><strong>Varians:</strong> För en variabel <span class="math inline">\(x\)</span> har vi: <span class="math inline">\(var(x) = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}\)</span>.</p></li>
-<li><p><strong>Standardavvikelse:</strong> För variabel <span class="math inline">\(x\)</span> har vi: <span class="math inline">\(s_{x} = + \sqrt{var(x)} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n} \right)^{\frac{1}{2}}\)</span></p></li>
-<li><p><strong>Bessels korrigering:</strong> För att undvika att vi underskattar populationsvärden kan vi dividera estimatorerna med <span class="math inline">\(n - 1\)</span> i stället för <span class="math inline">\(n\)</span>.</p></li>
+<li>
+<strong>Absolut avvikelse:</strong> För variabel <span class="math inline">\(x\)</span> population: <span class="math inline">\(\frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|\)</span>.</li>
+<li>
+<strong>Varians:</strong> För en variabel <span class="math inline">\(x\)</span> har vi: <span class="math inline">\(var(x) = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}\)</span>.</li>
+<li>
+<strong>Standardavvikelse:</strong> För variabel <span class="math inline">\(x\)</span> har vi: <span class="math inline">\(s_{x} = + \sqrt{var(x)} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n} \right)^{\frac{1}{2}}\)</span>
+</li>
+<li>
+<strong>Bessels korrigering:</strong> För att undvika att vi underskattar populationsvärden kan vi dividera estimatorerna med <span class="math inline">\(n - 1\)</span> i stället för <span class="math inline">\(n\)</span>.
+### Teori
+I föregående avsnitt beskrev vi hur vi med urvalsdata kan uppskatta populationens medelvärde. Vi såg även exempel på hur vi kan beskriva spridning i en samling värden. I detta avsnitt ska vi nu introducera andra vanliga statistiska metoder för att studera spridning.
+#### Absolut avvikelse
+Ett sätt att mäta avvikelser från medelvärdet är att uppskatta <em>genomsnittlig absolut avvikelse</em> (engelska <em>mean absolute deviation</em>):
+Genomsnittlig absolut avvikelse <span class="math inline">\(= \frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|\)</span> (1)
+Vi kan även byta ut medelvärdet <span class="math inline">\(\overline{x}\)</span> mot annat genomsnittsmått som median eller typvärde.
+#### Varians
+Ett annat sätt att summera avvikelser från medelvärdet till ett positivt värde är att kvadrera avvikelserna: <span class="math inline">\(\left( x_{i} - \overline{x} \right)^{2}\)</span>. Dividerar vi summan av de kvadrerade differenserna med antal observationer <span class="math inline">\(n\)</span> får vi <em>variansen</em> för variabel <em>x</em>:
+&gt; Varians:  <span class="math inline">\(var(x) = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}\)</span> (2)
+Parentesen <span class="math inline">\(\left( x_{i} - \overline{x} \right)^{2}\)</span> ska beräknas för varje observation och summeras:
+<span class="math inline">\(\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)^{2} =}\left( x_{i} - \overline{x} \right)^{2} + \left( x_{i} - \overline{x} \right)^{2} + \ldots + \left( x_{i} - \overline{x} \right)^{2}\)</span> (3)
+På samma sätt som att medelvärdet <span class="math inline">\(\overline{x}\)</span> är en uppskattning av populationens <span class="math inline">\(\mu_{x}\)</span> är <span class="math inline">\(var(x)\)</span> en uppskattning av variansen i populationen. Variansen i populationen för variabeln <span class="math inline">\(x\)</span> betecknas ofta med den grekiska bokstaven lilla sigma i kvadrat, <span class="math inline">\(\sigma_{x}^{2}\)</span>.
+#### Standardavvikelse
+<em>Standardavvikelse</em> för en samling observationer är positiva kvadratroten av variansen. För population betecknas ofta standardavvikelse <span class="math inline">\(\sigma_{x}\)</span>.
+Uppskattad standardavvikelse för variabel <span class="math inline">\(x\)</span> kan skrivas <span class="math inline">\({\widehat{\sigma}}_{x}\)</span>, <span class="math inline">\(sd_{x}\)</span> eller <span class="math inline">\(s_{x}\)</span>:
+Standardavvikelse:  <span class="math inline">\(s_{x} = + \sqrt{var(x)} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n} \right)^{\frac{1}{2}}\)</span> (4)
+#### Bessels korrigering
+När vi estimerar medelvärdet med urvalsdata (<span class="math inline">\(\overline{x}\)</span>) avviker ofta detta från populationens medelvärde (<span class="math inline">\(\mu_{x}\)</span>). Denna avvikelse tenderar att leda till att vår uppskattning av populationens varians blir för liten.
+För att justera för detta när vi estimerar varians (ekvation 2) dividera med <span class="math inline">\(n - 1\)</span> i stället för <span class="math inline">\(n\)</span>. Detta kallas för <em>korrigerad varians</em> eller <em>urvalsvarians</em> (engelska <em>sample variance</em>):
+Varians urval: <span class="math inline">\(var(x) = \left( \frac{1}{n - 1} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}\)</span> (5)
+Division med <span class="math inline">\(n - 1\)</span> kallas för <em>Bessels korrigering</em> och medför ofta att den uppskattade variansen hamnar närmare populationens varians.
+Många datorprogram har färdiga kommandon för att estimera (beräkna) varians och använder då Bessels korrigering, som i ekvation 5. Även för standardavvikelse kan vi använda Bessels korrigering:
+Standardavvikelse urval: <span class="math inline">\(s_{x} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} \right)^{\frac{1}{2}}\)</span> (6)
+#### Varians och standardavvikelse med konstant
+Om vi har en konstant <span class="math inline">\(a\)</span>, ett valfritt värde, är variansen för denna <span class="math inline">\(var(a) = 0\)</span>. Detta eftersom ett enskilt värde inte har någon spridning. Om <span class="math inline">\(a\)</span> är multiplicerad med en variabel <span class="math inline">\(x\)</span> är variansen för <span class="math inline">\(ax\)</span> lika med <span class="math inline">\(a^{2}var(x)\)</span>. Detta kan vi se genom att ta:
+<span class="math inline">\(var(ax) = \left( \frac{1}{n} \right)\sum_{i}^{}\left( {ax}_{i} - a\overline{x} \right)^{2}\)</span> (7)
+<span class="math inline">\(= \left( \frac{1}{n} \right)\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right)\)</span>
+Eftersom <span class="math inline">\(a\)</span> inte påverkas av summeringen kan vi flytta ut alla <span class="math inline">\(a^{2}\)</span>:
+<span class="math inline">\(var(ax) = a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i}^{2} - 2\overline{x} + {\overline{x}}^{2} \right)\)</span> (8)
+<span class="math inline">\(= a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i} - \overline{x} \right)^{2}\)</span>
+<span class="math inline">\(= a^{2}var(x)\)</span>
+För standardavvikelse får vi:
+<span class="math inline">\(s_{x}(ax) = \left( \frac{1}{n}\sum_{i}^{n}\left( {ax}_{i} - a\overline{x} \right)^{2} \right)^{\frac{1}{2}}\)</span> (9)
+<span class="math inline">\(= \left( \frac{1}{n}\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right) \right)^{\frac{1}{2}}\)</span>
+<span class="math inline">\(= \left( a^{2} \right)^{\frac{1}{2}}\left( \frac{1}{n}\sum\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}}\)</span>
+<span class="math inline">\(= \|a\|s_{x}\)</span>
+där <span class="math inline">\(\|a\|\)</span> är absolutbeloppet av konstanten <span class="math inline">\(a\)</span>.
+#### Ett exempel
+Nu ska vi beräkna (skatta) variansen med fyra observationer för två variabler: <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>. Variabel <span class="math inline">\(x\)</span> har värdena 3, 4, 6 och 7. Variabeln <span class="math inline">\(y\)</span> har värdena 3, 2, 5 och 4. Tabell 1 sammanfattar beräkningarna vi behöver.
+<strong>Tabell 1: Några beräkningar för variablerna</strong> <span class="math inline">\(\mathbf{x}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{y}\)</span>
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————-
+Observation</li>
 </ul>
-</div>
-<div id="teori-25" class="section level3" number="26.0.2">
-<h3>
-<span class="header-section-number">26.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-25"><i class="fas fa-link"></i></a>
-</h3>
-<p>I föregående avsnitt beskrev vi hur vi med urvalsdata kan uppskatta populationens medelvärde. Vi såg även exempel på hur vi kan beskriva spridning i en samling värden. I detta avsnitt ska vi nu introducera andra vanliga statistiska metoder för att studera spridning.</p>
-<div id="absolut-avvikelse" class="section level4" number="26.0.2.1">
-<h4>
-<span class="header-section-number">26.0.2.1</span> Absolut avvikelse<a class="anchor" aria-label="anchor" href="#absolut-avvikelse"><i class="fas fa-link"></i></a>
-</h4>
-<p>Ett sätt att mäta avvikelser från medelvärdet är att uppskatta <em>genomsnittlig absolut avvikelse</em> (engelska <em>mean absolute deviation</em>):</p>
-<p>Genomsnittlig absolut avvikelse <span class="math inline">\(= \frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|\)</span> (1)</p>
-<p>Vi kan även byta ut medelvärdet <span class="math inline">\(\overline{x}\)</span> mot annat genomsnittsmått som median eller typvärde.</p>
-</div>
-<div id="varians" class="section level4" number="26.0.2.2">
-<h4>
-<span class="header-section-number">26.0.2.2</span> Varians<a class="anchor" aria-label="anchor" href="#varians"><i class="fas fa-link"></i></a>
-</h4>
-<p>Ett annat sätt att summera avvikelser från medelvärdet till ett positivt värde är att kvadrera avvikelserna: <span class="math inline">\(\left( x_{i} - \overline{x} \right)^{2}\)</span>. Dividerar vi summan av de kvadrerade differenserna med antal observationer <span class="math inline">\(n\)</span> får vi <em>variansen</em> för variabel <em>x</em>:</p>
-<blockquote>
-<p>Varians:  <span class="math inline">\(var(x) = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}\)</span> (2)</p>
-</blockquote>
-<p>Parentesen <span class="math inline">\(\left( x_{i} - \overline{x} \right)^{2}\)</span> ska beräknas för varje observation och summeras:</p>
-<p><span class="math inline">\(\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)^{2} =}\left( x_{i} - \overline{x} \right)^{2} + \left( x_{i} - \overline{x} \right)^{2} + \ldots + \left( x_{i} - \overline{x} \right)^{2}\)</span> (3)</p>
-<p>På samma sätt som att medelvärdet <span class="math inline">\(\overline{x}\)</span> är en uppskattning av populationens <span class="math inline">\(\mu_{x}\)</span> är <span class="math inline">\(var(x)\)</span> en uppskattning av variansen i populationen. Variansen i populationen för variabeln <span class="math inline">\(x\)</span> betecknas ofta med den grekiska bokstaven lilla sigma i kvadrat, <span class="math inline">\(\sigma_{x}^{2}\)</span>.</p>
-</div>
-<div id="standardavvikelse" class="section level4" number="26.0.2.3">
-<h4>
-<span class="header-section-number">26.0.2.3</span> Standardavvikelse<a class="anchor" aria-label="anchor" href="#standardavvikelse"><i class="fas fa-link"></i></a>
-</h4>
-<p><em>Standardavvikelse</em> för en samling observationer är positiva kvadratroten av variansen. För population betecknas ofta standardavvikelse <span class="math inline">\(\sigma_{x}\)</span>.</p>
-<p>Uppskattad standardavvikelse för variabel <span class="math inline">\(x\)</span> kan skrivas <span class="math inline">\({\widehat{\sigma}}_{x}\)</span>, <span class="math inline">\(sd_{x}\)</span> eller <span class="math inline">\(s_{x}\)</span>:</p>
-<p>Standardavvikelse:  <span class="math inline">\(s_{x} = + \sqrt{var(x)} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n} \right)^{\frac{1}{2}}\)</span> (4)</p>
-</div>
-<div id="bessels-korrigering" class="section level4" number="26.0.2.4">
-<h4>
-<span class="header-section-number">26.0.2.4</span> Bessels korrigering<a class="anchor" aria-label="anchor" href="#bessels-korrigering"><i class="fas fa-link"></i></a>
-</h4>
-<p>När vi estimerar medelvärdet med urvalsdata (<span class="math inline">\(\overline{x}\)</span>) avviker ofta detta från populationens medelvärde (<span class="math inline">\(\mu_{x}\)</span>). Denna avvikelse tenderar att leda till att vår uppskattning av populationens varians blir för liten.</p>
-<p>För att justera för detta när vi estimerar varians (ekvation 2) dividera med <span class="math inline">\(n - 1\)</span> i stället för <span class="math inline">\(n\)</span>. Detta kallas för <em>korrigerad varians</em> eller <em>urvalsvarians</em> (engelska <em>sample variance</em>):</p>
-<p>Varians urval: <span class="math inline">\(var(x) = \left( \frac{1}{n - 1} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}\)</span> (5)</p>
-<p>Division med <span class="math inline">\(n - 1\)</span> kallas för <em>Bessels korrigering</em> och medför ofta att den uppskattade variansen hamnar närmare populationens varians.</p>
-<p>Många datorprogram har färdiga kommandon för att estimera (beräkna) varians och använder då Bessels korrigering, som i ekvation 5. Även för standardavvikelse kan vi använda Bessels korrigering:</p>
-<p>Standardavvikelse urval: <span class="math inline">\(s_{x} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} \right)^{\frac{1}{2}}\)</span> (6)</p>
-</div>
-<div id="varians-och-standardavvikelse-med-konstant" class="section level4" number="26.0.2.5">
-<h4>
-<span class="header-section-number">26.0.2.5</span> Varians och standardavvikelse med konstant<a class="anchor" aria-label="anchor" href="#varians-och-standardavvikelse-med-konstant"><i class="fas fa-link"></i></a>
-</h4>
-<p>Om vi har en konstant <span class="math inline">\(a\)</span>, ett valfritt värde, är variansen för denna <span class="math inline">\(var(a) = 0\)</span>. Detta eftersom ett enskilt värde inte har någon spridning. Om <span class="math inline">\(a\)</span> är multiplicerad med en variabel <span class="math inline">\(x\)</span> är variansen för <span class="math inline">\(ax\)</span> lika med <span class="math inline">\(a^{2}var(x)\)</span>. Detta kan vi se genom att ta:</p>
-<p><span class="math inline">\(var(ax) = \left( \frac{1}{n} \right)\sum_{i}^{}\left( {ax}_{i} - a\overline{x} \right)^{2}\)</span> (7)</p>
-<p><span class="math inline">\(= \left( \frac{1}{n} \right)\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right)\)</span></p>
-<p>Eftersom <span class="math inline">\(a\)</span> inte påverkas av summeringen kan vi flytta ut alla <span class="math inline">\(a^{2}\)</span>:</p>
-<p><span class="math inline">\(var(ax) = a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i}^{2} - 2\overline{x} + {\overline{x}}^{2} \right)\)</span> (8)</p>
-<p><span class="math inline">\(= a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i} - \overline{x} \right)^{2}\)</span></p>
-<p><span class="math inline">\(= a^{2}var(x)\)</span></p>
-<p>För standardavvikelse får vi:</p>
-<p><span class="math inline">\(s_{x}(ax) = \left( \frac{1}{n}\sum_{i}^{n}\left( {ax}_{i} - a\overline{x} \right)^{2} \right)^{\frac{1}{2}}\)</span> (9)</p>
-<p><span class="math inline">\(= \left( \frac{1}{n}\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right) \right)^{\frac{1}{2}}\)</span></p>
-<p><span class="math inline">\(= \left( a^{2} \right)^{\frac{1}{2}}\left( \frac{1}{n}\sum\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}}\)</span></p>
-<p><span class="math inline">\(= \|a\|s_{x}\)</span></p>
-<p>där <span class="math inline">\(\|a\|\)</span> är absolutbeloppet av konstanten <span class="math inline">\(a\)</span>.</p>
-</div>
-<div id="ett-exempel-1" class="section level4" number="26.0.2.6">
-<h4>
-<span class="header-section-number">26.0.2.6</span> Ett exempel<a class="anchor" aria-label="anchor" href="#ett-exempel-1"><i class="fas fa-link"></i></a>
-</h4>
-<p>Nu ska vi beräkna (skatta) variansen med fyra observationer för två variabler: <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>. Variabel <span class="math inline">\(x\)</span> har värdena 3, 4, 6 och 7. Variabeln <span class="math inline">\(y\)</span> har värdena 3, 2, 5 och 4. Tabell 1 sammanfattar beräkningarna vi behöver.</p>
-<p><strong>Tabell 1: Några beräkningar för variablerna</strong> <span class="math inline">\(\mathbf{x}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{y}\)</span></p>
+<p><span class="math display">\[x_{i}\]</span></p>
+<p><span class="math display">\[y_{i}\]</span></p>
+<p><span class="math display">\[x_{i} - \overline{x}\]</span></p>
+<p><span class="math display">\[y_{i} - \overline{y}\]</span></p>
+<p><span class="math display">\[\left( x_{i} - \overline{x} \right)^{2}\]</span></p>
+<p><span class="math display">\[\left( y_{i} - \overline{y} \right)^{2}\]</span></p>
 <div class="inline-table"><table style="width:99%;" class="table table-sm">
-<colgroup>
-<col width="4%">
-<col width="10%">
-<col width="10%">
-<col width="15%">
-<col width="15%">
-<col width="21%">
-<col width="21%">
-</colgroup>
+<colgroup><col width="99%"></colgroup>
 <thead><tr class="header">
-<th align="left">Observation</th>
-<th align="left">ine{x}$$</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
+<th align="left">1 3 3 -2 -0,5 4 0,25
+2 4 2 -1 -1,5 1 2,25
+3 6 5 1 1,5 1 2,25
+4 7 4 2 0,5 4 0,25</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">1</td>
-<td align="left">3</td>
-<td>3</td>
-<td>-2</td>
-<td>-0,5</td>
-<td>4</td>
-<td>0,25</td>
+<td align="left">använder ekvation 5 för att skatta varians:
+ar(x) = =  $ (10)
+ar(y) = = $
+riansen för variabel <span class="math inline">\(x\)</span> är större än variansen i variabel <span class="math inline">\(y\)</span>. Detta indikerar att värdena i <span class="math inline">\(x\)</span> är mer utspridda från medelvärdet jämfört med spridningen i variabel <span class="math inline">\(y\)</span>.
+r att beräkna standardavvikelse för variablerna <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> tar vi positiva kvadratroten av variansen:
+<span class="math inline">\(s_{x} = \sqrt{\frac{\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)^{2}\ }}{n - 1}} = + \sqrt{\frac{10}{3}} \approx 1,826\)</span> (11)
+_{y} = + ,291$</td>
 </tr>
 <tr class="even">
-<td align="left">2</td>
-<td align="left">4</td>
-<td>2</td>
-<td>-1</td>
-<td>-1,5</td>
-<td>1</td>
-<td>2,25</td>
+<td align="left">: {.ex-section-title}
+ningar
+:</td>
 </tr>
 <tr class="odd">
-<td align="left">3</td>
-<td align="left">6</td>
-<td>5</td>
-<td>1</td>
-<td>1,5</td>
-<td>1</td>
-<td>2,25</td>
-</tr>
-<tr class="even">
-<td align="left">4</td>
-<td align="left">7</td>
-<td>4</td>
-<td>2</td>
-<td>0,5</td>
-<td>4</td>
-<td>0,25</td>
-</tr>
-<tr class="odd">
-<td align="left">Medelvärde</td>
-<td align="left">5</td>
-<td>3,5</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td align="left">Summa</td>
-<td align="left">20</td>
-<td>14</td>
-<td></td>
-<td></td>
-<td>10</td>
-<td>5</td>
+<td align="left">cript&gt;window.exerciseData=window.exerciseData||{};window.exerciseData[“k2-2-2”]=[ { “id”: “k2-2-2-001”, “name”: “Uppgift 1”, “exercise”: “Vad kallas korrigeringen som innebär att man dividerar med \(n - 1\) i stället för \(n\) när man beräknar urvalsvarians?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Standardiseringskorrigeringen”, “Bessels korrigering”, “Gauss-korrigeringen”, “Normaliseringskorrigeringen” ], “correct”: “Bessels korrigering” } }, “error”: { “message”: “Korrigeringen är uppkallad efter en matematiker och syftar till att undvika att man underskattar populationens varians.” }, “correct”: { “message”: “Rätt! Bessels korrigering innebär att man dividerar med \(n - 1\) i stället för \(n\), vilket ger en bättre uppskattning av populationens varians när man arbetar med urvalsdata.” } }, { “id”: “k2-2-2-002”, “name”: “Uppgift 2”, “exercise”: “Om en konstant \(a\) multipliceras med en variabel \(x\), vad blir variansen för \(ax\)?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “\(a \cdot \text{var}(x)\)”, “\(a^2 \cdot \text{var}(x)\)”, “\(\sqrt{a} \cdot \text{var}(x)\)”, “\(\text{var}(x)\) (konstanten påverkar inte variansen)” ], “correct”: “\(a^2 \cdot \text{var}(x)\)” } }, “error”: { “message”: “Kom ihåg att variansen beräknas med kvadrerade avvikelser, vilket innebär att konstanten kvadreras.” }, “correct”: { “message”: “Rätt! Eftersom variansen bygger på kvadrerade avvikelser gäller att \(\text{var}(ax) = a^2 \cdot \text{var}(x)\). Standardavvikelsen för \(ax\) blir i sin tur \(|a| \cdot s_x\).” } }, { “id”: “k2-2-2-003”, “name”: “Uppgift 3”, “exercise”: “Variabeln \(x\) har fyra värden: 3, 4, 6 och 7, med medelvärde \(\overline{x} = 5\). Beräkna summan av de kvadrerade avvikelserna: \[\sum_{i=1}^{4}(x_i - \overline{x})^2\]”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “10” }, “answerformat”: ““,”error”: { “message”: “Beräkna \((3-5)^2 + (4-5)^2 + (6-5)^2 + (7-5)^2\) och summera.” }, “correct”: { “message”: “Rätt! \((3-5)^2 + (4-5)^2 + (6-5)^2 + (7-5)^2 = 4 + 1 + 1 + 4 = 10\).” } }, { “id”: “k2-2-2-004”, “name”: “Uppgift 4”, “exercise”: “Variabeln \(y\) har fyra värden: 3, 2, 5 och 4, med medelvärde \(\overline{y} = 3{,}5\). Använd Bessels korrigering och beräkna urvalsvariansen \[\text{var}(y) = \frac{\sum_{i=1}^{4}(y_i - \overline{y})^2}{n-1}\] Summan av kvadrerade avvikelser för \(y\) är 5. Ange svaret som ett decimaltal med tre decimaler (avrunda om nödvändigt).”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “1.667” }, “answerformat”: “Ange svaret med punkt som decimalavskiljare, t.ex. 1.667”, “error”: { “message”: “Dividera summan av kvadrerade avvikelser (= 5) med \(n - 1 = 3\). Resultatet är 5/3 ≈ 1,667.” }, “correct”: { “message”: “Rätt! Med Bessels korrigering är urvalsvariansen \(\text{var}(y) = 5 / (4-1) = 5/3 \approx 1{,}667\).” } }, { “id”: “k2-2-2-005”, “name”: “Uppgift 5”, “exercise”: “Variansen för variabel \(x\) är \(\text{var}(x) = 10/3\). Beräkna standardavvikelsen \(s_x = \sqrt{\text{var}(x)}\) och runda av till tre decimaler.”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “1.826” }, “answerformat”: “Ange svaret med punkt som decimalavskiljare, t.ex. 1.826”, “error”: { “message”: “Ta positiva kvadratroten av \(10/3\). Kontrollräkning: \(\sqrt{3{,}333…} \approx 1{,}826\).” }, “correct”: { “message”: “Rätt! Standardavvikelsen är \(s_x = \sqrt{10/3} \approx 1{,}826\). Standardavvikelsen är alltid den positiva kvadratroten av variansen och har samma enhet som den ursprungliga variabeln.” } }];
+iv class=“exercise-section” data-section-id=“k2-2-2”&gt;</td>
 </tr>
 </tbody>
 </table></div>
-<p>Vi använder ekvation 5 för att skatta varians:</p>
-<p><span class="math inline">\(var(x) = \frac{\sum_{i}^{}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{10}{3}\ \)</span> (10)</p>
-<p><span class="math inline">\(var(y) = \frac{\sum_{i}^{}\left( y_{i} - \overline{y} \right)^{2}}{n - 1} = \frac{5}{3}\)</span></p>
-<p>Variansen för variabel <span class="math inline">\(x\)</span> är större än variansen i variabel <span class="math inline">\(y\)</span>. Detta indikerar att värdena i <span class="math inline">\(x\)</span> är mer utspridda från medelvärdet jämfört med spridningen i variabel <span class="math inline">\(y\)</span>.</p>
-<p>För att beräkna standardavvikelse för variablerna <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> tar vi positiva kvadratroten av variansen:</p>
-<blockquote>
-<p><span class="math inline">\(s_{x} = \sqrt{\frac{\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)^{2}\ }}{n - 1}} = + \sqrt{\frac{10}{3}} \approx 1,826\)</span> (11)</p>
-</blockquote>
-<p><span class="math inline">\(s_{y} = + \sqrt{\frac{5}{3}} \approx 1,291\)</span></p>
-<div class="ex-section-title">
-<p>Övningar</p>
-</div>
-<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-2-2"]=[  {    "id": "k2-2-2-001",    "name": "Uppgift 1",    "exercise": "Vad kallas korrigeringen som innebär att man dividerar med \\(n - 1\\) i stället för \\(n\\) när man beräknar urvalsvarians?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Standardiseringskorrigeringen",          "Bessels korrigering",          "Gauss-korrigeringen",          "Normaliseringskorrigeringen"        ],        "correct": "Bessels korrigering"      }    },    "error": { "message": "Korrigeringen är uppkallad efter en matematiker och syftar till att undvika att man underskattar populationens varians." },    "correct": { "message": "Rätt! Bessels korrigering innebär att man dividerar med \\(n - 1\\) i stället för \\(n\\), vilket ger en bättre uppskattning av populationens varians när man arbetar med urvalsdata." }  },  {    "id": "k2-2-2-002",    "name": "Uppgift 2",    "exercise": "Om en konstant \\(a\\) multipliceras med en variabel \\(x\\), vad blir variansen för \\(ax\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(a \\cdot \\text{var}(x)\\)",          "\\(a^2 \\cdot \\text{var}(x)\\)",          "\\(\\sqrt{a} \\cdot \\text{var}(x)\\)",          "\\(\\text{var}(x)\\) (konstanten påverkar inte variansen)"        ],        "correct": "\\(a^2 \\cdot \\text{var}(x)\\)"      }    },    "error": { "message": "Kom ihåg att variansen beräknas med kvadrerade avvikelser, vilket innebär att konstanten kvadreras." },    "correct": { "message": "Rätt! Eftersom variansen bygger på kvadrerade avvikelser gäller att \\(\\text{var}(ax) = a^2 \\cdot \\text{var}(x)\\). Standardavvikelsen för \\(ax\\) blir i sin tur \\(|a| \\cdot s_x\\)." }  },  {    "id": "k2-2-2-003",    "name": "Uppgift 3",    "exercise": "Variabeln \\(x\\) har fyra värden: 3, 4, 6 och 7, med medelvärde \\(\\overline{x} = 5\\). Beräkna summan av de kvadrerade avvikelserna: \\[\\sum_{i=1}^{4}(x_i - \\overline{x})^2\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "10" },    "answerformat": "",    "error": { "message": "Beräkna \\((3-5)^2 + (4-5)^2 + (6-5)^2 + (7-5)^2\\) och summera." },    "correct": { "message": "Rätt! \\((3-5)^2 + (4-5)^2 + (6-5)^2 + (7-5)^2 = 4 + 1 + 1 + 4 = 10\\)." }  },  {    "id": "k2-2-2-004",    "name": "Uppgift 4",    "exercise": "Variabeln \\(y\\) har fyra värden: 3, 2, 5 och 4, med medelvärde \\(\\overline{y} = 3{,}5\\). Använd Bessels korrigering och beräkna urvalsvariansen \\[\\text{var}(y) = \\frac{\\sum_{i=1}^{4}(y_i - \\overline{y})^2}{n-1}\\] Summan av kvadrerade avvikelser för \\(y\\) är 5. Ange svaret som ett decimaltal med tre decimaler (avrunda om nödvändigt).",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "1.667" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 1.667",    "error": { "message": "Dividera summan av kvadrerade avvikelser (= 5) med \\(n - 1 = 3\\). Resultatet är 5/3 ≈ 1,667." },    "correct": { "message": "Rätt! Med Bessels korrigering är urvalsvariansen \\(\\text{var}(y) = 5 / (4-1) = 5/3 \\approx 1{,}667\\)." }  },  {    "id": "k2-2-2-005",    "name": "Uppgift 5",    "exercise": "Variansen för variabel \\(x\\) är \\(\\text{var}(x) = 10/3\\). Beräkna standardavvikelsen \\(s_x = \\sqrt{\\text{var}(x)}\\) och runda av till tre decimaler.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "1.826" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 1.826",    "error": { "message": "Ta positiva kvadratroten av \\(10/3\\). Kontrollräkning: \\(\\sqrt{3{,}333...} \\approx 1{,}826\\)." },    "correct": { "message": "Rätt! Standardavvikelsen är \\(s_x = \\sqrt{10/3} \\approx 1{,}826\\). Standardavvikelsen är alltid den positiva kvadratroten av variansen och har samma enhet som den ursprungliga variabeln." }  }];</script><div class="exercise-section" data-section-id="k2-2-2">
-
-</div>
-<hr>
 <div class="next-section-link">
 <p><a href="k2-2-3.html">→ Nästa avsnitt: <strong>Samvariation 1</strong></a></p>
 </div>
 
-</div>
 </div>
 </div>
 <script src="js/exercises.js"></script><script>
@@ -433,10 +353,7 @@
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k2-2-2"><span class="header-section-number">26</span> Avvikelse, varians och standardavvikelse</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#begrepp-25"><span class="header-section-number">26.0.1</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-25"><span class="header-section-number">26.0.2</span> Teori</a></li>
-</ul>
+<a class="nav-link" href="#k2-2-2"><span class="header-section-number">26</span> Avvikelse, varians och standardavvikelse</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-23"><span class="header-section-number">26.0.1</span> Begrepp</a></li></ul>
 </li></ul>
 
       <div class="book-extra">

@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>34 Härled estimatorerna | Matematik och statistik för samhällsvetare</title>
 <meta name="author" content="">
-<meta name="description" content="34.0.1 Begrepp Inga nya begrepp i detta avsnitt.  34.0.2 Teori Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att...">
+<meta name="description" content="34.0.1 Begrepp Inga nya begrepp i detta avsnitt. ### Teori Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att matematiken...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="34 Härled estimatorerna | Matematik och statistik för samhällsvetare">
 <meta property="og:type" content="book">
-<meta property="og:description" content="34.0.1 Begrepp Inga nya begrepp i detta avsnitt.  34.0.2 Teori Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att...">
+<meta property="og:description" content="34.0.1 Begrepp Inga nya begrepp i detta avsnitt. ### Teori Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att matematiken...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="34 Härled estimatorerna | Matematik och statistik för samhällsvetare">
-<meta name="twitter:description" content="34.0.1 Begrepp Inga nya begrepp i detta avsnitt.  34.0.2 Teori Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att...">
+<meta name="twitter:description" content="34.0.1 Begrepp Inga nya begrepp i detta avsnitt. ### Teori Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att matematiken...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -114,80 +114,66 @@
 <h1>
 <span class="header-section-number">34</span> Härled estimatorerna<a class="anchor" aria-label="anchor" href="#k2-3-4"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-33" class="section level3" number="34.0.1">
+<div id="begrepp-31" class="section level3" number="34.0.1">
 <h3>
-<span class="header-section-number">34.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-33"><i class="fas fa-link"></i></a>
+<span class="header-section-number">34.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-31"><i class="fas fa-link"></i></a>
 </h3>
-<p><em>Inga nya begrepp i detta avsnitt.</em></p>
-</div>
-<div id="teori-33" class="section level3" number="34.0.2">
-<h3>
-<span class="header-section-number">34.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-33"><i class="fas fa-link"></i></a>
-</h3>
-<p>Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att matematiken blir för tung kan du hoppa över detta avsnitt för nu och komma tillbaka senare om du vill förstå metoderna mer på djupet. Fokusera på att förstå vad estimatorerna gör. Det är inte avgörande att förstå varje steg i härledningarna.</p>
-<p>Varför bry sig om härledningen?</p>
-<ol style="list-style-type: decimal">
-<li><p>Det ger djupare förståelse för minstakvadratmetodens logik.</p></li>
-<li><p>Det visar att metoderna bygger på genomtänkt matematik.</p></li>
-<li><p>Det förbereder dig för mer avancerade metoder senare.</p></li>
-</ol>
-<div id="utgångspunkter" class="section level4" number="34.0.2.1">
-<h4>
-<span class="header-section-number">34.0.2.1</span> Utgångspunkter<a class="anchor" aria-label="anchor" href="#utg%C3%A5ngspunkter"><i class="fas fa-link"></i></a>
-</h4>
-<p>För regressionsmodellen <span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> där <span class="math inline">\(Y_{i}\)</span> och <span class="math inline">\(X_{i}\)</span> är variabler och <span class="math inline">\(V_{i}\)</span> är felterm, introducerade vi estimatorer för koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> i avsnitt 2.5:</p>
-<p><span class="math inline">\(\widehat{a} = \overline{Y} - \widehat{b}\overline{X}\)</span> (1)</p>
-<p><span class="math inline">\(\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}}\)</span></p>
-<p>Nu ska vi gå igenom hur vi kan härleda estimatorerna. Minstakvadratmetoden låter oss definiera estimatorerna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> så att vi minimerar summan av de kvadrerade residualerna</p>
-<p><span class="math inline">\(\sum_{i}^{}{\widehat{V}}_{i}^{2} = \sum_{}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (2)</p>
-<p>Estimatorerna kan därför härledas ur ett minimeringsproblem. Om du känner dig osäker på maximeringsproblem och minimeringsproblem, se Mattebokens avsnitt om <a href="https://www.matteboken.se/lektioner/matte-3/derivatan-och-grafen/storsta-och-minsta-varde#!/">största och minsta värde under matte 3</a>.</p>
-<p>Summan av de kvadrerade residualerna blir:</p>
-<p><span class="math inline">\(\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = {\widehat{V}}_{i}^{2} + {\widehat{V}}_{i}^{2} + \ldots + {\widehat{V}}_{i}^{2}\)</span> (3)$ $</p>
+<p><em>Inga nya begrepp i detta avsnitt.</em>
+### Teori
+Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att matematiken blir för tung kan du hoppa över detta avsnitt för nu och komma tillbaka senare om du vill förstå metoderna mer på djupet. Fokusera på att förstå vad estimatorerna gör. Det är inte avgörande att förstå varje steg i härledningarna.
+Varför bry sig om härledningen?
+1. Det ger djupare förståelse för minstakvadratmetodens logik.
+2. Det visar att metoderna bygger på genomtänkt matematik.
+3. Det förbereder dig för mer avancerade metoder senare.
+#### Utgångspunkter
+För regressionsmodellen <span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> där <span class="math inline">\(Y_{i}\)</span> och <span class="math inline">\(X_{i}\)</span> är variabler och <span class="math inline">\(V_{i}\)</span> är felterm, introducerade vi estimatorer för koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> i avsnitt 2.5:
+<span class="math inline">\(\widehat{a} = \overline{Y} - \widehat{b}\overline{X}\)</span> (1)
+<span class="math inline">\(\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}}\)</span>
+Nu ska vi gå igenom hur vi kan härleda estimatorerna. Minstakvadratmetoden låter oss definiera estimatorerna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> så att vi minimerar summan av de kvadrerade residualerna
+<span class="math inline">\(\sum_{i}^{}{\widehat{V}}_{i}^{2} = \sum_{}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (2)
+Estimatorerna kan därför härledas ur ett minimeringsproblem. Om du känner dig osäker på maximeringsproblem och minimeringsproblem, se Mattebokens avsnitt om <a href="https://www.matteboken.se/lektioner/matte-3/derivatan-och-grafen/storsta-och-minsta-varde#!/">största och minsta värde under matte 3</a>.
+Summan av de kvadrerade residualerna blir:
+<span class="math inline">\(\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = {\widehat{V}}_{i}^{2} + {\widehat{V}}_{i}^{2} + \ldots + {\widehat{V}}_{i}^{2}\)</span> (3)$ $</p>
 <p><span class="math display">\[{= \left( Y_{1} - \widehat{Y_{1}} \right)^{2} + \left( Y_{2} - \widehat{Y_{2}} \right)^{2} + \ldots + \left( Y_{n} - \widehat{Y_{n}} \right)^{2} }{= \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}\]</span></p>
-<p>där n är antal observationer, <span class="math inline">\(\widehat{Y}\)</span> är predikterade <span class="math inline">\(Y\)</span>. För att kunna skatta <span class="math inline">\(\widehat{Y} = \widehat{a} + \widehat{b}X\)</span> behöver vi estimera <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Vi börjar med att sätta in denna definition av <span class="math inline">\(\widehat{Y}\)</span> i uttrycket från ekvation 3:</p>
-<p><span class="math inline">\(\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (4)</p>
+<p>där n är antal observationer, <span class="math inline">\(\widehat{Y}\)</span> är predikterade <span class="math inline">\(Y\)</span>. För att kunna skatta <span class="math inline">\(\widehat{Y} = \widehat{a} + \widehat{b}X\)</span> behöver vi estimera <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Vi börjar med att sätta in denna definition av <span class="math inline">\(\widehat{Y}\)</span> i uttrycket från ekvation 3:
+<span class="math inline">\(\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (4)</p>
 <p><span class="math display">\[= \sum_{i = 1}^{n}\left( Y_{i} - \left( \widehat{a} + \widehat{b}X_{i} \right) \right)^{2}\]</span></p>
 <p><span class="math display">\[= \sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)^{2}\]</span></p>
-</div>
-<div id="minimera-summan-av-kvadrerade-residualerna" class="section level4" number="34.0.2.2">
+<div id="minimera-summan-av-kvadrerade-residualerna" class="section level4" number="34.0.1.1">
 <h4>
-<span class="header-section-number">34.0.2.2</span> Minimera summan av kvadrerade residualerna<a class="anchor" aria-label="anchor" href="#minimera-summan-av-kvadrerade-residualerna"><i class="fas fa-link"></i></a>
+<span class="header-section-number">34.0.1.1</span> Minimera summan av kvadrerade residualerna<a class="anchor" aria-label="anchor" href="#minimera-summan-av-kvadrerade-residualerna"><i class="fas fa-link"></i></a>
 </h4>
-<p>Nu har vi en ekvation där summan av kvadrerade residualerna <span class="math inline">\(\sum_{i}^{}\widehat{{V_{i}}^{2}}\)</span> är en funktion av estimerade <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Det är denna funktion som vi ska minimera med hänsyn till <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>, vilket vi kan skriva som ett minimeringsproblem:</p>
-<p><span class="math inline">\(\min_{\text{m.h.t. }\widehat{a},\widehat{b}}{\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2}} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)^{2}\)</span> (5)</p>
-<p>Vi deriverar högerledet med hänsyn till <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Detta ger oss två ekvationer som kallas "förstagradsvillkor" (eller "första ordningens villkor"), alltså villkor som måste uppfyllas vid en minimumpunkt eller maximumpunkt.</p>
-<p><span class="math inline">\(\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{a}}\' = - 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0\)</span> (6)</p>
-<p><span class="math inline">\(\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{b}}\' = - 2\sum_{i = 1}^{n}{X_{i}(Y_{i} - \widehat{a} - \widehat{b}X_{i})} = 0\)</span></p>
-<p>där båda resultaten uppstår genom att vi deriverar parentesen (flyttar ned exponent 2) och deriverar innehållet i respektive parentes. När vi deriverar med hänsyn till <span class="math inline">\(\widehat{a}\)</span> får vi –1. När vi deriverar med hänsyn till <span class="math inline">\(\widehat{b}\)</span> får vi <span class="math inline">\(--X_{i}\)</span>. Vi sätter -2 till vänster om summeringstecknet eftersom dessa saker inte berörs av summeringen.</p>
-<p>Notera att det första villkoret i ekvation 6 innebär att <span class="math inline">\(\sum_{i}^{}\widehat{V_{i}} = 0\)</span> och det andra villkoret kan beskrivas som: <span class="math inline">\(\sum_{}^{}X_{i}\widehat{V_{i}} = 0\)</span>. Detta kommer vi att ha användning av längre fram.</p>
-</div>
-<div id="lösa-ut-widehata-och-widehatb" class="section level4" number="34.0.2.3">
-<h4>
-<span class="header-section-number">34.0.2.3</span> Lösa ut <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span><a class="anchor" aria-label="anchor" href="#l%C3%B6sa-ut-widehata-och-widehatb"><i class="fas fa-link"></i></a>
-</h4>
-<p>Från de två förstagradsvillkoren i ekvation 6 kan vi lösa ut <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Vi börjar med det första villkoret:</p>
-<p><span class="math inline">\(- 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0\)</span> (7)</p>
-<p><span class="math inline">\(( - 2)\sum_{i = 1}^{n}{Y_{i} - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}} = 0\)</span></p>
-<p>Eftersom alla termer är multiplicerade med -2 kan vi stryka denna faktor. Eftersom <span class="math inline">\(\widehat{a}\)</span> är konstant över alla observationer är termen <span class="math inline">\(\sum_{i}^{n}\widehat{a}\)</span> samma sak som antal observationer gånger <span class="math inline">\(\widehat{a}\)</span>: <span class="math inline">\(\sum_{i}^{n}\widehat{a} = n\widehat{a}\)</span>. Vi kan nu skriva:</p>
-<p><span class="math inline">\(0 = ( - 2)\sum_{i = 1}^{n}{Y_{i}\ - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}}\)</span> (8)$ $</p>
+<p>Nu har vi en ekvation där summan av kvadrerade residualerna <span class="math inline">\(\sum_{i}^{}\widehat{{V_{i}}^{2}}\)</span> är en funktion av estimerade <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Det är denna funktion som vi ska minimera med hänsyn till <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>, vilket vi kan skriva som ett minimeringsproblem:
+<span class="math inline">\(\min_{\text{m.h.t. }\widehat{a},\widehat{b}}{\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2}} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)^{2}\)</span> (5)
+Vi deriverar högerledet med hänsyn till <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Detta ger oss två ekvationer som kallas "förstagradsvillkor" (eller "första ordningens villkor"), alltså villkor som måste uppfyllas vid en minimumpunkt eller maximumpunkt.
+<span class="math inline">\(\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{a}}\' = - 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0\)</span> (6)
+<span class="math inline">\(\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{b}}\' = - 2\sum_{i = 1}^{n}{X_{i}(Y_{i} - \widehat{a} - \widehat{b}X_{i})} = 0\)</span>
+där båda resultaten uppstår genom att vi deriverar parentesen (flyttar ned exponent 2) och deriverar innehållet i respektive parentes. När vi deriverar med hänsyn till <span class="math inline">\(\widehat{a}\)</span> får vi –1. När vi deriverar med hänsyn till <span class="math inline">\(\widehat{b}\)</span> får vi <span class="math inline">\(--X_{i}\)</span>. Vi sätter -2 till vänster om summeringstecknet eftersom dessa saker inte berörs av summeringen.
+Notera att det första villkoret i ekvation 6 innebär att <span class="math inline">\(\sum_{i}^{}\widehat{V_{i}} = 0\)</span> och det andra villkoret kan beskrivas som: <span class="math inline">\(\sum_{}^{}X_{i}\widehat{V_{i}} = 0\)</span>. Detta kommer vi att ha användning av längre fram.
+#### Lösa ut <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>
+Från de två förstagradsvillkoren i ekvation 6 kan vi lösa ut <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Vi börjar med det första villkoret:
+<span class="math inline">\(- 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0\)</span> (7)
+<span class="math inline">\(( - 2)\sum_{i = 1}^{n}{Y_{i} - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}} = 0\)</span>
+Eftersom alla termer är multiplicerade med -2 kan vi stryka denna faktor. Eftersom <span class="math inline">\(\widehat{a}\)</span> är konstant över alla observationer är termen <span class="math inline">\(\sum_{i}^{n}\widehat{a}\)</span> samma sak som antal observationer gånger <span class="math inline">\(\widehat{a}\)</span>: <span class="math inline">\(\sum_{i}^{n}\widehat{a} = n\widehat{a}\)</span>. Vi kan nu skriva:
+<span class="math inline">\(0 = ( - 2)\sum_{i = 1}^{n}{Y_{i}\ - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}}\)</span> (8)$ $</p>
 <p><span class="math display">\[{0 = \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}\widehat{a}\sum_{i = 1}^{n}{\widehat{b}X_{i}} }{0 = \sum_{i = 1}^{n}Y_{i} - n\widehat{a} - \sum_{i = 1}^{n}{\widehat{b}X_{i}} }{n\widehat{a} = \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}{\widehat{b}X_{i}}\ }\]</span></p>
-<p>Vi dividerar med <span class="math inline">\(n\)</span> så att termen längst till höger blir <span class="math inline">\(\frac{1}{n}\sum_{}^{}{\widehat{b}X_{i}}\)</span>. Medelvärdet för <span class="math inline">\(X\)</span> kan skrivas <span class="math inline">\(\overline{X} = \frac{1}{n}\sum_{i}^{n}X_{i}\)</span> vilket ger:</p>
-<p><span class="math inline">\(\widehat{a} = \frac{1}{n}\sum_{i = 1}^{n}Y_{i} - \frac{1}{n}\sum_{i = 1}^{n}{\widehat{b}X}\)</span> (9)</p>
-<p><span class="math inline">\(\widehat{a} = \overline{Y} - \widehat{b}\overline{X}\)</span></p>
-<p>Nu har vi ett uttryck för <span class="math inline">\(\widehat{a}\)</span>. För att härleda <span class="math inline">\(\widehat{b}\)</span> börjar vi med det andra förstagradsvillkoret i ekvation 7:</p>
-<p><span class="math inline">\(0 = \sum_{i = 1}^{n}{- 2x_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)}\)</span> (10)</p>
-<p><span class="math inline">\(= \sum_{i = 1}^{n}X_{i}Y_{i} - \sum_{i = 1}^{n}X_{i}\widehat{a} - \sum_{i = 1}^{n}X_{i}\widehat{b}X_{i}\)</span></p>
-<p>Eftersom konstanterna inte summeras flyttar vi dessa till vänster om summatecknen. I termen längst till höger har vi <span class="math inline">\(x_{i}\*x_{i} = x_{i}^{2}\)</span>. Vi byter ut <span class="math inline">\(\widehat{a}\)</span> mot definitionen från ekvation 9:</p>
-<p><span class="math inline">\(0 = \sum_{i = 1}^{n}X_{i}Y_{i} - \widehat{a}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}X_{i}\)</span> (11)</p>
+<p>Vi dividerar med <span class="math inline">\(n\)</span> så att termen längst till höger blir <span class="math inline">\(\frac{1}{n}\sum_{}^{}{\widehat{b}X_{i}}\)</span>. Medelvärdet för <span class="math inline">\(X\)</span> kan skrivas <span class="math inline">\(\overline{X} = \frac{1}{n}\sum_{i}^{n}X_{i}\)</span> vilket ger:
+<span class="math inline">\(\widehat{a} = \frac{1}{n}\sum_{i = 1}^{n}Y_{i} - \frac{1}{n}\sum_{i = 1}^{n}{\widehat{b}X}\)</span> (9)
+<span class="math inline">\(\widehat{a} = \overline{Y} - \widehat{b}\overline{X}\)</span>
+Nu har vi ett uttryck för <span class="math inline">\(\widehat{a}\)</span>. För att härleda <span class="math inline">\(\widehat{b}\)</span> börjar vi med det andra förstagradsvillkoret i ekvation 7:
+<span class="math inline">\(0 = \sum_{i = 1}^{n}{- 2x_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)}\)</span> (10)
+<span class="math inline">\(= \sum_{i = 1}^{n}X_{i}Y_{i} - \sum_{i = 1}^{n}X_{i}\widehat{a} - \sum_{i = 1}^{n}X_{i}\widehat{b}X_{i}\)</span>
+Eftersom konstanterna inte summeras flyttar vi dessa till vänster om summatecknen. I termen längst till höger har vi <span class="math inline">\(x_{i}*x_{i} = x_{i}^{2}\)</span>. Vi byter ut <span class="math inline">\(\widehat{a}\)</span> mot definitionen från ekvation 9:
+<span class="math inline">\(0 = \sum_{i = 1}^{n}X_{i}Y_{i} - \widehat{a}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}X_{i}\)</span> (11)</p>
 <p><span class="math display">\[= \sum_{i = 1}^{n}X_{i}Y_{i} - \widehat{a}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}^{2}\]</span></p>
 <p><span class="math display">\[= \sum_{i = 1}^{n}X_{i}Y_{i} - \left( \overline{Y} - \widehat{b}\overline{X} \right)\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}^{2}\]</span></p>
 <p><span class="math display">\[= \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i} + \widehat{b}\overline{X}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{}^{}X_{i}^{2}\]</span></p>
 <p><span class="math display">\[= \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i} - \widehat{b}\left( \sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} \right)\]</span></p>
-<p>Vi flyttar över <span class="math inline">\(\widehat{b}\)</span> till vänstersidan av likhetstecknet:</p>
-<p><span class="math inline">\(\widehat{b}\left( \sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} \right) = \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i}\)</span> (12)</p>
+<p>Vi flyttar över <span class="math inline">\(\widehat{b}\)</span> till vänstersidan av likhetstecknet:
+<span class="math inline">\(\widehat{b}\left( \sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} \right) = \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i}\)</span> (12)</p>
 <p><span class="math display">\[\widehat{b} = \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i}}\]</span></p>
-<p>Nu har vi ett uttryck för <span class="math inline">\(\widehat{b}\)</span>. För att visa att detta är samma som uttrycket i ekvation 1 och <a href="https://www.dropbox.com/scl/fi/fdixvbrl3fwqwuaknz604/2-5-Felterm-residual-och-ett-r-kneexempel.docx?rlkey=qerqdzrn6e5hejx1it85qrtun&amp;st=33su91fr&amp;dl=0">avsnitt 2.5</a> kan vi skriva om täljaren och nämnaren. Detta ger:</p>
-<p><span class="math inline">\(\widehat{b} = \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}Y_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i}}\)</span> (13)</p>
+<p>Nu har vi ett uttryck för <span class="math inline">\(\widehat{b}\)</span>. För att visa att detta är samma som uttrycket i ekvation 1 och <a href="https://www.dropbox.com/scl/fi/fdixvbrl3fwqwuaknz604/2-5-Felterm-residual-och-ett-r-kneexempel.docx?rlkey=qerqdzrn6e5hejx1it85qrtun&amp;st=33su91fr&amp;dl=0">avsnitt 2.5</a> kan vi skriva om täljaren och nämnaren. Detta ger:
+<span class="math inline">\(\widehat{b} = \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}Y_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i}}\)</span> (13)</p>
 <p><span class="math display">\[= \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i}^{}X_{i} - \overline{X}\sum_{i = 1}^{n}Y_{i} + \overline{X}\sum_{i = 1}^{n}Y_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} - n\overline{X^{2}} + n\overline{X^{2}}}\]</span></p>
 <p><span class="math display">\[\frac{\sum_{i = 1}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{I = 1}^{n}\left( X_{i} - \overline{X} \right)^{2}}\]</span></p>
 <p>Nu har vi samma sak som ekvation 1.</p>
@@ -342,10 +328,7 @@
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k2-3-4"><span class="header-section-number">34</span> Härled estimatorerna</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#begrepp-33"><span class="header-section-number">34.0.1</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-33"><span class="header-section-number">34.0.2</span> Teori</a></li>
-</ul>
+<a class="nav-link" href="#k2-3-4"><span class="header-section-number">34</span> Härled estimatorerna</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-31"><span class="header-section-number">34.0.1</span> Begrepp</a></li></ul>
 </li></ul>
 
       <div class="book-extra">

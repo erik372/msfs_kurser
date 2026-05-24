@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>27 Samvariation 1 | Matematik och statistik för samhällsvetare</title>
 <meta name="author" content="">
-<meta name="description" content="27.0.1 Begrepp Kovarians: Ett mått på linjär samvariation mellan två variabler. Korrelationskoefficienten: Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden...">
+<meta name="description" content="27.0.1 Begrepp  Kovarians: Ett mått på linjär samvariation mellan två variabler. Korrelationskoefficienten: Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="27 Samvariation 1 | Matematik och statistik för samhällsvetare">
 <meta property="og:type" content="book">
-<meta property="og:description" content="27.0.1 Begrepp Kovarians: Ett mått på linjär samvariation mellan två variabler. Korrelationskoefficienten: Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden...">
+<meta property="og:description" content="27.0.1 Begrepp  Kovarians: Ett mått på linjär samvariation mellan två variabler. Korrelationskoefficienten: Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="27 Samvariation 1 | Matematik och statistik för samhällsvetare">
-<meta name="twitter:description" content="27.0.1 Begrepp Kovarians: Ett mått på linjär samvariation mellan två variabler. Korrelationskoefficienten: Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden...">
+<meta name="twitter:description" content="27.0.1 Begrepp  Kovarians: Ett mått på linjär samvariation mellan två variabler. Korrelationskoefficienten: Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -114,182 +114,105 @@
 <h1>
 <span class="header-section-number">27</span> Samvariation 1<a class="anchor" aria-label="anchor" href="#k2-2-3"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-26" class="section level3" number="27.0.1">
+<div id="begrepp-24" class="section level3" number="27.0.1">
 <h3>
-<span class="header-section-number">27.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-26"><i class="fas fa-link"></i></a>
+<span class="header-section-number">27.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-24"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
-<li><p><strong>Kovarians:</strong> Ett mått på linjär samvariation mellan två variabler.</p></li>
-<li><p><strong>Korrelationskoefficienten:</strong> Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden mellan 1 och -1, där värde 1 är stark positiv korrelation och -1 är starkt negativ korrelation.</p></li>
+<li>
+<strong>Kovarians:</strong> Ett mått på linjär samvariation mellan två variabler.</li>
+<li>
+<strong>Korrelationskoefficienten:</strong> Även kallat Pearsons r. En standardiserad form av kovarians. Kan endast anta värden mellan 1 och -1, där värde 1 är stark positiv korrelation och -1 är starkt negativ korrelation.
+### Teori
+I kapitel 1 till denna kurs introducerade vi betydelsen av kontrafaktisk analys och hur vi genom att studera samvariation kan diskutera orsak och verkan. I tidigare avsnitt har vi gått igenom olika exempel på hur vi kan beskriva och jämföra spridning och variation i ett material. I detta avsnitt ska vi introducera två mått på linjär samvariation: <em>kovarians och korrelationskoefficient</em>.
+#### Kovarians
+Kovarians (engelska <em>covariance</em>) är ett mått på linjär samvariation mellan två variabler, till exempel <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>. För populationsdata har vi:
+<span class="math inline">\(cov(x,y) = \frac{1}{n}\sum_{i}^{n}{(x_{i} - \overline{x})(y_{i} - \overline{y})}\)</span> (1)
+Vårt mål är att uppskatta samvariationen i en population och eventuellt en superpopulation. Från vår population kan vi hämta ett urval av observationer som vi kan använda för att uppskatta (estimera) samvariationen.
+I tidigare exempel har vi arbetat med population för en variabel. Eftersom vi nu är intresserade av samvariation består vår population av två variabler. Kovariansen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> i en population betecknas <span class="math inline">\(\sigma_{xy}\)</span> (jämför beteckningen för populationens varians <span class="math inline">\(\sigma_{x}\)</span>).
+Positiv kovarians innebär positiv samvariation: högre värden av <span class="math inline">\(x\)</span> är associerade med högre värden av <span class="math inline">\(y\)</span>. Negativ kovarians innebär negativ samvariation, att högre värden av <span class="math inline">\(x\)</span> är associerade med lägre värden av <span class="math inline">\(y\)</span> och vice versa. Om kovariansen är lika med noll så finns ingen linjär samvariation mellan variablerna.
+Det spelar ingen roll i vilken ordning vi skriver variablerna i parentesen: <span class="math inline">\(cov(x,y) = cov(y,x)\)</span>. Om vi tar kovariansen för <span class="math inline">\(x\)</span> och samma variabel <span class="math inline">\(x\)</span>, får vi variansen av <span class="math inline">\(x\)</span>:
+<span class="math inline">\(\text{cov}(x,x) = \left( \frac{1}{n} \right)\sum_{i}^{n}{(x_{i} - \overline{x})(x_{i} - \overline{x})} = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} = \text{var}(x)\)</span> (2)
+I föregående avsnitt använde vi Bessels korrigering <span class="math inline">\(\left( \frac{1}{n - 1} \right)\)</span> för att undvika att underskatta spridningen i populationen alltför mycket. Även här kan vi av samma skäl använda korrigeringen. Detta ger oss det som kallas för <em>urvalskovarians</em> (engelska <em>sample covariance</em>):
+<strong>Urvalskovarians:</strong> <span class="math inline">\(cov(x,y) = \left( \frac{1}{n - 1} \right)\sum_{i}^{}{(x_{i} - \overline{x})(y_{i} - \overline{y})}\)</span> (3)
+#### Räkneexempel
+Figur 1 beskriver våra fyra observationer i en tabell till vänster och ett diagram till höger. I tabellen har vi en observation per rad och en variabel per kolumn. I diagrammet är varje observation representerad av en punkt. Punkten längst till vänster är observation 1: <span class="math inline">\((x,y) = (3,3)\)</span>. Punkten längst till höger är observation 4: <span class="math inline">\((x,y) = (4,7)\)</span>.
+Rad 1 i tabellen består av första värdet för <span class="math inline">\(x\)</span> respektive <span class="math inline">\(y\)</span> och representerar värden som på något sätt hänger ihop. Om vi arbetar med observerade data, insamlad information, representerar varje observation en observationsenhet, till exempel uppgifter om en person eller kanske ett land. Våra fyra observationer skulle alltså kunna representera fyra personer, fyra länder eller något annat.
+<strong>Figur 1. Fyra observationer för att uppskatta kovarians</strong>
+<img src="img/k2-2-3-image1.png" style="width:2.47024in;height:2.47024in">
+————————————————————————————-
+Observation i</li>
 </ul>
-</div>
-<div id="teori-26" class="section level3" number="27.0.2">
-<h3>
-<span class="header-section-number">27.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-26"><i class="fas fa-link"></i></a>
-</h3>
-<p>I kapitel 1 till denna kurs introducerade vi betydelsen av kontrafaktisk analys och hur vi genom att studera samvariation kan diskutera orsak och verkan. I tidigare avsnitt har vi gått igenom olika exempel på hur vi kan beskriva och jämföra spridning och variation i ett material. I detta avsnitt ska vi introducera två mått på linjär samvariation: <em>kovarians och korrelationskoefficient</em>.</p>
-<div id="kovarians" class="section level4" number="27.0.2.1">
-<h4>
-<span class="header-section-number">27.0.2.1</span> Kovarians<a class="anchor" aria-label="anchor" href="#kovarians"><i class="fas fa-link"></i></a>
-</h4>
-<p>Kovarians (engelska <em>covariance</em>) är ett mått på linjär samvariation mellan två variabler, till exempel <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>. För populationsdata har vi:</p>
-<p><span class="math inline">\(cov(x,y) = \frac{1}{n}\sum_{i}^{n}{(x_{i} - \overline{x})(y_{i} - \overline{y})}\)</span> (1)</p>
-<p>Vårt mål är att uppskatta samvariationen i en population och eventuellt en superpopulation. Från vår population kan vi hämta ett urval av observationer som vi kan använda för att uppskatta (estimera) samvariationen.</p>
-<p>I tidigare exempel har vi arbetat med population för en variabel. Eftersom vi nu är intresserade av samvariation består vår population av två variabler. Kovariansen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> i en population betecknas <span class="math inline">\(\sigma_{xy}\)</span> (jämför beteckningen för populationens varians <span class="math inline">\(\sigma_{x}\)</span>).</p>
-<p>Positiv kovarians innebär positiv samvariation: högre värden av <span class="math inline">\(x\)</span> är associerade med högre värden av <span class="math inline">\(y\)</span>. Negativ kovarians innebär negativ samvariation, att högre värden av <span class="math inline">\(x\)</span> är associerade med lägre värden av <span class="math inline">\(y\)</span> och vice versa. Om kovariansen är lika med noll så finns ingen linjär samvariation mellan variablerna.</p>
-<p>Det spelar ingen roll i vilken ordning vi skriver variablerna i parentesen: <span class="math inline">\(cov(x,y) = cov(y,x)\)</span>. Om vi tar kovariansen för <span class="math inline">\(x\)</span> och samma variabel <span class="math inline">\(x\)</span>, får vi variansen av <span class="math inline">\(x\)</span>:</p>
-<p><span class="math inline">\(\text{cov}(x,x) = \left( \frac{1}{n} \right)\sum_{i}^{n}{(x_{i} - \overline{x})(x_{i} - \overline{x})} = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} = \text{var}(x)\)</span> (2)</p>
-<p>I föregående avsnitt använde vi Bessels korrigering <span class="math inline">\(\left( \frac{1}{n - 1} \right)\)</span> för att undvika att underskatta spridningen i populationen alltför mycket. Även här kan vi av samma skäl använda korrigeringen. Detta ger oss det som kallas för <em>urvalskovarians</em> (engelska <em>sample covariance</em>):</p>
-<p><strong>Urvalskovarians:</strong> <span class="math inline">\(cov(x,y) = \left( \frac{1}{n - 1} \right)\sum_{i}^{}{(x_{i} - \overline{x})(y_{i} - \overline{y})}\)</span> (3)</p>
-</div>
-<div id="räkneexempel" class="section level4" number="27.0.2.2">
-<h4>
-<span class="header-section-number">27.0.2.2</span> Räkneexempel<a class="anchor" aria-label="anchor" href="#r%C3%A4kneexempel"><i class="fas fa-link"></i></a>
-</h4>
-<p>Figur 1 beskriver våra fyra observationer i en tabell till vänster och ett diagram till höger. I tabellen har vi en observation per rad och en variabel per kolumn. I diagrammet är varje observation representerad av en punkt. Punkten längst till vänster är observation 1: <span class="math inline">\((x,y) = (3,3)\)</span>. Punkten längst till höger är observation 4: <span class="math inline">\((x,y) = (4,7)\)</span>.</p>
-<p>Rad 1 i tabellen består av första värdet för <span class="math inline">\(x\)</span> respektive <span class="math inline">\(y\)</span> och representerar värden som på något sätt hänger ihop. Om vi arbetar med observerade data, insamlad information, representerar varje observation en observationsenhet, till exempel uppgifter om en person eller kanske ett land. Våra fyra observationer skulle alltså kunna representera fyra personer, fyra länder eller något annat.</p>
-<p><strong>Figur 1. Fyra observationer för att uppskatta kovarians</strong></p>
-<div class="inline-figure"><img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\2%20-%20Variation%20och%20samvariation\2-3%20-%20Samvariation%201/img/k2-2-3-image1.png" style="width:2.47024in;height:2.47024in"></div>
+<p><span class="math display">\[x_{i}\]</span></p>
+<p><span class="math display">\[y_{i}\]</span></p>
 <div class="inline-table"><table style="width:98%;" class="table table-sm">
-<colgroup>
-<col width="18%">
-<col width="39%">
-<col width="39%">
-</colgroup>
+<colgroup><col width="97%"></colgroup>
 <thead><tr class="header">
-<th align="left">Observation i</th>
-<th></th>
-<th></th>
+<th align="left">1 3 3
+2 4 2
+3 6 5
+4 7 4</th>
 </tr></thead>
-<tbody>
-<tr class="odd">
-<td align="left">1</td>
-<td>3</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td align="left">2</td>
-<td>4</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td align="left">3</td>
-<td>6</td>
-<td>5</td>
-</tr>
-<tr class="even">
-<td align="left">4</td>
-<td>7</td>
-<td>4</td>
-</tr>
-</tbody>
+<tbody><tr class="odd">
+<td align="left">tabell 1 har vi beräknat de delar vi behöver för att skatta kovariansen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> (ekvation 3):
+ov(x,y) = ( )<em>{i}^{}{( x</em>{i} - )( y_{i} - )} = ( ) = $ (4)
+finner att <span class="math inline">\(cov(x,y) = \frac{5}{3}\)</span>. Detta värde är över 0 och innebär en positiv samvariation. Kovarians är användbart för att få en uppskattning om samvariationen mellan två variabler är positiv eller negativ, men det är svårt att säga så mycket mer än så.
+t finns inte några begränsningar för vilka värden som kovarians kan anta. Kovariansens värde beror på vilken enhet variablernas värden har. Till exempel kommer vi att få olika resultat beroende på om vi använder en variabel som beskriver inkomst i kronor eller i tusentals kronor.
+Tabell 1. Beräkningar för kovariansen mellan** <span class="math inline">\(\mathbf{x}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{y}\)</span>
+</td>
+</tr></tbody>
 </table></div>
-<p>I tabell 1 har vi beräknat de delar vi behöver för att skatta kovariansen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> (ekvation 3):</p>
-<p><span class="math inline">\(cov(x,y) = \left( \frac{1}{n - 1} \right)\sum_{i}^{}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)} = \left( \frac{1}{3} \right) \times 5 = \frac{5}{3}\)</span> (4)</p>
-<p>Vi finner att <span class="math inline">\(cov(x,y) = \frac{5}{3}\)</span>. Detta värde är över 0 och innebär en positiv samvariation. Kovarians är användbart för att få en uppskattning om samvariationen mellan två variabler är positiv eller negativ, men det är svårt att säga så mycket mer än så.</p>
-<p>Det finns inte några begränsningar för vilka värden som kovarians kan anta. Kovariansens värde beror på vilken enhet variablernas värden har. Till exempel kommer vi att få olika resultat beroende på om vi använder en variabel som beskriver inkomst i kronor eller i tusentals kronor.</p>
-<p><strong>Tabell 1. Beräkningar för kovariansen mellan</strong> <span class="math inline">\(\mathbf{x}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{y}\)</span></p>
+<p>Observation</p>
+<p><span class="math display">\[x_{i}\]</span></p>
+<p><span class="math display">\[y_{i}\]</span></p>
+<p><span class="math display">\[x_{i} - \overline{x}\]</span></p>
+<p><span class="math display">\[y_{i} - \overline{y}\]</span></p>
+<p><span class="math display">\[(x_{i} - \overline{x})(y_{i} - \overline{y})\]</span></p>
 <div class="inline-table"><table style="width:99%;" class="table table-sm">
-<colgroup>
-<col width="5%">
-<col width="13%">
-<col width="13%">
-<col width="19%">
-<col width="19%">
-<col width="29%">
-</colgroup>
+<colgroup><col width="99%"></colgroup>
 <thead><tr class="header">
-<th align="left">Observation</th>
-<th align="left">ine{x}$$</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
+<th align="left">1 3 3 -2 -0,5 1
+2 4 2 -1 -1,5 1,5
+3 6 5 1 1,5 1,5
+4 7 4 2 0,5 1
+Medelvärde 5 3,5
+Summa 5</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">1</td>
-<td align="left">3</td>
-<td>3</td>
-<td>-2</td>
-<td>-0,5</td>
-<td>1</td>
+<td align="left">## Korrelationskoefficienten
+t annat mått på linjär samvariation är <em>Pearsons r</em>, även kallat <em>Pearsons korrelationskoefficient</em> eller <em>korrelationskoefficienten</em> (jämför <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/korrelation-och-kausalitet#!/">Matte 1</a>). Korrelationskoefficienten för variablerna <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> betecknas för population <span class="math inline">\(\rho_{xy}\)</span> (grekiska rho):
+rrelationskoefficienten: <span class="math inline">\(\rho_{xy} = \frac{\sigma_{xy}}{\sigma_{x}\sigma_{y}}\)</span> (5)
+r <span class="math inline">\(\sigma_{xy}\)</span> är kovariansen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> i populationen, och <span class="math inline">\(\sigma_{x}\)</span> och <span class="math inline">\(\sigma_{y}\)</span> är standardavvikelse i populationen för respektive variabel. Ett annat sätt att beskriva detta är att korrelationskoefficienten är <em>standardiserad</em> <em>kovarians</em>.
+rrelationskoefficienten kan endast anta värden mellan <span class="math inline">\(- 1\)</span> och 1, där <span class="math inline">\(- 1\)</span> innebär perfekt negativ korrelation och 1 innebär perfekt positiv korrelation. Om korrelationskoefficienten är lika med 0 indikerar detta att det inte finns någon linjär samvariation mellan variablerna.
+tersom alla resultat för korrelationskoefficienten är inom intervallet <span class="math inline">\(\lbrack - 1,1\rbrack\)</span> är olika korrelationskoefficienter jämförbara. Om vi till exempel beräknar två korrelationskoefficienter för två olika par av variabler så kan vi jämföra samvariationens styrka och riktning.
+vi arbetar med urvalsdata betecknas korrelationskoefficienten <span class="math inline">\(r_{xy}\)</span> eller <span class="math inline">\(corr(x,y)\)</span>, förkortning för engelska <em>correlation</em>:
+<em>{xy} = $ (6)
+r vi i stället har uppskattad kovarians i täljaren och uppskattad standard­avvikelse för de två variablerna i nämnaren. De olika delarna i denna ekvation har vi definierat tidigare i detta kapitel. Vi skriver ut ekvationerna och lägger till Bessels korrigering:
+</em>{xy} = $ (7)
+$
+$
+$
+tersom Bessels korrigering ingår i alla tre måtten kan vi i sista raden stryka <span class="math inline">\((n - 1)^{- 1}\)</span> från både täljare och nämnare.
+t oss återigen demonstrera genom att uppskatta <span class="math inline">\(r_{xy}\)</span> för de två variablerna <em>x</em> och <em>y</em> och deras fyra observationer från figur 1. Vi återanvänder resultaten för kovarians ovan samt standardavvikelse för <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>, vilket vi beräknade i föregående avsnitt:
+_{xy} = ,71$ (8)
+tta resultat indikerar en positiv korrelation. Höga värden av <span class="math inline">\(x\)</span> sammanfaller med höga värden av <span class="math inline">\(y\)</span> och låga värden av <span class="math inline">\(x\)</span> sammanfaller med låga värden av <span class="math inline">\(y\)</span>. Olika korrelationskoefficienter kan jämföras men det är fortfarande svårt att tolka denna typ av resultat mer exakt.</td>
 </tr>
 <tr class="even">
-<td align="left">2</td>
-<td align="left">4</td>
-<td>2</td>
-<td>-1</td>
-<td>-1,5</td>
-<td>1,5</td>
+<td align="left">: {.ex-section-title}
+ningar
+:</td>
 </tr>
 <tr class="odd">
-<td align="left">3</td>
-<td align="left">6</td>
-<td>5</td>
-<td>1</td>
-<td>1,5</td>
-<td>1,5</td>
-</tr>
-<tr class="even">
-<td align="left">4</td>
-<td align="left">7</td>
-<td>4</td>
-<td>2</td>
-<td>0,5</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td align="left">Medelvärde</td>
-<td align="left">5</td>
-<td>3,5</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td align="left">Summa</td>
-<td align="left"></td>
-<td></td>
-<td></td>
-<td></td>
-<td>5</td>
+<td align="left">cript&gt;window.exerciseData=window.exerciseData||{};window.exerciseData[“k2-2-3”]=[ { “id”: “k2-2-3-001”, “name”: “Uppgift 1”, “exercise”: “Vad innebär det om kovariansen mellan två variabler \(x\) och \(y\) är <em>negativ</em>?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Höga värden på \(x\) är associerade med höga värden på \(y\)”, “Höga värden på \(x\) är associerade med låga värden på \(y\)”, “Det finns ingen samvariation alls mellan \(x\) och \(y\)”, “Variansen för \(x\) är större än variansen för \(y\)” ], “correct”: “Höga värden på \(x\) är associerade med låga värden på \(y\)” } }, “error”: { “message”: “Tänk på vad riktningen på samvariationen innebär. Negativt värde = rörelserna går åt motsatt håll.” }, “correct”: { “message”: “Rätt! Negativ kovarians innebär negativ samvariation: höga värden på \(x\) är associerade med låga värden på \(y\) och vice versa. Om kovariansen är noll finns ingen linjär samvariation.” } }, { “id”: “k2-2-3-002”, “name”: “Uppgift 2”, “exercise”: “Vad händer om man beräknar kovariansen av en variabel med sig själv, det vill säga \(\text{cov}(x, x)\)?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Man får noll”, “Man får variansen av \(x\)”, “Man får standardavvikelsen av \(x\)”, “Man får korrelationskoefficienten” ], “correct”: “Man får variansen av \(x\)” } }, “error”: { “message”: “Sätt in \(y = x\) i kovariansformeln och se vad du får.” }, “correct”: { “message”: “Rätt! \(\text{cov}(x,x) = \frac{1}{n}\sum(x_i - \overline{x})(x_i - \overline{x}) = \frac{1}{n}\sum(x_i - \overline{x})^2 = \text{var}(x)\). Variansen är alltså ett specialfall av kovariansen.” } }, { “id”: “k2-2-3-003”, “name”: “Uppgift 3”, “exercise”: “Fyra observationer har värdena \(x = \{3, 4, 6, 7\}\) med \(\overline{x} = 5\), och \(y = \{3, 2, 5, 4\}\) med \(\overline{y} = 3{,}5\). Summan \(\sum_{i=1}^{4}(x_i - \overline{x})(y_i - \overline{y}) = 5\). Beräkna urvalskovariansen: \[\text{cov}(x,y) = \frac{1}{n-1}\sum_{i}^{}(x_i - \overline{x})(y_i - \overline{y})\] Ange svaret som ett decimaltal med tre decimaler.”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “1.667” }, “answerformat”: “Ange svaret med punkt som decimalavskiljare, t.ex. 1.667”, “error”: { “message”: “Dividera summan av produkterna (= 5) med \(n - 1 = 3\).” }, “correct”: { “message”: “Rätt! \(\text{cov}(x,y) = 5 / (4-1) = 5/3 \approx 1{,}667\). Värdet är positivt, vilket indikerar positiv samvariation.” } }, { “id”: “k2-2-3-004”, “name”: “Uppgift 4”, “exercise”: “Vad är den viktigaste fördelen med korrelationskoefficienten \(r_{xy}\) jämfört med kovariansen \(\text{cov}(x,y)\)?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Korrelationskoefficienten är alltid ett heltal”, “Korrelationskoefficienten är standardiserad och tar värden mellan -1 och 1, vilket underlättar jämförelser mellan olika variabler”, “Korrelationskoefficienten är alltid positiv”, “Korrelationskoefficienten beräknas utan Bessels korrigering” ], “correct”: “Korrelationskoefficienten är standardiserad och tar värden mellan -1 och 1, vilket underlättar jämförelser mellan olika variabler” } }, “error”: { “message”: “Tänk på att kovariansens värde påverkas av variablernas enheter – vad löser korrelationskoefficienten?” }, “correct”: { “message”: “Rätt! Korrelationskoefficienten är standardiserad kovarians och kan bara anta värden i intervallet [-1, 1]. Detta gör att vi kan jämföra samvariationens styrka och riktning mellan olika par av variabler, oavsett enhet.” } }, { “id”: “k2-2-3-005”, “name”: “Uppgift 5”, “exercise”: “Givet \(\text{cov}(x,y) = 5/3\), \(s_x = \sqrt{10/3}\) och \(s_y = \sqrt{5/3}\), beräkna korrelationskoefficienten \[r_{xy} = \frac{\text{cov}(x,y)}{s_x \cdot s_y}\] Runda av till två decimaler.”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “0.71” }, “answerformat”: “Ange svaret med punkt som decimalavskiljare, t.ex. 0.71”, “error”: { “message”: “Beräkna \(s_x \cdot s_y = \sqrt{10/3} \cdot \sqrt{5/3} = \sqrt{50/9}\), och dela sedan kovariansen med detta.” }, “correct”: { “message”: “Rätt! \(r_{xy} = \frac{5/3}{\sqrt{10/3} \cdot \sqrt{5/3}} \approx 0{,}71\). Värdet indikerar en positiv korrelation: höga värden på \(x\) sammanfaller med höga värden på \(y\).” } }];
+iv class=“exercise-section” data-section-id=“k2-2-3”&gt;</td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<div id="korrelationskoefficienten" class="section level4" number="27.0.2.3">
-<h4>
-<span class="header-section-number">27.0.2.3</span> Korrelationskoefficienten<a class="anchor" aria-label="anchor" href="#korrelationskoefficienten"><i class="fas fa-link"></i></a>
-</h4>
-<p>Ett annat mått på linjär samvariation är <em>Pearsons r</em>, även kallat <em>Pearsons korrelationskoefficient</em> eller <em>korrelationskoefficienten</em> (jämför <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/korrelation-och-kausalitet#!/">Matte 1</a>). Korrelationskoefficienten för variablerna <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> betecknas för population <span class="math inline">\(\rho_{xy}\)</span> (grekiska rho):</p>
-<p>Korrelationskoefficienten: <span class="math inline">\(\rho_{xy} = \frac{\sigma_{xy}}{\sigma_{x}\sigma_{y}}\)</span> (5)</p>
-<p>där <span class="math inline">\(\sigma_{xy}\)</span> är kovariansen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> i populationen, och <span class="math inline">\(\sigma_{x}\)</span> och <span class="math inline">\(\sigma_{y}\)</span> är standardavvikelse i populationen för respektive variabel. Ett annat sätt att beskriva detta är att korrelationskoefficienten är <em>standardiserad</em> <em>kovarians</em>.</p>
-<p>Korrelationskoefficienten kan endast anta värden mellan <span class="math inline">\(- 1\)</span> och 1, där <span class="math inline">\(- 1\)</span> innebär perfekt negativ korrelation och 1 innebär perfekt positiv korrelation. Om korrelationskoefficienten är lika med 0 indikerar detta att det inte finns någon linjär samvariation mellan variablerna.</p>
-<p>Eftersom alla resultat för korrelationskoefficienten är inom intervallet <span class="math inline">\(\lbrack - 1,1\rbrack\)</span> är olika korrelationskoefficienter jämförbara. Om vi till exempel beräknar två korrelationskoefficienter för två olika par av variabler så kan vi jämföra samvariationens styrka och riktning.</p>
-<p>Om vi arbetar med urvalsdata betecknas korrelationskoefficienten <span class="math inline">\(r_{xy}\)</span> eller <span class="math inline">\(corr(x,y)\)</span>, förkortning för engelska <em>correlation</em>:</p>
-<p><span class="math inline">\(r_{xy} = \frac{cov(x,y)}{s_{x}s_{y}}\)</span> (6)</p>
-<p>där vi i stället har uppskattad kovarians i täljaren och uppskattad standard­avvikelse för de två variablerna i nämnaren. De olika delarna i denna ekvation har vi definierat tidigare i detta kapitel. Vi skriver ut ekvationerna och lägger till Bessels korrigering:</p>
-<p><span class="math inline">\(r_{xy} = \frac{cov(x,y)}{s_{x}s_{y}}\)</span> (7)</p>
-<p><span class="math inline">\(= \frac{\left( \frac{1}{n - 1} \right)\sum_{i}^{}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)}}{\left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} \right)^{\frac{1}{2}}\left( \frac{\sum_{i}^{n}\left( y_{i} - \overline{y} \right)^{2}}{n - 1} \right)^{\frac{1}{2}}}\)</span></p>
-<p><span class="math inline">\(= \frac{(n - 1)^{- 1}\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)}}{(n - 1)^{- 1}\left( \sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}}\left( \sum_{i}^{n}\left( y_{i} - \overline{y} \right)^{2} \right)^{\frac{1}{2}}}\)</span></p>
-<p><span class="math inline">\(= \frac{\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)}}{\left( \sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}}\left( \sum_{i}^{n}\left( y_{i} - \overline{y} \right)^{2} \right)^{\frac{1}{2}}}\)</span></p>
-<p>Eftersom Bessels korrigering ingår i alla tre måtten kan vi i sista raden stryka <span class="math inline">\((n - 1)^{- 1}\)</span> från både täljare och nämnare.</p>
-<p>Låt oss återigen demonstrera genom att uppskatta <span class="math inline">\(r_{xy}\)</span> för de två variablerna <em>x</em> och <em>y</em> och deras fyra observationer från figur 1. Vi återanvänder resultaten för kovarians ovan samt standardavvikelse för <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>, vilket vi beräknade i föregående avsnitt:</p>
-<p><span class="math inline">\(r_{xy} = \frac{cov(x,y)}{s_{x}s_{y}} \approx \frac{\frac{5}{3}}{\left( + \sqrt{\frac{10}{3}} \right)\left( + \sqrt{\frac{5}{3}} \right)} \approx 0,71\)</span> (8)</p>
-<p>Detta resultat indikerar en positiv korrelation. Höga värden av <span class="math inline">\(x\)</span> sammanfaller med höga värden av <span class="math inline">\(y\)</span> och låga värden av <span class="math inline">\(x\)</span> sammanfaller med låga värden av <span class="math inline">\(y\)</span>. Olika korrelationskoefficienter kan jämföras men det är fortfarande svårt att tolka denna typ av resultat mer exakt.</p>
-<div class="ex-section-title">
-<p>Övningar</p>
-</div>
-<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-2-3"]=[  {    "id": "k2-2-3-001",    "name": "Uppgift 1",    "exercise": "Vad innebär det om kovariansen mellan två variabler \\(x\\) och \\(y\\) är <em>negativ</em>?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Höga värden på \\(x\\) är associerade med höga värden på \\(y\\)",          "Höga värden på \\(x\\) är associerade med låga värden på \\(y\\)",          "Det finns ingen samvariation alls mellan \\(x\\) och \\(y\\)",          "Variansen för \\(x\\) är större än variansen för \\(y\\)"        ],        "correct": "Höga värden på \\(x\\) är associerade med låga värden på \\(y\\)"      }    },    "error": { "message": "Tänk på vad riktningen på samvariationen innebär. Negativt värde = rörelserna går åt motsatt håll." },    "correct": { "message": "Rätt! Negativ kovarians innebär negativ samvariation: höga värden på \\(x\\) är associerade med låga värden på \\(y\\) och vice versa. Om kovariansen är noll finns ingen linjär samvariation." }  },  {    "id": "k2-2-3-002",    "name": "Uppgift 2",    "exercise": "Vad händer om man beräknar kovariansen av en variabel med sig själv, det vill säga \\(\\text{cov}(x, x)\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Man får noll",          "Man får variansen av \\(x\\)",          "Man får standardavvikelsen av \\(x\\)",          "Man får korrelationskoefficienten"        ],        "correct": "Man får variansen av \\(x\\)"      }    },    "error": { "message": "Sätt in \\(y = x\\) i kovariansformeln och se vad du får." },    "correct": { "message": "Rätt! \\(\\text{cov}(x,x) = \\frac{1}{n}\\sum(x_i - \\overline{x})(x_i - \\overline{x}) = \\frac{1}{n}\\sum(x_i - \\overline{x})^2 = \\text{var}(x)\\). Variansen är alltså ett specialfall av kovariansen." }  },  {    "id": "k2-2-3-003",    "name": "Uppgift 3",    "exercise": "Fyra observationer har värdena \\(x = \\{3, 4, 6, 7\\}\\) med \\(\\overline{x} = 5\\), och \\(y = \\{3, 2, 5, 4\\}\\) med \\(\\overline{y} = 3{,}5\\). Summan \\(\\sum_{i=1}^{4}(x_i - \\overline{x})(y_i - \\overline{y}) = 5\\). Beräkna urvalskovariansen: \\[\\text{cov}(x,y) = \\frac{1}{n-1}\\sum_{i}^{}(x_i - \\overline{x})(y_i - \\overline{y})\\] Ange svaret som ett decimaltal med tre decimaler.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "1.667" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 1.667",    "error": { "message": "Dividera summan av produkterna (= 5) med \\(n - 1 = 3\\)." },    "correct": { "message": "Rätt! \\(\\text{cov}(x,y) = 5 / (4-1) = 5/3 \\approx 1{,}667\\). Värdet är positivt, vilket indikerar positiv samvariation." }  },  {    "id": "k2-2-3-004",    "name": "Uppgift 4",    "exercise": "Vad är den viktigaste fördelen med korrelationskoefficienten \\(r_{xy}\\) jämfört med kovariansen \\(\\text{cov}(x,y)\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Korrelationskoefficienten är alltid ett heltal",          "Korrelationskoefficienten är standardiserad och tar värden mellan -1 och 1, vilket underlättar jämförelser mellan olika variabler",          "Korrelationskoefficienten är alltid positiv",          "Korrelationskoefficienten beräknas utan Bessels korrigering"        ],        "correct": "Korrelationskoefficienten är standardiserad och tar värden mellan -1 och 1, vilket underlättar jämförelser mellan olika variabler"      }    },    "error": { "message": "Tänk på att kovariansens värde påverkas av variablernas enheter – vad löser korrelationskoefficienten?" },    "correct": { "message": "Rätt! Korrelationskoefficienten är standardiserad kovarians och kan bara anta värden i intervallet [-1, 1]. Detta gör att vi kan jämföra samvariationens styrka och riktning mellan olika par av variabler, oavsett enhet." }  },  {    "id": "k2-2-3-005",    "name": "Uppgift 5",    "exercise": "Givet \\(\\text{cov}(x,y) = 5/3\\), \\(s_x = \\sqrt{10/3}\\) och \\(s_y = \\sqrt{5/3}\\), beräkna korrelationskoefficienten \\[r_{xy} = \\frac{\\text{cov}(x,y)}{s_x \\cdot s_y}\\] Runda av till två decimaler.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "0.71" },    "answerformat": "Ange svaret med punkt som decimalavskiljare, t.ex. 0.71",    "error": { "message": "Beräkna \\(s_x \\cdot s_y = \\sqrt{10/3} \\cdot \\sqrt{5/3} = \\sqrt{50/9}\\), och dela sedan kovariansen med detta." },    "correct": { "message": "Rätt! \\(r_{xy} = \\frac{5/3}{\\sqrt{10/3} \\cdot \\sqrt{5/3}} \\approx 0{,}71\\). Värdet indikerar en positiv korrelation: höga värden på \\(x\\) sammanfaller med höga värden på \\(y\\)." }  }];</script><div class="exercise-section" data-section-id="k2-2-3">
-
-</div>
-<hr>
 <div class="next-section-link">
 <p><a href="k2-2-4.html">→ Nästa avsnitt: <strong>Samvariation 2</strong></a></p>
 </div>
 
-</div>
 </div>
 </div>
 <script src="js/exercises.js"></script><script>
@@ -433,10 +356,7 @@
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k2-2-3"><span class="header-section-number">27</span> Samvariation 1</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#begrepp-26"><span class="header-section-number">27.0.1</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-26"><span class="header-section-number">27.0.2</span> Teori</a></li>
-</ul>
+<a class="nav-link" href="#k2-2-3"><span class="header-section-number">27</span> Samvariation 1</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-24"><span class="header-section-number">27.0.1</span> Begrepp</a></li></ul>
 </li></ul>
 
       <div class="book-extra">

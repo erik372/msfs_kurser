@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>28 Samvariation 2 | Matematik och statistik för samhällsvetare</title>
 <meta name="author" content="">
-<meta name="description" content="28.0.1 Begrepp Regressionsanalys: En statistisk metod för att studera samvariation mellan en beroende (förklarad) variabel och en eller flera oberoende (förklarande) variabler. Regressionsmodell:...">
+<meta name="description" content="28.0.1 Begrepp  Regressionsanalys: En statistisk metod för att studera samvariation mellan en beroende (förklarad) variabel och en eller flera oberoende (förklarande) variabler. Regressionsmodell:...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="28 Samvariation 2 | Matematik och statistik för samhällsvetare">
 <meta property="og:type" content="book">
-<meta property="og:description" content="28.0.1 Begrepp Regressionsanalys: En statistisk metod för att studera samvariation mellan en beroende (förklarad) variabel och en eller flera oberoende (förklarande) variabler. Regressionsmodell:...">
+<meta property="og:description" content="28.0.1 Begrepp  Regressionsanalys: En statistisk metod för att studera samvariation mellan en beroende (förklarad) variabel och en eller flera oberoende (förklarande) variabler. Regressionsmodell:...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="28 Samvariation 2 | Matematik och statistik för samhällsvetare">
-<meta name="twitter:description" content="28.0.1 Begrepp Regressionsanalys: En statistisk metod för att studera samvariation mellan en beroende (förklarad) variabel och en eller flera oberoende (förklarande) variabler. Regressionsmodell:...">
+<meta name="twitter:description" content="28.0.1 Begrepp  Regressionsanalys: En statistisk metod för att studera samvariation mellan en beroende (förklarad) variabel och en eller flera oberoende (förklarande) variabler. Regressionsmodell:...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -114,173 +114,108 @@
 <h1>
 <span class="header-section-number">28</span> Samvariation 2<a class="anchor" aria-label="anchor" href="#k2-2-4"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-27" class="section level3" number="28.0.1">
+<div id="begrepp-25" class="section level3" number="28.0.1">
 <h3>
-<span class="header-section-number">28.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-27"><i class="fas fa-link"></i></a>
+<span class="header-section-number">28.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-25"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
-<li><p><strong>Regressionsanalys:</strong> En statistisk metod för att studera samvariation mellan en beroende (förklarad) variabel och en eller flera oberoende (förklarande) variabler.</p></li>
-<li><p><strong>Regressionsmodell:</strong> Matematisk modell som beskriver samvariationen (relationen) mellan en förklarad variabel och en eller flera förklarande variabler.</p></li>
-<li><p><strong>Minstakvadratmetoden:</strong> En vanligt förekommande metod för linjär regressionsanalys. Genom att använda observerad data om variablerna kan minstakvadratmetoden användas för att skatta en regressionsmodells koefficienter.</p></li>
-<li><p><strong>Felterm:</strong> Anger differenserna i populationen mellan respektive observations <span class="math inline">\(Y\)</span>-värde och regressionslinjen.</p></li>
-<li><p><strong>Residual:</strong> Uppskattade feltermerna, vilka vi skattar med våra urvalsdata.</p></li>
+<li>
+<strong>Regressionsanalys:</strong> En statistisk metod för att studera samvariation mellan en beroende (förklarad) variabel och en eller flera oberoende (förklarande) variabler.</li>
+<li>
+<strong>Regressionsmodell:</strong> Matematisk modell som beskriver samvariationen (relationen) mellan en förklarad variabel och en eller flera förklarande variabler.</li>
+<li>
+<strong>Minstakvadratmetoden:</strong> En vanligt förekommande metod för linjär regressionsanalys. Genom att använda observerad data om variablerna kan minstakvadratmetoden användas för att skatta en regressionsmodells koefficienter.</li>
+<li>
+<strong>Felterm:</strong> Anger differenserna i populationen mellan respektive observations <span class="math inline">\(Y\)</span>-värde och regressionslinjen.</li>
+<li>
+<strong>Residual:</strong> Uppskattade feltermerna, vilka vi skattar med våra urvalsdata.
+### Teori
+Under kurserna <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/korrelation-och-kausalitet#!/">Matte 1</a> och <a href="https://www.matteboken.se/lektioner/matte-2/statistik/korrelation-och-regressionsanalys#!/">Matte 2</a> ges en kort introduktion till regressionsanalys. Regressionsanalys är centralt för en stor mängd analytiskt arbete och forskning inom olika fält.
+Grundläggande kunskap om regressionsanalys kan även hjälpa oss förstå poängen med många vetenskapliga metoder. Vi kommer därför ägna mycket möda åt detta och gå igenom hur vi kan använda detta inom samhällsvetenskap. Bitvis kan denna genomgång kännas tekniskt verklighetsfrånvänd, men dess betydelse kan inte överskattas.
+#### Minstakvadratmetoden
+I detta avsnitt ger vi först en övergripande beskrivning av minstakvadratmetodens logik, som sedan utvecklas stegvis. Precis som i tidigare exempel där vi studerar samvariation söker vi uppgifterna för en population. Populationens värden är okända, varför vi i stället är hänvisade till urvalsdata, som vi använder för att estimera samvariationen i populationen. Detta är förenat med osäkerhet.
+Alla raka linjer i ett diagram kan beskrivas med en ekvation med formen <span class="math inline">\(Y = a + bX\)</span>, det vill säga <a href="https://www.matteboken.se/lektioner/matte-1/funktioner/rata-linjens-ekvation">räta linjens ekvation</a>. Konstanta koefficienten <span class="math inline">\(a\)</span> är linjens y-skärning eller intercept medan konstanta koefficienten <span class="math inline">\(b\)</span> är linjens lutning, eller lutningskoefficient. <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är i detta fall våra variabler.
+Den linje vi ska rita ut kommer att ge oss en illustration över den genomsnittliga förändringen i variabel <span class="math inline">\(Y\)</span> då vi rör oss från relativt lägre till relativt högre värden på <span class="math inline">\(X\)</span>. Figur 1 visar de fyra punkterna vi använde i föregående avsnitt. I diagrammet syns även en rak linje som lutar snett uppåt i diagrammet. Linjen illustrerar en beräknad linjär samvariation mellan de fyra punkterna.
+Minstakvadratmetoden låter oss använda information från värdena för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> (de fyra punkterna) för att hitta just de värden för koefficienterna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> som låter oss rita ut den raka linje genom punkterna där summan av det vertikala kvadrerade avståndet mellan varje punkt och den raka linjen är så liten som möjligt. Vi ska återkomma till innebörden av detta.
+I figurens diagram ges ett exempel på avståndet i form av <span class="math inline">\({\widehat{v}}_{3} = 5 - 4\)</span>. Varje annan rak linje skulle resultera i ett större summerat vertikalt avstånd mellan punkterna och linjen. Om avståndet mellan en punkt och linjen är lika med 5 är det kvadrerade avståndet samma värde i kvadrat, <span class="math inline">\(5^{2} = 25\)</span>. Punkter som ligger under linjen får ett negativt avstånd, till exempel −5, och det kvadrerade värdet blir då <span class="math inline">\(( - 5)^{2} = 25\)</span>.
+<strong>Figur 1. En linje ritad med hjälp av minstakvadratmetoden</strong><img src="img/k2-2-4-image1.png" style="width:3.5in;height:3in">
+::: {.fig-caption}
+Förklaring: Linjen i diagrammet illustrerar den linjära samvariationen mellan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Av alla raka linjer vi kan rita ut i diagrammet är det just denna linje vi ser i diagrammet som minimerar summan av det vertikala avståndet mellan en sådan linje och punkterna.
+:::</li>
 </ul>
-</div>
-<div id="teori-27" class="section level3" number="28.0.2">
-<h3>
-<span class="header-section-number">28.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-27"><i class="fas fa-link"></i></a>
-</h3>
-<p>Under kurserna <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/korrelation-och-kausalitet#!/">Matte 1</a> och <a href="https://www.matteboken.se/lektioner/matte-2/statistik/korrelation-och-regressionsanalys#!/">Matte 2</a> ges en kort introduktion till regressionsanalys. Regressionsanalys är centralt för en stor mängd analytiskt arbete och forskning inom olika fält.</p>
-<p>Grundläggande kunskap om regressionsanalys kan även hjälpa oss förstå poängen med många vetenskapliga metoder. Vi kommer därför ägna mycket möda åt detta och gå igenom hur vi kan använda detta inom samhällsvetenskap. Bitvis kan denna genomgång kännas tekniskt verklighetsfrånvänd, men dess betydelse kan inte överskattas.</p>
-<div id="minstakvadratmetoden" class="section level4" number="28.0.2.1">
+<div id="regressionsanalys" class="section level4" number="28.0.1.1">
 <h4>
-<span class="header-section-number">28.0.2.1</span> Minstakvadratmetoden<a class="anchor" aria-label="anchor" href="#minstakvadratmetoden"><i class="fas fa-link"></i></a>
+<span class="header-section-number">28.0.1.1</span> Regressionsanalys<a class="anchor" aria-label="anchor" href="#regressionsanalys"><i class="fas fa-link"></i></a>
 </h4>
-<p>I detta avsnitt ger vi först en övergripande beskrivning av minstakvadratmetodens logik, som sedan utvecklas stegvis. Precis som i tidigare exempel där vi studerar samvariation söker vi uppgifterna för en population. Populationens värden är okända, varför vi i stället är hänvisade till urvalsdata, som vi använder för att estimera samvariationen i populationen. Detta är förenat med osäkerhet.</p>
-<p>Alla raka linjer i ett diagram kan beskrivas med en ekvation med formen <span class="math inline">\(Y = a + bX\)</span>, det vill säga <a href="https://www.matteboken.se/lektioner/matte-1/funktioner/rata-linjens-ekvation">räta linjens ekvation</a>. Konstanta koefficienten <span class="math inline">\(a\)</span> är linjens y-skärning eller intercept medan konstanta koefficienten <span class="math inline">\(b\)</span> är linjens lutning, eller lutningskoefficient. <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är i detta fall våra variabler.</p>
-<p>Den linje vi ska rita ut kommer att ge oss en illustration över den genomsnittliga förändringen i variabel <span class="math inline">\(Y\)</span> då vi rör oss från relativt lägre till relativt högre värden på <span class="math inline">\(X\)</span>. Figur 1 visar de fyra punkterna vi använde i föregående avsnitt. I diagrammet syns även en rak linje som lutar snett uppåt i diagrammet. Linjen illustrerar en beräknad linjär samvariation mellan de fyra punkterna.</p>
-<p>Minstakvadratmetoden låter oss använda information från värdena för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> (de fyra punkterna) för att hitta just de värden för koefficienterna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> som låter oss rita ut den raka linje genom punkterna där summan av det vertikala kvadrerade avståndet mellan varje punkt och den raka linjen är så liten som möjligt. Vi ska återkomma till innebörden av detta.</p>
-<p>I figurens diagram ges ett exempel på avståndet i form av <span class="math inline">\({\widehat{v}}_{3} = 5 - 4\)</span>. Varje annan rak linje skulle resultera i ett större summerat vertikalt avstånd mellan punkterna och linjen. Om avståndet mellan en punkt och linjen är lika med 5 är det kvadrerade avståndet samma värde i kvadrat, <span class="math inline">\(5^{2} = 25\)</span>. Punkter som ligger under linjen får ett negativt avstånd, till exempel −5, och det kvadrerade värdet blir då <span class="math inline">\(( - 5)^{2} = 25\)</span>.</p>
-<p><strong>Figur 1. En linje ritad med hjälp av minstakvadratmetoden</strong><img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\2%20-%20Variation%20och%20samvariation\2-4%20-%20Samvariation%202/img/k2-2-4-image1.png" style="width:3.5in;height:3in"></p>
-<p>Förklaring: Linjen i diagrammet illustrerar den linjära samvariationen mellan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Av alla raka linjer vi kan rita ut i diagrammet är det just denna linje vi ser i diagrammet som minimerar summan av det vertikala avståndet mellan en sådan linje och punkterna.</p>
-</div>
-<div id="regressionsanalys" class="section level4" number="28.0.2.2">
-<h4>
-<span class="header-section-number">28.0.2.2</span> Regressionsanalys<a class="anchor" aria-label="anchor" href="#regressionsanalys"><i class="fas fa-link"></i></a>
-</h4>
-<p>Minstakvadratmetoden är en av flera metoder för att studera samvariation inom det som kallas för <em>regressionsanalys</em>, vilket är ett samlingsnamn för olika statistiska metoder. Vid regressionsanalys bestämmer vi den variabel vars variation vi ska kartlägga (<em>förklarad</em> eller <em>beroende variabel</em>) utifrån variationen i en eller flera andra variabler (<em>förklarande</em> eller <em>oberoende variabel</em>).</p>
-<p>Regressionsanalys är en metod för att kartlägga mönster i data, som linjär samvariation. Dessa mönster kan vi sedan använda för att studera orsakssamband. Men ett mönster är inget bevis för ett orsakssamband. Uttrycket “förklarande variabel” betyder därför inte att den ena variabeln nödvändigtvis orsakar den andra variabeln.</p>
-<p>Oavsett analysens syfte söker vi värden som existerar i en population och i regel arbetar vi med urvalsdata. Vi börjar med att beskriva hur vi kan uppskatta samvariationen mellan två variabler och går sedan längre fram igenom hur vi kan inkludera flera förklarade variabler.</p>
-<p>Vi ska nu utifrån minstakvadratmetoden uppskatta den linjära samvariation mellan variablerna <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> där vi bestämmer att <span class="math inline">\(Y\)</span> är vår förklarade variabel och <span class="math inline">\(X\)</span> är vår förklarande variabel. Hur vi bestämmer oss för detta beror på vilken idé som ligger till grund för vår analys, till exempel en samhällsvetenskaplig teori. Utifrån detta ställer vi upp följande <em>regressionsmodell</em>:</p>
-<p><span class="math inline">\(Y = a + bX + V\)</span> (1)</p>
-<p>Eftersom variabel Y står till vänster om likhetstecknet i regressionsmodellen kan vi se att det är <em>den förklarade variabeln</em>. Variabel <span class="math inline">\(X\)</span>, till höger om likhetstecknet, är <em>förklarande variabel</em>.</p>
-<p>Denna regressionsmodell existerar i vår population, det är <em>populationsmodellen</em> eller <em>populationens regressionsmodell</em>.</p>
-<p>Med regressionsanalys kan vi uppskatta både linjär och ickelinjär samvariation, men vi kommer här enbart ägna oss åt regressionsanalys för linjär samvariation med minstakvadratmetoden.</p>
-</div>
-<div id="koefficenterna-a-och-b" class="section level4" number="28.0.2.3">
-<h4>
-<span class="header-section-number">28.0.2.3</span> Koefficenterna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span><a class="anchor" aria-label="anchor" href="#koefficenterna-a-och-b"><i class="fas fa-link"></i></a>
-</h4>
-<p>Bokstäverna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> i regressionsmodellen i ekvation 1 är modellens <em>koefficienter</em> eller <em>parametrar</em>. Lutningskoefficienten <span class="math inline">\(b\)</span> ska läsas som att en ökning i variabeln <span class="math inline">\(X\)</span> med en enhet (beroende på vad <span class="math inline">\(X\)</span> är för variabel) är associerad med en förändring i variabel <span class="math inline">\(Y\)</span> av storlek <span class="math inline">\(b\)</span>. Koefficient <span class="math inline">\(a\)</span>, konstanten, är linjens y-skärning.</p>
-<p>Vi vet inte vilka värden <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> har i populationen. Det är det vi vill estimera med regressionsanalys. De estimerade versionerna av koefficienternas populationsvärden <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> kan vi skriva som <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Hattsymbolen <span class="math inline">\(\left( \widehat{} \right)\)</span> är estimerade värden, det vill säga våra skattningar med urvalsdata av populationsvärden (jämför figur 1). Bokstäver <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> utan hattsymbol syftar på deras populationsvärden.</p>
-</div>
-<div id="regressionslinjen" class="section level4" number="28.0.2.4">
-<h4>
-<span class="header-section-number">28.0.2.4</span> Regressionslinjen<a class="anchor" aria-label="anchor" href="#regressionslinjen"><i class="fas fa-link"></i></a>
-</h4>
-<p>Linjen vi ska rita ut kallas för <em>regressionslinje</em> (redan utritad i figur 1). När vi har estimerat <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> kan vi med hjälp av observationerna i variabel <span class="math inline">\(X\)</span> även uppskatta nya värden för variabel <span class="math inline">\(Y\)</span>. Den uppskattade versionen av <span class="math inline">\(Y\)</span> kallar vi <span class="math inline">\(\widehat{Y}\)</span>, vilket är <span class="math inline">\(Y\)</span>-värdet på regressionslinjen.</p>
-<p>De estimerade koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> som vi söker i detta fall är konstanter, vilket innebär att de har samma värden oavsett vilka värden för variabel <span class="math inline">\(X\)</span> vi jämför mot.</p>
-<p>Alltså: vi har en population med <span class="math inline">\(N\)</span> antal observationer. Vi hämtar <span class="math inline">\(n\)</span> antal observationer till vårt urval. Med urvalsobservationerna estimerar vi koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>, och därefter <span class="math inline">\(\widehat{Y}\)</span>.</p>
-</div>
-<div id="felterm-och-residual" class="section level4" number="28.0.2.5">
-<h4>
-<span class="header-section-number">28.0.2.5</span> Felterm och residual<a class="anchor" aria-label="anchor" href="#felterm-och-residual"><i class="fas fa-link"></i></a>
-</h4>
-<p>I regressionsmodellen representerar bokstaven <span class="math inline">\(V\)</span> det som kallas för <em>felterm</em>. Regressionsanalysen syftar till att mäta i vilken utsträckning som variationer i den (de) förklarande variabeln (variablerna) sammanfaller med variationer i den förklarade variabeln <span class="math inline">\(Y\)</span>.</p>
-<p>Feltermen anger differensen mellan respektive observations <span class="math inline">\(Y\)</span>-värde och regressionslinjen i populationen. Estimerade feltermer kallas för <em>residualer,</em> skrivs <span class="math inline">\(\widehat{V}\)</span>, och är differensen mellan <span class="math inline">\(Y\)</span>-värdena längs regressionslinjen, <span class="math inline">\(\widehat{Y},\)</span> och observerade <em>Y</em>:</p>
-<p><span class="math inline">\({\widehat{V}}_{i} = Y_{i} - \widehat{Y_{i}}\)</span> (2)</p>
-<p>Om vi sätter in de estimerade koefficienterna, residualerna och variabeln <span class="math inline">\(\widehat{Y}\)</span> i regressionsmodellen i ekvation 1 kan vi skriva:</p>
-<p><span class="math inline">\(\widehat{Y} = \widehat{a} + \widehat{b}X + \widehat{V}\)</span> (3)</p>
-</div>
-<div id="regressionsmodell-för-observation-i" class="section level4" number="28.0.2.6">
-<h4>
-<span class="header-section-number">28.0.2.6</span> Regressionsmodell för observation <span class="math inline">\(i\)</span><a class="anchor" aria-label="anchor" href="#regressionsmodell-f%C3%B6r-observation-i"><i class="fas fa-link"></i></a>
-</h4>
-<p>Vår regressionsmodell <span class="math inline">\(Y = a + bX + V\)</span> kan även skrivas:</p>
-<p><span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> (4)</p>
-<p>Bokstaven <span class="math inline">\(i\)</span> är ett index för observationsnummer. I detta fall använder vi fyra observationer varför <span class="math inline">\(i = \{ 1,2,3,4\}\)</span>. Om vi tar observation <span class="math inline">\(i = 2\)</span> har vi <span class="math inline">\(Y_{2} = a + bX_{2} + V_{2}.\)</span> De två värdena för koefficienterna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är konstanta för alla observationer och dessa har därför inte något index <span class="math inline">\(i\)</span>.</p>
-<p>Innan vi går igenom matematiken kring minstakvadratmetoden kan vi titta på ekvationen för regressionslinjen i figur 1. Om variabeln <span class="math inline">\(X\)</span> ökar med 1 är detta associerat med ett i genomsnitt 0,5 högre värde på <span class="math inline">\(Y\)</span>. Detta innebär att regressionslinjens lutningskoefficient <span class="math inline">\(\widehat{b}\)</span> i detta fall är:</p>
-<p><span class="math inline">\(\widehat{b} = 0,5\)</span> (5)</p>
-<p>Värdet för regressionsmodellens y-interceptet är <span class="math inline">\(\widehat{a}\)</span>, vilket vi kan estimera genom att ta räta linjens ekvation <span class="math inline">\(Y = a + bX\)</span>, men byta ut <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> mot estimerade <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> och flytta om lite:</p>
-<p><span class="math inline">\(Y = \widehat{a} + \widehat{b}X\)</span> (6)</p>
-<p><span class="math inline">\(\widehat{a} = Y - \widehat{b}X\)</span></p>
-<p>Nu har vi en definition för <span class="math inline">\(\widehat{a}\)</span>. I figur 1 kan vi se att regressionslinjen passerar punkten <span class="math inline">\((X,Y) = (3,\ \ 2,5)\)</span>. Om vi sätter in dessa värden för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> i ekvationen för <span class="math inline">\(\widehat{a}\)</span> får vi:</p>
-<p><span class="math inline">\(\widehat{a} = Y - \widehat{b}X = 2,5 - 0,5\*3 = 1\)</span> (7)</p>
-<p>Nu har vi resultaten för <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> samt värdena för variabel <span class="math inline">\(X\)</span>. Nu kan vi även estimera <span class="math inline">\(\widehat{Y}\)</span> och därigenom rita ut regressionslinjen:</p>
-<p><span class="math inline">\({\widehat{Y}}_{i} = \widehat{a} + \widehat{b}X_{i}\)</span> (8)</p>
-<p>Tabell 1 visar våra beräkningar för att estimera <span class="math inline">\(\widehat{Y}\)</span> med de observerade värden för <span class="math inline">\(X = \left\{ 3,4,6,7 \right\}\)</span>. Värdena i tabellen är samma som i figur 1. Den punkt på den diagonala linjen som de vertikala streckade linjerna träffar är värdena för <span class="math inline">\(\widehat{Y}\)</span>. Beräknar vi <span class="math inline">\(\widehat{Y}\)</span> för andra värden för <span class="math inline">\(X\)</span> får vi andra punkter längs med regressionslinjen. Pröva gärna detta själv.</p>
-<p><strong>Tabell 1: Estimering av</strong> <span class="math inline">\(\widehat{\mathbf{Y}}\)</span></p>
+<p>Minstakvadratmetoden är en av flera metoder för att studera samvariation inom det som kallas för <em>regressionsanalys</em>, vilket är ett samlingsnamn för olika statistiska metoder. Vid regressionsanalys bestämmer vi den variabel vars variation vi ska kartlägga (<em>förklarad</em> eller <em>beroende variabel</em>) utifrån variationen i en eller flera andra variabler (<em>förklarande</em> eller <em>oberoende variabel</em>).
+Regressionsanalys är en metod för att kartlägga mönster i data, som linjär samvariation. Dessa mönster kan vi sedan använda för att studera orsakssamband. Men ett mönster är inget bevis för ett orsakssamband. Uttrycket “förklarande variabel” betyder därför inte att den ena variabeln nödvändigtvis orsakar den andra variabeln.
+Oavsett analysens syfte söker vi värden som existerar i en population och i regel arbetar vi med urvalsdata. Vi börjar med att beskriva hur vi kan uppskatta samvariationen mellan två variabler och går sedan längre fram igenom hur vi kan inkludera flera förklarade variabler.
+Vi ska nu utifrån minstakvadratmetoden uppskatta den linjära samvariation mellan variablerna <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> där vi bestämmer att <span class="math inline">\(Y\)</span> är vår förklarade variabel och <span class="math inline">\(X\)</span> är vår förklarande variabel. Hur vi bestämmer oss för detta beror på vilken idé som ligger till grund för vår analys, till exempel en samhällsvetenskaplig teori. Utifrån detta ställer vi upp följande <em>regressionsmodell</em>:
+<span class="math inline">\(Y = a + bX + V\)</span> (1)
+Eftersom variabel Y står till vänster om likhetstecknet i regressionsmodellen kan vi se att det är <em>den förklarade variabeln</em>. Variabel <span class="math inline">\(X\)</span>, till höger om likhetstecknet, är <em>förklarande variabel</em>.
+Denna regressionsmodell existerar i vår population, det är <em>populationsmodellen</em> eller <em>populationens regressionsmodell</em>.
+Med regressionsanalys kan vi uppskatta både linjär och ickelinjär samvariation, men vi kommer här enbart ägna oss åt regressionsanalys för linjär samvariation med minstakvadratmetoden.
+#### Koefficenterna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>
+Bokstäverna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> i regressionsmodellen i ekvation 1 är modellens <em>koefficienter</em> eller <em>parametrar</em>. Lutningskoefficienten <span class="math inline">\(b\)</span> ska läsas som att en ökning i variabeln <span class="math inline">\(X\)</span> med en enhet (beroende på vad <span class="math inline">\(X\)</span> är för variabel) är associerad med en förändring i variabel <span class="math inline">\(Y\)</span> av storlek <span class="math inline">\(b\)</span>. Koefficient <span class="math inline">\(a\)</span>, konstanten, är linjens y-skärning.
+Vi vet inte vilka värden <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> har i populationen. Det är det vi vill estimera med regressionsanalys. De estimerade versionerna av koefficienternas populationsvärden <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> kan vi skriva som <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Hattsymbolen <span class="math inline">\(\left( \widehat{} \right)\)</span> är estimerade värden, det vill säga våra skattningar med urvalsdata av populationsvärden (jämför figur 1). Bokstäver <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> utan hattsymbol syftar på deras populationsvärden.
+#### Regressionslinjen
+Linjen vi ska rita ut kallas för <em>regressionslinje</em> (redan utritad i figur 1). När vi har estimerat <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> kan vi med hjälp av observationerna i variabel <span class="math inline">\(X\)</span> även uppskatta nya värden för variabel <span class="math inline">\(Y\)</span>. Den uppskattade versionen av <span class="math inline">\(Y\)</span> kallar vi <span class="math inline">\(\widehat{Y}\)</span>, vilket är <span class="math inline">\(Y\)</span>-värdet på regressionslinjen.
+De estimerade koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> som vi söker i detta fall är konstanter, vilket innebär att de har samma värden oavsett vilka värden för variabel <span class="math inline">\(X\)</span> vi jämför mot.
+Alltså: vi har en population med <span class="math inline">\(N\)</span> antal observationer. Vi hämtar <span class="math inline">\(n\)</span> antal observationer till vårt urval. Med urvalsobservationerna estimerar vi koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>, och därefter <span class="math inline">\(\widehat{Y}\)</span>.
+#### Felterm och residual
+I regressionsmodellen representerar bokstaven <span class="math inline">\(V\)</span> det som kallas för <em>felterm</em>. Regressionsanalysen syftar till att mäta i vilken utsträckning som variationer i den (de) förklarande variabeln (variablerna) sammanfaller med variationer i den förklarade variabeln <span class="math inline">\(Y\)</span>.
+Feltermen anger differensen mellan respektive observations <span class="math inline">\(Y\)</span>-värde och regressionslinjen i populationen. Estimerade feltermer kallas för <em>residualer,</em> skrivs <span class="math inline">\(\widehat{V}\)</span>, och är differensen mellan <span class="math inline">\(Y\)</span>-värdena längs regressionslinjen, <span class="math inline">\(\widehat{Y},\)</span> och observerade <em>Y</em>:
+<span class="math inline">\({\widehat{V}}_{i} = Y_{i} - \widehat{Y_{i}}\)</span> (2)
+Om vi sätter in de estimerade koefficienterna, residualerna och variabeln <span class="math inline">\(\widehat{Y}\)</span> i regressionsmodellen i ekvation 1 kan vi skriva:
+<span class="math inline">\(\widehat{Y} = \widehat{a} + \widehat{b}X + \widehat{V}\)</span> (3)
+#### Regressionsmodell för observation <span class="math inline">\(i\)</span>
+Vår regressionsmodell <span class="math inline">\(Y = a + bX + V\)</span> kan även skrivas:
+<span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> (4)
+Bokstaven <span class="math inline">\(i\)</span> är ett index för observationsnummer. I detta fall använder vi fyra observationer varför <span class="math inline">\(i = \{ 1,2,3,4\}\)</span>. Om vi tar observation <span class="math inline">\(i = 2\)</span> har vi <span class="math inline">\(Y_{2} = a + bX_{2} + V_{2}.\)</span> De två värdena för koefficienterna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är konstanta för alla observationer och dessa har därför inte något index <span class="math inline">\(i\)</span>.
+Innan vi går igenom matematiken kring minstakvadratmetoden kan vi titta på ekvationen för regressionslinjen i figur 1. Om variabeln <span class="math inline">\(X\)</span> ökar med 1 är detta associerat med ett i genomsnitt 0,5 högre värde på <span class="math inline">\(Y\)</span>. Detta innebär att regressionslinjens lutningskoefficient <span class="math inline">\(\widehat{b}\)</span> i detta fall är:
+<span class="math inline">\(\widehat{b} = 0,5\)</span> (5)
+Värdet för regressionsmodellens y-interceptet är <span class="math inline">\(\widehat{a}\)</span>, vilket vi kan estimera genom att ta räta linjens ekvation <span class="math inline">\(Y = a + bX\)</span>, men byta ut <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> mot estimerade <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> och flytta om lite:
+<span class="math inline">\(Y = \widehat{a} + \widehat{b}X\)</span> (6)
+<span class="math inline">\(\widehat{a} = Y - \widehat{b}X\)</span>
+Nu har vi en definition för <span class="math inline">\(\widehat{a}\)</span>. I figur 1 kan vi se att regressionslinjen passerar punkten <span class="math inline">\((X,Y) = (3,\ \ 2,5)\)</span>. Om vi sätter in dessa värden för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> i ekvationen för <span class="math inline">\(\widehat{a}\)</span> får vi:
+<span class="math inline">\(\widehat{a} = Y - \widehat{b}X = 2,5 - 0,5*3 = 1\)</span> (7)
+Nu har vi resultaten för <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> samt värdena för variabel <span class="math inline">\(X\)</span>. Nu kan vi även estimera <span class="math inline">\(\widehat{Y}\)</span> och därigenom rita ut regressionslinjen:
+<span class="math inline">\({\widehat{Y}}_{i} = \widehat{a} + \widehat{b}X_{i}\)</span> (8)
+Tabell 1 visar våra beräkningar för att estimera <span class="math inline">\(\widehat{Y}\)</span> med de observerade värden för <span class="math inline">\(X = \left\{ 3,4,6,7 \right\}\)</span>. Värdena i tabellen är samma som i figur 1. Den punkt på den diagonala linjen som de vertikala streckade linjerna träffar är värdena för <span class="math inline">\(\widehat{Y}\)</span>. Beräknar vi <span class="math inline">\(\widehat{Y}\)</span> för andra värden för <span class="math inline">\(X\)</span> får vi andra punkter längs med regressionslinjen. Pröva gärna detta själv.
+<strong>Tabell 1: Estimering av</strong> <span class="math inline">\(\widehat{\mathbf{Y}}\)</span>
+—————————————————————————————————————————————–
+Observation <em>i</em></p>
+<p><span class="math display">\[X\]</span></p>
+<p><span class="math display">\[Y\]</span></p>
+<p><span class="math display">\[\widehat{Y} = 1 + 0,5*X\]</span></p>
 <div class="inline-table"><table style="width:99%;" class="table table-sm">
-<colgroup>
-<col width="12%">
-<col width="21%">
-<col width="21%">
-<col width="42%">
-</colgroup>
+<colgroup><col width="98%"></colgroup>
 <thead><tr class="header">
-<th align="left">Observation <em>i</em>
-</th>
-<th align="left">0,5*X$$</th>
-<th></th>
-<th></th>
+<th align="left">1 3 3</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">1</td>
-<td align="left">3</td>
-<td>3</td>
-<td></td>
+<td align="left">: {.fig-caption}
+rklaring: Tabellen visar observationerna för variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> samt estimerade <span class="math inline">\(\widehat{Y}\)</span>, vilket vi får genom att estimera regressionsmodellen.
+:</td>
 </tr>
 <tr class="even">
-<td align="left"> = 1 +</td>
-<td align="left">0,5*3 = 2,5$$</td>
-<td></td>
-<td></td>
+<td align="left">## Positiv och negativ samvariation
+figur 1 lutar linjen uppåt åt höger och <span class="math inline">\(\widehat{b} \&gt; 0\)</span>, vilket innebär att vi har en <em>positiv samvariation</em> mellan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Om <span class="math inline">\(\widehat{b} \&lt; 0\)</span> har vi en <em>negativ samvariation</em>, varpå linjen skulle ha lutat nedåt åt höger i diagrammen. Större värden i <span class="math inline">\(X\)</span> samvarierar i så fall med i genomsnitt mindre värden i <span class="math inline">\(Y\)</span> och mindre värden i <span class="math inline">\(X\)</span> sammanfaller med i genomsnitt högre värden i <span class="math inline">\(Y\)</span>.
+<span class="math inline">\(\widehat{b} = 0\)</span> är linjen horisontell och saknar lutning, vilket i så fall indikerar att vi inte finner någon linjär samvariation mellan variablerna.
+timerade <span class="math inline">\(\widehat{Y}\)</span> kallas även för <em>predikterade</em> <span class="math inline">\(Y\)</span>. Ordet prediktion syftar på att förutspå framtida händelser utifrån historisk information. I detta fall innebär det att vi kan estimera <span class="math inline">\(\widehat{Y}\)</span> för <span class="math inline">\(X\)</span>-värden som inte återfinns i vårt material. Till exempel <span class="math inline">\(X = 10\)</span> ger <span class="math inline">\(\widehat{Y} = 1 + 0,5*10 = 6\)</span>.</td>
 </tr>
 <tr class="odd">
-<td align="left">2</td>
-<td align="left">4</td>
-<td>2</td>
-<td></td>
+<td align="left">: {.ex-section-title}
+ningar
+:</td>
 </tr>
 <tr class="even">
-<td align="left"> = 1 +</td>
-<td align="left">0,5*4 = 3$$</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td align="left">3</td>
-<td align="left">6</td>
-<td>5</td>
-<td></td>
-</tr>
-<tr class="even">
-<td align="left"> = 1 +</td>
-<td align="left">0,5*6 = 4$$</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td align="left">4</td>
-<td align="left">7</td>
-<td>4</td>
-<td></td>
-</tr>
-<tr class="even">
-<td align="left"> = 1 +</td>
-<td align="left">0,5*7 = 4,5$$</td>
-<td></td>
-<td></td>
+<td align="left">cript&gt;window.exerciseData=window.exerciseData||{};window.exerciseData[“k2-2-4”]=[ { “id”: “k2-2-4-001”, “name”: “Uppgift 1”, “exercise”: “I regressionsmodellen \(Y = a + bX + V\) – vad kallas variabeln \(Y\)?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Förklarande variabel”, “Oberoende variabel”, “Förklarad (beroende) variabel”, “Residualvariabel” ], “correct”: “Förklarad (beroende) variabel” } }, “error”: { “message”: “\(Y\) står till vänster om likhetstecknet i regressionsmodellen. Tänk på vad detta innebär för tolkningen.” }, “correct”: { “message”: “Rätt! \(Y\) kallas den <em>förklarade</em> eller <em>beroende</em> variabeln. Variabel \(X\) till höger om likhetstecknet är den förklarande (oberoende) variabeln.” } }, { “id”: “k2-2-4-002”, “name”: “Uppgift 2”, “exercise”: “Vad representerar feltermen \(V\) i regressionsmodellen \(Y = a + bX + V\)?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Differensen mellan de estimerade koefficienterna \(\widehat{a}\) och \(\widehat{b}\)”, “Differensen mellan respektive observations \(Y\)-värde och regressionslinjen i populationen”, “Det genomsnittliga felet i hela datasetet”, “Skillnaden mellan populationens och urvalets storlek” ], “correct”: “Differensen mellan respektive observations \(Y\)-värde och regressionslinjen i populationen” } }, “error”: { “message”: “Feltermen är det som modellen inte kan förklara – det vertikala avståndet till regressionslinjen.” }, “correct”: { “message”: “Rätt! Feltermen \(V\) anger differenserna i populationen mellan respektive observations \(Y\)-värde och regressionslinjen. Estimerade feltermer kallas för residualer och betecknas \(\widehat{V}\).” } }, { “id”: “k2-2-4-003”, “name”: “Uppgift 3”, “exercise”: “I regressionsmodellen \(Y = a + bX + V\) estimeras regressionslinjen med \(\widehat{b} = 0{,}5\) och \(\widehat{a} = 1\), det vill säga \(\widehat{Y} = 1 + 0{,}5 \cdot X\). Vad blir \(\widehat{Y}\) för observation 3 där \(X_3 = 6\)?”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “4” }, “answerformat”: ““,”error”: { “message”: “Sätt in \(X = 6\) i formeln \(\widehat{Y} = 1 + 0{,}5 \cdot X\).” }, “correct”: { “message”: “Rätt! \(\widehat{Y}_3 = 1 + 0{,}5 \cdot 6 = 1 + 3 = 4\). Detta är det predikterade \(Y\)-värdet längs regressionslinjen för \(X = 6\).” } }, { “id”: “k2-2-4-004”, “name”: “Uppgift 4”, “exercise”: “I regressionsmodellen \(Y = a + bX + V\): vad innebär det om lutningskoefficienten \(\widehat{b} = 0\)?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Det finns en stark positiv samvariation”, “Det finns en stark negativ samvariation”, “Regressionslinjen är horisontell, vilket indikerar ingen linjär samvariation”, “Modellen är felaktigt specificerad” ], “correct”: “Regressionslinjen är horisontell, vilket indikerar ingen linjär samvariation” } }, “error”: { “message”: “Tänk på vad \(b\) är i räta linjens ekvation \(Y = a + bX\).” }, “correct”: { “message”: “Rätt! Om \(\widehat{b} = 0\) är regressionslinjen horisontell och saknar lutning, vilket indikerar att vi inte finner någon linjär samvariation mellan variablerna \(X\) och \(Y\).” } }, { “id”: “k2-2-4-005”, “name”: “Uppgift 5”, “exercise”: “I regressionsmodellen \(Y = a + bX + V\) estimeras regressionslinjen som \(\widehat{Y} = 1 + 0{,}5 \cdot X\). Vad är det predikterade \(Y\)-värdet för \(X = 10\)?”, “image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “6” }, “answerformat”: ““,”error”: { “message”: “Sätt in \(X = 10\) i formeln \(\widehat{Y} = 1 + 0{,}5 \cdot X\).” }, “correct”: { “message”: “Rätt! \(\widehat{Y} = 1 + 0{,}5 \cdot 10 = 1 + 5 = 6\). Vi kan prediktera \(Y\)-värden för \(X\)-värden som inte finns i datamaterialet – detta kallas prediktion.” } }];
+iv class=“exercise-section” data-section-id=“k2-2-4”&gt;</td>
 </tr>
 </tbody>
 </table></div>
-<p>Förklaring: Tabellen visar observationerna för variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> samt estimerade <span class="math inline">\(\widehat{Y}\)</span>, vilket vi får genom att estimera regressionsmodellen.</p>
-</div>
-<div id="positiv-och-negativ-samvariation" class="section level4" number="28.0.2.7">
-<h4>
-<span class="header-section-number">28.0.2.7</span> Positiv och negativ samvariation<a class="anchor" aria-label="anchor" href="#positiv-och-negativ-samvariation"><i class="fas fa-link"></i></a>
-</h4>
-<p>I figur 1 lutar linjen uppåt åt höger och <span class="math inline">\(\widehat{b} \&gt; 0\)</span>, vilket innebär att vi har en <em>positiv samvariation</em> mellan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Om <span class="math inline">\(\widehat{b} \&lt; 0\)</span> har vi en <em>negativ samvariation</em>, varpå linjen skulle ha lutat nedåt åt höger i diagrammen. Större värden i <span class="math inline">\(X\)</span> samvarierar i så fall med i genomsnitt mindre värden i <span class="math inline">\(Y\)</span> och mindre värden i <span class="math inline">\(X\)</span> sammanfaller med i genomsnitt högre värden i <span class="math inline">\(Y\)</span>.</p>
-<p>Om <span class="math inline">\(\widehat{b} = 0\)</span> är linjen horisontell och saknar lutning, vilket i så fall indikerar att vi inte finner någon linjär samvariation mellan variablerna.</p>
-<p>Estimerade <span class="math inline">\(\widehat{Y}\)</span> kallas även för <em>predikterade</em> <span class="math inline">\(Y\)</span>. Ordet prediktion syftar på att förutspå framtida händelser utifrån historisk information. I detta fall innebär det att vi kan estimera <span class="math inline">\(\widehat{Y}\)</span> för <span class="math inline">\(X\)</span>-värden som inte återfinns i vårt material. Till exempel <span class="math inline">\(X = 10\)</span> ger <span class="math inline">\(\widehat{Y} = 1 + 0,5\*10 = 6\)</span>.</p>
-<div class="ex-section-title">
-<p>Övningar</p>
-</div>
-<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-2-4"]=[  {    "id": "k2-2-4-001",    "name": "Uppgift 1",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) – vad kallas variabeln \\(Y\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Förklarande variabel",          "Oberoende variabel",          "Förklarad (beroende) variabel",          "Residualvariabel"        ],        "correct": "Förklarad (beroende) variabel"      }    },    "error": { "message": "\\(Y\\) står till vänster om likhetstecknet i regressionsmodellen. Tänk på vad detta innebär för tolkningen." },    "correct": { "message": "Rätt! \\(Y\\) kallas den <em>förklarade</em> eller <em>beroende</em> variabeln. Variabel \\(X\\) till höger om likhetstecknet är den förklarande (oberoende) variabeln." }  },  {    "id": "k2-2-4-002",    "name": "Uppgift 2",    "exercise": "Vad representerar feltermen \\(V\\) i regressionsmodellen \\(Y = a + bX + V\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Differensen mellan de estimerade koefficienterna \\(\\widehat{a}\\) och \\(\\widehat{b}\\)",          "Differensen mellan respektive observations \\(Y\\)-värde och regressionslinjen i populationen",          "Det genomsnittliga felet i hela datasetet",          "Skillnaden mellan populationens och urvalets storlek"        ],        "correct": "Differensen mellan respektive observations \\(Y\\)-värde och regressionslinjen i populationen"      }    },    "error": { "message": "Feltermen är det som modellen inte kan förklara – det vertikala avståndet till regressionslinjen." },    "correct": { "message": "Rätt! Feltermen \\(V\\) anger differenserna i populationen mellan respektive observations \\(Y\\)-värde och regressionslinjen. Estimerade feltermer kallas för residualer och betecknas \\(\\widehat{V}\\)." }  },  {    "id": "k2-2-4-003",    "name": "Uppgift 3",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) estimeras regressionslinjen med \\(\\widehat{b} = 0{,}5\\) och \\(\\widehat{a} = 1\\), det vill säga \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\). Vad blir \\(\\widehat{Y}\\) för observation 3 där \\(X_3 = 6\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "4" },    "answerformat": "",    "error": { "message": "Sätt in \\(X = 6\\) i formeln \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\)." },    "correct": { "message": "Rätt! \\(\\widehat{Y}_3 = 1 + 0{,}5 \\cdot 6 = 1 + 3 = 4\\). Detta är det predikterade \\(Y\\)-värdet längs regressionslinjen för \\(X = 6\\)." }  },  {    "id": "k2-2-4-004",    "name": "Uppgift 4",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\): vad innebär det om lutningskoefficienten \\(\\widehat{b} = 0\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Det finns en stark positiv samvariation",          "Det finns en stark negativ samvariation",          "Regressionslinjen är horisontell, vilket indikerar ingen linjär samvariation",          "Modellen är felaktigt specificerad"        ],        "correct": "Regressionslinjen är horisontell, vilket indikerar ingen linjär samvariation"      }    },    "error": { "message": "Tänk på vad \\(b\\) är i räta linjens ekvation \\(Y = a + bX\\)." },    "correct": { "message": "Rätt! Om \\(\\widehat{b} = 0\\) är regressionslinjen horisontell och saknar lutning, vilket indikerar att vi inte finner någon linjär samvariation mellan variablerna \\(X\\) och \\(Y\\)." }  },  {    "id": "k2-2-4-005",    "name": "Uppgift 5",    "exercise": "I regressionsmodellen \\(Y = a + bX + V\\) estimeras regressionslinjen som \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\). Vad är det predikterade \\(Y\\)-värdet för \\(X = 10\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "6" },    "answerformat": "",    "error": { "message": "Sätt in \\(X = 10\\) i formeln \\(\\widehat{Y} = 1 + 0{,}5 \\cdot X\\)." },    "correct": { "message": "Rätt! \\(\\widehat{Y} = 1 + 0{,}5 \\cdot 10 = 1 + 5 = 6\\). Vi kan prediktera \\(Y\\)-värden för \\(X\\)-värden som inte finns i datamaterialet – detta kallas prediktion." }  }];</script><div class="exercise-section" data-section-id="k2-2-4">
-
-</div>
-<hr>
 <div class="next-section-link">
 <p><a href="k2-2-5.html">→ Nästa avsnitt: <strong>Felterm, residual och ett räkneexempel</strong></a></p>
 </div>
@@ -429,10 +364,7 @@
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k2-2-4"><span class="header-section-number">28</span> Samvariation 2</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#begrepp-27"><span class="header-section-number">28.0.1</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-27"><span class="header-section-number">28.0.2</span> Teori</a></li>
-</ul>
+<a class="nav-link" href="#k2-2-4"><span class="header-section-number">28</span> Samvariation 2</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-25"><span class="header-section-number">28.0.1</span> Begrepp</a></li></ul>
 </li></ul>
 
       <div class="book-extra">

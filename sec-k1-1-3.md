@@ -1,78 +1,43 @@
 # Hur testa om en teori stämmer? {#k1-1-3}
 
-
 ### Begrepp
-
 - **Samvariation:** Samvariation syftar på att 2 eller flera fenomen varierar i någon form av mönster eller med någon form av regelbundenhet.
-
 - **Positiv samvariation** mellan 2 fenomen råder om båda fenomenen ökar samtidigt.
-
 - **Negativ samvariation** mellan 2 fenomen råder om det ena fenomenet ökar samtidigt som det andra minskar, och tvärtom.
-
 - **Samband, orsakssamband eller kausalt samband:** Orsakssamband syftar på att ett fenomen orsakar en förändring eller ett tillstånd i ett eller flera andra fenomen.
-
 - **Experiment:** undersökning av orsakssamband.
-
 ### Teori
-
 Oavsett hur smart och genomtänkt en teori är, så är detta i sig inget bevis för hur världen fungerar. Och hur fiffigt vi än beskriver en teori med matematik, så är inte heller matematiken ett bevis för att världen fungerar på det sätt som teorin beskriver.
-
 All vetenskap måste använda någon form av information om verkligheten (data) för att kontrollera i vilken utsträckning teorin är korrekt. Även här kan matematiken hjälpa oss att avgöra hur väl teorin ger en korrekt beskrivning av världen.
-
 #### Samvariation
-
 En stor mängd analytiskt arbete består av att jämföra variationer i ett fenomen med variationer i ett eller flera andra fenomen. Säg att vi vill pröva teorin att högre inkomst i genomsnitt leder till högre lycka.
-
 Vi samlar in information och mäter båda fenomenen noga på ett jämförbart sätt. För att pröva vår teori jämför vi sedan om människor med hög inkomst även har hög lycka.
-
 Vi vill veta om inkomst och lycka **samvarierar**. **Positiv samvariation** innebär att högre värden av ett fenomen i genomsnitt är associerade med högre värden av ett annat fenomen. Annorlunda uttryckt: när det ena fenomenet ökar, så sammanfaller detta även med att högre värden av det andra fenomenet. Och omvänt, att samma fenomen minskar samtidigt som det andra fenomenet minskar.
-
 **Negativ samvariation** innebär att när ett fenomen ökar så minskar det andra fenomenet, och när ett fenomen minskar så ökar det andra fenomenet.
-
 #### Korrelation och kausalitet
-
 För att vi ska kunna hävda att vår teori ger en korrekt bild av verkligheten så behöver vi finna en positiv samvariation i den data vi studerar. Att två olika fenomen samvarierar betyder dock inte nödvändigtvis att det råder något orsakssamband mellan dessa.
-
 Detta kan vi enkelt se genom exempel. På sommaren badar vi mer utomhus och äter mer glass. Men det är inte vår kontakt med vatten utomhus som orsakar glassförsäljningen, utan (troligen) att vädret är varmare som orsakar både ökat badande och ökad glassätning.
-
 Alltså: även om vi har korrelation betyder det inte att vi har ett samband. Inom vetenskap och analys är därför en viktig poäng följande: korrelation är **[inte]{.underline}** samma sak som orsakssamband (kausalitet). Se även avsnittet [Korrelation och kausalitet från Matte 1](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/korrelation-och-kausalitet#!/).
-
 #### Varför behöver vi vetenskapliga experiment?
-
 Även om två fenomen samvarierar är det ofta mycket svårt att veta om det ena fenomenet orsakar det andra. För att mer noga studera om ett fenomen påverkar (orsakar) ett annat fenomen vill vi idealiskt sett försäkra oss om att inga andra fenomen påverkar samvariationen när vi studerar den.
-
 Ett sätt att göra detta är att utföra **vetenskapliga experiment** i skyddade miljöer, som laboratorier. Ofta med en kontrollgrupp och en behandlingsgrupp.
-
 Säg att vi tror att förändringar i fenomen A orsakar förändringar i fenomen B. Med ett vetenskapligt experiment vill vi då isolera relationen mellan A och B. Vi som genomför experimentet kontrollerar när experimentet startar, så vi kan mäta i vilken utsträckning en förändring i B kan förklaras av A.
-
 I samhällsvetenskap går det sällan att studera saker i skyddade miljöer eller fullt ut kontrollerade experiment. I stället använder man metoder där man försöker komma så nära det vetenskapliga experimentet som möjligt. I dessa situationer har vi hjälp av matematiken. Hur vi gör ska vi gå igenom mer noga längre fram i kursen.
-
 #### Utrymme för tolkning
-
 Redan nu kan det dock vara på sin plats att påpeka att matematiken inte kan bevisa orsakssamband. Även i ett kontrollerat experiment i ett laboratorium är vi i regel tvungna att tolka information och resonera teoretiskt.
-
 Ibland har vi bättre eller sämre argument för våra påståenden. Vetenskapliga metoder och matematik hjälper oss avgöra när vi har bättre eller sämre skäl att tro på ett orsakssamband. Till exempel kan vi med hjälp av matematik och statistisk analys visa varför vetenskapliga experiment är en stark metod för att studera orsakssamband. Och vi kan visa varför våra fördomar om världen ofta slår fel.
-
 Våra fördomar bygger ofta på att vi observerar samvariationer i världen och tänker att två eller flera saker hänger ihop, fastän de inte gör det. Det är lätt att hitta exempel på saker som samvarierar, som glassförsäljning och bad. Men det är svårt att hitta resultat som ger oss starka skäl att verkligen tro på ett orsakssamband.
-
 Om vi faktiskt tror på ett orsakssamband mellan två fenomen så blir nästa fråga hur stor effekten är. Orsakar en förändring i A en stor eller liten förändring i B? Vi kanske vill använda sambandet för att föreslå förändringar i världen? Eller ta någon typ av beslut där vi vill kunna väga nytta mot kostnader. I sådana situationer räcker det inte att bara kunna säga att det finns ett samband. Då behöver vi matematik.
-
 #### Exempel från forskningen
-
 Analys av orsakssamband och samvariation används inom både samhällsvetenskap och naturvetenskap och har en lång historia. Här är några exempel för att visa att matematik och statistik angår dig oavsett vad du är intresserad av.
-
 - **Exempel 1:** **Skapar pengar lycka?**\
   Charles Jones och Peter Klenow publicerade 2016 artikeln [*Beyond GDP? Welfare across Countries and Time*](https://www.aeaweb.org/articles?id=10.1257/aer.20110236) (på Svenska ungefär: *Bortom bruttonationalprodukt (BNP)? Välfärd i olika länder och tidsperioder*). Deras analys visar att den genomsnittliga inkomsten i ett land samvarierar med flera saker som kan förklara människors välmående: konsumtion, fritid, dödlighet och ekonomisk ojämlikhet. En viktig fråga i denna diskussion är hur vi kan mäta dessa saker och vad som orsakar vad.
-
 - **Exempel 2: Hade Einstein** **rätt?**\
   Albert Einstein (1879---1955) är bland annat känd för sina teorier om relativitet inom fysiken, vilka delvis bygger på observationen att ljusets hastighet i vakuum är konstant oavsett hur ljusets källa rör sig. Tidigare trodde många att ljus färdades i ett ämne kallat eter. 1933 publicerade den amerikanske fysikern Dayton Miller [resultat från olika experiment](https://www.nature.com/articles/133162a0) som han menade visade att Einstein hade fel. Utifrån [diskussioner](https://arxiv.org/abs/physics/0608238) om bland annat matematik och statistik kom forskningssamhället fram till att Miller hade fel och Einstein rätt.
-
 - **Exempel 3: Orsakar rökning cancer?**\
   Numera anses det vara ett otvivelaktigt faktum att tobaksrökning orsakar cancer. Tidiga forskningsresultat rörande detta presenterades redan i slutet av 1700-talet, men så sent som på 1950-talet var detta fortfarande omtvistat. [En viktig fråga](https://pubmed.ncbi.nlm.nih.gov/15183026/) var hur man kan studera detta orsakssamband och om publicerade resultat var korrekt beräknade.
-
 - **Exempel 4: Påverkar människan klimatet?**\
   Vetenskapssamhället är idag överens om att jordens stigande medeltemperatur är orsakad av mänsklig aktivitet. Under 1970-talet [publicerades akademiska artiklar](https://www.ipcc.ch/site/assets/uploads/2018/03/ar4-wg1-chapter1.pdf) som sades visa att mänsklig påverkan i stället skulle sänka jordens medeltemperatur. Detta har senare avvisats. Även denna diskussion handlade om beräkningsmetoder och om det verkligen fanns ett orsakssamband.
-
 
 
 ::: {.ex-section-title}

@@ -114,160 +114,113 @@
 <h1>
 <span class="header-section-number">41</span> Räkna på orsak och effekt<a class="anchor" aria-label="anchor" href="#k2-4-7"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-40" class="section level3" number="41.0.1">
+<div id="begrepp-38" class="section level3" number="41.0.1">
 <h3>
-<span class="header-section-number">41.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-40"><i class="fas fa-link"></i></a>
+<span class="header-section-number">41.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-38"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
-<strong>Regressionsdiskontinuitet:</strong> Kvasiexperimentell metod där vi kan utnyttja en brytpunkt kring vilket det förekommer en slumpmässig indelning i behandlings- och kontrollgrupp. Kallas även brytpunktsanalys. Engelska: <em>regression discontinuity design</em>.</li>
-</ul>
-</div>
-<div id="teori-40" class="section level3" number="41.0.2">
-<h3>
-<span class="header-section-number">41.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-40"><i class="fas fa-link"></i></a>
-</h3>
-<p>I avsnitt <a href="https://www.dropbox.com/scl/fi/p55pve5puznr5q1pytlp0/1-1-Orsak-och-effekt.docx?rlkey=fhscndx5n8rpsx529fb55liup&amp;dl=0">1.1</a> och <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">1.2</a> introducerade vi kontrafaktisk analys och kvasiexperiment för att studera orsakssamband. I kapitel 1 introducerade vi dessa koncept teoretiskt. Nu, efter att ha arbetat med regressionsanalys med flera variabler i detta kapitel, kan vi förstå den matematiska grunden för varför detta är så viktigt.</p>
-<p>Som vi såg i avsnitt 4-1 och 4-3: när vi lägger till eller tar bort variabler i en regressionsmodell ändras koefficienterna för de andra variablerna. Detta är inte bara ett tekniskt problem - det är kärnan i varför vi måste vara så noggranna när vi studerar orsakssamband.</p>
-<div id="orsakssamband-i-en-regressionsmodell" class="section level4" number="41.0.2.1">
-<h4>
-<span class="header-section-number">41.0.2.1</span> Orsakssamband i en regressionsmodell<a class="anchor" aria-label="anchor" href="#orsakssamband-i-en-regressionsmodell"><i class="fas fa-link"></i></a>
-</h4>
-<p>Säg nu, kraftigt förenklat, att vi har en teori om att en medicin <span class="math inline">\((X)\)</span> minskar mängden sjukdomssymptom <span class="math inline">\((Y)\)</span> hos patienter. Vi har hittat en grupp patienter som alla har lika mycket sjukdomssymptom, vilka vi delat in i en behandlingsgrupp (som får medicin) och en kontrollgrupp (som inte får medicin). För att undersöka medicinens effekt på sjukdomssymptom ställer vi upp följande regressionsmodell:</p>
-<p><span class="math inline">\(Y = \alpha + \beta X + \epsilon\)</span> (1)</p>
-<p>Genom att observera samvariationen mellan medicin och sjukdomssymptom kommer estimerade <span class="math inline">\(\widehat{\beta}\)</span> att ge oss ett mått på medicinens <span class="math inline">\(X\)</span> effekt på sjukdomssymptomen <span class="math inline">\(Y\)</span>. Om medicinen fungerar förväntar vi oss att <span class="math inline">\(\beta\)</span> kommer vara negativ, det vill säga att medicinen <span class="math inline">\(X\)</span> minskar symptom <span class="math inline">\(Y\)</span>.</p>
-<p>Ett problem, bland flera tänkbara, är att för att vi ska kunna tolka <span class="math inline">\(\widehat{\beta}\)</span> som ett korrekt mått på effekten av medicinen så måste vi vara säkra på att inga andra fenomen påverkar medicinen och sjukdomssymptomen.</p>
-<p>Säg att vi till exempel vet från tidigare forskning att det finns flera andra saker som både påverkar medicinens effekt och själva sjukdomssymptomet. Det kan handla om sådant som kön, ålder med mera. Dessa saker kan vi mäta och lägga till som variabler i vår regressionsmodell. Genom att kontrollera för till exempel kön kan vi i så fall estimera medicins effekt korrekt.</p>
-</div>
-<div id="illustration-med-diagram-1" class="section level4" number="41.0.2.2">
-<h4>
-<span class="header-section-number">41.0.2.2</span> Illustration med diagram<a class="anchor" aria-label="anchor" href="#illustration-med-diagram-1"><i class="fas fa-link"></i></a>
-</h4>
-<p>Men det finns även ytterligare några fenomen som vi har starka skäl att tro att de är viktiga för både medicinen och symptomen, men som vi saknar data för. Om vi saknar data så kan vi inte kontrollera för det i regressionsmodellen.</p>
-<p>Figur 1 illustrerar ett exempel på hur den här sortens problem kan se ut. Pilen från <span class="math inline">\(X\)</span> till <span class="math inline">\(Y\)</span> beskriver det orsakssamband som vi är intresserade av. Pilar visar påverkans riktning (kausalitet). Så här ska figuren läsas:</p>
-<ul>
-<li><p><span class="math inline">\(X \rightarrow Y\)</span>: Medicinen påverkar symptom. Det vi vill mäta!</p></li>
-<li><p><span class="math inline">\(P \rightarrow X\)</span> och <span class="math inline">\(P \rightarrow Y\)</span>: Fenomen <span class="math inline">\(P\)</span> (observerbart, som ålder) påverkar både vem som får medicin och sjuka de är</p></li>
-<li><p><span class="math inline">\(Z \rightarrow X\)</span> och <span class="math inline">\(Z \rightarrow Y\)</span>: Fenomen <span class="math inline">\(Z\)</span> (icke-observerbart, som medfödd förmåga) påverkar både vem som får medicin och hur sjuka de är.</p></li>
-</ul>
-<p>Om vi inte kontrollerar för <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> kommer den samvariation vi observerar mellan <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> att vara en blandning av (1) medicinens faktiska effekt (det vi vill mäta), (2) effekten av <span class="math inline">\(P\)</span> (kan vi fixa genom att inkludera <span class="math inline">\(P\)</span> i regressionen) och (3) effekten av Z (kan vi inte fixa).</p>
-<p>Detta är varför randomiserade experiment är så viktiga: de "bryter" pilarna från <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> till <span class="math inline">\(X\)</span>. För att vi ska kunna uppskatta vilken effekt <span class="math inline">\(X\)</span> har på <span class="math inline">\(Y\)</span> måste vi dels fastställa att när det sker en variation i <span class="math inline">\(X\)</span>, orsakad utan koppling till <span class="math inline">\(Y\)</span>, så sker det även en variation i <span class="math inline">\(Y\)</span>.</p>
-</div>
-</div>
-<div id="exogen-variation-1" class="section level3" number="41.0.3">
-<h3>
-<span class="header-section-number">41.0.3</span> Exogen variation<a class="anchor" aria-label="anchor" href="#exogen-variation-1"><i class="fas fa-link"></i></a>
-</h3>
-<p>I detta fall bestämmer vi att behandlingsgruppen tar medicinen, vilket är den framkallade variationen i <span class="math inline">\(X\)</span>. Detta kallas för exogen variation, variation i <span class="math inline">\(X\)</span> som inte orsakas av <span class="math inline">\(Y\)</span> eller av något som påverkar både <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Exempel på exogen variation i medicin <span class="math inline">\(X\)</span>:</p>
-<ul>
-<li><p>Vi bestämmer vem som får medicin, som i ett randomiserat experiment</p></li>
-<li><p>Variationen i <span class="math inline">\(X\)</span> kommer från vårt experimentella upplägg</p></li>
-</ul>
-<p>Exempel på endogen variation (dåligt om vi ska dra slutsatser om orsakssamband):</p>
-<ul>
-<li><p>Patienter som mår bättre väljer att ta medicin</p></li>
-<li><p>Variationen i <span class="math inline">\(X\)</span> beror då på något annat (hälsotillstånd) som också påverkar <span class="math inline">\(Y\)</span></p></li>
-</ul>
-</div>
-<div id="selektionsproblemet-1" class="section level3" number="41.0.4">
-<h3>
-<span class="header-section-number">41.0.4</span> Selektionsproblemet<a class="anchor" aria-label="anchor" href="#selektionsproblemet-1"><i class="fas fa-link"></i></a>
-</h3>
-<p>För att uppskatta effekten av <span class="math inline">\(X\)</span> på <span class="math inline">\(Y\)</span> korrekt måste vi även ta hänsyn till de två fenomenen <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> som påverkar både <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Fenomen <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> påverkar vilka som ingår i behandlingsgruppen och vilka som ingår i kontrollgruppen. Detta kallas för <a href="https://en.wikipedia.org/wiki/Selection_bias"><em>selektionsproblem</em></a> och beskrevs i <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">avsnitt 1-2</a>.</p>
-<p>Fenomen <span class="math inline">\(P\)</span> är observerbart (till exempel kön och ålder) men fenomen <span class="math inline">\(Z\)</span> syftar på något som det saknas data för och som det kanske aldrig kommer att finnas data för.</p>
-<p>Om vi inte justerar vår analys för <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> kommer de variationer vi observerar i <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>, liksom samvariationen mellan dem, helt eller delvis vara orsakade av <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span>. Detta vet vi från när vi tittat på regressionsanalys med tre eller fler variabler i avsnitt <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">4.1</a> och <a href="https://www.dropbox.com/scl/fi/sdnc9eukta9tuiq1y6z0f/4-4-Regression-med-matriser.docx?rlkey=zmc4680olys9qe0zmn7i0vswc&amp;dl=0">4.4</a>.</p>
-<div class="inline-figure">**Figur 1: För att skatta effekten av X på Y måste vi justera för P och Z.**
-<img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\4%20-%20Minstakvadratmetoden%20f%C3%B6rdjupning%202%20fler%20variabler\4-7%20-%20R%C3%A4kna%20p%C3%A5%20orsak%20och%20effekt/img/k2-4-7-image1.png" style="width:2.875in;height:2.48022in">
-</div>
-<p>Förklaring: Fenomen P är observerbart och påverkar X och Y. Fenomen Z kan inte observeras eller mätas men påverkar också X och Y. P kan vi kontrollera för. Z kan vi inte kontrollera för. Vi kommer kanske aldrig kunna kontrollera för Z. Detta är ett centralt argument för vetenskapliga experiment.</p>
-<p>Diagrammet i figur 1 kallas för en <em>riktad acyklisk graf</em> (engelska <em>directed acyclic graph</em>, <em>DAG</em>). Diagrammet beskriver ett exempel och ytterligare utmaningar av liknande slag är också tänkbara, men diskuteras ej här.</p>
-<div id="både-förekomst-och-frånvaron-av-variabler-kan-påverka-våra-resultat" class="section level4" number="41.0.4.1">
-<h4>
-<span class="header-section-number">41.0.4.1</span> Både förekomst och frånvaron av variabler kan påverka våra resultat<a class="anchor" aria-label="anchor" href="#b%C3%A5de-f%C3%B6rekomst-och-fr%C3%A5nvaron-av-variabler-kan-p%C3%A5verka-v%C3%A5ra-resultat"><i class="fas fa-link"></i></a>
-</h4>
-<p>I tidigare avsnitt såg vi hur frånvaron eller närvaron av andra variabler kan påverka alla resultat i regressionsmodellen. Det är därför viktigt att vi funderar noga på hur vi designar vår undersökning.</p>
-<p>Om vi utför ett kontrollerat experiment, till exempel delar in patienterna slumpmässigt i 2 grupper och ger ena gruppen medicin, ökar våra möjligheter att mäta effekten korrekt. Om vi har tillräckligt många patienter kommer alla andra egenskaper förutom själva behandlingen att fördela sig slumpmässigt mellan grupperna.</p>
-<p>För att designa vår undersökning och regressionsmodell kan vi ta fram olika typer av underlag, studera andra samvariationer, pröva olika lösningar och jämföra resultat. Detta arbete är något som analytiker måste avgöra från fall till fall. Oavsett hur avancerad metod eller hur många observationer och variabler vi har finns det ingen metod för att bevisa exakt vilka variabler som bör ingå i en analys.</p>
-</div>
-<div id="vi-kan-inte-använda-teori-i-stället-för-data" class="section level4" number="41.0.4.2">
-<h4>
-<span class="header-section-number">41.0.4.2</span> Vi kan inte använda teori i stället för data<a class="anchor" aria-label="anchor" href="#vi-kan-inte-anv%C3%A4nda-teori-i-st%C3%A4llet-f%C3%B6r-data"><i class="fas fa-link"></i></a>
-</h4>
-<p>Ibland är det frestande att tro att om vi hittar någon jättesmart teori som beskriver hur hela världen fungerar, är det i sig ett bevis för hur en regressionsmodell bör utformas. Idéer och teorier är grunden för all analys men det är i sig inget bevis för att inkludera eller exkludera just de variabler vi har till förfogande. Den här typen av svårigheter har varit välkända länge och diskuterats utförligt inom samhällsvetenskap. Två läsvärda texter på temat är <a href="https://www.climateaudit.info/pdf/others/hendry.1980.pdf">Hendry (1980)</a> och <a href="https://uh.edu/hobby/eitm/_docs/past-lectures/2015-Lectures/Harold-Clarke/lets-take-the-con-out-of-econometrics.pdf">Leamer (1983)</a>.</p>
-<p>Som vi gick igenom i avsnitt <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">1.2</a> är det ofta omöjligt att genomföra kontrollerade experiment inom samhällsvetenskap. Det är lätt att tro att detta medför att vi lika gärna kan uttala oss om orsakssamband utan experimentliknande metoder, eftersom ingen ändå vet. Detta är helt enkelt inte sant. Svårigheten att uttala sig om orsakssamband sänker inte kraven på samhällsvetenskap, snarare tvärtom.</p>
-<p>I stället för experiment är samhällsvetare ofta hänvisade till kvasiexperimentella observationsstudier där behandlings- och kontrollgrupp till exempel skapas genom att analytiker lyckas identifiera en process som, utan avsikt, fördelar en tillräckligt stor mängd observationer slumpmässigt i behandling och kontroll.</p>
-<p>Även i dessa situationer måste vi undersöka om våra antaganden i analysen är rimliga, till exempel att fördelningen mellan kontroll och behandlingen verkligen skett så gott som slumpmässigt. Detta kan vi till exempel göra genom att jämföra behandlings- och kontrollgruppens egenskaper och därigenom kontrollera att den enda viktiga skillnaden mellan grupperna är själva behandlingen.</p>
-<p>Om observerbara egenskaper är likvärdiga kan vi ofta anta att även de icke-observerbara egenskaperna är det. Många sådana metoder bygger just på att inget fenomen ska påverka fördelningen (selektionen) till behandlings- och kontrollgruppen.</p>
-</div>
-<div id="brytpunktsanalys" class="section level4" number="41.0.4.3">
-<h4>
-<span class="header-section-number">41.0.4.3</span> Brytpunktsanalys<a class="anchor" aria-label="anchor" href="#brytpunktsanalys"><i class="fas fa-link"></i></a>
-</h4>
-<p>För att studera orsak och verkan när vi studerar människor finns det flera kvasiexperimentella metoder för att identifiera behandlings- och kontrollgrupp. Ett exempel på en sådan metod är <em>regressionsdiskontinuitet</em> (engelska <em>regression discontinuity</em>), eller <em>brytpunktsanalys</em>.</p>
-<p>Detta är en metod för att identifiera och jämföra behandlings- och kontrollgrupp i en observationsstudie. Metoden bygger på att vi kan observera variationer kring en brytpunkt med betydelse för både behandling och utfall. Små variationer kring brytpunkten kan antas vara slumpmässiga, varför denna kan användas för att dela in observationer i behandling och kontroll.</p>
-<p>Låt oss återigen tänka oss att vi ska studera vilken effekt en utbildning har på deltagarnas framtida inkomster. Om vi jämför deltagarnas inkomster med resten av befolkningen riskerar andra icke-observerbara egenskaper hos deltagarna både förklara varför de deltog i utbildningen och deras inkomster. Vi kan därför inte uppskatta effekten på detta sätt.</p>
-<p>Men antagning till utbildningen sker med ett intagningsprov som man måste få minst 92 poäng på för att bli antagen. Vi tänker nu att de som fick precis över och precis under 92 poäng har likvärdiga färdigheter. Några hade en dålig dag och några hade en ovanligt bra dag. De studenter som hamnade precis över 92 poäng och antogs blir vår behandlingsgrupp. De studenter som hamnade precis under 92 poäng och ej antogs blir vår kontrollgrupp.</p>
-<p>Tanken är att studenter som fick 91 poäng och studenter som fick 93 poäng är i praktiken lika duktiga. Skillnaden på 2 poäng kan betraktas som “tur” (några hade en bra/dålig dag). Eftersom skillnaden är slumpmässig kring brytpunkten kan vi jämföra dessa två grupper nästan som i ett randomiserat experiment: Behandlingsgrupp: 93 poäng → antagen. Kontrollgrupp: 91 poäng → inte antagen. Men notera att detta fungerar endast nära brytpunkten. Vi kan inte jämföra någon med 50 poäng mot någon med 100 poäng eftersom de är för olika.</p>
-<p>För att kontrollera om behandlings- och kontrollgruppen har likvärdiga färdigheter kan vi jämföra de relevanta egenskaper vi kan observera, som ålder, tidigare prestationer, tidigare utbildning med mera. För exempel på en studie med liknande metod, se <a href="https://www.nationalekonomi.se/wp-content/uploads/2022/09/50-6-doras.pdf">Rooth och Stenberg (2022)</a>.</p>
-</div>
-<div id="alkoholens-skadeverkningar" class="section level4" number="41.0.4.4">
-<h4>
-<span class="header-section-number">41.0.4.4</span> Alkoholens skadeverkningar<a class="anchor" aria-label="anchor" href="#alkoholens-skadeverkningar"><i class="fas fa-link"></i></a>
-</h4>
-<p>Låt oss ta ett exempel på verklig forskning som applicerar brytpunktsanalys på ett riktigt fall. Vi ska här använda oss av <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a> studie på alkohol och dödlighet. Att alkohol är direkt skadligt och även indirekt ökar risken för olika negativa effekter är välkänt. Samtidigt kan det vara svårt att i detalj skatta de skadliga effekterna (fenomen Y) av ökad tillgång till alkohol (fenomen <span class="math inline">\(X\)</span>) eftersom människor som far illa av alkohol ofta även har andra destruktiva vanor. Vissa av dessa kan vi observera och kontrollera för (fenomen <span class="math inline">\(P\)</span>). Men många dåliga vanor är av sådan art att det är svårt eller omöjligt att kontrollera för allt i analys (fenomen <span class="math inline">\(Z\)</span>).</p>
-<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a> använder sig av det faktum att i USA är åldersgränsen för att köpa alkohol 21 år. Först visar de att drickandet bland unga vuxna ökar kraftigt strax efter 21-årsdagen samtidigt som olika dödsorsaker som ofta är förknippade med alkoholkonsumtion ökar: trafikolyckor, självmord med mera.</p>
-<p>Carpenter och Dobkin jämför därför mängden dödsfall just kring månaderna före och efter människors 21-årsdag. Alltså, vid 21-årsdagen är den största förändringen just ökad tillgång till alkohol. Och av en tragisk händelse ökar samtidigt mängden dödsfall av orsaker som ofta orsakas av just alkohol.</p>
-<p>Låt oss nu gå igenom grunderna för den regressionsanalys som Carpenter och Dobkin använder för att mäta dessa effekter. Vi illustrerar här två exempel. Vi börjar med följande regressionsmodell:</p>
-<p><span class="math inline">\(Y_{i} = a_{1} + a_{2}X_{i} + a_{3}T_{i} + u_{i}\)</span> (2)</p>
-<p>där <span class="math inline">\(a_{1},a_{2}\)</span> och <span class="math inline">\(a_{3}\)</span> är koefficienter. <span class="math inline">\(Y_{i}\)</span> är antal alkoholrelaterade dödsfall per 100 000 invånare i respektive åldersgrupp i, där varje åldersgrupp är indelad i månader: 19 år och 1 månad, 19 år och 2 månader, och så vidare.</p>
-<p>Variabel <span class="math inline">\(X\)</span> är ålder räknat i månader. <span class="math inline">\(T\)</span> är en dummyvariabel som är <span class="math inline">\(T = 0\)</span> för de åldersgrupper som är under 21 och <span class="math inline">\(T = 1\)</span> för de åldersgrupper som har fyllt 21. <span class="math inline">\(u_{i}\)</span> är felterm för åldersgrupp i. Koefficienten <span class="math inline">\(a_{3}\)</span> som är multiplicerad med <span class="math inline">\(T\)</span> kommer i denna regressionsmodell att beskriva den effekt som 21-årsdagen har på alkoholrelaterad dödlighet.</p>
-<p>Koefficienten <span class="math inline">\(a_{2}\)</span> i regressionsmodellen i ekvation 2 estimerar samvariationen mellan dödlighet <span class="math inline">\((Y)\)</span> och ålder <span class="math inline">\((X)\)</span>. Men denna samvariation kan också tänkas ändras då en person fyller 21. För att kontrollera detta lägger vi till en interaktionsterm <span class="math inline">\(X\*T\)</span>. Vi får nu följande regressionsmodell:</p>
-<p><span class="math inline">\(X\*T:Y_{i} = b_{1} + b_{2}X_{i} + b_{3}T_{i} + b_{4}\left( X_{i}\*T_{i} \right) + v_{i}\)</span> (3)</p>
-<p>där <span class="math inline">\(b_{1},b_{2},b_{3}\)</span> och <span class="math inline">\(b_{4}\)</span> är koefficienter <span class="math inline">\(Y,X\)</span> och <span class="math inline">\(T\)</span> är samma variabler som i regressionsmodellen i ekvation 2 och <span class="math inline">\(v\)</span> är feltermen. Interaktionstermen <span class="math inline">\(b_{4}\left( X_{i}\*T_{i} \right)\)</span> estimerar förändringar i samvariationen mellan alkoholkonsumtion och dödlighet före/efter 21-årsdagen.</p>
-</div>
-<div id="carpenter-och-dobkins-resultat-i-diagram" class="section level4" number="41.0.4.5">
-<h4>
-<span class="header-section-number">41.0.4.5</span> Carpenter och Dobkins resultat i diagram<a class="anchor" aria-label="anchor" href="#carpenter-och-dobkins-resultat-i-diagram"><i class="fas fa-link"></i></a>
-</h4>
-<p>De två regressionsmodellerna illustreras i figur 2 där båda diagrammen använder samma data, hämtad från <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a>.</p>
-<p>Jämför figur 3 i <span class="math display">\[[carpenter2009theeffect](#LyXCite-carpenter2009theeffect)\]</span>. Data tillgängliga här: <a href="https://github.com/jrnold/masteringmetrics/blob/master/" class="uri">https://github.com/jrnold/masteringmetrics/blob/master/</a></p>
-<p>masteringmetrics/data/mlda.rda</p>
-<p>Den vertikala linjen mitt i respektive diagram markerar tidpunkten då personerna i undersökningen fyller 21. Till vänster om linjen visas genomsnittligt antal dödsfall för människor strax under 21 och till höger dödsfall för de som precis fyllt 21. Den högra regressionslinjen i respektive diagrammen skiftar upp vid 21 års ålder, vilket indikerar att dödligheten stiger brant efter 21-årsdagen i och med att människor har möjlighet att köpa alkohol.</p>
-<p>I det vänstra diagrammet ser vi två regressionslinjer, där båda är estimerade med regressionsmodellen i ekvation 2. Regressionslinjen till vänster, för åldersgrupperna under 21, är ritad med <span class="math inline">\(T = 0\)</span> och lutar nedåt. För åldersgrupperna över 21, till höger i det vänstra diagrammet, är regressionslinjen ritad med <span class="math inline">\(T = 1\)</span>. De båda regressionslinjerna i det vänstra diagrammet har samma lutning, eftersom vi endast estimerar en lutningskoefficient för ålder i ekvation 2.</p>
-<p>I det högra diagrammet ser vi också två regressionslinjer som är estimerade utifrån regressionsmodellen i ekvation 3. För åldersgrupperna över 21, till höger i diagrammet, skiftar linjen upp. Lutningen ändras också. För åldersgrupperna under 21, till vänster i det högra diagrammet, syns en positiv korrelation mellan alkoholrelaterad dödlighet och ålder. För åldersgrupperna över 21 syns i stället en negativ korrelation mellan alkoholrelaterad dödlighet och ålder.</p>
-<div class="inline-figure">**Figur 2: Samvariationen mellan ålder och alkoholrelaterad dödlighet**
-<img src="C:\Users\hegel\Dropbox_MINA%20TEXTER%20_db\Matematik%20f%C3%B6r%20samh%C3%A4llsvetare\Matteboken.se\html-output\kurs%202%20-%20Statistik%20f%C3%B6r%20samh%C3%A4llsvetare\4%20-%20Minstakvadratmetoden%20f%C3%B6rdjupning%202%20fler%20variabler\4-7%20-%20R%C3%A4kna%20p%C3%A5%20orsak%20och%20effekt/img/k2-4-7-image2.png" style="width:6.32639in;height:4.21759in">
-</div>
-<p>Förklaring: Brytpunktsanalys rörande alkoholrelaterade dödsfall per åldersgrupp i USA. Se brödtext för förklaring av regressionsmodellerna. Data från <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a>. Genomsnittlig alkolholrelaterad dödlighet ökat skarpt i samband med att människor fyller 21.</p>
-</div>
-</div>
-<div id="sammanfattning" class="section level3" number="41.0.5">
-<h3>
-<span class="header-section-number">41.0.5</span> Sammanfattning<a class="anchor" aria-label="anchor" href="#sammanfattning"><i class="fas fa-link"></i></a>
-</h3>
-<p>I detta avsnitt har vi gått igenom varför kapitel 4 spelar roll för vetenskap:</p>
-<ol style="list-style-type: decimal">
-<li><p>Regressionsanalys är inte bara en teknisk metod - det är ett verktyg för att studera orsakssamband.</p></li>
+<strong>Regressionsdiskontinuitet:</strong> Kvasiexperimentell metod där vi kan utnyttja en brytpunkt kring vilket det förekommer en slumpmässig indelning i behandlings- och kontrollgrupp. Kallas även brytpunktsanalys. Engelska: <em>regression discontinuity design</em>.
+### Teori
+I avsnitt <a href="https://www.dropbox.com/scl/fi/p55pve5puznr5q1pytlp0/1-1-Orsak-och-effekt.docx?rlkey=fhscndx5n8rpsx529fb55liup&amp;dl=0">1.1</a> och <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">1.2</a> introducerade vi kontrafaktisk analys och kvasiexperiment för att studera orsakssamband. I kapitel 1 introducerade vi dessa koncept teoretiskt. Nu, efter att ha arbetat med regressionsanalys med flera variabler i detta kapitel, kan vi förstå den matematiska grunden för varför detta är så viktigt.
+Som vi såg i avsnitt 4-1 och 4-3: när vi lägger till eller tar bort variabler i en regressionsmodell ändras koefficienterna för de andra variablerna. Detta är inte bara ett tekniskt problem - det är kärnan i varför vi måste vara så noggranna när vi studerar orsakssamband.
+#### Orsakssamband i en regressionsmodell
+Säg nu, kraftigt förenklat, att vi har en teori om att en medicin <span class="math inline">\((X)\)</span> minskar mängden sjukdomssymptom <span class="math inline">\((Y)\)</span> hos patienter. Vi har hittat en grupp patienter som alla har lika mycket sjukdomssymptom, vilka vi delat in i en behandlingsgrupp (som får medicin) och en kontrollgrupp (som inte får medicin). För att undersöka medicinens effekt på sjukdomssymptom ställer vi upp följande regressionsmodell:
+<span class="math inline">\(Y = \alpha + \beta X + \epsilon\)</span> (1)
+Genom att observera samvariationen mellan medicin och sjukdomssymptom kommer estimerade <span class="math inline">\(\widehat{\beta}\)</span> att ge oss ett mått på medicinens <span class="math inline">\(X\)</span> effekt på sjukdomssymptomen <span class="math inline">\(Y\)</span>. Om medicinen fungerar förväntar vi oss att <span class="math inline">\(\beta\)</span> kommer vara negativ, det vill säga att medicinen <span class="math inline">\(X\)</span> minskar symptom <span class="math inline">\(Y\)</span>.
+Ett problem, bland flera tänkbara, är att för att vi ska kunna tolka <span class="math inline">\(\widehat{\beta}\)</span> som ett korrekt mått på effekten av medicinen så måste vi vara säkra på att inga andra fenomen påverkar medicinen och sjukdomssymptomen.
+Säg att vi till exempel vet från tidigare forskning att det finns flera andra saker som både påverkar medicinens effekt och själva sjukdomssymptomet. Det kan handla om sådant som kön, ålder med mera. Dessa saker kan vi mäta och lägga till som variabler i vår regressionsmodell. Genom att kontrollera för till exempel kön kan vi i så fall estimera medicins effekt korrekt.
+#### Illustration med diagram
+Men det finns även ytterligare några fenomen som vi har starka skäl att tro att de är viktiga för både medicinen och symptomen, men som vi saknar data för. Om vi saknar data så kan vi inte kontrollera för det i regressionsmodellen.
+Figur 1 illustrerar ett exempel på hur den här sortens problem kan se ut. Pilen från <span class="math inline">\(X\)</span> till <span class="math inline">\(Y\)</span> beskriver det orsakssamband som vi är intresserade av. Pilar visar påverkans riktning (kausalitet). Så här ska figuren läsas:</li>
 <li>
-<p>För att mäta kausalitet korrekt måste vi:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Antingen göra randomiserade experiment (RCT)</p></li>
-<li><p>Eller hitta kvasiexperimentella metoder (som brytpunktsanalys)</p></li>
-<li><p>Eller åtminstone kontrollera för alla relevanta variabler</p></li>
-</ol>
-</li>
-<li><p>Som vi såg här i kapitel 4 kan alla variabler som ingår eller inte ingår i en analys påverka resultaten. Detta är inte en teknisk detalj. Det är skillnaden mellan korrekta eller felaktiga slutsatser om orsak och verkan.</p></li>
+<span class="math inline">\(X \rightarrow Y\)</span>: Medicinen påverkar symptom. Det vi vill mäta!</li>
 <li>
-<p>Det finns inga direkta metoder för att objektivt bevisa vilka variabler som ska ingå. Därför behöver vi:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Stark teori</p></li>
-<li><p>Genomtänkt forskningsdesign</p></li>
-<li><p>Kritiskt tänkande</p></li>
-<li><p>Vetenskaplig ödmjukhet</p></li>
-</ol>
-</li>
-</ol>
-<p>Detta är varför metodik och statistik inte bara handlar om matte. Detta är grunden för hur vi förstår världen.</p>
+<span class="math inline">\(P \rightarrow X\)</span> och <span class="math inline">\(P \rightarrow Y\)</span>: Fenomen <span class="math inline">\(P\)</span> (observerbart, som ålder) påverkar både vem som får medicin och sjuka de är</li>
+<li>
+<span class="math inline">\(Z \rightarrow X\)</span> och <span class="math inline">\(Z \rightarrow Y\)</span>: Fenomen <span class="math inline">\(Z\)</span> (icke-observerbart, som medfödd förmåga) påverkar både vem som får medicin och hur sjuka de är.
+Om vi inte kontrollerar för <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> kommer den samvariation vi observerar mellan <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> att vara en blandning av (1) medicinens faktiska effekt (det vi vill mäta), (2) effekten av <span class="math inline">\(P\)</span> (kan vi fixa genom att inkludera <span class="math inline">\(P\)</span> i regressionen) och (3) effekten av Z (kan vi inte fixa).
+Detta är varför randomiserade experiment är så viktiga: de "bryter" pilarna från <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> till <span class="math inline">\(X\)</span>. För att vi ska kunna uppskatta vilken effekt <span class="math inline">\(X\)</span> har på <span class="math inline">\(Y\)</span> måste vi dels fastställa att när det sker en variation i <span class="math inline">\(X\)</span>, orsakad utan koppling till <span class="math inline">\(Y\)</span>, så sker det även en variation i <span class="math inline">\(Y\)</span>.
+### Exogen variation
+I detta fall bestämmer vi att behandlingsgruppen tar medicinen, vilket är den framkallade variationen i <span class="math inline">\(X\)</span>. Detta kallas för exogen variation, variation i <span class="math inline">\(X\)</span> som inte orsakas av <span class="math inline">\(Y\)</span> eller av något som påverkar både <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Exempel på exogen variation i medicin <span class="math inline">\(X\)</span>:</li>
+<li>Vi bestämmer vem som får medicin, som i ett randomiserat experiment</li>
+<li>Variationen i <span class="math inline">\(X\)</span> kommer från vårt experimentella upplägg
+Exempel på endogen variation (dåligt om vi ska dra slutsatser om orsakssamband):</li>
+<li>Patienter som mår bättre väljer att ta medicin</li>
+<li>Variationen i <span class="math inline">\(X\)</span> beror då på något annat (hälsotillstånd) som också påverkar <span class="math inline">\(Y\)</span>
+### Selektionsproblemet
+För att uppskatta effekten av <span class="math inline">\(X\)</span> på <span class="math inline">\(Y\)</span> korrekt måste vi även ta hänsyn till de två fenomenen <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> som påverkar både <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>. Fenomen <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> påverkar vilka som ingår i behandlingsgruppen och vilka som ingår i kontrollgruppen. Detta kallas för <a href="https://en.wikipedia.org/wiki/Selection_bias"><em>selektionsproblem</em></a> och beskrevs i <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">avsnitt 1-2</a>.
+Fenomen <span class="math inline">\(P\)</span> är observerbart (till exempel kön och ålder) men fenomen <span class="math inline">\(Z\)</span> syftar på något som det saknas data för och som det kanske aldrig kommer att finnas data för.
+Om vi inte justerar vår analys för <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> kommer de variationer vi observerar i <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>, liksom samvariationen mellan dem, helt eller delvis vara orsakade av <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span>. Detta vet vi från när vi tittat på regressionsanalys med tre eller fler variabler i avsnitt <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">4.1</a> och <a href="https://www.dropbox.com/scl/fi/sdnc9eukta9tuiq1y6z0f/4-4-Regression-med-matriser.docx?rlkey=zmc4680olys9qe0zmn7i0vswc&amp;dl=0">4.4</a>.
+**Figur 1: För att skatta effekten av X på Y måste vi justera för P och Z.*<em>
+<img src="img/k2-4-7-image1.png" style="width:2.875in;height:2.48022in">
+::: {.fig-caption}
+Förklaring: Fenomen P är observerbart och påverkar X och Y. Fenomen Z kan inte observeras eller mätas men påverkar också X och Y. P kan vi kontrollera för. Z kan vi inte kontrollera för. Vi kommer kanske aldrig kunna kontrollera för Z. Detta är ett centralt argument för vetenskapliga experiment.
+Diagrammet i figur 1 kallas för en </em>riktad acyklisk graf* (engelska <em>directed acyclic graph</em>, <em>DAG</em>). Diagrammet beskriver ett exempel och ytterligare utmaningar av liknande slag är också tänkbara, men diskuteras ej här.
+:::</li>
+</ul>
+<div id="både-förekomst-och-frånvaron-av-variabler-kan-påverka-våra-resultat" class="section level4" number="41.0.1.1">
+<h4>
+<span class="header-section-number">41.0.1.1</span> Både förekomst och frånvaron av variabler kan påverka våra resultat<a class="anchor" aria-label="anchor" href="#b%C3%A5de-f%C3%B6rekomst-och-fr%C3%A5nvaron-av-variabler-kan-p%C3%A5verka-v%C3%A5ra-resultat"><i class="fas fa-link"></i></a>
+</h4>
+<p>I tidigare avsnitt såg vi hur frånvaron eller närvaron av andra variabler kan påverka alla resultat i regressionsmodellen. Det är därför viktigt att vi funderar noga på hur vi designar vår undersökning.
+Om vi utför ett kontrollerat experiment, till exempel delar in patienterna slumpmässigt i 2 grupper och ger ena gruppen medicin, ökar våra möjligheter att mäta effekten korrekt. Om vi har tillräckligt många patienter kommer alla andra egenskaper förutom själva behandlingen att fördela sig slumpmässigt mellan grupperna.
+För att designa vår undersökning och regressionsmodell kan vi ta fram olika typer av underlag, studera andra samvariationer, pröva olika lösningar och jämföra resultat. Detta arbete är något som analytiker måste avgöra från fall till fall. Oavsett hur avancerad metod eller hur många observationer och variabler vi har finns det ingen metod för att bevisa exakt vilka variabler som bör ingå i en analys.
+#### Vi kan inte använda teori i stället för data
+Ibland är det frestande att tro att om vi hittar någon jättesmart teori som beskriver hur hela världen fungerar, är det i sig ett bevis för hur en regressionsmodell bör utformas. Idéer och teorier är grunden för all analys men det är i sig inget bevis för att inkludera eller exkludera just de variabler vi har till förfogande. Den här typen av svårigheter har varit välkända länge och diskuterats utförligt inom samhällsvetenskap. Två läsvärda texter på temat är <a href="https://www.climateaudit.info/pdf/others/hendry.1980.pdf">Hendry (1980)</a> och <a href="https://uh.edu/hobby/eitm/_docs/past-lectures/2015-Lectures/Harold-Clarke/lets-take-the-con-out-of-econometrics.pdf">Leamer (1983)</a>.
+Som vi gick igenom i avsnitt <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">1.2</a> är det ofta omöjligt att genomföra kontrollerade experiment inom samhällsvetenskap. Det är lätt att tro att detta medför att vi lika gärna kan uttala oss om orsakssamband utan experimentliknande metoder, eftersom ingen ändå vet. Detta är helt enkelt inte sant. Svårigheten att uttala sig om orsakssamband sänker inte kraven på samhällsvetenskap, snarare tvärtom.
+I stället för experiment är samhällsvetare ofta hänvisade till kvasiexperimentella observationsstudier där behandlings- och kontrollgrupp till exempel skapas genom att analytiker lyckas identifiera en process som, utan avsikt, fördelar en tillräckligt stor mängd observationer slumpmässigt i behandling och kontroll.
+Även i dessa situationer måste vi undersöka om våra antaganden i analysen är rimliga, till exempel att fördelningen mellan kontroll och behandlingen verkligen skett så gott som slumpmässigt. Detta kan vi till exempel göra genom att jämföra behandlings- och kontrollgruppens egenskaper och därigenom kontrollera att den enda viktiga skillnaden mellan grupperna är själva behandlingen.
+Om observerbara egenskaper är likvärdiga kan vi ofta anta att även de icke-observerbara egenskaperna är det. Många sådana metoder bygger just på att inget fenomen ska påverka fördelningen (selektionen) till behandlings- och kontrollgruppen.
+#### Brytpunktsanalys
+För att studera orsak och verkan när vi studerar människor finns det flera kvasiexperimentella metoder för att identifiera behandlings- och kontrollgrupp. Ett exempel på en sådan metod är <em>regressionsdiskontinuitet</em> (engelska <em>regression discontinuity</em>), eller <em>brytpunktsanalys</em>.
+Detta är en metod för att identifiera och jämföra behandlings- och kontrollgrupp i en observationsstudie. Metoden bygger på att vi kan observera variationer kring en brytpunkt med betydelse för både behandling och utfall. Små variationer kring brytpunkten kan antas vara slumpmässiga, varför denna kan användas för att dela in observationer i behandling och kontroll.
+Låt oss återigen tänka oss att vi ska studera vilken effekt en utbildning har på deltagarnas framtida inkomster. Om vi jämför deltagarnas inkomster med resten av befolkningen riskerar andra icke-observerbara egenskaper hos deltagarna både förklara varför de deltog i utbildningen och deras inkomster. Vi kan därför inte uppskatta effekten på detta sätt.
+Men antagning till utbildningen sker med ett intagningsprov som man måste få minst 92 poäng på för att bli antagen. Vi tänker nu att de som fick precis över och precis under 92 poäng har likvärdiga färdigheter. Några hade en dålig dag och några hade en ovanligt bra dag. De studenter som hamnade precis över 92 poäng och antogs blir vår behandlingsgrupp. De studenter som hamnade precis under 92 poäng och ej antogs blir vår kontrollgrupp.
+Tanken är att studenter som fick 91 poäng och studenter som fick 93 poäng är i praktiken lika duktiga. Skillnaden på 2 poäng kan betraktas som “tur” (några hade en bra/dålig dag). Eftersom skillnaden är slumpmässig kring brytpunkten kan vi jämföra dessa två grupper nästan som i ett randomiserat experiment: Behandlingsgrupp: 93 poäng → antagen. Kontrollgrupp: 91 poäng → inte antagen. Men notera att detta fungerar endast nära brytpunkten. Vi kan inte jämföra någon med 50 poäng mot någon med 100 poäng eftersom de är för olika.
+För att kontrollera om behandlings- och kontrollgruppen har likvärdiga färdigheter kan vi jämföra de relevanta egenskaper vi kan observera, som ålder, tidigare prestationer, tidigare utbildning med mera. För exempel på en studie med liknande metod, se <a href="https://www.nationalekonomi.se/wp-content/uploads/2022/09/50-6-doras.pdf">Rooth och Stenberg (2022)</a>.
+#### Alkoholens skadeverkningar
+Låt oss ta ett exempel på verklig forskning som applicerar brytpunktsanalys på ett riktigt fall. Vi ska här använda oss av <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a> studie på alkohol och dödlighet. Att alkohol är direkt skadligt och även indirekt ökar risken för olika negativa effekter är välkänt. Samtidigt kan det vara svårt att i detalj skatta de skadliga effekterna (fenomen Y) av ökad tillgång till alkohol (fenomen <span class="math inline">\(X\)</span>) eftersom människor som far illa av alkohol ofta även har andra destruktiva vanor. Vissa av dessa kan vi observera och kontrollera för (fenomen <span class="math inline">\(P\)</span>). Men många dåliga vanor är av sådan art att det är svårt eller omöjligt att kontrollera för allt i analys (fenomen <span class="math inline">\(Z\)</span>).
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a> använder sig av det faktum att i USA är åldersgränsen för att köpa alkohol 21 år. Först visar de att drickandet bland unga vuxna ökar kraftigt strax efter 21-årsdagen samtidigt som olika dödsorsaker som ofta är förknippade med alkoholkonsumtion ökar: trafikolyckor, självmord med mera.
+Carpenter och Dobkin jämför därför mängden dödsfall just kring månaderna före och efter människors 21-årsdag. Alltså, vid 21-årsdagen är den största förändringen just ökad tillgång till alkohol. Och av en tragisk händelse ökar samtidigt mängden dödsfall av orsaker som ofta orsakas av just alkohol.
+Låt oss nu gå igenom grunderna för den regressionsanalys som Carpenter och Dobkin använder för att mäta dessa effekter. Vi illustrerar här två exempel. Vi börjar med följande regressionsmodell:
+<span class="math inline">\(Y_{i} = a_{1} + a_{2}X_{i} + a_{3}T_{i} + u_{i}\)</span> (2)
+där <span class="math inline">\(a_{1},a_{2}\)</span> och <span class="math inline">\(a_{3}\)</span> är koefficienter. <span class="math inline">\(Y_{i}\)</span> är antal alkoholrelaterade dödsfall per 100 000 invånare i respektive åldersgrupp i, där varje åldersgrupp är indelad i månader: 19 år och 1 månad, 19 år och 2 månader, och så vidare.
+Variabel <span class="math inline">\(X\)</span> är ålder räknat i månader. <span class="math inline">\(T\)</span> är en dummyvariabel som är <span class="math inline">\(T = 0\)</span> för de åldersgrupper som är under 21 och <span class="math inline">\(T = 1\)</span> för de åldersgrupper som har fyllt 21. <span class="math inline">\(u_{i}\)</span> är felterm för åldersgrupp i. Koefficienten <span class="math inline">\(a_{3}\)</span> som är multiplicerad med <span class="math inline">\(T\)</span> kommer i denna regressionsmodell att beskriva den effekt som 21-årsdagen har på alkoholrelaterad dödlighet.
+Koefficienten <span class="math inline">\(a_{2}\)</span> i regressionsmodellen i ekvation 2 estimerar samvariationen mellan dödlighet <span class="math inline">\((Y)\)</span> och ålder <span class="math inline">\((X)\)</span>. Men denna samvariation kan också tänkas ändras då en person fyller 21. För att kontrollera detta lägger vi till en interaktionsterm <span class="math inline">\(X*T\)</span>. Vi får nu följande regressionsmodell:
+<span class="math inline">\(X*T:Y_{i} = b_{1} + b_{2}X_{i} + b_{3}T_{i} + b_{4}\left( X_{i}*T_{i} \right) + v_{i}\)</span> (3)
+där <span class="math inline">\(b_{1},b_{2},b_{3}\)</span> och <span class="math inline">\(b_{4}\)</span> är koefficienter <span class="math inline">\(Y,X\)</span> och <span class="math inline">\(T\)</span> är samma variabler som i regressionsmodellen i ekvation 2 och <span class="math inline">\(v\)</span> är feltermen. Interaktionstermen <span class="math inline">\(b_{4}\left( X_{i}*T_{i} \right)\)</span> estimerar förändringar i samvariationen mellan alkoholkonsumtion och dödlighet före/efter 21-årsdagen.
+#### Carpenter och Dobkins resultat i diagram
+De två regressionsmodellerna illustreras i figur 2 där båda diagrammen använder samma data, hämtad från <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a>.
+Jämför figur 3 i <span class="math display">\[[carpenter2009theeffect](#LyXCite-carpenter2009theeffect)\]</span>. Data tillgängliga här: <a href="https://github.com/jrnold/masteringmetrics/blob/master/" class="uri">https://github.com/jrnold/masteringmetrics/blob/master/</a>
+masteringmetrics/data/mlda.rda
+Den vertikala linjen mitt i respektive diagram markerar tidpunkten då personerna i undersökningen fyller 21. Till vänster om linjen visas genomsnittligt antal dödsfall för människor strax under 21 och till höger dödsfall för de som precis fyllt 21. Den högra regressionslinjen i respektive diagrammen skiftar upp vid 21 års ålder, vilket indikerar att dödligheten stiger brant efter 21-årsdagen i och med att människor har möjlighet att köpa alkohol.
+I det vänstra diagrammet ser vi två regressionslinjer, där båda är estimerade med regressionsmodellen i ekvation 2. Regressionslinjen till vänster, för åldersgrupperna under 21, är ritad med <span class="math inline">\(T = 0\)</span> och lutar nedåt. För åldersgrupperna över 21, till höger i det vänstra diagrammet, är regressionslinjen ritad med <span class="math inline">\(T = 1\)</span>. De båda regressionslinjerna i det vänstra diagrammet har samma lutning, eftersom vi endast estimerar en lutningskoefficient för ålder i ekvation 2.
+I det högra diagrammet ser vi också två regressionslinjer som är estimerade utifrån regressionsmodellen i ekvation 3. För åldersgrupperna över 21, till höger i diagrammet, skiftar linjen upp. Lutningen ändras också. För åldersgrupperna under 21, till vänster i det högra diagrammet, syns en positiv korrelation mellan alkoholrelaterad dödlighet och ålder. För åldersgrupperna över 21 syns i stället en negativ korrelation mellan alkoholrelaterad dödlighet och ålder.
+**Figur 2: Samvariationen mellan ålder och alkoholrelaterad dödlighet**
+<img src="img/k2-4-7-image2.png" style="width:6.32639in;height:4.21759in">
+::: {.fig-caption}
+Förklaring: Brytpunktsanalys rörande alkoholrelaterade dödsfall per åldersgrupp i USA. Se brödtext för förklaring av regressionsmodellerna. Data från <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&amp;utm_medium=blog&amp;utm_campaign=causal-inference-part-i">Carpenter och Dobkin (2009)</a>. Genomsnittlig alkolholrelaterad dödlighet ökat skarpt i samband med att människor fyller 21.
+:::</p>
+</div>
+</div>
+<div id="sammanfattning" class="section level3" number="41.0.2">
+<h3>
+<span class="header-section-number">41.0.2</span> Sammanfattning<a class="anchor" aria-label="anchor" href="#sammanfattning"><i class="fas fa-link"></i></a>
+</h3>
+<p>I detta avsnitt har vi gått igenom varför kapitel 4 spelar roll för vetenskap:
+1. Regressionsanalys är inte bara en teknisk metod - det är ett verktyg för att studera orsakssamband.
+2. För att mäta kausalitet korrekt måste vi:
+a. Antingen göra randomiserade experiment (RCT)
+b. Eller hitta kvasiexperimentella metoder (som brytpunktsanalys)
+c. Eller åtminstone kontrollera för alla relevanta variabler
+3. Som vi såg här i kapitel 4 kan alla variabler som ingår eller inte ingår i en analys påverka resultaten. Detta är inte en teknisk detalj. Det är skillnaden mellan korrekta eller felaktiga slutsatser om orsak och verkan.
+4. Det finns inga direkta metoder för att objektivt bevisa vilka variabler som ska ingå. Därför behöver vi:
+a. Stark teori
+b. Genomtänkt forskningsdesign
+c. Kritiskt tänkande
+d. Vetenskaplig ödmjukhet
+Detta är varför metodik och statistik inte bara handlar om matte. Detta är grunden för hur vi förstår världen.</p>
 <div class="ex-section-title">
 <p>Övningar</p>
 </div>
@@ -419,11 +372,8 @@
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
 <a class="nav-link" href="#k2-4-7"><span class="header-section-number">41</span> Räkna på orsak och effekt</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#begrepp-40"><span class="header-section-number">41.0.1</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-40"><span class="header-section-number">41.0.2</span> Teori</a></li>
-<li><a class="nav-link" href="#exogen-variation-1"><span class="header-section-number">41.0.3</span> Exogen variation</a></li>
-<li><a class="nav-link" href="#selektionsproblemet-1"><span class="header-section-number">41.0.4</span> Selektionsproblemet</a></li>
-<li><a class="nav-link" href="#sammanfattning"><span class="header-section-number">41.0.5</span> Sammanfattning</a></li>
+<li><a class="nav-link" href="#begrepp-38"><span class="header-section-number">41.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#sammanfattning"><span class="header-section-number">41.0.2</span> Sammanfattning</a></li>
 </ul>
 </li></ul>
 

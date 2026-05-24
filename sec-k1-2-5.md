@@ -1,93 +1,58 @@
 # Banadödlighet och flyktingar {#k1-2-5}
 
-
 ### Begrepp
-
 *Inga nya matematiska begrepp i detta avsnitt.*
-
 ### Teori
-
 De senaste decennierna har barnadödligheten i hela världen sjunkit kraftigt. Den varierar dock fortfarande stort bland världens länder. Tabell 1 beskriver den genomsnittliga barnadödligheten per kontinent år 1950 och 2016. Både år 1950 och 2016 var barnadödligheten störst i Afrika.
-
 Barnadödligheten har dock även minskat som mest i de afrikanska länderna, från cirka 300 per 1 000 barn år 1950, till att år 2016 vara nere på 62,7 avlidna barn per 1 000 under 5 års ålder. Under samma period minskade barnadödligheten i länderna i Europa från 86,7 år 1950 till 4,9 år 2016.
-
 **Tabell 1: Antal avlidna barn per 1 000 barn under 5 år**
-
   --------------------------------------------
                  **År 1950**    **År 2016**
   -------------- -------------- --------------
   Afrika         302            62,7
-
   Asien          234            22,8
-
   Europa         86,7           4,9
-
   Nordamerika    152            15,9
-
   Oceanien       140            22,7
-
   Sydamerika     181            17,8
   --------------------------------------------
-
 Källa: Gapminder, [www.ourworldindata.org](http://www.ourworldindata.org).
-
 Sedan början av 1800-talet har den genomsnittliga barnadödligheten i världen minskat från i genomsnitt över 400 döda per 1 000 barn (40 %), ned till cirka 20 % år 1950 och till cirka 4 % år 2016. Det vill säga, en minskning med 16 procentenheter:
-
 $4 - 20 = - 16$ procentenheter
-
 Länderna i Afrika har under perioden sett barnadödligheten minska från 302 till 62,7 per 1 000 barn. Räknat i procentenheter blir detta:
-
 
 
 $$\frac{62,7 - 300}{1\ 000} = - \frac{237,3}{1\ 000} = - 0,2372 = - 23,73\ \text{procentenheter}$$
 
-
-
 I Europa minskade den genomsnittliga barnadödligheten från 86,7 till 4,9 per 1 000 barn. Uttryckt i procentenheter:
-
 
 
 $$\frac{4,9 - 86,7}{1000} = - \frac{81,8}{1000} = - 0,0818 = - 8,18\ \text{procentenheter}$$
 
-
-
 #### Flyktingar
-
 Enligt FN:s organisation [UNHCR](https://www.unhcr.org/) (förkortning för *United Nations High Commissioner for Refugees*) är cirka 1,5 % av världens befolkning flyktingar (siffran för 2024). Världens befolkning uppskattades 2024 vara 8,2 miljarder. Antal flyktingar 2024 var alltså enligt UNHCR:s bedömning:
 
 
-
-$$8\ 200\ 000\ 000\*0,015 = 123\ 000\ 000$$
-
-
+$$8\ 200\ 000\ 000*0,015 = 123\ 000\ 000$$
 
 Ett annat sätt att beskriva denna uträkning är på följande sätt:
-
 1,5 % av 8,2 miljarder $= 0,123$ miljarder = 123 miljoner
-
 En person som befinner sig på flykt i ett annat land än sitt hemland kan söka asyl, fristad, i det land där personen befinner sig. Tabell 2 beskriver befolkning 2023 samt antal asylsökande 2023 för de fyra länder som hade flest sökande samt Sverige. Sverige är endast med som jämförelse. Jämfört med alla länder som ingår i data från [UNHCR](https://www.unhcr.org/refugee-statistics) så var det 53 andra länder som tog emot fler flyktingar än Sverige.
-
 Den fjärde kolumnen (**Asylsökande / befolkning**) visar antal asylsökande dividerat med antal invånare i respektive land, uttryckt som procent. Jämfört med landets inhemska befolkning tog Peru emot flest asylsökande och Sverige minst, bland länderna i denna tabell.
-
 Låt oss nu beräkna hur stor procentuell andel som respektive land tar emot av hela gruppen asylsökande i denna tabell. Resultaten redovisas i kolumnen längst till höger. Räknat på detta sätt tar USA emot störst andel och Sverige tar emot minst, bland länderna i tabellen.
-
 **Tabell 2: Befolkning och antal asylsökande per land**
-
   ------------------------------------------------------------------------------------------------------------------------------------
   **Land**     **Asylsökande 2023**   **Befolkning 2023**   **Asylsökande / befolkning**   **Andel av de asylsökanden i denna tabell**
   ---------- ---------------------- --------------------- ------------------------------ ---------------------------------------------
   USA                     2 601 467           334 914 895                          0,78%                                         69,6%
-
   Peru                      508 429            33 845 617                          1,50%                                         13,6%
-
   Tyskland                  361 493            83 280 000                          0,43%                                          9,7%
-
   Mexiko                    257 396           129 739 759                          0,20%                                          6,9%
-
   Sverige                    11 271            10 536 632                          0,11%                                          0,3%
   ------------------------------------------------------------------------------------------------------------------------------------
-
+::: {.fig-caption}
 Förklaring: Data från [UNHCR](https://www.unhcr.org/refugee-statistics) (asylsökande) och [Världsbanken](https://data.worldbank.org/) (befolkning).
+:::
 
 
 

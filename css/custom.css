@@ -229,6 +229,15 @@
   display: none;
 }
 
+/* ── Figurtexter (Förklaring:) ──────────────────────────────────────────── */
+.fig-caption {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #555;
+  margin-top: 0.3rem;
+  margin-bottom: 1.4rem;
+}
+
 /* ── Nästa avsnitt-länk längst ner på varje avsnittssida ───────────────── */
 .next-section-link {
   margin-top: 2rem;

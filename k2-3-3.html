@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>33 Hur väl passar modellerna mot data? | Matematik och statistik för samhällsvetare</title>
 <meta name="author" content="">
-<meta name="description" content="33.0.1 Begrepp Medelkvadratsumman för residualerna (engelska mean squared residuals, MSR):\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\)...">
+<meta name="description" content="33.0.1 Begrepp  Medelkvadratsumman för residualerna (engelska mean squared residuals, MSR):\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\) ...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="33 Hur väl passar modellerna mot data? | Matematik och statistik för samhällsvetare">
 <meta property="og:type" content="book">
-<meta property="og:description" content="33.0.1 Begrepp Medelkvadratsumman för residualerna (engelska mean squared residuals, MSR):\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\)...">
+<meta property="og:description" content="33.0.1 Begrepp  Medelkvadratsumman för residualerna (engelska mean squared residuals, MSR):\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\) ...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="33 Hur väl passar modellerna mot data? | Matematik och statistik för samhällsvetare">
-<meta name="twitter:description" content="33.0.1 Begrepp Medelkvadratsumman för residualerna (engelska mean squared residuals, MSR):\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\)...">
+<meta name="twitter:description" content="33.0.1 Begrepp  Medelkvadratsumman för residualerna (engelska mean squared residuals, MSR):\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\) ...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -114,228 +114,110 @@
 <h1>
 <span class="header-section-number">33</span> Hur väl passar modellerna mot data?<a class="anchor" aria-label="anchor" href="#k2-3-3"><i class="fas fa-link"></i></a>
 </h1>
-<div id="begrepp-32" class="section level3" number="33.0.1">
+<div id="begrepp-30" class="section level3" number="33.0.1">
 <h3>
-<span class="header-section-number">33.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-32"><i class="fas fa-link"></i></a>
+<span class="header-section-number">33.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-30"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
-<li><p><strong>Medelkvadratsumman för residualerna</strong> (engelska <em>mean squared residuals</em>, MSR):<br><span class="math inline">\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\)</span></p></li>
-<li><p><strong>Medelkvadratsumman av den förklarade variationen</strong> (engelska <em>mean sum of squares explained</em>, MSE): **
-<span class="math inline">\(MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}\)</span></p></li>
+<li>
+<strong>Medelkvadratsumman för residualerna</strong> (engelska <em>mean squared residuals</em>, MSR):<br><span class="math inline">\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\)</span>
+</li>
+<li>
+<strong>Medelkvadratsumman av den förklarade variationen</strong> (engelska <em>mean sum of squares explained</em>, MSE): <em>*
+<span class="math inline">\(MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}\)</span>
+### Teori
+I tidigare avsnitt har vi estimerat två olika regressionsmodeller. Varje modell utgick från fyra observationer vardera. Regressionsanalys är ett sätt att studera mönster i data. Vi kan använda våra regressionsmodeller för att pröva i vilken utsträckning som det mönster som en regressionsmodell beskriver faktiskt återfinns i våra data.
+Att estimera koefficienterna i regressionsmodellen är då endast första steget i en regressionsanalys. Därefter vill vi jämföra hur väl mönstret i vår regressionsmodell faktiskt stämde med det mönster som fanns i observationerna. Detta är ett vanligt tillvägagångssätt och därför viktigt att känna till.
+#### Medelkvadratsumman
+För att studera hur väl en regressionsmodell passar mot data kan vi även jämföra medelkvadratsumman. Medelkvadratsumman för residualerna (engelska </em>mean squared residuals*, MSR) beräknas:
+<span class="math inline">\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\)</span> (5)
+Nämnaren <span class="math inline">\(n - p\)</span> visar antal frihetsgrader, där <span class="math inline">\(n\)</span> är antal observationer och <span class="math inline">\(p\)</span> är antal estimerade koefficienter i regressionsmodellen. Frihetsgrader anger hur många "fria" värden vi har kvar efter att ha estimerat koefficienterna: <span class="math inline">\(n\)</span> = antal observationer (här 4). <span class="math inline">\(p\)</span> = antal estimerade koefficienter (här 2: <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>). <span class="math inline">\(n - p\)</span> = frihetsgrader <span class="math inline">\((4\ - \ 2\ = \ 2)\)</span>. Med 4 observationer och 2 koefficienter har vi "använt upp" 2 frihetsgrader för att estimera koefficienterna. Vi har 2 frihetsgrader kvar för att mäta variation kring regressionslinjen.
+Förenklat kan ett lågt MSR innebära att regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> hamnar relativt nära observationerna <span class="math inline">\(Y\)</span>.
+#### Medelkvadratsumman av den förklarade variationen
+Medelkvadratsumman av den förklarade variationen är SSE dividerat med antal förklarande variabler (engelska mean sum of squares explained, MSE):
+<span class="math inline">\(MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}\)</span> (6)
+I täljaren tar vi <span class="math inline">\(p\)</span>, antal estimerade koefficienter, minus 1 eftersom koefficient <span class="math inline">\(a\)</span> inte multipliceras med någon förklarande variabel.
+#### Låt oss jämföra två regressionsmodeller
+I tidigare avsnitt har vi använt två olika samlingar med observationer för att utifrån minstakvadratmetoden estimera de två regressionsmodellerna från <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a> och <a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a>:
+Modell 1: <span class="math inline">\(Y = a + bX + V\)</span> (7)
+Modell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>
+Tabell 2 och 3 återger observationerna vi använde för att estimera respektive tabell och några beräkningar vi nu ska använda i vår jämförelse.
+<strong>Tabell 2: Observationer och beräkningar för modell 1</strong>
+————————————————————————————————————————————————————————————————————————————————————————————————————————–
+Observation i</li>
 </ul>
-</div>
-<div id="teori-32" class="section level3" number="33.0.2">
-<h3>
-<span class="header-section-number">33.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-32"><i class="fas fa-link"></i></a>
-</h3>
-<p>I tidigare avsnitt har vi estimerat två olika regressionsmodeller. Varje modell utgick från fyra observationer vardera. Regressionsanalys är ett sätt att studera mönster i data. Vi kan använda våra regressionsmodeller för att pröva i vilken utsträckning som det mönster som en regressionsmodell beskriver faktiskt återfinns i våra data.</p>
-<p>Att estimera koefficienterna i regressionsmodellen är då endast första steget i en regressionsanalys. Därefter vill vi jämföra hur väl mönstret i vår regressionsmodell faktiskt stämde med det mönster som fanns i observationerna. Detta är ett vanligt tillvägagångssätt och därför viktigt att känna till.</p>
-<div id="medelkvadratsumman" class="section level4" number="33.0.2.1">
-<h4>
-<span class="header-section-number">33.0.2.1</span> Medelkvadratsumman<a class="anchor" aria-label="anchor" href="#medelkvadratsumman"><i class="fas fa-link"></i></a>
-</h4>
-<p>För att studera hur väl en regressionsmodell passar mot data kan vi även jämföra medelkvadratsumman. Medelkvadratsumman för residualerna (engelska <em>mean squared residuals</em>, MSR) beräknas:</p>
-<p><span class="math inline">\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\)</span> (5)</p>
-<p>Nämnaren <span class="math inline">\(n - p\)</span> visar antal frihetsgrader, där <span class="math inline">\(n\)</span> är antal observationer och <span class="math inline">\(p\)</span> är antal estimerade koefficienter i regressionsmodellen. Frihetsgrader anger hur många "fria" värden vi har kvar efter att ha estimerat koefficienterna: <span class="math inline">\(n\)</span> = antal observationer (här 4). <span class="math inline">\(p\)</span> = antal estimerade koefficienter (här 2: <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>). <span class="math inline">\(n - p\)</span> = frihetsgrader <span class="math inline">\((4\ - \ 2\ = \ 2)\)</span>. Med 4 observationer och 2 koefficienter har vi "använt upp" 2 frihetsgrader för att estimera koefficienterna. Vi har 2 frihetsgrader kvar för att mäta variation kring regressionslinjen.</p>
-<p>Förenklat kan ett lågt MSR innebära att regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> hamnar relativt nära observationerna <span class="math inline">\(Y\)</span>.</p>
-</div>
-<div id="medelkvadratsumman-av-den-förklarade-variationen" class="section level4" number="33.0.2.2">
-<h4>
-<span class="header-section-number">33.0.2.2</span> Medelkvadratsumman av den förklarade variationen<a class="anchor" aria-label="anchor" href="#medelkvadratsumman-av-den-f%C3%B6rklarade-variationen"><i class="fas fa-link"></i></a>
-</h4>
-<p>Medelkvadratsumman av den förklarade variationen är SSE dividerat med antal förklarande variabler (engelska mean sum of squares explained, MSE):</p>
-<p><span class="math inline">\(MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}\)</span> (6)</p>
-<p>I täljaren tar vi <span class="math inline">\(p\)</span>, antal estimerade koefficienter, minus 1 eftersom koefficient <span class="math inline">\(a\)</span> inte multipliceras med någon förklarande variabel.</p>
-</div>
-<div id="låt-oss-jämföra-två-regressionsmodeller" class="section level4" number="33.0.2.3">
-<h4>
-<span class="header-section-number">33.0.2.3</span> Låt oss jämföra två regressionsmodeller<a class="anchor" aria-label="anchor" href="#l%C3%A5t-oss-j%C3%A4mf%C3%B6ra-tv%C3%A5-regressionsmodeller"><i class="fas fa-link"></i></a>
-</h4>
-<p>I tidigare avsnitt har vi använt två olika samlingar med observationer för att utifrån minstakvadratmetoden estimera de två regressionsmodellerna från <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a> och <a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a>:</p>
-<p>Modell 1: <span class="math inline">\(Y = a + bX + V\)</span> (7)</p>
-<p>Modell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span></p>
-<p>Tabell 2 och 3 återger observationerna vi använde för att estimera respektive tabell och några beräkningar vi nu ska använda i vår jämförelse.</p>
-<p><strong>Tabell 2: Observationer och beräkningar för modell 1</strong></p>
+<p><span class="math display">\[X_{i}\]</span></p>
+<p><span class="math display">\[Y_{i}\]</span></p>
+<p><span class="math display">\[\widehat{Y_{i}}\]</span></p>
+<p><span class="math display">\[Y_{i} - \widehat{Y_{i}}\]</span></p>
+<p><span class="math display">\[Y_{i} - \overline{Y}\]</span></p>
+<p><span class="math display">\[\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\]</span></p>
 <div class="inline-table"><table style="width:99%;" class="table table-sm">
-<colgroup>
-<col width="5%">
-<col width="11%">
-<col width="11%">
-<col width="14%">
-<col width="17%">
-<col width="16%">
-<col width="24%">
-</colgroup>
+<colgroup><col width="99%"></colgroup>
 <thead><tr class="header">
-<th align="left">Observation i</th>
-<th align="left">$</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
+<th align="left">1 3 3 2,5 0,5 -0,5 0,25
+2 4 2 3 -1 -1,5 1
+3 6 5 4 1 1,5 1
+4 7 4 4,5 -0,5 0,5 0,25
+Medel 5 3,5
+Summa 2,5 5</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">: {.fig-caption}
+rklaring: se text.
+Tabell 3: Observationer och beräkningar för modell 2**</td>
+</tr></tbody>
+</table></div>
+<p>Observation i<br>
+:::</p>
+<p><span class="math display">\[Z_{i}\]</span></p>
+<p><span class="math display">\[K_{i}\]</span></p>
+<p><span class="math display">\[\widehat{Z_{i}}\]</span></p>
+<p><span class="math display">\[\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}\]</span></p>
+<p><span class="math display">\[Z_{i} - \overline{Z_{i}}\]</span></p>
+<p><span class="math display">\[\left( Z_{i} - \widehat{Z_{i}} \right)^{2}\]</span></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup><col width="99%"></colgroup>
+<thead><tr class="header">
+<th align="left">1 1 0 2,5 –1,5 –0,5 2,25
+2 4 0 2,5 1,5 2,5 2,25
+3 0 4 0,5 -0,5 –1,5 0,25
+4 1 4 0,5 0,5 –0,5 0,25
+Medel 1,5 2
+Summa 5 9</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">1</td>
-<td align="left">3</td>
-<td>3</td>
-<td>2,5</td>
-<td>0,5</td>
-<td>-0,5</td>
-<td>0,25</td>
+<td align="left">: {.fig-caption}
+rklaring: se text.
+ska vi jämföra vilken av modellerna som passar bäst mot deras respektive datapunkter. Vi börjar med att beräkna MSR för respektive regressionsmodell. Tabell 2 upprepar observationerna för modell 1 och variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> samt några beräkningar som vi behöver. Detta ger MSR:
+SR_{modell 1} = = = 1,25$ (8)
+t oss beräkna MSR även för regressionsmodell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>. Tabell 3 upprepar variablernas värden och sammanfattar några beräkningar. Detta ger följande MSR:
+SR_{modell 2} = = 2,5$ (9)
+tersom <span class="math inline">\(MSR_{modell\ 2} \&gt; MSR_{modell\ 1}\)</span> indikerar på att den första regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> ligger närmare observerade <span class="math inline">\(Y\)</span>, jämfört med hur väl den andra regressionsmodellen lyckas prediktera den förklarade variabeln <span class="math inline">\(Z\)</span> i den modellen.
+R beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.
+:</td>
 </tr>
 <tr class="even">
-<td align="left">2</td>
-<td align="left">4</td>
-<td>2</td>
-<td>3</td>
-<td>-1</td>
-<td>-1,5</td>
-<td>1</td>
+<td align="left"># Vi beräknar <span class="math inline">\(R^{2}\)</span> för båda modellerna
+t oss även skatta <span class="math inline">\(R^{2}\)</span>. För den första regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> får vi (se tabell 2):
+<em>{modell 1}^{2} = 1 - = 1 - = $ (10)
+sultat <span class="math inline">\(R^{2} = \frac{1}{2}\)</span> indikerar att hälften av variationen i <span class="math inline">\(Y\)</span> kan förklaras av regressionsmodellen och variationer i <span class="math inline">\(X\)</span>. Låt oss beräkna <span class="math inline">\(R^{2}\ \)</span>för den andra regressionsmodellen <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span> (se tabell 3):
+</em>{modell 2}^{2} = 1 - = 1 - = $ (11)
+tersom <span class="math inline">\(\frac{4}{9} \&lt; \frac{1}{2}\)</span> indikerar detta att den första regressionsmodellen har högre förklaringsgrad jämfört med den andra modellen. Modell 1 passar därför, enligt detta mått, bättre mot den data som vi använde för att estimera modellen, jämfört med hur modell 2 passar mot den data vi använde för att estimera den modellen.
+tta betyder att 50 % av variationen i <span class="math inline">\(Y\)</span> förklaras av <span class="math inline">\(X\)</span>. 50 % av variationen i <span class="math inline">\(Y\)</span> beror på andra faktorer (residualerna). Ett högre <span class="math inline">\(R^{2}\)</span> betyder att modellen "passar bättre" mot data, men det betyder inte automatiskt att modellen är bra. Ett högt eller lågt <span class="math inline">\(R^{2}\)</span> säger inte heller nödvändigtvis något om orsakssamband.</td>
 </tr>
 <tr class="odd">
-<td align="left">3</td>
-<td align="left">6</td>
-<td>5</td>
-<td>4</td>
-<td>1</td>
-<td>1,5</td>
-<td>1</td>
+<td align="left">: {.ex-section-title}
+ningar
+:</td>
 </tr>
 <tr class="even">
-<td align="left">4</td>
-<td align="left">7</td>
-<td>4</td>
-<td>4,5</td>
-<td>-0,5</td>
-<td>0,5</td>
-<td>0,25</td>
-</tr>
-<tr class="odd">
-<td align="left">Medel</td>
-<td align="left">5</td>
-<td>3,5</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td align="left">Summa</td>
-<td align="left"></td>
-<td></td>
-<td></td>
-<td></td>
-<td>2,5</td>
-<td>5</td>
+<td align="left">cript&gt;window.exerciseData=window.exerciseData||{};window.exerciseData[“k2-3-3”]=[ { “id”: “k2-3-3-001”, “name”: “Uppgift 1”, “exercise”: “För en regressionsmodell \(Y = a + bX + V\) med fyra observationer gäller: \(\sum(Y_i - \widehat{Y}_i)^2 = 2{,}5\) och \(n - p = 4 - 2 = 2\). Beräkna medelkvadratsumman för residualerna: \[MSR = \frac{\sum(Y_i - \widehat{Y}_i)^2}{n - p}\]“,”image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “1.25” }, “answerformat”: “Ange svaret som ett decimaltal (t.ex. 1.25)”, “error”: { “message”: “Sätt in värdena direkt: \(MSR = \frac{2{,}5}{2}\). Dividera täljaren med nämnaren.” }, “correct”: { “message”: “Rätt! \(MSR = \frac{2{,}5}{2} = 1{,}25\). Frihetsgrader \(n - p = 4 - 2 = 2\) eftersom vi har 4 observationer och 2 estimerade koefficienter (\(a\) och \(b\)).” } }, { “id”: “k2-3-3-002”, “name”: “Uppgift 2”, “exercise”: “För en regressionsmodell \(Z = \alpha + \beta K + \epsilon\) med fyra observationer gäller: \(\sum(Z_i - \widehat{Z}_i)^2 = 5\) och \(n - p = 2\). Beräkna: \[MSR = \frac{\sum(Z_i - \widehat{Z}_i)^2}{n - p}\]“,”image”: null, “inputtype”: “field”, “expectedanswer”: { “Svar”: “2.5” }, “answerformat”: “Ange svaret som ett decimaltal (t.ex. 2.5)”, “error”: { “message”: “Använd formeln \(MSR = \frac{SSR}{n-p}\). Sätt in \(SSR = 5\) och \(n - p = 2\).” }, “correct”: { “message”: “Rätt! \(MSR = \frac{5}{2} = 2{,}5\). Jämfört med regressionen Y på X (MSR = 1,25) är MSR här högre (2,5 &gt; 1,25), vilket indikerar att regressionen Y på X har predikterade värden som ligger närmare de observerade.” } }, { “id”: “k2-3-3-003”, “name”: “Uppgift 3”, “exercise”: “Medelkvadratsumman för residualerna beräknas som \[MSR = \frac{\sum(Y_i - \widehat{Y}_i)^2}{n - p}\] Vad innebär ett lägre MSR vid jämförelse av två regressionsmodeller?”, “image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Modellen har fler observationer”, “Modellens predikterade värden \(\widehat{Y}\) hamnar relativt nära observationerna \(Y\)”, “Modellen har ett mer negativt lutningskoefficient”, “Modellen har fler förklarande variabler” ], “correct”: “Modellens predikterade värden \(\widehat{Y}\) hamnar relativt nära observationerna \(Y\)” } }, “error”: { “message”: “MSR mäter genomsnittlig kvadrerad residual. Tänk på vad en liten residual innebär för hur väl linjen passar mot data.” }, “correct”: { “message”: “Rätt! Ett lägre MSR innebär att regressionsmodellens predikterade \(\widehat{Y}\) i genomsnitt hamnar relativt nära de observerade värdena \(Y\). Regressionen Y på X (MSR = 1,25) passar alltså bättre än regressionen Z på K (MSR = 2,5) mot sina respektive data.” } }, { “id”: “k2-3-3-004”, “name”: “Uppgift 4”, “exercise”: “För en regressionsmodell \(Y = a + bX + V\) med fyra observationer gäller \(\sum(Y_i - \widehat{Y}_i)^2 = 2{,}5\) och \(\sum(Y_i - \overline{Y})^2 = 5\). Beräkna \(R^2\): \[R^2 = 1 - \frac{\sum(Y_i - \widehat{Y}_i)^2}{\sum(Y_i - \overline{Y})^2} = 1 - \frac{2{,}5}{5}\] Vilket värde får \(R^2\)?“,”image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “\(R^2 = 0{,}25\)”, “\(R^2 = 0{,}75\)”, “\(R^2 = 0{,}5\)”, “\(R^2 = 1\)” ], “correct”: “\(R^2 = 0{,}5\)” } }, “error”: { “message”: “Beräkna: \(1 - \frac{2{,}5}{5} = 1 - 0{,}5 = ?\)” }, “correct”: { “message”: “Rätt! \(R^2 = 1 - \frac{2{,}5}{5} = 1 - 0{,}5 = 0{,}5\). Det innebär att 50 % av variationen i \(Y\) förklaras av \(X\). De övriga 50 % beror på andra faktorer (residualerna).” } }, { “id”: “k2-3-3-005”, “name”: “Uppgift 5”, “exercise”: “För en regressionsmodell \(Z = \alpha + \beta K + \epsilon\) gäller \(\sum(Z_i - \widehat{Z}_i)^2 = 5\) och \(\sum(Z_i - \overline{Z})^2 = 9\), vilket ger \(R^2 = 1 - \frac{5}{9} = \frac{4}{9}\). Regressionen Y på X (från uppgift 4) hade \(R^2 = 0{,}5\). Vilken regression har högst förklaringsgrad och vad kan vi dra för slutsats?“,”image”: null, “inputtype”: “button”, “multichoice”: { “q1”: { “label”: “Välj ett alternativ:”, “options”: [ “Regressionen Z på K, eftersom \(\frac{4}{9} &gt; \frac{1}{2}\)”, “Regressionen Y på X, eftersom \(\frac{1}{2} &gt; \frac{4}{9}\), vilket innebär att den passar bättre mot sin data”, “Regressionen Y på X, och det bevisar att det finns ett kausalt samband”, “Båda regressionerna har samma förklaringsgrad” ], “correct”: “Regressionen Y på X, eftersom \(\frac{1}{2} &gt; \frac{4}{9}\), vilket innebär att den passar bättre mot sin data” } }, “error”: { “message”: “Jämför \(\frac{1}{2}\) och \(\frac{4}{9}\): omvandla till decimaltal. \(\frac{1}{2} = 0{,}5\) och \(\frac{4}{9} \approx 0{,}444\). Vilket är störst?” }, “correct”: { “message”: “Rätt! \(\frac{1}{2} = 0{,}5 &gt; \frac{4}{9} \approx 0{,}444\), så regressionen Y på X har högre \(R^2\) och därmed högre förklaringsgrad. Viktigt: ett högt \(R^2\) säger inte nödvändigtvis något om orsakssamband, och jämförelsen görs mot respektive regressions egna data.” } }];
+iv class=“exercise-section” data-section-id=“k2-3-3”&gt;</td>
 </tr>
 </tbody>
 </table></div>
-<p>Förklaring: se text.</p>
-<p><strong>Tabell 3: Observationer och beräkningar för modell 2</strong></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
-<colgroup>
-<col width="4%">
-<col width="10%">
-<col width="10%">
-<col width="13%">
-<col width="23%">
-<col width="16%">
-<col width="22%">
-</colgroup>
-<thead><tr class="header">
-<th align="left">Observation i</th>
-<th align="left">$</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td align="left">1</td>
-<td align="left">1</td>
-<td>0</td>
-<td>2,5</td>
-<td>–1,5</td>
-<td>–0,5</td>
-<td>2,25</td>
-</tr>
-<tr class="even">
-<td align="left">2</td>
-<td align="left">4</td>
-<td>0</td>
-<td>2,5</td>
-<td>1,5</td>
-<td>2,5</td>
-<td>2,25</td>
-</tr>
-<tr class="odd">
-<td align="left">3</td>
-<td align="left">0</td>
-<td>4</td>
-<td>0,5</td>
-<td>-0,5</td>
-<td>–1,5</td>
-<td>0,25</td>
-</tr>
-<tr class="even">
-<td align="left">4</td>
-<td align="left">1</td>
-<td>4</td>
-<td>0,5</td>
-<td>0,5</td>
-<td>–0,5</td>
-<td>0,25</td>
-</tr>
-<tr class="odd">
-<td align="left">Medel</td>
-<td align="left">1,5</td>
-<td>2</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td align="left">Summa</td>
-<td align="left"></td>
-<td></td>
-<td></td>
-<td></td>
-<td>5</td>
-<td>9</td>
-</tr>
-</tbody>
-</table></div>
-<p>Förklaring: se text.</p>
-<p>Nu ska vi jämföra vilken av modellerna som passar bäst mot deras respektive datapunkter. Vi börjar med att beräkna MSR för respektive regressionsmodell. Tabell 2 upprepar observationerna för modell 1 och variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> samt några beräkningar som vi behöver. Detta ger MSR:</p>
-<p><span class="math inline">\(MSR_{modell\ 1} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p} = \frac{2,5}{2} = 1,25\)</span> (8)</p>
-<p>Låt oss beräkna MSR även för regressionsmodell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>. Tabell 3 upprepar variablernas värden och sammanfattar några beräkningar. Detta ger följande MSR:</p>
-<p><span class="math inline">\(MSR_{modell\ 2} = \frac{5}{2} = 2,5\)</span> (9)</p>
-<p>Eftersom <span class="math inline">\(MSR_{modell\ 2} \&gt; MSR_{modell\ 1}\)</span> indikerar på att den första regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> ligger närmare observerade <span class="math inline">\(Y\)</span>, jämfört med hur väl den andra regressionsmodellen lyckas prediktera den förklarade variabeln <span class="math inline">\(Z\)</span> i den modellen.</p>
-<p>MSR beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.</p>
-</div>
-</div>
-<div id="vi-beräknar-r2-för-båda-modellerna" class="section level3" number="33.0.3">
-<h3>
-<span class="header-section-number">33.0.3</span> Vi beräknar <span class="math inline">\(R^{2}\)</span> för båda modellerna<a class="anchor" aria-label="anchor" href="#vi-ber%C3%A4knar-r2-f%C3%B6r-b%C3%A5da-modellerna"><i class="fas fa-link"></i></a>
-</h3>
-<p>Låt oss även skatta <span class="math inline">\(R^{2}\)</span>. För den första regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> får vi (se tabell 2):</p>
-<p><span class="math inline">\(R_{modell\ 1}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{2,5}{5} = \frac{1}{2}\)</span> (10)</p>
-<p>Resultat <span class="math inline">\(R^{2} = \frac{1}{2}\)</span> indikerar att hälften av variationen i <span class="math inline">\(Y\)</span> kan förklaras av regressionsmodellen och variationer i <span class="math inline">\(X\)</span>. Låt oss beräkna <span class="math inline">\(R^{2}\ \)</span>för den andra regressionsmodellen <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span> (se tabell 3):</p>
-<p><span class="math inline">\(R_{modell\ 2}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{5}{9} = \frac{4}{9}\)</span> (11)</p>
-<p>Eftersom <span class="math inline">\(\frac{4}{9} \&lt; \frac{1}{2}\)</span> indikerar detta att den första regressionsmodellen har högre förklaringsgrad jämfört med den andra modellen. Modell 1 passar därför, enligt detta mått, bättre mot den data som vi använde för att estimera modellen, jämfört med hur modell 2 passar mot den data vi använde för att estimera den modellen.</p>
-<p>Detta betyder att 50 % av variationen i <span class="math inline">\(Y\)</span> förklaras av <span class="math inline">\(X\)</span>. 50 % av variationen i <span class="math inline">\(Y\)</span> beror på andra faktorer (residualerna). Ett högre <span class="math inline">\(R^{2}\)</span> betyder att modellen "passar bättre" mot data, men det betyder inte automatiskt att modellen är bra. Ett högt eller lågt <span class="math inline">\(R^{2}\)</span> säger inte heller nödvändigtvis något om orsakssamband.</p>
-<div class="ex-section-title">
-<p>Övningar</p>
-</div>
-<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-3-3"]=[  {    "id": "k2-3-3-001",    "name": "Uppgift 1",    "exercise": "För en regressionsmodell \\(Y = a + bX + V\\) med fyra observationer gäller: \\(\\sum(Y_i - \\widehat{Y}_i)^2 = 2{,}5\\) och \\(n - p = 4 - 2 = 2\\). Beräkna medelkvadratsumman för residualerna: \\[MSR = \\frac{\\sum(Y_i - \\widehat{Y}_i)^2}{n - p}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "1.25" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 1.25)",    "error": { "message": "Sätt in värdena direkt: \\(MSR = \\frac{2{,}5}{2}\\). Dividera täljaren med nämnaren." },    "correct": { "message": "Rätt! \\(MSR = \\frac{2{,}5}{2} = 1{,}25\\). Frihetsgrader \\(n - p = 4 - 2 = 2\\) eftersom vi har 4 observationer och 2 estimerade koefficienter (\\(a\\) och \\(b\\))." }  },  {    "id": "k2-3-3-002",    "name": "Uppgift 2",    "exercise": "För en regressionsmodell \\(Z = \\alpha + \\beta K + \\epsilon\\) med fyra observationer gäller: \\(\\sum(Z_i - \\widehat{Z}_i)^2 = 5\\) och \\(n - p = 2\\). Beräkna: \\[MSR = \\frac{\\sum(Z_i - \\widehat{Z}_i)^2}{n - p}\\]",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "2.5" },    "answerformat": "Ange svaret som ett decimaltal (t.ex. 2.5)",    "error": { "message": "Använd formeln \\(MSR = \\frac{SSR}{n-p}\\). Sätt in \\(SSR = 5\\) och \\(n - p = 2\\)." },    "correct": { "message": "Rätt! \\(MSR = \\frac{5}{2} = 2{,}5\\). Jämfört med regressionen Y på X (MSR = 1,25) är MSR här högre (2,5 > 1,25), vilket indikerar att regressionen Y på X har predikterade värden som ligger närmare de observerade." }  },  {    "id": "k2-3-3-003",    "name": "Uppgift 3",    "exercise": "Medelkvadratsumman för residualerna beräknas som \\[MSR = \\frac{\\sum(Y_i - \\widehat{Y}_i)^2}{n - p}\\] Vad innebär ett lägre MSR vid jämförelse av två regressionsmodeller?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Modellen har fler observationer",          "Modellens predikterade värden \\(\\widehat{Y}\\) hamnar relativt nära observationerna \\(Y\\)",          "Modellen har ett mer negativt lutningskoefficient",          "Modellen har fler förklarande variabler"        ],        "correct": "Modellens predikterade värden \\(\\widehat{Y}\\) hamnar relativt nära observationerna \\(Y\\)"      }    },    "error": { "message": "MSR mäter genomsnittlig kvadrerad residual. Tänk på vad en liten residual innebär för hur väl linjen passar mot data." },    "correct": { "message": "Rätt! Ett lägre MSR innebär att regressionsmodellens predikterade \\(\\widehat{Y}\\) i genomsnitt hamnar relativt nära de observerade värdena \\(Y\\). Regressionen Y på X (MSR = 1,25) passar alltså bättre än regressionen Z på K (MSR = 2,5) mot sina respektive data." }  },  {    "id": "k2-3-3-004",    "name": "Uppgift 4",    "exercise": "För en regressionsmodell \\(Y = a + bX + V\\) med fyra observationer gäller \\(\\sum(Y_i - \\widehat{Y}_i)^2 = 2{,}5\\) och \\(\\sum(Y_i - \\overline{Y})^2 = 5\\). Beräkna \\(R^2\\): \\[R^2 = 1 - \\frac{\\sum(Y_i - \\widehat{Y}_i)^2}{\\sum(Y_i - \\overline{Y})^2} = 1 - \\frac{2{,}5}{5}\\] Vilket värde får \\(R^2\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(R^2 = 0{,}25\\)",          "\\(R^2 = 0{,}75\\)",          "\\(R^2 = 0{,}5\\)",          "\\(R^2 = 1\\)"        ],        "correct": "\\(R^2 = 0{,}5\\)"      }    },    "error": { "message": "Beräkna: \\(1 - \\frac{2{,}5}{5} = 1 - 0{,}5 = ?\\)" },    "correct": { "message": "Rätt! \\(R^2 = 1 - \\frac{2{,}5}{5} = 1 - 0{,}5 = 0{,}5\\). Det innebär att 50 % av variationen i \\(Y\\) förklaras av \\(X\\). De övriga 50 % beror på andra faktorer (residualerna)." }  },  {    "id": "k2-3-3-005",    "name": "Uppgift 5",    "exercise": "För en regressionsmodell \\(Z = \\alpha + \\beta K + \\epsilon\\) gäller \\(\\sum(Z_i - \\widehat{Z}_i)^2 = 5\\) och \\(\\sum(Z_i - \\overline{Z})^2 = 9\\), vilket ger \\(R^2 = 1 - \\frac{5}{9} = \\frac{4}{9}\\). Regressionen Y på X (från uppgift 4) hade \\(R^2 = 0{,}5\\). Vilken regression har högst förklaringsgrad och vad kan vi dra för slutsats?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Regressionen Z på K, eftersom \\(\\frac{4}{9} > \\frac{1}{2}\\)",          "Regressionen Y på X, eftersom \\(\\frac{1}{2} > \\frac{4}{9}\\), vilket innebär att den passar bättre mot sin data",          "Regressionen Y på X, och det bevisar att det finns ett kausalt samband",          "Båda regressionerna har samma förklaringsgrad"        ],        "correct": "Regressionen Y på X, eftersom \\(\\frac{1}{2} > \\frac{4}{9}\\), vilket innebär att den passar bättre mot sin data"      }    },    "error": { "message": "Jämför \\(\\frac{1}{2}\\) och \\(\\frac{4}{9}\\): omvandla till decimaltal. \\(\\frac{1}{2} = 0{,}5\\) och \\(\\frac{4}{9} \\approx 0{,}444\\). Vilket är störst?" },    "correct": { "message": "Rätt! \\(\\frac{1}{2} = 0{,}5 > \\frac{4}{9} \\approx 0{,}444\\), så regressionen Y på X har högre \\(R^2\\) och därmed högre förklaringsgrad. Viktigt: ett högt \\(R^2\\) säger inte nödvändigtvis något om orsakssamband, och jämförelsen görs mot respektive regressions egna data." }  }];</script><div class="exercise-section" data-section-id="k2-3-3">
-
-</div>
-<hr>
 <div class="next-section-link">
 <p><a href="k2-3-4.html">→ Nästa avsnitt: <strong>Härled estimatorerna</strong></a></p>
 </div>
@@ -483,11 +365,7 @@
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav"><li>
-<a class="nav-link" href="#k2-3-3"><span class="header-section-number">33</span> Hur väl passar modellerna mot data?</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#begrepp-32"><span class="header-section-number">33.0.1</span> Begrepp</a></li>
-<li><a class="nav-link" href="#teori-32"><span class="header-section-number">33.0.2</span> Teori</a></li>
-<li><a class="nav-link" href="#vi-ber%C3%A4knar-r2-f%C3%B6r-b%C3%A5da-modellerna"><span class="header-section-number">33.0.3</span> Vi beräknar \(R^{2}\) för båda modellerna</a></li>
-</ul>
+<a class="nav-link" href="#k2-3-3"><span class="header-section-number">33</span> Hur väl passar modellerna mot data?</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#begrepp-30"><span class="header-section-number">33.0.1</span> Begrepp</a></li></ul>
 </li></ul>
 
       <div class="book-extra">
