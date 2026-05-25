@@ -193,34 +193,31 @@ Oskarshamn, män
 <h4>
 <span class="header-section-number">37.0.2.2</span> Vår första regressionsmodell<a class="anchor" aria-label="anchor" href="#v%C3%A5r-f%C3%B6rsta-regressionsmodell"><i class="fas fa-link"></i></a>
 </h4>
-<p>Låt oss börja med att estimera samvariation mellan livslängd och inkomst med följande regressionsmodell:
-<span class="math inline">\(L = a_{1} + a_{2}I + \epsilon\)</span> (1)
-där <span class="math inline">\(L\)</span> är livslängd, <span class="math inline">\(I\)</span> är inkomst, <span class="math inline">\(a_{1}\)</span> och <span class="math inline">\(a_{2}\)</span> är koefficienterna vi ska estimera med hjälp av minstakvadratmetoden och <span class="math inline">\(\epsilon\)</span> är feltermen. Lutningskoefficienten <span class="math inline">\(a_{2}\)</span> kan vi estimera till:
-<span class="math inline">\({\widehat{a}}_{2} = \frac{\sum_{i}^{}{\left( I_{i} - \overline{I} \right)\left( L_{i} - \overline{L} \right)}}{\sum_{i}^{}\left( I_{i} - \overline{I} \right)^{2}} \approx \frac{- 1,9}{0,455} \approx - 4,2\)</span> (2)
-Koefficienten <span class="math inline">\(a_{1}\)</span> kan vi estimera till:
-<span class="math inline">\({\widehat{a}}_{1} = \overline{L} - \widehat{b}\overline{I} \approx 82 - ( - 4,2)2,37 \approx 92\)</span> (3)
-Beräkningarna beskrivs inte här men kontrollräkna gärna på egen hand. Estimerade versionen av regressionsmodellen i ekvation 1 blir nu:
-<span class="math inline">\(L = \widehat{a} + \widehat{b}I = 92 - 4,2I\)</span> (4)
-Enligt denna beräkning finns det en negativ samvariation mellan livslängd <span class="math inline">\(L\)</span> och inkomst <span class="math inline">\(I\)</span>, vilket innebär att människor med högre inkomst i genomsnitt lever kortare liv.</p>
+<p>Låt oss börja med att estimera samvariation mellan livslängd och inkomst med följande regressionsmodell:</p>
+<p><span class="math display">\[L = a_{1} + a_{2}I + \epsilon \tag{1}\]</span></p>
+<p>där <span class="math inline">\(L\)</span> är livslängd, <span class="math inline">\(I\)</span> är inkomst, <span class="math inline">\(a_{1}\)</span> och <span class="math inline">\(a_{2}\)</span> är koefficienterna vi ska estimera med hjälp av minstakvadratmetoden och <span class="math inline">\(\epsilon\)</span> är feltermen. Lutningskoefficienten <span class="math inline">\(a_{2}\)</span> kan vi estimera till:</p>
+<p><span class="math display">\[{\widehat{a}}_{2} = \frac{\sum_{i}^{}{\left( I_{i} - \overline{I} \right)\left( L_{i} - \overline{L} \right)}}{\sum_{i}^{}\left( I_{i} - \overline{I} \right)^{2}} \approx \frac{- 1,9}{0,455} \approx - 4,2 \tag{2}\]</span></p>
+<p>Koefficienten <span class="math inline">\(a_{1}\)</span> kan vi estimera till:</p>
+<p><span class="math display">\[{\widehat{a}}_{1} = \overline{L} - \widehat{b}\overline{I} \approx 82 - ( - 4,2)2,37 \approx 92 \tag{3}\]</span></p>
+<p>Beräkningarna beskrivs inte här men kontrollräkna gärna på egen hand. Estimerade versionen av regressionsmodellen i ekvation 1 blir nu:</p>
+<p><span class="math display">\[L = \widehat{a} + \widehat{b}I = 92 - 4,2I \tag{4}\]</span></p>
+<p>Enligt denna beräkning finns det en negativ samvariation mellan livslängd <span class="math inline">\(L\)</span> och inkomst <span class="math inline">\(I\)</span>, vilket innebär att människor med högre inkomst i genomsnitt lever kortare liv.</p>
 </div>
 <div id="lägger-till-variabeln-g" class="section level4" number="37.0.2.3">
 <h4>
 <span class="header-section-number">37.0.2.3</span> Lägger till variabeln <span class="math inline">\(G\)</span><a class="anchor" aria-label="anchor" href="#l%C3%A4gger-till-variabeln-g"><i class="fas fa-link"></i></a>
 </h4>
-<p>Låt oss nu lägga till variabeln kön <span class="math inline">\(G\)</span> till vår regressionsmodell. I tabell 1 är detta en dummyvariabel som endast antar värdet 0 eller 1. Vi ska nu estimera följande regressionsmodell:
-<span class="math inline">\(L = b_{1} + b_{2}I + b_{3}G + V\)</span> (5)
-där <span class="math inline">\(L,\ \ I\)</span> och <span class="math inline">\(G\)</span> är våra variabler, <span class="math inline">\(b_{1}\)</span>, <span class="math inline">\(b_{2}\)</span> och <span class="math inline">\(b_{3}\)</span> är koefficienterna vi ska estimera med hjälp av minstakvadratmetoden, och <span class="math inline">\(V\)</span> är feltermen. För att estimera lutningskoefficienterna använder vi nu estimatorerna för en regressionsmodell med tre koefficienter som vi introducerade i <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a>. Vi börjar med lutningskoefficienten <span class="math inline">\(b_{2}\)</span>:
-<span class="math inline">\({\widehat{b}}_{2} = \frac{\left( \sum_{}^{}{\widetilde{L_{i}}\widetilde{I_{i}}} \right)\left( \sum_{}^{}{\widetilde{G}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{L_{i}}\widetilde{G_{i}}} \right)\left( \sum_{}^{}{\widetilde{I_{i}}\widetilde{G_{i}}} \right)}{\left( \sum_{}^{}{\widetilde{I}}_{i}^{2} \right)\left( \sum_{}^{}{\widetilde{G}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{I_{i}}\widetilde{G_{i}}} \right)^{2}}\)</span> (6)$ $</p>
-<p><span class="math display">\[\approx \frac{( - 1,93)(0,46) - ( - 5,04)(0,75)}{(0,46)(1,5) - (0,75)^{2}} \approx 6,64\]</span></p>
-<p>Tilde beskriver avvikelse från medelvärdet, som <span class="math inline">\(\widetilde{G} = G_{i} - \overline{G}.\)</span> För lutningskoefficient <span class="math inline">\(b_{3}\)</span> får vi:
-<span class="math inline">\({\widehat{b}}_{3} = \frac{\left( \sum_{}^{}{{\widetilde{L}}_{i}{\widetilde{G}}_{i}} \right)\left( \sum_{}^{}{\widetilde{I}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{L_{i}}\widetilde{I_{i}}} \right)\left( \sum_{}^{}{\widetilde{I_{i}}{\widetilde{G}}_{i}} \right)}{\left( \sum_{}^{}{\widetilde{I}}_{i}^{2} \right)\left( \sum_{}^{}{\widetilde{G}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{I_{i}}{\widetilde{G}}_{i}} \right)^{2}}\)</span> (7)$ $</p>
-<p><span class="math display">\[\approx \frac{( - 5,04)(0,46) - ( - 1,93)(0,75)}{(0,46)(1,5) - (0,75)^{2}} \approx - 6,66\ \]</span></p>
-<p>Slutligen kan vi estimera koefficient <span class="math inline">\(b_{1}\)</span>, konstanten:
-<span class="math inline">\({\widehat{b}}_{1} = \overline{L} - {\widehat{b}}_{2}\overline{I} - {\widehat{b}}_{3}\overline{G}\)</span> (8)$ $</p>
-<p><span class="math display">\[{= 82 - 6,64*2,37 - ( - 6,66)*0,5 }{\approx 69,6}\]</span></p>
-<p>Den estimerade versionen av regressionsmodellen i ekvation 5:
-<span class="math inline">\(L = {\widehat{b}}_{1} + {\widehat{b}}_{2}I + {\widehat{b}}_{3}G = 69,6 + 6,64I - 6,66G\)</span> (9)
-Resultatet indikerar nu en positiv samvariation mellan vår förklarade variabel livslängd <span class="math inline">\((L)\)</span> och den förklarande variabeln inkomst <span class="math inline">\((I)\)</span> med hänsyn till kön <span class="math inline">\((G)\)</span>. Människor med högre inkomst lever i genomsnitt längre liv. När vi estimerade regressionsmodellen i ekvation 1 fann vi att inkomst och livslängd samvarierade negativt.
+<p>Låt oss nu lägga till variabeln kön <span class="math inline">\(G\)</span> till vår regressionsmodell. I tabell 1 är detta en dummyvariabel som endast antar värdet 0 eller 1. Vi ska nu estimera följande regressionsmodell:</p>
+<p><span class="math display">\[L = b_{1} + b_{2}I + b_{3}G + V \tag{5}\]</span></p>
+<p>där <span class="math inline">\(L,\ \ I\)</span> och <span class="math inline">\(G\)</span> är våra variabler, <span class="math inline">\(b_{1}\)</span>, <span class="math inline">\(b_{2}\)</span> och <span class="math inline">\(b_{3}\)</span> är koefficienterna vi ska estimera med hjälp av minstakvadratmetoden, och <span class="math inline">\(V\)</span> är feltermen. För att estimera lutningskoefficienterna använder vi nu estimatorerna för en regressionsmodell med tre koefficienter som vi introducerade i <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a>. Vi börjar med lutningskoefficienten <span class="math inline">\(b_{2}\)</span>:
+<span class="math inline">\({\widehat{b}}_{2} = \frac{\left( \sum_{}^{}{\widetilde{L_{i}}\widetilde{I_{i}}} \right)\left( \sum_{}^{}{\widetilde{G}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{L_{i}}\widetilde{G_{i}}} \right)\left( \sum_{}^{}{\widetilde{I_{i}}\widetilde{G_{i}}} \right)}{\left( \sum_{}^{}{\widetilde{I}}_{i}^{2} \right)\left( \sum_{}^{}{\widetilde{G}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{I_{i}}\widetilde{G_{i}}} \right)^{2}}\)</span> (6)$ <span class="math display">\[\approx \frac{( - 1,93)(0,46) - ( - 5,04)(0,75)}{(0,46)(1,5) - (0,75)^{2}} \approx 6,64$
+Tilde beskriver avvikelse från medelvärdet, som $\widetilde{G} = G_{i} - \overline{G}.$ För lutningskoefficient $b_{3}$ får vi:
+${\widehat{b}}_{3} = \frac{\left( \sum_{}^{}{{\widetilde{L}}_{i}{\widetilde{G}}_{i}} \right)\left( \sum_{}^{}{\widetilde{I}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{L_{i}}\widetilde{I_{i}}} \right)\left( \sum_{}^{}{\widetilde{I_{i}}{\widetilde{G}}_{i}} \right)}{\left( \sum_{}^{}{\widetilde{I}}_{i}^{2} \right)\left( \sum_{}^{}{\widetilde{G}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{I_{i}}{\widetilde{G}}_{i}} \right)^{2}}$ (7)$ \]</span> - 6,66 $
+Slutligen kan vi estimera koefficient <span class="math inline">\(b_{1}\)</span>, konstanten:
+<span class="math inline">\({\widehat{b}}_{1} = \overline{L} - {\widehat{b}}_{2}\overline{I} - {\widehat{b}}_{3}\overline{G}\)</span> (8)$ $<span class="math inline">\({= 82 - 6,64*2,37 - ( - 6,66)*0,5 }{\approx 69,6}\)</span>
+Den estimerade versionen av regressionsmodellen i ekvation 5:</p>
+<p><span class="math display">\[L = {\widehat{b}}_{1} + {\widehat{b}}_{2}I + {\widehat{b}}_{3}G = 69,6 + 6,64I - 6,66G \tag{9}\]</span></p>
+<p>Resultatet indikerar nu en positiv samvariation mellan vår förklarade variabel livslängd <span class="math inline">\((L)\)</span> och den förklarande variabeln inkomst <span class="math inline">\((I)\)</span> med hänsyn till kön <span class="math inline">\((G)\)</span>. Människor med högre inkomst lever i genomsnitt längre liv. När vi estimerade regressionsmodellen i ekvation 1 fann vi att inkomst och livslängd samvarierade negativt.
 Detta är ett exempel på något som kallas <a href="https://en.wikipedia.org/wiki/Simpson%27s_paradox">Simpsons paradox</a>: När vi studerar inkomst och livslängd utan att ta hänsyn till kön får vi negativ samvariation. Men när vi tar hänsyn till kön (konstanthåller kön) får vi positiv samvariation.
 Varför? Kvinnor lever längre och har lägre inkomst. Män lever kortare och har högre inkomst. Om vi inte separerar könen ser det ut som att högre inkomst = kortare liv, vilket är felaktigt. Detta visar varför det är så viktigt att inkludera relevanta variabler i regressionsanalys. Det illustrerar även varför vi måste ta hänsyn till viktiga fenomen när vi vill förstå hur världen fungerar.</p>
 </div>
@@ -228,14 +225,14 @@ Varför? Kvinnor lever längre och har lägre inkomst. Män lever kortare och ha
 <h4>
 <span class="header-section-number">37.0.2.4</span> Illustration i diagram<a class="anchor" aria-label="anchor" href="#illustration-i-diagram-1"><i class="fas fa-link"></i></a>
 </h4>
-<p>Figur 1 illustrerar samvariationen mellan livslängd och inkomst i två diagram, varsitt för regressionsmodellerna i ekvation 1 och 5. I båda diagrammen har vi markerat vilka observationer som hör till män respektive kvinnor. Vi har tre prickar för män och tre för kvinnor, eftersom vi har tre kommuner med två observationer per kommun. Det vänstra diagrammet illustrerar resultatet i den första regressionsmodellen i ekvation 1 som vi estimerade till:
-<span class="math inline">\(L = \widehat{a_{1}} + \widehat{a_{2}}I = 92 - 4,2I\)</span> (10)
-med en negativ samvariation mellan livslängd och inkomst. I diagrammet illustreras regressionslinjen med en streckad linje. Det högra diagrammet illustrerar resultatet i den andra regressionsmodellen i ekvation 5 som vi estimerade till:
-<span class="math inline">\(L = \widehat{b_{1}} + \widehat{b_{2}}I + \widehat{b_{3}}G = 69,6 + 6,64I - 6,66G\)</span> (11)
-där <span class="math inline">\(G\)</span> är dummy för kön med <span class="math inline">\(G = 0\)</span> för kvinnor och <span class="math inline">\(G = 1\)</span> för män. I diagrammet har vi ritat ut två regressionslinjer för att illustrera betydelsen av denna dummyvariabel. De två regressionslinjerna är skattade med samma regressionsmodell, men illustrerar skillnaden mellan <span class="math inline">\(G = 0\)</span> och <span class="math inline">\(G = 1\)</span>.
-Om <span class="math inline">\(G = 0\)</span> får vi den övre regressionslinjen, som löper genom prickarna som illustrerar observationerna för kvinnor. Om dummyvariabeln <span class="math inline">\(G = 1\)</span> har vi i stället den nedre regressionslinjen, som löper genom de tre prickarna för män.
-<strong>Figur 1: Illustration av resultaten från de två regressionsmodellerna</strong><br></p>
-<div class="inline-figure"><img src="img/k2-4-3-image1.png" style="width:4.5in;height:3in"></div>
+<p>Figur 1 illustrerar samvariationen mellan livslängd och inkomst i två diagram, varsitt för regressionsmodellerna i ekvation 1 och 5. I båda diagrammen har vi markerat vilka observationer som hör till män respektive kvinnor. Vi har tre prickar för män och tre för kvinnor, eftersom vi har tre kommuner med två observationer per kommun. Det vänstra diagrammet illustrerar resultatet i den första regressionsmodellen i ekvation 1 som vi estimerade till:</p>
+<p><span class="math display">\[L = \widehat{a_{1}} + \widehat{a_{2}}I = 92 - 4,2I \tag{10}\]</span></p>
+<p>med en negativ samvariation mellan livslängd och inkomst. I diagrammet illustreras regressionslinjen med en streckad linje. Det högra diagrammet illustrerar resultatet i den andra regressionsmodellen i ekvation 5 som vi estimerade till:</p>
+<p><span class="math display">\[L = \widehat{b_{1}} + \widehat{b_{2}}I + \widehat{b_{3}}G = 69,6 + 6,64I - 6,66G \tag{11}\]</span></p>
+<p>där <span class="math inline">\(G\)</span> är dummy för kön med <span class="math inline">\(G = 0\)</span> för kvinnor och <span class="math inline">\(G = 1\)</span> för män. I diagrammet har vi ritat ut två regressionslinjer för att illustrera betydelsen av denna dummyvariabel. De två regressionslinjerna är skattade med samma regressionsmodell, men illustrerar skillnaden mellan <span class="math inline">\(G = 0\)</span> och <span class="math inline">\(G = 1\)</span>.
+Om <span class="math inline">\(G = 0\)</span> får vi den övre regressionslinjen, som löper genom prickarna som illustrerar observationerna för kvinnor. Om dummyvariabeln <span class="math inline">\(G = 1\)</span> har vi i stället den nedre regressionslinjen, som löper genom de tre prickarna för män.</p>
+<p><strong>Figur 1: Illustration av resultaten från de två regressionsmodellerna</strong></p>
+<div class="inline-figure"><img src="img/k2-4-3-image1.png"></div>
 <div class="fig-caption">
 <p>Förklaring: I det vänstra diagrammet ser vi resultaten från den estimerade regressionsmodellen i ekvation 1. I det högra diagrammet är regressionsmodellen i ekvation 5 illustrerade för <span class="math inline">\(G = 0\)</span> respektive <span class="math inline">\(G = 1\)</span>.</p>
 </div>

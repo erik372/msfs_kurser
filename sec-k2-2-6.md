@@ -18,7 +18,7 @@ I detta exempel kan vi kontrollera avstånden mellan pilspetsarna genom att räk
 
 **Figur 1: Åtta pilspetsar**
 
-![](img/k2-2-6-image1.png){style="width:3in;height:3in"}
+![](img/k2-2-6-image1.png)
 
 #### Två dimensioner är för lite
 Diagrammet i figur 1 har två dimensioner: höjd och bredd. En kub har tre dimensioner: höjd, bredd och djup. I bilder är det ofta svårt att illustrera fler än två dimensioner. Men verkligheten är full av relationer som är mer komplexa än vad som går att visa i diagram. I våra egna liv kan vi hitta många exempel som är resultatet av tre eller fler faktorer.

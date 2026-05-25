@@ -131,77 +131,108 @@ I dessa exempel ser du att matrismetoden ger exakt samma svar som de tidigare me
 <span class="header-section-number">39.0.2.1</span> Exempel nr 1<a class="anchor" aria-label="anchor" href="#exempel-nr-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>I föregående avsnitt definierade vi minstakvadratmetodens estimator för koefficienterna i en regressionsmodell beskriven med matriser. Låt oss prova hur vi kan använda detta för att estimera modeller utifrån data. Här följer tre exempel där vi återanvänder data och regressionsmodeller från tidigare exempel.
-Låt oss nu återanvända den första regressionsmodellen och observationerna för denna som vi introducerade i <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a>: <span class="math inline">\(Y = a + bX + V\)</span>. Men denna gång ska vi estimera modellen med matriser. Samma observationer som vi använt tidigare upprepas i tabell 1.
-<strong>Tabell 1: Variablerna</strong> <span class="math inline">\(X\)</span> <strong>och</strong> <span class="math inline">\(Y\)</span>
-——————————————————————————————–
-Observation <span class="math inline">\(i\)</span> <span class="math inline">\(Y\)</span> <span class="math inline">\(X\)</span>
-————————————– ————————– ————————–
-1 3 3
-2 4 2
-3 6 5
-4 7 4
-——————————————————————————————–
-Vi börjar med att beskriva regressionsmodellen med matriser:
-<span class="math inline">\(Y = XB + V\)</span> (1)</p>
+Låt oss nu återanvända den första regressionsmodellen och observationerna för denna som vi introducerade i <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a>: <span class="math inline">\(Y = a + bX + V\)</span>. Men denna gång ska vi estimera modellen med matriser. Samma observationer som vi använt tidigare upprepas i tabell 1.</p>
+<p><strong>Tabell 1: Variablerna</strong> <span class="math inline">\(X\)</span> <strong>och</strong> <span class="math inline">\(Y\)</span></p>
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<colgroup>
+<col width="41%">
+<col width="28%">
+<col width="28%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Observation <span class="math inline">\(i\)</span> <span class="math inline">\(Y\)</span> <span class="math inline">\(X\)</span>
+</th>
+<th></th>
+<th></th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">1
+2
+3
+4</td>
+<td>3
+4
+6
+7</td>
+<td>3
+2
+5
+4</td>
+</tr></tbody>
+</table></div>
+<p>Vi börjar med att beskriva regressionsmodellen med matriser:</p>
+<p><span class="math display">\[Y = XB + V \tag{1}\]</span></p>
 <p><span class="math display">\[\begin{bmatrix} 3 \\ 4 \\ 6 \\ 7 \end{bmatrix} = \begin{bmatrix} 1 &amp; 3 \\ 1 &amp; 2 \\ 1 &amp; 5 \\ 1 &amp; 4 \end{bmatrix}\begin{bmatrix} a \\ b \end{bmatrix} + \begin{bmatrix} v_{1} \\ v_{2} \\ v_{3} \\ v_{4} \end{bmatrix}\]</span></p>
-<p>Vår estimator för koefficienterna skriven med matriser är följande:
-<span class="math inline">\(\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y\)</span> (2)
-Vi ska nu visa alla beräkningssteg här för att du ska förstå vad som händer. I praktiken gör datorer detta automatiskt. Fokusera på att förstå strukturen. Du måste inte förstå varje enskilt räknesteg.
-Om vi dessa matriserna i ekvation 2 får vi estimaten av (de uppskattade) koefficienterna:
-<span class="math inline">\(\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y\)</span> (3)</p>
+<p>Vår estimator för koefficienterna skriven med matriser är följande:</p>
+<p><span class="math display">\[\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y \tag{2}\]</span></p>
+<p>Vi ska nu visa alla beräkningssteg här för att du ska förstå vad som händer. I praktiken gör datorer detta automatiskt. Fokusera på att förstå strukturen. Du måste inte förstå varje enskilt räknesteg.
+Om vi dessa matriserna i ekvation 2 får vi estimaten av (de uppskattade) koefficienterna:</p>
+<p><span class="math display">\[\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y \tag{3}\]</span></p>
 <p><span class="math display">\[\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 3 &amp; 4 &amp; 6 &amp; 7 \end{bmatrix}\begin{bmatrix} 1 &amp; 3 \\ 1 &amp; 4 \\ 1 &amp; 6 \\ 1 &amp; 7 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 3 &amp; 4 &amp; 6 &amp; 7 \end{bmatrix}\begin{bmatrix} 3 \\ 2 \\ 5 \\ 4 \end{bmatrix}\]</span></p>
 <p>Vi beräknar inversen <span class="math inline">\(\left( X^{T}X \right)^{- 1}\)</span> först:
-<span class="math inline">\(\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbrack = \begin{bmatrix} 4 &amp; 20 \\ 20 &amp; 110 \end{bmatrix}^{- 1}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack\)</span> (4)$ $</p>
-<p><span class="math display">\[{= \frac{1}{4*110 - ( - 20)*( - 20)}\begin{bmatrix} 110 &amp; - 20 \\ - 20 &amp; 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left( \frac{1}{440 - 400} \right)\begin{bmatrix} 110 &amp; - 20 \\ - 20 &amp; 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{110}{40} &amp; \frac{- 20}{40}\ \\ \frac{- 20}{40} &amp; \frac{4}{40} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{11}{4} &amp; - \frac{1}{2} \\ - \frac{1}{2} &amp; \frac{1}{10} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left\lbrack \begin{array}{r} 1 \\ 0,5 \end{array} \right\rbrack }\]</span></p>
-<p>Vårt resultat visar att <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>, vilket är samma sak som vi kom fram till tidigare.</p>
+<span class="math inline">\(\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbrack = \begin{bmatrix} 4 &amp; 20 \\ 20 &amp; 110 \end{bmatrix}^{- 1}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack\)</span> (4)$ $<span class="math inline">\({= \frac{1}{4*110 - ( - 20)*( - 20)}\begin{bmatrix} 110 &amp; - 20 \\ - 20 &amp; 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left( \frac{1}{440 - 400} \right)\begin{bmatrix} 110 &amp; - 20 \\ - 20 &amp; 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{110}{40} &amp; \frac{- 20}{40}\ \\ \frac{- 20}{40} &amp; \frac{4}{40} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{11}{4} &amp; - \frac{1}{2} \\ - \frac{1}{2} &amp; \frac{1}{10} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left\lbrack \begin{array}{r} 1 \\ 0,5 \end{array} \right\rbrack }\)</span>
+Vårt resultat visar att <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>, vilket är samma sak som vi kom fram till tidigare.</p>
 </div>
 <div id="exempel-nr-2" class="section level4" number="39.0.2.2">
 <h4>
 <span class="header-section-number">39.0.2.2</span> Exempel nr 2<a class="anchor" aria-label="anchor" href="#exempel-nr-2"><i class="fas fa-link"></i></a>
 </h4>
-<p>Låt oss även göra samma sak för regressionsmodellen från <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a>: <span class="math inline">\(Y = a + bX + cZ + V\)</span>, vilket vi kan skriva med matriser som:
-<span class="math inline">\(Y = XB + V\)</span> (5)
-där matris <span class="math inline">\(X\)</span> innehåller variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> och matris <span class="math inline">\(B\)</span> innehåller koefficienterna <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span>. <span class="math inline">\(V\)</span> är feltermerna och <span class="math inline">\(Y\)</span> förklarande variabeln. Observationerna vi ska använda upprepas i tabell 2.
-<strong>Tabell 2: Variablerna</strong> <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> <strong>och</strong> <span class="math inline">\(Z\)</span>
-——————————————————————————————————————————–
-Observation <span class="math inline">\(i\)</span></p>
-<p><span class="math display">\[Y\]</span></p>
-<p><span class="math display">\[X\]</span></p>
-<p><span class="math display">\[Z\]</span></p>
+<p>Låt oss även göra samma sak för regressionsmodellen från <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a>: <span class="math inline">\(Y = a + bX + cZ + V\)</span>, vilket vi kan skriva med matriser som:</p>
+<p><span class="math display">\[Y = XB + V \tag{5}\]</span></p>
+<p>där matris <span class="math inline">\(X\)</span> innehåller variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> och matris <span class="math inline">\(B\)</span> innehåller koefficienterna <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span>. <span class="math inline">\(V\)</span> är feltermerna och <span class="math inline">\(Y\)</span> förklarande variabeln. Observationerna vi ska använda upprepas i tabell 2.</p>
+<p><strong>Tabell 2: Variablerna</strong> <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> <strong>och</strong> <span class="math inline">\(Z\)</span></p>
 <div class="inline-table"><table style="width:98%;" class="table table-sm">
-<colgroup><col width="98%"></colgroup>
+<colgroup>
+<col width="29%">
+<col width="22%">
+<col width="22%">
+<col width="22%">
+</colgroup>
 <thead><tr class="header">
-<th align="left">1 3 3 1
-2 2 4 4
-3 5 6 0
-4 4 7 1</th>
+<th align="left">Observation <span class="math inline">\(i\)</span> <span class="math inline">\(Y\)</span> <span class="math inline">\(X\)</span> <span class="math inline">\(Z\)</span>
+</th>
+<th></th>
+<th></th>
+<th></th>
 </tr></thead>
-<tbody>
-<tr class="odd">
-<td align="left">r att estimera koefficienterna kan vi nu ta:
-widehat{B} = ( X^{T}X )^{- 1}X^{T}Y$ (6)</td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">sta raden innehåller de avrundade resultaten <span class="math inline">\(\widehat{a} \approx 2,9\)</span>, <span class="math inline">\(\widehat{b} \approx 0,3\)</span> och <span class="math inline">\(\widehat{c} \approx - 0,5\)</span>. Detta är samma sak som vi kom fram till i <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a>.</td>
-</tr>
-<tr class="even">
-<td align="left">## Exempel nr 3
-<a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a> använde vi fyra observationer för variablerna <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span> vilka upprepas i tabell 3. Med dessa observationer estimerade vi regressionsmodellen <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>, där <span class="math inline">\(\epsilon\)</span> är feltermen och <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span> är modellens koefficienter, som vi fann var <span class="math inline">\(\widehat{\alpha} = 2,5\)</span> och <span class="math inline">\(\widehat{\beta} = - 0,5\)</span>.
-Tabell 3: Variablerna** <span class="math inline">\(Z\)</span> <strong>och</strong> <span class="math inline">\(K\)</span>
-</td>
-</tr>
-</tbody>
+<tbody><tr class="odd">
+<td align="left">1
+2
+3
+4</td>
+<td>3
+2
+5
+4</td>
+<td>3
+4
+6
+7</td>
+<td>1
+4
+0
+1</td>
+</tr></tbody>
 </table></div>
-<div class="inline-table"><table class="table table-sm">
+<p>För att estimera koefficienterna kan vi nu ta:</p>
+<p><span class="math display">\[\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y \tag{6}\]</span></p>
+<p><span class="math display">\[\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \\ \widehat{c} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 3 &amp; 4 &amp; 6 &amp; 7 \\ 1 &amp; 4 &amp; 0 &amp; 1 \end{bmatrix}\begin{bmatrix} 1 &amp; 3 &amp; 1 \\ 1 &amp; 4 &amp; 4 \\ 1 &amp; 6 &amp; 0 \\ 1 &amp; 7 &amp; 1 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 3 &amp; 4 &amp; 6 &amp; 7 \\ 1 &amp; 4 &amp; 0 &amp; 1 \end{bmatrix}\left\lbrack \begin{array}{r} 3 \\ 2 \\ 5 \\ 4 \end{array} \right\rbrack\]</span></p>
+<p><span class="math display">\[\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \\ \widehat{c} \end{array} \right\rbrack = \begin{bmatrix} 4 &amp; 20 &amp; 6 \\ 20 &amp; 110 &amp; 26 \\ 6 &amp; 26 &amp; 18 \end{bmatrix}^{- 1}\left\lbrack \begin{array}{r} 14 \\ 75 \\ 15 \end{array} \right\rbrack\]</span></p>
+<p><span class="math display">\[\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \\ \widehat{c} \end{array} \right\rbrack \approx \left\lbrack \begin{array}{r} 2,9 \\ 0,3 \\ - 0,5 \end{array} \right\rbrack\]</span></p>
+<p>Sista raden innehåller de avrundade resultaten <span class="math inline">\(\widehat{a} \approx 2,9\)</span>, <span class="math inline">\(\widehat{b} \approx 0,3\)</span> och <span class="math inline">\(\widehat{c} \approx - 0,5\)</span>. Detta är samma sak som vi kom fram till i <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a>.</p>
+</div>
+<div id="exempel-nr-3" class="section level4" number="39.0.2.3">
+<h4>
+<span class="header-section-number">39.0.2.3</span> Exempel nr 3<a class="anchor" aria-label="anchor" href="#exempel-nr-3"><i class="fas fa-link"></i></a>
+</h4>
+<p>I <a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a> använde vi fyra observationer för variablerna <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span> vilka upprepas i tabell 3. Med dessa observationer estimerade vi regressionsmodellen <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>, där <span class="math inline">\(\epsilon\)</span> är feltermen och <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span> är modellens koefficienter, som vi fann var <span class="math inline">\(\widehat{\alpha} = 2,5\)</span> och <span class="math inline">\(\widehat{\beta} = - 0,5\)</span>.</p>
+<p><strong>Tabell 3: Variablerna</strong> <span class="math inline">\(Z\)</span> <strong>och</strong> <span class="math inline">\(K\)</span></p>
+<div class="inline-table"><table style="width:97%;" class="table table-sm">
+<colgroup>
+<col width="22%">
+<col width="37%">
+<col width="37%">
+</colgroup>
 <thead><tr class="header">
 <th align="left">Observation i</th>
 <th align="left">
@@ -209,34 +240,26 @@ Tabell 3: Variablerna** <span class="math inline">\(Z\)</span> <strong>och</stro
 </th>
 <th></th>
 </tr></thead>
-<tbody>
-<tr class="odd">
-<td align="left">1</td>
-<td align="left">1</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td align="left">2</td>
-<td align="left">4</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td align="left">3</td>
-<td align="left">0</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td align="left">4</td>
-<td align="left">1</td>
-<td>4</td>
-</tr>
-</tbody>
+<tbody><tr class="odd">
+<td align="left">1
+2
+3
+4</td>
+<td align="left">1
+4
+0
+1</td>
+<td>0
+0
+4
+4</td>
+</tr></tbody>
 </table></div>
-<p>Med matriser kan vi skriva denna regressionsmodell som <span class="math inline">\(Z = KB + E\)</span>, där <span class="math inline">\(Z\)</span> är den förklarade variabeln, <span class="math inline">\(B\)</span> är en matris med koefficienterna <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span>, <span class="math inline">\(K\)</span> är en kolumnmatris med förklarande variabeln och <span class="math inline">\(E\)</span> är feltermerna. Estimatorn kan här skrivas:
-<span class="math inline">\(\widehat{B} = \left( K^{T}K \right)^{- 1}K^{T}Z\)</span> (7)
-Detta ger oss följande estimat:
-<span class="math inline">\(\left\lbrack \begin{array}{r} \widehat{\alpha} \\ \widehat{\beta} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 4 &amp; 4 \end{bmatrix}\begin{bmatrix} 1 &amp; 0 \\ 1 &amp; 0 \\ 1 &amp; 4 \\ 1 &amp; 4 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 4 &amp; 4 \end{bmatrix}\left\lbrack \begin{array}{r} 1 \\ 4 \\ 0 \\ 1 \end{array} \right\rbrack = \left\lbrack \begin{array}{r} 2,5 \\ - 0,5 \end{array} \right\rbrack\)</span> (8)
-vilket är samma som vi kom fram till i <a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a>.</p>
+<p>Med matriser kan vi skriva denna regressionsmodell som <span class="math inline">\(Z = KB + E\)</span>, där <span class="math inline">\(Z\)</span> är den förklarade variabeln, <span class="math inline">\(B\)</span> är en matris med koefficienterna <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span>, <span class="math inline">\(K\)</span> är en kolumnmatris med förklarande variabeln och <span class="math inline">\(E\)</span> är feltermerna. Estimatorn kan här skrivas:</p>
+<p><span class="math display">\[\widehat{B} = \left( K^{T}K \right)^{- 1}K^{T}Z \tag{7}\]</span></p>
+<p>Detta ger oss följande estimat:</p>
+<p><span class="math display">\[\left\lbrack \begin{array}{r} \widehat{\alpha} \\ \widehat{\beta} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 4 &amp; 4 \end{bmatrix}\begin{bmatrix} 1 &amp; 0 \\ 1 &amp; 0 \\ 1 &amp; 4 \\ 1 &amp; 4 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 4 &amp; 4 \end{bmatrix}\left\lbrack \begin{array}{r} 1 \\ 4 \\ 0 \\ 1 \end{array} \right\rbrack = \left\lbrack \begin{array}{r} 2,5 \\ - 0,5 \end{array} \right\rbrack \tag{8}\]</span></p>
+<p>vilket är samma som vi kom fram till i <a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a>.</p>
 <div class="ex-section-title">
 <p>Övningar</p>
 </div>

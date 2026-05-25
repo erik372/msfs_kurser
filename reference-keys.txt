@@ -36,7 +36,6 @@ k1-2-2
 begrepp-5
 teori-5
 inkomstindex
-section
 prisindex-och-deflatering
 inflation-och-löner-historiskt
 k1-2-3
@@ -192,7 +191,6 @@ teori-28
 beräkna-widehatv
 räkna-med-minstakvadratmetoden
 beräkna-widehata-och-widehatb
-section-1
 kopplingen-till-kovarians-och-varians
 k2-2-6
 begrepp-29
@@ -210,6 +208,10 @@ begrepp-31
 teori-31
 en-ny-modell
 estimera-koefficienterna
+hur-väl-passar-regressionsmodellen-mot-data
+skillnaden-mellan-ssr-sse-och-sst
+determinationskoefficienten-r2
+observera-att-förkortningar-varierar-ibland.-vi-använder-här-ssr-sum-of-squared-residuals.-andra-använder-till-exempel-rss-residual-sum-of-squares.-båda-betyder-samma-sak.-när-du-läser-andra-texter-kontrollera-alltid-vad-en-förkortning-syftar-på-matematiskt.
 k2-3-3
 begrepp-32
 teori-32
@@ -258,6 +260,7 @@ begrepp-38
 teori-38
 exempel-nr-1
 exempel-nr-2
+exempel-nr-3
 k2-4-6
 begrepp-39
 teori-39

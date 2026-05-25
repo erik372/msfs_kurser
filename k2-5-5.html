@@ -142,15 +142,18 @@
 <h4>
 <span class="header-section-number">46.0.2.1</span> Med urvalsdata estimerar vi regressionsmodellen<a class="anchor" aria-label="anchor" href="#med-urvalsdata-estimerar-vi-regressionsmodellen"><i class="fas fa-link"></i></a>
 </h4>
-<p>Med hjälp av urvalsdata vill vi estimera koefficienterna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> en regressionsmodell som existerar i en population:
-<span class="math inline">\(Y = a + bX + V\)</span> (1)
-där <em>Y</em> och <em>X</em> är variabler och <em>V</em> är feltermen. Vi vill finna värden som är så nära som möjligt populationsvärdena.
+<p>Med hjälp av urvalsdata vill vi estimera koefficienterna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> en regressionsmodell som existerar i en population:</p>
+<p><span class="math display">\[Y = a + bX + V \tag{1}\]</span></p>
+<p>där <em>Y</em> och <em>X</em> är variabler och <em>V</em> är feltermen. Vi vill finna värden som är så nära som möjligt populationsvärdena.
 Figur 1 illustrerar detta med påhittade data för två normalfördelade variabler <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>. Inspirerat av Robert Östlings undervisningsmaterial:<br>
 www.sites.google.com/view/robertostling/home/teaching
 De grå prickarna är populationen. I populationen existerar det en positiv samvariation mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>. Den heldragna svarta linjen är regressionslinjen för populationen.
 Från populationen har vi tagit två slumpmässiga urval på några observationer, markerade som “urval 1” och “urval 2”, och estimerat en regressionslinje per urval. Regressionslinjen för urval 1 är den streckade linjen med negativ lutning. Regressionslinjen för urval 2 har en positiv lutning. Inget av de två urvalen ger en korrekt bild av populationens samvariation.
-Bilden illustrerar hur vi i praktiken arbetar med analys när vi har tillgång till data. I regel har vi inte populationsdata. Ibland har vi en stor mängd observationer och många variabler. Men ofta vill vi även uttala oss om vad som kommer hända i framtiden – vilket vi per definition inte har data på än. För att detta arbete ska bli så bra som möjligt behöver vi förstå statistisk analys och teorierna bakom statistiska test.
-<strong>Figur 1: Samvariationen i population och urval</strong><img src="img/k2-5-5-image1.png" style="width:4.80821in;height:3.03269in" alt="En bild som visar diagram, karta, linje, skärmbild Automatiskt genererad beskrivning"></p>
+Bilden illustrerar hur vi i praktiken arbetar med analys när vi har tillgång till data. I regel har vi inte populationsdata. Ibland har vi en stor mängd observationer och många variabler. Men ofta vill vi även uttala oss om vad som kommer hända i framtiden – vilket vi per definition inte har data på än. För att detta arbete ska bli så bra som möjligt behöver vi förstå statistisk analys och teorierna bakom statistiska test.</p>
+<p><strong>Figur 1: Samvariationen i population och urval</strong></p>
+<div class="float">
+<img src="img/k2-5-5-image1.png" alt="En bild som visar diagram, karta, linje, skärmbild Automatiskt genererad beskrivning"><div class="figcaption">En bild som visar diagram, karta, linje, skärmbild Automatiskt genererad beskrivning</div>
+</div>
 <div class="fig-caption">
 <p>Förklaring: De grå prickarna är populationen. I populationen finns en positiv samvariation mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>, vilket illustreras av den heldragna svarta linjen. Från populationen har vi tagit två mindre slumpmässiga urval, vars samvariation illustreras med den streckade och den prickiga linjen.</p>
 </div>
@@ -161,9 +164,9 @@ Bilden illustrerar hur vi i praktiken arbetar med analys när vi har tillgång t
 </h4>
 <p>Nu ska vi gå igenom hur vi kan formulera statistiska test och pröva hypoteser för koefficienterna i regressionsmodellen i ekvation 1. För de båda koefficienterna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> kan vi ställa upp varsitt statistiskt test och formulera varsin noll- samt alternativhypotes.
 Vi fokuserar här på lutningskoefficienten <span class="math inline">\(b\)</span>. Ofta är vi mer intresserade av <span class="math inline">\(b\)</span> än <span class="math inline">\(a\)</span>, eftersom vårt <span class="math inline">\(b\)</span> beskriver den huruvida det finns någon samvariation mellan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>.
-Ett vanligt sätt att formulera nollhypotesen för <span class="math inline">\(b\)</span> är att testa om det förekommer någon samvariation överhuvudtaget mellan variablerna, positiv eller negativ. Det vill säga om <span class="math inline">\(b\)</span> (i populationen) är skild från noll:
-<span class="math inline">\(H_{0}:b = 0\)</span> (2)
-<span class="math inline">\(H_{1}:b \neq 0\)</span>
+Ett vanligt sätt att formulera nollhypotesen för <span class="math inline">\(b\)</span> är att testa om det förekommer någon samvariation överhuvudtaget mellan variablerna, positiv eller negativ. Det vill säga om <span class="math inline">\(b\)</span> (i populationen) är skild från noll:</p>
+<p><span class="math display">\[H_{0}:b = 0 \tag{2}\]</span></p>
+<p><span class="math inline">\(H_{1}:b \neq 0\)</span>
 Proceduren går till så att vi först estimerar regressionsmodellen och koefficienterna, <span class="math inline">\(\widehat{a}\ \text{och}\ \widehat{b}\)</span>, och därefter utför ett statistiskt test. Det vi beräknar då är sannolikheten för att nollhypotesen är falsk och bör förkastas. Ett annat sätt att beskriva detta är att vi beräknar sannolikheten för om vårt resultat (estimerade <span class="math inline">\(\widehat{b}\)</span>) lika gärna kunde ha uppstått av slump.</p>
 </div>
 <div id="t-fördelningen" class="section level4" number="46.0.2.3">
@@ -185,7 +188,7 @@ Har vi tillräckligt många frihetsgrader blir t-fördelningen identisk med stan
 <p>Med hjälp av t-fördelningen kan vi nu utföra ett statistiskt test som kallas för t-test. För vårt statistiska test behöver vi även välja signifikansnivå, till exempel <span class="math inline">\(\alpha = 0,05\)</span> (jämför <a href="https://www.dropbox.com/scl/fi/zgjhgsqmkmnetk8xr2be1/5-4-Statistisk-analys-2.docx?rlkey=i7dzeoowrf1rh2oritsv8fl5n&amp;dl=0">avsnitt 5.4</a>). I det övre diagrammet i figur 2 är avstånden i standardavvikelser från medelvärdet 0 markerade för 90 respektive 95 % av fördelningen.
 T-fördelningen är, liksom normalfördelningen, jämnt fördelad kring medelvärdet. Vi kan använda både en- och tvåsidiga statistiska test. Det vanligaste vid regressionsanalys är tvåsidiga test. Som vår nollhypotesen är formulerad använder vi ett tvåsidigt test. Både negativa och positiva avvikelser i estimerade <span class="math inline">\(\widehat{b}\)</span> kan därför resultera i att vi förkastar nollhypotesen <span class="math inline">\(H_{0}\)</span>.</p>
 <p><strong>Figur 2: T-fördelningens täthetsfunktion och kumulativa sannolikhetsfunktion.</strong></p>
-<div class="inline-figure"><img src="img/k2-5-5-image2.png" style="width:4.82292in;height:6.43056in"></div>
+<div class="inline-figure"><img src="img/k2-5-5-image2.png"></div>
 <div class="fig-caption">
 <p>Förklaring: Diagrammen visar tre exempel på t-fördelningen med olika antal frihetsgrader: 2 och 1 000. Övre diagrammet visar täthetsfunktionen, där båda fördelningarna har medelvärdet 0. I det övre diagrammet är de avstånd från medelvärdet som täcker 90 respektive 95 % av t(2)-fördelningen. Nedre diagrammet visar kumulativa sannolikhetsfunktionen för de två t-fördelningarna.</p>
 </div>
@@ -194,18 +197,18 @@ T-fördelningen är, liksom normalfördelningen, jämnt fördelad kring medelvä
 <h4>
 <span class="header-section-number">46.0.2.5</span> Statistiskt test för <span class="math inline">\(b\)</span><a class="anchor" aria-label="anchor" href="#statistiskt-test-f%C3%B6r-b"><i class="fas fa-link"></i></a>
 </h4>
-<p>För att pröva hypoteserna <span class="math inline">\(H_{0}:b = 0\)</span> och <span class="math inline">\(H_{1}:b \neq 0\)</span> kan vi, utifrån antaganden om feltermernas fördelning, använda ett tvåsidigt t-test där t -värdet skattas med följande ekvation:
-<span class="math inline">\(t = \frac{\widehat{b} - b_{0}}{s_{\widehat{b}}}\)</span> (3)
-I täljaren har vi <span class="math inline">\(b_{0}\)</span>, vilket är det hypotetiska värde som vi prövar <span class="math inline">\(b\)</span> mot utifrån vår nollhypotes, det vill säga <span class="math inline">\(b_{0} = 0\)</span>. Vi kan därför stryka <span class="math inline">\(b_{0}\)</span> i ekvation 3 och skriva:
-<span class="math inline">\(t = \frac{\widehat{b} - b_{0}}{s_{\widehat{b}}} = \frac{\widehat{b}}{s_{\widehat{b}}}\)</span> (4)
-I nämnaren har vi <span class="math inline">\(s_{\widehat{b}}\)</span>, estimerat standardfel för <span class="math inline">\(\widehat{b}\)</span>. Detta innebär att för att utföra detta statistiska test behöver vi veta standardfel (eller variansen) för estimatorn <span class="math inline">\(\widehat{b}\)</span>, vilket är en uppskattning av osäkerheten i vårt estimat. Variansen för estimatorn <span class="math inline">\(\widehat{b}\)</span> kan definieras som:
-<span class="math inline">\(var(\widehat{b}) = \frac{\sigma_{V}^{2}}{\sum_{i}^{}\left( x_{i} - \bar{x} \right)^{2}\mspace{2mu}}\)</span> (5)
-I nämnaren har vi observationerna för variabel <span class="math inline">\(x\)</span>. Feltermernas varians i populationen <span class="math inline">\(\sigma_{V}^{2}\)</span> är i regel okänd men vi kan estimera denna med våra urvalsdata som <em>medelkvadratsumman för residualerna</em> (MSR), vilket vi kan skriva som <span class="math inline">\({\widehat{\sigma}}_{\widehat{V}}^{2}\)</span> eller <span class="math inline">\({\widehat{s}}_{\widehat{V}}^{2}\)</span> :
-<span class="math inline">\(MSR = {\widehat{\sigma}}_{\widehat{V}}^{2} = {\widehat{s}}_{\widehat{V}}^{2} = \frac{\sum_{i}^{}{\widehat{v}}_{i}^{2}\mspace{2mu}}{n - p} = \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{n - p}\)</span> (6)
-där <span class="math inline">\(n - p\)</span> är antal frihetsgrader: <span class="math inline">\(n\)</span> är antal observationer och <span class="math inline">\(p\)</span> är antal koefficienter (parametrar i vår beräkning). I detta fall har vi två, <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>, vilket ger <span class="math inline">\(p = 2\)</span>.
-Om vi byter ut populationsvärdet <span class="math inline">\(\sigma_{V}^{2}\)</span> i definitionen för <span class="math inline">\(var(\widehat{b})\)</span> mot estimerade <span class="math inline">\({\widehat{s}}_{\widehat{V}}^{2}\)</span> får vi estimerade variansen för estimatorn <span class="math inline">\(\widehat{b}\)</span>:
-<span class="math inline">\(var\left( \widehat{b} \right) = {\widehat{s}}_{\widehat{V}}^{2}\frac{1}{\sum_{i}^{}\left( x_{i} - \bar{x} \right)^{2}\mspace{2mu}} = \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - p)\sum_{}^{}\left( x_{i} - \bar{x} \right)^{2}}\)</span> (7)
-Kvadratroten av detta är standardfelet för <span class="math inline">\(\widehat{b}\)</span>.</p>
+<p>För att pröva hypoteserna <span class="math inline">\(H_{0}:b = 0\)</span> och <span class="math inline">\(H_{1}:b \neq 0\)</span> kan vi, utifrån antaganden om feltermernas fördelning, använda ett tvåsidigt t-test där t -värdet skattas med följande ekvation:</p>
+<p><span class="math display">\[t = \frac{\widehat{b} - b_{0}}{s_{\widehat{b}}} \tag{3}\]</span></p>
+<p>I täljaren har vi <span class="math inline">\(b_{0}\)</span>, vilket är det hypotetiska värde som vi prövar <span class="math inline">\(b\)</span> mot utifrån vår nollhypotes, det vill säga <span class="math inline">\(b_{0} = 0\)</span>. Vi kan därför stryka <span class="math inline">\(b_{0}\)</span> i ekvation 3 och skriva:</p>
+<p><span class="math display">\[t = \frac{\widehat{b} - b_{0}}{s_{\widehat{b}}} = \frac{\widehat{b}}{s_{\widehat{b}}} \tag{4}\]</span></p>
+<p>I nämnaren har vi <span class="math inline">\(s_{\widehat{b}}\)</span>, estimerat standardfel för <span class="math inline">\(\widehat{b}\)</span>. Detta innebär att för att utföra detta statistiska test behöver vi veta standardfel (eller variansen) för estimatorn <span class="math inline">\(\widehat{b}\)</span>, vilket är en uppskattning av osäkerheten i vårt estimat. Variansen för estimatorn <span class="math inline">\(\widehat{b}\)</span> kan definieras som:</p>
+<p><span class="math display">\[var(\widehat{b}) = \frac{\sigma_{V}^{2}}{\sum_{i}^{}\left( x_{i} - \bar{x} \right)^{2}\mspace{2mu}} \tag{5}\]</span></p>
+<p>I nämnaren har vi observationerna för variabel <span class="math inline">\(x\)</span>. Feltermernas varians i populationen <span class="math inline">\(\sigma_{V}^{2}\)</span> är i regel okänd men vi kan estimera denna med våra urvalsdata som <em>medelkvadratsumman för residualerna</em> (MSR), vilket vi kan skriva som <span class="math inline">\({\widehat{\sigma}}_{\widehat{V}}^{2}\)</span> eller <span class="math inline">\({\widehat{s}}_{\widehat{V}}^{2}\)</span> :</p>
+<p><span class="math display">\[MSR = {\widehat{\sigma}}_{\widehat{V}}^{2} = {\widehat{s}}_{\widehat{V}}^{2} = \frac{\sum_{i}^{}{\widehat{v}}_{i}^{2}\mspace{2mu}}{n - p} = \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{n - p} \tag{6}\]</span></p>
+<p>där <span class="math inline">\(n - p\)</span> är antal frihetsgrader: <span class="math inline">\(n\)</span> är antal observationer och <span class="math inline">\(p\)</span> är antal koefficienter (parametrar i vår beräkning). I detta fall har vi två, <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>, vilket ger <span class="math inline">\(p = 2\)</span>.
+Om vi byter ut populationsvärdet <span class="math inline">\(\sigma_{V}^{2}\)</span> i definitionen för <span class="math inline">\(var(\widehat{b})\)</span> mot estimerade <span class="math inline">\({\widehat{s}}_{\widehat{V}}^{2}\)</span> får vi estimerade variansen för estimatorn <span class="math inline">\(\widehat{b}\)</span>:</p>
+<p><span class="math display">\[var\left( \widehat{b} \right) = {\widehat{s}}_{\widehat{V}}^{2}\frac{1}{\sum_{i}^{}\left( x_{i} - \bar{x} \right)^{2}\mspace{2mu}} = \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - p)\sum_{}^{}\left( x_{i} - \bar{x} \right)^{2}} \tag{7}\]</span></p>
+<p>Kvadratroten av detta är standardfelet för <span class="math inline">\(\widehat{b}\)</span>.</p>
 </div>
 <div id="ett-exempel-med-regressionsanalys-med-t-test" class="section level4" number="46.0.2.6">
 <h4>
@@ -223,7 +226,9 @@ Detta exempel syftar enbart till att illustrera metoden. För att göra det mer 
 <thead><tr class="header">
 <th align="left">Observation <em>i</em>
 </th>
-<th></th>
+<th align="center">
+<span class="math inline">\(X\)</span> <span class="math inline">\(Y\)</span>
+</th>
 <th></th>
 </tr></thead>
 <tbody><tr class="odd">
@@ -231,7 +236,7 @@ Detta exempel syftar enbart till att illustrera metoden. För att göra det mer 
 2
 3
 4</td>
-<td>3
+<td align="center">3
 4
 6
 7</td>
@@ -241,11 +246,11 @@ Detta exempel syftar enbart till att illustrera metoden. För att göra det mer 
 4</td>
 </tr></tbody>
 </table></div>
-<p>För beräkningen av <span class="math inline">\(t\)</span> vet vi att täljaren är <span class="math inline">\(\widehat{b} = 0,5\)</span>. Till nämnaren vill vi estimera <span class="math inline">\({\widehat{s}}_{\widehat{b}}\)</span> enligt ovan. Från tidigare beräkningar med dessa fyra observationer vet vi att <span class="math inline">\(\sum\left( y_{i} - \widehat{y} \right)^{2} = 2,5\)</span> och <span class="math inline">\(\sum\left( x_{i} - \bar{x} \right)^{2} = 10\)</span>. Vi har fyra observationer <span class="math inline">\((n = 4)\)</span> och två koefficienter ( <span class="math inline">\(p = 2\)</span> ), varför <span class="math inline">\(n - p = 4 - 2 = 2\)</span>. Detta ger följande estimat av <span class="math inline">\({\widehat{s}}_{\widehat{b}}\)</span> :
-<span class="math inline">\({\widehat{s}}_{\widehat{b}} = \left( \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - 2)\sum_{}^{}\left( x_{i} - \bar{x} \right)^{2}} \right)^{1/2} = \left( \frac{2,5}{2*10} \right)^{1/2} \approx 0,354\)</span> (8)
-Vi sätter nu in även detta i ekvation 4 för att estimera vårt <span class="math inline">\(t\)</span>-värde:
-<span class="math inline">\(t = \frac{\widehat{b}}{{\widehat{s}}_{\widehat{b}}} = \frac{0,5}{\left( \frac{2,5}{2*10} \right)^{1/2}} \approx 1,414\)</span> (9)
-För t -värdet har vi <span class="math inline">\(k = n - p = 4 - 2 = 2\)</span> frihetsgrader. Eftersom vi har ett tvåsidigt t-test jämför vi huruvida vårt skattade <span class="math inline">\(\|t\| \&gt; t^{*}\)</span>, där <span class="math inline">\(t^{*}\)</span> är kritiska t-värdet. Vi väljer signifikansnivå <span class="math inline">\(\alpha = 0,05\)</span>, vilket för ett tvåsidigt test tar <span class="math inline">\(\alpha/2 = 0,025\)</span> på vardera sida om sannolikhetsfördelningens medelvärde.
+<p>För beräkningen av <span class="math inline">\(t\)</span> vet vi att täljaren är <span class="math inline">\(\widehat{b} = 0,5\)</span>. Till nämnaren vill vi estimera <span class="math inline">\({\widehat{s}}_{\widehat{b}}\)</span> enligt ovan. Från tidigare beräkningar med dessa fyra observationer vet vi att <span class="math inline">\(\sum\left( y_{i} - \widehat{y} \right)^{2} = 2,5\)</span> och <span class="math inline">\(\sum\left( x_{i} - \bar{x} \right)^{2} = 10\)</span>. Vi har fyra observationer <span class="math inline">\((n = 4)\)</span> och två koefficienter ( <span class="math inline">\(p = 2\)</span> ), varför <span class="math inline">\(n - p = 4 - 2 = 2\)</span>. Detta ger följande estimat av <span class="math inline">\({\widehat{s}}_{\widehat{b}}\)</span> :</p>
+<p><span class="math display">\[{\widehat{s}}_{\widehat{b}} = \left( \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - 2)\sum_{}^{}\left( x_{i} - \bar{x} \right)^{2}} \right)^{1/2} = \left( \frac{2,5}{2*10} \right)^{1/2} \approx 0,354 \tag{8}\]</span></p>
+<p>Vi sätter nu in även detta i ekvation 4 för att estimera vårt <span class="math inline">\(t\)</span>-värde:</p>
+<p><span class="math display">\[t = \frac{\widehat{b}}{{\widehat{s}}_{\widehat{b}}} = \frac{0,5}{\left( \frac{2,5}{2*10} \right)^{1/2}} \approx 1,414 \tag{9}\]</span></p>
+<p>För t -värdet har vi <span class="math inline">\(k = n - p = 4 - 2 = 2\)</span> frihetsgrader. Eftersom vi har ett tvåsidigt t-test jämför vi huruvida vårt skattade <span class="math inline">\(\|t\| \&gt; t^{*}\)</span>, där <span class="math inline">\(t^{*}\)</span> är kritiska t-värdet. Vi väljer signifikansnivå <span class="math inline">\(\alpha = 0,05\)</span>, vilket för ett tvåsidigt test tar <span class="math inline">\(\alpha/2 = 0,025\)</span> på vardera sida om sannolikhetsfördelningens medelvärde.
 Vårt beräknade <span class="math inline">\(t = 1,4\)</span> kan vi jämföra mot figur 2 ovan och det övre diagrammet, där vi ser att <span class="math inline">\(t^{*} = 4,303\)</span>, för t-fördelningen med 2 frihetsgrader. Vårt beräknade <span class="math inline">\(\|t\|\)</span> måste därför vara högre än detta värde för att förkasta <span class="math inline">\(H_{0}\)</span> vid <span class="math inline">\(\alpha = 0,05\)</span>. Eftersom så inte är fallet förkastar vi inte <span class="math inline">\(H_{0}\)</span>, som säger att <span class="math inline">\(b = 0\)</span>. Ett annat sätt att beskriva detta är att vårt estimerade <span class="math inline">\(\widehat{b}\)</span> <em>inte är</em> <em>statistiskt signifikant</em>.
 Vad betyder detta praktiskt? Med endast 4 observationer och <span class="math inline">\(\widehat{b} = 0,5\)</span> kan vi inte säga att sambandet är statistiskt skilt från noll. Vi skulle behöva fler observationer eller en större effekt för att nå signifikans.</p>
 </div>
@@ -262,13 +267,13 @@ Om vi, som exempel, estimerade en regressionsmodell för att studera om föränd
 <h4>
 <span class="header-section-number">46.0.3.1</span> Regressionsanalys med konfidensintervall<a class="anchor" aria-label="anchor" href="#regressionsanalys-med-konfidensintervall"><i class="fas fa-link"></i></a>
 </h4>
-<p>För de estimerade koefficienterna i vår regressionsanalys kan vi även uppskatta ett konfidensintervall (se <a href="https://www.dropbox.com/scl/fi/12fiw2s4633qjt0d1s0zw/5-3-Statitsisk-analys.docx?rlkey=b4urprsp85hxcdp6jm3z9vaw7&amp;dl=0">avsnitt 5.3</a>). För regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> och observationerna <span class="math inline">\(x =\)</span> <span class="math inline">\(\{ 3,2,5,4\}\)</span> och <span class="math inline">\(y = \{ 3,4,6,7\}\)</span> fann vi i beräkningarna ovan följande resultat:
-<span class="math inline">\(\begin{matrix} \widehat{a} = 1 &amp; \widehat{b} = 0,5 \\ {\widehat{s}}_{\widehat{a}} = 1,854 &amp; {\widehat{s}}_{\widehat{b}} = 0,354 \end{matrix}\)</span> (10)
-Ett sätt att estimera konfidensintervall för <span class="math inline">\(\widehat{a}\)</span> är då att beräkna följande:
+<p>För de estimerade koefficienterna i vår regressionsanalys kan vi även uppskatta ett konfidensintervall (se <a href="https://www.dropbox.com/scl/fi/12fiw2s4633qjt0d1s0zw/5-3-Statitsisk-analys.docx?rlkey=b4urprsp85hxcdp6jm3z9vaw7&amp;dl=0">avsnitt 5.3</a>). För regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> och observationerna <span class="math inline">\(x =\)</span> <span class="math inline">\(\{ 3,2,5,4\}\)</span> och <span class="math inline">\(y = \{ 3,4,6,7\}\)</span> fann vi i beräkningarna ovan följande resultat:</p>
+<p><span class="math display">\[\begin{matrix} \widehat{a} = 1 &amp; \widehat{b} = 0,5 \\ {\widehat{s}}_{\widehat{a}} = 1,854 &amp; {\widehat{s}}_{\widehat{b}} = 0,354 \end{matrix} \tag{10}\]</span></p>
+<p>Ett sätt att estimera konfidensintervall för <span class="math inline">\(\widehat{a}\)</span> är då att beräkna följande:
 Konfidensintervall för koefficient <span class="math inline">\(b\)</span>: <span class="math inline">\(\widehat{b} \pm t_{k,\alpha}*{\widehat{s}}_{\widehat{b}}\)</span> (11)
-där <span class="math inline">\(t_{k,\alpha}\)</span> är kritiska t-värdet beroende på antal frihetsgrader <span class="math inline">\(k = 2\)</span> och signifikansnivå <span class="math inline">\(\alpha\)</span>. Låt oss nu skatta ett <span class="math inline">\(95\%\)</span> konfidensintervall. Vi sätter i så fall <span class="math inline">\(\alpha = 0,05\)</span>. Värdet för <span class="math inline">\(t_{k,\alpha}\)</span> hämtar vi från figur 2 ovan: 4,303 (samma som kritiska <span class="math inline">\(t^{*}\)</span> i exemplet ovan). Detta ger följande konfidensintervall:
-<span class="math inline">\(\widehat{b} \pm t_{k,\alpha}*{\widehat{s}}_{\widehat{b}} = 0,5 \pm 4,3*0,354 \approx 0,5 \pm 1,52\)</span> (12)
-Konfidensintervallet visar inom vilka gränser som <span class="math inline">\(95\ \%\)</span> av koefficienternas estimat skulle befinna sig vid upprepade urval. För <span class="math inline">\(\widehat{b}\)</span> är konfidensintervallets nedre och övre gräns cirka <span class="math inline">\(- 1,02\)</span> samt 2,02.</p>
+där <span class="math inline">\(t_{k,\alpha}\)</span> är kritiska t-värdet beroende på antal frihetsgrader <span class="math inline">\(k = 2\)</span> och signifikansnivå <span class="math inline">\(\alpha\)</span>. Låt oss nu skatta ett <span class="math inline">\(95\%\)</span> konfidensintervall. Vi sätter i så fall <span class="math inline">\(\alpha = 0,05\)</span>. Värdet för <span class="math inline">\(t_{k,\alpha}\)</span> hämtar vi från figur 2 ovan: 4,303 (samma som kritiska <span class="math inline">\(t^{*}\)</span> i exemplet ovan). Detta ger följande konfidensintervall:</p>
+<p><span class="math display">\[\widehat{b} \pm t_{k,\alpha}*{\widehat{s}}_{\widehat{b}} = 0,5 \pm 4,3*0,354 \approx 0,5 \pm 1,52 \tag{12}\]</span></p>
+<p>Konfidensintervallet visar inom vilka gränser som <span class="math inline">\(95\ \%\)</span> av koefficienternas estimat skulle befinna sig vid upprepade urval. För <span class="math inline">\(\widehat{b}\)</span> är konfidensintervallets nedre och övre gräns cirka <span class="math inline">\(- 1,02\)</span> samt 2,02.</p>
 <div class="ex-section-title">
 <p>Övningar</p>
 </div>

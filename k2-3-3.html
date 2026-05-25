@@ -138,18 +138,18 @@ Att estimera koefficienterna i regressionsmodellen är då endast första steget
 <h4>
 <span class="header-section-number">33.0.2.1</span> Medelkvadratsumman<a class="anchor" aria-label="anchor" href="#medelkvadratsumman"><i class="fas fa-link"></i></a>
 </h4>
-<p>För att studera hur väl en regressionsmodell passar mot data kan vi även jämföra medelkvadratsumman. Medelkvadratsumman för residualerna (engelska <em>mean squared residuals</em>, MSR) beräknas:
-<span class="math inline">\(MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}\)</span> (5)
-Nämnaren <span class="math inline">\(n - p\)</span> visar antal frihetsgrader, där <span class="math inline">\(n\)</span> är antal observationer och <span class="math inline">\(p\)</span> är antal estimerade koefficienter i regressionsmodellen. Frihetsgrader anger hur många "fria" värden vi har kvar efter att ha estimerat koefficienterna: <span class="math inline">\(n\)</span> = antal observationer (här 4). <span class="math inline">\(p\)</span> = antal estimerade koefficienter (här 2: <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>). <span class="math inline">\(n - p\)</span> = frihetsgrader <span class="math inline">\((4\ - \ 2\ = \ 2)\)</span>. Med 4 observationer och 2 koefficienter har vi "använt upp" 2 frihetsgrader för att estimera koefficienterna. Vi har 2 frihetsgrader kvar för att mäta variation kring regressionslinjen.
+<p>För att studera hur väl en regressionsmodell passar mot data kan vi även jämföra medelkvadratsumman. Medelkvadratsumman för residualerna (engelska <em>mean squared residuals</em>, MSR) beräknas:</p>
+<p><span class="math display">\[MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p} \tag{5}\]</span></p>
+<p>Nämnaren <span class="math inline">\(n - p\)</span> visar antal frihetsgrader, där <span class="math inline">\(n\)</span> är antal observationer och <span class="math inline">\(p\)</span> är antal estimerade koefficienter i regressionsmodellen. Frihetsgrader anger hur många "fria" värden vi har kvar efter att ha estimerat koefficienterna: <span class="math inline">\(n\)</span> = antal observationer (här 4). <span class="math inline">\(p\)</span> = antal estimerade koefficienter (här 2: <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>). <span class="math inline">\(n - p\)</span> = frihetsgrader <span class="math inline">\((4\ - \ 2\ = \ 2)\)</span>. Med 4 observationer och 2 koefficienter har vi "använt upp" 2 frihetsgrader för att estimera koefficienterna. Vi har 2 frihetsgrader kvar för att mäta variation kring regressionslinjen.
 Förenklat kan ett lågt MSR innebära att regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> hamnar relativt nära observationerna <span class="math inline">\(Y\)</span>.</p>
 </div>
 <div id="medelkvadratsumman-av-den-förklarade-variationen" class="section level4" number="33.0.2.2">
 <h4>
 <span class="header-section-number">33.0.2.2</span> Medelkvadratsumman av den förklarade variationen<a class="anchor" aria-label="anchor" href="#medelkvadratsumman-av-den-f%C3%B6rklarade-variationen"><i class="fas fa-link"></i></a>
 </h4>
-<p>Medelkvadratsumman av den förklarade variationen är SSE dividerat med antal förklarande variabler (engelska mean sum of squares explained, MSE):
-<span class="math inline">\(MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}\)</span> (6)
-I täljaren tar vi <span class="math inline">\(p\)</span>, antal estimerade koefficienter, minus 1 eftersom koefficient <span class="math inline">\(a\)</span> inte multipliceras med någon förklarande variabel.</p>
+<p>Medelkvadratsumman av den förklarade variationen är SSE dividerat med antal förklarande variabler (engelska mean sum of squares explained, MSE):</p>
+<p><span class="math display">\[MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1} \tag{6}\]</span></p>
+<p>I täljaren tar vi <span class="math inline">\(p\)</span>, antal estimerade koefficienter, minus 1 eftersom koefficient <span class="math inline">\(a\)</span> inte multipliceras med någon förklarande variabel.</p>
 </div>
 <div id="låt-oss-jämföra-två-regressionsmodeller" class="section level4" number="33.0.2.3">
 <h4>
@@ -172,10 +172,11 @@ Tabell 2 och 3 återger observationerna vi använde för att estimera respektive
 </colgroup>
 <thead><tr class="header">
 <th align="left">Observation i</th>
-<th align="left">$</th>
-<th></th>
-<th></th>
-<th></th>
+<th align="right">
+<span class="math inline">\(X_{i}\)</span> <span class="math inline">\(Y_{i}\)</span> $\widehat{Y_{i</th>
+<th>}}$ <span class="math inline">\(Y_{i} - \widehat{Y_{i}}\)</span> $</th>
+<th>Y_{i} - $ $( Y_{i} - </th>
+<th align="left">at{Y_{i}} )^{2}$</th>
 <th></th>
 <th></th>
 </tr></thead>
@@ -186,7 +187,7 @@ Tabell 2 och 3 återger observationerna vi använde för att estimera respektive
 4
 Medel
 Summa</td>
-<td align="left">3
+<td align="right">3
 4
 6
 7
@@ -200,7 +201,7 @@ Summa</td>
 3
 4
 4,5</td>
-<td>0,5
+<td align="left">0,5
 -1
 1
 -0,5</td>
@@ -230,10 +231,12 @@ Summa</td>
 </colgroup>
 <thead><tr class="header">
 <th align="left">Observation i</th>
-<th align="left">$</th>
-<th></th>
-<th></th>
-<th></th>
+<th align="right">
+<span class="math inline">\(Z_{i}\)</span> <span class="math inline">\(K_{i}\)</span> $\widehat{Z_{i</th>
+<th>}}$ $ = Z_{</th>
+<th>i} - $ $Z_{i} - \overline{Z_{</th>
+<th align="left">i}}$ <span class="math inline">\(\left( Z_{i} - \widehat{Z_{i}} \right)^{2}\)</span>
+</th>
 <th></th>
 <th></th>
 </tr></thead>
@@ -244,7 +247,7 @@ Summa</td>
 4
 Medel
 Summa</td>
-<td align="left">1
+<td align="right">1
 4
 0
 1
@@ -258,7 +261,7 @@ Summa</td>
 2,5
 0,5
 0,5</td>
-<td>–1,5
+<td align="left">–1,5
 1,5
 -0,5
 0,5</td>
@@ -274,24 +277,24 @@ Summa</td>
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: se text.
-Nu ska vi jämföra vilken av modellerna som passar bäst mot deras respektive datapunkter. Vi börjar med att beräkna MSR för respektive regressionsmodell. Tabell 2 upprepar observationerna för modell 1 och variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> samt några beräkningar som vi behöver. Detta ger MSR:
-<span class="math inline">\(MSR_{modell\ 1} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p} = \frac{2,5}{2} = 1,25\)</span> (8)
-Låt oss beräkna MSR även för regressionsmodell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>. Tabell 3 upprepar variablernas värden och sammanfattar några beräkningar. Detta ger följande MSR:
-<span class="math inline">\(MSR_{modell\ 2} = \frac{5}{2} = 2,5\)</span> (9)
-Eftersom <span class="math inline">\(MSR_{modell\ 2} \&gt; MSR_{modell\ 1}\)</span> indikerar på att den första regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> ligger närmare observerade <span class="math inline">\(Y\)</span>, jämfört med hur väl den andra regressionsmodellen lyckas prediktera den förklarade variabeln <span class="math inline">\(Z\)</span> i den modellen.
-MSR beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.</p>
+Nu ska vi jämföra vilken av modellerna som passar bäst mot deras respektive datapunkter. Vi börjar med att beräkna MSR för respektive regressionsmodell. Tabell 2 upprepar observationerna för modell 1 och variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> samt några beräkningar som vi behöver. Detta ger MSR:</p>
 </div>
+<p><span class="math display">\[MSR_{modell\ 1} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p} = \frac{2,5}{2} = 1,25 \tag{8}\]</span></p>
+<p>Låt oss beräkna MSR även för regressionsmodell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>. Tabell 3 upprepar variablernas värden och sammanfattar några beräkningar. Detta ger följande MSR:</p>
+<p><span class="math display">\[MSR_{modell\ 2} = \frac{5}{2} = 2,5 \tag{9}\]</span></p>
+<p>Eftersom <span class="math inline">\(MSR_{modell\ 2} \&gt; MSR_{modell\ 1}\)</span> indikerar på att den första regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> ligger närmare observerade <span class="math inline">\(Y\)</span>, jämfört med hur väl den andra regressionsmodellen lyckas prediktera den förklarade variabeln <span class="math inline">\(Z\)</span> i den modellen.
+MSR beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.</p>
 </div>
 </div>
 <div id="vi-beräknar-r2-för-båda-modellerna" class="section level3" number="33.0.3">
 <h3>
 <span class="header-section-number">33.0.3</span> Vi beräknar <span class="math inline">\(R^{2}\)</span> för båda modellerna<a class="anchor" aria-label="anchor" href="#vi-ber%C3%A4knar-r2-f%C3%B6r-b%C3%A5da-modellerna"><i class="fas fa-link"></i></a>
 </h3>
-<p>Låt oss även skatta <span class="math inline">\(R^{2}\)</span>. För den första regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> får vi (se tabell 2):
-<span class="math inline">\(R_{modell\ 1}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{2,5}{5} = \frac{1}{2}\)</span> (10)
-Resultat <span class="math inline">\(R^{2} = \frac{1}{2}\)</span> indikerar att hälften av variationen i <span class="math inline">\(Y\)</span> kan förklaras av regressionsmodellen och variationer i <span class="math inline">\(X\)</span>. Låt oss beräkna <span class="math inline">\(R^{2}\ \)</span>för den andra regressionsmodellen <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span> (se tabell 3):
-<span class="math inline">\(R_{modell\ 2}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{5}{9} = \frac{4}{9}\)</span> (11)
-Eftersom <span class="math inline">\(\frac{4}{9} \&lt; \frac{1}{2}\)</span> indikerar detta att den första regressionsmodellen har högre förklaringsgrad jämfört med den andra modellen. Modell 1 passar därför, enligt detta mått, bättre mot den data som vi använde för att estimera modellen, jämfört med hur modell 2 passar mot den data vi använde för att estimera den modellen.
+<p>Låt oss även skatta <span class="math inline">\(R^{2}\)</span>. För den första regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> får vi (se tabell 2):</p>
+<p><span class="math display">\[R_{modell\ 1}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{2,5}{5} = \frac{1}{2} \tag{10}\]</span></p>
+<p>Resultat <span class="math inline">\(R^{2} = \frac{1}{2}\)</span> indikerar att hälften av variationen i <span class="math inline">\(Y\)</span> kan förklaras av regressionsmodellen och variationer i <span class="math inline">\(X\)</span>. Låt oss beräkna <span class="math inline">\(R^{2}\ \)</span>för den andra regressionsmodellen <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span> (se tabell 3):</p>
+<p><span class="math display">\[R_{modell\ 2}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{5}{9} = \frac{4}{9} \tag{11}\]</span></p>
+<p>Eftersom <span class="math inline">\(\frac{4}{9} \&lt; \frac{1}{2}\)</span> indikerar detta att den första regressionsmodellen har högre förklaringsgrad jämfört med den andra modellen. Modell 1 passar därför, enligt detta mått, bättre mot den data som vi använde för att estimera modellen, jämfört med hur modell 2 passar mot den data vi använde för att estimera den modellen.
 Detta betyder att 50 % av variationen i <span class="math inline">\(Y\)</span> förklaras av <span class="math inline">\(X\)</span>. 50 % av variationen i <span class="math inline">\(Y\)</span> beror på andra faktorer (residualerna). Ett högre <span class="math inline">\(R^{2}\)</span> betyder att modellen "passar bättre" mot data, men det betyder inte automatiskt att modellen är bra. Ett högt eller lågt <span class="math inline">\(R^{2}\)</span> säger inte heller nödvändigtvis något om orsakssamband.</p>
 <div class="ex-section-title">
 <p>Övningar</p>

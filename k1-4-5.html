@@ -183,40 +183,37 @@ I raden för bransch A visar siffrorna värdet av den produktion som A säljer t
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: På raden för bransch A ser vi mängden produktion av varor och tjänster från (output) företagen i bransch A till andra företag i bransch A, företag i bransch B samt till hushållen som står för slutkonsumtion. I kolumnen för bransch A ser vi mängden insatsvaror (input) som företagen i bransch A erhåller från andra företag i bransch A och B. I kolumnen längst till höger ser vi radsumma och i raden längst ned ser vi kolumnsumma.
-Informationen i tabell 1 kan vi använda för att beräkna hur förändrad produktion i en del av samhällsekonomin påverkar övriga delar. Vi börjar med att placera tabellens värden i matriser. Vi samlar flödena till och från branscherna i en <span class="math inline">\(2 \times 2\)</span> matris Z (flödesmatrisen), slutkonsumtion i kolumnmatris C och summan i sista kolumnen i kolumnmatris S:
-<span class="math inline">\(Z = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 3 \end{bmatrix},\ \ C = \begin{bmatrix} 3 \\ 3 \end{bmatrix},\ \ S = \begin{bmatrix} 6 \\ 7 \end{bmatrix}\)</span> (1)
-Flödena till och från branscherna, som beskrivs i Z, kan vi dividera med respektive bransch totala produktion, matris S. Detta kan vi beskriva som:
-<span class="math inline">\(a_{ij} = \frac{y_{ij}}{y_{j}}\)</span> (2)
-där <span class="math inline">\(y_{ij}\)</span> är produktion från bransch <em>i</em> som levereras till bransch <em>j</em>, medan <span class="math inline">\(y_{j}\)</span> är den produktion som bransch <em>j</em> producerar. För varje värde i matris <em>Z</em> kan vi beräkna ett värde <span class="math inline">\(a_{ij}\)</span> och samla i en 2 × 2 matris A.</p>
+Informationen i tabell 1 kan vi använda för att beräkna hur förändrad produktion i en del av samhällsekonomin påverkar övriga delar. Vi börjar med att placera tabellens värden i matriser. Vi samlar flödena till och från branscherna i en <span class="math inline">\(2 \times 2\)</span> matris Z (flödesmatrisen), slutkonsumtion i kolumnmatris C och summan i sista kolumnen i kolumnmatris S:</p>
 </div>
+<p><span class="math display">\[Z = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 3 \end{bmatrix},\ \ C = \begin{bmatrix} 3 \\ 3 \end{bmatrix},\ \ S = \begin{bmatrix} 6 \\ 7 \end{bmatrix} \tag{1}\]</span></p>
+<p>Flödena till och från branscherna, som beskrivs i Z, kan vi dividera med respektive bransch totala produktion, matris S. Detta kan vi beskriva som:</p>
+<p><span class="math display">\[a_{ij} = \frac{y_{ij}}{y_{j}} \tag{2}\]</span></p>
+<p>där <span class="math inline">\(y_{ij}\)</span> är produktion från bransch <em>i</em> som levereras till bransch <em>j</em>, medan <span class="math inline">\(y_{j}\)</span> är den produktion som bransch <em>j</em> producerar. För varje värde i matris <em>Z</em> kan vi beräkna ett värde <span class="math inline">\(a_{ij}\)</span> och samla i en 2 × 2 matris A.</p>
 </div>
 <div id="räkna-med-matriser" class="section level4" number="20.0.2.2">
 <h4>
 <span class="header-section-number">20.0.2.2</span> Räkna med matriser<a class="anchor" aria-label="anchor" href="#r%C3%A4kna-med-matriser"><i class="fas fa-link"></i></a>
 </h4>
-<p>För att göra denna beräkning med matriser beräknar vi först den multiplikativa inversen av varje element i S, det vill säga placerar värdena som nämnare i varsitt bråk med täljaren 1. Bransch A får <span class="math inline">\(\frac{1}{6}\)</span> och bransch B <span class="math inline">\(\frac{1}{7}\)</span>. Dessa värden samlar vi i en kolumnmatris <span class="math inline">\(S_{m}\)</span> och placerar i en diagonalmatris, vilket vi kan beskriva som <span class="math inline">\(diag(S_{m})\)</span>:
-<span class="math inline">\(diag\left( S_{m} \right) = \begin{bmatrix} \frac{1}{6} &amp; 0 \\ 0 &amp; \frac{1}{7} \end{bmatrix}\)</span> (3)
-För att beräkna A matrismultiplicerar vi nu Z med <span class="math inline">\(diag\left( S_{m} \right)\)</span>:
-<span class="math inline">\(A = Z*diag\left( S_{m} \right)\)</span> (4)$ $</p>
-<p><span class="math display">\[{= \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}\begin{bmatrix} \frac{1}{6} &amp; 0 \\ 0 &amp; \frac{1}{7} \end{bmatrix} }{= \begin{bmatrix} \frac{2}{6} &amp; \frac{1}{7} \\ \frac{1}{6} &amp; \frac{3}{7} \end{bmatrix}}\]</span></p>
-<p>För varje bransch <em>j</em> kan vi definiera totalproduktion <span class="math inline">\(y_{j}\)</span> som summan av insatsproduktion till alla branscher plus produktion till slutkonsumtion, vilket i detta fall blir:
-<span class="math inline">\(y_{j} = a_{j1}y_{y} + a_{j2}y_{2} + c_{j}\)</span> (5)
-där <span class="math inline">\(a\)</span> är vikterna vi definierade i ekvation 2, <span class="math inline">\(y_{1}\)</span> är totalproduktionen från bransch 1 och <span class="math inline">\(y_{2}\)</span> är totalproduktion från bransch 2, eller bransch A och B som vi kallade dem.
+<p>För att göra denna beräkning med matriser beräknar vi först den multiplikativa inversen av varje element i S, det vill säga placerar värdena som nämnare i varsitt bråk med täljaren 1. Bransch A får <span class="math inline">\(\frac{1}{6}\)</span> och bransch B <span class="math inline">\(\frac{1}{7}\)</span>. Dessa värden samlar vi i en kolumnmatris <span class="math inline">\(S_{m}\)</span> och placerar i en diagonalmatris, vilket vi kan beskriva som <span class="math inline">\(diag(S_{m})\)</span>:</p>
+<p><span class="math display">\[diag\left( S_{m} \right) = \begin{bmatrix} \frac{1}{6} &amp; 0 \\ 0 &amp; \frac{1}{7} \end{bmatrix} \tag{3}\]</span></p>
+<p>För att beräkna A matrismultiplicerar vi nu Z med <span class="math inline">\(diag\left( S_{m} \right)\)</span>:
+<span class="math inline">\(A = Z*diag\left( S_{m} \right)\)</span> (4)$ $<span class="math inline">\({= \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}\begin{bmatrix} \frac{1}{6} &amp; 0 \\ 0 &amp; \frac{1}{7} \end{bmatrix} }{= \begin{bmatrix} \frac{2}{6} &amp; \frac{1}{7} \\ \frac{1}{6} &amp; \frac{3}{7} \end{bmatrix}}\)</span>
+För varje bransch <em>j</em> kan vi definiera totalproduktion <span class="math inline">\(y_{j}\)</span> som summan av insatsproduktion till alla branscher plus produktion till slutkonsumtion, vilket i detta fall blir:</p>
+<p><span class="math display">\[y_{j} = a_{j1}y_{y} + a_{j2}y_{2} + c_{j} \tag{5}\]</span></p>
+<p>där <span class="math inline">\(a\)</span> är vikterna vi definierade i ekvation 2, <span class="math inline">\(y_{1}\)</span> är totalproduktionen från bransch 1 och <span class="math inline">\(y_{2}\)</span> är totalproduktion från bransch 2, eller bransch A och B som vi kallade dem.
 Vi vet inte värdena för <span class="math inline">\(y_{j}\)</span> än men vi kan beräkna det med hjälp av matriserna. Vi samlar elementen av totalproduktion i kolumnmatris <span class="math inline">\(Y\)</span> och kan nu beskriva <span class="math inline">\(Y\)</span> som:
-<span class="math inline">\(Y = AY + C\)</span> (6)$ $</p>
-<p><span class="math display">\[{Y - AY = C }{IY - AY = C }{(I - A)Y = C }{Y = (I - A)^{- 1}C}\]</span></p>
-<p>Identitetsmatris <em>I</em> har samma dimensioner som <em>A</em>. Kolumnmatris <em>Y</em> beskriver hur mycket produktion som krävs från respektive bransch till företagen i samma och andra branscher samt till slutkonsumtion:
-<span class="math inline">\(Y = (I - A)^{- 1}C = \begin{bmatrix} \frac{8}{5} &amp; \frac{2}{5} \\ \frac{7}{15} &amp; \frac{28}{15} \end{bmatrix}\begin{bmatrix} 3 \\ 3 \end{bmatrix} \approx \begin{bmatrix} 6 \\ 7 \end{bmatrix}\)</span> (7)
-Detta resultat är konsistent med tabell 1, där vi ser att bransch A producerar totalt 6 enheter och bransch B producerar totalt 7 enheter. Detta visar hur mycket bransch A och B måste producera totalt för insatsvaror och slutkonsumtion. Vi kallar den inverterade matrisen för <span class="math inline">\(B = (I - A) - 1\)</span>. Matris <em>B</em> har samma dimensioner som matris <em>A</em>.</p>
+<span class="math inline">\(Y = AY + C\)</span> (6)$ $<span class="math inline">\({Y - AY = C }{IY - AY = C }{(I - A)Y = C }{Y = (I - A)^{- 1}C}\)</span>
+Identitetsmatris <em>I</em> har samma dimensioner som <em>A</em>. Kolumnmatris <em>Y</em> beskriver hur mycket produktion som krävs från respektive bransch till företagen i samma och andra branscher samt till slutkonsumtion:</p>
+<p><span class="math display">\[Y = (I - A)^{- 1}C = \begin{bmatrix} \frac{8}{5} &amp; \frac{2}{5} \\ \frac{7}{15} &amp; \frac{28}{15} \end{bmatrix}\begin{bmatrix} 3 \\ 3 \end{bmatrix} \approx \begin{bmatrix} 6 \\ 7 \end{bmatrix} \tag{7}\]</span></p>
+<p>Detta resultat är konsistent med tabell 1, där vi ser att bransch A producerar totalt 6 enheter och bransch B producerar totalt 7 enheter. Detta visar hur mycket bransch A och B måste producera totalt för insatsvaror och slutkonsumtion. Vi kallar den inverterade matrisen för <span class="math inline">\(B = (I - A) - 1\)</span>. Matris <em>B</em> har samma dimensioner som matris <em>A</em>.</p>
 </div>
 <div id="produktions--och-insatsmultiplikatorerna" class="section level4" number="20.0.2.3">
 <h4>
 <span class="header-section-number">20.0.2.3</span> Produktions- och insatsmultiplikatorerna<a class="anchor" aria-label="anchor" href="#produktions--och-insatsmultiplikatorerna"><i class="fas fa-link"></i></a>
 </h4>
 <p>Låt oss beräkna <em>B</em> med värdena från tabell 1:
-<span class="math inline">\(B = (I - A)^{- 1}\)</span> (8)$ $</p>
-<p><span class="math display">\[{= \left( \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} - \begin{bmatrix} \frac{2}{6} &amp; \frac{1}{7} \\ \frac{1}{6} &amp; \frac{3}{7} \end{bmatrix} \right)^{- 1} }{= \begin{bmatrix} \frac{4}{6} &amp; - \frac{1}{7} \\ - \frac{1}{6} &amp; \frac{4}{7} \end{bmatrix}^{- 1} }{= \begin{bmatrix} \frac{8}{5} &amp; \frac{2}{5} \\ \frac{7}{15} &amp; \frac{28}{15} \end{bmatrix}\ }\]</span></p>
-<p>Om vi nu i matris <span class="math inline">\(B\)</span> beräknar summan av en kolumn för en bransch <span class="math inline">\(j\)</span> får vi den totala mängden produktion för alla branscher som skulle krävas om slutkonsumtionen för bransch <span class="math inline">\(j\)</span> skulle öka med en enhet. Detta visar hur mycket andra branscher måste leverera i insatsvaror till branschen <span class="math inline">\(j\)</span>. Detta mått kallas i det här sammanhanget för <em>produktionsmultiplikator</em>.
+<span class="math inline">\(B = (I - A)^{- 1}\)</span> (8)$ $<span class="math inline">\({= \left( \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} - \begin{bmatrix} \frac{2}{6} &amp; \frac{1}{7} \\ \frac{1}{6} &amp; \frac{3}{7} \end{bmatrix} \right)^{- 1} }{= \begin{bmatrix} \frac{4}{6} &amp; - \frac{1}{7} \\ - \frac{1}{6} &amp; \frac{4}{7} \end{bmatrix}^{- 1} }{= \begin{bmatrix} \frac{8}{5} &amp; \frac{2}{5} \\ \frac{7}{15} &amp; \frac{28}{15} \end{bmatrix}\ }\)</span>
+Om vi nu i matris <span class="math inline">\(B\)</span> beräknar summan av en kolumn för en bransch <span class="math inline">\(j\)</span> får vi den totala mängden produktion för alla branscher som skulle krävas om slutkonsumtionen för bransch <span class="math inline">\(j\)</span> skulle öka med en enhet. Detta visar hur mycket andra branscher måste leverera i insatsvaror till branschen <span class="math inline">\(j\)</span>. Detta mått kallas i det här sammanhanget för <em>produktionsmultiplikator</em>.
 Om vi för matris <span class="math inline">\(B\)</span> beräknar summan av en rad för en bransch <span class="math inline">\(j\)</span> i matris <span class="math inline">\(B\)</span> får vi ett mått på hur mycket extra produktion totalt i samhället som möjliggörs om branschen <span class="math inline">\(j\)</span> ökar sin produktion av insatsvaror med en enhet. Detta kallas för <em>insatsmultiplikator</em>.</p>
 </div>
 <div id="illustrera-nätverk-i-diagram" class="section level4" number="20.0.2.4">
@@ -226,7 +223,7 @@ Om vi för matris <span class="math inline">\(B\)</span> beräknar summan av en 
 <p>Figur 1 visar ett exempel på hur detta kan illustreras i ett <em>nätverksdiagram</em>. Punkterna beskriver de två branscherna A och B och pilarna beskriver flödena till och från de två branscherna. Värdena vid respektive pil representerar värdena i tabell 1.
 Punkternas storlek representerar respektive branschs totala produktion, kolumnen längst till höger i tabellen. I diagrammet har vi inte tagit med någon illustration över den produktion som branscherna skickar till slutkonsumtion.</p>
 <p><strong>Figur 1. Ett nätverk med de två branscherna A och B.</strong></p>
-<div class="inline-figure"><img src="img/k1-4-5-image1.png" style="width:5in;height:3in"></div>
+<div class="inline-figure"><img src="img/k1-4-5-image1.png"></div>
 <div class="fig-caption">
 <p>Förklaring: In- och utflöden från och till de två branscherna A och B. Flödena beskrivs i tabell 1.</p>
 </div>

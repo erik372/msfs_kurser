@@ -6,27 +6,44 @@
 ### Teori
 Tårta är gott men vi blir illamående om vi äter för mycket. Låt oss beskriva detta med matematik. Vi tänker att tårta gör oss lyckliga och kallar variabeln lycka för y.
 Låt oss säga att vi mäter lycka på en skala från 1 till 5, där 5 är mesta möjliga tänkbara lycka. Lycka, y, är i sin tur en funktion *f* av hur många tårtor vi äter. Vi betecknar antal uppätna tårtor som variabeln x. För varje tårta vi sätter i oss ökar vår lycka med 3 enheter, vilket vi kan beskriva med funktionen:
-$Lycka = y = f(x) = 3x$ (1)
+
+
+$$Lycka = y = f(x) = 3x \tag{1}$$
+
 Variabeln *x* är kontinuerlig och för varje tugga tårta vi äter blir vi lyckligare. Men vi blir även mättare och till slut börjar vi bli less på tårta. Denna negativa effekt på lyckan kan vi sätta in i vår funktion genom att lägga till termen $- x^{2}$. Termen är negativ eftersom den beskriver hur vår lycka minskar för varje tugga tårta.
 Termen $- x^{2}$ är kvadratisk, upphöjd till 2. Detta innebär att för låga värden, till exempel 0,5 kommer den negativa effekten att vara relativt liten. Till exempel: $- (0,5)^{2} = - 0,25$ eller $- (0,1)^{2} = \mp 0,01$. Men för högre värden av *x* kommer i stället den negativa effekten bli allt större, som till exempel $- (2)^{2} = - 4$ eller $- (5)^{2} = - 25$. Hela funktionen blir nu:
-$y = f(x) = 3x - x^{2}$ (2)
+
+
+$$y = f(x) = 3x - x^{2} \tag{2}$$
 
 ### Tårta som maximeringsproblem
 Det här kan vi beskriva som ett maximeringsproblem där vi väljer mängd tårta att äta, *x*, för att maximera vår lycka, *y*:
-$\max_{m.h.t.\ \ x}{f(x) = 3x - x^{2}}$ (3)
+
+
+$$\max_{m.h.t.\ \ x}{f(x) = 3x - x^{2}} \tag{3}$$
+
 För att beräkna vilken mängd tårta som leder till största möjliga lycka beräknar vi första- och andraderivatan av funktion *f* med hänsyn till *x*:
-$f_{x}\' = 3 - 2x$ (4)
+
+
+$$f_{x}\' = 3 - 2x \tag{4}$$
+
 $f_{xx}^{\'\'} = - 2$
 För att hitta den lyckomaximerande mängden tårta sätter vi förstaderivatan $f_{x}\'$ lika med 0 och löser för *x*:
-$x^{*} = \frac{3}{2} = 1,5$ (5)
+
+
+$$x^{*} = \frac{3}{2} = 1,5 \tag{5}$$
+
 Andraderivatan $f_{xx}^{\'\'}$ i ekvation 4 är negativ. Detta indikerar att $x = 1,5$ är en maximipunkt. Den mängd tårta som leder till mesta möjliga lycka är en och halv tårta. För att beräkna mängden lycka vid $x^{*} = 1,5$ tar vi:
-$f\left( x^{*} = 1,5 \right) = 3*1,5 - (1,5)^{2} = 4,5 - 2,25 = 2,25$ (6)
+
+
+$$f\left( x^{*} = 1,5 \right) = 3*1,5 - (1,5)^{2} = 4,5 - 2,25 = 2,25 \tag{6}$$
+
 En och en halv tårta ger 2,25 i lycka, där lycka mäts på en skala från 1 till 5. Exakt hur stor lycka som uppnås genom tårtätande är dock i detta exempel inte centralt.
 Figur 1 illustrerar detta exempel och dess lösning. Till vänster och höger om $x = 1,5$ kan vi se att lyckan är mindre än 2,25. Vid noll mängd tårta (0 på horisontella axeln) är lyckan lika med noll. På samma sätt är lyckan lika noll när mängden tårta är 3, vilket i det här hypotetiska exemplet innebär att vi då ätit så mycket tårta att vi inte längre njuter av det alls.
 
 **Figur 1. Den optimala mängden tårta.**
 
-![](img/k1-4-1-image1.png){style="width:4in;height:3in"}
+![](img/k1-4-1-image1.png)
 
 ### Marginaleffekten
 Ett annat sätt att beskriva detta fenomen är med hjälp av begreppet *marginaleffekt*. Generellt syftar begreppet marginaleffekt på hur ett resultat förändras vid små förändringar i en variabel. I detta fall hur mycket den totala mängden lycka ändras vid små förändringar av mängden tårta.

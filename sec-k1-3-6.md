@@ -11,12 +11,18 @@ Säg nu att Kim (från [avsnitt 3.2](https://www.dropbox.com/scl/fi/chd3jmpg1wg7
 $\left\{ \begin{array}{r} K = P^{2} + 0,1 \\ P = K^{2} + 0,1 \end{array} \right.\ $ , där $K,P \in \lbrack 0,1\rbrack$ (1)
 där *K* och *P* symboliserar Kim och Kims partner och 0,1 är en konstant som symboliserar hur mycket arbete de är beredda att lägga ned oavsett hur mycket den andra anstränger sig. Både $K$ och $P$ måste vara inom intervallet \[0,1\].
 Från den nedre ekvationen löser vi ett uttryck för $K = (P - 0,1)^{\frac{1}{2}}\ $. Nu har vi två definitioner av *K* som vi kan sätta lika med varandra:
-$(P - 0,1)^{\frac{1}{2}} = P^{2} + 0,1$ (2)
+
+
+$$(P - 0,1)^{\frac{1}{2}} = P^{2} + 0,1 \tag{2}$$
+
 $P - 0,1 = \left( P^{2} + 0,1 \right)^{2}$
 $P - 0,1 = P^{4} + 2*0,1*P^{2} + (0,1)^{2}$
 När vi kvadrerar båda sidor av en ekvation kan vi få falska rötter. Därför måste alla lösningar verifieras genom att sättas tillbaka i originalekvationen.
 Vi har nu fått följande fjärdegradspolynom:
-$P^{4} + 0,2P^{2} - P + 0,11 = 0$ (3)
+
+
+$$P^{4} + 0,2P^{2} - P + 0,11 = 0 \tag{3}$$
+
 Härifrån kan vi fortsätta med att pröva rationella rötter eller olika värden för *P* och se om vi kan hitta en första rot. Därefter kan vi arbeta vidare med polynomdivision. Vi prövar $P = 0$, $P = \frac{1}{2}$ samt $P = 1$:
 För $P = 0:$ $0 + 0 - 0 + 0,11 = 0,11 \neq 0$
 För $P = \frac{1}{2}:$ $\left( \frac{1}{2} \right)^{4} + 0,2\left( \frac{1}{2} \right)^{2} - \frac{1}{2} + 0,11 = - 0,2775 \neq 0$
@@ -33,11 +39,11 @@ För P ≈ 0,89: K = (0,89)² + 0,1 = 0,7921 + 0,1 = 0,8921 ≈ 0,89
 
 **Figur 1. Linjen för fjärdegradspolynomet i ekvation 3**
 
-![](img/k1-3-6-image1.png){style="width:4in;height:3in"}
+![](img/k1-3-6-image1.png)
 
 **Figur 2. De två jämvikterna i Kims relation.**
 
-![](img/k1-3-6-image2.png){style="width:4in;height:3in"}
+![](img/k1-3-6-image2.png)
 
 
 

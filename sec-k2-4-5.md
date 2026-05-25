@@ -10,7 +10,9 @@ I dessa exempel ser du att matrismetoden ger exakt samma svar som de tidigare me
 #### Exempel nr 1
 I föregående avsnitt definierade vi minstakvadratmetodens estimator för koefficienterna i en regressionsmodell beskriven med matriser. Låt oss prova hur vi kan använda detta för att estimera modeller utifrån data. Här följer tre exempel där vi återanvänder data och regressionsmodeller från tidigare exempel.
 Låt oss nu återanvända den första regressionsmodellen och observationerna för denna som vi introducerade i [avsnitt 2.4](https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&dl=0): $Y = a + bX + V$. Men denna gång ska vi estimera modellen med matriser. Samma observationer som vi använt tidigare upprepas i tabell 1.
+
 **Tabell 1: Variablerna** $X$ **och** $Y$
+
   --------------------------------------------------------------------------------------------
   Observation $i$   $Y$   $X$
   -------------------------------------- -------------------------- --------------------------
@@ -20,45 +22,45 @@ Låt oss nu återanvända den första regressionsmodellen och observationerna f�
   4                                      7                          4
   --------------------------------------------------------------------------------------------
 Vi börjar med att beskriva regressionsmodellen med matriser:
-$Y = XB + V$ (1)
+
+
+$$Y = XB + V \tag{1}$$
+
 
 
 $$\begin{bmatrix} 3 \\ 4 \\ 6 \\ 7 \end{bmatrix} = \begin{bmatrix} 1 & 3 \\ 1 & 2 \\ 1 & 5 \\ 1 & 4 \end{bmatrix}\begin{bmatrix} a \\ b \end{bmatrix} + \begin{bmatrix} v_{1} \\ v_{2} \\ v_{3} \\ v_{4} \end{bmatrix}$$
 
 Vår estimator för koefficienterna skriven med matriser är följande:
-$\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y$ (2)
+
+
+$$\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y \tag{2}$$
+
 Vi ska nu visa alla beräkningssteg här för att du ska förstå vad som händer. I praktiken gör datorer detta automatiskt. Fokusera på att förstå strukturen. Du måste inte förstå varje enskilt räknesteg.
 Om vi dessa matriserna i ekvation 2 får vi estimaten av (de uppskattade) koefficienterna:
-$\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y$ (3)
+
+
+$$\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y \tag{3}$$
+
 
 
 $$\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 & 1 & 1 & 1 \\ 3 & 4 & 6 & 7 \end{bmatrix}\begin{bmatrix} 1 & 3 \\ 1 & 4 \\ 1 & 6 \\ 1 & 7 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 & 1 & 1 & 1 \\ 3 & 4 & 6 & 7 \end{bmatrix}\begin{bmatrix} 3 \\ 2 \\ 5 \\ 4 \end{bmatrix}$$
 
 Vi beräknar inversen $\left( X^{T}X \right)^{- 1}$ först:
-$\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbrack = \begin{bmatrix} 4 & 20 \\ 20 & 110 \end{bmatrix}^{- 1}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack$ (4)$ $
-
-$${= \frac{1}{4*110 - ( - 20)*( - 20)}\begin{bmatrix} 110 & - 20 \\ - 20 & 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left( \frac{1}{440 - 400} \right)\begin{bmatrix} 110 & - 20 \\ - 20 & 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{110}{40} & \frac{- 20}{40}\ \\ \frac{- 20}{40} & \frac{4}{40} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{11}{4} & - \frac{1}{2} \\ - \frac{1}{2} & \frac{1}{10} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left\lbrack \begin{array}{r} 1 \\ 0,5 \end{array} \right\rbrack }$$
-
+$\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbrack = \begin{bmatrix} 4 & 20 \\ 20 & 110 \end{bmatrix}^{- 1}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack$ (4)$ $${= \frac{1}{4*110 - ( - 20)*( - 20)}\begin{bmatrix} 110 & - 20 \\ - 20 & 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left( \frac{1}{440 - 400} \right)\begin{bmatrix} 110 & - 20 \\ - 20 & 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{110}{40} & \frac{- 20}{40}\ \\ \frac{- 20}{40} & \frac{4}{40} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{11}{4} & - \frac{1}{2} \\ - \frac{1}{2} & \frac{1}{10} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left\lbrack \begin{array}{r} 1 \\ 0,5 \end{array} \right\rbrack }$
 Vårt resultat visar att $\widehat{a} = 1$ och $\widehat{b} = 0,5$, vilket är samma sak som vi kom fram till tidigare.
 
 #### Exempel nr 2
 Låt oss även göra samma sak för regressionsmodellen från [avsnitt 4.1](https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&dl=0): $Y = a + bX + cZ + V$, vilket vi kan skriva med matriser som:
-$Y = XB + V$ (5)
+
+
+$$Y = XB + V \tag{5}$$
+
 där matris $X$ innehåller variablerna $X$ och $Z$ och matris $B$ innehåller koefficienterna $a$, $b$ och $c$. $V$ är feltermerna och $Y$ förklarande variabeln. Observationerna vi ska använda upprepas i tabell 2.
+
 **Tabell 2: Variablerna** $Y$, $X$ **och** $Z$
+
   --------------------------------------------------------------------------------------------------------------------------------
-  Observation $i$   
-
-$$Y$$
-
-   
-
-$$X$$
-
-   
-
-$$Z$$
-
+  Observation $i$   $Y$   $X$   $Z$
   -------------------------------------- ----------------------------- ----------------------------- -----------------------------
   1                                      3                             3                             1
   2                                      2                             4                             4
@@ -66,7 +68,10 @@ $$Z$$
   4                                      4                             7                             1
   --------------------------------------------------------------------------------------------------------------------------------
 För att estimera koefficienterna kan vi nu ta:
-$\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y$ (6)
+
+
+$$\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y \tag{6}$$
+
 
 
 $$\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \\ \widehat{c} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 & 1 & 1 & 1 \\ 3 & 4 & 6 & 7 \\ 1 & 4 & 0 & 1 \end{bmatrix}\begin{bmatrix} 1 & 3 & 1 \\ 1 & 4 & 4 \\ 1 & 6 & 0 \\ 1 & 7 & 1 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 & 1 & 1 & 1 \\ 3 & 4 & 6 & 7 \\ 1 & 4 & 0 & 1 \end{bmatrix}\left\lbrack \begin{array}{r} 3 \\ 2 \\ 5 \\ 4 \end{array} \right\rbrack$$
@@ -83,7 +88,9 @@ Sista raden innehåller de avrundade resultaten $\widehat{a} \approx 2,9$, $\wid
 
 #### Exempel nr 3
 I [avsnitt 3.2](https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&dl=0) använde vi fyra observationer för variablerna $Z$ och $K$ vilka upprepas i tabell 3. Med dessa observationer estimerade vi regressionsmodellen $Z = \alpha + \beta K + \epsilon$, där $\epsilon$ är feltermen och $\alpha$ och $\beta$ är modellens koefficienter, som vi fann var $\widehat{\alpha} = 2,5$ och $\widehat{\beta} = - 0,5$.
+
 **Tabell 3: Variablerna** $Z$ **och** $K$
+
   ---------------------------------------------------------------------
   Observation i   $Z$   $K$
   --------------- -------------------------- --------------------------
@@ -93,9 +100,15 @@ I [avsnitt 3.2](https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-mode
   4               1                          4
   ---------------------------------------------------------------------
 Med matriser kan vi skriva denna regressionsmodell som $Z = KB + E$, där $Z$ är den förklarade variabeln, $B$ är en matris med koefficienterna $\alpha$ och $\beta$, $K$ är en kolumnmatris med förklarande variabeln och $E$ är feltermerna. Estimatorn kan här skrivas:
-$\widehat{B} = \left( K^{T}K \right)^{- 1}K^{T}Z$ (7)
+
+
+$$\widehat{B} = \left( K^{T}K \right)^{- 1}K^{T}Z \tag{7}$$
+
 Detta ger oss följande estimat:
-$\left\lbrack \begin{array}{r} \widehat{\alpha} \\ \widehat{\beta} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 & 1 & 1 & 1 \\ 0 & 0 & 4 & 4 \end{bmatrix}\begin{bmatrix} 1 & 0 \\ 1 & 0 \\ 1 & 4 \\ 1 & 4 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 & 1 & 1 & 1 \\ 0 & 0 & 4 & 4 \end{bmatrix}\left\lbrack \begin{array}{r} 1 \\ 4 \\ 0 \\ 1 \end{array} \right\rbrack = \left\lbrack \begin{array}{r} 2,5 \\ - 0,5 \end{array} \right\rbrack$ (8)
+
+
+$$\left\lbrack \begin{array}{r} \widehat{\alpha} \\ \widehat{\beta} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 & 1 & 1 & 1 \\ 0 & 0 & 4 & 4 \end{bmatrix}\begin{bmatrix} 1 & 0 \\ 1 & 0 \\ 1 & 4 \\ 1 & 4 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 & 1 & 1 & 1 \\ 0 & 0 & 4 & 4 \end{bmatrix}\left\lbrack \begin{array}{r} 1 \\ 4 \\ 0 \\ 1 \end{array} \right\rbrack = \left\lbrack \begin{array}{r} 2,5 \\ - 0,5 \end{array} \right\rbrack \tag{8}$$
+
 vilket är samma som vi kom fram till i [avsnitt 3.2](https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&dl=0).
 
 

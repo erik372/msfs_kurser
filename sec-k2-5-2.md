@@ -24,9 +24,9 @@ Det vänstra diagrammet illustrerar täthetsfunktionen $f$ och det högra diagra
 
 $$F(x = 0,5) = P(X \leq 0,5) = 0,5$$
 
-**Figur 1: Täthetsfunktionen och kumulativa fördelningsfunktionen för en likformig kontinuerlig sannolikhetsfördelning**\
+**Figur 1: Täthetsfunktionen och kumulativa fördelningsfunktionen för en likformig kontinuerlig sannolikhetsfördelning**
 
-![](img/k2-5-2-image1.png){style="width:5.38889in;height:2.92963in"}
+![](img/k2-5-2-image1.png)
 
 
 ::: {.fig-caption}
@@ -37,18 +37,33 @@ Förklaring: Vänstra diagrammet beskriver sannolikheten för varje utfall mella
 #### Väntevärde för kontinuerliga variabler
 I föregående avsnitt introducerade vi väntevärde för diskreta slumpmässiga variabler som summan av utfall multiplicerat med deras sannolikhet, $E(X) = \sum_{}^{}{xP(x)}$. Väntevärdet för en kontinuerlig slumpmässig variabel är på liknande sätt summan av utfall multiplicerat med sannolikheterna.
 Säg att vi har en slumpmässig likformig kontinuerlig variabel $X$, vars lägsta respektive högsta värden är $a$ och $b$. Eftersom vi nu ska summera ett kontinuerligt intervall kan vi använda [integraler](https://www.matteboken.se/lektioner/matte-3/integraler?gad_source=1&gclid=CjwKCAiAwaG9BhAREiwAdhv6Y2KYZCxYMa4BwTrcLl7ZKGEB3v3OAesqY9bL4uQRR9bVbVEpx1Ls0BoCJyQQAvD_BwE#!/):
-$E(X) = \int_{a}^{b}{xf(x)dx}$ (1)
+
+
+$$E(X) = \int_{a}^{b}{xf(x)dx} \tag{1}$$
+
 vilket ska läsas som att vi över intervallet $a$ till $b$ summerar alla möjliga utfall $x$ multiplicerat med sannolikheten för respektive värde $f(x)$.
 
 #### Varians för kontinuerliga sannolikhetsfördelningar
 Varians för en kontinuerlig slumpmässig variabel $X$ kan beskrivas:
-$var(X) = E\left( \left( X - \mu_{X} \right)^{2} \right) = \sigma_{X}^{2}$ (2)
+
+
+$$var(X) = E\left( \left( X - \mu_{X} \right)^{2} \right) = \sigma_{X}^{2} \tag{2}$$
+
 Om vi skriver ut definitionen av väntevärdet från ekvation 1 får vi:
-$E\left( \left( X - \mu_{X} \right)^{2} \right) = \int_{- \infty}^{\infty}\left( X - \mu_{X} \right)^{2}f(x)dx$ (3)
+
+
+$$E\left( \left( X - \mu_{X} \right)^{2} \right) = \int_{- \infty}^{\infty}\left( X - \mu_{X} \right)^{2}f(x)dx \tag{3}$$
+
 Standardavvikelsen är, liksom för diskreta variabler, kvadratroten av variansen:
-$\sigma_{X} = \sqrt{var(X)} = \sqrt{\sigma_{X}^{2}}$ (4)
+
+
+$$\sigma_{X} = \sqrt{var(X)} = \sqrt{\sigma_{X}^{2}} \tag{4}$$
+
 Betingat väntevärde för kontinuerliga slumpmässiga variabler $X$ och $Y$ skrivs:
-$E\left( Y \middle\| X \right) = \int_{- \infty}^{\infty}{\int_{- \infty}^{\infty}{xyf(x,y)dxdy}}$ (5)
+
+
+$$E\left( Y \middle\| X \right) = \int_{- \infty}^{\infty}{\int_{- \infty}^{\infty}{xyf(x,y)dxdy}} \tag{5}$$
+
 där $f(x,y)$ är den gemensamma sannolikhetsfördelningen. Lagen om totalt väntevärde gäller även för kontinuerliga fördelningar, $E\left( E\left( X \middle\| Y \right) \right) = E(X)$, liksom regeln att $E\left( XY \middle\| X \right) = XE\left( Y \middle\| X \right)$.
 
 #### Normalfördelningen
@@ -61,9 +76,10 @@ Standardiserade normalfördelningar används ofta och kallas därför ibland fö
 I det övre diagrammet är några av standardavvikelserna under och över medelvärdet 0 markerade. Kumulativa fördelningsfunktionen $F(Z \leq z)$ beskriver liksom tidigare hur stor andel av alla värden i variabel $Z$ som är mindre eller lika med utfall $z$ (ett enskilt värde i $Z$).
 Eftersom standardnormalfördelningen även kallas $Z$-fördelningen beskrivs denna typ av sannolikheter ofta som just $Z$-värden (engelska *z-score*).
 Standardiserade normalfördelningen är så välanvänd att det finns flera färdigberäknade sannolikheter från denna fördelning som ofta används i statistisk analys. Några av dessa visas i figur 2, där vi i det övre diagrammet bland annat kan se att 95 % av fördelningen täcks av avståndet från -1,96 standardavvikelser till +1,96 standardavvikelser från medelvärdet.
+
 **Figur 2: Standardiserade normalfördelningens täthetsfunktion** $\mathbf{f(z)}$ **och kumulativa fördelningsfunktion** $\mathbf{F(Z \leq z)}$**.**
 
-![](img/k2-5-2-image2.png){style="width:3.85417in;height:5.13889in"}
+![](img/k2-5-2-image2.png)
 
 
 ::: {.fig-caption}

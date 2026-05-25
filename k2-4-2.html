@@ -171,12 +171,12 @@ Oskarshamn</td>
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: Data från <a href="http://www.kolada.se">Kolada</a>. Inkomst anges i 1 000-tals kronor, medianvärden per kommun och grupp.
-Nu ska vi studera löneskillnaden mellan män och kvinnor genom att använda minstakvadratmetoden. Vi börjar med att formulera en regressionsmodell:
-<span class="math inline">\(W_{i} = a + bG_{i} + e_{i}\)</span> (1)
-där <span class="math inline">\(W_{i}\)</span> är medellön i kommun <span class="math inline">\(i\)</span> och <span class="math inline">\(G_{i}\)</span> är kön som har värdet 0 för män och 1 för kvinnor.
-Vi kan estimera regressionsmodellen på samma sätt som tidigare, där koefficienterna ges av minstakvadratmetoden. Tabell 2 ger oss första delen av beräkningen:
-<span class="math inline">\(\widehat{b} = \frac{\sum_{}^{}{\left( G_{i} - \overline{G} \right)\left( W_{i} - \overline{W} \right)}}{\sum_{}^{}\left( G_{i} - \overline{G} \right)^{2}} = \frac{- 123,5}{1,5} = - 82,3\)</span> (2)</p>
+Nu ska vi studera löneskillnaden mellan män och kvinnor genom att använda minstakvadratmetoden. Vi börjar med att formulera en regressionsmodell:</p>
 </div>
+<p><span class="math display">\[W_{i} = a + bG_{i} + e_{i} \tag{1}\]</span></p>
+<p>där <span class="math inline">\(W_{i}\)</span> är medellön i kommun <span class="math inline">\(i\)</span> och <span class="math inline">\(G_{i}\)</span> är kön som har värdet 0 för män och 1 för kvinnor.
+Vi kan estimera regressionsmodellen på samma sätt som tidigare, där koefficienterna ges av minstakvadratmetoden. Tabell 2 ger oss första delen av beräkningen:</p>
+<p><span class="math display">\[\widehat{b} = \frac{\sum_{}^{}{\left( G_{i} - \overline{G} \right)\left( W_{i} - \overline{W} \right)}}{\sum_{}^{}\left( G_{i} - \overline{G} \right)^{2}} = \frac{- 123,5}{1,5} = - 82,3 \tag{2}\]</span></p>
 <p><span class="math display">\[\widehat{a} = \overline{w} - \widehat{b\overline{k}} = 289,2 - ( - 82,3)0,5 = 330,3\]</span></p>
 <p>Koefficienten <span class="math inline">\(\widehat{b}\)</span> är negativ, vilket innebär att kön <span class="math inline">\((G)\)</span> har en negativ samvariation med lön <span class="math inline">\((W)\)</span>. Vi valde att definiera vår dummyvariabel <span class="math inline">\(G = 1\)</span> för kvinnor. Variabel W är associerat med ett 82,3 enheter lägre värde för kvinnor jämfört med män. Kvinnor har i genomsnitt 82 300 kr lägre inkomst än män i dessa tre kommuner.
 Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från män <span class="math inline">\((G = 0)\)</span> till kvinnor <span class="math inline">\((G = 1)\)</span> längs den horisontella axeln, går inkomsten nedåt längs den vertikala axeln. Därför är lutningen negativ. Detta betyder att kvinnor <span class="math inline">\((G = 1)\)</span> har lägre genomsnittsinkomst än män <span class="math inline">\((G = 0)\)</span> i dessa tre kommuner.</p>
@@ -192,9 +192,11 @@ Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från m�
 </colgroup>
 <thead><tr class="header">
 <th align="left">Kommun</th>
-<th align="left">line{W_{i}}$$</th>
-<th></th>
-<th></th>
+<th align="right">
+<span class="math inline">\(W_{i}\)</span> <span class="math inline">\(G_{i}\)</span> $W_{i} - </th>
+<th>line{W_{i}}$ $G_{i} - \overline{G</th>
+<th align="left">_{i}}$ <span class="math inline">\(\left( G_{i} - \overline{G_{i}} \right)^{2}\)</span>
+</th>
 <th></th>
 <th></th>
 </tr></thead>
@@ -206,7 +208,7 @@ Oskarshamn
 Danderyd
 Mörbylånga
 Oskarshamn</td>
-<td align="left">435
+<td align="right">435
 277
 279
 314
@@ -218,7 +220,7 @@ Oskarshamn</td>
 1
 1
 1</td>
-<td>145,8
+<td align="left">145,8
 -12,2
 -10,2
 24,8
@@ -240,9 +242,9 @@ Oskarshamn</td>
 <tr class="even">
 <td align="left">Medelvärde
 Summa</td>
-<td align="left">289,2</td>
+<td align="right">289,2</td>
 <td>0,5</td>
-<td></td>
+<td align="left"></td>
 <td></td>
 <td>1,5</td>
 </tr>
@@ -252,7 +254,7 @@ Summa</td>
 <p>Förklaring: Samma data som i tabell 1 och några beräkningar.</p>
 </div>
 <p><strong>Figur 1: Samvariationen mellan inkomst och kön</strong></p>
-<div class="inline-figure"><img src="img/k2-4-2-image1.png" style="width:3.01282in;height:3.01282in"></div>
+<div class="inline-figure"><img src="img/k2-4-2-image1.png"></div>
 <div class="fig-caption">
 <p>Förklaring: Regressionslinjen lutar nedåt vilket indikerar en negativ samvariation. I variabeln G har kvinnor värdet 1 och män värdet 0. Eftersom kvinnor har lägre inkomst i genomsnitt än män, uppstår en negativ samvariation.</p>
 </div>
@@ -262,9 +264,9 @@ Summa</td>
 <span class="header-section-number">36.0.2.3</span> Faktorvariabler med flera värden<a class="anchor" aria-label="anchor" href="#faktorvariabler-med-flera-v%C3%A4rden"><i class="fas fa-link"></i></a>
 </h4>
 <p>Ovan hade vi en dummyvariabel för två värden: män och kvinnor. Dummyvariabler kan även vara användbara för att kategorisera faktorvariabler med flera värdena än två. Låt oss återigen räkna på inkomstskillnader mellan de tre kommunerna i föregående exempel, men i stället för skillnad mellan kvinnor och män ska vi nu beräkna skillnaden i genomsnittlig inkomst mellan kommunerna.
-Tabell 3 redovisar variablerna, där <span class="math inline">\(Y_{i}\)</span> nu anger medelinkomst för alla invånare per kommun. Variablerna <span class="math inline">\(K_{\text{Mörbylånga}}\)</span> och <span class="math inline">\(K_{\text{Oskarshamn}}\)</span> är två dummyvariabler för kommunerna i följande regressionsmodell:
-<span class="math inline">\(Y_{i} = a + bK_{\text{Mörbylånga}} + cK_{\text{Oskarshamn}} + e_{i}\)</span> (3)
-där <span class="math inline">\(e\)</span> är feltermen. Våra dummyvariabler representerar kommunerna Mörbylånga och Oskarshamn, en dummyvariabel mindre än antal kommuner. När båda dummyvariablerna i modellen är lika med 0 får vi estimaten för den tredje kommunen, Danderyd.
+Tabell 3 redovisar variablerna, där <span class="math inline">\(Y_{i}\)</span> nu anger medelinkomst för alla invånare per kommun. Variablerna <span class="math inline">\(K_{\text{Mörbylånga}}\)</span> och <span class="math inline">\(K_{\text{Oskarshamn}}\)</span> är två dummyvariabler för kommunerna i följande regressionsmodell:</p>
+<p><span class="math display">\[Y_{i} = a + bK_{\text{Mörbylånga}} + cK_{\text{Oskarshamn}} + e_{i} \tag{3}\]</span></p>
+<p>där <span class="math inline">\(e\)</span> är feltermen. Våra dummyvariabler representerar kommunerna Mörbylånga och Oskarshamn, en dummyvariabel mindre än antal kommuner. När båda dummyvariablerna i modellen är lika med 0 får vi estimaten för den tredje kommunen, Danderyd.
 Om vi har 3 kommuner använder vi bara 2 dummyvariabler. Varför? Om både Mörbylånga-dummyn = 0 OCH Oskarshamn-dummyn = 0, vet vi automatiskt att det måste vara Danderyd. Den tredje kommunen blir "referenskategori", i detta fall den kommun vi jämför de andra kommunerna mot. Om vi hade använt 3 dummyvariabler skulle regressionen inte fungera (matematiskt kallas detta "perfekt multikolinjäritet"). Datorn kan inte skilja på vilken effekt som kommer från vilken dummy.</p>
 <p><strong>Tabell 3: Genomsnittlig inkomst 2019, 1 000-tals kr</strong></p>
 <div class="inline-table"><table style="width:99%;" class="table table-sm">
@@ -276,18 +278,20 @@ Om vi har 3 kommuner använder vi bara 2 dummyvariabler. Varför? Om både Mörb
 </colgroup>
 <thead><tr class="header">
 <th align="left">Kommun</th>
-<th align="left">ylånga}}$$</th>
-<th></th>
+<th align="right">
+<span class="math inline">\(Y_{i}\)</span> <span class="math inline">\(K_{\text{Mörbylånga}}\)</span>
+</th>
+<th align="center"><span class="math inline">\(K_{\text{Oskarshamn}}\)</span></th>
 <th></th>
 </tr></thead>
 <tbody><tr class="odd">
 <td align="left">Danderyd
 Mörbylånga
 Oskarshamn</td>
-<td align="left">364,9
+<td align="right">364,9
 243,6
 246</td>
-<td>0
+<td align="center">0
 1
 0</td>
 <td>0
@@ -297,9 +301,9 @@ Oskarshamn</td>
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: Data från <a href="http://www.kolada.se">Kolada</a>. Inkomst anges i 1 000-tals kronor, medianvärden per kommun.
-Vår regressionsmodell räknar ut samma sak som vi redan ser i datamaterialet. Syftet med denna övning är att förstå innebörden av dummyvariabler i en regressionsmodell. Vi estimerar regressionsmodellen i ekvation 3 utifrån minstakvadratmetoden:
-<span class="math inline">\(\widehat{Y} = \widehat{a} + \widehat{b}K_{\text{Mörbylånga}} + \widehat{c}K_{\text{Oskarshamn}} + e\)</span> (4)</p>
+Vår regressionsmodell räknar ut samma sak som vi redan ser i datamaterialet. Syftet med denna övning är att förstå innebörden av dummyvariabler i en regressionsmodell. Vi estimerar regressionsmodellen i ekvation 3 utifrån minstakvadratmetoden:</p>
 </div>
+<p><span class="math display">\[\widehat{Y} = \widehat{a} + \widehat{b}K_{\text{Mörbylånga}} + \widehat{c}K_{\text{Oskarshamn}} + e \tag{4}\]</span></p>
 <p><span class="math display">\[= 364,9 - 121,3K_{\text{Mörbylånga}} - 118,9K_{\text{Oskarshamn}} + e\]</span></p>
 <p>Detta innebär att den genomsnittliga inkomsten <span class="math inline">\((Y)\)</span> i Danderyd är lika med 364 900 kronor. Detta är vad regressionsresultaten visar då <span class="math inline">\(K_{\text{Mörbylånga}} = K_{\text{Oskarshamn}} = 0\)</span>, vilket stämmer med våra data.
 Vi får <span class="math inline">\(\widehat{b} = - 121,3\)</span>, vilket innebär att medelinkomsten i Mörbylånga är lika med <span class="math inline">\(364,9 - 121,3 = 243,6\)</span>, vilket stämmer. Koefficient <span class="math inline">\(\widehat{c} = - 118,9\)</span> innebär att medelinkomsten i Oskarshamn är lika med <span class="math inline">\(364,9 - 118,9 = 246\)</span>, vilket också stämmer.

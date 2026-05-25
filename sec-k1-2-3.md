@@ -90,7 +90,7 @@ Om linjen i det högra diagrammet hade varit helt rät hade de inneburit att den
 
 **Figur 1: Sveriges BNP år 1800---2000, i miljarder kronor och uttryckt i naturliga logaritmen.**
 
-![](img/k1-2-3-image1.png){style="width:5.78165in;height:3.17857in"}
+![](img/k1-2-3-image1.png)
 
 
 

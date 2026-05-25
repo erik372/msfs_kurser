@@ -21,7 +21,11 @@ Orsakssamband medför en *effekt*: skillnaden mellan det som hände på grund av
 Figur 1 illustrerar den grundläggande tanken bakom kontrafaktisk analys. Orsak A inträffar vid en tidpunkt och påverkar ett fenomen B. Fenomen B följer utvecklingen längs den heldragna linjen snett upp till höger i diagrammet.
 Men om A aldrig hade inträffat hade B i stället följt den streckade svarta linjen. Denna streckade linje representerar det kontrafaktiska utfallet. Skillnaden i nivå mellan den streckade linjen och den svarta heldragna linjen är effekten av orsaken A.
 Ett vanligt missförstånd är att i stället jämföra denna förändring som vi kan observera i fenomen B över tid, vilket i figur 1 är skillnaden mellan den horisontella grå linjen och den heldragna svarta linjen.
-**Figur 1. Kontrafaktisk analys**![](img/k2-1-1-image1.png){style="width:5in;height:3in"}
+
+**Figur 1. Kontrafaktisk analys**
+
+
+![](img/k2-1-1-image1.png)
 
 #### Kontroll och behandling
 Problemet är att vi per definition inte kan observera det kontrafaktiska utfallet, eftersom det skulle kräva att vi har tillgång till ett parallellt universum där den enda skillnaden mot vårt universum är att orsaken aldrig hände. För varje observation kan vi endast studera ett resultat åt gången.

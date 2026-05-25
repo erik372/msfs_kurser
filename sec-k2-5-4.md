@@ -26,19 +26,28 @@ där $s$ representerar estimerad standardavvikelse.
 Om vi väljer konfidensgrad $90\ \%$ vill vi exkludera $10\%$ av populationens värden: $5\%$ i fördelningens övre svans (över medelvärdet) och $5\%$ i fördelningens nedre svans (under medelvärdet). Detta ger oss $z \approx 1,64$5.
 Om vi vill estimera ett $95\ \%$ konfidensintervall har vi $z \approx 1,96$. För konfidensgrad $99\ \%$ har vi $z \approx 2,58$. Se figur 2 i [avsnitt 5.2](https://www.dropbox.com/scl/fi/wi8c30n2yna36a7zbiyoh/5-2-Kontinuerliga-sannolikhetsf-rdelningar.docx?rlkey=rmkxixrrun7q0rqeg82lk2kky&dl=0). Det z-värde vi ska använda sätter vi in i ekvation 2.
 Säg som exempel nu att vi har ett dataurval på $n = 28$ observationer och estimerar medelvärdet $\bar{x} = 13$ samt standardavvikelse $s_{x} = 3,7$. Vi väljer konfidensgrad $90\%$, varför $z = 1,645$. Detta ger följande gränser för konfidensintervallet:
-$\begin{matrix} & \bar{x} + z\frac{s_{x}}{n^{\frac{1}{2}}} = 13 + 1,645*\frac{3,7}{\sqrt{28}} \approx 14,15 \\ & \bar{x} - z\frac{s_{x}}{n^{\frac{1}{2}}} = 13 - 1,645*\frac{3,7}{\sqrt{28}} \approx 11,85 \end{matrix}$ (3)
+
+
+$$\begin{matrix} & \bar{x} + z\frac{s_{x}}{n^{\frac{1}{2}}} = 13 + 1,645*\frac{3,7}{\sqrt{28}} \approx 14,15 \\ & \bar{x} - z\frac{s_{x}}{n^{\frac{1}{2}}} = 13 - 1,645*\frac{3,7}{\sqrt{28}} \approx 11,85 \end{matrix} \tag{3}$$
+
 Vårt konfidensintervall är $11,85 \< \mu_{X} \< 14,15$. Detta är ett 90% konfidensintervall, vilket betyder att om vi upprepade denna procedur många gånger, skulle 90% av intervallen innehålla populationens medelvärde. Detta betyder inte att det finns 90% sannolikhet att $\mu_{X}$ ligger i vårt specifika intervall (en vanlig missuppfattning).
 
 #### Exempel med kvinnor och mäns medellivslängd
 I föregående [avsnitt 5.1](https://www.dropbox.com/scl/fi/12fiw2s4633qjt0d1s0zw/5-3-Statitsisk-analys-1.docx?rlkey=b4urprsp85hxcdp6jm3z9vaw7&dl=0) beräknade vi sannolikheten att två estimerade medelvärden kom från samma population, genom att räkna på differensen mellan genomsnittlig livslängd för män respektive kvinnor.
 Konfidensintervallet för differensen mellan de estimerade medelvärdena för dessa två populationer kan vi estimera med följande ekvation:
-$\left( {\bar{X}}_{1} - {\bar{X}}_{2} \right) \pm z*\sqrt{\frac{s_{X_{1}}^{2}}{n_{1}} + \frac{s_{X_{2}}^{2}}{n_{2}}}$ (4)
+
+
+$$\left( {\bar{X}}_{1} - {\bar{X}}_{2} \right) \pm z*\sqrt{\frac{s_{X_{1}}^{2}}{n_{1}} + \frac{s_{X_{2}}^{2}}{n_{2}}} \tag{4}$$
+
 där ${\overline{X}}_{1}$ och ${\bar{X}}_{2}$ är de två estimerade medelvärdena för män och kvinnor, $z$ är värdet från standardiserade normalfördelningens kumulativa fördelningsfunktion $F$, $s^{2}$ är estimerad varians (standardavvikelse i kvadrat) och $n$ är antal observationer i respektive urval. Vi får nu:
 ${\overline{X}}_{män} = 80,38$ ${\overline{X}}_{kvinnor} = 83,95$ (5)
 $s_{män}^{2} = 1,663$ $s_{kvinnor}^{2} = 1,032$
 $n_{män} = 290$ $n_{kvinnor} = 290$
 Vi väljer konfidensgrad $95\ \%$, vilket ger $z = 1,96$. Konfidensintervallets nedre och övre gräns blir:
-$\begin{matrix} \text{Konfidensintervallets nedre gräns:} & \ (80,38 - 83,95) + 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,76 \\ \text{Konfidensintervallets }\text{övre }\text{gräns:} & \ (80,38 - 83,95) - 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,38 \end{matrix}$ (6)
+
+
+$$\begin{matrix} \text{Konfidensintervallets nedre gräns:} & \ (80,38 - 83,95) + 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,76 \\ \text{Konfidensintervallets }\text{övre }\text{gräns:} & \ (80,38 - 83,95) - 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,38 \end{matrix} \tag{6}$$
+
 Estimatet indikerar att vid upprepade urval (stickprov) från samma population kommer differensen mellan de två populationerna i $95\ \%$ av fallen vara $3,38 \< \left( \mu_{\text{kvinnor}\ } - \mu_{\text{män}\ } \right) \< 3,76$. Detta indikerar alltså att kvinnor i genomsnitt lever mellan 3,38 och 3,76 år längre än män.
 Detta gäller endast om de upprepade urvalen verkligen kommer från samma population. Om vi till exempel upprepade gånger under en tioårsperiod mäter medellivslängden för män och kvinnor så kommer befolkningen (populationen) och deras livslängd också att förändras.
 
@@ -52,7 +61,10 @@ Vår teori är att medicinen kommer att minska patienternas sjukdomstillstånd. 
 När vi ska översätta detta till en nollhypotes och en alternativhypotes formulerar vi nollhypotesen som en ickerelation mellan orsak och verkan. Om medicinen inte har någon effekt på sjukdomen kommer behandlingsgruppen vara lika sjuk som kontrollgruppen:
 $H_{0}$: $\text{sjukdom}_{\text{behandling}} \geq \text{sjukdom}_{\text{kontroll}}$ (7)
 Alternativhypotesen $H_{1}$ blir i detta fall den alternativa situationen där sjukdomstillståndet är mindre i behandlingsgruppen än i kontrollgruppen (vilket enligt vår teori beror på medicinen):
-$H_{1}:\text{sjukdom}_{\text{behandling}} \< \text{sjukdom}_{\text{kontroll}}$ (8)
+
+
+$$H_{1}:\text{sjukdom}_{\text{behandling}} \< \text{sjukdom}_{\text{kontroll}} \tag{8}$$
+
 Vi är intresserade av ett orsakssamband, vilket vi studerar genom att observera samvariation mellan medicin och symptom. Orsakssambandet är en tolkning vi lägger till utifrån den samvariation vi kan observera. Hypoteserna formuleras inte rörande orsakssambandet utan för observerbara skillnader.
 Observera även att hypoteserna rör populationen vi är intresserade av -- inte urvalsdatan. I detta hypotetiska exempel kan vi tänka oss att populationen är alla patienter i hela världen med samma sjukdomssymptom.
 Säg att vi finner att behandlingsgruppen har 5 % mindre sjukdom. Nästa steg är att då estimera hur säkra vi kan vara på att denna skillnad är tillräcklig för att vi ska betrakta vår nollhypotes ($H_{0}$) som falsk.
@@ -60,7 +72,10 @@ Säg att vi finner att behandlingsgruppen har 5 % mindre sjukdom. Nästa steg ä
 #### Hypotestest i regressionsanalys
 Hypotestest användas ofta i samband med regressionsanalys. Säg att vi ska studera om variationer i ett fenomen $X$ orsakar en viss typ av variationer i fenomen $Y$, vilket vi gör med hjälp av regressionsmodellen $Y = a + bX + u$ där $Y$ och $X$ är variabler, $u$ är feltermen och $a$ och $b$ är koefficienterna som vi använder minstakvadratmetoden för att estimera.
 Vi har anledning att tro att $X$ och $Y$ samvarierar och att $b \neq 0$. Utifrån detta kan vi formulera en nollhypotes i form av en ickerelation mellan variablerna. En ickerelation mellan X och Y i vår regressionsmodell innebär att $b = 0$, varför vår nollhypotes och alternativhypotes blir:
-$H_{0}:b = 0$ (9)
+
+
+$$H_{0}:b = 0 \tag{9}$$
+
 $H_{1}:b \neq 0$
 Nollhypotesen och alternativhypotesen täcker därigenom alla möjliga alternativ: $b$ är antingen lika med 0 eller inte lika med 0.
 Vi är intresserade av att estimera samvariationen mellan $X$ och $Y$ och att estimera sannolikheten att den samvariation vi finner även kunde ha uppstått genom slump.
@@ -78,9 +93,15 @@ Sannolikheten att $H_{0}$ är sann brukar benämnas med det som kallas för $p$ 
 Medan signifikansnivå och konfidensnivå i regel uppges i avrundade tal, till exempel 95 %, beräknas p-värde exakt genom det statistiska testet.
 Statistiskt test med kvinnor och mäns livslängd
 Låt oss illustrera med ett exempel. Ovan estimerade vi sannolikheten att livslängden för män och kvinnor i Sveriges kommuner skiljer sig genom att beräkna följande z-värde:
-$z = \frac{{\bar{X}}_{\text{kvinnor}\ } - {\bar{X}}_{\text{män}\ }}{\left( \frac{s_{man}^{2}}{n_{\text{man}\ }} + \frac{s_{\text{kvinnor}\ }^{2}}{n_{\text{kvinnor}\ }} \right)^{\frac{1}{2}}} \approx \frac{83,95 - 80,38}{\left( \frac{1,663}{290} + \frac{1,032}{290} \right)^{\frac{1}{2}}} \approx 37,045$ (11)
+
+
+$$z = \frac{{\bar{X}}_{\text{kvinnor}\ } - {\bar{X}}_{\text{män}\ }}{\left( \frac{s_{man}^{2}}{n_{\text{man}\ }} + \frac{s_{\text{kvinnor}\ }^{2}}{n_{\text{kvinnor}\ }} \right)^{\frac{1}{2}}} \approx \frac{83,95 - 80,38}{\left( \frac{1,663}{290} + \frac{1,032}{290} \right)^{\frac{1}{2}}} \approx 37,045 \tag{11}$$
+
 Låt oss ställa upp detta som ett statistiskt test. Vi har en teori om att livslängd skiljer sig mellan män och kvinnor. Vi formulerar vår nollhypotes som att det inte finns någon skillnad:
-$\begin{matrix} & H_{0}:\mu_{\text{män}\ } = \mu_{\text{kvinnor}\ } \\ & H_{1}:\mu_{\text{män}\ } \neq \mu_{\text{kvinnor}\ } \end{matrix}$ (12)
+
+
+$$\begin{matrix} & H_{0}:\mu_{\text{män}\ } = \mu_{\text{kvinnor}\ } \\ & H_{1}:\mu_{\text{män}\ } \neq \mu_{\text{kvinnor}\ } \end{matrix} \tag{12}$$
+
 För att testa trovärdigheten i hypotesen bestämmer vi signifikansnivå $5\%$, det vill säga ($2,5\%$ från vardera sida av fördelningen, och beräknar $z$-värdet i ekvation 11, alltså $z = 37,045$. Detta beräknade $z$-värde jämför vi mot standardnormalfördelningen.
 Statistiska test kan vara ensidiga eller tvåsidiga. Nollhypotesen är i detta fall formulerad som att både positiv och negativ differens kan innebära att vi har skäl att förkasta $H_{0}$ som falsk. När vi jämför mot standardnormalfördelningen innebär det att både negativa som positiva avvikelser från medelvärdet kan ge oss skäl att förkasta $H_{0}$. Det vill säga, vårt beräknade z-värde skulle även kunna ha varit negativt.
 Om vårt beräknade z-värde är längre från standardnormalfördelningens medelvärde jämfört med 47,5 % av fördelningen så kallas detta för att resultat är *statistiskt signifikant*. Vi kan i så fall avfärda $H_{0}$ som falsk för 5 % signifikansnivå. För att veta exakt för vilket z-värde som 47,5 % av fördelningen är under brukar beräknade z-värden jämföras mot kritiska z-värden, vilket skrivs $z^{*}$.

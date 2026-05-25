@@ -71,31 +71,17 @@ Tabell 3 visar resultatet. Inkomsterna för decilgrupp 1 ökade med 57,6 % och f
 :::
 
 
-**Table 3: Indexerad inkomstutveckling per decilgrupp**
+**Tabell 3: Indexerad inkomstutveckling per decilgrupp**
 
   ------------------------------------------------------------------------------------------------------------------------------------
              **Decilgrupp 1**                                            **Decilgrupp 10**
   ---------- ----------------------------------------------------------- -------------------------------------------------------------
-    **1995** 
-
-$$\frac{63,2}{63,2}*100 = 100$$
-
-     
-
-$$\frac{311,9}{311,9}*100 = 100$$
-
+    **1995** $\frac{63,2}{63,2}*100 = 100$     $\frac{311,9}{311,9}*100 = 100$
     **2000** 117,7                                                       166,5
     **2005** 133,7                                                       164
     **2010** 131,8                                                       198,6
     **2015** 154,9                                                       256,1
-    **2019** 
-
-$$\frac{99,6}{63,2}*100 = 157,6$$
-
-   
-
-$$\frac{803,3}{311,9}*100 = 257,6$$
-
+    **2019** $\frac{99,6}{63,2}*100 = 157,6$   $\frac{803,3}{311,9}*100 = 257,6$
   ------------------------------------------------------------------------------------------------------------------------------------
 
 ::: {.fig-caption}
@@ -103,15 +89,13 @@ Förklaring: Inkomstindex för decilgrupp 1 och 10, baserat på data presenterad
 :::
 
 
-### 
-
 ### Prisindex och deflatering
 Ett *prisindex* visar den indexerade prisutvecklingen för en eller flera varor eller tjänster. Ett prisindex som ofta används är [Konsumentprisindex](https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-konsumtion/konsumentprisindex/konsumentprisindex-kpi/) (KPI) som Statistiska centralbyrån (SCB) beräknar. För att räkna ut KPI samlar SCB in information om pris och andra egenskaper på en stor mängd olika varor och tjänster. Därefter beräknar SCB ett medelvärde för en hypotetisk varukorg. Varukorgen är baserad på vad människor i Sverige spenderar pengar på.
 Om varorna och tjänsterna ändras, till exempel om en ny mobiltelefon lanseras med ny kvalitet, så justeras KPI-beräkningen för detta. Idealiskt sett mäter därför KPI endast rena prisförändringar. Diagram 1 visar utvecklingen av KPI mellan 1980---2024. Diagrammet visar hur konsumentprisindex under denna period ökade med från nivå 100 till lite mer än 400. En ökning med över 300 procent.
 
 **Diagram 1: Konsumentprisindex för Sverige 1980---2022**
 
-![](img/k1-2-2-image1.png){style="width:4.61905in;height:2.53941in"}
+![](img/k1-2-2-image1.png)
 
 
 ::: {.fig-caption}
@@ -134,7 +118,12 @@ Diagram 2 visar tre tidsserier: den genomsnittliga prisnivån, genomsnittliga no
 Sedan 2004 har lönerna ökat nominellt med lite mer än 60 procent, vilket vi kan se på den gröna linjen. Från indexvärde 100 till lite över 160. Priserna, den röda linjen har under samma period ökat med i genomsnitt cirka 35 procent, från 100 till 135. För att beräkna den reala lönenivån i 2022 års priser tar vi för varje år *t*:
 Reallön år *t* = nominell lön år *t* * ( prisnivån 2022 / prisnivån år *t*)
 Detta ger oss den blå linjen. Där kan vi se att reallönerna ökade lite mer än 20 procent under perioden. Med en nedgång 2022. Jämför vi längre tillbaka har både priser, löner och reallöner ökat mycket mer.
-**Diagram 2: Priser och löner i Sverige år 2004---2022** ![](img/k1-2-2-image2.png){style="width:6in;height:3.29861in"}
+
+**Diagram 2: Priser och löner i Sverige år 2004---2022** 
+
+
+![](img/k1-2-2-image2.png)
+
 
 ::: {.fig-caption}
 Förklaring: Data från [SCB](https://scb.se/). Priser = Konsumentprisindex (KPI). Nominell lön = genomsnittlig månadslön (SCB Lönestrukturstatistik). Reallön = nominell lön deflaterad med KPI. Under perioden ökade månadslönerna med i genomsnitt lite mer än 60 procent. Konsumentprisindex ökade med lite mer än 30 procent. Reallönerna ökade med i genomsnitt lite mer än 20 procent.

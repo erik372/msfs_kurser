@@ -19,7 +19,10 @@ I denna kurs har vi gått igenom hur vi kan estimera regressionsmodeller med min
 Linjära regressionsmodeller prövar om den genomsnittliga relationen mellan två eller flera variabler kan beskrivas med en linjär ekvation. Genom att estimera regressionsmodellen, utföra statistiska test och jämföra hur regressionslinjen blir jämfört med data, kan vi se om regressionsmodellen ger en godtagbar linjär approximation (en ungefärlig bild) av verkligheten (de data vi studerar).
 Det kan vara svårt att pröva om en regressionsmodell är en bra linjär approximation av data. Ett första steg kan vara att inspektera data i till exempel ett punktdiagram eller histogram, och jämföra olika spridningsmått. Vi kan både jämföra hur den förklarade variabeln samvarierar med våra förklarande variabler, och jämföra hur residualerna fördelar sig kring en regressionslinje.
 Att en regressionsmodell är linjär innebär att alla koefficienter i modellen har exponent 1. Följande modeller är inte linjära:
-$\begin{matrix} Y & \ = a + \frac{1}{b}X + e \\ logZ & \ = \alpha + \beta D + \epsilon \end{matrix}$ (1)
+
+
+$$\begin{matrix} Y & \ = a + \frac{1}{b}X + e \\ logZ & \ = \alpha + \beta D + \epsilon \end{matrix} \tag{1}$$
+
 I den första regressionsmodellen har vi $\frac{1}{b} = b^{- 1}$. I den andra modellen har vi att $log\left( Z_{1} + Z_{2} \right) \neq log\left( Z_{1} \right) + log\left( Z_{2} \right)$, där $Z_{1}$ och $Z_{2}$ är två valfria värden i variabel $Z$. Detta innebär att modellen inte är linjär.
 Linjära regressionsmodeller har många fördelar. Det är till exempel ofta relativt enkelt att tolka vad varje koefficient i modellen innebär. Det kan snabbt bli mer komplicerat om vi arbetar ickelinjär samvariation.
 Men det finns även nackdelar med linjära regressionsmodeller -- eftersom de enbart kan användas för att fånga just linjär samvariation. Risken finns då att vi missar samvariation som existerar i data men som inte är linjär.
@@ -28,9 +31,15 @@ Men det finns även nackdelar med linjära regressionsmodeller -- eftersom de en
 Även om modellen BLIR ickelinjär i originalskala, kan vi ofta estimera den med minstakvadratmetoden genom att transformera variablerna först.
 Ett sätt att illustrera detta är att jämföra BNP för Sverige var tionde år under perioden 1800--2000, se tabell 1 med årtal, BNP och logaritmerad BNP. I figur 1 illustreras den linjära trenden över tid för BNP respektive $ln(BNP)$ i varsitt diagram.
 I det vänstra diagrammet är trenden skattad utifrån följande regressionsmodell:
-$Y_{t} = a + b\text{Å}R_{t} + V_{t}$ (2)
+
+
+$$Y_{t} = a + b\text{Å}R_{t} + V_{t} \tag{2}$$
+
 där $Y_{t}$ är BNP år $t,\text{Å}R_{t}$ är en variabel för årtalen $1800,1810,\ldots,1990$, 2000. Bokstäverna $a$ och $b$ är koefficienterna och $V_{t}$ är feltermen. I det högra diagrammet har vi estimerat regressionsmodellen:
-$\ln Y_{t} = c + d\text{Å}R_{t} + U_{t}$ (3)
+
+
+$$\ln Y_{t} = c + d\text{Å}R_{t} + U_{t} \tag{3}$$
+
 där $lnY_{t}$ är logaritmerad BNP år $t,c$ och $d$ är koefficienterna och $U_{t}$ är feltermen.
 En linjär modell passar relativt dåligt när vi använder nominell BNP i kronor, vilket vi kan se i det vänstra diagrammet. Datapunkterna i diagrammet är placerade ungefär i formen av ett liggande $L$. Utvecklingen är exponentiell och inte linjär.
 Regressionslinjen fångar visserligen den positiva utvecklingen men ger inte en representativ bild av den långsiktiga trenden i BNP. Under åren 1800---1850, till vänster i diagrammet, är regressionslinjen under 0.
@@ -62,20 +71,29 @@ Förklaring: Data från [www.historia.se](http://www.historia.se).
 
 **Figur 1: BNP och logaritmerad BNP**
 
-![En bild som visar diagram, linje, Graf, skärmbild Automatiskt genererad beskrivning](img/k2-5-7-image1.png){style="width:4.89251in;height:2.7008in"}
+![En bild som visar diagram, linje, Graf, skärmbild Automatiskt genererad beskrivning](img/k2-5-7-image1.png)
 
 Förklaring. Data från [www.historia.se](http://www.historia.se), samma som i tabell 1.
 
 ### Varför fungerar logaritm för BNP?
 BNP växer exponentiellt: Varje år ökar BNP i genomsnitt med en viss procentsats, inte ett fast belopp i kronor. Exponentiell tillväxt kan beskrivas matematiskt med följande ekvation:
-$Y_{t} = Y_{0}*\ e^{rt}$ (4)
+
+
+$$Y_{t} = Y_{0}*\ e^{rt} \tag{4}$$
+
 där $Y_{t}$ är BNP valfritt år $t$. $Y_{0}$ är BNP år noll (startåret). Faktorn $e^{rt}$ är Eulers tal $e$. Exponenten $rt$ är tillväxttakten $r$ multiplicerad med antal år $t$. Tar vi naturliga logaritmen av detta uttryck får vi:
-$\ln\left( Y_{t} \right) = ln\left( Y_{0} \right) + rt$ (5)
+
+
+$$\ln\left( Y_{t} \right) = ln\left( Y_{0} \right) + rt \tag{5}$$
+
 När vi tar naturliga logaritmen av BNP blir den exponentiella tillväxten linjär, vilket gör att vår linjära regressionsmodell fungerar. Detta är vanligt för många ekonomiska variabler som växer kjust procentuellt.
 
 #### En regressionsmodell fångar inte allt
 Låt oss gå igenom ett exempel till, men denna gång med påhittade data. Figur 2 beskriver två diagram där prickarna återigen visar kombinerade värden av variablerna $x$ och $y$. De räta linjerna är regressionslinjer beräknade utifrån minstakvadratmetoden för regressionsmodeller av typen:
-$y = a + bx + v$ (6)
+
+
+$$y = a + bx + v \tag{6}$$
+
 Nu är linjerna horisontella, vilket innebär att lutningskoefficienterna är lika med 0 i båda fallen. När $x$ ökar är detta inte associerat med någon förändring i variabel $y$.
 Men när vi tittar på diagrammen i figuren kan vi tydligt se att prickarna i de båda diagrammen samvarierar i olika mönster. I det vänstra diagrammet är relationen mellan variablerna tydligt positiv, men endast om vi studerar observationerna som två grupper.
 I det högra diagrammet syns en ickelinjär samvariation när vi tittar på alla observationer. Tittar vi enbart på den vänstra halvan av diagrammet syns en positiv samvariation, medan punkterna i den högra halvan av diagrammet har en negativ samvariation.
@@ -84,7 +102,7 @@ Detta innebär inte att regressionsanalys är dåligt. Men vi måste vara noga m
 
 **Figur 2: Två exempel på mönster som inte fångas av vår regressionsmodell**
 
-![En bild som visar linje, diagram, skärmbild, Rektangel Automatiskt genererad beskrivning](img/k2-5-7-image2.png){style="width:5.33774in;height:2.60709in"}
+![En bild som visar linje, diagram, skärmbild, Rektangel Automatiskt genererad beskrivning](img/k2-5-7-image2.png)
 
 
 ::: {.fig-caption}
@@ -104,7 +122,12 @@ I alla fyra diagrammen kan vi alltså med hjälp av minstakvadratmetoden finna e
 Dessa fyra diagram presenterades första gången 1973 av den brittiske statistikern Francis John Anscombe ([Anscombe, 1973](https://www.lithoguru.com/scientist/statistics/Anscombe_Graphs%20in%20Statistical%20Analysis_1973.pdf)). Exemplen illustrerar vikten av att både räkna på samvariation och studera data i diagram.
 Trots att punkterna i diagrammen är placerade i olika mönster kan vi få samma positiva linjära samvariation i alla fyra exempel. I det övre vänstra diagrammet kan vi se att punkterna ligger utspridda längs med den diagonala linjen upp mot högra hörnet i diagrammet. I det övre högra diagrammet ligger punkterna i en konkav båge, upp mot diagrammets högra hörn.
 Punkternas mönster är tydligt ickelinjärt, men vi kan ändå beräkna en linjär positiv samvariation. I det nedre vänstra diagrammet ligger alla punkter utom en på en rak linje. I det nedre högra diagrammet ligger alla punkter utom en på en vertikal linje.
-**Figur 3: Fyra exempel på data där regressionsmodellen** $\mathbf{Y = a + bX + V}$ **ger samma resultat**![En bild som visar linje, diagram, Graf, text Automatiskt genererad beskrivning](img/k2-5-7-image3.png){style="width:5.20741in;height:3.4165in"}
+
+**Figur 3: Fyra exempel på data där regressionsmodellen** $\mathbf{Y = a + bX + V}$ **ger samma resultat**
+
+
+![En bild som visar linje, diagram, Graf, text Automatiskt genererad beskrivning](img/k2-5-7-image3.png)
+
 
 ::: {.fig-caption}
 Förklaring: De fyra diagrammen beskriver påhittade data presenterade i [Anscombe 1973](https://www.lithoguru.com/scientist/statistics/Anscombe_Graphs%20in%20Statistical%20Analysis_1973.pdf).

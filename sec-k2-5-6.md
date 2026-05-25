@@ -10,27 +10,23 @@ Du behöver inte kunna beräkna detta för hand. Datorer gör sådana här berä
 
 ### Utgångspunkter
 I [avsnitt 4.1](https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&dl=0) estimerade vi regressionsmodellen:
-$Y = a + bX + cZ + V$ (1)
+
+
+$$Y = a + bX + cZ + V \tag{1}$$
+
 Utifrån de fyra observationerna i tabell 1 estimerade vi då följande värden för koefficienterna:
-$\widehat{a} \approx 2,89,\ \ \ \ \ \widehat{b} \approx 0,28,\ \ \ \ \ \ \widehat{c} \approx - 0,54$ (2)
+
+
+$$\widehat{a} \approx 2,89,\ \ \ \ \ \widehat{b} \approx 0,28,\ \ \ \ \ \ \widehat{c} \approx - 0,54 \tag{2}$$
+
 **Tabell 1: Fyra observationer för variablerna** $\mathbf{y}\mathbf{,}\mathbf{x}$ **och** $\mathbf{z}$**.**
+
   --------------------------------------------------------------------------------------------------------------------------------------
   
 
 $$i$$
 
-    
-
-$$Y_{i}$$
-
-   
-
-$$X_{i}$$
-
-   
-
-$$Z_{i}$$
-
+    $Y_{i}$   $X_{i}$   $Z_{i}$
   ----------------------------- ---------------------------------- ---------------------------------- ----------------------------------
   1                                             3                                  3                                  1
   2                                             2                                  4                                  4
@@ -40,12 +36,21 @@ $$Z_{i}$$
 
 #### T-test för de tre koefficienterna
 Nu ska vi med t-test pröva sannolikheten att de tre koefficienterna är skilda från noll. Vi ställer därför upp tre noll- och alternativhypoteser:
-$\begin{matrix} H_{0}:a = 0 & \ \ \ H_{0}:b = 0 & \ \ \ H_{0}:c = 0 \\ H_{1}:a \neq 0 & \ \ \ H_{1}:b \neq 0 & \ \ \ H_{1}:c \neq 0 \end{matrix}$ (3)
+
+
+$$\begin{matrix} H_{0}:a = 0 & \ \ \ H_{0}:b = 0 & \ \ \ H_{0}:c = 0 \\ H_{1}:a \neq 0 & \ \ \ H_{1}:b \neq 0 & \ \ \ H_{1}:c \neq 0 \end{matrix} \tag{3}$$
+
 Vi utgår från signifikansnivån $\alpha = 0,05$. Alla tre test är tvåsidiga $t$-test och t -värdena skattas på följande sätt:
-$t_{\widehat{a}} = \frac{\widehat{a}}{s_{\widehat{a}}},\ \ \ \ \ \ t_{b} = \frac{\widehat{b}}{s_{\widehat{b}}},\ \ \ \ t_{\widehat{c}} = \frac{\widehat{c}}{s_{\widehat{c}}}$ (4)
+
+
+$$t_{\widehat{a}} = \frac{\widehat{a}}{s_{\widehat{a}}},\ \ \ \ \ \ t_{b} = \frac{\widehat{b}}{s_{\widehat{b}}},\ \ \ \ t_{\widehat{c}} = \frac{\widehat{c}}{s_{\widehat{c}}} \tag{4}$$
+
 I nämnaren har vi standardfelet för respektive estimator, $s_{\widehat{a}},s_{\widehat{b}}$ och $s_{\widehat{c}}$. Standardfelet är, i likhet med standardavvikelse, positiva kvadratroten av variansen, vilket är lättare att skriva ut ekvationen för, som $\text{var}\left( \widehat{a} \right)$ (se [avsnitt 5.5](https://www.dropbox.com/scl/fi/q6c5skce5272hw6sbohcr/5-5-Regressionsanalys-med-sannolikhet.docx?rlkey=p1ue537yaw3c5difdil7zmlrb&dl=0)).
 När vi nu har tre variabler i regressionsmodellen blir variansen för våra tre estimatorer $\widehat{a},\widehat{b}$ och $\widehat{c}$, följande:
-$\begin{matrix} & var(\widehat{a}) = {\widehat{s}}_{\widehat{V}}\left( \frac{1}{n} + \frac{{\bar{X}}^{2}\sum_{}^{}\left( Z_{i} - \bar{Z} \right)^{2} + {\bar{Z}}^{2}\sum_{}^{}\left( X_{i} - \bar{X} \right)^{2} - 2\bar{X}\bar{Z}\sum_{}^{}{\left( X_{i} - \bar{X} \right)\left( X_{i} - \bar{X} \right)}}{\sum_{}^{}\left( X_{i} - \bar{X} \right)^{2}\sum_{}^{}\left( Z_{i} - \bar{Z} \right)^{2} - \left( \sum_{}^{}{\left( X_{i} - \bar{X} \right)\left( X_{i} - \bar{X} \right)} \right)^{2}} \right) \\ & var(\widehat{b}) = {\widehat{s}}_{\widehat{V}}\left( \frac{\sum_{}^{}\left( Z_{i} - \bar{Z} \right)^{2}}{\sum_{}^{}\left( X_{i} - \bar{X} \right)^{2}\sum_{}^{}\left( Z_{i} - \bar{Z} \right)^{2} - \left( \sum_{}^{}{\left( X_{i} - \bar{X} \right)\left( Z_{i} - \bar{Z} \right)} \right)^{2}} \right) \\ & var(\widehat{c}) = {\widehat{s}}_{\widehat{V}}\left( \frac{\sum_{}^{}\left( X_{i} - \bar{X} \right)^{2}}{\sum_{}^{}\left( X_{i} - \bar{X} \right)^{2}\sum_{}^{}\left( Z_{i} - \bar{Z} \right)^{2} - \left( \sum_{}^{}{\left( X_{i} - \bar{X} \right)\left( Z_{i} - \bar{Z} \right)} \right)^{2}} \right) \end{matrix}$ (5)
+
+
+$$\begin{matrix} & var(\widehat{a}) = {\widehat{s}}_{\widehat{V}}\left( \frac{1}{n} + \frac{{\bar{X}}^{2}\sum_{}^{}\left( Z_{i} - \bar{Z} \right)^{2} + {\bar{Z}}^{2}\sum_{}^{}\left( X_{i} - \bar{X} \right)^{2} - 2\bar{X}\bar{Z}\sum_{}^{}{\left( X_{i} - \bar{X} \right)\left( X_{i} - \bar{X} \right)}}{\sum_{}^{}\left( X_{i} - \bar{X} \right)^{2}\sum_{}^{}\left( Z_{i} - \bar{Z} \right)^{2} - \left( \sum_{}^{}{\left( X_{i} - \bar{X} \right)\left( X_{i} - \bar{X} \right)} \right)^{2}} \right) \\ & var(\widehat{b}) = {\widehat{s}}_{\widehat{V}}\left( \frac{\sum_{}^{}\left( Z_{i} - \bar{Z} \right)^{2}}{\sum_{}^{}\left( X_{i} - \bar{X} \right)^{2}\sum_{}^{}\left( Z_{i} - \bar{Z} \right)^{2} - \left( \sum_{}^{}{\left( X_{i} - \bar{X} \right)\left( Z_{i} - \bar{Z} \right)} \right)^{2}} \right) \\ & var(\widehat{c}) = {\widehat{s}}_{\widehat{V}}\left( \frac{\sum_{}^{}\left( X_{i} - \bar{X} \right)^{2}}{\sum_{}^{}\left( X_{i} - \bar{X} \right)^{2}\sum_{}^{}\left( Z_{i} - \bar{Z} \right)^{2} - \left( \sum_{}^{}{\left( X_{i} - \bar{X} \right)\left( Z_{i} - \bar{Z} \right)} \right)^{2}} \right) \end{matrix} \tag{5}$$
+
 där ${\widehat{s}}_{\widehat{V}}$ är estimerad standardfelet för residualerna (regressionsmodellens standardfel) varför vi lägger till notationen $\widehat{V}$ (jmf ekvation 1), $n$ är antal observationer och en variabel med ett streck över är medelvärde ($\overline{X},\ \overline{Y},\ \overline{Z})$. Residualernas standardfel är ett mått på osäkerheten i estimatet av residualerna.
 
 #### Måste jag lära mig allt det här?
@@ -56,12 +61,21 @@ Ekvation 5 illustrerar nu hur även det statistiska testet för respektive lutni
 
 #### Beräkna estimaten
 Låt oss beräkna t-testen för koefficienterna. Estimerat standardfel för residualerna är:
-${\widehat{s}}_{\widehat{V}} = \frac{\sum_{}^{}\ \left( y_{i} - \widehat{y} \right)^{2}}{n - p} \approx \frac{0,338}{4 - 3} \approx 0,338$ (6)
+
+
+$${\widehat{s}}_{\widehat{V}} = \frac{\sum_{}^{}\ \left( y_{i} - \widehat{y} \right)^{2}}{n - p} \approx \frac{0,338}{4 - 3} \approx 0,338 \tag{6}$$
+
 Resultatet för $\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}$ kan vi räkna ut med hjälp av uppgifterna i [avsnitt 4.1](https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&dl=0). Bokstaven $n$ är antal observationer och $p$ är antal koefficienter i regressionsmodellen, varför $n - p =$ $4 - 3 = 1$.
 Resultatet ${\widehat{s}}_{\widehat{V}} \approx 0,338$ använder vi för att skatta standardfelet för respektive koefficient $\widehat{a}$, $\widehat{b}$ och $\widehat{c}$. Vi tar positiva kvadratroten av variansen för respektive estimator:
-$\begin{matrix} & s_{\widehat{\alpha}} = + \left( 0,338\left( \frac{1}{4} + \frac{25*9 + 2,25*10 - 2*5*1,5*( - 4)}{10*9 - ( - 4)^{2}} \right) \right)^{1/2} \approx 1,22 \\ & s_{\widehat{b}} = + \left( 0,338\left( \frac{9}{10*9 - ( - 4)^{2}} \right) \right)^{1/2} \approx 0,203 \\ & s_{\widehat{c}\widehat{\ }} = + \left( 0,338\left( \frac{10}{10*9 - ( - 4)^{2}} \right) \right)^{1/2} \approx 0,214 \end{matrix}$ (7)
+
+
+$$\begin{matrix} & s_{\widehat{\alpha}} = + \left( 0,338\left( \frac{1}{4} + \frac{25*9 + 2,25*10 - 2*5*1,5*( - 4)}{10*9 - ( - 4)^{2}} \right) \right)^{1/2} \approx 1,22 \\ & s_{\widehat{b}} = + \left( 0,338\left( \frac{9}{10*9 - ( - 4)^{2}} \right) \right)^{1/2} \approx 0,203 \\ & s_{\widehat{c}\widehat{\ }} = + \left( 0,338\left( \frac{10}{10*9 - ( - 4)^{2}} \right) \right)^{1/2} \approx 0,214 \end{matrix} \tag{7}$$
+
 Nu kan vi skatta t-värdena till t-testen för respektive lutningskoefficients estimator:
-$\begin{matrix} & t_{\widehat{a}} = \frac{2,89}{1,22} \approx 2,37 \\ & t_{\widehat{b}} = \frac{0,28}{0,203} \approx 1,4 \\ & t_{\widehat{c}} = \frac{- 0,54}{0,214} \approx - 2,52 \end{matrix}$ (8)
+
+
+$$\begin{matrix} & t_{\widehat{a}} = \frac{2,89}{1,22} \approx 2,37 \\ & t_{\widehat{b}} = \frac{0,28}{0,203} \approx 1,4 \\ & t_{\widehat{c}} = \frac{- 0,54}{0,214} \approx - 2,52 \end{matrix} \tag{8}$$
+
 Nu har vi beräknat t-värdena för respektive estimator och kan jämföra dessa mot t-fördelningen, beroende på vald signifikansnivå. T-fördelningens form beror liksom tidigare på antal frihetsgrader. Om våra beräknade $t$ överstiger kritiska t-värdet, det vill säga $t^{*}$ $\|t\| \> t^{*}$, avvisar vi respektive $H_{0}$ som falsk.
 I [avsnitt 5.](https://www.dropbox.com/scl/fi/q6c5skce5272hw6sbohcr/5-4-Regressionsanalys-med-sannolikhet.docx?rlkey=p1ue537yaw3c5difdil7zmlrb&dl=0)5 illustrerade vi t-fördelningen för 2 respektive 1 000 frihetsgrader. För enkelhetens skull kan vi här jämföra med 2 frihetsgrader, som vi använde i föregående avsnitt. Egentligen har vi här 1 frihetsgrad och då är de kritiska t-värdena ännu längre bort från medelvärdet.
 Våra beräknade t-värden är långt ifrån konfidensnivåerna 90 respektive 95 %. Våra beräknade t-värden innebär att det är cirka 25 %, 39 % respektive 24 % sannolikhet att respektive $H_{0}$ är falsk (beräkning redovisas ej här).
@@ -71,18 +85,27 @@ Vi avfärdar därför ingen av de tre nollhypoteserna. Våra resultat för estim
 Trots att vi endast hade två förklarande variabler i regressionsmodellen är de tre ekvationerna i ekvation 5 ovan omfattande. Ofta arbetar vi med flera variabler, varpå ekvationerna blir ännu mer omfattande. Vi kan beskriva matematiken för detta mer kompakt genom att använda matriser.
 Nu ska vi gå igenom hur vi kan beskriva matematiken för t-test med ett valfritt antal variabler i regressionsmodellen. På samma sätt som vi introducerade i [avsnitt 4.4](https://www.dropbox.com/scl/fi/sdnc9eukta9tuiq1y6z0f/4-4-Regression-med-matriser.docx?rlkey=zmc4680olys9qe0zmn7i0vswc&dl=0) ska vi därför återigen använda matriser för att beskriva vår regressionsmodell och analys. Poängen är återigen att vi ska få en ökad förståelse för metoderna.
 Säg att vi har följande regressionsmodell för en population:
-$Y = XB + V$ (9)
+
+
+$$Y = XB + V \tag{9}$$
+
 där Y är en $n \times 1$ kolumnmatris med förklarade variabeln, $B$ är en $k \times 1$ kolumnmatris för samtliga koefficienter $b$ och $V$ är en $n \times 1$ kolumnmatris med $n$ feltermer. $X$ är en $n \times k$ matris med de förklarande variablerna $X$ i varsin kolumn och observationerna på varsin rad. I vår regressionsmodell ingår första koefficienten $b_{0}$, y-interceptet, varför alla element i första kolumnen i matris $X$ har värdet 1.
 Vi ska nu gå igenom hur vi kan beskriva varians och standardfel för samtliga koefficienters estimatorer i en regressionsmodell med valfritt antal koefficienter. Detta gör vi genom att definiera det som kallas för regressionsmodellens *varians-kovariansmatris*. Varians-kovariansmatrisen kallas även för *variansmatris*, *kovariansmatris* eller *autokovariansmatris* (engelska *variance-covariance matrix*).
 
 #### Varians-kovariansmatrisen
 Varians-kovariansmatrisen som vi ska arbeta med kan skrivas på följande sätt: $var\left( \widehat{B} \middle\| X \right)$, där $\widehat{B}$ och $X$ är matriser. Vi har alltså variansen, $var(\ )$, av estimatorn för koefficienterna $\widehat{B}$, givet värdena i de förklarande variablerna $X$.
 För populationens regressionsmodell kan detta skrivas på följande sätt:
-$\text{var}\left( \widehat{B} \middle\| X \right) = \sigma_{V}^{2}\left( X^{T}X \right)^{- 1}$ (10)
+
+
+$$\text{var}\left( \widehat{B} \middle\| X \right) = \sigma_{V}^{2}\left( X^{T}X \right)^{- 1} \tag{10}$$
+
 som består av två delar: $\sigma_{V}^{2}$ och $\left( X^{T}X \right)^{- 1}$. Den första delen, $\sigma_{V}^{2}$, beskriver feltermernas varians (oförklarad variation) i populationen. Populationsvärdet är i regel okänt men vi kan estimera den med urvalsdata.
 Hela den andra delen, $\left( X^{T}X \right)^{- 1}$, beskriver en enda matris sammansatt av två andra matriser, nämligen $X$ (de förklarande variablerna) och transponerade $X^{T}$. Dessa två matrismultipliceras, $X^{T}X$. Därefter tar vi matrisinversen av resultatet: $\left( X^{T}X \right)^{- 1}$.
 Låt oss byta ut populationens varians $\sigma_{V}^{2}$ mot estimerade variansen: ${\widehat{s}}_{V}^{2}$. Vi får då estimerade varians-kovariansmatrisen:
-$\text{var}\left( \widehat{B} \middle\| X \right) = {\widehat{s}}_{V}^{2}\left( X^{T}X \right)^{- 1} = \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y_{i}} \right)^{2}}{n - p} \right)\left( X^{T}X \right)^{- 1}$ (11)
+
+
+$$\text{var}\left( \widehat{B} \middle\| X \right) = {\widehat{s}}_{V}^{2}\left( X^{T}X \right)^{- 1} = \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y_{i}} \right)^{2}}{n - p} \right)\left( X^{T}X \right)^{- 1} \tag{11}$$
+
 Definitionen av ${\widehat{s}}_{V}^{2}$ använde vi i [avsnitt 5.4](https://www.dropbox.com/scl/fi/q6c5skce5272hw6sbohcr/5-4-Regressionsanalys-med-sannolikhet.docx?rlkey=p1ue537yaw3c5difdil7zmlrb&dl=0).
 
 ### Varför är varians-kovariansmatrisen viktig?
@@ -94,17 +117,32 @@ Det finns ingen metod för att objektivt bevisa att ett fenomen bör inkluderas 
 #### Ett exempel
 För att bättre förstå innehållet i $var(\widehat{B} \mid X)$ kan vi illustrera med ett exempel. Huvudsaken med denna genomgång är främst de mer övergripande resonemangen.
 Säg att vi har regressionsmodellen $Y = a + bX + V$ med de två variablerna $X$ och $Y$ och de två koefficienterna $a$ och $b$ (det vill säga ej skriven med matriser) och feltermen $V$. Estimerade varians-kovariansmatrisen för denna regressionsmodell blir:
-$var(\widehat{B} \mid X) = {\widehat{s}}_{\widehat{V}}^{2}\left( X^{T}X \right)^{- 1} = \begin{bmatrix} var(\widehat{a}) & cov(\widehat{a},\widehat{b}) \\ cov(\widehat{b},\widehat{a}) & var(\widehat{b}) \end{bmatrix}$ (12)
+
+
+$$var(\widehat{B} \mid X) = {\widehat{s}}_{\widehat{V}}^{2}\left( X^{T}X \right)^{- 1} = \begin{bmatrix} var(\widehat{a}) & cov(\widehat{a},\widehat{b}) \\ cov(\widehat{b},\widehat{a}) & var(\widehat{b}) \end{bmatrix} \tag{12}$$
+
 I matrisens diagonal (övre vänstra och nedre högra elementen) har vi variansen för estimatorerna för koefficienterna: $\widehat{a}$ och $\widehat{b}$. De två andra elementen är kovariansen mellan estimatorerna. Variansen i diagonalen ges av att $\text{cov}\left( \widehat{a},\widehat{a} \right) = \text{var}\left( \widehat{a} \right)$ (se [avsnitt 2.3](https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&dl=0)).
 För att se detaljerna i $var(\widehat{B} \mid X)$ börjar vi med att beskriva inversmatrisen $\left( X^{T}X \right)^{- 1}$ :
-$\begin{matrix} \left( X^{T}X \right)^{- 1} & \ = \begin{bmatrix} n & \sum_{}^{}x_{i} \\ \sum_{}^{}x_{i} & \sum_{}^{}x_{i}^{2} \end{bmatrix}^{- 1} \\ & \ = \left( \frac{1}{n\sum_{}^{}x_{i}^{2} - \sum_{}^{}x_{i}\sum_{}^{}x_{i}} \right)\begin{bmatrix} \sum_{}^{}x_{i}^{2} & - \sum_{}^{}x_{i} \\ - \sum_{}^{}x_{i} & n \end{bmatrix} \\ & \ = \left( \frac{1}{n\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \right)\begin{bmatrix} \sum_{}^{}x_{i}^{2} & - n\bar{x} \\ - n\bar{x} & n \end{bmatrix} \\ & \ = \begin{bmatrix} \frac{\sum_{}^{}x_{i}^{2}}{n\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \\ \frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \frac{1}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \end{bmatrix} \end{matrix}$ (13)
+
+
+$$\begin{matrix} \left( X^{T}X \right)^{- 1} & \ = \begin{bmatrix} n & \sum_{}^{}x_{i} \\ \sum_{}^{}x_{i} & \sum_{}^{}x_{i}^{2} \end{bmatrix}^{- 1} \\ & \ = \left( \frac{1}{n\sum_{}^{}x_{i}^{2} - \sum_{}^{}x_{i}\sum_{}^{}x_{i}} \right)\begin{bmatrix} \sum_{}^{}x_{i}^{2} & - \sum_{}^{}x_{i} \\ - \sum_{}^{}x_{i} & n \end{bmatrix} \\ & \ = \left( \frac{1}{n\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \right)\begin{bmatrix} \sum_{}^{}x_{i}^{2} & - n\bar{x} \\ - n\bar{x} & n \end{bmatrix} \\ & \ = \begin{bmatrix} \frac{\sum_{}^{}x_{i}^{2}}{n\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \\ \frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \frac{1}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \end{bmatrix} \end{matrix} \tag{13}$$
+
 Nu har vi ett uttryck för inversmatrisen $\left( X^{T}X \right)^{- 1}$. För att få estimerade $var(\widehat{B} \mid X)$ multiplicerar vi nu vårt uttryck för $\left( X^{T}X \right)^{- 1}$ med residualernas estimerade varians ${\widehat{s}}_{\widehat{V}}^{2}$, vilket är ett värde (ej en matris). Detta görs genom att ${\widehat{s}}_{\widehat{V}}^{2}$ multipliceras med varje element i matrisen $\left( X^{T}X \right)^{- 1}$:
-$\begin{matrix} & {\widehat{s}}_{\widehat{V}}^{2}\left( X^{T}X \right)^{- 1} = \left( \frac{\sum_{}^{}\ \left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\begin{bmatrix} \frac{\sum_{}^{}x_{i}^{2}}{n\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \\ \frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \frac{1}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \end{bmatrix} \\ & = \begin{bmatrix} \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{\sum_{}^{}x_{i}^{2}}{n\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \\ \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{1}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \end{bmatrix} = \\ & = \begin{bmatrix} var(\widehat{a}) & cov(\widehat{a},\widehat{b}) \\ cov(\widehat{b},\widehat{a}) & var(\widehat{b}) \end{bmatrix} \end{matrix}$ (14)
+
+
+$$\begin{matrix} & {\widehat{s}}_{\widehat{V}}^{2}\left( X^{T}X \right)^{- 1} = \left( \frac{\sum_{}^{}\ \left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\begin{bmatrix} \frac{\sum_{}^{}x_{i}^{2}}{n\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \\ \frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \frac{1}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \end{bmatrix} \\ & = \begin{bmatrix} \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{\sum_{}^{}x_{i}^{2}}{n\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \\ \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{1}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \end{bmatrix} = \\ & = \begin{bmatrix} var(\widehat{a}) & cov(\widehat{a},\widehat{b}) \\ cov(\widehat{b},\widehat{a}) & var(\widehat{b}) \end{bmatrix} \end{matrix} \tag{14}$$
+
 Varians-kovariansmatrisen ger oss, som sagt, variansen för koefficienternas estimatorer. Tar vi kvadratroten av detta får vi standardfelet för koefficienterna, vilket vi behöver för att beräkna de tvåsidiga t-testen för respektive koefficient.
 Ovan definierade vi variansen för estimatorerna $\widehat{a}$ och $\widehat{b}$ till:
-$\begin{matrix} & var(\widehat{a}) = {\widehat{s}}_{\widehat{a}}^{2} = \frac{\sum_{}^{}\ \left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - p)\sum_{}^{}\ \left( x_{i} - \bar{x} \right)^{2}}\frac{\sum_{}^{}\ x_{i}^{2}}{n} \\ & var(\widehat{b}) = {\widehat{s}}_{\widehat{b}}^{2} = \frac{\sum_{}^{}\ \left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - p)\sum_{}^{}\ \left( x_{i} - \bar{x} \right)^{2}} \end{matrix}$ (15)
+
+
+$$\begin{matrix} & var(\widehat{a}) = {\widehat{s}}_{\widehat{a}}^{2} = \frac{\sum_{}^{}\ \left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - p)\sum_{}^{}\ \left( x_{i} - \bar{x} \right)^{2}}\frac{\sum_{}^{}\ x_{i}^{2}}{n} \\ & var(\widehat{b}) = {\widehat{s}}_{\widehat{b}}^{2} = \frac{\sum_{}^{}\ \left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - p)\sum_{}^{}\ \left( x_{i} - \bar{x} \right)^{2}} \end{matrix} \tag{15}$$
+
 Detta är samma sak som i diagonalen i $2 \times 2$ varians-kovariansmatrisen. Vi kan se detta genom att skriva om $\sum_{}^{}\left( x_{i} - \bar{x} \right)^{2}$ från $var(\widehat{a})$ och $var(\widehat{b})$ :
-$\begin{matrix} \sum_{}^{}\left( x_{i} - \bar{x} \right)^{2} & \ = \sum_{}^{}x_{i}^{2} - 2\sum_{}^{}{x_{i}\bar{x}} + \sum_{}^{}{\bar{x}}^{2} \\ & \ = \sum_{}^{}x_{i}^{2} - 2n{\bar{x}}^{2} + n{\bar{x}}^{2} \\ & \ = \sum_{}^{}x_{i}^{2} - n\frac{1}{n}\sum_{}^{}x_{i}\frac{1}{n}\sum_{}^{}x_{i} \\ & \ = \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \end{matrix}$ (16)
+
+
+$$\begin{matrix} \sum_{}^{}\left( x_{i} - \bar{x} \right)^{2} & \ = \sum_{}^{}x_{i}^{2} - 2\sum_{}^{}{x_{i}\bar{x}} + \sum_{}^{}{\bar{x}}^{2} \\ & \ = \sum_{}^{}x_{i}^{2} - 2n{\bar{x}}^{2} + n{\bar{x}}^{2} \\ & \ = \sum_{}^{}x_{i}^{2} - n\frac{1}{n}\sum_{}^{}x_{i}\frac{1}{n}\sum_{}^{}x_{i} \\ & \ = \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \end{matrix} \tag{16}$$
+
 där vi i sista raden nu får samma uttryck som återfinns i nämnaren i respektive element i estimerade $\text{var}\left( \widehat{B} \middle\| X \right)$.
 
 

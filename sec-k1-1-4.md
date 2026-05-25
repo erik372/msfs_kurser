@@ -16,7 +16,7 @@ Matematiken kan här hjälpa oss att göra det svårare för oss att ljuga för 
 
 **Figur 1. Vilka avstånd är lika långa?**
 
-![](img/k1-1-4-image1.png){style="width:3in;height:3in"}
+![](img/k1-1-4-image1.png)
 
 
 ::: {.fig-caption}

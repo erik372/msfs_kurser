@@ -18,7 +18,10 @@ Vi kan även byta ut medelvärdet $\overline{x}$ mot annat genomsnittsmått som 
 Ett annat sätt att summera avvikelser från medelvärdet till ett positivt värde är att kvadrera avvikelserna: $\left( x_{i} - \overline{x} \right)^{2}$. Dividerar vi summan av de kvadrerade differenserna med antal observationer $n$ får vi *variansen* för variabel *x*:
 > Varians:  $var(x) = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}$ (2)
 Parentesen $\left( x_{i} - \overline{x} \right)^{2}$ ska beräknas för varje observation och summeras:
-$\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)^{2} =}\left( x_{i} - \overline{x} \right)^{2} + \left( x_{i} - \overline{x} \right)^{2} + \ldots + \left( x_{i} - \overline{x} \right)^{2}$ (3)
+
+
+$$\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)^{2} =}\left( x_{i} - \overline{x} \right)^{2} + \left( x_{i} - \overline{x} \right)^{2} + \ldots + \left( x_{i} - \overline{x} \right)^{2} \tag{3}$$
+
 På samma sätt som att medelvärdet $\overline{x}$ är en uppskattning av populationens $\mu_{x}$ är $var(x)$ en uppskattning av variansen i populationen. Variansen i populationen för variabeln $x$ betecknas ofta med den grekiska bokstaven lilla sigma i kvadrat, $\sigma_{x}^{2}$.
 
 #### Standardavvikelse
@@ -36,14 +39,23 @@ Standardavvikelse urval: $s_{x} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overl
 
 #### Varians och standardavvikelse med konstant
 Om vi har en konstant $a$, ett valfritt värde, är variansen för denna $var(a) = 0$. Detta eftersom ett enskilt värde inte har någon spridning. Om $a$ är multiplicerad med en variabel $x$ är variansen för $ax$ lika med $a^{2}var(x)$. Detta kan vi se genom att ta:
-$var(ax) = \left( \frac{1}{n} \right)\sum_{i}^{}\left( {ax}_{i} - a\overline{x} \right)^{2}$ (7)
+
+
+$$var(ax) = \left( \frac{1}{n} \right)\sum_{i}^{}\left( {ax}_{i} - a\overline{x} \right)^{2} \tag{7}$$
+
 $= \left( \frac{1}{n} \right)\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right)$
 Eftersom $a$ inte påverkas av summeringen kan vi flytta ut alla $a^{2}$:
-$var(ax) = a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i}^{2} - 2\overline{x} + {\overline{x}}^{2} \right)$ (8)
+
+
+$$var(ax) = a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i}^{2} - 2\overline{x} + {\overline{x}}^{2} \right) \tag{8}$$
+
 $= a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i} - \overline{x} \right)^{2}$
 $= a^{2}var(x)$
 För standardavvikelse får vi:
-$s_{x}(ax) = \left( \frac{1}{n}\sum_{i}^{n}\left( {ax}_{i} - a\overline{x} \right)^{2} \right)^{\frac{1}{2}}$ (9)
+
+
+$$s_{x}(ax) = \left( \frac{1}{n}\sum_{i}^{n}\left( {ax}_{i} - a\overline{x} \right)^{2} \right)^{\frac{1}{2}} \tag{9}$$
+
 $= \left( \frac{1}{n}\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right) \right)^{\frac{1}{2}}$
 $= \left( a^{2} \right)^{\frac{1}{2}}\left( \frac{1}{n}\sum\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}}$
 $= \|a\|s_{x}$
@@ -51,32 +63,11 @@ där $\|a\|$ är absolutbeloppet av konstanten $a$.
 
 #### Ett exempel
 Nu ska vi beräkna (skatta) variansen med fyra observationer för två variabler: $x$ och $y$. Variabel $x$ har värdena 3, 4, 6 och 7. Variabeln $y$ har värdena 3, 2, 5 och 4. Tabell 1 sammanfattar beräkningarna vi behöver.
+
 **Tabell 1: Några beräkningar för variablerna** $\mathbf{x}$ **och** $\mathbf{y}$
+
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation   
-
-$$x_{i}$$
-
-   
-
-$$y_{i}$$
-
-   
-
-$$x_{i} - \overline{x}$$
-
-   
-
-$$y_{i} - \overline{y}$$
-
-   
-
-$$\left( x_{i} - \overline{x} \right)^{2}$$
-
-   
-
-$$\left( y_{i} - \overline{y} \right)^{2}$$
-
+  Observation   $x_{i}$   $y_{i}$   $x_{i} - \overline{x}$   $y_{i} - \overline{y}$   $\left( x_{i} - \overline{x} \right)^{2}$   $\left( y_{i} - \overline{y} \right)^{2}$
   ------------- ---------------------------------- ---------------------------------- -------------------------------------------------- -------------------------------------------------- ------------------------------------------------------------------------ ------------------------------------------------------------------------
   1             3                                  3                                  -2                                                 -0,5                                               4                                                                        0,25
   2             4                                  2                                  -1                                                 -1,5                                               1                                                                        2,25
@@ -87,7 +78,10 @@ $$\left( y_{i} - \overline{y} \right)^{2}$$
   Summa         20                                 14                                                                                                                                       10                                                                       5
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Vi använder ekvation 5 för att skatta varians:
-$var(x) = \frac{\sum_{i}^{}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{10}{3}\ $ (10)
+
+
+$$var(x) = \frac{\sum_{i}^{}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{10}{3}\  \tag{10}$$
+
 $var(y) = \frac{\sum_{i}^{}\left( y_{i} - \overline{y} \right)^{2}}{n - 1} = \frac{5}{3}$
 Variansen för variabel $x$ är större än variansen i variabel $y$. Detta indikerar att värdena i $x$ är mer utspridda från medelvärdet jämfört med spridningen i variabel $y$.
 För att beräkna standardavvikelse för variablerna $x$ och $y$ tar vi positiva kvadratroten av variansen:

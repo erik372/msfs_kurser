@@ -152,8 +152,8 @@ Alltså: sannolikheten att få ett specifikt värde, som 0,5, är noll. Sannolik
 Figur 1 illustrerar täthetsfunktionen och kumulativa fördelningsfunktionen för den likformiga kontinuerliga sannolikhetsfördelningen <span class="math inline">\(X\)</span>, där alla utfall mellan 0 och 1 har samma sannolikhet.
 Det vänstra diagrammet illustrerar täthetsfunktionen <span class="math inline">\(f\)</span> och det högra diagrammet kumulativa fördelningsfunktionen <span class="math inline">\(F\)</span>. Sannolikheten för att <span class="math inline">\(X\)</span> antar ett värde mellan 0 och 0,5 är 0,5, vilket vi kan se i det högre diagrammet genom att jämföra 0,5 på den horisontella axeln (<span class="math inline">\(x\)</span>-värdet) och den kumulativa sannolikheten på vertikala axeln. Det vill säga:</p>
 <p><span class="math display">\[F(x = 0,5) = P(X \leq 0,5) = 0,5\]</span></p>
-<p><strong>Figur 1: Täthetsfunktionen och kumulativa fördelningsfunktionen för en likformig kontinuerlig sannolikhetsfördelning</strong><br></p>
-<div class="inline-figure"><img src="img/k2-5-2-image1.png" style="width:5.38889in;height:2.92963in"></div>
+<p><strong>Figur 1: Täthetsfunktionen och kumulativa fördelningsfunktionen för en likformig kontinuerlig sannolikhetsfördelning</strong></p>
+<div class="inline-figure"><img src="img/k2-5-2-image1.png"></div>
 <div class="fig-caption">
 <p>Förklaring: Vänstra diagrammet beskriver sannolikheten för varje utfall mellan 0 och 1. Högra diagrammet beskriver kumulativa sannolikheten att få ett värde på horisontella x-axeln eller lägre. Sannolikheten att få ett värde under 0 är noll. Sannolikheten att få ett värde mellan 0 och 0,5 är 0,5, det vill säga 50 %. Sannolikheten att få värdet 1 eller lägre är 100 %.</p>
 </div>
@@ -163,23 +163,23 @@ Det vänstra diagrammet illustrerar täthetsfunktionen <span class="math inline"
 <span class="header-section-number">43.0.2.3</span> Väntevärde för kontinuerliga variabler<a class="anchor" aria-label="anchor" href="#v%C3%A4ntev%C3%A4rde-f%C3%B6r-kontinuerliga-variabler"><i class="fas fa-link"></i></a>
 </h4>
 <p>I föregående avsnitt introducerade vi väntevärde för diskreta slumpmässiga variabler som summan av utfall multiplicerat med deras sannolikhet, <span class="math inline">\(E(X) = \sum_{}^{}{xP(x)}\)</span>. Väntevärdet för en kontinuerlig slumpmässig variabel är på liknande sätt summan av utfall multiplicerat med sannolikheterna.
-Säg att vi har en slumpmässig likformig kontinuerlig variabel <span class="math inline">\(X\)</span>, vars lägsta respektive högsta värden är <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>. Eftersom vi nu ska summera ett kontinuerligt intervall kan vi använda <a href="https://www.matteboken.se/lektioner/matte-3/integraler?gad_source=1&amp;gclid=CjwKCAiAwaG9BhAREiwAdhv6Y2KYZCxYMa4BwTrcLl7ZKGEB3v3OAesqY9bL4uQRR9bVbVEpx1Ls0BoCJyQQAvD_BwE#!/">integraler</a>:
-<span class="math inline">\(E(X) = \int_{a}^{b}{xf(x)dx}\)</span> (1)
-vilket ska läsas som att vi över intervallet <span class="math inline">\(a\)</span> till <span class="math inline">\(b\)</span> summerar alla möjliga utfall <span class="math inline">\(x\)</span> multiplicerat med sannolikheten för respektive värde <span class="math inline">\(f(x)\)</span>.</p>
+Säg att vi har en slumpmässig likformig kontinuerlig variabel <span class="math inline">\(X\)</span>, vars lägsta respektive högsta värden är <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>. Eftersom vi nu ska summera ett kontinuerligt intervall kan vi använda <a href="https://www.matteboken.se/lektioner/matte-3/integraler?gad_source=1&amp;gclid=CjwKCAiAwaG9BhAREiwAdhv6Y2KYZCxYMa4BwTrcLl7ZKGEB3v3OAesqY9bL4uQRR9bVbVEpx1Ls0BoCJyQQAvD_BwE#!/">integraler</a>:</p>
+<p><span class="math display">\[E(X) = \int_{a}^{b}{xf(x)dx} \tag{1}\]</span></p>
+<p>vilket ska läsas som att vi över intervallet <span class="math inline">\(a\)</span> till <span class="math inline">\(b\)</span> summerar alla möjliga utfall <span class="math inline">\(x\)</span> multiplicerat med sannolikheten för respektive värde <span class="math inline">\(f(x)\)</span>.</p>
 </div>
 <div id="varians-för-kontinuerliga-sannolikhetsfördelningar" class="section level4" number="43.0.2.4">
 <h4>
 <span class="header-section-number">43.0.2.4</span> Varians för kontinuerliga sannolikhetsfördelningar<a class="anchor" aria-label="anchor" href="#varians-f%C3%B6r-kontinuerliga-sannolikhetsf%C3%B6rdelningar"><i class="fas fa-link"></i></a>
 </h4>
-<p>Varians för en kontinuerlig slumpmässig variabel <span class="math inline">\(X\)</span> kan beskrivas:
-<span class="math inline">\(var(X) = E\left( \left( X - \mu_{X} \right)^{2} \right) = \sigma_{X}^{2}\)</span> (2)
-Om vi skriver ut definitionen av väntevärdet från ekvation 1 får vi:
-<span class="math inline">\(E\left( \left( X - \mu_{X} \right)^{2} \right) = \int_{- \infty}^{\infty}\left( X - \mu_{X} \right)^{2}f(x)dx\)</span> (3)
-Standardavvikelsen är, liksom för diskreta variabler, kvadratroten av variansen:
-<span class="math inline">\(\sigma_{X} = \sqrt{var(X)} = \sqrt{\sigma_{X}^{2}}\)</span> (4)
-Betingat väntevärde för kontinuerliga slumpmässiga variabler <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> skrivs:
-<span class="math inline">\(E\left( Y \middle\| X \right) = \int_{- \infty}^{\infty}{\int_{- \infty}^{\infty}{xyf(x,y)dxdy}}\)</span> (5)
-där <span class="math inline">\(f(x,y)\)</span> är den gemensamma sannolikhetsfördelningen. Lagen om totalt väntevärde gäller även för kontinuerliga fördelningar, <span class="math inline">\(E\left( E\left( X \middle\| Y \right) \right) = E(X)\)</span>, liksom regeln att <span class="math inline">\(E\left( XY \middle\| X \right) = XE\left( Y \middle\| X \right)\)</span>.</p>
+<p>Varians för en kontinuerlig slumpmässig variabel <span class="math inline">\(X\)</span> kan beskrivas:</p>
+<p><span class="math display">\[var(X) = E\left( \left( X - \mu_{X} \right)^{2} \right) = \sigma_{X}^{2} \tag{2}\]</span></p>
+<p>Om vi skriver ut definitionen av väntevärdet från ekvation 1 får vi:</p>
+<p><span class="math display">\[E\left( \left( X - \mu_{X} \right)^{2} \right) = \int_{- \infty}^{\infty}\left( X - \mu_{X} \right)^{2}f(x)dx \tag{3}\]</span></p>
+<p>Standardavvikelsen är, liksom för diskreta variabler, kvadratroten av variansen:</p>
+<p><span class="math display">\[\sigma_{X} = \sqrt{var(X)} = \sqrt{\sigma_{X}^{2}} \tag{4}\]</span></p>
+<p>Betingat väntevärde för kontinuerliga slumpmässiga variabler <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> skrivs:</p>
+<p><span class="math display">\[E\left( Y \middle\| X \right) = \int_{- \infty}^{\infty}{\int_{- \infty}^{\infty}{xyf(x,y)dxdy}} \tag{5}\]</span></p>
+<p>där <span class="math inline">\(f(x,y)\)</span> är den gemensamma sannolikhetsfördelningen. Lagen om totalt väntevärde gäller även för kontinuerliga fördelningar, <span class="math inline">\(E\left( E\left( X \middle\| Y \right) \right) = E(X)\)</span>, liksom regeln att <span class="math inline">\(E\left( XY \middle\| X \right) = XE\left( Y \middle\| X \right)\)</span>.</p>
 </div>
 <div id="normalfördelningen" class="section level4" number="43.0.2.5">
 <h4>
@@ -193,9 +193,9 @@ Genom att omvandla vilken normalfördelning som helst till medelvärde 0 och sta
 Standardiserade normalfördelningar används ofta och kallas därför ibland för variabel <span class="math inline">\(Z\)</span>. Denna sannolikhetsfördelning har flera kända sannolikhetsmått utifrån dess standardavvikelser, vilka ofta används i statistisk analys. Figur 2 illustrerar detta, där det övre diagrammet beskriver standardnormalfördelningens täthetsfunktion <span class="math inline">\(f\)</span> och det nedre diagrammet beskriver kumulativa fördelningsfunktionen <span class="math inline">\(F\)</span>.
 I det övre diagrammet är några av standardavvikelserna under och över medelvärdet 0 markerade. Kumulativa fördelningsfunktionen <span class="math inline">\(F(Z \leq z)\)</span> beskriver liksom tidigare hur stor andel av alla värden i variabel <span class="math inline">\(Z\)</span> som är mindre eller lika med utfall <span class="math inline">\(z\)</span> (ett enskilt värde i <span class="math inline">\(Z\)</span>).
 Eftersom standardnormalfördelningen även kallas <span class="math inline">\(Z\)</span>-fördelningen beskrivs denna typ av sannolikheter ofta som just <span class="math inline">\(Z\)</span>-värden (engelska <em>z-score</em>).
-Standardiserade normalfördelningen är så välanvänd att det finns flera färdigberäknade sannolikheter från denna fördelning som ofta används i statistisk analys. Några av dessa visas i figur 2, där vi i det övre diagrammet bland annat kan se att 95 % av fördelningen täcks av avståndet från -1,96 standardavvikelser till +1,96 standardavvikelser från medelvärdet.
-<strong>Figur 2: Standardiserade normalfördelningens täthetsfunktion</strong> <span class="math inline">\(\mathbf{f(z)}\)</span> <strong>och kumulativa fördelningsfunktion</strong> <span class="math inline">\(\mathbf{F(Z \leq z)}\)</span><strong>.</strong></p>
-<div class="inline-figure"><img src="img/k2-5-2-image2.png" style="width:3.85417in;height:5.13889in"></div>
+Standardiserade normalfördelningen är så välanvänd att det finns flera färdigberäknade sannolikheter från denna fördelning som ofta används i statistisk analys. Några av dessa visas i figur 2, där vi i det övre diagrammet bland annat kan se att 95 % av fördelningen täcks av avståndet från -1,96 standardavvikelser till +1,96 standardavvikelser från medelvärdet.</p>
+<p><strong>Figur 2: Standardiserade normalfördelningens täthetsfunktion</strong> <span class="math inline">\(\mathbf{f(z)}\)</span> <strong>och kumulativa fördelningsfunktion</strong> <span class="math inline">\(\mathbf{F(Z \leq z)}\)</span><strong>.</strong></p>
+<div class="inline-figure"><img src="img/k2-5-2-image2.png"></div>
 <div class="fig-caption">
 <p>Förklaring: Övre diagrammet illustrerar täthetsfunktionen <span class="math inline">\(f(z)\)</span>, där vertikala axeln anger sannolikheten för ett specifikt värde i standardiserade normalfördelningen. Nedre diagrammet illustrerar kumulativa fördelningsfunktionen <span class="math inline">\(F(Z \leq z)\)</span>, som beskriver sannolikheten för värdet <span class="math inline">\(z\)</span> eller lägre.</p>
 </div>

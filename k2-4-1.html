@@ -129,9 +129,9 @@
 <h4>
 <span class="header-section-number">35.0.2.1</span> Vad händer när vi har tre variabler?<a class="anchor" aria-label="anchor" href="#vad-h%C3%A4nder-n%C3%A4r-vi-har-tre-variabler"><i class="fas fa-link"></i></a>
 </h4>
-<p>Låt oss nu utgå från en regressionsmodell där den förklarade (beroende) variabeln <span class="math inline">\(Y\)</span> förklaras av de två förklarande (oberoende) variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>:
-<span class="math inline">\(Y_{i} = a + bX_{i} + cZ_{i} + V_{i}\)</span> (1)
-Bokstäverna <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> är konstanta koefficienter och <span class="math inline">\(V_{i}\)</span> är feltermen för observation <em>i</em>. Vi ska nu använda minstakvadratmetoden för att estimera koefficienterna <span class="math inline">\(\widehat{a}\)</span>, <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span> och därefter <span class="math inline">\(\widehat{Y}\)</span> samt <span class="math inline">\(\widehat{V}\)</span>.
+<p>Låt oss nu utgå från en regressionsmodell där den förklarade (beroende) variabeln <span class="math inline">\(Y\)</span> förklaras av de två förklarande (oberoende) variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>:</p>
+<p><span class="math display">\[Y_{i} = a + bX_{i} + cZ_{i} + V_{i} \tag{1}\]</span></p>
+<p>Bokstäverna <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> är konstanta koefficienter och <span class="math inline">\(V_{i}\)</span> är feltermen för observation <em>i</em>. Vi ska nu använda minstakvadratmetoden för att estimera koefficienterna <span class="math inline">\(\widehat{a}\)</span>, <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span> och därefter <span class="math inline">\(\widehat{Y}\)</span> samt <span class="math inline">\(\widehat{V}\)</span>.
 Koefficienten <span class="math inline">\(\widehat{b}\)</span> kommer att ge oss den genomsnittliga förändringen i <span class="math inline">\(Y\)</span> som är associerad med en ökning av <span class="math inline">\(X\)</span> med en enhet, givet värdena i <span class="math inline">\(Z\)</span>. Koefficient <span class="math inline">\(\widehat{c}\)</span> visar den genomsnittliga förändringen i <span class="math inline">\(Y\)</span> som är associerad med en ökning av <span class="math inline">\(Z\)</span> med en enhet, givet värdena i <span class="math inline">\(X\)</span>.
 I och med att vi använder båda de förklarande variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> i samma regressionsmodell kommer beräkningen visa samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>, med hänsyn till variationer i <span class="math inline">\(Z\)</span>. Samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(Z\)</span> kommer att uppskattas med hänsyn till variationer i <span class="math inline">\(X\)</span>.
 Säg som exempel, att vi vill veta vilken inverkan en utbildning har på studenternas inkomster senare i livet (jmf exemplet i <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">avsnitt 1.2</a>). Vi ställer upp en regressionsmodell av typen <span class="math inline">\(Y = \alpha_{1} + \alpha_{2}X + \epsilon\)</span> där <span class="math inline">\(Y\)</span> är inkomst och <span class="math inline">\(X\)</span> är en variabel som indikerar om en person har läst utbildningen eller inte.
@@ -143,26 +143,26 @@ Om vi vill kontrollera för ytterligare andra fenomen kan vi lägga till fler f�
 <h4>
 <span class="header-section-number">35.0.2.2</span> Minstakvadratroten med tre variabler<a class="anchor" aria-label="anchor" href="#minstakvadratroten-med-tre-variabler"><i class="fas fa-link"></i></a>
 </h4>
-<p>Låt oss återvända till regressionsmodellen i ekvation 1. Precis som när vi endast hade en förklarande variabel i regressionsmodellen ska vi nu, när vi har två förklarande variabler, hitta de värden för de konstanta koefficienterna <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> som minimerar de kvadrerade residualerna <span class="math inline">\(\sum_{}^{}{\widehat{V}}^{2}\)</span>. Vi kan därför beskriva vår beräkning som ett minimeringsproblem:
-<span class="math inline">\(\ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}\ = \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span> (2)
-Predikterade <span class="math inline">\(\widehat{Y}\)</span> kan vi utifrån vår regressionsmodell definiera som:
-<span class="math inline">\(\widehat{Y_{i}} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i}\)</span> (3)
-Denna definition av <span class="math inline">\(\widehat{Y}\)</span> kan vi sätta in i vårt minimeringsproblem:
-<span class="math inline">\(\min_{\widehat{a},\widehat{b},\widehat{c}}{\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}} = \min_{\widehat{a},\widehat{b},\widehat{c}}{\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}} = \ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)^{2}\)</span> (4)
-I denna ekvation känner vi till <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>, eftersom detta är våra observerade data. Vi har tre faktorer att ta hänsyn till i form av de tre konstanterna <span class="math inline">\(\widehat{a}\)</span>, <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>.
-Vi beräknar förstagradsvillkoren genom att derivera uttrycket i ekvation 4 med hänsyn till <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> samt <span class="math inline">\(c\)</span> var för sig och sätta respektive resultat lika med 0. Eftersom vi har tre faktorer får vi följande tre resultat:
-<span class="math inline">\(\frac{\partial}{\partial\widehat{a}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}} \right) = \sum_{}^{}{- 2\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)}\)</span> (5)</p>
+<p>Låt oss återvända till regressionsmodellen i ekvation 1. Precis som när vi endast hade en förklarande variabel i regressionsmodellen ska vi nu, när vi har två förklarande variabler, hitta de värden för de konstanta koefficienterna <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> som minimerar de kvadrerade residualerna <span class="math inline">\(\sum_{}^{}{\widehat{V}}^{2}\)</span>. Vi kan därför beskriva vår beräkning som ett minimeringsproblem:</p>
+<p><span class="math display">\[\ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}\ = \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{2}\]</span></p>
+<p>Predikterade <span class="math inline">\(\widehat{Y}\)</span> kan vi utifrån vår regressionsmodell definiera som:</p>
+<p><span class="math display">\[\widehat{Y_{i}} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} \tag{3}\]</span></p>
+<p>Denna definition av <span class="math inline">\(\widehat{Y}\)</span> kan vi sätta in i vårt minimeringsproblem:</p>
+<p><span class="math display">\[\min_{\widehat{a},\widehat{b},\widehat{c}}{\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}} = \min_{\widehat{a},\widehat{b},\widehat{c}}{\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}} = \ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)^{2} \tag{4}\]</span></p>
+<p>I denna ekvation känner vi till <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>, eftersom detta är våra observerade data. Vi har tre faktorer att ta hänsyn till i form av de tre konstanterna <span class="math inline">\(\widehat{a}\)</span>, <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>.
+Vi beräknar förstagradsvillkoren genom att derivera uttrycket i ekvation 4 med hänsyn till <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> samt <span class="math inline">\(c\)</span> var för sig och sätta respektive resultat lika med 0. Eftersom vi har tre faktorer får vi följande tre resultat:</p>
+<p><span class="math display">\[\frac{\partial}{\partial\widehat{a}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}} \right) = \sum_{}^{}{- 2\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)} \tag{5}\]</span></p>
 <p><span class="math display">\[\frac{\partial}{\partial\widehat{b}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}} \right) = \sum_{}^{}{- 2X_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)}\]</span></p>
 <p><span class="math display">\[\frac{\partial}{\partial\widehat{c}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}} \right) = \sum_{}^{}{- 2Z_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)}\]</span></p>
-<p>På liknande sätt som vi gjorde i <a href="https://www.dropbox.com/scl/fi/v0a5z69slwsy7pe20fp7d/3-4-H-rled-estimatorerna.docx?rlkey=kdu3tyfzbzhxk9o1g4xhf17x4&amp;dl=0">avsnitt 3.4</a> kan vi sätta första villkoret lika med 0 och lösa ut en definition för <span class="math inline">\(\widehat{a}\)</span>:
-<span class="math inline">\(0 = - 2\sum_{}^{}Y + \sum_{}^{}â + \sum_{}^{}\widehat{b}X_{i} + \sum_{}^{}{\widehat{c}Z_{i}}\)</span> (6)</p>
+<p>På liknande sätt som vi gjorde i <a href="https://www.dropbox.com/scl/fi/v0a5z69slwsy7pe20fp7d/3-4-H-rled-estimatorerna.docx?rlkey=kdu3tyfzbzhxk9o1g4xhf17x4&amp;dl=0">avsnitt 3.4</a> kan vi sätta första villkoret lika med 0 och lösa ut en definition för <span class="math inline">\(\widehat{a}\)</span>:</p>
+<p><span class="math display">\[0 = - 2\sum_{}^{}Y + \sum_{}^{}â + \sum_{}^{}\widehat{b}X_{i} + \sum_{}^{}{\widehat{c}Z_{i}} \tag{6}\]</span></p>
 <p><span class="math display">\[n\widehat{a} = nY - \widehat{b}nX_{i} - \widehat{c}nZ_{i}\]</span></p>
 <p><span class="math display">\[\widehat{a} = \overline{Y} - \widehat{b}\overline{X} - \widehat{c}\overline{Z}\]</span></p>
 <p>Koefficient <span class="math inline">\(\widehat{a}\)</span> är en funktion av observationerna i alla tre variabler i regressionsmodellen: <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>.
 Härifrån kan vi fortsätta lösa ut lutningskoefficienterna <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. Här nöjer vi oss dock med att enbart jämföra slutresultaten, alltså deras estimatorer, och hoppar över själva härledningarna.
 För att estimera lutningskoefficienterna med tre variabler behöver vi mer komplexa formler än tidigare. Oroa dig inte om formeln ser skrämmande ut. Poängen är att förstå principen här, nämligen att varje koefficient beräknas med hänsyn till de andra variablerna i regressionsmodellen.
-Ekvationerna nedan beskriver estimatorerna för lutningskoefficienterna <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. För att komprimera algebran skriver vi <span class="math inline">\(\widetilde{X_{i}} = X_{i} - \overline{X}\)</span> och motsvarande för <span class="math inline">\(\widetilde{Y_{i}}\)</span> och <span class="math inline">\(\widetilde{Z_{i}}\)</span>. Detta innebär att koefficienternas estimatorer beskrivs utifrån observationernas avvikelser från respektive medelvärde:
-<span class="math inline">\(\widehat{b} = \frac{\left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{X_{i}}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{Z_{i}}} \right)\left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)}{\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)^{2}}\)</span> (7)</p>
+Ekvationerna nedan beskriver estimatorerna för lutningskoefficienterna <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. För att komprimera algebran skriver vi <span class="math inline">\(\widetilde{X_{i}} = X_{i} - \overline{X}\)</span> och motsvarande för <span class="math inline">\(\widetilde{Y_{i}}\)</span> och <span class="math inline">\(\widetilde{Z_{i}}\)</span>. Detta innebär att koefficienternas estimatorer beskrivs utifrån observationernas avvikelser från respektive medelvärde:</p>
+<p><span class="math display">\[\widehat{b} = \frac{\left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{X_{i}}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{Z_{i}}} \right)\left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)}{\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)^{2}} \tag{7}\]</span></p>
 <p><span class="math display">\[\widehat{c} = \frac{\left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{Z_{i}}} \right)\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{X}} \right)\left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)}{\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)^{2}}\]</span></p>
 <p>Alla tre koefficienterna <span class="math inline">\(\widehat{a}\)</span>, <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span> beror på de observerade värdena i de tre variablerna <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>. Detta kan vi se eftersom alla tre variablerna ingår i respektive ekvation (estimator).
 Detta innebär att även om <span class="math inline">\(\widehat{b}\)</span> mäter samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är <span class="math inline">\(\widehat{b}\)</span> en funktion av både <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>. Och trots att lutningskoefficienten <span class="math inline">\(\widehat{c}\)</span> mäter samvariationen mellan variablerna <span class="math inline">\(Y\)</span> och <span class="math inline">\(Z\)</span> är även <span class="math inline">\(\widehat{c}\)</span> en funktion av observationer i alla tre variablerna <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>.</p>
@@ -185,124 +185,120 @@ Det korrekta resultatet får vi inte förrän vi inkluderar <span class="math in
 <p><strong>Tabell 1: Variablerna Y, X och Z med lite beräkningar</strong></p>
 <hr>
 <p><span class="math display">\[i\]</span></p>
-<p><span class="math display">\[Y_{i}\]</span></p>
-<p><span class="math display">\[X_{i}\]</span></p>
-<p><span class="math display">\[Z_{i}\]</span></p>
-<p><span class="math display">\[\widetilde{Y_{i}}\]</span></p>
-<p><span class="math display">\[\widetilde{X_{i}}\]</span></p>
-<p><span class="math display">\[\widetilde{Z_{i}}\]</span></p>
-<p><span class="math display">\[\widetilde{Y_{i}}\widetilde{X_{i}}\]</span></p>
-<p><span class="math display">\[\widetilde{Y_{i}}\widetilde{Z_{i}}\]</span></p>
-<p><span class="math display">\[\widetilde{X_{i}}\widetilde{Z_{i}}\]</span></p>
-<p><span class="math display">\[\widetilde{{X_{i}}^{2}}\]</span></p>
-<p><span class="math display">\[\widetilde{{Z_{i}}^{2}}\]</span></p>
-<div class="inline-table"><table style="width:100%;" class="table table-sm">
-<colgroup>
-<col width="7%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="7%">
-<col width="7%">
-<col width="7%">
-<col width="11%">
-<col width="11%">
-<col width="11%">
-<col width="9%">
-<col width="9%">
-</colgroup>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="right">
+<span class="math inline">\(Y_{i}\)</span> <span class="math inline">\(X_{i}\)</span> <span class="math inline">\(Z_{i}\)</span>
+</th>
+<th align="right">
+<span class="math inline">\(\widetilde{Y_{i}}\)</span> $</th>
+<th>{X_{i}}$ <span class="math inline">\(\widetilde{Z_{i}}\)</span> $\</th>
+<th>widetilde{Y_{i}}$</th>
+<th align="right">
+<span class="math inline">\(\widetilde{Y_{i}}\widetilde{Z_{i}}\)</span> $</th>
+<th>ilde{X_{i}}$ $\widetilde{{X_{</th>
+<th align="left">i}}^{2}}$ <span class="math inline">\(\widetilde{{Z_{i}}^{2}}\)</span>
+</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">1
-2
-3
-4
-Medel</td>
-<td align="center">3
-2
-5
-4
-3,5</td>
-<td align="center">3
-4
-6
-7
-5</td>
-<td align="center">1
-4
-0
-1
-1,5</td>
-<td align="center">–0,5
-–1,5
-1,5
-0,5</td>
-<td align="center">–2
--1
-1
-2</td>
-<td align="center">–0,5
-2,5
-–1,5
-0,5</td>
-<td align="center">1
-1,5
-1,5
-1</td>
-<td align="center">0,25
-–3,75
-–2,25
-–0,25</td>
-<td align="center">1
-–2,5
-–1,5
-–1</td>
-<td align="center">4
-1
-1
-4</td>
-<td align="center">0,25
-6,25
-2,25
-0,25</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td>3</td>
+<td>1</td>
+<td align="right">–0,5</td>
+<td>–2</td>
+<td align="left">–0,5</td>
+<td>1</td>
+<td>0,25</td>
+<td>1</td>
+<td>4</td>
+<td>0,25</td>
 </tr>
 <tr class="even">
-<td align="left">_{}^{}{}$$</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td>4</td>
+<td>4</td>
+<td align="right">–1,5</td>
+<td>-1</td>
+<td align="left">2,5</td>
+<td>1,5</td>
+<td>–3,75</td>
+<td>–2,5</td>
+<td>1</td>
+<td>6,25</td>
 </tr>
 <tr class="odd">
+<td align="right">3</td>
+<td align="right">5</td>
+<td>6</td>
+<td>0</td>
+<td align="right">1,5</td>
+<td>1</td>
+<td align="left">–1,5</td>
+<td>1,5</td>
+<td>–2,25</td>
+<td>–1,5</td>
+<td>1</td>
+<td>2,25</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">4</td>
+<td>7</td>
+<td>1</td>
+<td align="right">0,5</td>
+<td>2</td>
+<td align="left">0,5</td>
+<td>1</td>
+<td>–0,25</td>
+<td>–1</td>
+<td>4</td>
+<td>0,25</td>
+</tr>
+<tr class="odd">
+<td align="right">Medel</td>
+<td align="right">3,5</td>
+<td>5</td>
+<td>1,5</td>
+<td align="right"></td>
+<td></td>
 <td align="left"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">5</td>
-<td align="center">–6</td>
-<td align="center">–4</td>
-<td align="center">10</td>
-<td align="center">9</td>
-<td align="center"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="right"><span class="math inline">\(\sum_{}^{}{}\)</span></td>
+<td align="right"></td>
+<td></td>
+<td></td>
+<td align="right"></td>
+<td></td>
+<td align="left"></td>
+<td>5</td>
+<td>–6</td>
+<td>–4 1</td>
+<td>0 9</td>
+<td></td>
 </tr>
 </tbody>
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: <span class="math inline">\(\widetilde{Y_{i}} = Y_{i} - \overline{Y}\)</span> och motsvarande för <span class="math inline">\(\widetilde{X_{i}}\)</span> och <span class="math inline">\(\widetilde{Z_{i}}\)</span>.
-I <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a> använde vi variablerna <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> för att estimera regressionsmodellen <span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> och fann då att <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>. Nu ska vi estimera koefficienterna för följande regressionsmodell:
-<span class="math inline">\(Y_{i} = a + bX_{i} + cZ_{i} + V_{i}\)</span> (8)
-där <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> är variablerna, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> är koefficienterna vi ska estimera och <span class="math inline">\(V\)</span> är feltermen. I ekvation 7 har vi definitionerna för hur vi kan estimera <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. Utifrån uppgifterna i tabell 1 kan vi nu beräkna följande estimat för koefficienterna:
-<span class="math inline">\(\widehat{b} = \frac{(5)(9) - ( - 6)( - 4)}{(10)(9) - ( - 4)^{2}} \approx 0,28\)</span> (9)</p>
+I <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a> använde vi variablerna <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> för att estimera regressionsmodellen <span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> och fann då att <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>. Nu ska vi estimera koefficienterna för följande regressionsmodell:</p>
 </div>
+<p><span class="math display">\[Y_{i} = a + bX_{i} + cZ_{i} + V_{i} \tag{8}\]</span></p>
+<p>där <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> är variablerna, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> är koefficienterna vi ska estimera och <span class="math inline">\(V\)</span> är feltermen. I ekvation 7 har vi definitionerna för hur vi kan estimera <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. Utifrån uppgifterna i tabell 1 kan vi nu beräkna följande estimat för koefficienterna:</p>
+<p><span class="math display">\[\widehat{b} = \frac{(5)(9) - ( - 6)( - 4)}{(10)(9) - ( - 4)^{2}} \approx 0,28 \tag{9}\]</span></p>
 <p><span class="math display">\[\widehat{c} = \frac{( - 6)(10) - (5)( - 4)}{(10)(9) - ( - 4)^{2}} \approx - 0,54\]</span></p>
 </div>
 <div id="vad-blev-det-för-skillnad" class="section level4" number="35.0.2.5">
@@ -310,47 +306,23 @@ där <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</sp
 <span class="header-section-number">35.0.2.5</span> Vad blev det för skillnad?<a class="anchor" aria-label="anchor" href="#vad-blev-det-f%C3%B6r-skillnad"><i class="fas fa-link"></i></a>
 </h4>
 <p>När vi estimerade regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> fann vi att <span class="math inline">\(\widehat{b} = 0,5\)</span>. När vi nu lade till variabeln <span class="math inline">\(Z\)</span> i regressionsmodellen ser vi hur resultatet för lutningskoefficienten <span class="math inline">\(\widehat{b}\)</span> går från 0,5 till 0,3. Resultaten för <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span> använder vi för att estimera <span class="math inline">\(\widehat{a}\)</span>:
-<span class="math inline">\(\widehat{a} = 3,5 - \widehat{b}*5 - \widehat{c}*1,5\)</span> (10)$ $</p>
-<p><span class="math display">\[= 3,5 - 0,28*5 - ( - 0,54)*1,5 \approx 2,89\]</span></p>
-<p>Vi kan sammanfatta våra estimerade koefficienter genom att sätta in resultaten i vår regressionsmodell:
-<span class="math inline">\(Y_{i} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} + V_{i} = 2,89 + 0,28X_{i} - 0,54Z_{i} + V_{i}\)</span> (11)
-Nu kan vi även estimera predikterade <span class="math inline">\(\widehat{Y_{i}}\)</span> och residualen <span class="math inline">\(\widehat{V_{i}}\)</span>, vilket sammanfattas i tabell 2 med avrundade resultat.
-————————————————————————————————————————————————————————————————————————————-
-Observation <span class="math inline">\(i\)</span></p>
-<p><span class="math display">\[Y_{i}\]</span></p>
-<p><span class="math display">\[X_{i}\]</span></p>
-<p><span class="math display">\[Z_{i}\]</span></p>
-<p><span class="math display">\[\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} - 0,54Z_{i}\]</span></p>
-<div class="inline-table"><table class="table table-sm"><tbody>
-<tr class="odd">
-<td align="left">1</td>
-<td align="center">3</td>
-<td align="center">3</td>
-<td align="center">1</td>
-<td align="center">3,2</td>
-</tr>
-<tr class="even">
-<td align="left">2</td>
-<td align="center">2</td>
-<td align="center">4</td>
-<td align="center">4</td>
-<td align="center">1,86</td>
-</tr>
-<tr class="odd">
-<td align="left">3</td>
-<td align="center">5</td>
-<td align="center">6</td>
-<td align="center">0</td>
-<td align="center">4,59</td>
-</tr>
-<tr class="even">
-<td align="left">4</td>
-<td align="center">4</td>
-<td align="center">7</td>
-<td align="center">1</td>
-<td align="center">4,34</td>
-</tr>
-</tbody></table></div>
+<span class="math inline">\(\widehat{a} = 3,5 - \widehat{b}*5 - \widehat{c}*1,5\)</span> (10)$ $<span class="math inline">\(= 3,5 - 0,28*5 - ( - 0,54)*1,5 \approx 2,89\)</span>
+Vi kan sammanfatta våra estimerade koefficienter genom att sätta in resultaten i vår regressionsmodell:</p>
+<p><span class="math display">\[Y_{i} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} + V_{i} = 2,89 + 0,28X_{i} - 0,54Z_{i} + V_{i} \tag{11}\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="center">kan vi även estimera predikterade <span class="math inline">\(\widehat{Y_{i}}\)</span> och residualen <span class="math inline">\(\widehat{V_{i}}\)</span>, vilket sammanfattas i tabell 2 med avrundade resultat.</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="center">Observation <span class="math inline">\(i\)</span> <span class="math inline">\(Y_{i}\)</span> <span class="math inline">\(X_{i}\)</span> <span class="math inline">\(Z_{i}\)</span> <span class="math inline">\(\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} - 0,54Z_{i}\)</span>
+</td>
+</tr></tbody>
+</table></div>
+<p>1 3 3 1 3,2
+2 2 4 4 1,86
+3 5 6 0 4,59
+4 4 7 1 4,34
+————————————————————————————————————————————————————————————————————————————-</p>
 </div>
 <div id="ett-försök-att-illustrera-resultatet-i-diagram" class="section level4" number="35.0.2.6">
 <h4>

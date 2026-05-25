@@ -266,7 +266,7 @@ Inkomsterna i tabellen är beskrivna i kronor per konsumtionsenhet. Kronor per k
 Decilgrupp 1 hade år 1995 i genomsnitt 63 200 kr. Decilgrupp 10 hade samma år en genomsnittlig inkomst på 311 900 kr. Nu ska vi skapa ett index vardera för de två decilgrupperna 1 och 10 med 1995 som basår. Indexvärdet för respektive grupp kommer år 1995 att bli 100.
 Tabell 3 visar resultatet. Inkomsterna för decilgrupp 1 ökade med 57,6 % och för decilgrupp 10 med 157,6 %. Väljer vi ett annat basår blir resultaten annorlunda.</p>
 </div>
-<p><strong>Table 3: Indexerad inkomstutveckling per decilgrupp</strong></p>
+<p><strong>Tabell 3: Indexerad inkomstutveckling per decilgrupp</strong></p>
 <div class="inline-table"><table style="width:99%;" class="table table-sm">
 <colgroup>
 <col width="8%">
@@ -278,68 +278,41 @@ Tabell 3 visar resultatet. Inkomsterna för decilgrupp 1 ökade med 57,6 % och f
 <th align="left"><strong>Decilgrupp 1</strong></th>
 <th align="left"><strong>Decilgrupp 10</strong></th>
 </tr></thead>
-<tbody>
-<tr class="odd">
-<td align="right"><strong>1995</strong></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="right"></td>
-<td align="left">{63,2}*100 = 100$$</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="right">\frac{311,9</td>
-<td align="left">}{311,9}*100 = 100$$</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
+<tbody><tr class="odd">
 <td align="right">
+<strong>1995</strong>
 <strong>2000</strong>
 <strong>2005</strong>
 <strong>2010</strong>
 <strong>2015</strong>
 <strong>2019</strong>
 </td>
-<td align="left">117,7
+<td align="left">
+<span class="math inline">\(\frac{63,2}{63,2}*100 = 100\)</span> <span class="math inline">\(\frac{311,9}{311,9}*100 =
+117,7
 133,7
 131,8
-154,9</td>
-<td align="left">166,5
+154,9\)</span><em>100 = 157,6$ $</em>100 =</td>
+<td align="left">100$
+166,5
 164
 198,6
-256,1</td>
-</tr>
-<tr class="odd">
-<td align="right"></td>
-<td align="left">{63,2}*100 = 157,6$$</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="right">\frac{803,3</td>
-<td align="left">}{311,9}*100 = 257,6$$</td>
-<td align="left"></td>
-</tr>
-</tbody>
+256,1
+257,6$</td>
+</tr></tbody>
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: Inkomstindex för decilgrupp 1 och 10, baserat på data presenterade ovan.</p>
 </div>
 </div>
-<div id="section" class="section level3" number="6.0.4">
+<div id="prisindex-och-deflatering" class="section level3" number="6.0.4">
 <h3>
-<span class="header-section-number">6.0.4</span> <a class="anchor" aria-label="anchor" href="#section"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="prisindex-och-deflatering" class="section level3" number="6.0.5">
-<h3>
-<span class="header-section-number">6.0.5</span> Prisindex och deflatering<a class="anchor" aria-label="anchor" href="#prisindex-och-deflatering"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.0.4</span> Prisindex och deflatering<a class="anchor" aria-label="anchor" href="#prisindex-och-deflatering"><i class="fas fa-link"></i></a>
 </h3>
 <p>Ett <em>prisindex</em> visar den indexerade prisutvecklingen för en eller flera varor eller tjänster. Ett prisindex som ofta används är <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-konsumtion/konsumentprisindex/konsumentprisindex-kpi/">Konsumentprisindex</a> (KPI) som Statistiska centralbyrån (SCB) beräknar. För att räkna ut KPI samlar SCB in information om pris och andra egenskaper på en stor mängd olika varor och tjänster. Därefter beräknar SCB ett medelvärde för en hypotetisk varukorg. Varukorgen är baserad på vad människor i Sverige spenderar pengar på.
 Om varorna och tjänsterna ändras, till exempel om en ny mobiltelefon lanseras med ny kvalitet, så justeras KPI-beräkningen för detta. Idealiskt sett mäter därför KPI endast rena prisförändringar. Diagram 1 visar utvecklingen av KPI mellan 1980—2024. Diagrammet visar hur konsumentprisindex under denna period ökade med från nivå 100 till lite mer än 400. En ökning med över 300 procent.</p>
 <p><strong>Diagram 1: Konsumentprisindex för Sverige 1980—2022</strong></p>
-<div class="inline-figure"><img src="img/k1-2-2-image1.png" style="width:4.61905in;height:2.53941in"></div>
+<div class="inline-figure"><img src="img/k1-2-2-image1.png"></div>
 <div class="fig-caption">
 <p>Förklaring: Data från <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-konsumtion/konsumentprisindex/konsumentprisindex-kpi/">SCB</a>. Diagrammet visar konsumentprisindex för Sverige år 1980–2024. Index 100 är satt till år 1980. Diagrammet visar hur konsumentpriserna under perioden i genomsnitt ökade med lite mer än 300 %.
 Säg att en vara kostar 100 kr år 1 och vi tjänar 100 kr i timmen. Året därpå har alla priser och löner fördubblats. År 2 kostar varan 200 kr och vi tjänar 200 kr i timmen.
@@ -350,15 +323,16 @@ Det prisindex som används för att dividera priserna med kallas för <em>deflat
 <p><span class="math display">\[Realt\ pris_{t} = p_{t}\left( \frac{KPI_{bas}}{KPI_{t}} \right)\]</span></p>
 <p>där <span class="math inline">\(p_{t}\)</span> är det nominella priset vi vill deflatera, till exempel priset på en vara eller tjänst. <span class="math inline">\(KPI_{bas}\)</span> är KPI-värdet för det år vi vill använda som basår och <span class="math inline">\(KPI_{t}\)</span> är KPI-värdet för samma år som det aktuella nominella priset vi deflaterar.
 Om priset på en vara ökar långsammare än priset på andra saker har denna vara blivit billigare relativt andra saker. Varans reala pris har minskat. Om priset på de varor och tjänster vi köper ökar långsammare än våra löner säger vi att vår våra reallöner, och vår reala köpkraft, har ökat.</p>
-<div id="inflation-och-löner-historiskt" class="section level4" number="6.0.5.1">
+<div id="inflation-och-löner-historiskt" class="section level4" number="6.0.4.1">
 <h4>
-<span class="header-section-number">6.0.5.1</span> Inflation och löner historiskt<a class="anchor" aria-label="anchor" href="#inflation-och-l%C3%B6ner-historiskt"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.0.4.1</span> Inflation och löner historiskt<a class="anchor" aria-label="anchor" href="#inflation-och-l%C3%B6ner-historiskt"><i class="fas fa-link"></i></a>
 </h4>
 <p>Diagram 2 visar tre tidsserier: den genomsnittliga prisnivån, genomsnittliga nominell månadslön och genomsnittlig real månadslön i Sverige mellan åren 2004 och 2022. Alla tre tidsserierna är indexerade och har värdet 100 för år 2004.
 Sedan 2004 har lönerna ökat nominellt med lite mer än 60 procent, vilket vi kan se på den gröna linjen. Från indexvärde 100 till lite över 160. Priserna, den röda linjen har under samma period ökat med i genomsnitt cirka 35 procent, från 100 till 135. För att beräkna den reala lönenivån i 2022 års priser tar vi för varje år <em>t</em>:
 Reallön år <em>t</em> = nominell lön år <em>t</em> * ( prisnivån 2022 / prisnivån år <em>t</em>)
-Detta ger oss den blå linjen. Där kan vi se att reallönerna ökade lite mer än 20 procent under perioden. Med en nedgång 2022. Jämför vi längre tillbaka har både priser, löner och reallöner ökat mycket mer.
-<strong>Diagram 2: Priser och löner i Sverige år 2004—2022</strong> <img src="img/k1-2-2-image2.png" style="width:6in;height:3.29861in"></p>
+Detta ger oss den blå linjen. Där kan vi se att reallönerna ökade lite mer än 20 procent under perioden. Med en nedgång 2022. Jämför vi längre tillbaka har både priser, löner och reallöner ökat mycket mer.</p>
+<p><strong>Diagram 2: Priser och löner i Sverige år 2004—2022</strong></p>
+<div class="inline-figure"><img src="img/k1-2-2-image2.png"></div>
 <div class="fig-caption">
 <p>Förklaring: Data från <a href="https://scb.se/">SCB</a>. Priser = Konsumentprisindex (KPI). Nominell lön = genomsnittlig månadslön (SCB Lönestrukturstatistik). Reallön = nominell lön deflaterad med KPI. Under perioden ökade månadslönerna med i genomsnitt lite mer än 60 procent. Konsumentprisindex ökade med lite mer än 30 procent. Reallönerna ökade med i genomsnitt lite mer än 20 procent.</p>
 </div>
@@ -521,8 +495,7 @@ Detta ger oss den blå linjen. Där kan vi se att reallönerna ökade lite mer �
 <li><a class="nav-link" href="#begrepp-5"><span class="header-section-number">6.0.1</span> Begrepp</a></li>
 <li><a class="nav-link" href="#teori-5"><span class="header-section-number">6.0.2</span> Teori</a></li>
 <li><a class="nav-link" href="#inkomstindex"><span class="header-section-number">6.0.3</span> Inkomstindex</a></li>
-<li><a class="nav-link" href="#section"><span class="header-section-number">6.0.4</span></a></li>
-<li><a class="nav-link" href="#prisindex-och-deflatering"><span class="header-section-number">6.0.5</span> Prisindex och deflatering</a></li>
+<li><a class="nav-link" href="#prisindex-och-deflatering"><span class="header-section-number">6.0.4</span> Prisindex och deflatering</a></li>
 </ul>
 </li></ul>
 

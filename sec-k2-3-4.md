@@ -12,18 +12,24 @@ Varför bry sig om härledningen?
 
 #### Utgångspunkter
 För regressionsmodellen $Y_{i} = a + bX_{i} + V_{i}$ där $Y_{i}$ och $X_{i}$ är variabler och $V_{i}$ är felterm, introducerade vi estimatorer för koefficienterna $\widehat{a}$ och $\widehat{b}$ i avsnitt 2.5:
-$\widehat{a} = \overline{Y} - \widehat{b}\overline{X}$ (1)
+
+
+$$\widehat{a} = \overline{Y} - \widehat{b}\overline{X} \tag{1}$$
+
 $\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}}$
 Nu ska vi gå igenom hur vi kan härleda estimatorerna. Minstakvadratmetoden låter oss definiera estimatorerna $\widehat{a}$ och $\widehat{b}$ så att vi minimerar summan av de kvadrerade residualerna
-$\sum_{i}^{}{\widehat{V}}_{i}^{2} = \sum_{}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$ (2)
+
+
+$$\sum_{i}^{}{\widehat{V}}_{i}^{2} = \sum_{}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{2}$$
+
 Estimatorerna kan därför härledas ur ett minimeringsproblem. Om du känner dig osäker på maximeringsproblem och minimeringsproblem, se Mattebokens avsnitt om [största och minsta värde under matte 3](https://www.matteboken.se/lektioner/matte-3/derivatan-och-grafen/storsta-och-minsta-varde#!/).
 Summan av de kvadrerade residualerna blir:
-$\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = {\widehat{V}}_{i}^{2} + {\widehat{V}}_{i}^{2} + \ldots + {\widehat{V}}_{i}^{2}$ (3)$ $
-
-$${= \left( Y_{1} - \widehat{Y_{1}} \right)^{2} + \left( Y_{2} - \widehat{Y_{2}} \right)^{2} + \ldots + \left( Y_{n} - \widehat{Y_{n}} \right)^{2} }{= \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}$$
-
+$\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = {\widehat{V}}_{i}^{2} + {\widehat{V}}_{i}^{2} + \ldots + {\widehat{V}}_{i}^{2}$ (3)$ $${= \left( Y_{1} - \widehat{Y_{1}} \right)^{2} + \left( Y_{2} - \widehat{Y_{2}} \right)^{2} + \ldots + \left( Y_{n} - \widehat{Y_{n}} \right)^{2} }{= \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}$
 där n är antal observationer, $\widehat{Y}$ är predikterade $Y$. För att kunna skatta $\widehat{Y} = \widehat{a} + \widehat{b}X$ behöver vi estimera $\widehat{a}$ och $\widehat{b}$. Vi börjar med att sätta in denna definition av $\widehat{Y}$ i uttrycket från ekvation 3:
-$\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$ (4)
+
+
+$$\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{4}$$
+
 
 
 $$= \sum_{i = 1}^{n}\left( Y_{i} - \left( \widehat{a} + \widehat{b}X_{i} \right) \right)^{2}$$
@@ -34,30 +40,45 @@ $$= \sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)^{2}$$
 
 #### Minimera summan av kvadrerade residualerna
 Nu har vi en ekvation där summan av kvadrerade residualerna $\sum_{i}^{}\widehat{{V_{i}}^{2}}$ är en funktion av estimerade $\widehat{a}$ och $\widehat{b}$. Det är denna funktion som vi ska minimera med hänsyn till $\widehat{a}$ och $\widehat{b}$, vilket vi kan skriva som ett minimeringsproblem:
-$\min_{\text{m.h.t. }\widehat{a},\widehat{b}}{\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2}} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)^{2}$ (5)
+
+
+$$\min_{\text{m.h.t. }\widehat{a},\widehat{b}}{\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2}} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)^{2} \tag{5}$$
+
 Vi deriverar högerledet med hänsyn till $\widehat{a}$ och $\widehat{b}$. Detta ger oss två ekvationer som kallas \"förstagradsvillkor\" (eller \"första ordningens villkor\"), alltså villkor som måste uppfyllas vid en minimumpunkt eller maximumpunkt.
-$\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{a}}\' = - 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0$ (6)
+
+
+$$\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{a}}\' = - 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0 \tag{6}$$
+
 $\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{b}}\' = - 2\sum_{i = 1}^{n}{X_{i}(Y_{i} - \widehat{a} - \widehat{b}X_{i})} = 0$
 där båda resultaten uppstår genom att vi deriverar parentesen (flyttar ned exponent 2) och deriverar innehållet i respektive parentes. När vi deriverar med hänsyn till $\widehat{a}$ får vi --1. När vi deriverar med hänsyn till $\widehat{b}$ får vi $--X_{i}$. Vi sätter -2 till vänster om summeringstecknet eftersom dessa saker inte berörs av summeringen.
 Notera att det första villkoret i ekvation 6 innebär att $\sum_{i}^{}\widehat{V_{i}} = 0$ och det andra villkoret kan beskrivas som: $\sum_{}^{}X_{i}\widehat{V_{i}} = 0$. Detta kommer vi att ha användning av längre fram.
 
 #### Lösa ut $\widehat{a}$ och $\widehat{b}$
 Från de två förstagradsvillkoren i ekvation 6 kan vi lösa ut $\widehat{a}$ och $\widehat{b}$. Vi börjar med det första villkoret:
-$- 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0$ (7)
+
+
+$$- 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0 \tag{7}$$
+
 $( - 2)\sum_{i = 1}^{n}{Y_{i} - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}} = 0$
 Eftersom alla termer är multiplicerade med -2 kan vi stryka denna faktor. Eftersom $\widehat{a}$ är konstant över alla observationer är termen $\sum_{i}^{n}\widehat{a}$ samma sak som antal observationer gånger $\widehat{a}$: $\sum_{i}^{n}\widehat{a} = n\widehat{a}$. Vi kan nu skriva:
-$0 = ( - 2)\sum_{i = 1}^{n}{Y_{i}\ - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}}$ (8)$ $
-
-$${0 = \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}\widehat{a}\sum_{i = 1}^{n}{\widehat{b}X_{i}} }{0 = \sum_{i = 1}^{n}Y_{i} - n\widehat{a} - \sum_{i = 1}^{n}{\widehat{b}X_{i}} }{n\widehat{a} = \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}{\widehat{b}X_{i}}\ }$$
-
+$0 = ( - 2)\sum_{i = 1}^{n}{Y_{i}\ - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}}$ (8)$ $${0 = \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}\widehat{a}\sum_{i = 1}^{n}{\widehat{b}X_{i}} }{0 = \sum_{i = 1}^{n}Y_{i} - n\widehat{a} - \sum_{i = 1}^{n}{\widehat{b}X_{i}} }{n\widehat{a} = \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}{\widehat{b}X_{i}}\ }$
 Vi dividerar med $n$ så att termen längst till höger blir $\frac{1}{n}\sum_{}^{}{\widehat{b}X_{i}}$. Medelvärdet för $X$ kan skrivas $\overline{X} = \frac{1}{n}\sum_{i}^{n}X_{i}$ vilket ger:
-$\widehat{a} = \frac{1}{n}\sum_{i = 1}^{n}Y_{i} - \frac{1}{n}\sum_{i = 1}^{n}{\widehat{b}X}$ (9)
+
+
+$$\widehat{a} = \frac{1}{n}\sum_{i = 1}^{n}Y_{i} - \frac{1}{n}\sum_{i = 1}^{n}{\widehat{b}X} \tag{9}$$
+
 $\widehat{a} = \overline{Y} - \widehat{b}\overline{X}$
 Nu har vi ett uttryck för $\widehat{a}$. För att härleda $\widehat{b}$ börjar vi med det andra förstagradsvillkoret i ekvation 7:
-$0 = \sum_{i = 1}^{n}{- 2x_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)}$ (10)
+
+
+$$0 = \sum_{i = 1}^{n}{- 2x_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)} \tag{10}$$
+
 $= \sum_{i = 1}^{n}X_{i}Y_{i} - \sum_{i = 1}^{n}X_{i}\widehat{a} - \sum_{i = 1}^{n}X_{i}\widehat{b}X_{i}$
 Eftersom konstanterna inte summeras flyttar vi dessa till vänster om summatecknen. I termen längst till höger har vi $x_{i}*x_{i} = x_{i}^{2}$. Vi byter ut $\widehat{a}$ mot definitionen från ekvation 9:
-$0 = \sum_{i = 1}^{n}X_{i}Y_{i} - \widehat{a}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}X_{i}$ (11)
+
+
+$$0 = \sum_{i = 1}^{n}X_{i}Y_{i} - \widehat{a}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}X_{i} \tag{11}$$
+
 
 
 $$= \sum_{i = 1}^{n}X_{i}Y_{i} - \widehat{a}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}^{2}$$
@@ -75,13 +96,19 @@ $$= \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i} + \widehat{b}
 $$= \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i} - \widehat{b}\left( \sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} \right)$$
 
 Vi flyttar över $\widehat{b}$ till vänstersidan av likhetstecknet:
-$\widehat{b}\left( \sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} \right) = \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i}$ (12)
+
+
+$$\widehat{b}\left( \sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} \right) = \sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i} \tag{12}$$
+
 
 
 $$\widehat{b} = \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}X_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i}}$$
 
 Nu har vi ett uttryck för $\widehat{b}$. För att visa att detta är samma som uttrycket i ekvation 1 och [avsnitt 2.5](https://www.dropbox.com/scl/fi/fdixvbrl3fwqwuaknz604/2-5-Felterm-residual-och-ett-r-kneexempel.docx?rlkey=qerqdzrn6e5hejx1it85qrtun&st=33su91fr&dl=0) kan vi skriva om täljaren och nämnaren. Detta ger:
-$\widehat{b} = \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}Y_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i}}$ (13)
+
+
+$$\widehat{b} = \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}Y_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i}} \tag{13}$$
+
 
 
 $$= \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i}^{}X_{i} - \overline{X}\sum_{i = 1}^{n}Y_{i} + \overline{X}\sum_{i = 1}^{n}Y_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} - n\overline{X^{2}} + n\overline{X^{2}}}$$

@@ -137,132 +137,134 @@ Matematiskt innebär interaktionseffekt att vi kombinerar två eller flera av de
 <h4>
 <span class="header-section-number">40.0.2.1</span> Interaktionseffekten mellan x och z<a class="anchor" aria-label="anchor" href="#interaktionseffekten-mellan-x-och-z"><i class="fas fa-link"></i></a>
 </h4>
-<p>Låt oss utgå från följande regressionsmodell:
-<span class="math inline">\(y = a + bx + cz + \epsilon\)</span> (1)
-Observera att variablerna inte är skrivna med matriser utan i vanlig form. Modellen består av följande: <span class="math inline">\(x\)</span> och <span class="math inline">\(z\)</span> är förklarande variabler och <span class="math inline">\(y\)</span> är förklarad variabel, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> är koefficienter och <span class="math inline">\(\epsilon\)</span> är feltermen.
+<p>Låt oss utgå från följande regressionsmodell:</p>
+<p><span class="math display">\[y = a + bx + cz + \epsilon \tag{1}\]</span></p>
+<p>Observera att variablerna inte är skrivna med matriser utan i vanlig form. Modellen består av följande: <span class="math inline">\(x\)</span> och <span class="math inline">\(z\)</span> är förklarande variabler och <span class="math inline">\(y\)</span> är förklarad variabel, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> är koefficienter och <span class="math inline">\(\epsilon\)</span> är feltermen.
 Vi tror att samvariationen mellan <span class="math inline">\(y\)</span> och <span class="math inline">\(x\)</span> kan bero på vilket värde variabeln <span class="math inline">\(z\)</span> har. Det vill säga, vi vill bland annat undersöka om samvariationen mellan <span class="math inline">\(y\)</span> och <span class="math inline">\(x\)</span> ser olika ut när den tredje variabeln <span class="math inline">\(z\)</span> har höga värden, jämfört med när <span class="math inline">\(z\)</span> har låga värden. Detta kallas för en interaktionseffekt. <span class="math inline">\(z\)</span> kan också samvariera med <span class="math inline">\(y\)</span> för sig.
-Interaktionseffekt mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(z\)</span> kan vi estimera genom att skapa en ny variabel <span class="math inline">\(k = x*z\)</span>, där vi för respektive observation multiplicerar värdet i <span class="math inline">\(x\)</span> med värdet i <span class="math inline">\(z\)</span>. Den nya variabeln <span class="math inline">\(k\)</span> lägger vi till i vår regressionsmodell med en egen lutningskoefficient:
-<span class="math inline">\(y = a + bx + cz + dxz\)</span> (2)</p>
+Interaktionseffekt mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(z\)</span> kan vi estimera genom att skapa en ny variabel <span class="math inline">\(k = x*z\)</span>, där vi för respektive observation multiplicerar värdet i <span class="math inline">\(x\)</span> med värdet i <span class="math inline">\(z\)</span>. Den nya variabeln <span class="math inline">\(k\)</span> lägger vi till i vår regressionsmodell med en egen lutningskoefficient:</p>
+<p><span class="math display">\[y = a + bx + cz + dxz \tag{2}\]</span></p>
 <p><span class="math display">\[= a + bx + cz + dk\]</span></p>
 <p>Koefficient <span class="math inline">\(a\)</span>, modellens intercept, är precis som tidigare det värde som <span class="math inline">\(y\)</span> antar då alla andra variabler är lika med noll <span class="math inline">\((x = z = k = 0)\)</span>. Koefficient <span class="math inline">\(d\)</span> som är multiplicerad med <span class="math inline">\(k = xz\)</span> mäter den genomsnittliga förändring i <span class="math inline">\(y\)</span> som är associerad med en ökning av variabel <span class="math inline">\(k\)</span> med en enhet.
-Koefficient <span class="math inline">\(b\)</span> anger hur stor förändring i <span class="math inline">\(y\)</span> som är associerad med en enhet högre <span class="math inline">\(x\)</span>. För att estimera den totala samvariationen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> adderar vi koefficient <span class="math inline">\(b\)</span> med <span class="math inline">\(d*z\)</span>, eftersom variabel <span class="math inline">\(z\)</span> ingår som multiplikator i variabeln <span class="math inline">\(k\)</span>. Den totala samvariationen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> är:
-<span class="math inline">\(\frac{\Delta y}{\Delta x} = b + d*z\)</span> (3)
-där <span class="math inline">\(\Delta y\)</span> betyder förändring i variabeln <span class="math inline">\(y\)</span> och <span class="math inline">\(\Delta x\)</span> är förändring i variabeln <span class="math inline">\(x\)</span>. Bokstäverna <span class="math inline">\(b\)</span>, <span class="math inline">\(d\)</span> och <span class="math inline">\(z\)</span> har samma innebörd som i regressionsmodellen. För de värden då <span class="math inline">\(z = 0\)</span> anger <span class="math inline">\(b\)</span> den förändring i <span class="math inline">\(y\)</span> som är associerad med en ökning av <span class="math inline">\(x\)</span> med en enhet.
-På motsvarande sätt får vi den totala samvariationen mellan variabel <span class="math inline">\(z\)</span> och <span class="math inline">\(y\)</span> genom följande uttryck:
-<span class="math inline">\(\frac{\Delta y}{\Delta z} = c + d*x\)</span> (4)
-För värdena <span class="math inline">\(x = 0\)</span> anger lutningskoefficienten <span class="math inline">\(c\)</span> hur mycket <span class="math inline">\(y\)</span> ökar då <span class="math inline">\(z\)</span> ökar med 1. Låt oss illustrera interaktionseffekten med hjälp av data.</p>
+Koefficient <span class="math inline">\(b\)</span> anger hur stor förändring i <span class="math inline">\(y\)</span> som är associerad med en enhet högre <span class="math inline">\(x\)</span>. För att estimera den totala samvariationen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> adderar vi koefficient <span class="math inline">\(b\)</span> med <span class="math inline">\(d*z\)</span>, eftersom variabel <span class="math inline">\(z\)</span> ingår som multiplikator i variabeln <span class="math inline">\(k\)</span>. Den totala samvariationen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> är:</p>
+<p><span class="math display">\[\frac{\Delta y}{\Delta x} = b + d*z \tag{3}\]</span></p>
+<p>där <span class="math inline">\(\Delta y\)</span> betyder förändring i variabeln <span class="math inline">\(y\)</span> och <span class="math inline">\(\Delta x\)</span> är förändring i variabeln <span class="math inline">\(x\)</span>. Bokstäverna <span class="math inline">\(b\)</span>, <span class="math inline">\(d\)</span> och <span class="math inline">\(z\)</span> har samma innebörd som i regressionsmodellen. För de värden då <span class="math inline">\(z = 0\)</span> anger <span class="math inline">\(b\)</span> den förändring i <span class="math inline">\(y\)</span> som är associerad med en ökning av <span class="math inline">\(x\)</span> med en enhet.
+På motsvarande sätt får vi den totala samvariationen mellan variabel <span class="math inline">\(z\)</span> och <span class="math inline">\(y\)</span> genom följande uttryck:</p>
+<p><span class="math display">\[\frac{\Delta y}{\Delta z} = c + d*x \tag{4}\]</span></p>
+<p>För värdena <span class="math inline">\(x = 0\)</span> anger lutningskoefficienten <span class="math inline">\(c\)</span> hur mycket <span class="math inline">\(y\)</span> ökar då <span class="math inline">\(z\)</span> ökar med 1. Låt oss illustrera interaktionseffekten med hjälp av data.</p>
 </div>
 <div id="ett-exempel-med-data" class="section level4" number="40.0.2.2">
 <h4>
 <span class="header-section-number">40.0.2.2</span> Ett exempel med data<a class="anchor" aria-label="anchor" href="#ett-exempel-med-data"><i class="fas fa-link"></i></a>
 </h4>
 <p>I <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a> estimerade vi samvariationen mellan livslängd och inkomst för män och kvinnor i tre av Sveriges kommuner. Nu ska vi använda samma data igen men denna gång lägga till en interaktionseffekt.
-Tabell 1 beskriver våra variabler (samma som i <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a>). Vi har nu en variabel som skapas genom att multiplicera de två variablerna inkomst <span class="math inline">\(I\)</span> och kön <span class="math inline">\(K\)</span>. Den nya variabeln har rubriken “Interaktion: <span class="math inline">\(I*K\)</span>”. Eftersom <span class="math inline">\(K\)</span> är en dummy där tre av sex observationer har värdet 0 får även den nya variabeln värdet 0 i tre av sex fall.
-<strong>Tabell 1: Variablerna</strong> <span class="math inline">\(\mathbf{L}\)</span><strong>,</strong> <span class="math inline">\(\mathbf{I}\)</span><strong>,</strong> <span class="math inline">\(\mathbf{K}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{KI}\)</span>
-—————————————————————————————————————————————————————-
-Kommun, kön Livslängd, <span class="math inline">\(L\)</span> Inkomst, <span class="math inline">\(I\)</span> Kön, <span class="math inline">\(K\)</span></p>
-<p><span class="math display">\[K*I\]</span></p>
-<div class="inline-table"><table class="table table-sm"><tbody>
-<tr class="odd">
-<td align="left">Jokkmokk, kvinnor</td>
-<td align="left">81,55</td>
-<td align="left">2,07</td>
-<td align="left">0</td>
-<td align="left">0</td>
-</tr>
-<tr class="even">
-<td align="left">Jokkmokk, män</td>
-<td align="left">79,22</td>
-<td align="left">2,40</td>
-<td align="left">1</td>
-<td align="left">2,40</td>
-</tr>
-<tr class="odd">
-<td align="left">Oskarshamn, kvinnor</td>
-<td align="left">84,64</td>
-<td align="left">2,11</td>
-<td align="left">0</td>
-<td align="left">0</td>
-</tr>
-<tr class="even">
-<td align="left">Oskarshamn, män</td>
-<td align="left">81,26</td>
-<td align="left">2,79</td>
-<td align="left">1</td>
-<td align="left">2,79</td>
-</tr>
-<tr class="odd">
-<td align="left">Örebro, kvinnor</td>
-<td align="left">84,85</td>
-<td align="left">2,18</td>
-<td align="left">0</td>
-<td align="left">0</td>
-</tr>
-<tr class="even">
-<td align="left">Örebro, män</td>
-<td align="left">80,48</td>
-<td align="left">2,66</td>
-<td align="left">1</td>
-<td align="left">2,66</td>
-</tr>
-</tbody></table></div>
+Tabell 1 beskriver våra variabler (samma som i <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a>). Vi har nu en variabel som skapas genom att multiplicera de två variablerna inkomst <span class="math inline">\(I\)</span> och kön <span class="math inline">\(K\)</span>. Den nya variabeln har rubriken “Interaktion: <span class="math inline">\(I*K\)</span>”. Eftersom <span class="math inline">\(K\)</span> är en dummy där tre av sex observationer har värdet 0 får även den nya variabeln värdet 0 i tre av sex fall.</p>
+<p><strong>Tabell 1: Variablerna</strong> <span class="math inline">\(\mathbf{L}\)</span><strong>,</strong> <span class="math inline">\(\mathbf{I}\)</span><strong>,</strong> <span class="math inline">\(\mathbf{K}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{KI}\)</span></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="13%">
+<col width="23%">
+<col width="22%">
+<col width="19%">
+<col width="20%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Kommun, kön</th>
+<th>Livslängd, <span class="math inline">\(L\)</span> Inkomst, <span class="math inline">\(I\)</span> Kön, $</th>
+<th align="left">K$ <span class="math inline">\(K*I\)</span>
+</th>
+<th></th>
+<th></th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Jokkmokk, kvinnor
+Jokkmokk, män
+Oskarshamn, kvinnor
+Oskarshamn, män
+Örebro, kvinnor
+Örebro, män</td>
+<td>81,55
+79,22
+84,64
+81,26
+84,85
+80,48</td>
+<td align="left">2,07
+2,40
+2,11
+2,79
+2,18
+2,66</td>
+<td>0
+1
+0
+1
+0
+1</td>
+<td>0
+2,40
+0
+2,79
+0
+2,66</td>
+</tr></tbody>
+</table></div>
 <div class="fig-caption">
 <p>Förklaring: Data från <a href="http://www.kolada.se">www.kolada.se</a>. Medianinkomst i 100 000-tals kr. Förväntad medellivslängd. Alla siffror avser 2019.
-I <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a> estimerade vi två regressionsmodeller. Först en modell för samvariationen mellan livslängd och inkomst, med följande resultat:
-<span class="math inline">\(L = \widehat{a_{1}} + \widehat{a_{2}}I = 92 - 4,2*I\)</span> (5)
-Den andra modellen inkluderade även dummyvariabeln kön G:
-<span class="math inline">\(L = \widehat{b_{1}} + \widehat{b_{2}}I + \widehat{b_{3}}G = 69,6 + 6,64I - 6,66G\)</span> (6)
-Nu ska vi estimera följande regressionsmodell:
-<span class="math inline">\(L = c_{1} + c_{2}I + c_{3}G + c_{4}GI + v\)</span> (7)
-där <span class="math inline">\(c_{1}\)</span>, <span class="math inline">\(c_{2}\)</span>, <span class="math inline">\(c_{3}\)</span> och <span class="math inline">\(c_{4}\)</span> är koefficienter vi ska estimera med hjälp av minstakvadratmetoden och <span class="math inline">\(v\)</span> är feltermen. Variablerna i modellen känner vi igen från tabell 1: livslängd <span class="math inline">\(L\)</span>, inkomst <span class="math inline">\(I\)</span>, kön <span class="math inline">\(G\)</span> samt interaktionstermen <span class="math inline">\(GI\)</span>. Med matriser kan vi beskriva vår regressionsmodell på följande sätt:
-<span class="math inline">\(L = CX + V\)</span> (8)
-<span class="math inline">\(L\)</span> är en kolumnmatris med värdena för förklarade variabeln livslängd <span class="math inline">\(L\)</span>. <span class="math inline">\(C\)</span> är en kolumnmatris med samtliga koefficienterna i modellen, <span class="math inline">\(c_{1}\)</span> till <span class="math inline">\(c_{4}\)</span>. <span class="math inline">\(X\)</span> är en matris med samtliga förklarande variabler i modellen och observationerna för respektive variabel i varsin kolumn. <span class="math inline">\(V\)</span> är en kolumnmatris med feltermerna <span class="math inline">\(v_{1},v_{2},\ldots,v_{n}\)</span> där n är antal observationer.
-För att estimera koefficienterna har vi estimatorn, som liknar de vi använt i tidigare avsnitt:
-<span class="math inline">\(\widehat{C} = \left( X^{T}X \right)^{- 1}X^{T}L\)</span> (9)
-Matris <span class="math inline">\(X\)</span> är i detta fall:
-<span class="math inline">\(X = \begin{bmatrix} 1 &amp; 2,07 &amp; 0 &amp; 0 \\ 1 &amp; 2,4 &amp; 1 &amp; 2,4 \\ 1 &amp; 2,11 &amp; 0 &amp; 0 \\ 1 &amp; 2,79 &amp; 1 &amp; 2,79 \\ 1 &amp; 2,18 &amp; 0 &amp; 0 \\ 1 &amp; 2,66 &amp; 1 &amp; 2,66 \end{bmatrix}\)</span> (10)
-Alla element i första kolumnen i matris <span class="math inline">\(X\)</span> har värdet 1 eftersom första koefficienten i regressionsmodellen (konstanten) inte är multiplicerad med någon variabel. Övriga värden i matrisen är hämtade från observationerna för de tre förklarande variablerna i tabell 1. Transponerade versionen av <span class="math inline">\(X\)</span> skrivs <span class="math inline">\(X^{T}\)</span> och ser ut på följande sätt:
-<span class="math inline">\(X = \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\ 2,07 &amp; 2,4 &amp; 2,11 &amp; 2,79 &amp; 2,18 &amp; 2,66 \\ 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \\ 0 &amp; 2,4 &amp; 0 &amp; 2,79 &amp; 0 &amp; 2,66 \end{bmatrix}\)</span> (11)
-Värdena i matris L hämtas också från tabell 1:
-<span class="math inline">\(L = \begin{bmatrix} 81,55 \\ 79,22 \\ 84,64 \\ 81,26 \\ 84,85 \\ 80,48 \end{bmatrix}\)</span> (12)
-Vi estimerar regressionsmodellens koefficienter med <span class="math inline">\(\widehat{C} = \left( X^{T}X \right)^{- 1}X^{T}L\)</span>. Vårt resultat blir nu:
-<span class="math inline">\(\widehat{C} = \left( X^{T}X \right)^{- 1}X^{T}L\)</span> (13)</p>
+I <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a> estimerade vi två regressionsmodeller. Först en modell för samvariationen mellan livslängd och inkomst, med följande resultat:</p>
 </div>
+<p><span class="math display">\[L = \widehat{a_{1}} + \widehat{a_{2}}I = 92 - 4,2*I \tag{5}\]</span></p>
+<p>Den andra modellen inkluderade även dummyvariabeln kön G:</p>
+<p><span class="math display">\[L = \widehat{b_{1}} + \widehat{b_{2}}I + \widehat{b_{3}}G = 69,6 + 6,64I - 6,66G \tag{6}\]</span></p>
+<p>Nu ska vi estimera följande regressionsmodell:</p>
+<p><span class="math display">\[L = c_{1} + c_{2}I + c_{3}G + c_{4}GI + v \tag{7}\]</span></p>
+<p>där <span class="math inline">\(c_{1}\)</span>, <span class="math inline">\(c_{2}\)</span>, <span class="math inline">\(c_{3}\)</span> och <span class="math inline">\(c_{4}\)</span> är koefficienter vi ska estimera med hjälp av minstakvadratmetoden och <span class="math inline">\(v\)</span> är feltermen. Variablerna i modellen känner vi igen från tabell 1: livslängd <span class="math inline">\(L\)</span>, inkomst <span class="math inline">\(I\)</span>, kön <span class="math inline">\(G\)</span> samt interaktionstermen <span class="math inline">\(GI\)</span>. Med matriser kan vi beskriva vår regressionsmodell på följande sätt:</p>
+<p><span class="math display">\[L = CX + V \tag{8}\]</span></p>
+<p><span class="math inline">\(L\)</span> är en kolumnmatris med värdena för förklarade variabeln livslängd <span class="math inline">\(L\)</span>. <span class="math inline">\(C\)</span> är en kolumnmatris med samtliga koefficienterna i modellen, <span class="math inline">\(c_{1}\)</span> till <span class="math inline">\(c_{4}\)</span>. <span class="math inline">\(X\)</span> är en matris med samtliga förklarande variabler i modellen och observationerna för respektive variabel i varsin kolumn. <span class="math inline">\(V\)</span> är en kolumnmatris med feltermerna <span class="math inline">\(v_{1},v_{2},\ldots,v_{n}\)</span> där n är antal observationer.
+För att estimera koefficienterna har vi estimatorn, som liknar de vi använt i tidigare avsnitt:</p>
+<p><span class="math display">\[\widehat{C} = \left( X^{T}X \right)^{- 1}X^{T}L \tag{9}\]</span></p>
+<p>Matris <span class="math inline">\(X\)</span> är i detta fall:</p>
+<p><span class="math display">\[X = \begin{bmatrix} 1 &amp; 2,07 &amp; 0 &amp; 0 \\ 1 &amp; 2,4 &amp; 1 &amp; 2,4 \\ 1 &amp; 2,11 &amp; 0 &amp; 0 \\ 1 &amp; 2,79 &amp; 1 &amp; 2,79 \\ 1 &amp; 2,18 &amp; 0 &amp; 0 \\ 1 &amp; 2,66 &amp; 1 &amp; 2,66 \end{bmatrix} \tag{10}\]</span></p>
+<p>Alla element i första kolumnen i matris <span class="math inline">\(X\)</span> har värdet 1 eftersom första koefficienten i regressionsmodellen (konstanten) inte är multiplicerad med någon variabel. Övriga värden i matrisen är hämtade från observationerna för de tre förklarande variablerna i tabell 1. Transponerade versionen av <span class="math inline">\(X\)</span> skrivs <span class="math inline">\(X^{T}\)</span> och ser ut på följande sätt:</p>
+<p><span class="math display">\[X = \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\ 2,07 &amp; 2,4 &amp; 2,11 &amp; 2,79 &amp; 2,18 &amp; 2,66 \\ 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \\ 0 &amp; 2,4 &amp; 0 &amp; 2,79 &amp; 0 &amp; 2,66 \end{bmatrix} \tag{11}\]</span></p>
+<p>Värdena i matris L hämtas också från tabell 1:</p>
+<p><span class="math display">\[L = \begin{bmatrix} 81,55 \\ 79,22 \\ 84,64 \\ 81,26 \\ 84,85 \\ 80,48 \end{bmatrix} \tag{12}\]</span></p>
+<p>Vi estimerar regressionsmodellens koefficienter med <span class="math inline">\(\widehat{C} = \left( X^{T}X \right)^{- 1}X^{T}L\)</span>. Vårt resultat blir nu:</p>
+<p><span class="math display">\[\widehat{C} = \left( X^{T}X \right)^{- 1}X^{T}L \tag{13}\]</span></p>
 <p><span class="math display">\[\left\lbrack \begin{array}{r} c_{1} \\ c_{2} \\ c_{3} \\ c_{4} \end{array} \right\rbrack \approx \left\lbrack \begin{array}{r} 26,6 \\ 26,9 \\ 40,3 \\ - 21,8 \end{array} \right\rbrack\]</span></p>
-<p>Om vi sätter in dessa estimat i vår regressionsmodell får vi:
-<span class="math inline">\(L = \widehat{c_{1}} + \widehat{c_{2}}I + \widehat{c_{3}}G + \widehat{c_{4}}GI\)</span> (14)</p>
+<p>Om vi sätter in dessa estimat i vår regressionsmodell får vi:</p>
+<p><span class="math display">\[L = \widehat{c_{1}} + \widehat{c_{2}}I + \widehat{c_{3}}G + \widehat{c_{4}}GI \tag{14}\]</span></p>
 <p><span class="math display">\[= 26,6 + 26,9I + 40,3G - 21,8GI\]</span></p>
 <p>där versalerna nu indikerar enskilda variabler, inte matriser. Nu ska vi uppskatta hur interaktionstermen <span class="math inline">\(GI\)</span> bidrar till samvariationen.
-Interaktionseffekten för en variabel beskrev vi i ekvation 3 som <span class="math inline">\(\frac{\Delta y}{\Delta x} = b + d*z\)</span>. För att estimera den <strong>totala samvariationen</strong> mellan inkomst <span class="math inline">\(I\)</span> och livslängd <span class="math inline">\(L\)</span> tar vi:
-<span class="math inline">\(\frac{\Delta L}{\Delta I} = \widehat{c_{2}} + \widehat{c_{4}}G = 26,9 - 21,8*G\)</span> (15)
-Total samvariation betyder effekten av inkomst på livslängd inklusive interaktionseffekten. En enhet ökad inkomst motsvarar en ökning av den genomsnittliga årsinkomsten med 100 000 kronor.
+Interaktionseffekten för en variabel beskrev vi i ekvation 3 som <span class="math inline">\(\frac{\Delta y}{\Delta x} = b + d*z\)</span>. För att estimera den <strong>totala samvariationen</strong> mellan inkomst <span class="math inline">\(I\)</span> och livslängd <span class="math inline">\(L\)</span> tar vi:</p>
+<p><span class="math display">\[\frac{\Delta L}{\Delta I} = \widehat{c_{2}} + \widehat{c_{4}}G = 26,9 - 21,8*G \tag{15}\]</span></p>
+<p>Total samvariation betyder effekten av inkomst på livslängd inklusive interaktionseffekten. En enhet ökad inkomst motsvarar en ökning av den genomsnittliga årsinkomsten med 100 000 kronor.
 För kvinnor <span class="math inline">\((G = 0)\)</span>: <span class="math inline">\(\Delta L\text{/}\Delta I = 26,9\)</span> → 100 000 kr högre inkomst = 26,9 år längre liv
 För män <span class="math inline">\((G = 1)\)</span>: <span class="math inline">\(\Delta L\text{/}\Delta I = 26,9 - 21,8 = 5,1\)</span> → 100 000 kr högre inkomst = 5,1 år längre liv
-Interaktionseffekten <span class="math inline">\(- 21,8\)</span> betyder att sambandet mellan inkomst och livslängd är svagare för män än för kvinnor. Samvariationen mellan livslängd och inkomst är således mer positiv för kvinnor jämfört med för män. Den totala samvariationen mellan kön <span class="math inline">\(G\)</span> och medellivslängd <span class="math inline">\(L\)</span> kan vi från vår regressionsmodell estimera till:
-<span class="math inline">\(\frac{\Delta L}{\Delta G} = \widehat{c_{3}} + \widehat{c_{4}}*I = 40,3 - 21,8*I\)</span> (16)
-Koefficienten <span class="math inline">\(c_{1}\)</span> i vår regressionsmodell skattade vi till 26,6 i ekvation 13. Detta är den genomsnittliga livslängd som vår regressionsmodell indikerar att kvinnor utan inkomst har, där variablerna <span class="math inline">\(I\)</span> och <span class="math inline">\(G\)</span> är lika med 0, det vill säga en kvinna <span class="math inline">\(G = 0\)</span> utan inkomst <span class="math inline">\(I = 0\)</span>.
-Om personen utan inkomst är en man, <span class="math inline">\(G = 1\)</span>, indikerar <span class="math inline">\(\widehat{c_{3}} = 40,3\)</span> att vi kan förvänta oss att en sådan person i genomsnitt lever 40,3 år längre. Vid högre inkomster får vi dock ett annorlunda resultat. Vid följande inkomstnivå blir nettoskillnaden av <span class="math inline">\(G\)</span> lika med 0:
-<span class="math inline">\(I = \frac{40,3}{21,8} = 1,85\)</span> (17)
-rent matematiskt innebär detta att vår regressionsmodell predikterar att en man med 185 000 kronor i årsinkomst i genomsnitt lever lika länge som en kvinna med 0 kronor i inkomst. Detta reflekterar inte nödvändigtvis verkliga mekanismer. I praktiken har nästan ingen 0 kr i inkomst och ingen observation har detta i vårt datamaterial.
+Interaktionseffekten <span class="math inline">\(- 21,8\)</span> betyder att sambandet mellan inkomst och livslängd är svagare för män än för kvinnor. Samvariationen mellan livslängd och inkomst är således mer positiv för kvinnor jämfört med för män. Den totala samvariationen mellan kön <span class="math inline">\(G\)</span> och medellivslängd <span class="math inline">\(L\)</span> kan vi från vår regressionsmodell estimera till:</p>
+<p><span class="math display">\[\frac{\Delta L}{\Delta G} = \widehat{c_{3}} + \widehat{c_{4}}*I = 40,3 - 21,8*I \tag{16}\]</span></p>
+<p>Koefficienten <span class="math inline">\(c_{1}\)</span> i vår regressionsmodell skattade vi till 26,6 i ekvation 13. Detta är den genomsnittliga livslängd som vår regressionsmodell indikerar att kvinnor utan inkomst har, där variablerna <span class="math inline">\(I\)</span> och <span class="math inline">\(G\)</span> är lika med 0, det vill säga en kvinna <span class="math inline">\(G = 0\)</span> utan inkomst <span class="math inline">\(I = 0\)</span>.
+Om personen utan inkomst är en man, <span class="math inline">\(G = 1\)</span>, indikerar <span class="math inline">\(\widehat{c_{3}} = 40,3\)</span> att vi kan förvänta oss att en sådan person i genomsnitt lever 40,3 år längre. Vid högre inkomster får vi dock ett annorlunda resultat. Vid följande inkomstnivå blir nettoskillnaden av <span class="math inline">\(G\)</span> lika med 0:</p>
+<p><span class="math display">\[I = \frac{40,3}{21,8} = 1,85 \tag{17}\]</span></p>
+<p>rent matematiskt innebär detta att vår regressionsmodell predikterar att en man med 185 000 kronor i årsinkomst i genomsnitt lever lika länge som en kvinna med 0 kronor i inkomst. Detta reflekterar inte nödvändigtvis verkliga mekanismer. I praktiken har nästan ingen 0 kr i inkomst och ingen observation har detta i vårt datamaterial.
 Poängen är att visa var interaktionseffekten byter tecken (från plus till minus och tvärtom). Vi måste alltid vara försiktiga med att tolka resultaten och extra försiktiga att tolka resultat utanför de värden vi har data för. Vid högre inkomster än detta blir <span class="math inline">\(\Delta L\text{/}\Delta G\)</span> negativt, vilket innebär att vid högre inkomster är mäns genomsnittliga livslängd kortare än kvinnor.</p>
 </div>
 <div id="illustration-med-diagram" class="section level4" number="40.0.2.3">
 <h4>
 <span class="header-section-number">40.0.2.3</span> Illustration med diagram<a class="anchor" aria-label="anchor" href="#illustration-med-diagram"><i class="fas fa-link"></i></a>
 </h4>
-<p>Figur 1 illustrerar delar av resultaten i ett diagram där vi ser samvariationen mellan livslängd och inkomst. Två regressionslinjer är utritade i diagrammet, en för kvinnor och en för män. Regressionslinjen för kvinnor är ritad med ekvationen:
-<span class="math inline">\(L = \widehat{a} + \widehat{b}\left( I \middle\| G = 0 \right) = 26,6 + 26,9x\)</span> (18)
-där <span class="math inline">\(\left( I \middle\| G = 0 \right)\)</span> betyder att vi enbart använder de observationer för livslängd <span class="math inline">\((I)\)</span> i tabell 1 som representerar kvinnor. Koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> är estimerade utifrån minstakvadratmetoden. Regressionslinjen för män är i diagrammet ritad med ekvationen:
-<span class="math inline">\(L = \widehat{c} + \widehat{d}\left( I \middle\| G = 1 \right) = 66,9 + 5,1x\)</span> (19)
-där <span class="math inline">\(\left( I \middle\| G = 1 \right)\)</span> betyder att vi enbart använder de observationer i tabell 1 som representerar män. Genom att estimera samvariationen mellan livslängd och inkomst för män och kvinnor separat kan vi nå samma slutsats som när vi estimerar regressionsmodellen med interaktionseffekter.</p>
+<p>Figur 1 illustrerar delar av resultaten i ett diagram där vi ser samvariationen mellan livslängd och inkomst. Två regressionslinjer är utritade i diagrammet, en för kvinnor och en för män. Regressionslinjen för kvinnor är ritad med ekvationen:</p>
+<p><span class="math display">\[L = \widehat{a} + \widehat{b}\left( I \middle\| G = 0 \right) = 26,6 + 26,9x \tag{18}\]</span></p>
+<p>där <span class="math inline">\(\left( I \middle\| G = 0 \right)\)</span> betyder att vi enbart använder de observationer för livslängd <span class="math inline">\((I)\)</span> i tabell 1 som representerar kvinnor. Koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> är estimerade utifrån minstakvadratmetoden. Regressionslinjen för män är i diagrammet ritad med ekvationen:</p>
+<p><span class="math display">\[L = \widehat{c} + \widehat{d}\left( I \middle\| G = 1 \right) = 66,9 + 5,1x \tag{19}\]</span></p>
+<p>där <span class="math inline">\(\left( I \middle\| G = 1 \right)\)</span> betyder att vi enbart använder de observationer i tabell 1 som representerar män. Genom att estimera samvariationen mellan livslängd och inkomst för män och kvinnor separat kan vi nå samma slutsats som när vi estimerar regressionsmodellen med interaktionseffekter.</p>
 <p><strong>Figur 1: Regressionsresultat med interaktion</strong></p>
-<div class="inline-figure"><img src="img/k2-4-6-image1.png" style="width:3.78472in;height:3.78472in"></div>
+<div class="inline-figure"><img src="img/k2-4-6-image1.png"></div>
 <div class="fig-caption">
 <p>Förklaring: Livslängd och inkomst för kvinnor respektive män.
 Regressionsresultaten för enbart kvinnor i ekvation 18 är samma som resultaten från regressionsmodellen i ekvation 14 med <span class="math inline">\(G = 0\)</span>, då de två första koefficienterna i de båda regressionsmodellerna är desamma: <span class="math inline">\(\widehat{c_{1}} = \widehat{a}\)</span> och <span class="math inline">\(\widehat{c_{2}} = \widehat{b}\)</span>.
-Resultaten i regressionsmodellen för män i ekvation 19 kan förenklat beskrivas som att vi lägger ihop koefficienterna i ekvation 14. Vi har koefficienterna:
-<span class="math inline">\(\widehat{c} = \widehat{c_{1}} + \widehat{c_{3}} = 26,6 + 40,3 = 60,9\)</span> (20)</p>
+Resultaten i regressionsmodellen för män i ekvation 19 kan förenklat beskrivas som att vi lägger ihop koefficienterna i ekvation 14. Vi har koefficienterna:</p>
 </div>
+<p><span class="math display">\[\widehat{c} = \widehat{c_{1}} + \widehat{c_{3}} = 26,6 + 40,3 = 60,9 \tag{20}\]</span></p>
 <p><span class="math display">\[\widehat{d} = \widehat{c_{2}} + \widehat{c_{4}} = 26,9I - 21,8 = 5,1\]</span></p>
 <p>Lutningskoefficienten i regressionsmodellen för enbart män <span class="math inline">\(\widehat{d}\)</span> är samma värde som <span class="math inline">\(\Delta L\text{/}\Delta I\)</span> för <span class="math inline">\(G = 1\)</span> i ekvation 15. Detta innebär även att differensen mellan de två lutningskoefficienterna i regressionsmodellerna för kvinnor respektive män är <span class="math inline">\(\widehat{b} - \widehat{d} = 26,9 - 5,1 = 21,8\)</span>, vilket är samma värde som <span class="math inline">\(\widehat{c_{4}}\)</span> har i ekvation 14.</p>
 <div class="ex-section-title">

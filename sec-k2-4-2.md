@@ -30,11 +30,17 @@ Tabell 1 redovisar genomsnittlig årsinkomst för män respektive kvinnor i tre 
 ::: {.fig-caption}
 Förklaring: Data från [Kolada](http://www.kolada.se). Inkomst anges i 1 000-tals kronor, medianvärden per kommun och grupp.
 Nu ska vi studera löneskillnaden mellan män och kvinnor genom att använda minstakvadratmetoden. Vi börjar med att formulera en regressionsmodell:
-$W_{i} = a + bG_{i} + e_{i}$ (1)
+:::
+
+
+
+$$W_{i} = a + bG_{i} + e_{i} \tag{1}$$
+
 där $W_{i}$ är medellön i kommun $i$ och $G_{i}$ är kön som har värdet 0 för män och 1 för kvinnor.
 Vi kan estimera regressionsmodellen på samma sätt som tidigare, där koefficienterna ges av minstakvadratmetoden. Tabell 2 ger oss första delen av beräkningen:
-$\widehat{b} = \frac{\sum_{}^{}{\left( G_{i} - \overline{G} \right)\left( W_{i} - \overline{W} \right)}}{\sum_{}^{}\left( G_{i} - \overline{G} \right)^{2}} = \frac{- 123,5}{1,5} = - 82,3$ (2)
-:::
+
+
+$$\widehat{b} = \frac{\sum_{}^{}{\left( G_{i} - \overline{G} \right)\left( W_{i} - \overline{W} \right)}}{\sum_{}^{}\left( G_{i} - \overline{G} \right)^{2}} = \frac{- 123,5}{1,5} = - 82,3 \tag{2}$$
 
 
 
@@ -46,26 +52,7 @@ Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från m�
 **Tabell 2. Beräkningar för regressionsanalysen**
 
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Kommun        
-
-$$W_{i}$$
-
-   
-
-$$G_{i}$$
-
-   
-
-$$W_{i} - \overline{W_{i}}$$
-
-   
-
-$$G_{i} - \overline{G_{i}}$$
-
-   
-
-$$\left( G_{i} - \overline{G_{i}} \right)^{2}$$
-
+  Kommun        $W_{i}$   $G_{i}$   $W_{i} - \overline{W_{i}}$   $G_{i} - \overline{G_{i}}$   $\left( G_{i} - \overline{G_{i}} \right)^{2}$
   ------------ ---------------------------------- ---------------------------------- ------------------------------------------------------- ------------------------------------------------------- -----------------------------------------------------------------------------
   Danderyd                    435                                 0                                           145,8                                                   -0,5                                                               0,25
   Mörbylånga                  277                                 0                                           -12,2                                                   -0,5                                                               0,25
@@ -85,7 +72,7 @@ Förklaring: Samma data som i tabell 1 och några beräkningar.
 
 **Figur 1: Samvariationen mellan inkomst och kön**
 
-![](img/k2-4-2-image1.png){style="width:3.01282in;height:3.01282in"}
+![](img/k2-4-2-image1.png)
 
 
 ::: {.fig-caption}
@@ -96,25 +83,17 @@ Förklaring: Regressionslinjen lutar nedåt vilket indikerar en negativ samvaria
 #### Faktorvariabler med flera värden
 Ovan hade vi en dummyvariabel för två värden: män och kvinnor. Dummyvariabler kan även vara användbara för att kategorisera faktorvariabler med flera värdena än två. Låt oss återigen räkna på inkomstskillnader mellan de tre kommunerna i föregående exempel, men i stället för skillnad mellan kvinnor och män ska vi nu beräkna skillnaden i genomsnittlig inkomst mellan kommunerna.
 Tabell 3 redovisar variablerna, där $Y_{i}$ nu anger medelinkomst för alla invånare per kommun. Variablerna $K_{\text{Mörbylånga}}$ och $K_{\text{Oskarshamn}}$ är två dummyvariabler för kommunerna i följande regressionsmodell:
-$Y_{i} = a + bK_{\text{Mörbylånga}} + cK_{\text{Oskarshamn}} + e_{i}$ (3)
+
+
+$$Y_{i} = a + bK_{\text{Mörbylånga}} + cK_{\text{Oskarshamn}} + e_{i} \tag{3}$$
+
 där $e$ är feltermen. Våra dummyvariabler representerar kommunerna Mörbylånga och Oskarshamn, en dummyvariabel mindre än antal kommuner. När båda dummyvariablerna i modellen är lika med 0 får vi estimaten för den tredje kommunen, Danderyd.
 Om vi har 3 kommuner använder vi bara 2 dummyvariabler. Varför? Om både Mörbylånga-dummyn = 0 OCH Oskarshamn-dummyn = 0, vet vi automatiskt att det måste vara Danderyd. Den tredje kommunen blir \"referenskategori\", i detta fall den kommun vi jämför de andra kommunerna mot. Om vi hade använt 3 dummyvariabler skulle regressionen inte fungera (matematiskt kallas detta \"perfekt multikolinjäritet\"). Datorn kan inte skilja på vilken effekt som kommer från vilken dummy.
 
 **Tabell 3: Genomsnittlig inkomst 2019, 1 000-tals kr**
 
   -------------------------------------------------------------------------------------------------------------------------------------------------------
-  Kommun        
-
-$$Y_{i}$$
-
-   
-
-$$K_{\text{Mörbylånga}}$$
-
-   
-
-$$K_{\text{Oskarshamn}}$$
-
+  Kommun        $Y_{i}$   $K_{\text{Mörbylånga}}$   $K_{\text{Oskarshamn}}$
   ------------ ---------------------------------- --------------------------------------------------- ---------------------------------------------------
   Danderyd                   364,9                                         0                                                   0
   Mörbylånga                 243,6                                         1                                                   0
@@ -124,8 +103,11 @@ $$K_{\text{Oskarshamn}}$$
 ::: {.fig-caption}
 Förklaring: Data från [Kolada](http://www.kolada.se). Inkomst anges i 1 000-tals kronor, medianvärden per kommun.
 Vår regressionsmodell räknar ut samma sak som vi redan ser i datamaterialet. Syftet med denna övning är att förstå innebörden av dummyvariabler i en regressionsmodell. Vi estimerar regressionsmodellen i ekvation 3 utifrån minstakvadratmetoden:
-$\widehat{Y} = \widehat{a} + \widehat{b}K_{\text{Mörbylånga}} + \widehat{c}K_{\text{Oskarshamn}} + e$ (4)
 :::
+
+
+
+$$\widehat{Y} = \widehat{a} + \widehat{b}K_{\text{Mörbylånga}} + \widehat{c}K_{\text{Oskarshamn}} + e \tag{4}$$
 
 
 

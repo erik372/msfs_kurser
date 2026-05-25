@@ -12,39 +12,74 @@ En stor mängd samhällsvetenskaplig analys studerar hur företag beter sig. Hä
 Säg att vi har ett företag som tillverkar två olika produkter som vi kallar för *X* och *Y*. Företaget vill maximera sin vinst. Försäljningspriserna för de två varorna styrs av omvärlden (marknaden), vilket företaget inte kan påverka. Företaget är visserligen fri att själv bestämma priset på sina varor, men i detta hypotetiska exempel har företaget ingenting att vinna på att höja eller sänka priserna.
 Detta är inte nödvändigtvis särskilt realistiskt, men förenklar matematiken något. Företaget accepterar därför att priserna är vad det är, men kan däremot välja hur stor mängd av produkterna som ska produceras.
 Mängden producerade enheter av de två produkterna anger vi med *x* och *y*. För produkt *x* har vi pris $p_{x} = 10$ och för produkt *y* har vi $p_{y} = 20$. Företagets intäkter kan beskrivas som en funktion av pris multiplicerat med kvantitet. Funktionen för totala intäkter kallar vi *TR* efter engelskans *total revenue:*
-$\text{Totala\~intäkter} = TR(x,y) = p_{x}x + p_{y}y = 10x + 20y$ (1)
+
+
+$$\text{Totala\~intäkter} = TR(x,y) = p_{x}x + p_{y}y = 10x + 20y \tag{1}$$
+
 Från ekvation 1 kan vi lösa för *y*:
-$TR = 10x + 20y$ (2)
+
+
+$$TR = 10x + 20y \tag{2}$$
+
 De totala produktionskostnaderna består av fasta utgifter på 10 kr och rörliga kostnader för att tillverka produkterna *X* respektive *Y*:
-$\text{Totala\~kostnader} = TC(x,y) = x^{2} + 2y^{2} + 10$ (3)
+
+
+$$\text{Totala\~kostnader} = TC(x,y) = x^{2} + 2y^{2} + 10 \tag{3}$$
+
 där $TC(\ )$ är namn på den matematiska funktionen. Företagets vinst är lika med intäkter minus kostnader, $TR - TC$, vilket vi kan skriva som en funktion, *V*:
-$V(x,y) = TR - TC = 10x + 20y - (x^{2} + 2y^{2} + 10)$ (4)
+
+
+$$V(x,y) = TR - TC = 10x + 20y - (x^{2} + 2y^{2} + 10) \tag{4}$$
 
 ### Maximeringsproblemet
 Vinsten är en funktion av kvantiteterna *x* och *y*, vilket vi kan beskriva som att företaget vill maximera sin vinst genom att välja mängd att producera av *x* och *y*:
-$\max_{m.\ h.t\ \ x,y}{V(x,y)}\ = 10x + 20y - (x^{2} + 2y^{2} + 10)$ (5)
+
+
+$$\max_{m.\ h.t\ \ x,y}{V(x,y)}\ = 10x + 20y - (x^{2} + 2y^{2} + 10) \tag{5}$$
+
 Detta maximeringsproblem kan vi lösa genom att ta derivatan av *V* med hänsyn till *x* och *y*. Vi söker en maximipunkt där förstaderivatan är lika med 0 och andraderivatan är negativ. Förstaderivatan av $V(x,y)$ med hänsyn till *x* respektive *y*:
-$V_{x}\' = 10 - 2x$ (6)
+
+
+$$V_{x}\' = 10 - 2x \tag{6}$$
+
 $V_{y}\' = 20 - 4y$
 Vi har nu två uttryck som beskriver hur *V* ändras då *x* respektive *y* ökar med en enhet. Vi sätter uttrycken i ekvation 6 lika med 0, vilket ger oss förstagradsvillkoren, och löser för *x* och *y*. Dessa värden för *x* och *y* är lösningarna vi söker, vilket vi skriver som $x^{*}$ och $y^{*}$:
-$x^{*} = \frac{10}{2} = 5$ (7)
+
+
+$$x^{*} = \frac{10}{2} = 5 \tag{7}$$
+
 $y^{*} = 20/4 = 5$
 Vi kan även se att andraderivatan av *V* med hänsyn till *x* och *y* är negativ genom att derivera uttrycken i ekvation 6 en gång till:
-$V_{xx}^{\'\'} = - 2$ (8)
+
+
+$$V_{xx}^{\'\'} = - 2 \tag{8}$$
+
 $V_{yy}^{\'\'} = - 4$
 
 ### Marginalvinsten
 Vinsten maximeras då marginalvinsten är lika med 0, det vill säga då förstaderivatan av V är $V_{x}\' = 0$ och $V_{y}\' = 0$. Låt oss beräkna hur mycket vinst företaget kommer att göra genom att sätta in dessa värden för $x^{*}$ och $y^{*}$ i $V\left( x^{*},y^{*} \right) = V(5,5)$:
-$V(5,5) = 10*5 + 20*5 - \left( 5^{2} + 2*5^{2} + 10 \right) = 65$ (9)
+
+
+$$V(5,5) = 10*5 + 20*5 - \left( 5^{2} + 2*5^{2} + 10 \right) = 65 \tag{9}$$
+
 Givet priserna $p_{x} = 10$ och $p_{y} = 20$ och nuvarande produktionskostnader kan företaget maximera sin vinst genom att producera 5 enheter av produkt A och 5 enheter av produkt B, och gör då en vinst på 65 kr.
 Företagets totala kostnader ges av ekvation 3. Tar vi förstaderivatan av totala kostnader med hänsyn till x respektive y får vi företagets *marginalkostnader*:
-$MC_{x} = C_{x}\' = 2x$ (10)
+
+
+$$MC_{x} = C_{x}\' = 2x \tag{10}$$
+
 $MC_{y} = C_{y}\' = 4y$
 Vinsten optimeras vid $\left( x^{*},y^{*} \right) = (5,5)$ där marginalkostnaderna är:
-$MC_{x} = C_{x}\'\left( x^{*} \right) = 2*5 = 10$ (11)
+
+
+$$MC_{x} = C_{x}\'\left( x^{*} \right) = 2*5 = 10 \tag{11}$$
+
 $MC_{y} = C_{y}\'\left( y^{*} \right) = 4*5 = 20$
 Om företaget producerar kvantiteterna 5 av *x* och 5 av *y* är marginalkostnaderna, vid just denna produktionsmängd, lika med 10 med hänsyn till *x* och 20 med hänsyn till *y*. I inledningen beskriv vi priserna för produkterna $p_{x} = 10$ och $p_{y} = 20$. Företaget maximerar alltså sin vinst då marginalkostnaden är lika med priset för produkterna vilket vi kan skriva som:
-$P^{*} = MC$ (12)
+
+
+$$P^{*} = MC \tag{12}$$
+
 
 
 ::: {.ex-section-title}

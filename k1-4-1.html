@@ -125,29 +125,29 @@
 <span class="header-section-number">16.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-15"><i class="fas fa-link"></i></a>
 </h3>
 <p>Tårta är gott men vi blir illamående om vi äter för mycket. Låt oss beskriva detta med matematik. Vi tänker att tårta gör oss lyckliga och kallar variabeln lycka för y.
-Låt oss säga att vi mäter lycka på en skala från 1 till 5, där 5 är mesta möjliga tänkbara lycka. Lycka, y, är i sin tur en funktion <em>f</em> av hur många tårtor vi äter. Vi betecknar antal uppätna tårtor som variabeln x. För varje tårta vi sätter i oss ökar vår lycka med 3 enheter, vilket vi kan beskriva med funktionen:
-<span class="math inline">\(Lycka = y = f(x) = 3x\)</span> (1)
-Variabeln <em>x</em> är kontinuerlig och för varje tugga tårta vi äter blir vi lyckligare. Men vi blir även mättare och till slut börjar vi bli less på tårta. Denna negativa effekt på lyckan kan vi sätta in i vår funktion genom att lägga till termen <span class="math inline">\(- x^{2}\)</span>. Termen är negativ eftersom den beskriver hur vår lycka minskar för varje tugga tårta.
-Termen <span class="math inline">\(- x^{2}\)</span> är kvadratisk, upphöjd till 2. Detta innebär att för låga värden, till exempel 0,5 kommer den negativa effekten att vara relativt liten. Till exempel: <span class="math inline">\(- (0,5)^{2} = - 0,25\)</span> eller <span class="math inline">\(- (0,1)^{2} = \mp 0,01\)</span>. Men för högre värden av <em>x</em> kommer i stället den negativa effekten bli allt större, som till exempel <span class="math inline">\(- (2)^{2} = - 4\)</span> eller <span class="math inline">\(- (5)^{2} = - 25\)</span>. Hela funktionen blir nu:
-<span class="math inline">\(y = f(x) = 3x - x^{2}\)</span> (2)</p>
+Låt oss säga att vi mäter lycka på en skala från 1 till 5, där 5 är mesta möjliga tänkbara lycka. Lycka, y, är i sin tur en funktion <em>f</em> av hur många tårtor vi äter. Vi betecknar antal uppätna tårtor som variabeln x. För varje tårta vi sätter i oss ökar vår lycka med 3 enheter, vilket vi kan beskriva med funktionen:</p>
+<p><span class="math display">\[Lycka = y = f(x) = 3x \tag{1}\]</span></p>
+<p>Variabeln <em>x</em> är kontinuerlig och för varje tugga tårta vi äter blir vi lyckligare. Men vi blir även mättare och till slut börjar vi bli less på tårta. Denna negativa effekt på lyckan kan vi sätta in i vår funktion genom att lägga till termen <span class="math inline">\(- x^{2}\)</span>. Termen är negativ eftersom den beskriver hur vår lycka minskar för varje tugga tårta.
+Termen <span class="math inline">\(- x^{2}\)</span> är kvadratisk, upphöjd till 2. Detta innebär att för låga värden, till exempel 0,5 kommer den negativa effekten att vara relativt liten. Till exempel: <span class="math inline">\(- (0,5)^{2} = - 0,25\)</span> eller <span class="math inline">\(- (0,1)^{2} = \mp 0,01\)</span>. Men för högre värden av <em>x</em> kommer i stället den negativa effekten bli allt större, som till exempel <span class="math inline">\(- (2)^{2} = - 4\)</span> eller <span class="math inline">\(- (5)^{2} = - 25\)</span>. Hela funktionen blir nu:</p>
+<p><span class="math display">\[y = f(x) = 3x - x^{2} \tag{2}\]</span></p>
 </div>
 <div id="tårta-som-maximeringsproblem" class="section level3" number="16.0.3">
 <h3>
 <span class="header-section-number">16.0.3</span> Tårta som maximeringsproblem<a class="anchor" aria-label="anchor" href="#t%C3%A5rta-som-maximeringsproblem"><i class="fas fa-link"></i></a>
 </h3>
-<p>Det här kan vi beskriva som ett maximeringsproblem där vi väljer mängd tårta att äta, <em>x</em>, för att maximera vår lycka, <em>y</em>:
-<span class="math inline">\(\max_{m.h.t.\ \ x}{f(x) = 3x - x^{2}}\)</span> (3)
-För att beräkna vilken mängd tårta som leder till största möjliga lycka beräknar vi första- och andraderivatan av funktion <em>f</em> med hänsyn till <em>x</em>:
-<span class="math inline">\(f_{x}\' = 3 - 2x\)</span> (4)
-<span class="math inline">\(f_{xx}^{\'\'} = - 2\)</span>
-För att hitta den lyckomaximerande mängden tårta sätter vi förstaderivatan <span class="math inline">\(f_{x}\'\)</span> lika med 0 och löser för <em>x</em>:
-<span class="math inline">\(x^{*} = \frac{3}{2} = 1,5\)</span> (5)
-Andraderivatan <span class="math inline">\(f_{xx}^{\'\'}\)</span> i ekvation 4 är negativ. Detta indikerar att <span class="math inline">\(x = 1,5\)</span> är en maximipunkt. Den mängd tårta som leder till mesta möjliga lycka är en och halv tårta. För att beräkna mängden lycka vid <span class="math inline">\(x^{*} = 1,5\)</span> tar vi:
-<span class="math inline">\(f\left( x^{*} = 1,5 \right) = 3*1,5 - (1,5)^{2} = 4,5 - 2,25 = 2,25\)</span> (6)
-En och en halv tårta ger 2,25 i lycka, där lycka mäts på en skala från 1 till 5. Exakt hur stor lycka som uppnås genom tårtätande är dock i detta exempel inte centralt.
+<p>Det här kan vi beskriva som ett maximeringsproblem där vi väljer mängd tårta att äta, <em>x</em>, för att maximera vår lycka, <em>y</em>:</p>
+<p><span class="math display">\[\max_{m.h.t.\ \ x}{f(x) = 3x - x^{2}} \tag{3}\]</span></p>
+<p>För att beräkna vilken mängd tårta som leder till största möjliga lycka beräknar vi första- och andraderivatan av funktion <em>f</em> med hänsyn till <em>x</em>:</p>
+<p><span class="math display">\[f_{x}\' = 3 - 2x \tag{4}\]</span></p>
+<p><span class="math inline">\(f_{xx}^{\'\'} = - 2\)</span>
+För att hitta den lyckomaximerande mängden tårta sätter vi förstaderivatan <span class="math inline">\(f_{x}\'\)</span> lika med 0 och löser för <em>x</em>:</p>
+<p><span class="math display">\[x^{*} = \frac{3}{2} = 1,5 \tag{5}\]</span></p>
+<p>Andraderivatan <span class="math inline">\(f_{xx}^{\'\'}\)</span> i ekvation 4 är negativ. Detta indikerar att <span class="math inline">\(x = 1,5\)</span> är en maximipunkt. Den mängd tårta som leder till mesta möjliga lycka är en och halv tårta. För att beräkna mängden lycka vid <span class="math inline">\(x^{*} = 1,5\)</span> tar vi:</p>
+<p><span class="math display">\[f\left( x^{*} = 1,5 \right) = 3*1,5 - (1,5)^{2} = 4,5 - 2,25 = 2,25 \tag{6}\]</span></p>
+<p>En och en halv tårta ger 2,25 i lycka, där lycka mäts på en skala från 1 till 5. Exakt hur stor lycka som uppnås genom tårtätande är dock i detta exempel inte centralt.
 Figur 1 illustrerar detta exempel och dess lösning. Till vänster och höger om <span class="math inline">\(x = 1,5\)</span> kan vi se att lyckan är mindre än 2,25. Vid noll mängd tårta (0 på horisontella axeln) är lyckan lika med noll. På samma sätt är lyckan lika noll när mängden tårta är 3, vilket i det här hypotetiska exemplet innebär att vi då ätit så mycket tårta att vi inte längre njuter av det alls.</p>
 <p><strong>Figur 1. Den optimala mängden tårta.</strong></p>
-<div class="inline-figure"><img src="img/k1-4-1-image1.png" style="width:4in;height:3in"></div>
+<div class="inline-figure"><img src="img/k1-4-1-image1.png"></div>
 </div>
 <div id="marginaleffekten" class="section level3" number="16.0.4">
 <h3>

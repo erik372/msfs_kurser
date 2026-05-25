@@ -26,7 +26,10 @@ Det finns oändligt många sannolikhetsfördelningar. För att hitta på en ny s
 Funktionen $P()$ används ofta för att beskriva sannolikheten för ett utfall. Från och med nu ska vi använda funktionen $f()$ för att beskriva sannolikheten för ett specifikt värde i en slumpmässig variabel. De två funktionerna $f$ och $P$ beskriver så här långt samma sak: $f(m) = P(M = m)$.
 För diskreta sannolikhetsfördelningar kallas sannolikhetsfunktionen $f$ för *probability mass function*, PMF. En annan central funktion är det som kallas för kumulativa fördelningsfunktionen (engelska *cumulative distribtuion function*, CDF), eller bara *fördelningsfunktionen*.
 Fördelningsfunktionen beskriver sannolikheten att en slumpvis variabel antar ett värde lika med eller mindre än värdet $m$, vilket vi kan beskriva $P(M \leq m)$. Vi kallar fördelningsfunktionen för $F$:
-$F(m) = P(M \leq m)$ (1)
+
+
+$$F(m) = P(M \leq m) \tag{1}$$
+
 Varför har vi tre olika funktioner för sannolikhet? Notera att funktionerna beskriver olika saker:
 - $P()$ eller $f()$: Sannolikheten för ett specifikt utfall, till exempel exakt 3 på tärningen.
 - $F()$: Den kumulativa sannolikheten, som 3 eller lägre på tärningen
@@ -35,19 +38,31 @@ Varför har vi tre olika funktioner för sannolikhet? Notera att funktionerna be
 Nu ska vi gå igenom lite matematik rörande slumpmässiga variabler och sannolikhetsfördelningar. Syftet med detta är enbart för att få en bättre förståelse för vad fenomenet innebär. Om något känns extra krångligt -- prova att hoppa över detta för nu och kanske prova att läsa det senare.
 Säg att vi har en variabel $X$ som följer en diskret sannolikhetsfördelning som kan anta utfall $\{ 1,2,3,4,5,6\}$ med samma sannolikhet. När alla utfall har samma sannolikhet kallas det för att sannolikhetsfördelningen är likformig.
 Fördelningsfunktionen för en likformig diskret sannolikhetsfördelning kan generellt beskrivas som:
-$F(x) = P(X \leq x) = \frac{x - a + 1}{b - a + 1},\,\, x = a,a + 1,\ldots,b$ (2)
+
+
+$$F(x) = P(X \leq x) = \frac{x - a + 1}{b - a + 1},\,\, x = a,a + 1,\ldots,b \tag{2}$$
+
 där $a$ och $b$ är lägsta respektive högsta heltalet som $X$ kan anta. I detta fall är $a = 1$ respektive $b = 6$. Fördelningsfunktionen för vår slumpmässiga variabel $X$ är:
-$F(x) = P(X \leq x) = \frac{x}{6},\,\, x = 1,2,3,4,5,6$ (3)
+
+
+$$F(x) = P(X \leq x) = \frac{x}{6},\,\, x = 1,2,3,4,5,6 \tag{3}$$
+
 Till exempel har vi att $F(2) = 2\text{/}6$, vilket innebär att den kumulativa sannolikheten för att få utfall 1 eller 2 är lika med 2/6. Från och med $x = 6$ och uppåt är $F(x) = 1$, det vill säga 100 %.
 Den kumulativa sannolikheten $P(X \leq x)$ måste per definition vara ett värde mellan 0 och 1, mellan 0 och 100 %. Ett annat sätt att beskriva $P(X \leq x)$ är att från 100 % sannolikhet (talet 1) subtraherar vi sannolikheten för $P(X \> x)$:
-$F(x) = P(X \leq x) = 1 - P(X \> x)$ (4)
+
+
+$$F(x) = P(X \leq x) = 1 - P(X \> x) \tag{4}$$
+
 För att beräkna sannolikheten $P(X \> x)$ kan vi därför ta $1 - F(x)$. För variabel $X$ är sannolikheten att få 3 till 6 poäng:
-$P(X \> x) = 1 - F(2) = 1 - \frac{2}{6} = \frac{4}{6}$ (5)
+
+
+$$P(X \> x) = 1 - F(2) = 1 - \frac{2}{6} = \frac{4}{6} \tag{5}$$
+
 Figur 1 illustrerar en likformig slumpmässig sannolikhetsfördelning, där alla värden har samma sannolikhet. Övre diagrammet visar funktion $f(x)$. Nedre diagrammet visar $F(x)$, den kumulativa sannolikheten att få ett värde lika med eller mindre än $x$.
 
 **Figur 1: Sannolikhetsfunktion och kumulativa fördelningsfunktionen**
 
-![En bild som visar text, skärmbild, diagram, linje Automatiskt genererad beskrivning](img/k2-5-1-image1.png){style="width:5.13329in;height:6.52784in"}
+![En bild som visar text, skärmbild, diagram, linje Automatiskt genererad beskrivning](img/k2-5-1-image1.png)
 
 
 ::: {.fig-caption}
@@ -58,34 +73,60 @@ Förklaring: Övre diagrammet beskriver sannolikheten 1/6 för respektive utfall
 #### Väntevärde i stället för medelvärde
 För en slumpmässig variabel kan vi inte beräkna ett medelvärde på det sätt som vi kan göra för en samling diskreta värden, som en samling tal. För en tärning kan vi inte beräkna medelvärde förrän vi kastat den. Men vi kan beräkna vad vi förväntar oss, alltså det \"genomsnitt\" vi skulle få om vi kastade oändligt många gånger. Detta kallas för väntevärde, eller förväntat värde (engelska *expected value*).
 Väntevärdet för en slumpmässig variabel är summan av varje utfall multiplicerat med dess sannolikhet. Matematiskt är väntevärde en generalisering av [viktat medelvärde](https://www.matteboken.se/lektioner/matte-1/ovningsexempel/betygssnitt#!/). För en diskret slumpmässig variabel $X$ kan detta beskrivas som:
-$E(X) = \sum_{i}^{n}x_{i}P\left( x_{i} \right)$ (6)
+
+
+$$E(X) = \sum_{i}^{n}x_{i}P\left( x_{i} \right) \tag{6}$$
+
 där $E()$ kallas för väntevärdesfunktionen, vilket även kan skrivas $E\lbrack X\rbrack$, $E(X)$ eller $EX$. I [avsnitt 2.1](https://www.dropbox.com/scl/fi/clzr656ksjz2ut13zw9wx/2-1-Frekvens-och-f-rdelning.docx?rlkey=4ybbva8mkt5aj3envb6sb6xu3&dl=0) introducerade vi populationens medelvärde $\mu$. Detta är samma sak som väntevärdet för populationen för den slumpmässiga variabeln $X$, det vill säga: $E(X) = \mu_{X}$.
 Säg som exempel att vi har en slumpmässig variabel $X$ med utfallen 1, 2, 3, 4, 5 och 6, alla med sannolikheten 1/6. Väntevärdet för variabeln $X$ blir då:
-$E(X) = x_{1}*P\left( x_{1} \right) + x_{2}*P\left( x_{2} \right) + x_{3}*P\left( x_{3} \right) + x_{4}*P\left( x_{4} \right) + x_{5}*P\left( x_{5} \right) + x_{6}*P\left( x_{6} \right)$ (7)
+
+
+$$E(X) = x_{1}*P\left( x_{1} \right) + x_{2}*P\left( x_{2} \right) + x_{3}*P\left( x_{3} \right) + x_{4}*P\left( x_{4} \right) + x_{5}*P\left( x_{5} \right) + x_{6}*P\left( x_{6} \right) \tag{7}$$
+
 $= 1*\frac{1}{6} + 2*\frac{1}{6} + *\frac{1}{6} + 3*\frac{1}{6} + 4*\frac{1}{6} + 5*\frac{1}{6} + 6*\frac{1}{6} = 3,5$
 
 #### Väntevärdet av en konstant
 Väntevärdesfunktionen $E()$ är en linjär funktion. Om vi har de slumpmässiga variablerna $X$ och $Y$ så gäller följande:
-$E(X + Y) = E(X) + E(Y)$ (8)
+
+
+$$E(X + Y) = E(X) + E(Y) \tag{8}$$
+
 Säg nu att vi har en valfri konstant, $a$. Om vi multiplicerar väntevärdet $E(X)$ med $a$ är detta samma sak som $a$ multiplicerat med respektive enskilt värde i variabeln $X$:
-$E(aX) = aE(X)$ (9)
+
+
+$$E(aX) = aE(X) \tag{9}$$
+
 Om vi adderar en konstant $b$ kan vi flytta ut även denna ur väntevärdesfunktionen:
-$E(aX + b) = aE(X) + b$ (10)
+
+
+$$E(aX + b) = aE(X) + b \tag{10}$$
 
 #### Varians och standardavvikelse för slumpmässiga variabler
 I [avsnitt 2.2](https://www.dropbox.com/scl/fi/1esn74n4y0c48moczz9mj/2-2-Avvikelse-varians-och-standardavvikelse.docx?rlkey=uv8lf1wj3u89yrguwkkss5ck6&dl=0) introducerade vi varians som ett sätt att mäta spridning. Vi gick igenom hur vi kan uppskatta variansen i en population genom att räkna på observationer i ett urval.
 Även för slumpmässiga variabler kan vi beskriva varians, men då på ett lite annorlunda sätt. För en slumpmässig diskret variabel $X$ kan varians definieras som:
-$var(X) = \sum_{i}^{n}\left( x_{i} - \mu_{X} \right)^{2}P\left( x_{i} \right)$ (11)
+
+
+$$var(X) = \sum_{i}^{n}\left( x_{i} - \mu_{X} \right)^{2}P\left( x_{i} \right) \tag{11}$$
+
 där $\mu_{X} = E(X)$ och $P\left( x_{i} \right)$ är sannolikheten för respektive värde $x_{i}$, där vi från ekvation 6 vet att $E(X) = \sum_{i}^{n}x_{i}P\left( x_{i} \right)$.
 Standardavvikelse ges, liksom tidigare, av positiva kvadratroten av variansen:
-$\sigma_{x} = s(x) = \sqrt{var(x)}$ (12)
+
+
+$$\sigma_{x} = s(x) = \sqrt{var(x)} \tag{12}$$
+
 där $\sigma$ representerar variansen i populationen.
 
 #### Varians för en konstant
 Om vi har $var(aX + b)$, där $a$ och $b$ är konstanter, får vi:
-$var(aX + b) = a^{2}\text{var}(X)$ (13)
+
+
+$$var(aX + b) = a^{2}\text{var}(X) \tag{13}$$
+
 Det vill säga en konstant $a$ som multipliceras med den slumpmässiga variabeln kan flyttas ut ur variansfunktionen $var()$ och multipliceras med sig själv. Konstant $b$ försvinner. För standardavvikelse gäller att:
-$s(aX + b) = \|a\|s(X)$ (14)
+
+
+$$s(aX + b) = \|a\|s(X) \tag{14}$$
+
 där $\|a\|$ är absolutvärdet av $a$. Detta innebär att om vi multiplicerar en slumpmässig variabel $X$ med en konstant $a$ så multipliceras dess varians och standardavvikelse, men det förändrar inte spridningens form (jämför [avsnitt 2.2](https://www.dropbox.com/scl/fi/1esn74n4y0c48moczz9mj/2-2-Avvikelse-varians-och-standardavvikelse.docx?rlkey=uv8lf1wj3u89yrguwkkss5ck6&dl=0)).
 
 #### De stora talens lag
@@ -96,11 +137,20 @@ Små samlingar med värden, som till exempel 3 kast, löper större risk att avv
 De stora talens lag är ingen fysisk lag som måste gälla i varje verkligt exempel. Till exempel, om vi skulle samla ihop 1 000 olika perfekt balanserade tärningar och slå varje tärning 1 000 gånger, så skulle några få av dessa resultat avvika kraftigt från medelvärdet.
 Och slår vi tillräckligt många tärningar kommer vi till slut även få de mest extrema resultaten, som till exempel 1 000 kast med värdet 6 varje gång och 1 000 kast med värdet 1 varje gång.
 Mer formaliserat kan stora talens lag formuleras på följande sätt: säg att vi har en oändlig sekvens av slumpmässiga variabler $X_{1},X_{2},\ldots,X_{n}$ som har samma väntevärde $\mu$:
-$E\left( X_{1} \right) = E\left( X_{2} \right) = \ldots = \mu$ (15)
+
+
+$$E\left( X_{1} \right) = E\left( X_{2} \right) = \ldots = \mu \tag{15}$$
+
 Medelvärdet för $n$ av dessa variabler är:
-$\overline{X_{n}} = \frac{1}{n}\sum_{i}^{n}X_{i}$ (16)
+
+
+$$\overline{X_{n}} = \frac{1}{n}\sum_{i}^{n}X_{i} \tag{16}$$
+
 Stora talens lag kan då uttryckas som att följande [gränsvärde](https://www.matteboken.se/lektioner/matte-3/algebraiska-uttryck/gransvarde#!/) är 1 då $n$ går mot oändlighet:
-$\lim_{n \rightarrow \infty}{P\left( \left\| \overline{X_{n}} - \mu \right\| \< \epsilon \right)} = 1$ (17)
+
+
+$$\lim_{n \rightarrow \infty}{P\left( \left\| \overline{X_{n}} - \mu \right\| \< \epsilon \right)} = 1 \tag{17}$$
+
 där $\left\| \overline{X_{n}} - \mu \right\|$ är absolutbeloppet av medelvärdet $\overline{X_{n}}$ minus väntevärdet $\mu$. Funktionen $P()$ beskriver sannolikheten för ett utfall. Termen $\epsilon$ är ett valfritt positivt tal, till exempel ett mycket lågt värde nära 0.
 Hela ekvationen kan läsas som att sannolikheten för att $\left\| \overline{X_{n}} - \mu \right\|$ är mindre än $\epsilon$ närmar sig 100 % då antalet slumpmässiga variabler $X_{i}$ växer till oändligt många, det vill säga $n \rightarrow \infty$. Ett annat sätt att beskriva detta är att skillnaden mellan $\overline{X_{n}}$ och $\mu$ närmar sig 0 och denna skillnad kommer att vara mindre än det låga värdet $\epsilon$.
 

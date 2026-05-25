@@ -17,7 +17,7 @@ Ett sätt att visa spridningen i en samling värden är *stapeldiagram*, ett dia
 
 **Figur 1: Stapeldiagram**
 
-![](img/k2-2-1-image1.png){style="width:3in;height:3in"}****
+![](img/k2-2-1-image1.png)****
 
 
 ::: {.fig-caption}
@@ -32,7 +32,12 @@ Vi kan se i diagrammet att kvinnor i genomsnitt lever längre än män, eftersom
 Stapeln längst till vänster i diagrammet visar att det finns två kommuner där den genomsnittliga livslängden för män är cirka 77 år.
 De streckade vertikala linjerna visar genomsnitt för alla observationerna i respektive grupp. Dessa streckade linjer sammanfaller även med den högsta stapeln i respektive grupp. Detta illustrerar att det vanligaste värdet bland kommunerna är ett värde nära respektive medelvärde.
 Diagrammet illustrerar att kön i någon utsträckning samvarierar med livslängd, eftersom kvinnor i genomsnitt lever längre. Diagrammet säger ingenting om varför det är så.
-**Figur 2: Genomsnittlig livslängd i Sveriges kommuner**![](img/k2-2-1-image2.png){style="width:6in;height:4in"}
+
+**Figur 2: Genomsnittlig livslängd i Sveriges kommuner**
+
+
+![](img/k2-2-1-image2.png)
+
 
 ::: {.fig-caption}
 Förklaring: Data från [Kolada](https://www.kolada.se/). De gröna staplarna visar fördelningen av medellivslängd för män i respektive kommun i Sverige år 2022. De rosa staplarna visar för kvinnor. De streckade vertikala linjerna markerar medelvärden för respektive grupp.
@@ -44,11 +49,17 @@ Medelvärde är en form av lägesmått. Se gärna Mattebokens introduktion till 
 I tidigare avsnitt gick vi igenom hur populationen representerar den mängd vi vill studera. Urval är en mindre delmängd av populationen som vi har data på. Värdena för populationen är ofta okända, varför vi använder urvalsdata för att uppskatta dessa. Ordet "uppskattar" syftar på att vi använder metoder för att beräkna resultat, men att dessa resultat är mer eller mindre osäkra.
 Om vi har tillgång till populationsdata för en variabel *X* är också så klart medelvärdet känt. För att markera detta brukar populationens medelvärde skrivas som $\mu_{X}$ (där $\mu$ är den grekiska bokstaven mu). Vi markerar $\mu$ med *X* eftersom det är medelvärdet för just denna variabel.
 Men ofta arbetar vi med urvalsdata och det medelvärde vi då beräknar är, per definition, en uppskattning av populationens medelvärde. Vårt uppskattade medelvärde betecknas då  $\overline{X}$:
-$\overline{X} = \frac{\sum_{i}^{}x_{i}}{n}$ (1)
+
+
+$$\overline{X} = \frac{\sum_{i}^{}x_{i}}{n} \tag{1}$$
+
 där täljaren $\sum_{i}^{}x_{i}$ innebär summan av alla observerade värden (i vår urvalsdata) för variabeln *X*. Bokstaven *i* betyder observation nummer *i*. Bokstaven *n* syftar på antal observationer i vårt urval. Uttrycket i ekvation 1 kallas för medelvärdets *estimator*. En funktion för att estimera (uppskatta) medelvärdet.
 Ett sätt att studera spridningen i en variabel är att beräkna avstånd från medelvärdet. I populationen skrivs differensen mellan observation $x_{i}$ och medelvärdet $\mu_{X}$ som $x_{i} - \mu_{X}$.
 Med urvalsdata tar vi $x_{i} - \overline{X}$. Summan av alla [differenser](https://www.matteboken.se/lektioner/skolar-7/tal-och-de-fyra-raknesatten/de-fyra-raknesatten) från medelvärdet $\sum_{i}^{}\left( x_{i} - \overline{X} \right)$ är alltid noll. Ett sätt att visa detta är följande:
-$\sum_{i}^{}\left( x_{i} - \overline{X} \right)\ = \sum_{i}^{}x_{i} - \sum_{i}^{}\overline{X}$ (2)
+
+
+$$\sum_{i}^{}\left( x_{i} - \overline{X} \right)\ = \sum_{i}^{}x_{i} - \sum_{i}^{}\overline{X} \tag{2}$$
+
 > $= \sum_{i}^{}{x_{i} - n\overline{X}}$
 >
 > $= \sum_{i}^{}{x_{i} - n\frac{1}{n}\sum_{i}^{}x_{i}}$

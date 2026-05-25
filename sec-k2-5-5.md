@@ -13,14 +13,22 @@ I detta avsnitt ska vi kombinera vad vi lärt oss om statistisk analys med regre
 
 #### Med urvalsdata estimerar vi regressionsmodellen
 Med hjälp av urvalsdata vill vi estimera koefficienterna $a$ och $b$ en regressionsmodell som existerar i en population:
-$Y = a + bX + V$ (1)
+
+
+$$Y = a + bX + V \tag{1}$$
+
 där *Y* och *X* är variabler och *V* är feltermen. Vi vill finna värden som är så nära som möjligt populationsvärdena.
 Figur 1 illustrerar detta med påhittade data för två normalfördelade variabler $Y$ och $X$. Inspirerat av Robert Östlings undervisningsmaterial:\
 www.sites.google.com/view/robertostling/home/teaching
 De grå prickarna är populationen. I populationen existerar det en positiv samvariation mellan $Y$ och $X$. Den heldragna svarta linjen är regressionslinjen för populationen.
 Från populationen har vi tagit två slumpmässiga urval på några observationer, markerade som "urval 1" och "urval 2", och estimerat en regressionslinje per urval. Regressionslinjen för urval 1 är den streckade linjen med negativ lutning. Regressionslinjen för urval 2 har en positiv lutning. Inget av de två urvalen ger en korrekt bild av populationens samvariation.
 Bilden illustrerar hur vi i praktiken arbetar med analys när vi har tillgång till data. I regel har vi inte populationsdata. Ibland har vi en stor mängd observationer och många variabler. Men ofta vill vi även uttala oss om vad som kommer hända i framtiden -- vilket vi per definition inte har data på än. För att detta arbete ska bli så bra som möjligt behöver vi förstå statistisk analys och teorierna bakom statistiska test.
-**Figur 1: Samvariationen i population och urval**![En bild som visar diagram, karta, linje, skärmbild Automatiskt genererad beskrivning](img/k2-5-5-image1.png){style="width:4.80821in;height:3.03269in"}
+
+**Figur 1: Samvariationen i population och urval**
+
+
+![En bild som visar diagram, karta, linje, skärmbild Automatiskt genererad beskrivning](img/k2-5-5-image1.png)
+
 
 ::: {.fig-caption}
 Förklaring: De grå prickarna är populationen. I populationen finns en positiv samvariation mellan $Y$ och $X$, vilket illustreras av den heldragna svarta linjen. Från populationen har vi tagit två mindre slumpmässiga urval, vars samvariation illustreras med den streckade och den prickiga linjen.
@@ -31,7 +39,10 @@ Förklaring: De grå prickarna är populationen. I populationen finns en positiv
 Nu ska vi gå igenom hur vi kan formulera statistiska test och pröva hypoteser för koefficienterna i regressionsmodellen i ekvation 1. För de båda koefficienterna $a$ och $b$ kan vi ställa upp varsitt statistiskt test och formulera varsin noll- samt alternativhypotes.
 Vi fokuserar här på lutningskoefficienten $b$. Ofta är vi mer intresserade av $b$ än $a$, eftersom vårt $b$ beskriver den huruvida det finns någon samvariation mellan variablerna $X$ och $Y$.
 Ett vanligt sätt att formulera nollhypotesen för $b$ är att testa om det förekommer någon samvariation överhuvudtaget mellan variablerna, positiv eller negativ. Det vill säga om $b$ (i populationen) är skild från noll:
-$H_{0}:b = 0$ (2)
+
+
+$$H_{0}:b = 0 \tag{2}$$
+
 $H_{1}:b \neq 0$
 Proceduren går till så att vi först estimerar regressionsmodellen och koefficienterna, $\widehat{a}\ \text{och}\ \widehat{b}$, och därefter utför ett statistiskt test. Det vi beräknar då är sannolikheten för att nollhypotesen är falsk och bör förkastas. Ett annat sätt att beskriva detta är att vi beräknar sannolikheten för om vårt resultat (estimerade $\widehat{b}$) lika gärna kunde ha uppstått av slump.
 
@@ -50,7 +61,7 @@ T-fördelningen är, liksom normalfördelningen, jämnt fördelad kring medelvä
 
 **Figur 2: T-fördelningens täthetsfunktion och kumulativa sannolikhetsfunktion.**
 
-![](img/k2-5-5-image2.png){style="width:4.82292in;height:6.43056in"}
+![](img/k2-5-5-image2.png)
 
 
 ::: {.fig-caption}
@@ -60,16 +71,31 @@ Förklaring: Diagrammen visar tre exempel på t-fördelningen med olika antal fr
 
 #### Statistiskt test för $b$
 För att pröva hypoteserna $H_{0}:b = 0$ och $H_{1}:b \neq 0$ kan vi, utifrån antaganden om feltermernas fördelning, använda ett tvåsidigt t-test där t -värdet skattas med följande ekvation:
-$t = \frac{\widehat{b} - b_{0}}{s_{\widehat{b}}}$ (3)
+
+
+$$t = \frac{\widehat{b} - b_{0}}{s_{\widehat{b}}} \tag{3}$$
+
 I täljaren har vi $b_{0}$, vilket är det hypotetiska värde som vi prövar $b$ mot utifrån vår nollhypotes, det vill säga $b_{0} = 0$. Vi kan därför stryka $b_{0}$ i ekvation 3 och skriva:
-$t = \frac{\widehat{b} - b_{0}}{s_{\widehat{b}}} = \frac{\widehat{b}}{s_{\widehat{b}}}$ (4)
+
+
+$$t = \frac{\widehat{b} - b_{0}}{s_{\widehat{b}}} = \frac{\widehat{b}}{s_{\widehat{b}}} \tag{4}$$
+
 I nämnaren har vi $s_{\widehat{b}}$, estimerat standardfel för $\widehat{b}$. Detta innebär att för att utföra detta statistiska test behöver vi veta standardfel (eller variansen) för estimatorn $\widehat{b}$, vilket är en uppskattning av osäkerheten i vårt estimat. Variansen för estimatorn $\widehat{b}$ kan definieras som:
-$var(\widehat{b}) = \frac{\sigma_{V}^{2}}{\sum_{i}^{}\left( x_{i} - \bar{x} \right)^{2}\mspace{2mu}}$ (5)
+
+
+$$var(\widehat{b}) = \frac{\sigma_{V}^{2}}{\sum_{i}^{}\left( x_{i} - \bar{x} \right)^{2}\mspace{2mu}} \tag{5}$$
+
 I nämnaren har vi observationerna för variabel $x$. Feltermernas varians i populationen $\sigma_{V}^{2}$ är i regel okänd men vi kan estimera denna med våra urvalsdata som *medelkvadratsumman för residualerna* (MSR), vilket vi kan skriva som ${\widehat{\sigma}}_{\widehat{V}}^{2}$ eller ${\widehat{s}}_{\widehat{V}}^{2}$ :
-$MSR = {\widehat{\sigma}}_{\widehat{V}}^{2} = {\widehat{s}}_{\widehat{V}}^{2} = \frac{\sum_{i}^{}{\widehat{v}}_{i}^{2}\mspace{2mu}}{n - p} = \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{n - p}$ (6)
+
+
+$$MSR = {\widehat{\sigma}}_{\widehat{V}}^{2} = {\widehat{s}}_{\widehat{V}}^{2} = \frac{\sum_{i}^{}{\widehat{v}}_{i}^{2}\mspace{2mu}}{n - p} = \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{n - p} \tag{6}$$
+
 där $n - p$ är antal frihetsgrader: $n$ är antal observationer och $p$ är antal koefficienter (parametrar i vår beräkning). I detta fall har vi två, $a$ och $b$, vilket ger $p = 2$.
 Om vi byter ut populationsvärdet $\sigma_{V}^{2}$ i definitionen för $var(\widehat{b})$ mot estimerade ${\widehat{s}}_{\widehat{V}}^{2}$ får vi estimerade variansen för estimatorn $\widehat{b}$:
-$var\left( \widehat{b} \right) = {\widehat{s}}_{\widehat{V}}^{2}\frac{1}{\sum_{i}^{}\left( x_{i} - \bar{x} \right)^{2}\mspace{2mu}} = \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - p)\sum_{}^{}\left( x_{i} - \bar{x} \right)^{2}}$ (7)
+
+
+$$var\left( \widehat{b} \right) = {\widehat{s}}_{\widehat{V}}^{2}\frac{1}{\sum_{i}^{}\left( x_{i} - \bar{x} \right)^{2}\mspace{2mu}} = \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - p)\sum_{}^{}\left( x_{i} - \bar{x} \right)^{2}} \tag{7}$$
+
 Kvadratroten av detta är standardfelet för $\widehat{b}$.
 
 #### Ett exempel med regressionsanalys med t-test
@@ -79,14 +105,7 @@ Detta exempel syftar enbart till att illustrera metoden. För att göra det mer 
 **Tabell 1. Fyra observationer för X och Y**
 
   -----------------------------------------------------------------------------
-  Observation *i*    
-
-$$X$$
-
-   
-
-$$Y$$
-
+  Observation *i*    $X$   $Y$
   ----------------- ----------------------------- -----------------------------
   1                               3                             3
   2                               4                             2
@@ -94,9 +113,15 @@ $$Y$$
   4                               7                             4
   -----------------------------------------------------------------------------
 För beräkningen av $t$ vet vi att täljaren är $\widehat{b} = 0,5$. Till nämnaren vill vi estimera ${\widehat{s}}_{\widehat{b}}$ enligt ovan. Från tidigare beräkningar med dessa fyra observationer vet vi att $\sum\left( y_{i} - \widehat{y} \right)^{2} = 2,5$ och $\sum\left( x_{i} - \bar{x} \right)^{2} = 10$. Vi har fyra observationer $(n = 4)$ och två koefficienter ( $p = 2$ ), varför $n - p = 4 - 2 = 2$. Detta ger följande estimat av ${\widehat{s}}_{\widehat{b}}$ :
-${\widehat{s}}_{\widehat{b}} = \left( \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - 2)\sum_{}^{}\left( x_{i} - \bar{x} \right)^{2}} \right)^{1/2} = \left( \frac{2,5}{2*10} \right)^{1/2} \approx 0,354$ (8)
+
+
+$${\widehat{s}}_{\widehat{b}} = \left( \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - 2)\sum_{}^{}\left( x_{i} - \bar{x} \right)^{2}} \right)^{1/2} = \left( \frac{2,5}{2*10} \right)^{1/2} \approx 0,354 \tag{8}$$
+
 Vi sätter nu in även detta i ekvation 4 för att estimera vårt $t$-värde:
-$t = \frac{\widehat{b}}{{\widehat{s}}_{\widehat{b}}} = \frac{0,5}{\left( \frac{2,5}{2*10} \right)^{1/2}} \approx 1,414$ (9)
+
+
+$$t = \frac{\widehat{b}}{{\widehat{s}}_{\widehat{b}}} = \frac{0,5}{\left( \frac{2,5}{2*10} \right)^{1/2}} \approx 1,414 \tag{9}$$
+
 För t -värdet har vi $k = n - p = 4 - 2 = 2$ frihetsgrader. Eftersom vi har ett tvåsidigt t-test jämför vi huruvida vårt skattade $\|t\| \> t^{*}$, där $t^{*}$ är kritiska t-värdet. Vi väljer signifikansnivå $\alpha = 0,05$, vilket för ett tvåsidigt test tar $\alpha/2 = 0,025$ på vardera sida om sannolikhetsfördelningens medelvärde.
 Vårt beräknade $t = 1,4$ kan vi jämföra mot figur 2 ovan och det övre diagrammet, där vi ser att $t^{*} = 4,303$, för t-fördelningen med 2 frihetsgrader. Vårt beräknade $\|t\|$ måste därför vara högre än detta värde för att förkasta $H_{0}$ vid $\alpha = 0,05$. Eftersom så inte är fallet förkastar vi inte $H_{0}$, som säger att $b = 0$. Ett annat sätt att beskriva detta är att vårt estimerade $\widehat{b}$ *inte är* *statistiskt signifikant*.
 Vad betyder detta praktiskt? Med endast 4 observationer och $\widehat{b} = 0,5$ kan vi inte säga att sambandet är statistiskt skilt från noll. Vi skulle behöva fler observationer eller en större effekt för att nå signifikans.
@@ -109,11 +134,17 @@ Om vi, som exempel, estimerade en regressionsmodell för att studera om föränd
 
 #### Regressionsanalys med konfidensintervall
 För de estimerade koefficienterna i vår regressionsanalys kan vi även uppskatta ett konfidensintervall (se [avsnitt 5.3](https://www.dropbox.com/scl/fi/12fiw2s4633qjt0d1s0zw/5-3-Statitsisk-analys.docx?rlkey=b4urprsp85hxcdp6jm3z9vaw7&dl=0)). För regressionsmodellen $Y = a + bX + V$ och observationerna $x =$ $\{ 3,2,5,4\}$ och $y = \{ 3,4,6,7\}$ fann vi i beräkningarna ovan följande resultat:
-$\begin{matrix} \widehat{a} = 1 & \widehat{b} = 0,5 \\ {\widehat{s}}_{\widehat{a}} = 1,854 & {\widehat{s}}_{\widehat{b}} = 0,354 \end{matrix}$ (10)
+
+
+$$\begin{matrix} \widehat{a} = 1 & \widehat{b} = 0,5 \\ {\widehat{s}}_{\widehat{a}} = 1,854 & {\widehat{s}}_{\widehat{b}} = 0,354 \end{matrix} \tag{10}$$
+
 Ett sätt att estimera konfidensintervall för $\widehat{a}$ är då att beräkna följande:
 Konfidensintervall för koefficient $b$: $\widehat{b} \pm t_{k,\alpha}*{\widehat{s}}_{\widehat{b}}$ (11)
 där $t_{k,\alpha}$ är kritiska t-värdet beroende på antal frihetsgrader $k = 2$ och signifikansnivå $\alpha$. Låt oss nu skatta ett $95\%$ konfidensintervall. Vi sätter i så fall $\alpha = 0,05$. Värdet för $t_{k,\alpha}$ hämtar vi från figur 2 ovan: 4,303 (samma som kritiska $t^{*}$ i exemplet ovan). Detta ger följande konfidensintervall:
-$\widehat{b} \pm t_{k,\alpha}*{\widehat{s}}_{\widehat{b}} = 0,5 \pm 4,3*0,354 \approx 0,5 \pm 1,52$ (12)
+
+
+$$\widehat{b} \pm t_{k,\alpha}*{\widehat{s}}_{\widehat{b}} = 0,5 \pm 4,3*0,354 \approx 0,5 \pm 1,52 \tag{12}$$
+
 Konfidensintervallet visar inom vilka gränser som $95\ \%$ av koefficienternas estimat skulle befinna sig vid upprepade urval. För $\widehat{b}$ är konfidensintervallets nedre och övre gräns cirka $- 1,02$ samt 2,02.
 
 

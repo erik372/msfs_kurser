@@ -13,7 +13,10 @@ Vi har i tidigare avsnitt introducerat minstakvadratmetoden och gått igenom del
 
 #### En ny modell
 Låt oss nu estimera följande regressionsmodell:
-$Z = \alpha + \beta K + \epsilon$ (1)
+
+
+$$Z = \alpha + \beta K + \epsilon \tag{1}$$
+
 där $Z$ och $K$ är variabler, $\alpha$ och $\beta$ är koefficienterna som vi ska estimera utifrån minstakvadratmetoden och $\epsilon$ är feltermen. En del av poängen här är att vi nu använder andra bokstäver men att matematiken ändå är densamma. Låt oss repetera vår metod:
 1.  Vi har en idé om att $K$ samvarierar med $Z$. Detta är ett påstående om samvariation, inte en teori om ett orsakssamband. Samvariation kan i sin tur vara baserad på en teori om ett orsakssamband, vilket i så fall i regel brukar formuleras som att den förklarande variabeln $K$ orsakar förändringar i den förklarade variabeln $Z$.
 2.  Vi formulerar vårt påstående om samvariation i form av en regressionsmodell i ekvation 1.
@@ -23,32 +26,11 @@ där $Z$ och $K$ är variabler, $\alpha$ och $\beta$ är koefficienterna som vi 
 
 #### Estimera koefficienterna
 Låt oss nu estimera koefficienterna $\alpha$ och $\beta$. Observationerna för variablerna $Z$ och $K$ beskrivs i tabell 1, tillsammans med beräkningarna vi behöver för våra beräkningar.
+
 **Tabell 1. Underlag för att estimera koefficienterna** $\mathbf{\alpha}$ **och** $\mathbf{\beta}$**.**
+
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation i    
-
-$$Z_{i}$$
-
-   
-
-$$K_{i}$$
-
-   
-
-$$Z_{i} - \overline{Z}$$
-
-   
-
-$$K_{i} - \overline{K}$$
-
-   
-
-$$\left( Z_{i} - \overline{Z} \right)\left( K_{i} - \overline{K} \right)$$
-
-   
-
-$$\left( K_{i} - \overline{K} \right)^{2}$$
-
+  Observation i    $Z_{i}$   $K_{i}$   $Z_{i} - \overline{Z}$   $K_{i} - \overline{K}$   $\left( Z_{i} - \overline{Z} \right)\left( K_{i} - \overline{K} \right)$   $\left( K_{i} - \overline{K} \right)^{2}$
   --------------- ---------------------------------- ---------------------------------- -------------------------------------------------- -------------------------------------------------- ---------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------
   1                               1                                  0                                        --0,5                                               --2                                                                             1                                                                                         4
   2                               4                                  0                                         2,5                                                --2                                                                            --5                                                                                        4
@@ -57,37 +39,38 @@ $$\left( K_{i} - \overline{K} \right)^{2}$$
   Summa                           6                                  8                                                                                                                                                                           --8                                                                                        16
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 För lutningskoefficienten $\widehat{\beta}$ får vi:
-$\widehat{\beta} = \sum_{i}^{}{\frac{\left( K_{i} - \overline{K} \right)\left( Z_{i} - \overline{Z} \right)}{\sum_{i}^{}\left( K_{i} - \overline{K} \right)^{2}} = - \frac{8}{16} = - \frac{1}{2}}$ (2)
+
+
+$$\widehat{\beta} = \sum_{i}^{}{\frac{\left( K_{i} - \overline{K} \right)\left( Z_{i} - \overline{Z} \right)}{\sum_{i}^{}\left( K_{i} - \overline{K} \right)^{2}} = - \frac{8}{16} = - \frac{1}{2}} \tag{2}$$
+
 För koefficienten $\widehat{\alpha}$:
-$\widehat{\alpha} = \overline{Z} - \widehat{\beta}\overline{K} = 1,5 - \left( - \frac{1}{2} \right)2 = 2,5$ (3)
+
+
+$$\widehat{\alpha} = \overline{Z} - \widehat{\beta}\overline{K} = 1,5 - \left( - \frac{1}{2} \right)2 = 2,5 \tag{3}$$
+
 Att $\widehat{\beta} \< 0$ betyder att regressionslinjens lutning är negativ och att vi har en negativ samvariation mellan de fyra observationerna för $Z$ och $K$. Vi kan nu ställa upp en ekvation för predikterade $\widehat{Z}$:
-$\widehat{Z_{i}} = \widehat{\alpha} + \widehat{\beta}K_{i} = 2,5 - \frac{1}{2}K_{i}$ (4)
+
+
+$$\widehat{Z_{i}} = \widehat{\alpha} + \widehat{\beta}K_{i} = 2,5 - \frac{1}{2}K_{i} \tag{4}$$
+
 Med hjälp av denna och de observerade värdena för variabeln $K$ kan vi estimera fyra värden för predikterade $\widehat{Z}$, vilka beskrivs i tabell 2. Med $\widehat{Z}$ kan vi sedan estimera de fyra residualerna $\widehat{\epsilon}$, vilka beskrivs i samma tabell. De fyra observationerna och regressionslinjen som kan ritas med ekvation 4 illustreras i figur 1.
+
 **Tabell 2. Beräkningar för att estimera** $\widehat{Z}$ **och** $\widehat{\epsilon}$
+
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation i    
-
-$$Z_{i}$$
-
-   
-
-$$K_{i}$$
-
-   
-
-$$\widehat{Z_{i}}$$
-
-   
-
-$$\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}$$
-
+  Observation i    $Z_{i}$   $K_{i}$   $\widehat{Z_{i}}$   $\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}$
   --------------- ---------------------------------- ---------------------------------- --------------------------------------------- ----------------------------------------------------------------------------------
   1                               1                                  0                                       2,5                                                            --1,5
   2                               4                                  0                                       2,5                                                             1,5
   3                               0                                  4                                       0,5                                                            --0,5
   4                               1                                  4                                       0,5                                                             0,5
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-**Figur 1. Regressionslinjen för modell** $Z = \alpha + \beta K + \epsilon$![](img/k2-3-2-image1.png){style="width:3in;height:3in"}
+
+**Figur 1. Regressionslinjen för modell** $Z = \alpha + \beta K + \epsilon$
+
+
+![](img/k2-3-2-image1.png)
+
 
 ::: {.fig-caption}
 Förklaring: Vi har regressionsmodellen $Z = \alpha + \beta K + \epsilon$. Utifrån observationerna för variablerna $Z$ och $K$ och minstakvadratmetoden estimerar vi koefficienterna $\widehat{\alpha}$ och $\widehat{\beta}$. De estimerade koefficienterna och observationerna från variabel $K$ kan vi använda för att estimera $\widehat{Z}$, vilket ger värdena för denna variabel längs med regressionslinjen.
@@ -97,20 +80,30 @@ Förklaring: Vi har regressionsmodellen $Z = \alpha + \beta K + \epsilon$. Utifr
 #### Hur väl passar regressionsmodellen mot data?
 För att jämföra hur väl en regressionsmodell passar de data den syftar till att beskriva mönstret för finns det flera metoder. En viktig del i detta är att jämföra residualerna, det vill säga avståndet mellan de data vi använt i vår förklarade variabel $Y$ och de predikterade värdena för samma variabel  $\widehat{Y}$.
 Om vi har en regressionsmodell med förklarad variabel $Y$ och feltermen $V$ där residualen beräknas $\widehat{V} = Y - \widehat{Y}$ kan vi till exempel jämföra *residualernas kvadratsumma* (engelska *sum of squared residuals*, SSR):
-$SSR = \sum_{i}^{n}\widehat{V_{i}^{2}} = \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$ (1)
+
+
+$$SSR = \sum_{i}^{n}\widehat{V_{i}^{2}} = \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{1}$$
+
 Vi kan tänka på SSR som mängden variation i förklarade variabeln $Y$ som inte kan förklaras av regressionsmodellen.
 Ett annat användbart mått är *kvadratsumman av den förklarade variationen* (engelska *sum of squares explained*, SSE):
-$SSE = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}$ (2)
+
+
+$$SSE = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2} \tag{2}$$
+
 SSE kan beskrivas som den variation i $Y$ som kan förklaras, eller tas bort, av regressionsmodellen. Begreppet "förklaras" innebär i detta sammanhang inte nödvändigtvis "kausal förklaring".
 *Totalsumman av kvadrater* (engelska *total sum of squares*, SST) är summan av SSR och SSE. SST kan tolkas som mängden variation som förekommer i $Y$ innan regressionsmodellen estimeras. SST skrivas som summan av den kvadrerade differensen mellan observerade $Y_{i}$ och medelvärdet $\overline{Y}$:
-$SST = SSE + SSR$ (3)
+
+
+$$SST = SSE + SSR \tag{3}$$
+
 $\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2} = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2} + \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$
 
 #### Skillnaden mellan SSR, SSE och SST
 Ett sätt att illustrera skillnaderna mellan SSR, SSE och SST ges i figur 2. Vi använder här återigen de fyra observationerna för $X = 3,4,6,7$ och $Y = 2,3,4,5$ som vi använde i vårt första exempel på regressionsanalys (se [avsnitt 2.4](https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&dl=0)). I diagrammet i figur 1 markerar vi residualerna med streckade vertikala linjer mellan $Y_{i}\ $ och regressionslinjens $\widehat{Y_{i}}$.
+
 **Figur 2. Differenserna mellan** $\overline{Y}$, $\widehat{Y}$ och $Y_{i}$
 
-![A graph of a function Description automatically generated](img/k2-3-2-image2.png){style="width:3.99306in;height:2.88451in"}
+![A graph of a function Description automatically generated](img/k2-3-2-image2.png)
 
 
 ::: {.fig-caption}
@@ -120,7 +113,10 @@ Förklaring: Figuren illustrerar hur avstånden i diagrammet motsvaras av differ
 
 #### Determinationskoefficienten, $R^{2}$
 Utifrån kvadratsummorna kan vi skatta determinationskoefficienten (på engelska *coefficient of determination*), vilken brukar skrivas som $R^{2}$:
-$R^{2} = \frac{SSE}{SST} = \frac{SST - SSR}{SST} = 1 - \frac{SSR}{SST} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}}$ (4)
+
+
+$$R^{2} = \frac{SSE}{SST} = \frac{SST - SSR}{SST} = 1 - \frac{SSR}{SST} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} \tag{4}$$
+
 $R^{2}$ mäter hur stor andel av variationen i den förklarade variabeln, till exempel $Y$, som kan förklaras av regressionsmodellen och variationen i den förklarande variabeln, till exempel $X$. $R^{2}$ kan anta värden mellan 0 och 1.
 $R^{2} = 0$ betyder att ingenting av variationen i $Y$ kan förklaras av regressionsmodellen och variationen i $X$. $R^{2} = 1$ betyder att all variation i variabel $Y$ förklaras av regressionsmodellen och variationen i variabel $X$.
 

@@ -12,13 +12,19 @@ Att estimera koefficienterna i regressionsmodellen är då endast första steget
 
 #### Medelkvadratsumman
 För att studera hur väl en regressionsmodell passar mot data kan vi även jämföra medelkvadratsumman. Medelkvadratsumman för residualerna (engelska *mean squared residuals*, MSR) beräknas:
-$MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p}$ (5)
+
+
+$$MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p} \tag{5}$$
+
 Nämnaren $n - p$ visar antal frihetsgrader, där $n$ är antal observationer och $p$ är antal estimerade koefficienter i regressionsmodellen. Frihetsgrader anger hur många \"fria\" värden vi har kvar efter att ha estimerat koefficienterna: $n$ = antal observationer (här 4). $p$ = antal estimerade koefficienter (här 2: $a$ och $b$). $n - p$ = frihetsgrader $(4\ - \ 2\ = \ 2)$. Med 4 observationer och 2 koefficienter har vi \"använt upp\" 2 frihetsgrader för att estimera koefficienterna. Vi har 2 frihetsgrader kvar för att mäta variation kring regressionslinjen.
 Förenklat kan ett lågt MSR innebära att regressionsmodellens predikterade $\widehat{Y}$ hamnar relativt nära observationerna $Y$.
 
 #### Medelkvadratsumman av den förklarade variationen
 Medelkvadratsumman av den förklarade variationen är SSE dividerat med antal förklarande variabler (engelska mean sum of squares explained, MSE):
-$MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1}$ (6)
+
+
+$$MSE = \frac{SSE}{p - 1} = \frac{\sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2}}{p - 1} \tag{6}$$
+
 I täljaren tar vi $p$, antal estimerade koefficienter, minus 1 eftersom koefficient $a$ inte multipliceras med någon förklarande variabel.
 
 #### Låt oss jämföra två regressionsmodeller
@@ -30,30 +36,7 @@ Tabell 2 och 3 återger observationerna vi använde för att estimera respektive
 **Tabell 2: Observationer och beräkningar för modell 1**
 
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation i    
-
-$$X_{i}$$
-
-   
-
-$$Y_{i}$$
-
-   
-
-$$\widehat{Y_{i}}$$
-
-   
-
-$$Y_{i} - \widehat{Y_{i}}$$
-
-   
-
-$$Y_{i} - \overline{Y}$$
-
-   
-
-$$\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$$
-
+  Observation i    $X_{i}$   $Y_{i}$   $\widehat{Y_{i}}$   $Y_{i} - \widehat{Y_{i}}$   $Y_{i} - \overline{Y}$   $\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$
   --------------- ---------------------------------- ---------------------------------- --------------------------------------------- ------------------------------------------------------ -------------------------------------------------- ----------------------------------------------------------------------------
   1                               3                                  3                                       2,5                                               0,5                                                  -0,5                                                            0,25
   2                               4                                  2                                        3                                                 -1                                                  -1,5                                                             1
@@ -71,30 +54,7 @@ Förklaring: se text.
 **Tabell 3: Observationer och beräkningar för modell 2**
 
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation i    
-
-$$Z_{i}$$
-
-   
-
-$$K_{i}$$
-
-   
-
-$$\widehat{Z_{i}}$$
-
-   
-
-$$\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}$$
-
-   
-
-$$Z_{i} - \overline{Z_{i}}$$
-
-   
-
-$$\left( Z_{i} - \widehat{Z_{i}} \right)^{2}$$
-
+  Observation i    $Z_{i}$   $K_{i}$   $\widehat{Z_{i}}$   $\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}$   $Z_{i} - \overline{Z_{i}}$   $\left( Z_{i} - \widehat{Z_{i}} \right)^{2}$
   --------------- ---------------------------------- ---------------------------------- --------------------------------------------- ---------------------------------------------------------------------------------- ------------------------------------------------------- ----------------------------------------------------------------------------
   1                               1                                  0                                       2,5                                                            --1,5                                                                 --0,5                                                              2,25
   2                               4                                  0                                       2,5                                                             1,5                                                                   2,5                                                               2,25
@@ -107,19 +67,31 @@ $$\left( Z_{i} - \widehat{Z_{i}} \right)^{2}$$
 ::: {.fig-caption}
 Förklaring: se text.
 Nu ska vi jämföra vilken av modellerna som passar bäst mot deras respektive datapunkter. Vi börjar med att beräkna MSR för respektive regressionsmodell. Tabell 2 upprepar observationerna för modell 1 och variablerna $X$ och $Y$ samt några beräkningar som vi behöver. Detta ger MSR:
-$MSR_{modell\ 1} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p} = \frac{2,5}{2} = 1,25$ (8)
-Låt oss beräkna MSR även för regressionsmodell 2: $Z = \alpha + \beta K + \epsilon$. Tabell 3 upprepar variablernas värden och sammanfattar några beräkningar. Detta ger följande MSR:
-$MSR_{modell\ 2} = \frac{5}{2} = 2,5$ (9)
-Eftersom $MSR_{modell\ 2} \> MSR_{modell\ 1}$ indikerar på att den första regressionsmodellens predikterade $\widehat{Y}$ ligger närmare observerade $Y$, jämfört med hur väl den andra regressionsmodellen lyckas prediktera den förklarade variabeln $Z$ i den modellen.
-MSR beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.
 :::
 
 
+
+$$MSR_{modell\ 1} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p} = \frac{2,5}{2} = 1,25 \tag{8}$$
+
+Låt oss beräkna MSR även för regressionsmodell 2: $Z = \alpha + \beta K + \epsilon$. Tabell 3 upprepar variablernas värden och sammanfattar några beräkningar. Detta ger följande MSR:
+
+
+$$MSR_{modell\ 2} = \frac{5}{2} = 2,5 \tag{9}$$
+
+Eftersom $MSR_{modell\ 2} \> MSR_{modell\ 1}$ indikerar på att den första regressionsmodellens predikterade $\widehat{Y}$ ligger närmare observerade $Y$, jämfört med hur väl den andra regressionsmodellen lyckas prediktera den förklarade variabeln $Z$ i den modellen.
+MSR beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.
+
 ### Vi beräknar $R^{2}$ för båda modellerna
 Låt oss även skatta $R^{2}$. För den första regressionsmodellen $Y = a + bX + V$ får vi (se tabell 2):
-$R_{modell\ 1}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{2,5}{5} = \frac{1}{2}$ (10)
+
+
+$$R_{modell\ 1}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{2,5}{5} = \frac{1}{2} \tag{10}$$
+
 Resultat $R^{2} = \frac{1}{2}$ indikerar att hälften av variationen i $Y$ kan förklaras av regressionsmodellen och variationer i $X$. Låt oss beräkna $R^{2}\ $för den andra regressionsmodellen $Z = \alpha + \beta K + \epsilon$ (se tabell 3):
-$R_{modell\ 2}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{5}{9} = \frac{4}{9}$ (11)
+
+
+$$R_{modell\ 2}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{5}{9} = \frac{4}{9} \tag{11}$$
+
 Eftersom $\frac{4}{9} \< \frac{1}{2}$ indikerar detta att den första regressionsmodellen har högre förklaringsgrad jämfört med den andra modellen. Modell 1 passar därför, enligt detta mått, bättre mot den data som vi använde för att estimera modellen, jämfört med hur modell 2 passar mot den data vi använde för att estimera den modellen.
 Detta betyder att 50 % av variationen i $Y$ förklaras av $X$. 50 % av variationen i $Y$ beror på andra faktorer (residualerna). Ett högre $R^{2}$ betyder att modellen \"passar bättre\" mot data, men det betyder inte automatiskt att modellen är bra. Ett högt eller lågt $R^{2}$ säger inte heller nödvändigtvis något om orsakssamband.
 

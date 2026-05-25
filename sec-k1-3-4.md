@@ -12,19 +12,31 @@ I förlängningen skapar miljöförstöringen kostnader för samhället i sin he
 
 #### En marknad med en extern effekt
 Säg nu att vi har en helt oreglerad marknad, utan skatter eller avgifter, för en produkt där utbud och efterfrågan kan beskrivas med ekvationssystemet:
-$\left\{ \begin{array}{r} \text{Utbud}:\ q = 2 + p \\ \text{Efterfrågan}:\ q = 20 - p \end{array} \right.\ \ $ (1)
+
+
+$$\left\{ \begin{array}{r} \text{Utbud}:\ q = 2 + p \\ \text{Efterfrågan}:\ q = 20 - p \end{array} \right.\ \  \tag{1}$$
+
 där *q* är mängd av produkten och *p* är pris. Lösningen på detta ekvationssystem är $\left( q^{*},p^{*} \right) = (11,9)$. Problemet nu är att denna mängd, 11 enheter, inte tar hänsyn till den verkliga kostnaden för samhället.
 I produktionsprocessen där produkten som ska säljas tillverkas skapas det utsläpp som medför långsiktiga skador på klimatet. Kostnaderna för dessa skador finns inte med i priset. Detta kallas inom samhällsvetenskapen för extern effekt och syftar på något som inte är en avsedd effekt. Det vill säga, målet med tillverkning och konsumtion av varan är själv varan -- inte att skapa utsläppen.
 Nu har forskare räknat fram vad den verkliga kostnaden för samhället är och menar att följande ekvationssystem mer korrekt återspeglar kostnaderna:
-$\left\{ \begin{array}{r} \text{Utbud inklusive samhällskostnaden}:\ q = p \\ \text{Efterfrågan}:\ q = 20 - p \end{array} \right.\ $ (2)
+
+
+$$\left\{ \begin{array}{r} \text{Utbud inklusive samhällskostnaden}:\ q = p \\ \text{Efterfrågan}:\ q = 20 - p \end{array} \right.\  \tag{2}$$
+
 Lösningen på detta nya system är $\left( q^{*},p^{*} \right) = (10,10)$. Efterfrågekurvan är densamma i båda exemplen. Priset, med hänsyn till samhällets verkliga kostnader, blir 10 i stället för 9. När vi tar hänsyn till samhällets verkliga kostnader blir priset högre och vi producerar mindre.
 Ett sätt att höja priset skulle till exempel vara att införa en skatt på de klimatskadliga utsläppen på ett sådant sätt att priset för produkten tar hänsyn till de totala samhällskostnaderna. I verkligheten är dessa fenomen så klart ofta mer komplicerade.
 
 #### Positiva externa effekter
 Externa effekter behöver inte vara negativa. Om vi tänker oss att utbud och efterfrågan på en utbildning i matematik för samhällsvetare på en helt fri marknad skulle kunna beskrivas med följande ekvationssystem:
-$\left\{ \begin{array}{r} \text{Utbud}:\ q = 1 + p \\ \text{Efterfrågan}:\ q = 7 - 2p \end{array} \right.\ $ (3)
+
+
+$$\left\{ \begin{array}{r} \text{Utbud}:\ q = 1 + p \\ \text{Efterfrågan}:\ q = 7 - 2p \end{array} \right.\  \tag{3}$$
+
 skulle det resultera i jämviktsnivåerna $\left( q^{*},p^{*} \right) = (3,2)$. Men nu har några samhällsvetare räknat ut att samhällsnyttan för denna typ av utbildning är högre än vad efterfrågan återspeglar. Den verkliga förtjänsten för samhället fångas i stället med följande ekvationssystem:
-$\left\{ \begin{array}{r} \text{Utbud}:\ q = 1 + p \\ \text{Efterfrågan inklusive samhällsvinst}:\ q = 16 - 2p \end{array} \right.\ $ (4)
+
+
+$$\left\{ \begin{array}{r} \text{Utbud}:\ q = 1 + p \\ \text{Efterfrågan inklusive samhällsvinst}:\ q = 16 - 2p \end{array} \right.\  \tag{4}$$
+
 Detta skulle i stället innebära att jämvikten är $\left( q^{*},p^{*} \right) = (6,5)$. Den optimala mängden utbildning i matematik för samhällsvetare är i så fall den dubbla, jämfört med vad som skulle vara fallet på en helt fri marknad. Notera att eftersom ekvationen för utbud är densamma i båda fallen blir även jämviktspriset högre i denna situation.
 Detta exempel skulle i så fall kunna vara ett argument för att staten borde subventionera denna produktion genom att betala mellanskillnaden mellan priset på en fri marknad $(p = 2)$ och det optimala priset med hänsyn till samhällets behov $(p = 5)$. Politiska åtgärder i verkligheten är alltid mer komplexa än enkla hypotetiska exempel.
 

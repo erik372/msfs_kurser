@@ -9,7 +9,10 @@ Som vi såg i avsnitt 4-1 och 4-3: när vi lägger till eller tar bort variabler
 
 #### Orsakssamband i en regressionsmodell
 Säg nu, kraftigt förenklat, att vi har en teori om att en medicin $(X)$ minskar mängden sjukdomssymptom $(Y)$ hos patienter. Vi har hittat en grupp patienter som alla har lika mycket sjukdomssymptom, vilka vi delat in i en behandlingsgrupp (som får medicin) och en kontrollgrupp (som inte får medicin). För att undersöka medicinens effekt på sjukdomssymptom ställer vi upp följande regressionsmodell:
-$Y = \alpha + \beta X + \epsilon$ (1)
+
+
+$$Y = \alpha + \beta X + \epsilon \tag{1}$$
+
 Genom att observera samvariationen mellan medicin och sjukdomssymptom kommer estimerade $\widehat{\beta}$ att ge oss ett mått på medicinens $X$ effekt på sjukdomssymptomen $Y$. Om medicinen fungerar förväntar vi oss att $\beta$ kommer vara negativ, det vill säga att medicinen $X$ minskar symptom $Y$.
 Ett problem, bland flera tänkbara, är att för att vi ska kunna tolka $\widehat{\beta}$ som ett korrekt mått på effekten av medicinen så måste vi vara säkra på att inga andra fenomen påverkar medicinen och sjukdomssymptomen.
 Säg att vi till exempel vet från tidigare forskning att det finns flera andra saker som både påverkar medicinens effekt och själva sjukdomssymptomet. Det kan handla om sådant som kön, ålder med mera. Dessa saker kan vi mäta och lägga till som variabler i vår regressionsmodell. Genom att kontrollera för till exempel kön kan vi i så fall estimera medicins effekt korrekt.
@@ -38,7 +41,7 @@ Om vi inte justerar vår analys för $P$ och $Z$ kommer de variationer vi observ
 
 **Figur 1: För att skatta effekten av X på Y måste vi justera för P och Z.**
 
-![](img/k2-4-7-image1.png){style="width:2.875in;height:2.48022in"}
+![](img/k2-4-7-image1.png)
 
 
 ::: {.fig-caption}
@@ -72,11 +75,17 @@ Låt oss ta ett exempel på verklig forskning som applicerar brytpunktsanalys p�
 [Carpenter och Dobkin (2009)](https://pmc.ncbi.nlm.nih.gov/articles/PMC2846371/?utm_source=ploomber&utm_medium=blog&utm_campaign=causal-inference-part-i) använder sig av det faktum att i USA är åldersgränsen för att köpa alkohol 21 år. Först visar de att drickandet bland unga vuxna ökar kraftigt strax efter 21-årsdagen samtidigt som olika dödsorsaker som ofta är förknippade med alkoholkonsumtion ökar: trafikolyckor, självmord med mera.
 Carpenter och Dobkin jämför därför mängden dödsfall just kring månaderna före och efter människors 21-årsdag. Alltså, vid 21-årsdagen är den största förändringen just ökad tillgång till alkohol. Och av en tragisk händelse ökar samtidigt mängden dödsfall av orsaker som ofta orsakas av just alkohol.
 Låt oss nu gå igenom grunderna för den regressionsanalys som Carpenter och Dobkin använder för att mäta dessa effekter. Vi illustrerar här två exempel. Vi börjar med följande regressionsmodell:
-$Y_{i} = a_{1} + a_{2}X_{i} + a_{3}T_{i} + u_{i}$ (2)
+
+
+$$Y_{i} = a_{1} + a_{2}X_{i} + a_{3}T_{i} + u_{i} \tag{2}$$
+
 där $a_{1},a_{2}$ och $a_{3}$ är koefficienter. $Y_{i}$ är antal alkoholrelaterade dödsfall per 100 000 invånare i respektive åldersgrupp i, där varje åldersgrupp är indelad i månader: 19 år och 1 månad, 19 år och 2 månader, och så vidare.
 Variabel $X$ är ålder räknat i månader. $T$ är en dummyvariabel som är $T = 0$ för de åldersgrupper som är under 21 och $T = 1$ för de åldersgrupper som har fyllt 21. $u_{i}$ är felterm för åldersgrupp i. Koefficienten $a_{3}$ som är multiplicerad med $T$ kommer i denna regressionsmodell att beskriva den effekt som 21-årsdagen har på alkoholrelaterad dödlighet.
 Koefficienten $a_{2}$ i regressionsmodellen i ekvation 2 estimerar samvariationen mellan dödlighet $(Y)$ och ålder $(X)$. Men denna samvariation kan också tänkas ändras då en person fyller 21. För att kontrollera detta lägger vi till en interaktionsterm $X*T$. Vi får nu följande regressionsmodell:
-$X*T:Y_{i} = b_{1} + b_{2}X_{i} + b_{3}T_{i} + b_{4}\left( X_{i}*T_{i} \right) + v_{i}$ (3)
+
+
+$$X*T:Y_{i} = b_{1} + b_{2}X_{i} + b_{3}T_{i} + b_{4}\left( X_{i}*T_{i} \right) + v_{i} \tag{3}$$
+
 där $b_{1},b_{2},b_{3}$ och $b_{4}$ är koefficienter $Y,X$ och $T$ är samma variabler som i regressionsmodellen i ekvation 2 och $v$ är feltermen. Interaktionstermen $b_{4}\left( X_{i}*T_{i} \right)$ estimerar förändringar i samvariationen mellan alkoholkonsumtion och dödlighet före/efter 21-årsdagen.
 
 #### Carpenter och Dobkins resultat i diagram
@@ -89,7 +98,7 @@ I det högra diagrammet ser vi också två regressionslinjer som är estimerade 
 
 **Figur 2: Samvariationen mellan ålder och alkoholrelaterad dödlighet**
 
-![](img/k2-4-7-image2.png){style="width:6.32639in;height:4.21759in"}
+![](img/k2-4-7-image2.png)
 
 
 ::: {.fig-caption}

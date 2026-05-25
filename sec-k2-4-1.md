@@ -8,7 +8,10 @@ Varför behöver vi fler än två variabler? I analytiskt arbete (och i världen
 
 #### Vad händer när vi har tre variabler?
 Låt oss nu utgå från en regressionsmodell där den förklarade (beroende) variabeln $Y$ förklaras av de två förklarande (oberoende) variablerna $X$ och $Z$:
-$Y_{i} = a + bX_{i} + cZ_{i} + V_{i}$ (1)
+
+
+$$Y_{i} = a + bX_{i} + cZ_{i} + V_{i} \tag{1}$$
+
 Bokstäverna $a$, $b$ och $c$ är konstanta koefficienter och $V_{i}$ är feltermen för observation *i*. Vi ska nu använda minstakvadratmetoden för att estimera koefficienterna $\widehat{a}$, $\widehat{b}$ och $\widehat{c}$ och därefter $\widehat{Y}$ samt $\widehat{V}$.
 Koefficienten $\widehat{b}$ kommer att ge oss den genomsnittliga förändringen i $Y$ som är associerad med en ökning av $X$ med en enhet, givet värdena i $Z$. Koefficient $\widehat{c}$ visar den genomsnittliga förändringen i $Y$ som är associerad med en ökning av $Z$ med en enhet, givet värdena i $X$.
 I och med att vi använder båda de förklarande variablerna $X$ och $Z$ i samma regressionsmodell kommer beräkningen visa samvariationen mellan $Y$ och $X$, med hänsyn till variationer i $Z$. Samvariationen mellan $Y$ och $Z$ kommer att uppskattas med hänsyn till variationer i $X$.
@@ -19,14 +22,26 @@ Om vi vill kontrollera för ytterligare andra fenomen kan vi lägga till fler f�
 
 #### Minstakvadratroten med tre variabler
 Låt oss återvända till regressionsmodellen i ekvation 1. Precis som när vi endast hade en förklarande variabel i regressionsmodellen ska vi nu, när vi har två förklarande variabler, hitta de värden för de konstanta koefficienterna $a$, $b$ och $c$ som minimerar de kvadrerade residualerna $\sum_{}^{}{\widehat{V}}^{2}$. Vi kan därför beskriva vår beräkning som ett minimeringsproblem:
-$\ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}\ = \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$ (2)
+
+
+$$\ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}\ = \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{2}$$
+
 Predikterade $\widehat{Y}$ kan vi utifrån vår regressionsmodell definiera som:
-$\widehat{Y_{i}} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i}$ (3)
+
+
+$$\widehat{Y_{i}} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} \tag{3}$$
+
 Denna definition av $\widehat{Y}$ kan vi sätta in i vårt minimeringsproblem:
-$\min_{\widehat{a},\widehat{b},\widehat{c}}{\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}} = \min_{\widehat{a},\widehat{b},\widehat{c}}{\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}} = \ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)^{2}$ (4)
+
+
+$$\min_{\widehat{a},\widehat{b},\widehat{c}}{\sum_{i = 1}^{n}{\widehat{V_{i}}}^{2}} = \min_{\widehat{a},\widehat{b},\widehat{c}}{\sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}} = \ \min_{\widehat{a},\widehat{b},\widehat{c}}\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)^{2} \tag{4}$$
+
 I denna ekvation känner vi till $Y$, $X$ och $Z$, eftersom detta är våra observerade data. Vi har tre faktorer att ta hänsyn till i form av de tre konstanterna $\widehat{a}$, $\widehat{b}$ och $\widehat{c}$.
 Vi beräknar förstagradsvillkoren genom att derivera uttrycket i ekvation 4 med hänsyn till $a$, $b$ samt $c$ var för sig och sätta respektive resultat lika med 0. Eftersom vi har tre faktorer får vi följande tre resultat:
-$\frac{\partial}{\partial\widehat{a}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}} \right) = \sum_{}^{}{- 2\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)}$ (5)
+
+
+$$\frac{\partial}{\partial\widehat{a}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}} \right) = \sum_{}^{}{- 2\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)} \tag{5}$$
+
 
 
 $$\frac{\partial}{\partial\widehat{b}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}} \right) = \sum_{}^{}{- 2X_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)}$$
@@ -36,7 +51,10 @@ $$\frac{\partial}{\partial\widehat{b}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}}
 $$\frac{\partial}{\partial\widehat{c}}\left( \sum_{i = 1}^{n}\widehat{v_{i}^{2}} \right) = \sum_{}^{}{- 2Z_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} - \widehat{c}Z_{i} \right)}$$
 
 På liknande sätt som vi gjorde i [avsnitt 3.4](https://www.dropbox.com/scl/fi/v0a5z69slwsy7pe20fp7d/3-4-H-rled-estimatorerna.docx?rlkey=kdu3tyfzbzhxk9o1g4xhf17x4&dl=0) kan vi sätta första villkoret lika med 0 och lösa ut en definition för $\widehat{a}$:
-$0 = - 2\sum_{}^{}Y + \sum_{}^{}â + \sum_{}^{}\widehat{b}X_{i} + \sum_{}^{}{\widehat{c}Z_{i}}$ (6)
+
+
+$$0 = - 2\sum_{}^{}Y + \sum_{}^{}â + \sum_{}^{}\widehat{b}X_{i} + \sum_{}^{}{\widehat{c}Z_{i}} \tag{6}$$
+
 
 
 $$n\widehat{a} = nY - \widehat{b}nX_{i} - \widehat{c}nZ_{i}$$
@@ -49,7 +67,10 @@ Koefficient $\widehat{a}$ är en funktion av observationerna i alla tre variable
 Härifrån kan vi fortsätta lösa ut lutningskoefficienterna $\widehat{b}$ och $\widehat{c}$. Här nöjer vi oss dock med att enbart jämföra slutresultaten, alltså deras estimatorer, och hoppar över själva härledningarna.
 För att estimera lutningskoefficienterna med tre variabler behöver vi mer komplexa formler än tidigare. Oroa dig inte om formeln ser skrämmande ut. Poängen är att förstå principen här, nämligen att varje koefficient beräknas med hänsyn till de andra variablerna i regressionsmodellen.
 Ekvationerna nedan beskriver estimatorerna för lutningskoefficienterna $\widehat{b}$ och $\widehat{c}$. För att komprimera algebran skriver vi $\widetilde{X_{i}} = X_{i} - \overline{X}$ och motsvarande för $\widetilde{Y_{i}}$ och $\widetilde{Z_{i}}$. Detta innebär att koefficienternas estimatorer beskrivs utifrån observationernas avvikelser från respektive medelvärde:
-$\widehat{b} = \frac{\left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{X_{i}}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{Z_{i}}} \right)\left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)}{\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)^{2}}$ (7)
+
+
+$$\widehat{b} = \frac{\left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{X_{i}}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{Z_{i}}} \right)\left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)}{\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)^{2}} \tag{7}$$
+
 
 
 $$\widehat{c} = \frac{\left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{Z_{i}}} \right)\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{X}} \right)\left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)}{\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)^{2}}$$
@@ -74,70 +95,29 @@ Nu ska vi estimera en regressionsmodell utifrån några observationer. För dett
 
 $$i$$
 
-                  
-
-$$Y_{i}$$
-
-   
-
-$$X_{i}$$
-
-   
-
-$$Z_{i}$$
-
-   
-
-$$\widetilde{Y_{i}}$$
-
-   
-
-$$\widetilde{X_{i}}$$
-
-   
-
-$$\widetilde{Z_{i}}$$
-
-   
-
-$$\widetilde{Y_{i}}\widetilde{X_{i}}$$
-
-   
-
-$$\widetilde{Y_{i}}\widetilde{Z_{i}}$$
-
-   
-
-$$\widetilde{X_{i}}\widetilde{Z_{i}}$$
-
-   
-
-$$\widetilde{{X_{i}}^{2}}$$
-
-   
-
-$$\widetilde{{Z_{i}}^{2}}$$
-
+                  $Y_{i}$   $X_{i}$   $Z_{i}$   $\widetilde{Y_{i}}$   $\widetilde{X_{i}}$   $\widetilde{Z_{i}}$   $\widetilde{Y_{i}}\widetilde{X_{i}}$   $\widetilde{Y_{i}}\widetilde{Z_{i}}$   $\widetilde{X_{i}}\widetilde{Z_{i}}$   $\widetilde{{X_{i}}^{2}}$   $\widetilde{{Z_{i}}^{2}}$
   ------------------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ----------------------------------------------- ----------------------------------------------- ----------------------------------------------- ------------------------------------------------------------------ ------------------------------------------------------------------ ------------------------------------------------------------------ ------------------------------------------------------ ------------------------------------------------------
   1                                                           3                                  3                                  1                                       --0,5                                            --2                                            --0,5                                                      1                                                                 0,25                                                                1                                                            4                                                     0,25
   2                                                           2                                  4                                  4                                       --1,5                                            -1                                              2,5                                                      1,5                                                               --3,75                                                             --2,5                                                          1                                                     6,25
   3                                                           5                                  6                                  0                                        1,5                                              1                                             --1,5                                                     1,5                                                               --2,25                                                             --1,5                                                          1                                                     2,25
   4                                                           4                                  7                                  1                                        0,5                                              2                                              0,5                                                       1                                                                --0,25                                                              --1                                                           4                                                     0,25
   Medel                                                      3,5                                 5                                 1,5                                                                                                                                                                                                                                                                                                                                                                                                                                 
-  
-
-$$\sum_{}^{}{}$$
-
-                                                                                                                                                                                                                                                                                            5                                                                 --6                                                                --4                                                           10                                                     9
+  $\sum_{}^{}{}$                                                                                                                                                                                                                                                                                            5                                                                 --6                                                                --4                                                           10                                                     9
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ::: {.fig-caption}
 Förklaring: $\widetilde{Y_{i}} = Y_{i} - \overline{Y}$ och motsvarande för $\widetilde{X_{i}}$ och $\widetilde{Z_{i}}$.
 I [avsnitt 2.4](https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&dl=0) använde vi variablerna $Y$ och $X$ för att estimera regressionsmodellen $Y_{i} = a + bX_{i} + V_{i}$ och fann då att $\widehat{a} = 1$ och $\widehat{b} = 0,5$. Nu ska vi estimera koefficienterna för följande regressionsmodell:
-$Y_{i} = a + bX_{i} + cZ_{i} + V_{i}$ (8)
-där $Y$, $X$ och $Z$ är variablerna, $a$, $b$ och $c$ är koefficienterna vi ska estimera och $V$ är feltermen. I ekvation 7 har vi definitionerna för hur vi kan estimera $\widehat{b}$ och $\widehat{c}$. Utifrån uppgifterna i tabell 1 kan vi nu beräkna följande estimat för koefficienterna:
-$\widehat{b} = \frac{(5)(9) - ( - 6)( - 4)}{(10)(9) - ( - 4)^{2}} \approx 0,28$ (9)
 :::
+
+
+
+$$Y_{i} = a + bX_{i} + cZ_{i} + V_{i} \tag{8}$$
+
+där $Y$, $X$ och $Z$ är variablerna, $a$, $b$ och $c$ är koefficienterna vi ska estimera och $V$ är feltermen. I ekvation 7 har vi definitionerna för hur vi kan estimera $\widehat{b}$ och $\widehat{c}$. Utifrån uppgifterna i tabell 1 kan vi nu beräkna följande estimat för koefficienterna:
+
+
+$$\widehat{b} = \frac{(5)(9) - ( - 6)( - 4)}{(10)(9) - ( - 4)^{2}} \approx 0,28 \tag{9}$$
 
 
 
@@ -145,30 +125,15 @@ $$\widehat{c} = \frac{( - 6)(10) - (5)( - 4)}{(10)(9) - ( - 4)^{2}} \approx - 0,
 
 #### Vad blev det för skillnad?
 När vi estimerade regressionsmodellen $Y = a + bX + V$ fann vi att $\widehat{b} = 0,5$. När vi nu lade till variabeln $Z$ i regressionsmodellen ser vi hur resultatet för lutningskoefficienten $\widehat{b}$ går från 0,5 till 0,3. Resultaten för $\widehat{b}$ och $\widehat{c}$ använder vi för att estimera $\widehat{a}$:
-$\widehat{a} = 3,5 - \widehat{b}*5 - \widehat{c}*1,5$ (10)$ $
-
-$$= 3,5 - 0,28*5 - ( - 0,54)*1,5 \approx 2,89$$
-
+$\widehat{a} = 3,5 - \widehat{b}*5 - \widehat{c}*1,5$ (10)$ $$= 3,5 - 0,28*5 - ( - 0,54)*1,5 \approx 2,89$
 Vi kan sammanfatta våra estimerade koefficienter genom att sätta in resultaten i vår regressionsmodell:
-$Y_{i} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} + V_{i} = 2,89 + 0,28X_{i} - 0,54Z_{i} + V_{i}$ (11)
+
+
+$$Y_{i} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} + V_{i} = 2,89 + 0,28X_{i} - 0,54Z_{i} + V_{i} \tag{11}$$
+
 Nu kan vi även estimera predikterade $\widehat{Y_{i}}$ och residualen $\widehat{V_{i}}$, vilket sammanfattas i tabell 2 med avrundade resultat.
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation $i$    
-
-$$Y_{i}$$
-
-   
-
-$$X_{i}$$
-
-   
-
-$$Z_{i}$$
-
-   
-
-$$\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} - 0,54Z_{i}$$
-
+  Observation $i$    $Y_{i}$   $X_{i}$   $Z_{i}$   $\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} - 0,54Z_{i}$
   -------------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- -------------------------------------------------------------------------------------
   1                                                      3                                  3                                  1                                                           3,2
   2                                                      2                                  4                                  4                                                          1,86
