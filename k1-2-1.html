@@ -133,26 +133,34 @@
 <h3>
 <span class="header-section-number">5.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-4"><i class="fas fa-link"></i></a>
 </h3>
-<p><a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/ranta#!/">Ränta</a> kallas den ersättning man får för att låna ut pengar. Räntesats är storleken på räntan på ett lån eller sparande, uttryckt i procent. Räntesats syftar ofta på räntan per år. Ränta kan beskrivas som ett pris på lånade pengar, en ersättning för att vi låter bli att använda våra pengar här och nu.
-När vi sätter in pengar på banken lånar vi ut pengar till banken. Som ersättning betalar banken ränta. Nu ska vi räkna ut hur mycket vi får tillbaka om vi sätter in pengar på ett bankkonto med 2 <a href="https://www.matteboken.se/lektioner/skolar-6/statistik/procent">procents</a> räntesats per år. Två procent kan vi skriva som 2 % eller 0,02. Om vi sätter in 100 kr blir räntan första året <span class="math inline">\(100*0,02 = 2\)</span> kr. Efter ett år har vi 100 kr + räntan som banken ger oss: <span class="math inline">\(100 + 2 = 102\)</span>.
-Ett annat sätt att räkna ut detta är: <span class="math inline">\(100*1,02 = 102\)</span>. Vi multiplicerar våra sparpengar med 1 plus räntesatsen 2 %: <span class="math inline">\(1\ + \ 0,02\ = \ 1,02\)</span>.</p>
+<p><a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/ranta#!/">Ränta</a> kallas den ersättning man får för att låna ut pengar. Räntesats är storleken på räntan på ett lån eller sparande, uttryckt i procent. Räntesats syftar ofta på räntan per år. Ränta kan beskrivas som ett pris på lånade pengar, en ersättning för att vi låter bli att använda våra pengar här och nu.</p>
+<p>När vi sätter in pengar på banken lånar vi ut pengar till banken. Som ersättning betalar banken ränta. Nu ska vi räkna ut hur mycket vi får tillbaka om vi sätter in pengar på ett bankkonto med 2 <a href="https://www.matteboken.se/lektioner/skolar-6/statistik/procent">procents</a> räntesats per år. Två procent kan vi skriva som 2 % eller 0,02. Om vi sätter in 100 kr blir räntan första året <span class="math inline">\(100*0,02 = 2\)</span> kr. Efter ett år har vi 100 kr + räntan som banken ger oss:</p>
+<p><span class="math display">\[100 + 2 = 102\]</span></p>
+<p>Ett annat sätt att räkna ut detta är:</p>
+<p><span class="math display">\[100*1,02 = 102\]</span></p>
+<p>Vi multiplicerar våra sparpengar med 1 plus räntesatsen 2 %:</p>
+<p><span class="math display">\[1 + 0,02 = 1,02\]</span></p>
 <div id="ränta-på-ränta" class="section level4" number="5.0.2.1">
 <h4>
 <span class="header-section-number">5.0.2.1</span> Ränta på ränta<a class="anchor" aria-label="anchor" href="#r%C3%A4nta-p%C3%A5-r%C3%A4nta"><i class="fas fa-link"></i></a>
 </h4>
-<p>Om vi låter pengarna ligga kvar på kontot ytterligare ett år kommer vi få ränta även på det nya beloppet, alltså ränta på 102 kr. Resultatet efter det andra året blir då <span class="math inline">\(102*1,02 = 104,04\)</span>. Ett annat sätt att beskriva räntan för både år 1 och år 2 är:
-<span class="math inline">\(102*1,02\ \)</span> <span class="math inline">\(= (100*1,02)*1,02\)</span>
-<span class="math inline">\(= 100*1,02*1,02\ \)</span>
-<span class="math inline">\(= 100*\ (1,02)^{2}\ \)</span>
-<span class="math inline">\(= 104,04\ \)</span>
-Observera att alla rader i ekvationen ger exakt samma resultat. På den tredje raden skriver vi ihop <span class="math inline">\(1,02*1,02\)</span> till <span class="math inline">\((1,02)^{2}\)</span>. Detta läses som “<span class="math inline">\(1,02\)</span> upphöjt till två” och är ett <a href="https://www.matteboken.se/lektioner/matte-1/aritmetik/potenser">potensuttryck</a>.
-När ränta läggs på pengar som redan ökat till följd av ränta kallas detta för <a href="https://www.matteboken.se/lektioner/matte-1/ovningsexempel/ranta-pa-ranta-effekten?gad_source=1&amp;gclid=Cj0KCQjwjNS3BhChARIsAOxBM6rAH_ZyifLZsSPHKCFPhzzrrNs0YCo2EGwWL_96veWcx62VnUONbhIaAmYFEALw_wcB#!/"><em>ränta på ränta</em></a>. Ibland används uttrycken <em>sammansatt ränta</em> eller <em>kumulativ ränta</em>, vilket betyder samma sak.
-Säg att vi sätter in 5 000 kr på ett sparkonto där den årliga räntan är 2 %. Vi låter pengarna ligga kvar på kontot i tre år. Vårt sparbelopp efter år 1 blir:
-Sparbelopp efter år 1 <span class="math inline">\(= 5\ 000*1,02\)</span>
-<span class="math inline">\(= 5\ 000*1 + 5\ 000*0,02\ \)</span>
-<span class="math inline">\(= 5\ 000 + 100\ \)</span>
-<span class="math inline">\(= 5\ 100\ \)</span>
-År 2 och 3 får vi ränta både på våra ursprungliga sparpengar plus ränta på de pengar vi fått in i ränta tidigare år. Låt oss skriva det med en ekvation per år. Efter år 1 har vi:</p>
+<p>Om vi låter pengarna ligga kvar på kontot ytterligare ett år kommer vi få ränta även på det nya beloppet, alltså ränta på 102 kr. Resultatet efter det andra året blir då <span class="math inline">\(102*1,02 = 104,04\)</span>. Ett annat sätt att beskriva räntan för både år 1 och år 2 är:</p>
+<p><span class="math display">\[\begin{aligned}
+102 * 1,02 &amp;= (100 * 1,02) * 1,02 \\
+           &amp;= 100 * 1,02 * 1,02 \\
+           &amp;= 100 * (1,02)^{2} \\
+           &amp;= 104,04
+\end{aligned}\]</span></p>
+<p>Observera att alla rader i ekvationen ger exakt samma resultat. På den tredje raden skriver vi ihop <span class="math inline">\(1,02*1,02\)</span> till <span class="math inline">\((1,02)^{2}\)</span>. Detta läses som “<span class="math inline">\(1,02\)</span> upphöjt till två” och är ett <a href="https://www.matteboken.se/lektioner/matte-1/aritmetik/potenser">potensuttryck</a>.</p>
+<p>När ränta läggs på pengar som redan ökat till följd av ränta kallas detta för <a href="https://www.matteboken.se/lektioner/matte-1/ovningsexempel/ranta-pa-ranta-effekten?gad_source=1&amp;gclid=Cj0KCQjwjNS3BhChARIsAOxBM6rAH_ZyifLZsSPHKCFPhzzrrNs0YCo2EGwWL_96veWcx62VnUONbhIaAmYFEALw_wcB#!/"><em>ränta på ränta</em></a>. Ibland används uttrycken <em>sammansatt ränta</em> eller <em>kumulativ ränta</em>, vilket betyder samma sak.
+Säg att vi sätter in 5 000 kr på ett sparkonto där den årliga räntan är 2 %. Vi låter pengarna ligga kvar på kontot i tre år. Vårt sparbelopp efter år 1 blir:</p>
+<p><span class="math display">\[\begin{aligned}
+\text{Sparbelopp efter år 1} &amp;= 5\ 000 * 1,02 \\
+                              &amp;= 5\ 000 * 1 + 5\ 000 * 0,02 \\
+                              &amp;= 5\ 000 + 100 \\
+                              &amp;= 5\ 100
+\end{aligned}\]</span></p>
+<p>År 2 och 3 får vi ränta både på våra ursprungliga sparpengar plus ränta på de pengar vi fått in i ränta tidigare år. Låt oss skriva det med en ekvation per år. Efter år 1 har vi:</p>
 <p><span class="math display">\[5\ 000*1,02 = 5\ 100\]</span></p>
 <p>Efter år 2 får vi ränta på pengarna vi har vid slutet av år 1, det vill säga ränta på räntan:</p>
 <p><span class="math display">\[5\ 100*1,02\ = 5\ 202\ \]</span></p>
