@@ -146,28 +146,58 @@ Data som endast kan anta två värden kallas för binär. Ofta används just 0 e
 </h4>
 <p>Tabell 1 redovisar genomsnittlig årsinkomst för män respektive kvinnor i tre kommuner för år 2019, räknat i tusentals kronor.</p>
 <p><strong>Tabell 1: Genomsnittlig inkomst 2019, 1 000-tals kr</strong></p>
-<div class="inline-table"><table style="width:97%;" class="table table-sm">
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
 <colgroup>
-<col width="32%">
-<col width="32%">
-<col width="32%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Kommun</th>
-<th align="left">Män</th>
-<th align="left">Kvinnor</th>
+<thead><tr>
+<th>
+Kommun
+</th>
+<th>
+Män
+</th>
+<th>
+Kvinnor
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">Danderyd
+<tbody>
+<tr>
+<td>
+Danderyd
+</td>
+<td>
+435
+</td>
+<td>
+314
+</td>
+</tr>
+<tr>
+<td>
 Mörbylånga
-Oskarshamn</td>
-<td align="left">435
+</td>
+<td>
 277
-279</td>
-<td align="left">314
+</td>
+<td>
 219
-211</td>
-</tr></tbody>
+</td>
+</tr>
+<tr>
+<td>
+Oskarshamn
+</td>
+<td>
+279
+</td>
+<td>
+211
+</td>
+</tr>
+</tbody>
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: Data från <a href="http://www.kolada.se">Kolada</a>. Inkomst anges i 1 000-tals kronor, medianvärden per kommun och grupp.
@@ -181,72 +211,205 @@ Vi kan estimera regressionsmodellen på samma sätt som tidigare, där koefficie
 <p>Koefficienten <span class="math inline">\(\widehat{b}\)</span> är negativ, vilket innebär att kön <span class="math inline">\((G)\)</span> har en negativ samvariation med lön <span class="math inline">\((W)\)</span>. Vi valde att definiera vår dummyvariabel <span class="math inline">\(G = 1\)</span> för kvinnor. Variabel W är associerat med ett 82,3 enheter lägre värde för kvinnor jämfört med män. Kvinnor har i genomsnitt 82 300 kr lägre inkomst än män i dessa tre kommuner.
 Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från män <span class="math inline">\((G = 0)\)</span> till kvinnor <span class="math inline">\((G = 1)\)</span> längs den horisontella axeln, går inkomsten nedåt längs den vertikala axeln. Därför är lutningen negativ. Detta betyder att kvinnor <span class="math inline">\((G = 1)\)</span> har lägre genomsnittsinkomst än män <span class="math inline">\((G = 0)\)</span> i dessa tre kommuner.</p>
 <p><strong>Tabell 2. Beräkningar för regressionsanalysen</strong></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:97%;" class="table table-sm">
 <colgroup>
-<col width="4%">
-<col width="12%">
-<col width="12%">
-<col width="20%">
-<col width="20%">
-<col width="28%">
+<col style="width: 16%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 23%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Kommun</th>
-<th align="right">
-<span class="math inline">\(W_{i}\)</span> <span class="math inline">\(G_{i}\)</span> $W_{i} - </th>
-<th>line{W_{i}}$ $G_{i} - \overline{G</th>
-<th align="left">_{i}}$ <span class="math inline">\(\left( G_{i} - \overline{G_{i}} \right)^{2}\)</span>
+<thead><tr>
+<th>
+Kommun
 </th>
-<th></th>
-<th></th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[W_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[G_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[W_{i} -
+\overline{W_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[G_{i} -
+\overline{G_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\left(
+G_{i} - \overline{G_{i}} \right)^{2}\]</span></span>
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">Danderyd
-Mörbylånga
-Oskarshamn
+<tr>
+<td>
 Danderyd
-Mörbylånga
-Oskarshamn</td>
-<td align="right">435
-277
-279
-314
-219
-211</td>
-<td>0
+</td>
+<td style="text-align: center;">
+435
+</td>
+<td style="text-align: center;">
 0
-0
-1
-1
-1</td>
-<td align="left">145,8
--12,2
--10,2
-24,8
--70,2
--78,2</td>
-<td>-0,5
+</td>
+<td style="text-align: center;">
+145,8
+</td>
+<td style="text-align: center;">
 -0,5
--0,5
-0,5
-0,5
-0,5</td>
-<td>0,25
+</td>
+<td style="text-align: center;">
 0,25
-0,25
-0,25
-0,25
-0,25</td>
+</td>
 </tr>
-<tr class="even">
-<td align="left">Medelvärde
-Summa</td>
-<td align="right">289,2</td>
-<td>0,5</td>
-<td align="left"></td>
-<td></td>
-<td>1,5</td>
+<tr>
+<td>
+Mörbylånga
+</td>
+<td style="text-align: center;">
+277
+</td>
+<td style="text-align: center;">
+0
+</td>
+<td style="text-align: center;">
+-12,2
+</td>
+<td style="text-align: center;">
+-0,5
+</td>
+<td style="text-align: center;">
+0,25
+</td>
+</tr>
+<tr>
+<td>
+Oskarshamn
+</td>
+<td style="text-align: center;">
+279
+</td>
+<td style="text-align: center;">
+0
+</td>
+<td style="text-align: center;">
+-10,2
+</td>
+<td style="text-align: center;">
+-0,5
+</td>
+<td style="text-align: center;">
+0,25
+</td>
+</tr>
+<tr>
+<td>
+Danderyd
+</td>
+<td style="text-align: center;">
+314
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+24,8
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+0,25
+</td>
+</tr>
+<tr>
+<td>
+Mörbylånga
+</td>
+<td style="text-align: center;">
+219
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+-70,2
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+0,25
+</td>
+</tr>
+<tr>
+<td>
+Oskarshamn
+</td>
+<td style="text-align: center;">
+211
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+-78,2
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+0,25
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+</tr>
+<tr>
+<td>
+Medelvärde
+</td>
+<td style="text-align: center;">
+289,2
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+</tr>
+<tr>
+<td>
+Summa
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+1,5
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -269,35 +432,71 @@ Tabell 3 redovisar variablerna, där <span class="math inline">\(Y_{i}\)</span> 
 <p>där <span class="math inline">\(e\)</span> är feltermen. Våra dummyvariabler representerar kommunerna Mörbylånga och Oskarshamn, en dummyvariabel mindre än antal kommuner. När båda dummyvariablerna i modellen är lika med 0 får vi estimaten för den tredje kommunen, Danderyd.
 Om vi har 3 kommuner använder vi bara 2 dummyvariabler. Varför? Om både Mörbylånga-dummyn = 0 OCH Oskarshamn-dummyn = 0, vet vi automatiskt att det måste vara Danderyd. Den tredje kommunen blir "referenskategori", i detta fall den kommun vi jämför de andra kommunerna mot. Om vi hade använt 3 dummyvariabler skulle regressionen inte fungera (matematiskt kallas detta "perfekt multikolinjäritet"). Datorn kan inte skilja på vilken effekt som kommer från vilken dummy.</p>
 <p><strong>Tabell 3: Genomsnittlig inkomst 2019, 1 000-tals kr</strong></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:70%;" class="table table-sm">
 <colgroup>
-<col width="8%">
-<col width="22%">
-<col width="33%">
-<col width="33%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 18%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Kommun</th>
-<th align="right">
-<span class="math inline">\(Y_{i}\)</span> <span class="math inline">\(K_{\text{Mörbylånga}}\)</span>
+<thead><tr>
+<th>
+Kommun
 </th>
-<th align="center"><span class="math inline">\(K_{\text{Oskarshamn}}\)</span></th>
-<th></th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[K_{\text{Mörbylånga}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[K_{\text{Oskarshamn}}\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">Danderyd
-Mörbylånga
-Oskarshamn</td>
-<td align="right">364,9
-243,6
-246</td>
-<td align="center">0
-1
-0</td>
-<td>0
+<tbody>
+<tr>
+<td>
+Danderyd
+</td>
+<td style="text-align: center;">
+364,9
+</td>
+<td style="text-align: center;">
 0
-1</td>
-</tr></tbody>
+</td>
+<td style="text-align: center;">
+0
+</td>
+</tr>
+<tr>
+<td>
+Mörbylånga
+</td>
+<td style="text-align: center;">
+243,6
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+0
+</td>
+</tr>
+<tr>
+<td>
+Oskarshamn
+</td>
+<td style="text-align: center;">
+246
+</td>
+<td style="text-align: center;">
+0
+</td>
+<td style="text-align: center;">
+1
+</td>
+</tr>
+</tbody>
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: Data från <a href="http://www.kolada.se">Kolada</a>. Inkomst anges i 1 000-tals kronor, medianvärden per kommun.

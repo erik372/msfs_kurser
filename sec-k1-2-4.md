@@ -37,15 +37,56 @@ Bolivia har i sin tur dubbelt så stor BNP per capita som Senegal (8,2 respektiv
 
 **Tabell 1: Lycka och BNP i sex länder.**
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Land**          **Nöjdhet med livet**   **BNP per capita**   $\mathbf{lo}\mathbf{g}_{\mathbf{10}}\mathbf{(}\mathbf{BNP\ per\ capita}\mathbf{)}$
-  ----------------- ----------------------- -------------------- ------------------------------------------------------------------------------------------------------------------
-  Bolivia           5,7                     8,2                  0,9
-  Brasilien         6,1                     15,1                 1,2
-  Liberia           4                       1,5                  0,2
-  Senegal           4,9                     3,6                  0,6
-  Sverige           7,4                     55,4                 1,7
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:99%;">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Land</strong></th>
+<th><strong>Nöjdhet med livet</strong></th>
+<th><strong>BNP per capita</strong></th>
+<th><span
+class="math inline">\(\mathbf{lo}\mathbf{g}_{\mathbf{10}}\mathbf{(}\mathbf{BNP\
+per\ capita}\mathbf{)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bolivia</td>
+<td>5,7</td>
+<td>8,2</td>
+<td>0,9</td>
+</tr>
+<tr>
+<td>Brasilien</td>
+<td>6,1</td>
+<td>15,1</td>
+<td>1,2</td>
+</tr>
+<tr>
+<td>Liberia</td>
+<td>4</td>
+<td>1,5</td>
+<td>0,2</td>
+</tr>
+<tr>
+<td>Senegal</td>
+<td>4,9</td>
+<td>3,6</td>
+<td>0,6</td>
+</tr>
+<tr>
+<td>Sverige</td>
+<td>7,4</td>
+<td>55,4</td>
+<td>1,7</td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: Data från [www.ourworldindata.org](http://www.ourworldindata.org). Logaritmer underlättar relativa jämförelser, som till exempel för att se hur en fördubbling av BNP per capita samvarierar med lycka i ett land.

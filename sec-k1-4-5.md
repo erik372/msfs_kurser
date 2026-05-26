@@ -17,17 +17,48 @@ I raden för bransch A visar siffrorna värdet av den produktion som A säljer t
 
 **Tabell 1. Input och output från och till företagen i de två branscherna A och B.**
 
-+-----------+-----------+-----------+----------------+----------+
-| Till      | Bransch A | Bransch B | Slutkonsumtion | Summa    |
-|           |           |           |                |          |
-| Från      |           |           |                |          |
-+===========+===========+===========+================+==========+
-| Bransch A | 2         | 1         | 3              | 6        |
-+-----------+-----------+-----------+----------------+----------+
-| Bransch B | 1         | 3         | 3              | 7        |
-+-----------+-----------+-----------+----------------+----------+
-| Summa     | 3         | 4         | 6              | 13       |
-+-----------+-----------+-----------+----------------+----------+
+<table style="width:82%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 17%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: right;"><p>Till</p>
+<p>Från</p></th>
+<th>Bransch A</th>
+<th>Bransch B</th>
+<th>Slutkonsumtion</th>
+<th>Summa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bransch A</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Bransch B</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Summa</td>
+<td>3</td>
+<td>4</td>
+<td>6</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: På raden för bransch A ser vi mängden produktion av varor och tjänster från (output) företagen i bransch A till andra företag i bransch A, företag i bransch B samt till hushållen som står för slutkonsumtion. I kolumnen för bransch A ser vi mängden insatsvaror (input) som företagen i bransch A erhåller från andra företag i bransch A och B. I kolumnen längst till höger ser vi radsumma och i raden längst ned ser vi kolumnsumma.

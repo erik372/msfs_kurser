@@ -152,88 +152,222 @@ Det spelar ingen roll i vilken ordning vi skriver variablerna i parentesen: <spa
 Rad 1 i tabellen består av första värdet för <span class="math inline">\(x\)</span> respektive <span class="math inline">\(y\)</span> och representerar värden som på något sätt hänger ihop. Om vi arbetar med observerade data, insamlad information, representerar varje observation en observationsenhet, till exempel uppgifter om en person eller kanske ett land. Våra fyra observationer skulle alltså kunna representera fyra personer, fyra länder eller något annat.</p>
 <p><strong>Figur 1. Fyra observationer för att uppskatta kovarians</strong></p>
 <div class="inline-figure"><img src="img/k2-2-3-image1.png"></div>
-<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<div class="inline-table"><table style="width:42%;" class="table table-sm">
 <colgroup>
-<col width="18%">
-<col width="39%">
-<col width="39%">
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 11%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Observation i</th>
-<th align="center">
-<span class="math inline">\(x_{i}\)</span> <span class="math inline">\(y_{i}\)</span>
+<thead><tr>
+<th>
+Observation i
 </th>
-<th></th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[x_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[y_{i}\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">1
-2
+<tbody>
+<tr>
+<td>
+1
+</td>
+<td style="text-align: center;">
 3
-4</td>
-<td align="center">3
-4
-6
-7</td>
-<td>3
+</td>
+<td style="text-align: center;">
+3
+</td>
+</tr>
+<tr>
+<td>
 2
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+2
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: center;">
+6
+</td>
+<td style="text-align: center;">
 5
-4</td>
-</tr></tbody>
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: center;">
+7
+</td>
+<td style="text-align: center;">
+4
+</td>
+</tr>
+</tbody>
 </table></div>
 <p>I tabell 1 har vi beräknat de delar vi behöver för att skatta kovariansen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> (ekvation 3):</p>
 <p><span class="math display">\[cov(x,y) = \left( \frac{1}{n - 1} \right)\sum_{i}^{}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)} = \left( \frac{1}{3} \right) \times 5 = \frac{5}{3} \tag{4}\]</span></p>
 <p>Vi finner att <span class="math inline">\(cov(x,y) = \frac{5}{3}\)</span>. Detta värde är över 0 och innebär en positiv samvariation. Kovarians är användbart för att få en uppskattning om samvariationen mellan två variabler är positiv eller negativ, men det är svårt att säga så mycket mer än så.
 Det finns inte några begränsningar för vilka värden som kovarians kan anta. Kovariansens värde beror på vilken enhet variablernas värden har. Till exempel kommer vi att få olika resultat beroende på om vi använder en variabel som beskriver inkomst i kronor eller i tusentals kronor.</p>
 <p><strong>Tabell 1. Beräkningar för kovariansen mellan</strong> <span class="math inline">\(\mathbf{x}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{y}\)</span></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
 <colgroup>
-<col width="5%">
-<col width="13%">
-<col width="13%">
-<col width="19%">
-<col width="19%">
-<col width="29%">
+<col style="width: 16%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 17%">
+<col style="width: 15%">
+<col style="width: 28%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Observation</th>
-<th align="right">
-<span class="math inline">\(x_{i}\)</span> <span class="math inline">\(y_{i}\)</span> $x_{i} - </th>
-<th align="left">line{x}$ <span class="math inline">\(y_{i} - \overline{y}\)</span>
+<thead><tr>
+<th>
+Observation
 </th>
-<th align="center"><span class="math inline">\((x_{i} - \overline{x})(y_{i} - \overline{y})\)</span></th>
-<th></th>
-<th></th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[x_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[y_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[x_{i} -
+\overline{x}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[y_{i} -
+\overline{y}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[(x_{i} -
+\overline{x})(y_{i} - \overline{y})\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">1
-2
-3
-4
-Medelvärde
-Summa</td>
-<td align="right">3
-4
-6
-7
-5</td>
-<td align="left">3
-2
-5
-4
-3,5</td>
-<td align="center">-2
--1
+<tbody>
+<tr>
+<td>
 1
-2</td>
-<td>-0,5
+</td>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+-2
+</td>
+<td style="text-align: center;">
+-0,5
+</td>
+<td style="text-align: center;">
+1
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
+-1
+</td>
+<td style="text-align: center;">
 -1,5
+</td>
+<td style="text-align: center;">
 1,5
-0,5</td>
-<td>1
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: center;">
+6
+</td>
+<td style="text-align: center;">
+5
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
 1,5
+</td>
+<td style="text-align: center;">
 1,5
-1</td>
-</tr></tbody>
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: center;">
+7
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+1
+</td>
+</tr>
+<tr>
+<td>
+Medelvärde
+</td>
+<td style="text-align: center;">
+5
+</td>
+<td style="text-align: center;">
+3,5
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+</tr>
+<tr>
+<td>
+Summa
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+5
+</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="korrelationskoefficienten" class="section level4" number="27.0.2.3">

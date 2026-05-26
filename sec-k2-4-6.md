@@ -48,16 +48,68 @@ Tabell 1 beskriver våra variabler (samma som i [avsnitt 4.3](https://www.dropbo
 
 **Tabell 1: Variablerna** $\mathbf{L}$**,** $\mathbf{I}$**,** $\mathbf{K}$ **och** $\mathbf{KI}$
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Kommun, kön           Livslängd, $L$   Inkomst, $I$   Kön, $K$   $K*I$
-  --------------------- ------------------------------------- ----------------------------------- ------------------------------- --------------------------------
-  Jokkmokk, kvinnor     81,55                                 2,07                                0                               0
-  Jokkmokk, män         79,22                                 2,40                                1                               2,40
-  Oskarshamn, kvinnor   84,64                                 2,11                                0                               0
-  Oskarshamn, män       81,26                                 2,79                                1                               2,79
-  Örebro, kvinnor       84,85                                 2,18                                0                               0
-  Örebro, män           80,48                                 2,66                                1                               2,66
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:97%;">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Kommun, kön</th>
+<th>Livslängd, <span class="math inline">\(L\)</span></th>
+<th>Inkomst, <span class="math inline">\(I\)</span></th>
+<th>Kön, <span class="math inline">\(K\)</span></th>
+<th><span class="math display">\[K*I\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jokkmokk, kvinnor</td>
+<td>81,55</td>
+<td>2,07</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Jokkmokk, män</td>
+<td>79,22</td>
+<td>2,40</td>
+<td>1</td>
+<td>2,40</td>
+</tr>
+<tr>
+<td>Oskarshamn, kvinnor</td>
+<td>84,64</td>
+<td>2,11</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Oskarshamn, män</td>
+<td>81,26</td>
+<td>2,79</td>
+<td>1</td>
+<td>2,79</td>
+</tr>
+<tr>
+<td>Örebro, kvinnor</td>
+<td>84,85</td>
+<td>2,18</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Örebro, män</td>
+<td>80,48</td>
+<td>2,66</td>
+<td>1</td>
+<td>2,66</td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: Data från [www.kolada.se](http://www.kolada.se). Medianinkomst i 100 000-tals kr. Förväntad medellivslängd. Alla siffror avser 2019.

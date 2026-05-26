@@ -183,112 +183,273 @@ Det korrekta resultatet får vi inte förrän vi inkluderar <span class="math in
 </h4>
 <p>Nu ska vi estimera en regressionsmodell utifrån några observationer. För detta återanvänder vi de påhittade variablerna <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> med de fyra observationer vardera som vi använde tidigare när vi introducerade minstakvadratmetoden. Alla tre variablerna redovisas i tabell 1 med lite beräkningar som vi behöver.</p>
 <p><strong>Tabell 1: Variablerna Y, X och Z med lite beräkningar</strong></p>
-<hr>
-<p><span class="math display">\[i\]</span></p>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="right">
-<span class="math inline">\(Y_{i}\)</span> <span class="math inline">\(X_{i}\)</span> <span class="math inline">\(Z_{i}\)</span>
+<div class="inline-table"><table style="width:95%;" class="table table-sm">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 8%">
+<col style="width: 8%">
+</colgroup>
+<thead><tr>
+<th>
+<span class="math display"><span class="math display">\[i\]</span></span>
 </th>
-<th align="right">
-<span class="math inline">\(\widetilde{Y_{i}}\)</span> $</th>
-<th>{X_{i}}$ <span class="math inline">\(\widetilde{Z_{i}}\)</span> $\</th>
-<th>widetilde{Y_{i}}$</th>
-<th align="right">
-<span class="math inline">\(\widetilde{Y_{i}}\widetilde{Z_{i}}\)</span> $</th>
-<th>ilde{X_{i}}$ $\widetilde{{X_{</th>
-<th align="left">i}}^{2}}$ <span class="math inline">\(\widetilde{{Z_{i}}^{2}}\)</span>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
 </th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[X_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Z_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widetilde{Y_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widetilde{X_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widetilde{Z_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widetilde{Y_{i}}\widetilde{X_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widetilde{Y_{i}}\widetilde{Z_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widetilde{X_{i}}\widetilde{Z_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widetilde{{X_{i}}^{2}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widetilde{{Z_{i}}^{2}}\]</span></span>
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="right">3</td>
-<td>3</td>
-<td>1</td>
-<td align="right">–0,5</td>
-<td>–2</td>
-<td align="left">–0,5</td>
-<td>1</td>
-<td>0,25</td>
-<td>1</td>
-<td>4</td>
-<td>0,25</td>
+<tr>
+<td>
+1
+</td>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+–0,5
+</td>
+<td style="text-align: center;">
+–2
+</td>
+<td style="text-align: center;">
+–0,5
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+0,25
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+0,25
+</td>
 </tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="right">2</td>
-<td>4</td>
-<td>4</td>
-<td align="right">–1,5</td>
-<td>-1</td>
-<td align="left">2,5</td>
-<td>1,5</td>
-<td>–3,75</td>
-<td>–2,5</td>
-<td>1</td>
-<td>6,25</td>
+<tr>
+<td>
+2
+</td>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+–1,5
+</td>
+<td style="text-align: center;">
+-1
+</td>
+<td style="text-align: center;">
+2,5
+</td>
+<td style="text-align: center;">
+1,5
+</td>
+<td style="text-align: center;">
+–3,75
+</td>
+<td style="text-align: center;">
+–2,5
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+6,25
+</td>
 </tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="right">5</td>
-<td>6</td>
-<td>0</td>
-<td align="right">1,5</td>
-<td>1</td>
-<td align="left">–1,5</td>
-<td>1,5</td>
-<td>–2,25</td>
-<td>–1,5</td>
-<td>1</td>
-<td>2,25</td>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: center;">
+5
+</td>
+<td style="text-align: center;">
+6
+</td>
+<td style="text-align: center;">
+0
+</td>
+<td style="text-align: center;">
+1,5
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+–1,5
+</td>
+<td style="text-align: center;">
+1,5
+</td>
+<td style="text-align: center;">
+–2,25
+</td>
+<td style="text-align: center;">
+–1,5
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+2,25
+</td>
 </tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="right">4</td>
-<td>7</td>
-<td>1</td>
-<td align="right">0,5</td>
-<td>2</td>
-<td align="left">0,5</td>
-<td>1</td>
-<td>–0,25</td>
-<td>–1</td>
-<td>4</td>
-<td>0,25</td>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+7
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+–0,25
+</td>
+<td style="text-align: center;">
+–1
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+0,25
+</td>
 </tr>
-<tr class="odd">
-<td align="right">Medel</td>
-<td align="right">3,5</td>
-<td>5</td>
-<td>1,5</td>
-<td align="right"></td>
-<td></td>
-<td align="left"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<tr>
+<td>
+Medel
+</td>
+<td style="text-align: center;">
+3,5
+</td>
+<td style="text-align: center;">
+5
+</td>
+<td style="text-align: center;">
+1,5
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
 </tr>
-<tr class="even">
-<td align="right"><span class="math inline">\(\sum_{}^{}{}\)</span></td>
-<td align="right"></td>
-<td></td>
-<td></td>
-<td align="right"></td>
-<td></td>
-<td align="left"></td>
-<td>5</td>
-<td>–6</td>
-<td>–4 1</td>
-<td>0 9</td>
-<td></td>
+<tr>
+<td>
+<span class="math display"><span class="math display">\[\sum_{}^{}{}\]</span></span>
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+5
+</td>
+<td style="text-align: center;">
+–6
+</td>
+<td style="text-align: center;">
+–4
+</td>
+<td style="text-align: center;">
+10
+</td>
+<td style="text-align: center;">
+9
+</td>
 </tr>
 </tbody>
 </table></div>
@@ -309,20 +470,104 @@ I <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation
 <span class="math inline">\(\widehat{a} = 3,5 - \widehat{b}*5 - \widehat{c}*1,5\)</span> (10)$ $<span class="math inline">\(= 3,5 - 0,28*5 - ( - 0,54)*1,5 \approx 2,89\)</span>
 Vi kan sammanfatta våra estimerade koefficienter genom att sätta in resultaten i vår regressionsmodell:</p>
 <p><span class="math display">\[Y_{i} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} + V_{i} = 2,89 + 0,28X_{i} - 0,54Z_{i} + V_{i} \tag{11}\]</span></p>
-<div class="inline-table"><table class="table table-sm">
-<thead><tr class="header">
-<th align="center">kan vi även estimera predikterade <span class="math inline">\(\widehat{Y_{i}}\)</span> och residualen <span class="math inline">\(\widehat{V_{i}}\)</span>, vilket sammanfattas i tabell 2 med avrundade resultat.</th>
+Nu kan vi även estimera predikterade <span class="math inline">\(\widehat{Y_{i}}\)</span> och residualen <span class="math inline">\(\widehat{V_{i}}\)</span>, vilket sammanfattas i tabell 2 med avrundade resultat.
+<div class="inline-table"><table style="width:78%;" class="table table-sm">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 7%">
+<col style="width: 32%">
+</colgroup>
+<thead><tr>
+<th>
+Observation <span class="math inline"><span class="math inline">\(i\)</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[X_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Z_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} -
+0,54Z_{i}\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="center">Observation <span class="math inline">\(i\)</span> <span class="math inline">\(Y_{i}\)</span> <span class="math inline">\(X_{i}\)</span> <span class="math inline">\(Z_{i}\)</span> <span class="math inline">\(\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} - 0,54Z_{i}\)</span>
+<tbody>
+<tr>
+<td>
+1
 </td>
-</tr></tbody>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+3,2
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+1,86
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: center;">
+5
+</td>
+<td style="text-align: center;">
+6
+</td>
+<td style="text-align: center;">
+0
+</td>
+<td style="text-align: center;">
+4,59
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+7
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+4,34
+</td>
+</tr>
+</tbody>
 </table></div>
-<p>1 3 3 1 3,2
-2 2 4 4 1,86
-3 5 6 0 4,59
-4 4 7 1 4,34
-————————————————————————————————————————————————————————————————————————————-</p>
 </div>
 <div id="ett-försök-att-illustrera-resultatet-i-diagram" class="section level4" number="35.0.2.6">
 <h4>

@@ -95,14 +95,54 @@ Tabell 1 visar våra beräkningar för att estimera $\widehat{Y}$ med de observe
 
 **Tabell 1: Estimering av** $\widehat{\mathbf{Y}}$
 
-  -----------------------------------------------------------------------------------------------------------------------------------------
-  Observation *i*    $X$   $Y$  $\widehat{Y} = 1 + 0,5*X$
-  ----------------- ----------------------------- ----------------------------- -----------------------------------------------------------
-  1                               3                             3               $\widehat{Y} = 1 + 0,5*3 = 2,5$
-  2                               4                             2               $\widehat{Y} = 1 + 0,5*4 = 3$
-  3                               6                             5               $\widehat{Y} = 1 + 0,5*6 = 4$
-  4                               7                             4               $\widehat{Y} = 1 + 0,5*7 = 4,5$
-  -----------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:72%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 10%" />
+<col style="width: 12%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation <em>i</em></th>
+<th style="text-align: center;"><span
+class="math display">\[X\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[Y\]</span></th>
+<th><span class="math display">\[\widehat{Y} = 1 + 0,5*X\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td><span class="math display">\[\widehat{Y} = 1 + 0,5*3 =
+2,5\]</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td><span class="math display">\[\widehat{Y} = 1 + 0,5*4 =
+3\]</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+<td><span class="math display">\[\widehat{Y} = 1 + 0,5*6 =
+4\]</span></td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+<td><span class="math display">\[\widehat{Y} = 1 + 0,5*7 =
+4,5\]</span></td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: Tabellen visar observationerna för variablerna $X$ och $Y$ samt estimerade $\widehat{Y}$, vilket vi får genom att estimera regressionsmodellen.

@@ -137,51 +137,135 @@ Exempel: När vi studerar samvariationen mellan inkomst och livslängd med häns
 <p>Säg att vi har regressionsmodellen <span class="math inline">\(Y = a + bX + cZ + V\)</span>, där <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> är variabler och <span class="math inline">\(V\)</span> är feltermen. Vi kan då beskriva detta som att vi håller variabeln <span class="math inline">\(Z\)</span> konstant när vi estimerar samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>. Och vi håller variabeln <span class="math inline">\(X\)</span> konstant när vi estimerar samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(Z\)</span>.
 Vi ska nu illustrera detta med hjälp av lite data över genomsnittlig livslängd och inkomst för kvinnor respektive män i tre av Sveriges kommuner, vilket beskrivs i tabell 1. Kolumnen längst till höger beskriver en dummyvariabel <span class="math inline">\(G\)</span> för kön där kvinnor = 0 och män = 1.</p>
 <p><strong>Tabell 1. Data över män och kvinnor i tre kommuner</strong></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
 <colgroup>
-<col width="16%">
-<col width="30%">
-<col width="27%">
-<col width="24%">
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 25%">
+<col style="width: 25%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Kommun</th>
-<th align="right">Livslängd <span class="math inline">\((L)\ \)</span> Inkomst <span class="math inline">\((I)\)</span> Kön $</th>
-<th align="left">(G)$</th>
-<th></th>
+<thead><tr>
+<th>
+Kommun
+</th>
+<th style="text-align: center;">
+Livslängd <span class="math inline"><span class="math inline">\((L)\ \)</span></span>
+</th>
+<th style="text-align: center;">
+Inkomst <span class="math inline"><span class="math inline">\((I)\)</span></span>
+</th>
+<th style="text-align: center;">
+Kön <span class="math inline"><span class="math inline">\((G)\)</span></span>
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">Jokkmokk, kvinnor
-Jokkmokk, män
-Oskarshamn, kvinnor
-Oskarshamn, män
-Örebro, kvinnor
-Örebro, män</td>
-<td align="right">81,6
-79,2
-84,6
-81,3
-84,8
-80,5</td>
-<td align="left">2,07
-2,4
-2,11
-2,79
-2,18
-2,66</td>
-<td>0
-1
+<tr>
+<td>
+Jokkmokk, kvinnor
+</td>
+<td style="text-align: center;">
+81,6
+</td>
+<td style="text-align: center;">
+2,07
+</td>
+<td style="text-align: center;">
 0
-1
-0
-1</td>
+</td>
 </tr>
-<tr class="even">
-<td align="left">Medelvärde</td>
-<td align="right">82</td>
-<td align="left">2,368</td>
-<td>0,5</td>
+<tr>
+<td>
+Jokkmokk, män
+</td>
+<td style="text-align: center;">
+79,2
+</td>
+<td style="text-align: center;">
+2,4
+</td>
+<td style="text-align: center;">
+1
+</td>
+</tr>
+<tr>
+<td>
+Oskarshamn, kvinnor
+</td>
+<td style="text-align: center;">
+84,6
+</td>
+<td style="text-align: center;">
+2,11
+</td>
+<td style="text-align: center;">
+0
+</td>
+</tr>
+<tr>
+<td>
+Oskarshamn, män
+</td>
+<td style="text-align: center;">
+81,3
+</td>
+<td style="text-align: center;">
+2,79
+</td>
+<td style="text-align: center;">
+1
+</td>
+</tr>
+<tr>
+<td>
+Örebro, kvinnor
+</td>
+<td style="text-align: center;">
+84,8
+</td>
+<td style="text-align: center;">
+2,18
+</td>
+<td style="text-align: center;">
+0
+</td>
+</tr>
+<tr>
+<td>
+Örebro, män
+</td>
+<td style="text-align: center;">
+80,5
+</td>
+<td style="text-align: center;">
+2,66
+</td>
+<td style="text-align: center;">
+1
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+</tr>
+<tr>
+<td>
+Medelvärde
+</td>
+<td style="text-align: center;">
+82
+</td>
+<td style="text-align: center;">
+2,368
+</td>
+<td style="text-align: center;">
+0,5
+</td>
 </tr>
 </tbody>
 </table></div>

@@ -40,16 +40,64 @@ I praktiken har vi nästan alltid variation kring regressionslinjen, vilket är 
 
 **Figur 1 Estimera** $\widehat{\mathbf{V}}$
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation i    $Y_{i}$   ${\widehat{Y}}_{i}$   ${\widehat{V}}_{i} = Y_{i} - {\widehat{Y}}_{i}$
-  --------------- ---------------------------------- ----------------------------------------------- ------------------------------------------------------------------------------
-  1                               3                                        2,5                                                            0,5
-  2                               2                                         3                                                              -1
-  3                               5                                         4                                                              1
-  4                               4                                        4,5                                                            -0,5
-  Summa                                                                                                                                    0
-  Medelvärde                                                                                                                               0
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:52%;">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 7%" />
+<col style="width: 9%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation i</th>
+<th style="text-align: center;"><span
+class="math display">\[Y_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[{\widehat{Y}}_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[{\widehat{V}}_{i} = Y_{i} -
+{\widehat{Y}}_{i}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2,5</td>
+<td style="text-align: center;">0,5</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-1</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4,5</td>
+<td style="text-align: center;">-0,5</td>
+</tr>
+<tr>
+<td>Summa</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>Medelvärde</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
 
 #### Räkna med minstakvadratmetoden
 Vi uppskattade tidigare $\widehat{a}$ och $\widehat{b}$ genom att jämföra en regressionslinje i ett diagram. Nu ska vi med hjälp av minstakvadratmetoden estimera koefficienterna $\widehat{a}$ och $\widehat{b}$ utifrån observationerna i våra variabler $X$ och $Y$.
@@ -74,16 +122,90 @@ Tabell 1 beskriver beräkningarna vi behöver för $\widehat{a}$ och $\widehat{b
 
 **Tabell 1. Beräkningar för att estimera** $\widehat{\mathbf{a}}$ **och** $\widehat{\mathbf{b}}$
 
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation     $X_{i}$   $Y_{i}$   $X_{i} - \overline{X}$   $Y_{i} - \overline{Y}$   $\left( X_{i} - \overline{X} \right)^{2}$   $(X_{i} - \overline{X})(Y_{i} - \overline{Y})$
-  ------------- ---------------------------------- ---------------------------------- -------------------------------------------------- -------------------------------------------------- ------------------------------------------------------------------------ ----------------------------------------------------------------------------
-  1                                              3                                  3                                                 -2                                               -0,5                                                                        4                                                                            1
-  2                                              4                                  2                                                 -1                                               -1,5                                                                        1                                                                          1,5
-  3                                              6                                  5                                                  1                                                1,5                                                                        1                                                                          1,5
-  4                                              7                                  4                                                  2                                                0,5                                                                        4                                                                            1
-  Medelvärde                                     5                                3,5                                                                                                                                                                                
-  Summa                                         20                                 14                                                                                                                                                                             10                                                                            5
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:97%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 7%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 14%" />
+<col style="width: 17%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation</th>
+<th style="text-align: right;"><span
+class="math display">\[X_{i}\]</span></th>
+<th style="text-align: right;"><span
+class="math display">\[Y_{i}\]</span></th>
+<th style="text-align: right;"><span class="math display">\[X_{i} -
+\overline{X}\]</span></th>
+<th style="text-align: right;"><span class="math display">\[Y_{i} -
+\overline{Y}\]</span></th>
+<th style="text-align: right;"><span class="math display">\[\left( X_{i}
+- \overline{X} \right)^{2}\]</span></th>
+<th style="text-align: right;"><span class="math display">\[(X_{i} -
+\overline{X})(Y_{i} - \overline{Y})\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-0,5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1,5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1,5</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1,5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1,5</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0,5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Medelvärde</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3,5</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Summa</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
 Summan av observationerna i variabel $X$ ges av $\sum_{i = 1}^{n = 4}X_{i} = 3 + 4 + 6 + 7 = 20$. Medelvärdet för $X$ ges av $\overline{X} = 20/4 = 5$. Vi börjar med $\widehat{b}$ som vi behöver värdet för att estimera $\widehat{a}$:
 
 
@@ -103,15 +225,76 @@ där $X_{i}$ är observationerna för $X$. Med $\widehat{Y}$ kan vi även estime
 
 **Tabell 2. Estimera** $\widehat{\mathbf{Y}}$ **och** $\widehat{\mathbf{V}}$
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation    $X_{i}$   $Y_{i}$   $\widehat{Y_{i}} = 1 + 0,5X_{i}$   $\widehat{V_{i}} = Y_{i} - \widehat{Y_{i}}$      $\left( \widehat{V_{i}} \right)^{2}$
-  ------------- ---------------------------------- ---------------------------------- ------------------------------------------------------------- -------------------------------------------------------------------------- --------------------------------------------------------------------------
-  1                             3                                  3                                               2,5                                                                 0,5                                                                        0,25
-  2                             4                                  2                                                3                                                                   -1                                                                         1
-  3                             6                                  5                                                4                                                                   1                                                                          1
-  4                             7                                  4                                               4,5                                                                 -0,5                                                                       0,25
-  Summa                                                                                                                                                                                                                         $\sum_{i}^{}{{\widehat{V}}_{i}}^{2} = 2,5$
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:96%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 20%" />
+<col style="width: 18%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation</th>
+<th style="text-align: center;"><span
+class="math display">\[X_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[Y_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widehat{Y_{i}} = 1 + 0,5X_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widehat{V_{i}} = Y_{i} -
+\widehat{Y_{i}}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[\left(
+\widehat{V_{i}} \right)^{2}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2,5</td>
+<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">0,25</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4,5</td>
+<td style="text-align: center;">-0,5</td>
+<td style="text-align: center;">0,25</td>
+</tr>
+<tr>
+<td>Summa</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span
+class="math display">\[\sum_{i}^{}{{\widehat{V}}_{i}}^{2} =
+2,5\]</span></td>
+</tr>
+</tbody>
+</table>
 
 #### Kopplingen till kovarians och varians
 I [avsnitt 2.3](https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&dl=0) introducerade vi kovarians. Estimatorn för koefficient $\widehat{b}$ för regressionsmodellen $Y = a + bX + V$ kan även definieras som kovariansen mellan $X$ och $Y$ dividerat med variansen för förklarande variabeln $X$:

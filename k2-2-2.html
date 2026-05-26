@@ -196,70 +196,189 @@ där <span class="math inline">\(\|a\|\)</span> är absolutbeloppet av konstante
 </h4>
 <p>Nu ska vi beräkna (skatta) variansen med fyra observationer för två variabler: <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>. Variabel <span class="math inline">\(x\)</span> har värdena 3, 4, 6 och 7. Variabeln <span class="math inline">\(y\)</span> har värdena 3, 2, 5 och 4. Tabell 1 sammanfattar beräkningarna vi behöver.</p>
 <p><strong>Tabell 1: Några beräkningar för variablerna</strong> <span class="math inline">\(\mathbf{x}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{y}\)</span></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:88%;" class="table table-sm">
 <colgroup>
-<col width="4%">
-<col width="10%">
-<col width="10%">
-<col width="15%">
-<col width="15%">
-<col width="21%">
-<col width="21%">
+<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Observation</th>
+<thead><tr>
 <th>
-<span class="math inline">\(x_{i}\)</span> <span class="math inline">\(y_{i}\)</span> $x_{i} - </th>
-<th align="left">ine{x}$ <span class="math inline">\(y_{i} - \overline{y}\)</span>
+Observation
 </th>
 <th>
-<span class="math inline">\(\left( x_{i} - \overline{x} \right)^{2}\)</span> $(</th>
-<th align="center">y_{i} - )^{2}$</th>
-<th></th>
-<th></th>
+<span class="math display"><span class="math display">\[x_{i}\]</span></span>
+</th>
+<th>
+<span class="math display"><span class="math display">\[y_{i}\]</span></span>
+</th>
+<th>
+<span class="math display"><span class="math display">\[x_{i} - \overline{x}\]</span></span>
+</th>
+<th>
+<span class="math display"><span class="math display">\[y_{i} - \overline{y}\]</span></span>
+</th>
+<th>
+<span class="math display"><span class="math display">\[\left( x_{i} - \overline{x}
+\right)^{2}\]</span></span>
+</th>
+<th>
+<span class="math display"><span class="math display">\[\left( y_{i} - \overline{y}
+\right)^{2}\]</span></span>
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">1
-2
+<tr>
+<td>
+1
+</td>
+<td>
 3
-4</td>
-<td>3
+</td>
+<td>
+3
+</td>
+<td>
+-2
+</td>
+<td>
+-0,5
+</td>
+<td>
 4
-6
-7</td>
-<td align="left">3
-2
-5
-4</td>
-<td>-2
--1
-1
-2</td>
-<td align="center">-0,5
--1,5
-1,5
-0,5</td>
-<td>4
-1
-1
-4</td>
-<td>0,25
-2,25
-2,25
-0,25</td>
+</td>
+<td>
+0,25
+</td>
 </tr>
-<tr class="even">
-<td align="left">Medelvärde
-Summa</td>
-<td>5
-20</td>
-<td align="left">3,5
-14</td>
-<td></td>
-<td align="center"></td>
-<td>10</td>
-<td>5</td>
+<tr>
+<td>
+2
+</td>
+<td>
+4
+</td>
+<td>
+2
+</td>
+<td>
+-1
+</td>
+<td>
+-1,5
+</td>
+<td>
+1
+</td>
+<td>
+2,25
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+6
+</td>
+<td>
+5
+</td>
+<td>
+1
+</td>
+<td>
+1,5
+</td>
+<td>
+1
+</td>
+<td>
+2,25
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+7
+</td>
+<td>
+4
+</td>
+<td>
+2
+</td>
+<td>
+0,5
+</td>
+<td>
+4
+</td>
+<td>
+0,25
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+Medelvärde
+</td>
+<td>
+5
+</td>
+<td>
+3,5
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+Summa
+</td>
+<td>
+20
+</td>
+<td>
+14
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+10
+</td>
+<td>
+5
+</td>
 </tr>
 </tbody>
 </table></div>

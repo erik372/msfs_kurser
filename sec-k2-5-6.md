@@ -21,18 +21,51 @@ $$\widehat{a} \approx 2,89,\ \ \ \ \ \widehat{b} \approx 0,28,\ \ \ \ \ \ \wideh
 
 **Tabell 1: Fyra observationer för variablerna** $\mathbf{y}\mathbf{,}\mathbf{x}$ **och** $\mathbf{z}$**.**
 
-  --------------------------------------------------------------------------------------------------------------------------------------
-  
-
-$$i$$
-
-    $Y_{i}$   $X_{i}$   $Z_{i}$
-  ----------------------------- ---------------------------------- ---------------------------------- ----------------------------------
-  1                                             3                                  3                                  1
-  2                                             2                                  4                                  4
-  3                                             5                                  6                                  0
-  4                                             4                                  7                                  1
-  --------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:41%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr>
+<th><span class="math display">\[i\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[Y_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[X_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[Z_{i}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
 
 #### T-test för de tre koefficienterna
 Nu ska vi med t-test pröva sannolikheten att de tre koefficienterna är skilda från noll. Vi ställer därför upp tre noll- och alternativhypoteser:

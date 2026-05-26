@@ -104,14 +104,44 @@ Detta exempel syftar enbart till att illustrera metoden. För att göra det mer 
 
 **Tabell 1. Fyra observationer för X och Y**
 
-  -----------------------------------------------------------------------------
-  Observation *i*    $X$   $Y$
-  ----------------- ----------------------------- -----------------------------
-  1                               3                             3
-  2                               4                             2
-  3                               6                             5
-  4                               7                             4
-  -----------------------------------------------------------------------------
+<table style="width:39%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 10%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation <em>i</em></th>
+<th style="text-align: center;"><span
+class="math display">\[X\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[Y\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+</tr>
+</tbody>
+</table>
 För beräkningen av $t$ vet vi att täljaren är $\widehat{b} = 0,5$. Till nämnaren vill vi estimera ${\widehat{s}}_{\widehat{b}}$ enligt ovan. Från tidigare beräkningar med dessa fyra observationer vet vi att $\sum\left( y_{i} - \widehat{y} \right)^{2} = 2,5$ och $\sum\left( x_{i} - \bar{x} \right)^{2} = 10$. Vi har fyra observationer $(n = 4)$ och två koefficienter ( $p = 2$ ), varför $n - p = 4 - 2 = 2$. Detta ger följande estimat av ${\widehat{s}}_{\widehat{b}}$ :
 
 

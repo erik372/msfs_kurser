@@ -48,21 +48,129 @@ Den linjära modellen fångar dock den långsiktiga trenden i logaritmerad BNP r
 
 **Tabell 1: BNP och logarimterad BNP**
 
-  -----------------------------------------------------------------------------
-     **År**   **BNP**   **ln(BNP)** ** **      **År**     **BNP**   **ln(BNP)**
-  --------- --------- ------------- ------- --------- ----------- -------------
-       1800       115           4,7              1910       3 302           8,1
-       1810       178           5,2              1920      12 200           9,4
-       1820       278           5,6              1930       9 271           9,1
-       1830       306           5,7              1940      13 979           9,5
-       1840       382           5,9              1950      31 827          10,4
-       1850       461           6,1              1960      72 272          11,2
-       1860       743           6,6              1970     175 222          12,1
-       1870       938           6,8              1980     531 884          13,2
-       1880     1 314           7,2              1990   1 365 700          14,1
-       1890     1 477           7,3              2000   2 013 311          14,5
-       1900     2 245           7,7                                            
-  -----------------------------------------------------------------------------
+<table style="width:89%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 3%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: right;"><strong>År</strong></th>
+<th style="text-align: right;"><strong>BNP</strong></th>
+<th style="text-align: right;"><strong>ln(BNP)</strong></th>
+<th><strong> </strong></th>
+<th style="text-align: right;"><strong>År</strong></th>
+<th style="text-align: right;"><strong>BNP</strong></th>
+<th style="text-align: right;"><strong>ln(BNP)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1800</td>
+<td style="text-align: right;">115</td>
+<td style="text-align: right;">4,7</td>
+<td> </td>
+<td style="text-align: right;">1910</td>
+<td style="text-align: right;">3 302</td>
+<td style="text-align: right;">8,1</td>
+</tr>
+<tr>
+<td style="text-align: right;">1810</td>
+<td style="text-align: right;">178</td>
+<td style="text-align: right;">5,2</td>
+<td> </td>
+<td style="text-align: right;">1920</td>
+<td style="text-align: right;">12 200</td>
+<td style="text-align: right;">9,4</td>
+</tr>
+<tr>
+<td style="text-align: right;">1820</td>
+<td style="text-align: right;">278</td>
+<td style="text-align: right;">5,6</td>
+<td> </td>
+<td style="text-align: right;">1930</td>
+<td style="text-align: right;">9 271</td>
+<td style="text-align: right;">9,1</td>
+</tr>
+<tr>
+<td style="text-align: right;">1830</td>
+<td style="text-align: right;">306</td>
+<td style="text-align: right;">5,7</td>
+<td> </td>
+<td style="text-align: right;">1940</td>
+<td style="text-align: right;">13 979</td>
+<td style="text-align: right;">9,5</td>
+</tr>
+<tr>
+<td style="text-align: right;">1840</td>
+<td style="text-align: right;">382</td>
+<td style="text-align: right;">5,9</td>
+<td> </td>
+<td style="text-align: right;">1950</td>
+<td style="text-align: right;">31 827</td>
+<td style="text-align: right;">10,4</td>
+</tr>
+<tr>
+<td style="text-align: right;">1850</td>
+<td style="text-align: right;">461</td>
+<td style="text-align: right;">6,1</td>
+<td> </td>
+<td style="text-align: right;">1960</td>
+<td style="text-align: right;">72 272</td>
+<td style="text-align: right;">11,2</td>
+</tr>
+<tr>
+<td style="text-align: right;">1860</td>
+<td style="text-align: right;">743</td>
+<td style="text-align: right;">6,6</td>
+<td> </td>
+<td style="text-align: right;">1970</td>
+<td style="text-align: right;">175 222</td>
+<td style="text-align: right;">12,1</td>
+</tr>
+<tr>
+<td style="text-align: right;">1870</td>
+<td style="text-align: right;">938</td>
+<td style="text-align: right;">6,8</td>
+<td> </td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: right;">531 884</td>
+<td style="text-align: right;">13,2</td>
+</tr>
+<tr>
+<td style="text-align: right;">1880</td>
+<td style="text-align: right;">1 314</td>
+<td style="text-align: right;">7,2</td>
+<td> </td>
+<td style="text-align: right;">1990</td>
+<td style="text-align: right;">1 365 700</td>
+<td style="text-align: right;">14,1</td>
+</tr>
+<tr>
+<td style="text-align: right;">1890</td>
+<td style="text-align: right;">1 477</td>
+<td style="text-align: right;">7,3</td>
+<td> </td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">2 013 311</td>
+<td style="text-align: right;">14,5</td>
+</tr>
+<tr>
+<td style="text-align: right;">1900</td>
+<td style="text-align: right;">2 245</td>
+<td style="text-align: right;">7,7</td>
+<td> </td>
+<td style="text-align: right;"> </td>
+<td style="text-align: right;"> </td>
+<td style="text-align: right;"> </td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: Data från [www.historia.se](http://www.historia.se).

@@ -29,15 +29,82 @@ Låt oss nu estimera koefficienterna $\alpha$ och $\beta$. Observationerna för 
 
 **Tabell 1. Underlag för att estimera koefficienterna** $\mathbf{\alpha}$ **och** $\mathbf{\beta}$**.**
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation i    $Z_{i}$   $K_{i}$   $Z_{i} - \overline{Z}$   $K_{i} - \overline{K}$   $\left( Z_{i} - \overline{Z} \right)\left( K_{i} - \overline{K} \right)$   $\left( K_{i} - \overline{K} \right)^{2}$
-  --------------- ---------------------------------- ---------------------------------- -------------------------------------------------- -------------------------------------------------- ---------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------
-  1                               1                                  0                                        --0,5                                               --2                                                                             1                                                                                         4
-  2                               4                                  0                                         2,5                                                --2                                                                            --5                                                                                        4
-  3                               0                                  4                                        --1,5                                                2                                                                             --3                                                                                        4
-  4                               1                                  4                                        --0,5                                                2                                                                             --1                                                                                        4
-  Summa                           6                                  8                                                                                                                                                                           --8                                                                                        16
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:97%;">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 14%" />
+<col style="width: 12%" />
+<col style="width: 26%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation i</th>
+<th style="text-align: center;"><span
+class="math display">\[Z_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[K_{i}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[Z_{i} -
+\overline{Z}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[K_{i} -
+\overline{K}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[\left(
+Z_{i} - \overline{Z} \right)\left( K_{i} - \overline{K}
+\right)\]</span></th>
+<th style="text-align: center;"><span class="math display">\[\left(
+K_{i} - \overline{K} \right)^{2}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">–0,5</td>
+<td style="text-align: center;">–2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">2,5</td>
+<td style="text-align: center;">–2</td>
+<td style="text-align: center;">–5</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">–1,5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">–3</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">–0,5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">–1</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td>Summa</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">–8</td>
+<td style="text-align: center;">16</td>
+</tr>
+</tbody>
+</table>
 För lutningskoefficienten $\widehat{\beta}$ får vi:
 
 
@@ -57,14 +124,59 @@ Med hjälp av denna och de observerade värdena för variabeln $K$ kan vi estime
 
 **Tabell 2. Beräkningar för att estimera** $\widehat{Z}$ **och** $\widehat{\epsilon}$
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation i    $Z_{i}$   $K_{i}$   $\widehat{Z_{i}}$   $\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}$
-  --------------- ---------------------------------- ---------------------------------- --------------------------------------------- ----------------------------------------------------------------------------------
-  1                               1                                  0                                       2,5                                                            --1,5
-  2                               4                                  0                                       2,5                                                             1,5
-  3                               0                                  4                                       0,5                                                            --0,5
-  4                               1                                  4                                       0,5                                                             0,5
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:97%;">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation i</th>
+<th style="text-align: center;"><span
+class="math display">\[Z_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[K_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widehat{Z_{i}}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widehat{\epsilon_{i}} = Z_{i} -
+\widehat{Z_{i}}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">2,5</td>
+<td style="text-align: center;">–1,5</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">2,5</td>
+<td style="text-align: center;">1,5</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">–0,5</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">0,5</td>
+</tr>
+</tbody>
+</table>
 
 **Figur 1. Regressionslinjen för modell** $Z = \alpha + \beta K + \epsilon$
 

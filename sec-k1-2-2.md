@@ -20,26 +20,81 @@ I kolumnerna till höger ser vi resultatet i form av ett befolkningsindex per la
 
 **Tabell 1: Befolkning och befolkningsindex i Sverige och Frankrike**
 
-+----------+:-----------:+:-------------:+:-----------:+:-------------:+
-|          | **Befolkning,\              | **Befolkningsindex,\        |
-|          | miljoner invånare**         | index 100 = år 1960**       |
-+----------+-------------+---------------+-------------+---------------+
-| **År**   | **Sverige** | **Frankrike** | **Sverige** | **Frankrike** |
-+----------+-------------+---------------+-------------+---------------+
-| **1960** | 7,49        | 45,66         | 100,0       | 100,0         |
-+----------+-------------+---------------+-------------+---------------+
-| **1970** | 8,03        | 50,52         | 107,1       | 110,7         |
-+----------+-------------+---------------+-------------+---------------+
-| **1980** | 8,31        | 53,71         | 110,9       | 117,6         |
-+----------+-------------+---------------+-------------+---------------+
-| **1990** | 8,55        | 56,41         | 114,1       | 123,6         |
-+----------+-------------+---------------+-------------+---------------+
-| **2000** | 8,87        | 58,67         | 118,4       | 128,5         |
-+----------+-------------+---------------+-------------+---------------+
-| **2010** | 9,38        | 62,44         | 125,2       | 136,8         |
-+----------+-------------+---------------+-------------+---------------+
-| **2020** | 10,37       | 64,48         | 138,4       | 141,2         |
-+----------+-------------+---------------+-------------+---------------+
+<table style="width:75%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 13%" />
+<col style="width: 16%" />
+<col style="width: 13%" />
+<col style="width: 16%" />
+</colgroup>
+<tbody>
+<tr>
+<td></td>
+<td colspan="2" style="text-align: center;"><strong>Befolkning,<br />
+miljoner invånare</strong></td>
+<td colspan="2"
+style="text-align: center;"><strong>Befolkningsindex,<br />
+index 100 = år 1960</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>År</strong></td>
+<td style="text-align: center;"><strong>Sverige</strong></td>
+<td style="text-align: center;"><strong>Frankrike</strong></td>
+<td style="text-align: center;"><strong>Sverige</strong></td>
+<td style="text-align: center;"><strong>Frankrike</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1960</strong></td>
+<td style="text-align: right;">7,49</td>
+<td style="text-align: right;">45,66</td>
+<td style="text-align: right;">100,0</td>
+<td style="text-align: right;">100,0</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1970</strong></td>
+<td style="text-align: right;">8,03</td>
+<td style="text-align: right;">50,52</td>
+<td style="text-align: right;">107,1</td>
+<td style="text-align: right;">110,7</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1980</strong></td>
+<td style="text-align: right;">8,31</td>
+<td style="text-align: right;">53,71</td>
+<td style="text-align: right;">110,9</td>
+<td style="text-align: right;">117,6</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1990</strong></td>
+<td style="text-align: right;">8,55</td>
+<td style="text-align: right;">56,41</td>
+<td style="text-align: right;">114,1</td>
+<td style="text-align: right;">123,6</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2000</strong></td>
+<td style="text-align: right;">8,87</td>
+<td style="text-align: right;">58,67</td>
+<td style="text-align: right;">118,4</td>
+<td style="text-align: right;">128,5</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2010</strong></td>
+<td style="text-align: right;">9,38</td>
+<td style="text-align: right;">62,44</td>
+<td style="text-align: right;">125,2</td>
+<td style="text-align: right;">136,8</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2020</strong></td>
+<td style="text-align: right;">10,37</td>
+<td style="text-align: right;">64,48</td>
+<td style="text-align: right;">138,4</td>
+<td style="text-align: right;">141,2</td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: Data från [Our World in Data](https://ourworldindata.org/grapher/population). Antal invånare i Sverige och Frankrike 1960---2020.
@@ -53,16 +108,52 @@ Inkomsterna i tabellen är beskrivna i kronor per konsumtionsenhet. Kronor per k
 
 **Tabell 2: Inkomst per decilgrupp. 1 000-tals kr i 2019 års priser**
 
-  -----------------------------------------------
-            **Decilgrupp 1**   **Decilgrupp 10**
-  -------- ------------------ -------------------
-      1995        63,2               311,9
-      2000        74,4               519,3
-      2005        84,5               511,4
-      2010        83,3               619,3
-      2015        97,9               798,9
-      2019        99,6               803,3
-  -----------------------------------------------
+<table style="width:54%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: right;"> </th>
+<th style="text-align: center;"><strong>Decilgrupp 1</strong></th>
+<th style="text-align: center;"><strong>Decilgrupp 10</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1995</td>
+<td style="text-align: center;">63,2</td>
+<td style="text-align: center;">311,9</td>
+</tr>
+<tr>
+<td style="text-align: right;">2000</td>
+<td style="text-align: center;">74,4</td>
+<td style="text-align: center;">519,3</td>
+</tr>
+<tr>
+<td style="text-align: right;">2005</td>
+<td style="text-align: center;">84,5</td>
+<td style="text-align: center;">511,4</td>
+</tr>
+<tr>
+<td style="text-align: right;">2010</td>
+<td style="text-align: center;">83,3</td>
+<td style="text-align: center;">619,3</td>
+</tr>
+<tr>
+<td style="text-align: right;">2015</td>
+<td style="text-align: center;">97,9</td>
+<td style="text-align: center;">798,9</td>
+</tr>
+<tr>
+<td style="text-align: right;">2019</td>
+<td style="text-align: center;">99,6</td>
+<td style="text-align: center;">803,3</td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: Data från [SCB](https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__HE__HE0110__HE0110F/), genomsnittlig disponibel inkomst inklusive kapitalvinst per konsumtionsenhet. Decilgrupp 1 = den tiondel av befolkningen som respektive år hade lägst inkomster. Decilgrupp 10 = den tiondel av befolkningen som respektive år hade högst inkomster. Enskilda personer kan ha bytt decilgrupp mellan åren.
@@ -73,16 +164,56 @@ Tabell 3 visar resultatet. Inkomsterna för decilgrupp 1 ökade med 57,6 % och f
 
 **Tabell 3: Indexerad inkomstutveckling per decilgrupp**
 
-  ------------------------------------------------------------------------------------------------------------------------------------
-             **Decilgrupp 1**                                            **Decilgrupp 10**
-  ---------- ----------------------------------------------------------- -------------------------------------------------------------
-    **1995** $\frac{63,2}{63,2}*100 = 100$     $\frac{311,9}{311,9}*100 = 100$
-    **2000** 117,7                                                       166,5
-    **2005** 133,7                                                       164
-    **2010** 131,8                                                       198,6
-    **2015** 154,9                                                       256,1
-    **2019** $\frac{99,6}{63,2}*100 = 157,6$   $\frac{803,3}{311,9}*100 = 257,6$
-  ------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:72%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 28%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: right;"> </th>
+<th><strong>Decilgrupp 1</strong></th>
+<th><strong>Decilgrupp 10</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>1995</strong></td>
+<td><span class="math display">\[\frac{63,2}{63,2}*100 =
+100\]</span></td>
+<td><span class="math display">\[\frac{311,9}{311,9}*100 =
+100\]</span></td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2000</strong></td>
+<td style="text-align: right;">117,7</td>
+<td style="text-align: right;">166,5</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2005</strong></td>
+<td style="text-align: right;">133,7</td>
+<td style="text-align: right;">164</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2010</strong></td>
+<td style="text-align: right;">131,8</td>
+<td style="text-align: right;">198,6</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2015</strong></td>
+<td style="text-align: right;">154,9</td>
+<td style="text-align: right;">256,1</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2019</strong></td>
+<td><span class="math display">\[\frac{99,6}{63,2}*100 =
+157,6\]</span></td>
+<td><span class="math display">\[\frac{803,3}{311,9}*100 =
+257,6\]</span></td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: Inkomstindex för decilgrupp 1 och 10, baserat på data presenterade ovan.

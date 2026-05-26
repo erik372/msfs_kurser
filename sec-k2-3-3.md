@@ -35,16 +35,90 @@ Tabell 2 och 3 återger observationerna vi använde för att estimera respektive
 
 **Tabell 2: Observationer och beräkningar för modell 1**
 
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation i    $X_{i}$   $Y_{i}$   $\widehat{Y_{i}}$   $Y_{i} - \widehat{Y_{i}}$   $Y_{i} - \overline{Y}$   $\left( Y_{i} - \widehat{Y_{i}} \right)^{2}$
-  --------------- ---------------------------------- ---------------------------------- --------------------------------------------- ------------------------------------------------------ -------------------------------------------------- ----------------------------------------------------------------------------
-  1                               3                                  3                                       2,5                                               0,5                                                  -0,5                                                            0,25
-  2                               4                                  2                                        3                                                 -1                                                  -1,5                                                             1
-  3                               6                                  5                                        4                                                 1                                                   1,5                                                              1
-  4                               7                                  4                                       4,5                                               -0,5                                                 0,5                                                             0,25
-  Medel                           5                                 3,5                                                                                                                                                                         
-  Summa                                                                                                                                                                                                             2,5                                                              5
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:96%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 12%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation i</th>
+<th style="text-align: center;"><span
+class="math display">\[X_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[Y_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widehat{Y_{i}}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[Y_{i} -
+\widehat{Y_{i}}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[Y_{i} -
+\overline{Y}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[\left(
+Y_{i} - \widehat{Y_{i}} \right)^{2}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2,5</td>
+<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">-0,5</td>
+<td style="text-align: center;">0,25</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-1</td>
+<td style="text-align: center;">-1,5</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1,5</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4,5</td>
+<td style="text-align: center;">-0,5</td>
+<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">0,25</td>
+</tr>
+<tr>
+<td>Medel</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3,5</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Summa</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2,5</td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: se text.
@@ -53,16 +127,91 @@ Förklaring: se text.
 
 **Tabell 3: Observationer och beräkningar för modell 2**
 
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation i    $Z_{i}$   $K_{i}$   $\widehat{Z_{i}}$   $\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}$   $Z_{i} - \overline{Z_{i}}$   $\left( Z_{i} - \widehat{Z_{i}} \right)^{2}$
-  --------------- ---------------------------------- ---------------------------------- --------------------------------------------- ---------------------------------------------------------------------------------- ------------------------------------------------------- ----------------------------------------------------------------------------
-  1                               1                                  0                                       2,5                                                            --1,5                                                                 --0,5                                                              2,25
-  2                               4                                  0                                       2,5                                                             1,5                                                                   2,5                                                               2,25
-  3                               0                                  4                                       0,5                                                             -0,5                                                                 --1,5                                                              0,25
-  4                               1                                  4                                       0,5                                                             0,5                                                                  --0,5                                                              0,25
-  Medel                          1,5                                 2                                                                                                                                                                                                           
-  Summa                                                                                                                                                                                                                                             5                                                                 9
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:95%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 18%" />
+<col style="width: 15%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation i</th>
+<th style="text-align: center;"><span
+class="math display">\[Z_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[K_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widehat{Z_{i}}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widehat{\epsilon_{i}} = Z_{i} -
+\widehat{Z_{i}}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[Z_{i} -
+\overline{Z_{i}}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[\left(
+Z_{i} - \widehat{Z_{i}} \right)^{2}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">2,5</td>
+<td style="text-align: center;">–1,5</td>
+<td style="text-align: center;">–0,5</td>
+<td style="text-align: center;">2,25</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">2,5</td>
+<td style="text-align: center;">1,5</td>
+<td style="text-align: center;">2,5</td>
+<td style="text-align: center;">2,25</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">-0,5</td>
+<td style="text-align: center;">–1,5</td>
+<td style="text-align: center;">0,25</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">–0,5</td>
+<td style="text-align: center;">0,25</td>
+</tr>
+<tr>
+<td>Medel</td>
+<td style="text-align: center;">1,5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Summa</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">9</td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: se text.

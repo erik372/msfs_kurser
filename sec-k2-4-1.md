@@ -90,20 +90,135 @@ Nu ska vi estimera en regressionsmodell utifrån några observationer. För dett
 
 **Tabell 1: Variablerna Y, X och Z med lite beräkningar**
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  
-
-$$i$$
-
-                  $Y_{i}$   $X_{i}$   $Z_{i}$   $\widetilde{Y_{i}}$   $\widetilde{X_{i}}$   $\widetilde{Z_{i}}$   $\widetilde{Y_{i}}\widetilde{X_{i}}$   $\widetilde{Y_{i}}\widetilde{Z_{i}}$   $\widetilde{X_{i}}\widetilde{Z_{i}}$   $\widetilde{{X_{i}}^{2}}$   $\widetilde{{Z_{i}}^{2}}$
-  ------------------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- ----------------------------------------------- ----------------------------------------------- ----------------------------------------------- ------------------------------------------------------------------ ------------------------------------------------------------------ ------------------------------------------------------------------ ------------------------------------------------------ ------------------------------------------------------
-  1                                                           3                                  3                                  1                                       --0,5                                            --2                                            --0,5                                                      1                                                                 0,25                                                                1                                                            4                                                     0,25
-  2                                                           2                                  4                                  4                                       --1,5                                            -1                                              2,5                                                      1,5                                                               --3,75                                                             --2,5                                                          1                                                     6,25
-  3                                                           5                                  6                                  0                                        1,5                                              1                                             --1,5                                                     1,5                                                               --2,25                                                             --1,5                                                          1                                                     2,25
-  4                                                           4                                  7                                  1                                        0,5                                              2                                              0,5                                                       1                                                                --0,25                                                              --1                                                           4                                                     0,25
-  Medel                                                      3,5                                 5                                 1,5                                                                                                                                                                                                                                                                                                                                                                                                                                 
-  $\sum_{}^{}{}$                                                                                                                                                                                                                                                                                            5                                                                 --6                                                                --4                                                           10                                                     9
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:95%;">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 5%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th><span class="math display">\[i\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[Y_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[X_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[Z_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widetilde{Y_{i}}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widetilde{X_{i}}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widetilde{Z_{i}}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widetilde{Y_{i}}\widetilde{X_{i}}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widetilde{Y_{i}}\widetilde{Z_{i}}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widetilde{X_{i}}\widetilde{Z_{i}}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widetilde{{X_{i}}^{2}}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widetilde{{Z_{i}}^{2}}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">–0,5</td>
+<td style="text-align: center;">–2</td>
+<td style="text-align: center;">–0,5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0,25</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">–1,5</td>
+<td style="text-align: center;">-1</td>
+<td style="text-align: center;">2,5</td>
+<td style="text-align: center;">1,5</td>
+<td style="text-align: center;">–3,75</td>
+<td style="text-align: center;">–2,5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">6,25</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1,5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">–1,5</td>
+<td style="text-align: center;">1,5</td>
+<td style="text-align: center;">–2,25</td>
+<td style="text-align: center;">–1,5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2,25</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">–0,25</td>
+<td style="text-align: center;">–1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0,25</td>
+</tr>
+<tr>
+<td>Medel</td>
+<td style="text-align: center;">3,5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1,5</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><span class="math display">\[\sum_{}^{}{}\]</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">–6</td>
+<td style="text-align: center;">–4</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">9</td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: $\widetilde{Y_{i}} = Y_{i} - \overline{Y}$ och motsvarande för $\widetilde{X_{i}}$ och $\widetilde{Z_{i}}$.
@@ -132,14 +247,59 @@ Vi kan sammanfatta våra estimerade koefficienter genom att sätta in resultaten
 $$Y_{i} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} + V_{i} = 2,89 + 0,28X_{i} - 0,54Z_{i} + V_{i} \tag{11}$$
 
 Nu kan vi även estimera predikterade $\widehat{Y_{i}}$ och residualen $\widehat{V_{i}}$, vilket sammanfattas i tabell 2 med avrundade resultat.
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation $i$    $Y_{i}$   $X_{i}$   $Z_{i}$   $\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} - 0,54Z_{i}$
-  -------------------------------------- ---------------------------------- ---------------------------------- ---------------------------------- -------------------------------------------------------------------------------------
-  1                                                      3                                  3                                  1                                                           3,2
-  2                                                      2                                  4                                  4                                                          1,86
-  3                                                      5                                  6                                  0                                                          4,59
-  4                                                      4                                  7                                  1                                                          4,34
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:78%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 7%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation <span class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span
+class="math display">\[Y_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[X_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[Z_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} -
+0,54Z_{i}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3,2</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1,86</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">4,59</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4,34</td>
+</tr>
+</tbody>
+</table>
 
 #### Ett försök att illustrera resultatet i diagram
 När vi har tre variabler är det svårare att illustrera samvariation i ett diagram. Trots detta görs ett försök i figur 1 där de fyra observationerna är placerade i diagrammet utifrån deras värden för $Y$, $X$ och $Z$.

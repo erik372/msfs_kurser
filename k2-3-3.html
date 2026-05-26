@@ -160,120 +160,347 @@ Modell 1: <span class="math inline">\(Y = a + bX + V\)</span> (7)
 Modell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>
 Tabell 2 och 3 återger observationerna vi använde för att estimera respektive tabell och några beräkningar vi nu ska använda i vår jämförelse.</p>
 <p><strong>Tabell 2: Observationer och beräkningar för modell 1</strong></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:96%;" class="table table-sm">
 <colgroup>
-<col width="5%">
-<col width="11%">
-<col width="11%">
-<col width="14%">
-<col width="17%">
-<col width="16%">
-<col width="24%">
+<col style="width: 14%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 22%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Observation i</th>
-<th align="right">
-<span class="math inline">\(X_{i}\)</span> <span class="math inline">\(Y_{i}\)</span> $\widehat{Y_{i</th>
-<th>}}$ <span class="math inline">\(Y_{i} - \widehat{Y_{i}}\)</span> $</th>
-<th>Y_{i} - $ $( Y_{i} - </th>
-<th align="left">at{Y_{i}} )^{2}$</th>
-<th></th>
-<th></th>
+<thead><tr>
+<th>
+Observation i
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[X_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widehat{Y_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Y_{i} -
+\widehat{Y_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Y_{i} -
+\overline{Y}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\left(
+Y_{i} - \widehat{Y_{i}} \right)^{2}\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">1
-2
+<tbody>
+<tr>
+<td>
+1
+</td>
+<td style="text-align: center;">
 3
-4
-Medel
-Summa</td>
-<td align="right">3
-4
-6
-7
-5</td>
-<td>3
-2
-5
-4
-3,5</td>
-<td>2,5
+</td>
+<td style="text-align: center;">
 3
+</td>
+<td style="text-align: center;">
+2,5
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+-0,5
+</td>
+<td style="text-align: center;">
+0,25
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td style="text-align: center;">
 4
-4,5</td>
-<td align="left">0,5
+</td>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
 -1
-1
--0,5</td>
-<td>-0,5
+</td>
+<td style="text-align: center;">
 -1,5
+</td>
+<td style="text-align: center;">
+1
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: center;">
+6
+</td>
+<td style="text-align: center;">
+5
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
 1,5
-0,5</td>
-<td>0,25
+</td>
+<td style="text-align: center;">
 1
-1
-0,25</td>
-</tr></tbody>
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: center;">
+7
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+4,5
+</td>
+<td style="text-align: center;">
+-0,5
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+0,25
+</td>
+</tr>
+<tr>
+<td>
+Medel
+</td>
+<td style="text-align: center;">
+5
+</td>
+<td style="text-align: center;">
+3,5
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+</tr>
+<tr>
+<td>
+Summa
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+2,5
+</td>
+<td style="text-align: center;">
+5
+</td>
+</tr>
+</tbody>
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: se text.</p>
 </div>
 <p><strong>Tabell 3: Observationer och beräkningar för modell 2</strong></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:95%;" class="table table-sm">
 <colgroup>
-<col width="4%">
-<col width="10%">
-<col width="10%">
-<col width="13%">
-<col width="23%">
-<col width="16%">
-<col width="22%">
+<col style="width: 15%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 18%">
+<col style="width: 15%">
+<col style="width: 18%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Observation i</th>
-<th align="right">
-<span class="math inline">\(Z_{i}\)</span> <span class="math inline">\(K_{i}\)</span> $\widehat{Z_{i</th>
-<th>}}$ $ = Z_{</th>
-<th>i} - $ $Z_{i} - \overline{Z_{</th>
-<th align="left">i}}$ <span class="math inline">\(\left( Z_{i} - \widehat{Z_{i}} \right)^{2}\)</span>
+<thead><tr>
+<th>
+Observation i
 </th>
-<th></th>
-<th></th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Z_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[K_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widehat{Z_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widehat{\epsilon_{i}} = Z_{i} -
+\widehat{Z_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Z_{i} -
+\overline{Z_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\left(
+Z_{i} - \widehat{Z_{i}} \right)^{2}\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">1
-2
-3
-4
-Medel
-Summa</td>
-<td align="right">1
-4
-0
+<tbody>
+<tr>
+<td>
 1
-1,5</td>
-<td>0
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
 0
-4
-4
-2</td>
-<td>2,5
+</td>
+<td style="text-align: center;">
 2,5
-0,5
-0,5</td>
-<td align="left">–1,5
-1,5
--0,5
-0,5</td>
-<td>–0,5
-2,5
+</td>
+<td style="text-align: center;">
 –1,5
-–0,5</td>
-<td>2,25
+</td>
+<td style="text-align: center;">
+–0,5
+</td>
+<td style="text-align: center;">
 2,25
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+0
+</td>
+<td style="text-align: center;">
+2,5
+</td>
+<td style="text-align: center;">
+1,5
+</td>
+<td style="text-align: center;">
+2,5
+</td>
+<td style="text-align: center;">
+2,25
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: center;">
+0
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+-0,5
+</td>
+<td style="text-align: center;">
+–1,5
+</td>
+<td style="text-align: center;">
 0,25
-0,25</td>
-</tr></tbody>
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+–0,5
+</td>
+<td style="text-align: center;">
+0,25
+</td>
+</tr>
+<tr>
+<td>
+Medel
+</td>
+<td style="text-align: center;">
+1,5
+</td>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+</tr>
+<tr>
+<td>
+Summa
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+5
+</td>
+<td style="text-align: center;">
+9
+</td>
+</tr>
+</tbody>
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: se text.

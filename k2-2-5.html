@@ -147,42 +147,110 @@ Vi sätter nu in definitionen av <span class="math inline">\({\widehat{Y}}_{i}\)
 I praktiken har vi nästan alltid variation kring regressionslinjen, vilket är normalt och förväntat.</p>
 <div class="inline-figure"><img src="img/k2-2-5-image1.png"></div>
 <p><strong>Figur 1 Estimera</strong> <span class="math inline">\(\widehat{\mathbf{V}}\)</span></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:52%;" class="table table-sm">
 <colgroup>
-<col width="8%">
-<col width="19%">
-<col width="26%">
-<col width="43%">
+<col style="width: 18%">
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 15%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Observation i</th>
-<th align="right">
-<span class="math inline">\(Y_{i}\)</span> <span class="math inline">\({\widehat{Y}}_{i}\)</span> ${</th>
-<th align="left">}<em>{i} = Y</em>{i} - {}_{i}$</th>
-<th></th>
+<thead><tr>
+<th>
+Observation i
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[{\widehat{Y}}_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[{\widehat{V}}_{i} = Y_{i} -
+{\widehat{Y}}_{i}\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">1
-2
-3
-4
-Summa
-Medelvärde</td>
-<td align="right">3
-2
-5
-4</td>
-<td align="left">2,5
-3
-4
-4,5</td>
-<td>0,5
--1
+<tbody>
+<tr>
+<td>
 1
+</td>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+2,5
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+-1
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: center;">
+5
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+1
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+4,5
+</td>
+<td style="text-align: center;">
 -0,5
+</td>
+</tr>
+<tr>
+<td>
+Summa
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
 0
-0</td>
-</tr></tbody>
+</td>
+</tr>
+<tr>
+<td>
+Medelvärde
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+0
+</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="räkna-med-minstakvadratmetoden" class="section level4" number="29.0.2.2">
@@ -209,64 +277,177 @@ Definitionen av <span class="math inline">\(\widehat{b}\)</span>:
 </h4>
 <p>Tabell 1 beskriver beräkningarna vi behöver för <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Gå noga igenom varje steg i tabellen och försäkra dig om att du förstår vad som sker i varje kolumn.</p>
 <p><strong>Tabell 1. Beräkningar för att estimera</strong> <span class="math inline">\(\widehat{\mathbf{a}}\)</span> <strong>och</strong> <span class="math inline">\(\widehat{\mathbf{b}}\)</span></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:97%;" class="table table-sm">
 <colgroup>
-<col width="4%">
-<col width="10%">
-<col width="10%">
-<col width="15%">
-<col width="15%">
-<col width="21%">
-<col width="22%">
+<col style="width: 14%">
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 14%">
+<col style="width: 17%">
+<col style="width: 26%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Observation</th>
-<th align="right">
-<span class="math inline">\(X_{i}\)</span> <span class="math inline">\(Y_{i}\)</span> $X_{i} - </th>
-<th>rline{X}$ <span class="math inline">\(Y_{i} - \overline{Y}\)</span>
+<thead><tr>
+<th>
+Observation
 </th>
-<th align="right">
-<span class="math inline">\(\left( X_{i} - \overline{X} \right)^{2}\)</span> $(X_{</th>
-<th align="left">i} - )(Y_{i} - )$</th>
-<th></th>
-<th></th>
+<th style="text-align: right;">
+<span class="math display"><span class="math display">\[X_{i}\]</span></span>
+</th>
+<th style="text-align: right;">
+<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+</th>
+<th style="text-align: right;">
+<span class="math display"><span class="math display">\[X_{i} -
+\overline{X}\]</span></span>
+</th>
+<th style="text-align: right;">
+<span class="math display"><span class="math display">\[Y_{i} -
+\overline{Y}\]</span></span>
+</th>
+<th style="text-align: right;">
+<span class="math display"><span class="math display">\[\left( X_{i}
+- \overline{X} \right)^{2}\]</span></span>
+</th>
+<th style="text-align: right;">
+<span class="math display"><span class="math display">\[(X_{i} -
+\overline{X})(Y_{i} - \overline{Y})\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">1
-2
+<tbody>
+<tr>
+<td>
+1
+</td>
+<td style="text-align: right;">
 3
+</td>
+<td style="text-align: right;">
+3
+</td>
+<td style="text-align: right;">
+-2
+</td>
+<td style="text-align: right;">
+-0,5
+</td>
+<td style="text-align: right;">
 4
-Medelvärde
-Summa</td>
-<td align="right">3
-4
-6
-7
-5
-20</td>
-<td>3
+</td>
+<td style="text-align: right;">
+1
+</td>
+</tr>
+<tr>
+<td>
 2
-5
+</td>
+<td style="text-align: right;">
 4
-3,5
-14</td>
-<td align="right">-2
+</td>
+<td style="text-align: right;">
+2
+</td>
+<td style="text-align: right;">
 -1
-1
-2</td>
-<td align="left">-0,5
+</td>
+<td style="text-align: right;">
 -1,5
-1,5
-0,5</td>
-<td>4
+</td>
+<td style="text-align: right;">
 1
+</td>
+<td style="text-align: right;">
+1,5
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: right;">
+6
+</td>
+<td style="text-align: right;">
+5
+</td>
+<td style="text-align: right;">
 1
-4</td>
-<td>1
+</td>
+<td style="text-align: right;">
 1,5
+</td>
+<td style="text-align: right;">
+1
+</td>
+<td style="text-align: right;">
 1,5
-1</td>
-</tr></tbody>
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: right;">
+7
+</td>
+<td style="text-align: right;">
+4
+</td>
+<td style="text-align: right;">
+2
+</td>
+<td style="text-align: right;">
+0,5
+</td>
+<td style="text-align: right;">
+4
+</td>
+<td style="text-align: right;">
+1
+</td>
+</tr>
+<tr>
+<td>
+Medelvärde
+</td>
+<td style="text-align: right;">
+5
+</td>
+<td style="text-align: right;">
+3,5
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+</td>
+</tr>
+<tr>
+<td>
+Summa
+</td>
+<td style="text-align: right;">
+20
+</td>
+<td style="text-align: right;">
+14
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+10
+</td>
+<td style="text-align: right;">
+5
+</td>
+</tr>
+</tbody>
 </table></div>
 <p>Summan av observationerna i variabel <span class="math inline">\(X\)</span> ges av <span class="math inline">\(\sum_{i = 1}^{n = 4}X_{i} = 3 + 4 + 6 + 7 = 20\)</span>. Medelvärdet för <span class="math inline">\(X\)</span> ges av <span class="math inline">\(\overline{X} = 20/4 = 5\)</span>. Vi börjar med <span class="math inline">\(\widehat{b}\)</span> som vi behöver värdet för att estimera <span class="math inline">\(\widehat{a}\)</span>:</p>
 <p><span class="math display">\[\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}} = \frac{5}{10} = 0,5 \tag{6}\]</span></p>
@@ -276,53 +457,136 @@ Summa</td>
 <p><span class="math display">\[{\widehat{Y}}_{i} = \widehat{a} + \widehat{b}X = 1 + 0,5X_{i} \tag{8}\]</span></p>
 <p>där <span class="math inline">\(X_{i}\)</span> är observationerna för <span class="math inline">\(X\)</span>. Med <span class="math inline">\(\widehat{Y}\)</span> kan vi även estimera residualen <span class="math inline">\(\widehat{V}\)</span>. Resultaten presenteras i tabell 2. I kolumnen för <span class="math inline">\(\widehat{Y}\)</span> ser vi <span class="math inline">\(Y\)</span>-värdena längs med regressionslinjen. Vi har endast värden på regressionslinjen som sammanfaller med de värden vi har för variabeln <span class="math inline">\(X\)</span>. Pröva själv att i ett diagram rita ut punkterna <span class="math inline">\(\left( X_{1},{\widehat{Y}}_{1} \right) = (3,\ \ 2,5)\)</span>, (4,3) , (6,4) och (7, 4,5)</p>
 <p><strong>Tabell 2. Estimera</strong> <span class="math inline">\(\widehat{\mathbf{Y}}\)</span> <strong>och</strong> <span class="math inline">\(\widehat{\mathbf{V}}\)</span></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:96%;" class="table table-sm">
 <colgroup>
-<col width="4%">
-<col width="11%">
-<col width="11%">
-<col width="20%">
-<col width="25%">
-<col width="25%">
+<col style="width: 16%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 20%">
+<col style="width: 18%">
+<col style="width: 24%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Observation</th>
-<th align="right">
-<span class="math inline">\(X_{i}\)</span> <span class="math inline">\(Y_{i}\)</span> $\widehat{Y_{i</th>
-<th>}} = 1 + 0,5X_{i}$ $\widehat{V_{i</th>
-<th>}} = Y_{i} - $ $( </th>
-<th align="left">ght)^{2}$</th>
-<th></th>
+<thead><tr>
+<th>
+Observation
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[X_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widehat{Y_{i}} = 1 + 0,5X_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widehat{V_{i}} = Y_{i} -
+\widehat{Y_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\left(
+\widehat{V_{i}} \right)^{2}\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">1
-2
-3
-4
-Summa</td>
-<td align="right">3
-4
-6
-7</td>
-<td>3
-2
-5
-4</td>
-<td>2,5
-3
-4
-4,5</td>
-<td align="left">0,5
--1
+<tbody>
+<tr>
+<td>
 1
--0,5</td>
-<td>0,25
-1
-1
-0,25
-<span class="math inline">\(\sum_{i}^{}{{\widehat{V}}_{i}}^{2} = 2,5\)</span>
 </td>
-</tr></tbody>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+2,5
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+0,25
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+-1
+</td>
+<td style="text-align: center;">
+1
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: center;">
+6
+</td>
+<td style="text-align: center;">
+5
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+1
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: center;">
+7
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+4,5
+</td>
+<td style="text-align: center;">
+-0,5
+</td>
+<td style="text-align: center;">
+0,25
+</td>
+</tr>
+<tr>
+<td>
+Summa
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+<span class="math display"><span class="math display">\[\sum_{i}^{}{{\widehat{V}}_{i}}^{2} =
+2,5\]</span></span>
+</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div id="kopplingen-till-kovarians-och-varians" class="section level4" number="29.0.2.4">

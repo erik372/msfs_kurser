@@ -217,34 +217,69 @@ Om vi byter ut populationsvärdet <span class="math inline">\(\sigma_{V}^{2}\)</
 <p>Nu ska vi använda några observationer för att illustrera hur vi kan använda t-testet och <span class="math inline">\(t = \widehat{b}/s_{\widehat{b}}\)</span> för att pröva nollhypotesen <span class="math inline">\(H_{0}:b = 0\)</span> mot alternativhypotesen <span class="math inline">\(H_{1}:b \neq 0\)</span>.
 Detta exempel syftar enbart till att illustrera metoden. För att göra det mer lättöverskådligt ska vi endast använda de fyra observationerna för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> från avsnitt <a href="https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&amp;dl=0">2.3</a> och <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">2.4</a>, där vi såg att <span class="math inline">\(\widehat{b} = 0,5\)</span> och <span class="math inline">\(\widehat{a} = 1\)</span>.</p>
 <p><strong>Tabell 1. Fyra observationer för X och Y</strong></p>
-<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<div class="inline-table"><table style="width:39%;" class="table table-sm">
 <colgroup>
-<col width="22%">
-<col width="37%">
-<col width="37%">
+<col style="width: 16%">
+<col style="width: 10%">
+<col style="width: 12%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Observation <em>i</em>
+<thead><tr>
+<th>
+Observation <em>i</em>
 </th>
-<th align="center">
-<span class="math inline">\(X\)</span> <span class="math inline">\(Y\)</span>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[X\]</span></span>
 </th>
-<th></th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Y\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">1
-2
+<tbody>
+<tr>
+<td>
+1
+</td>
+<td style="text-align: center;">
 3
-4</td>
-<td align="center">3
-4
-6
-7</td>
-<td>3
+</td>
+<td style="text-align: center;">
+3
+</td>
+</tr>
+<tr>
+<td>
 2
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+2
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: center;">
+6
+</td>
+<td style="text-align: center;">
 5
-4</td>
-</tr></tbody>
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: center;">
+7
+</td>
+<td style="text-align: center;">
+4
+</td>
+</tr>
+</tbody>
 </table></div>
 <p>För beräkningen av <span class="math inline">\(t\)</span> vet vi att täljaren är <span class="math inline">\(\widehat{b} = 0,5\)</span>. Till nämnaren vill vi estimera <span class="math inline">\({\widehat{s}}_{\widehat{b}}\)</span> enligt ovan. Från tidigare beräkningar med dessa fyra observationer vet vi att <span class="math inline">\(\sum\left( y_{i} - \widehat{y} \right)^{2} = 2,5\)</span> och <span class="math inline">\(\sum\left( x_{i} - \bar{x} \right)^{2} = 10\)</span>. Vi har fyra observationer <span class="math inline">\((n = 4)\)</span> och två koefficienter ( <span class="math inline">\(p = 2\)</span> ), varför <span class="math inline">\(n - p = 4 - 2 = 2\)</span>. Detta ger följande estimat av <span class="math inline">\({\widehat{s}}_{\widehat{b}}\)</span> :</p>
 <p><span class="math display">\[{\widehat{s}}_{\widehat{b}} = \left( \frac{\sum_{}^{}\left( y_{i} - {\widehat{y}}_{i} \right)^{2}}{(n - 2)\sum_{}^{}\left( x_{i} - \bar{x} \right)^{2}} \right)^{1/2} = \left( \frac{2,5}{2*10} \right)^{1/2} \approx 0,354 \tag{8}\]</span></p>

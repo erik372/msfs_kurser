@@ -32,14 +32,44 @@ Rad 1 i tabellen består av första värdet för $x$ respektive $y$ och represen
 
 ![](img/k2-2-3-image1.png)
 
-  -------------------------------------------------------------------------------------
-  Observation i    $x_{i}$   $y_{i}$
-  --------------- ---------------------------------- ----------------------------------
-  1                               3                                  3
-  2                               4                                  2
-  3                               6                                  5
-  4                               7                                  4
-  -------------------------------------------------------------------------------------
+<table style="width:42%;">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 12%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation i</th>
+<th style="text-align: center;"><span
+class="math display">\[x_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[y_{i}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+</tr>
+</tbody>
+</table>
 I tabell 1 har vi beräknat de delar vi behöver för att skatta kovariansen mellan $x$ och $y$ (ekvation 3):
 
 
@@ -50,16 +80,81 @@ Det finns inte några begränsningar för vilka värden som kovarians kan anta. 
 
 **Tabell 1. Beräkningar för kovariansen mellan** $\mathbf{x}$ **och** $\mathbf{y}$
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Observation    $x_{i}$   $y_{i}$   $x_{i} - \overline{x}$   $y_{i} - \overline{y}$   $(x_{i} - \overline{x})(y_{i} - \overline{y})$
-  ------------- ---------------------------------- ---------------------------------- -------------------------------------------------- -------------------------------------------------- ----------------------------------------------------------------------------
-  1                             3                                  3                                          -2                                                -0,5                                                             1
-  2                             4                                  2                                          -1                                                -1,5                                                            1,5
-  3                             6                                  5                                          1                                                 1,5                                                             1,5
-  4                             7                                  4                                          2                                                 0,5                                                              1
-  Medelvärde                    5                                 3,5                                                                                                                       
-  Summa                                                                                                                                                                                                                          5
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:98%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 13%" />
+<col style="width: 9%" />
+<col style="width: 17%" />
+<col style="width: 15%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation</th>
+<th style="text-align: center;"><span
+class="math display">\[x_{i}\]</span></th>
+<th style="text-align: center;"><span
+class="math display">\[y_{i}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[x_{i} -
+\overline{x}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[y_{i} -
+\overline{y}\]</span></th>
+<th style="text-align: center;"><span class="math display">\[(x_{i} -
+\overline{x})(y_{i} - \overline{y})\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-2</td>
+<td style="text-align: center;">-0,5</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-1</td>
+<td style="text-align: center;">-1,5</td>
+<td style="text-align: center;">1,5</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1,5</td>
+<td style="text-align: center;">1,5</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td>Medelvärde</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3,5</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Summa</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
 
 #### Korrelationskoefficienten
 Ett annat mått på linjär samvariation är *Pearsons r*, även kallat *Pearsons korrelationskoefficient* eller *korrelationskoefficienten* (jämför [Matte 1](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/korrelation-och-kausalitet#!/)). Korrelationskoefficienten för variablerna $x$ och $y$ betecknas för population $\rho_{xy}$ (grekiska rho):

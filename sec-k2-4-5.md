@@ -13,14 +13,42 @@ Låt oss nu återanvända den första regressionsmodellen och observationerna f�
 
 **Tabell 1: Variablerna** $X$ **och** $Y$
 
-  --------------------------------------------------------------------------------------------
-  Observation $i$   $Y$   $X$
-  -------------------------------------- -------------------------- --------------------------
-  1                                      3                          3
-  2                                      4                          2
-  3                                      6                          5
-  4                                      7                          4
-  --------------------------------------------------------------------------------------------
+<table style="width:39%;">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation <span class="math inline">\(i\)</span></th>
+<th><span class="math inline">\(Y\)</span></th>
+<th><span class="math inline">\(X\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6</td>
+<td>5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>7</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
 Vi börjar med att beskriva regressionsmodellen med matriser:
 
 
@@ -59,14 +87,48 @@ där matris $X$ innehåller variablerna $X$ och $Z$ och matris $B$ innehåller k
 
 **Tabell 2: Variablerna** $Y$, $X$ **och** $Z$
 
-  --------------------------------------------------------------------------------------------------------------------------------
-  Observation $i$   $Y$   $X$   $Z$
-  -------------------------------------- ----------------------------- ----------------------------- -----------------------------
-  1                                      3                             3                             1
-  2                                      2                             4                             4
-  3                                      5                             6                             0
-  4                                      4                             7                             1
-  --------------------------------------------------------------------------------------------------------------------------------
+<table style="width:49%;">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation <span class="math inline">\(i\)</span></th>
+<th><span class="math display">\[Y\]</span></th>
+<th><span class="math display">\[X\]</span></th>
+<th><span class="math display">\[Z\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5</td>
+<td>6</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>7</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 För att estimera koefficienterna kan vi nu ta:
 
 
@@ -91,14 +153,42 @@ I [avsnitt 3.2](https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-mode
 
 **Tabell 3: Variablerna** $Z$ **och** $K$
 
-  ---------------------------------------------------------------------
-  Observation i   $Z$   $K$
-  --------------- -------------------------- --------------------------
-  1               1                          0
-  2               4                          0
-  3               0                          4
-  4               1                          4
-  ---------------------------------------------------------------------
+<table style="width:33%;">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 7%" />
+<col style="width: 6%" />
+</colgroup>
+<thead>
+<tr>
+<th>Observation i</th>
+<th><span class="math inline">\(Z\)</span></th>
+<th><span class="math inline">\(K\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
 Med matriser kan vi skriva denna regressionsmodell som $Z = KB + E$, där $Z$ är den förklarade variabeln, $B$ är en matris med koefficienterna $\alpha$ och $\beta$, $K$ är en kolumnmatris med förklarande variabeln och $E$ är feltermerna. Estimatorn kan här skrivas:
 
 

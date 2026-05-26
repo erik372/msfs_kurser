@@ -26,16 +26,68 @@ Detta och resultaten för övriga årtal visas i tabell 1. Som syns i tabellen v
 
 **Tabell 1: Sveriges BNP år 2010---2019**
 
-  ------------------------------------------------------------------------------------
-  År      BNP per capita, 2019 års priser     År      BNP per capita, 2019 års priser
-  ------ --------------------------------- -- ------ ---------------------------------
-  2009                423 400                 2015                474 000
-  2010                444 800                 2016                477 800
-  2011                455 600                 2017                483 500
-  2012                449 600                 2018                487 300
-  2013                451 100                 2019                488 800
-  2014                458 500                        
-  ------------------------------------------------------------------------------------
+<table style="width:55%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 19%" />
+<col style="width: 1%" />
+<col style="width: 7%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr>
+<th>År</th>
+<th style="text-align: center;">BNP per capita, 2019 års priser</th>
+<th></th>
+<th>År</th>
+<th style="text-align: center;">BNP per capita, 2019 års priser</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2009</td>
+<td style="text-align: center;">423 400</td>
+<td></td>
+<td>2015</td>
+<td style="text-align: center;">474 000</td>
+</tr>
+<tr>
+<td>2010</td>
+<td style="text-align: center;">444 800</td>
+<td></td>
+<td>2016</td>
+<td style="text-align: center;">477 800</td>
+</tr>
+<tr>
+<td>2011</td>
+<td style="text-align: center;">455 600</td>
+<td></td>
+<td>2017</td>
+<td style="text-align: center;">483 500</td>
+</tr>
+<tr>
+<td>2012</td>
+<td style="text-align: center;">449 600</td>
+<td></td>
+<td>2018</td>
+<td style="text-align: center;">487 300</td>
+</tr>
+<tr>
+<td>2013</td>
+<td style="text-align: center;">451 100</td>
+<td></td>
+<td>2019</td>
+<td style="text-align: center;">488 800</td>
+</tr>
+<tr>
+<td>2014</td>
+<td style="text-align: center;">458 500</td>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: Data från SCB. BNP deflaterad med BNP-deflatorn, omräknad till 2019 års priser.
@@ -64,21 +116,129 @@ I tabellen kan vi se hur en lika stor relativ förändring i $ln(BNP)$ motsvaras
 
 **Tabell 2: BNP och naturliga logaritmen av BNP**
 
-  --------------------------------------------------------------------------------
-  År        BNP, miljoner kr   ln(BNP)      År        BNP, miljoner kr   ln(BNP)
-  --------- ------------------ --------- -- --------- ------------------ ---------
-  1800      115                4,7          1910      3 302              8,1
-  1810      178                5,2          1920      12 200             9,4
-  1820      278                5,6          1930      9 271              9,1
-  1830      306                5,7          1940      13 979             9,5
-  1840      382                5,9          1950      31 827             10,4
-  1850      461                6,1          1960      72 272             11,2
-  1860      743                6,6          1970      175 222            12,1
-  1870      938                6,8          1980      531 884            13,2
-  1880      1 314              7,2          1990      1 365 700          14,1
-  1890      1 477              7,3          2000      2 013 311          14,5
-  1900      2 245              7,7                                       
-  --------------------------------------------------------------------------------
+<table style="width:89%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 2%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>År</th>
+<th>BNP, miljoner kr</th>
+<th>ln(BNP)</th>
+<th></th>
+<th>År</th>
+<th>BNP, miljoner kr</th>
+<th>ln(BNP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1800</td>
+<td>115</td>
+<td>4,7</td>
+<td></td>
+<td>1910</td>
+<td>3 302</td>
+<td>8,1</td>
+</tr>
+<tr>
+<td>1810</td>
+<td>178</td>
+<td>5,2</td>
+<td></td>
+<td>1920</td>
+<td>12 200</td>
+<td>9,4</td>
+</tr>
+<tr>
+<td>1820</td>
+<td>278</td>
+<td>5,6</td>
+<td></td>
+<td>1930</td>
+<td>9 271</td>
+<td>9,1</td>
+</tr>
+<tr>
+<td>1830</td>
+<td>306</td>
+<td>5,7</td>
+<td></td>
+<td>1940</td>
+<td>13 979</td>
+<td>9,5</td>
+</tr>
+<tr>
+<td>1840</td>
+<td>382</td>
+<td>5,9</td>
+<td></td>
+<td>1950</td>
+<td>31 827</td>
+<td>10,4</td>
+</tr>
+<tr>
+<td>1850</td>
+<td>461</td>
+<td>6,1</td>
+<td></td>
+<td>1960</td>
+<td>72 272</td>
+<td>11,2</td>
+</tr>
+<tr>
+<td>1860</td>
+<td>743</td>
+<td>6,6</td>
+<td></td>
+<td>1970</td>
+<td>175 222</td>
+<td>12,1</td>
+</tr>
+<tr>
+<td>1870</td>
+<td>938</td>
+<td>6,8</td>
+<td></td>
+<td>1980</td>
+<td>531 884</td>
+<td>13,2</td>
+</tr>
+<tr>
+<td>1880</td>
+<td>1 314</td>
+<td>7,2</td>
+<td></td>
+<td>1990</td>
+<td>1 365 700</td>
+<td>14,1</td>
+</tr>
+<tr>
+<td>1890</td>
+<td>1 477</td>
+<td>7,3</td>
+<td></td>
+<td>2000</td>
+<td>2 013 311</td>
+<td>14,5</td>
+</tr>
+<tr>
+<td>1900</td>
+<td>2 245</td>
+<td>7,7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: Data från [www.historia.se](http://www.historia.se). Ln(BNP) är naturliga logaritmen av talen i kolumnen med BNP räknat i miljoner kr.

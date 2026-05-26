@@ -62,15 +62,47 @@ Ett närliggande begrepp är *kumulativ summa*, vilket beskriver en summa som be
 
 **Tabell 1: Illustration av kumulativ summa.**
 
-  -------------------------------------------------------
-  **Observation nr**   **Värde**    **Kumulativ summa**
-  -------------------- ------------ ---------------------
-  1                    23           23
-  2                    32           23+32=55
-  3                    11           23+32+11=66
-  4                    14           23+32+11+14=80
-                       Summa: 80    
-  -------------------------------------------------------
+<table style="width:75%;">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 18%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Observation nr</strong></th>
+<th><strong>Värde</strong></th>
+<th><strong>Kumulativ summa</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>23</td>
+<td>23</td>
+</tr>
+<tr>
+<td>2</td>
+<td>32</td>
+<td>23+32=55</td>
+</tr>
+<tr>
+<td>3</td>
+<td>11</td>
+<td>23+32+11=66</td>
+</tr>
+<tr>
+<td>4</td>
+<td>14</td>
+<td>23+32+11+14=80</td>
+</tr>
+<tr>
+<td></td>
+<td>Summa: 80</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 ### Effektiv ränta
 Enligt [konsumentkreditlagen](https://www.konsumentverket.se/for-foretag/prissattning-och-ta-betalt/konsumentkreditlagen/) är långivare skyldiga att informera om ett låns [*effektiva ränta*](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/lan#!/). Effektiv ränta är den totala kostnaden för ett lån inklusive eventuella extraavgifter, beräknat som årlig procentuell ränta på lånebeloppet.

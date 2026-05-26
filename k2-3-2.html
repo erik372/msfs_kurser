@@ -156,62 +156,159 @@
 </h4>
 <p>Låt oss nu estimera koefficienterna <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span>. Observationerna för variablerna <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span> beskrivs i tabell 1, tillsammans med beräkningarna vi behöver för våra beräkningar.</p>
 <p><strong>Tabell 1. Underlag för att estimera koefficienterna</strong> <span class="math inline">\(\mathbf{\alpha}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{\beta}\)</span><strong>.</strong></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:97%;" class="table table-sm">
 <colgroup>
-<col width="4%">
-<col width="9%">
-<col width="9%">
-<col width="13%">
-<col width="13%">
-<col width="28%">
-<col width="19%">
+<col style="width: 17%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 26%">
+<col style="width: 14%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Observation i</th>
-<th align="right">
-<span class="math inline">\(Z_{i}\)</span> <span class="math inline">\(K_{i}\)</span> $Z_{i} - </th>
-<th align="left">line{Z}$ <span class="math inline">\(K_{i} - \overline{K}\)</span>
+<thead><tr>
+<th>
+Observation i
 </th>
-<th align="right">$( Z_{i} - )( K_{i} -</th>
-<th align="right"> )$ $( K_{i} - \overline{</th>
-<th align="left">K} )^{2}$</th>
-<th></th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Z_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[K_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Z_{i} -
+\overline{Z}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[K_{i} -
+\overline{K}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\left(
+Z_{i} - \overline{Z} \right)\left( K_{i} - \overline{K}
+\right)\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\left(
+K_{i} - \overline{K} \right)^{2}\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">1
-2
-3
-4
-Summa</td>
-<td align="right">1
-4
-0
+<tbody>
+<tr>
+<td>
 1
-6</td>
-<td align="left">0
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
 0
-4
-4
-8</td>
-<td align="right">–0,5
-2,5
-–1,5
-–0,5</td>
-<td align="right">–2
+</td>
+<td style="text-align: center;">
+–0,5
+</td>
+<td style="text-align: center;">
 –2
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+4
+</td>
+</tr>
+<tr>
+<td>
 2
-2</td>
-<td align="left">1
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+0
+</td>
+<td style="text-align: center;">
+2,5
+</td>
+<td style="text-align: center;">
+–2
+</td>
+<td style="text-align: center;">
 –5
+</td>
+<td style="text-align: center;">
+4
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: center;">
+0
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+–1,5
+</td>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
 –3
+</td>
+<td style="text-align: center;">
+4
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+–0,5
+</td>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
 –1
-–8</td>
-<td>4
+</td>
+<td style="text-align: center;">
 4
-4
-4
-16</td>
-</tr></tbody>
+</td>
+</tr>
+<tr>
+<td>
+Summa
+</td>
+<td style="text-align: center;">
+6
+</td>
+<td style="text-align: center;">
+8
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+</td>
+<td style="text-align: center;">
+–8
+</td>
+<td style="text-align: center;">
+16
+</td>
+</tr>
+</tbody>
 </table></div>
 <p>För lutningskoefficienten <span class="math inline">\(\widehat{\beta}\)</span> får vi:</p>
 <p><span class="math display">\[\widehat{\beta} = \sum_{i}^{}{\frac{\left( K_{i} - \overline{K} \right)\left( Z_{i} - \overline{Z} \right)}{\sum_{i}^{}\left( K_{i} - \overline{K} \right)^{2}} = - \frac{8}{16} = - \frac{1}{2}} \tag{2}\]</span></p>
@@ -221,44 +318,102 @@ Summa</td>
 <p><span class="math display">\[\widehat{Z_{i}} = \widehat{\alpha} + \widehat{\beta}K_{i} = 2,5 - \frac{1}{2}K_{i} \tag{4}\]</span></p>
 <p>Med hjälp av denna och de observerade värdena för variabeln <span class="math inline">\(K\)</span> kan vi estimera fyra värden för predikterade <span class="math inline">\(\widehat{Z}\)</span>, vilka beskrivs i tabell 2. Med <span class="math inline">\(\widehat{Z}\)</span> kan vi sedan estimera de fyra residualerna <span class="math inline">\(\widehat{\epsilon}\)</span>, vilka beskrivs i samma tabell. De fyra observationerna och regressionslinjen som kan ritas med ekvation 4 illustreras i figur 1.</p>
 <p><strong>Tabell 2. Beräkningar för att estimera</strong> <span class="math inline">\(\widehat{Z}\)</span> <strong>och</strong> <span class="math inline">\(\widehat{\epsilon}\)</span></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table style="width:97%;" class="table table-sm">
 <colgroup>
-<col width="7%">
-<col width="16%">
-<col width="16%">
-<col width="21%">
-<col width="38%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 20%">
+<col style="width: 20%">
 </colgroup>
-<thead><tr class="header">
-<th align="left">Observation i</th>
-<th align="right">
-<span class="math inline">\(Z_{i}\)</span> <span class="math inline">\(K_{i}\)</span> $\widehat{Z_{i</th>
-<th>}}$ $ = Z_{</th>
-<th align="left">i} - $</th>
-<th></th>
+<thead><tr>
+<th>
+Observation i
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[Z_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[K_{i}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widehat{Z_{i}}\]</span></span>
+</th>
+<th style="text-align: center;">
+<span class="math display"><span class="math display">\[\widehat{\epsilon_{i}} = Z_{i} -
+\widehat{Z_{i}}\]</span></span>
+</th>
 </tr></thead>
-<tbody><tr class="odd">
-<td align="left">1
-2
-3
-4</td>
-<td align="right">1
-4
+<tbody>
+<tr>
+<td>
+1
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
 0
-1</td>
-<td>0
-0
-4
-4</td>
-<td align="left">2,5
+</td>
+<td style="text-align: center;">
 2,5
-0,5
-0,5</td>
-<td>–1,5
+</td>
+<td style="text-align: center;">
+–1,5
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+0
+</td>
+<td style="text-align: center;">
+2,5
+</td>
+<td style="text-align: center;">
 1,5
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td style="text-align: center;">
+0
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
 –0,5
-0,5</td>
-</tr></tbody>
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+4
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+<td style="text-align: center;">
+0,5
+</td>
+</tr>
+</tbody>
 </table></div>
 <p><strong>Figur 1. Regressionslinjen för modell</strong> <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span></p>
 <div class="inline-figure"><img src="img/k2-3-2-image1.png"></div>

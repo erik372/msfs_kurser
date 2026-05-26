@@ -9,16 +9,52 @@ Barnadödligheten har dock även minskat som mest i de afrikanska länderna, fr�
 
 **Tabell 1: Antal avlidna barn per 1 000 barn under 5 år**
 
-  --------------------------------------------
-                 **År 1950**    **År 2016**
-  -------------- -------------- --------------
-  Afrika         302            62,7
-  Asien          234            22,8
-  Europa         86,7           4,9
-  Nordamerika    152            15,9
-  Oceanien       140            22,7
-  Sydamerika     181            17,8
-  --------------------------------------------
+<table style="width:60%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th><strong>År 1950</strong></th>
+<th><strong>År 2016</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Afrika</td>
+<td>302</td>
+<td>62,7</td>
+</tr>
+<tr>
+<td>Asien</td>
+<td>234</td>
+<td>22,8</td>
+</tr>
+<tr>
+<td>Europa</td>
+<td>86,7</td>
+<td>4,9</td>
+</tr>
+<tr>
+<td>Nordamerika</td>
+<td>152</td>
+<td>15,9</td>
+</tr>
+<tr>
+<td>Oceanien</td>
+<td>140</td>
+<td>22,7</td>
+</tr>
+<tr>
+<td>Sydamerika</td>
+<td>181</td>
+<td>17,8</td>
+</tr>
+</tbody>
+</table>
 Källa: Gapminder, [www.ourworldindata.org](http://www.ourworldindata.org).
 Sedan början av 1800-talet har den genomsnittliga barnadödligheten i världen minskat från i genomsnitt över 400 döda per 1 000 barn (40 %), ned till cirka 20 % år 1950 och till cirka 4 % år 2016. Det vill säga, en minskning med 16 procentenheter:
 $4 - 20 = - 16$ procentenheter
@@ -46,15 +82,63 @@ Låt oss nu beräkna hur stor procentuell andel som respektive land tar emot av 
 
 **Tabell 2: Befolkning och antal asylsökande per land**
 
-  ------------------------------------------------------------------------------------------------------------------------------------
-  **Land**     **Asylsökande 2023**   **Befolkning 2023**   **Asylsökande / befolkning**   **Andel av de asylsökanden i denna tabell**
-  ---------- ---------------------- --------------------- ------------------------------ ---------------------------------------------
-  USA                     2 601 467           334 914 895                          0,78%                                         69,6%
-  Peru                      508 429            33 845 617                          1,50%                                         13,6%
-  Tyskland                  361 493            83 280 000                          0,43%                                          9,7%
-  Mexiko                    257 396           129 739 759                          0,20%                                          6,9%
-  Sverige                    11 271            10 536 632                          0,11%                                          0,3%
-  ------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:97%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 22%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Land</strong></th>
+<th style="text-align: center;"><strong>Asylsökande 2023</strong></th>
+<th style="text-align: center;"><strong>Befolkning 2023</strong></th>
+<th style="text-align: center;"><strong>Asylsökande /
+befolkning</strong></th>
+<th style="text-align: center;"><strong>Andel av de asylsökanden i denna
+tabell</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USA</td>
+<td style="text-align: right;">2 601 467</td>
+<td style="text-align: right;">334 914 895</td>
+<td style="text-align: right;">0,78%</td>
+<td style="text-align: right;">69,6%</td>
+</tr>
+<tr>
+<td>Peru</td>
+<td style="text-align: right;">508 429</td>
+<td style="text-align: right;">33 845 617</td>
+<td style="text-align: right;">1,50%</td>
+<td style="text-align: right;">13,6%</td>
+</tr>
+<tr>
+<td>Tyskland</td>
+<td style="text-align: right;">361 493</td>
+<td style="text-align: right;">83 280 000</td>
+<td style="text-align: right;">0,43%</td>
+<td style="text-align: right;">9,7%</td>
+</tr>
+<tr>
+<td>Mexiko</td>
+<td style="text-align: right;">257 396</td>
+<td style="text-align: right;">129 739 759</td>
+<td style="text-align: right;">0,20%</td>
+<td style="text-align: right;">6,9%</td>
+</tr>
+<tr>
+<td>Sverige</td>
+<td style="text-align: right;">11 271</td>
+<td style="text-align: right;">10 536 632</td>
+<td style="text-align: right;">0,11%</td>
+<td style="text-align: right;">0,3%</td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring: Data från [UNHCR](https://www.unhcr.org/refugee-statistics) (asylsökande) och [Världsbanken](https://data.worldbank.org/) (befolkning).

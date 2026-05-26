@@ -16,12 +16,28 @@ Information kallas inom analytiskt arbete för *data*. Data kan alltså bestå a
 Allt analytiskt arbete använder information om verkligheten i någon form eller utsträckning. All data måste i sin tur tolkas. Mycket analytiskt arbete består av att kartlägga verkligheten och samla in data.
 Exakt vilken typ av information som krävs för en analys beror på vad som är undersökningens *syfte*. Detta är helt centralt för allt analytiskt arbete men kommer inte diskuteras så noga i den här kursen.
 Vi har ofta glädje av att kategorisera information i *datavariabler*. Datavariabler placeras ofta som kolumner i en tabell med ett värd per rad, till exempel som i följande tabell:
-  -------------------------------
-  **Rad**      **Vår variabel**
-  ------------ ------------------
-  1            Datavärde 1
-  2            Datavärde 2
-  -------------------------------
+<table style="width:35%;">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Rad</strong></th>
+<th><strong>Vår variabel</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Datavärde 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Datavärde 2</td>
+</tr>
+</tbody>
+</table>
 
 #### Variabler kan innehålla olika typer av information
 Varje värde i en datavariabel kan innehålla vilken typ av information som helst, till exempel gatunummer, namn på barn födda i april, bruttonationalprodukten för olika länder eller alla enskilda ord i en roman organiserade med ett ord per rad. För att använda en datavariabel för beräkningar behöver denna variabel bestå av siffror eller skrivas om till siffror.
@@ -34,14 +50,48 @@ Observationerna numrerar vi $y_{1}$ till $y_{4}$, $x_{1}$ till $x_{4}$ och $z_{1
 
 **Tabell 1: Tre variabler med fyra observationer**
 
-  ---------------------------------------------------------------------------------------------------------------------------------------
-                  Variabel 1 $(y)$   Variabel 2 $(x)$   Variabel 3 $(z)$
-  --------------- --------------------------------------- --------------------------------------- ---------------------------------------
-  Observation 1   $y_{1}$           $x_{1}$           $z_{1}$
-  Observation 2   $y_{2}$           $x_{2}$           $z_{2}$
-  Observation 3   $y_{3}$           $x_{3}$           $z_{3}$
-  Observation 4   $y_{4}$           $x_{4}$           $z_{4}$
-  ---------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:71%;">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Variabel 1 <span class="math inline">\((y)\)</span></th>
+<th>Variabel 2 <span class="math inline">\((x)\)</span></th>
+<th>Variabel 3 <span class="math inline">\((z)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Observation 1</td>
+<td><span class="math inline">\(y_{1}\)</span></td>
+<td><span class="math inline">\(x_{1}\)</span></td>
+<td><span class="math inline">\(z_{1}\)</span></td>
+</tr>
+<tr>
+<td>Observation 2</td>
+<td><span class="math inline">\(y_{2}\)</span></td>
+<td><span class="math inline">\(x_{2}\)</span></td>
+<td><span class="math inline">\(z_{2}\)</span></td>
+</tr>
+<tr>
+<td>Observation 3</td>
+<td><span class="math inline">\(y_{3}\)</span></td>
+<td><span class="math inline">\(x_{3}\)</span></td>
+<td><span class="math inline">\(z_{3}\)</span></td>
+</tr>
+<tr>
+<td>Observation 4</td>
+<td><span class="math inline">\(y_{4}\)</span></td>
+<td><span class="math inline">\(x_{4}\)</span></td>
+<td><span class="math inline">\(z_{4}\)</span></td>
+</tr>
+</tbody>
+</table>
 På samma sätt som vi har tydliga kategorier för våra variabler i kolumnerna, behöver vi ha tydliga kategorier för våra observationer. Det observationerna beskriver kallas för *observationsenhet*. Det kan till exempel vara en observation per individ eller en per land. I regel behöver vi även avgränsa vilken tidpunkt en observation avser.
 Till exempel kan en observation innehålla uppgifter för ett land ett specifikt årtal, säg 2018. Nästa rad innehåller nästa observation. Om hela tabellen beskriver läget för olika länder år 2018 så är nästa observation för ett annat land. Men vi kan även ha flera observationer per land för olika årtal. Nästa observation kan då vara samma land men ett annat årtal: Sverige 2018, Sverige 2019 och så vidare.
 
@@ -54,14 +104,48 @@ Beroende på svaren på dessa tre frågor kan vi placera vår variabel i någon 
 
 **Tabell 2: Fyra datatyper**
 
-  ---------------------------------------------------------------
-                  Rangordning   Ekvidistans   Absolut nollpunkt
-  --------------- ------------- ------------- -------------------
-  Nominaldata     Nej           Nej           Nej
-  Ordinaldata     Ja            Nej           Nej
-  Intervalldata   Ja            Ja            Nej
-  Kvotdata        Ja            Ja            Ja
-  ---------------------------------------------------------------
+<table style="width:76%;">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Rangordning</th>
+<th>Ekvidistans</th>
+<th>Absolut nollpunkt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nominaldata</td>
+<td>Nej</td>
+<td>Nej</td>
+<td>Nej</td>
+</tr>
+<tr>
+<td>Ordinaldata</td>
+<td>Ja</td>
+<td>Nej</td>
+<td>Nej</td>
+</tr>
+<tr>
+<td>Intervalldata</td>
+<td>Ja</td>
+<td>Ja</td>
+<td>Nej</td>
+</tr>
+<tr>
+<td>Kvotdata</td>
+<td>Ja</td>
+<td>Ja</td>
+<td>Ja</td>
+</tr>
+</tbody>
+</table>
 **Nominaldata** är inte rangordnad, har ingen tydlig distans mellan varje skalsteg och ingen absolut nollpunkt. Typiska exempel på detta är kategoriska variabler, till exempel språk, namn på länder, könstillhörighet.
 I och med att informationen i denna typ av data mest handlar om att gruppera eller kategorisera är möjligheten att använda matematiska operationer begränsad till att främst definiera om en observation hör eller inte hör till den ena eller andra kategorin.
 **Ordinaldata** har rangordning men inte ekvidistans eller absolut nollpunkt. Ett typiskt exempel är skolbetyg, eller placering i en lista eller kö, till exempel plats 1, 2, 3 och så vidare. Ett annat exempel kan vara enkätsvar där respondenter ombeds att ranka alternativ från bästa till sämsta.

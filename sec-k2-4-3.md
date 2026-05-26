@@ -14,18 +14,75 @@ Vi ska nu illustrera detta med hjälp av lite data över genomsnittlig livsläng
 
 **Tabell 1. Data över män och kvinnor i tre kommuner**
 
-  -------------------------------------------------------------------------------------------------------------------------------------
-  Kommun                 Livslängd $(L)\ $   Inkomst $(I)$   Kön $(G)$
-  --------------------- ----------------------------------------- ------------------------------------ --------------------------------
-  Jokkmokk, kvinnor                       81,6                                    2,07                                0
-  Jokkmokk, män                           79,2                                    2,4                                 1
-  Oskarshamn, kvinnor                     84,6                                    2,11                                0
-  Oskarshamn, män                         81,3                                    2,79                                1
-  Örebro, kvinnor                         84,8                                    2,18                                0
-  Örebro, män                             80,5                                    2,66                                1
-                                                                                                       
-  Medelvärde                               82                                    2,368                               0,5
-  -------------------------------------------------------------------------------------------------------------------------------------
+<table style="width:98%;">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 24%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Kommun</th>
+<th style="text-align: center;">Livslängd <span
+class="math inline">\((L)\ \)</span></th>
+<th style="text-align: center;">Inkomst <span
+class="math inline">\((I)\)</span></th>
+<th style="text-align: center;">Kön <span
+class="math inline">\((G)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jokkmokk, kvinnor</td>
+<td style="text-align: center;">81,6</td>
+<td style="text-align: center;">2,07</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>Jokkmokk, män</td>
+<td style="text-align: center;">79,2</td>
+<td style="text-align: center;">2,4</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td>Oskarshamn, kvinnor</td>
+<td style="text-align: center;">84,6</td>
+<td style="text-align: center;">2,11</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>Oskarshamn, män</td>
+<td style="text-align: center;">81,3</td>
+<td style="text-align: center;">2,79</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td>Örebro, kvinnor</td>
+<td style="text-align: center;">84,8</td>
+<td style="text-align: center;">2,18</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>Örebro, män</td>
+<td style="text-align: center;">80,5</td>
+<td style="text-align: center;">2,66</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Medelvärde</td>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;">2,368</td>
+<td style="text-align: center;">0,5</td>
+</tr>
+</tbody>
+</table>
 
 ::: {.fig-caption}
 Förklaring:
