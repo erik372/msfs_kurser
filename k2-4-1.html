@@ -455,8 +455,8 @@ Medel
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: <span class="math inline">\(\widetilde{Y_{i}} = Y_{i} - \overline{Y}\)</span> och motsvarande för <span class="math inline">\(\widetilde{X_{i}}\)</span> och <span class="math inline">\(\widetilde{Z_{i}}\)</span>.</p>
-<p>I <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a> använde vi variablerna <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> för att estimera regressionsmodellen <span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> och fann då att <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>. Nu ska vi estimera koefficienterna för följande regressionsmodell:</p>
 </div>
+<p>I avsnitt 2.4 använde vi variablerna <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> för att estimera regressionsmodellen <span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> och fann då att <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>. Nu ska vi estimera koefficienterna för följande regressionsmodell:</p>
 <p><span class="math display">\[Y_{i} = a + bX_{i} + cZ_{i} + V_{i} \tag{8}\]</span></p>
 <p>där <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> är variablerna, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span> är koefficienterna vi ska estimera och <span class="math inline">\(V\)</span> är feltermen. I ekvation 7 har vi definitionerna för hur vi kan estimera <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. Utifrån uppgifterna i tabell 1 kan vi nu beräkna följande estimat för koefficienterna:</p>
 <p><span class="math display">\[\widehat{b} = \frac{(5)(9) - ( - 6)( - 4)}{(10)(9) - ( - 4)^{2}} \approx 0,28 \tag{9}\]</span></p>
@@ -467,10 +467,14 @@ Medel
 <span class="header-section-number">35.0.2.5</span> Vad blev det för skillnad?<a class="anchor" aria-label="anchor" href="#vad-blev-det-f%C3%B6r-skillnad"><i class="fas fa-link"></i></a>
 </h4>
 <p>När vi estimerade regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> fann vi att <span class="math inline">\(\widehat{b} = 0,5\)</span>. När vi nu lade till variabeln <span class="math inline">\(Z\)</span> i regressionsmodellen ser vi hur resultatet för lutningskoefficienten <span class="math inline">\(\widehat{b}\)</span> går från 0,5 till 0,3. Resultaten för <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span> använder vi för att estimera <span class="math inline">\(\widehat{a}\)</span>:</p>
-<p><span class="math inline">\(\widehat{a} = 3,5 - \widehat{b}*5 - \widehat{c}*1,5\)</span> (10)$ $<span class="math inline">\(= 3,5 - 0,28*5 - ( - 0,54)*1,5 \approx 2,89\)</span></p>
+<p><span class="math display">\[\begin{align}
+\widehat{a} &amp;= 3{,}5 - \widehat{b} \cdot 5 - \widehat{c} \cdot 1{,}5 \tag{10}\\
+&amp;= 3{,}5 - 0{,}28 \cdot 5 - (-0{,}54) \cdot 1{,}5 \approx 2{,}89
+\end{align}\]</span></p>
 <p>Vi kan sammanfatta våra estimerade koefficienter genom att sätta in resultaten i vår regressionsmodell:</p>
 <p><span class="math display">\[Y_{i} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} + V_{i} = 2,89 + 0,28X_{i} - 0,54Z_{i} + V_{i} \tag{11}\]</span></p>
-Nu kan vi även estimera predikterade <span class="math inline">\(\widehat{Y_{i}}\)</span> och residualen <span class="math inline">\(\widehat{V_{i}}\)</span>, vilket sammanfattas i tabell 2 med avrundade resultat.
+<p>Nu kan vi även estimera predikterade <span class="math inline">\(\widehat{Y_{i}}\)</span> och residualen <span class="math inline">\(\widehat{V_{i}}\)</span>, vilket sammanfattas i tabell 2 med avrundade resultat.</p>
+<p><strong>Tabell 2: Predikterade värden</strong> <span class="math inline">\(\widehat{Y_{i}}\)</span></p>
 <div class="inline-table"><table class="table table-bordered" style="width:78%;">
 <colgroup>
 <col style="width: 20%">
@@ -576,7 +580,8 @@ Observation <span class="math inline"><span class="math inline">\(i\)</span></sp
 <p>Den vertikala axeln är <span class="math inline">\(Y\)</span>-axeln medan variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> har varsin horisontell axel. Den svarta pricken högst upp i diagrammet är observation 3 vars värden är <span class="math inline">\((Y,X,Z) = (5,6,0)\)</span>.</p>
 <p>Eftersom regressionsmodellen har tre variabler blir regressionslinjen <span class="math inline">\(\left( \widehat{Y} \right)\)</span> nu en plan yta med tre dimensioner, vilket illustreras av rutnätet. Denna plana yta är vinklad med hänsyn till de två variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>, beroende på deras respektive lutningskoefficient. Eftersom lutningskoefficienten <span class="math inline">\(\widehat{c} &lt; 0\)</span> lutar rutnätet nedåt längs med <span class="math inline">\(Z\)</span>-axeln sett från <span class="math inline">\(Y\)</span>-axeln. Eftersom <span class="math inline">\(\widehat{b} &gt; 0\)</span> lutar rutnätet uppåt längs med <span class="math inline">\(X\)</span>-axeln sett från <span class="math inline">\(Y\)</span>-axeln.</p>
 <p><strong>Figur 1. Regressionsresultat med tre variabler</strong></p>
-<p><em><mark>Sideeg &gt; Jag sparade ett 3d-diagram som html i katalogen</mark><a href="https://www.dropbox.com/scl/fo/2i2ntlsxmg2g3u0mjwg93/AGRmmFsd9k7y02ZW2EYyPyo?rlkey=oadbjo86p3expplymcnzfshu1&amp;dl=0">Eriks_3d_graf</a>. <mark>Om ni har möjlighet att göra det snyggare får ni jättegärna göra det</mark></em>😊</p>
+<iframe src="Eriks_3d_graf/3dscatter.html" width="100%" height="550px" style="border:none;">
+</iframe>
 <div class="fig-caption">
 <p>Förklaring: Diagrammet illustrerar <span class="math inline">\(\widehat{Y} = 2,89 + 0,28X - 0,54Z\)</span>. Klicka och dra i diagrammet för att vrida på det.</p>
 </div>
