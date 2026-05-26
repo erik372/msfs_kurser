@@ -5,10 +5,12 @@
 
 ### Teori
 I tidigare avsnitt räknade vi med formler för 2 och 3 variabler. Men vad händer om vi har 10 variabler? Eller 100? Matriser låter oss sammanfatta denna typ av beräkningar i en enda kompakt kortfattad formel som fungerar för valfritt antal variabler.
+
 I dessa exempel ser du att matrismetoden ger exakt samma svar som de tidigare metoderna. Men med matriser blir det tydligt att metoden är generaliserbar till valfritt antal variabler eller valfritt antal observationer. Därigenom blir det förhoppningsvis även tydligare vad som är metodens stora fördelar och begränsningar.
 
 #### Exempel nr 1
 I föregående avsnitt definierade vi minstakvadratmetodens estimator för koefficienterna i en regressionsmodell beskriven med matriser. Låt oss prova hur vi kan använda detta för att estimera modeller utifrån data. Här följer tre exempel där vi återanvänder data och regressionsmodeller från tidigare exempel.
+
 Låt oss nu återanvända den första regressionsmodellen och observationerna för denna som vi introducerade i [avsnitt 2.4](https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&dl=0): $Y = a + bX + V$. Men denna gång ska vi estimera modellen med matriser. Samma observationer som vi använt tidigare upprepas i tabell 1.
 
 **Tabell 1: Variablerna** $X$ **och** $Y$
@@ -64,6 +66,7 @@ Vår estimator för koefficienterna skriven med matriser är följande:
 $$\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y \tag{2}$$
 
 Vi ska nu visa alla beräkningssteg här för att du ska förstå vad som händer. I praktiken gör datorer detta automatiskt. Fokusera på att förstå strukturen. Du måste inte förstå varje enskilt räknesteg.
+
 Om vi dessa matriserna i ekvation 2 får vi estimaten av (de uppskattade) koefficienterna:
 
 
@@ -74,7 +77,9 @@ $$\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y \tag{3}$$
 $$\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 & 1 & 1 & 1 \\ 3 & 4 & 6 & 7 \end{bmatrix}\begin{bmatrix} 1 & 3 \\ 1 & 4 \\ 1 & 6 \\ 1 & 7 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 & 1 & 1 & 1 \\ 3 & 4 & 6 & 7 \end{bmatrix}\begin{bmatrix} 3 \\ 2 \\ 5 \\ 4 \end{bmatrix}$$
 
 Vi beräknar inversen $\left( X^{T}X \right)^{- 1}$ först:
+
 $\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbrack = \begin{bmatrix} 4 & 20 \\ 20 & 110 \end{bmatrix}^{- 1}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack$ (4)$ $${= \frac{1}{4*110 - ( - 20)*( - 20)}\begin{bmatrix} 110 & - 20 \\ - 20 & 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left( \frac{1}{440 - 400} \right)\begin{bmatrix} 110 & - 20 \\ - 20 & 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{110}{40} & \frac{- 20}{40}\ \\ \frac{- 20}{40} & \frac{4}{40} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \begin{bmatrix} \frac{11}{4} & - \frac{1}{2} \\ - \frac{1}{2} & \frac{1}{10} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack }{= \left\lbrack \begin{array}{r} 1 \\ 0,5 \end{array} \right\rbrack }$
+
 Vårt resultat visar att $\widehat{a} = 1$ och $\widehat{b} = 0,5$, vilket är samma sak som vi kom fram till tidigare.
 
 #### Exempel nr 2

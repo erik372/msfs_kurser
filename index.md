@@ -29,3 +29,9 @@ En fördjupning i statistisk analys med fokus på regressionsanalys och kausal s
 Varje avsnitt avslutas med interaktiva övningsuppgifter. Klicka på ett svarsalternativ eller skriv ditt svar i fältet — du får direkt återkoppling.
 
 Använd sidomenyn till vänster för att navigera mellan kapitel och avsnitt.
+
+
+
+*Publicerad maj 2026. Senast uppdaterad 26 maj 2026.*
+
+*Rapportera gärna felaktigheter och förbättringsförslag till [hegelund.erik@gmail.com](mailto:hegelund.erik@gmail.com).*

@@ -9,17 +9,26 @@
 
 ### Teori
 Forskning och analys är fina ord för att studera saker noggrant. I denna kurs ska vi gå igenom hur vi kan analysera orsakssamband. Orsakssamband syftar på när någonting inträffar som en följd av något annat. Ofta inträffar något på grund av flera orsaker, men när vi analyserar orsakssamband vill vi ofta studera en orsak i taget. Att studera orsakssamband är en central del av forskning.
+
 Inom samhällsvetenskap studerar vi människor och mänskliga sammanhang. Ofta är vi därför intresserade av fenomen som påverkar eller påverkas av människor, hur vi beter oss, känner eller tänker.
+
 Rent generellt kan en orsak kan vara vad som helst som kan tänkas påverka någonting annat, till exempel mänskligt beteende eller en förändring i naturen, en händelse, ett tillstånd eller en process.
+
 I vårt vardagliga liv utgår vi hela tiden från olika typer av orsakssamband. Vi dricker vatten för att bli mindre törstiga. Vi utbildar oss för att lära oss saker, för att kunna söka nya jobb eller få högre lön. Vi äter medicin för att lindra sjukdom.
+
 Vissa orsakssamband i vår vardag är inbillade och bygger på felaktiga uppfattningar. Men vi tror ändå på dom och handlar därefter.
+
 Ett annat ord för orsakssamband är *kausalt samband* eller *kausalitet*.
 
 #### Kontrafaktisk analys
 För att kunna studera orsakssamband behöver vi jämföra det som hände på grund av en *orsak* med det som skulle ha hänt om orsaken aldrig hade ägt rum. Det som inte hände, men kunde ha hänt, kallas för det *kontrafaktiska utfall*et. Ett annat uttryck för samma sak är *potentiellt utfall*.
+
 Orsakssamband medför en *effekt*: skillnaden mellan det som hände på grund av orsaken och vad som hade hänt om orsaken inte hade ägt rum (det kontrafaktiska utfallet).
+
 Figur 1 illustrerar den grundläggande tanken bakom kontrafaktisk analys. Orsak A inträffar vid en tidpunkt och påverkar ett fenomen B. Fenomen B följer utvecklingen längs den heldragna linjen snett upp till höger i diagrammet.
+
 Men om A aldrig hade inträffat hade B i stället följt den streckade svarta linjen. Denna streckade linje representerar det kontrafaktiska utfallet. Skillnaden i nivå mellan den streckade linjen och den svarta heldragna linjen är effekten av orsaken A.
+
 Ett vanligt missförstånd är att i stället jämföra denna förändring som vi kan observera i fenomen B över tid, vilket i figur 1 är skillnaden mellan den horisontella grå linjen och den heldragna svarta linjen.
 
 **Figur 1. Kontrafaktisk analys**
@@ -29,28 +38,47 @@ Ett vanligt missförstånd är att i stället jämföra denna förändring som v
 
 #### Kontroll och behandling
 Problemet är att vi per definition inte kan observera det kontrafaktiska utfallet, eftersom det skulle kräva att vi har tillgång till ett parallellt universum där den enda skillnaden mot vårt universum är att orsaken aldrig hände. För varje observation kan vi endast studera ett resultat åt gången.
-För att studera orsakssamband använder forskningen därför i stället ofta *behandlingsgrupp* och *kontrollgrupp*. Ordet *behandling* syftar på orsaken som vi vill studera effekten av. Till exempel en medicin, en skattesänkning, en politisk åtgärd. Idealiskt sett ska den enda skillnaden mellan behandlings- och kontrollgrupperna vara just själva behandlingen. Alla andra skillnader ska vara slumpmässigt fördelade. I så fall kan den eventuella skillnaden mellan grupperna efter behandling tolkas som en effekt av behandlingen (orsaken).
-Om fenomen A orsakar fenomen B, kallar vi A för *aktiv behandling*. Det alternativa scenariot kallar vi för *kontrollbehandling*. Kontrollbehandlingen är i regel det passiva alternativet där vi inte genomför en handling, till exempel inte tar en medicin eller inte genomför en politisk åtgärd. Ofta framgår av sammanhanget vad som är orsak och verkan, varför man ofta bara säger *behandling* och *kontroll*.
-Observera att orden behandlings- och kontrollgrupp används även om vi inte studerar människor. Vår *analysenhet* kan i praktiken vara vad som helst. Om vi undersöker medicinska effekter på patienter så är vår analysenhet patienter. Om vi studerar effekterna av en skattesänkning på företag, så är vår analysenhet företag. Om vi studerar hur olika bevattningstekniker påverkar skörden på olika åkrar så är vår analysenhet åkrar.
+
+För att studera orsakssamband använder forskningen därför i stället ofta *behandlingsgrupp* och *kontrollgrupp*. Ordet *behandling* syftar på orsaken som vi vill studera effekten av. Till exempel en medicin, en skattesänkning, en politisk åtgärd.
+
+Idealiskt sett ska den enda skillnaden mellan behandlings- och kontrollgrupperna vara just själva behandlingen. Alla andra skillnader ska vara slumpmässigt fördelade. I så fall kan den eventuella skillnaden mellan grupperna efter behandling tolkas som en effekt av behandlingen (orsaken).
+
+Om fenomen A orsakar fenomen B, kallar vi A för *aktiv behandling*. Det alternativa scenariot kallar vi för *kontrollbehandling*.
+
+Kontrollbehandlingen är i regel det passiva alternativet där vi inte genomför en handling, till exempel inte tar en medicin eller inte genomför en politisk åtgärd. Ofta framgår av sammanhanget vad som är orsak och verkan, varför man ofta bara säger *behandling* och *kontroll*.
+
+Observera att orden behandlings- och kontrollgrupp används även om vi inte studerar människor. Vår *analysenhet* kan i praktiken vara vad som helst.
+
+Om vi undersöker medicinska effekter på patienter så är vår analysenhet patienter. Om vi studerar effekterna av en skattesänkning på företag, så är vår analysenhet företag. Om vi studerar hur olika bevattningstekniker påverkar skörden på olika åkrar så är vår analysenhet åkrar.
 
 #### Ett exempel
 Säg som exempel att vi ska studera effekten av hur en ny medicin påverkar sjukdomssymptom hos patienter. Vi har en grupp patienter som får medicin (behandlingsgruppen) och en annan grupp som inte får medicin (kontrollgruppen). Vi jämför hur deras sjukdomssymptom utvecklas och tolkar skillnaden mellan grupperna som en effekt av medicinen.
+
 Genom att studera kontrollgruppen hoppas vi, idealiskt sett, kunna observera ett resultat som beskriver det kontrafaktiska utfallet, hur symptomen hade utvecklats för patienterna som fick medicin om de aldrig hade fått det.
+
 Det är viktigt att det är just grupper med flera observationer. Genom att jämföra flera observationer minskar risken för att de mönster vi kan observera är ett resultat av slump. Vi återkommer till frågor om sannolikhet och slump längre fram i denna kurs.
 
 #### Det är inte idealiskt att jämföra en och samma person
 Idealiskt sett vill vi studera hur en patient mår efter att ha tagit medicinen, jämfört med hur samma patient hade mått om denna aldrig hade tagit medicinen. Om det är en medicin som ska behandla ett återkommande tillstånd, till exempel huvudvärk, är det frestande att pröva detta genom att be samma patient att ta medicinen ena dagen och låta bli att ta medicinen nästa gång, och jämföra skillnaden.
-Men detta är inte det kontrafaktiska utfallet. Effekten av medicinen kanske varierar för en och samma patient över tid. Patienten kanske är i bättre eller sämre form vid den ena tidpunkten, vilket både påverkar huvudvärken och vilken effekt medicinen har. Patienten kanske vänjer sig vid medicinen, vilket också påverkar både patientens upplevelse och den verkliga effekten.
+
+Men detta är inte det kontrafaktiska utfallet. Effekten av medicinen kanske varierar för en och samma patient över tid.
+
+Patienten kanske är i bättre eller sämre form vid den ena tidpunkten, vilket både påverkar huvudvärken och vilken effekt medicinen har. Patienten kanske vänjer sig vid medicinen, vilket också påverkar både patientens upplevelse och den verkliga effekten.
 
 #### Ett exempel med ekonomisk politik
 Samma utmaningar som medicinsk forskning brottas med har vi inom samhällsvetenskap. Säg att vi ska studera vilken effekt som regeringens nya politik (orsaken) har på mängden arbetstillfällen i Sverige (utfallet). För att analysera detta vill vi jämföra verkligheten med hur världen hade sett ut om politiken aldrig hade ägt rum (det kontrafaktiska utfallet). Detta är i strikt mening omöjligt.
+
 Vi kan observera hur världen såg ut före och efter regeringens politik, men detta är två separata observationer. Situationen före är inte det kontrafaktiska utfallet. Det händer saker under tidsperioden som kan påverka hur världen ser ut och vi kan inte vara säkra på vad som orsakar de förändringar vi ser. Vi kan inte heller vara säkra på att den förändring vi kan uppmäta är ett bra mått på politikens effekt, vilket är vad vi vill mäta.
 
 #### Det är ofta svårt att definiera det kontrafaktiska utfallet
 Ofta finns det olika metoder vi kan använda för att ändå komma nära en kontrafaktisk analys. Men inte alltid. I praktiken är omöjligt att exakt avgöra vad som är det kontrafaktiska utfallet. I stället får vi från fall till fall resonera oss fram till tänkbara alternativ.
+
 Om vi är intresserade av effekten av att en patient tar en medicin jämfört med om en patient inte tar en medicin kan det låta självklart. Men ska patienten som inte tar medicinen ligga helt stilla under tiden eller gå en promenad? Ska båda patienterna ta en springtur eller dricka och äta något särskilt?
+
 Samma problem har vi om vi vill studera effekter av regeringens politik. Skulle regeringen, i det kontrafaktiska utfallet, ha genomfört någon annan politik eller skulle hela regeringen ha avgått?
+
 Om politiken endast berör en mindre del av samhället, till exempel endast företagen i en bransch, kan vi ibland behandla den berörda branschen som behandlingsgrupp och andra branscher som kontrollgrupp och jämföra deras utvecklingar.
+
 Denna typ av frågor innebär ofta knepiga utmaningar som saknar exakt facit. Under den här kursen ska vi gå igenom grunderna för hur vi kan hantera detta.
 
 

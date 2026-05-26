@@ -5,6 +5,7 @@
 
 ### Teori
 De senaste decennierna har barnadödligheten i hela världen sjunkit kraftigt. Den varierar dock fortfarande stort bland världens länder. Tabell 1 beskriver den genomsnittliga barnadödligheten per kontinent år 1950 och 2016. Både år 1950 och 2016 var barnadödligheten störst i Afrika.
+
 Barnadödligheten har dock även minskat som mest i de afrikanska länderna, från cirka 300 per 1 000 barn år 1950, till att år 2016 vara nere på 62,7 avlidna barn per 1 000 under 5 års ålder. Under samma period minskade barnadödligheten i länderna i Europa från 86,7 år 1950 till 4,9 år 2016.
 
 **Tabell 1: Antal avlidna barn per 1 000 barn under 5 år**
@@ -56,8 +57,11 @@ Barnadödligheten har dock även minskat som mest i de afrikanska länderna, fr�
 </tbody>
 </table>
 Källa: Gapminder, [www.ourworldindata.org](http://www.ourworldindata.org).
+
 Sedan början av 1800-talet har den genomsnittliga barnadödligheten i världen minskat från i genomsnitt över 400 döda per 1 000 barn (40 %), ned till cirka 20 % år 1950 och till cirka 4 % år 2016. Det vill säga, en minskning med 16 procentenheter:
+
 $4 - 20 = - 16$ procentenheter
+
 Länderna i Afrika har under perioden sett barnadödligheten minska från 302 till 62,7 per 1 000 barn. Räknat i procentenheter blir detta:
 
 
@@ -75,9 +79,13 @@ Enligt FN:s organisation [UNHCR](https://www.unhcr.org/) (förkortning för *Uni
 $$8\ 200\ 000\ 000*0,015 = 123\ 000\ 000$$
 
 Ett annat sätt att beskriva denna uträkning är på följande sätt:
+
 1,5 % av 8,2 miljarder $= 0,123$ miljarder = 123 miljoner
+
 En person som befinner sig på flykt i ett annat land än sitt hemland kan söka asyl, fristad, i det land där personen befinner sig. Tabell 2 beskriver befolkning 2023 samt antal asylsökande 2023 för de fyra länder som hade flest sökande samt Sverige. Sverige är endast med som jämförelse. Jämfört med alla länder som ingår i data från [UNHCR](https://www.unhcr.org/refugee-statistics) så var det 53 andra länder som tog emot fler flyktingar än Sverige.
+
 Den fjärde kolumnen (**Asylsökande / befolkning**) visar antal asylsökande dividerat med antal invånare i respektive land, uttryckt som procent. Jämfört med landets inhemska befolkning tog Peru emot flest asylsökande och Sverige minst, bland länderna i denna tabell.
+
 Låt oss nu beräkna hur stor procentuell andel som respektive land tar emot av hela gruppen asylsökande i denna tabell. Resultaten redovisas i kolumnen längst till höger. Räknat på detta sätt tar USA emot störst andel och Sverige tar emot minst, bland länderna i tabellen.
 
 **Tabell 2: Befolkning och antal asylsökande per land**

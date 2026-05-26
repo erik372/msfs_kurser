@@ -23,8 +23,11 @@ Exponenterna för *C* och *L*, bråket $\frac{1}{2}$ , beskriver hur mycket *N* 
 
 ### Maximal nöjdhet
 Frågan är nu vid vilka mängder av *C* och *L* som Eriks nöjdhet *N* maximeras. För att bättre förstå nöjdhetsfunktionen (nyttofunktionen) kan vi börja med att illustrera det teoretiska sambandet, vilket visas i figur 1. Det tvådimensionella diagrammet visar tre variabler: *C*, *L* och *N*.
+
 De två axlarna i diagrammet, horisontella och vertikala axeln, mäter konsumtion och fritid. Högre upp längs vertikala axeln = mer konsumtion. Längre till höger längs med horisontell axeln = mer fritid. Varje böjd linje representerar ett värde för *N*.
+
 De böjda linjerna i diagrammet kallas för *indifferenslinjer*. Vid olika indifferenslinjer är mängden nytta olika. Men längs med varje indifferenslinje är nöjdheten densamma för olika kombinationer av *C* och *L*. Denna teori innebär att Erik är *indifferent* till exakt vilken kombination av C och L det blir, så länge vi är kvar på samma linje.
+
 Erik kan acceptera mindre fritid så länge han kan kompensera med större konsumtion, uppe till vänster i diagrammet, och mindre konsumtion om han kan kompensera med mer fritid. Linjerna längre bort från nollpunkten, origo, representerar kombinationer av konsumtion och fritid som sammantaget resulterar i större nytta.
 
 **Figur 1. Olika kombinationer av C, L och N.**
@@ -46,7 +49,9 @@ $$C = w(T - L) = wT - wL \tag{2}$$
 
 där *w* är lön, *T* är totalt tillgänglig vaken tid och *L* är fortfarande ledig tid. Parentesen $(T - L)$ beskriver hur mycket ledig tid Erik avstår och i stället lägger på arbete och därigenom får lön. Ju högre lön, desto mindre fritid behöver offras för att konsumera samma mängd varor och tjänster.
 Budgetfunktionen kan användas för att rita en rak linje i diagrammet med indifferenslinjerna. Figur 2 illustrerar budgetlinjen och indifferenslinjer. De två axlarna är konsumtion *C* och fritid *L*.
+
 Om Erik spenderade all tillgänglig tid till arbete, $L = 0$, skulle $C = wT$, en punkt längs med den vertikala axeln, konsumtion. Detta är den maximala mängden konsumtion som Erik kan uppnå, givet nuvarande lön. Linjen lutar negativt ned mot horisontella axeln.
+
 Vi kan tänka oss att budgetlinjen börjar på den horisontella axeln vid punkten för maximal fritid (noll konsumtion). Linjens lutning upp mot vertikala axeln bestäms av lönen *w*. Budgetfunktionen kan därför skrivas ut som ett rakt diagonalt streck. Högre lön ger en brantare linje och möjliggör större konsumtion (ett högre maxvärde på vertikala axeln).
 
 **Figur 2. Budgetlinjen och indifferenslinjer**
@@ -62,9 +67,13 @@ Förklaring: Indifferenslinjerna är fortfarande illustrationer av kombinationer
 
 #### Budgetlinjens relation till indifferenskurvorna
 Ju längre bort från origo (noll konsumtion och noll fritid) som budgetlinjen ligger, desto mer kan Erik konsumera. Alla kombinationer av konsumtion och fritid, *C* och *L*, innanför budgetlinjen har Erik råd med.
+
 Givet att Erik vill maximera sin nöjdhet och denna fungerar på det sätt som den beskrivs i nöjdhetsfunktionen kommer Erik att välja en kombination av konsumtion och fritid där en av indifferenslinjerna precis *tangerar* budgetlinjen.
+
 Så länge Erik har samma inkomst, samma budgetlinje, och Eriks nöjdhet kan beskrivas som den görs i nöjdhetsfunktionen, samma form på indifferenslinjerna, är detta det enda logiska resultatet.
+
 **Varför väljer han inte en punkt innanför budgetlinjen?** Vid varje punkt innanför budgetlinjen, den gråa ytan i figur 2, finns det en annan punkt längre bort från origo där Erik kan få en större mängd nytta.
+
 **Varför väljer han inte en annan punkt längs med budgetlinjen?** Vid varje punkt på budgetlinjen närmare vertikala eller horisontella axeln kommer Eriks nöjdhet i stället att definieras av en annan indifferenslinje som i sin tur är närmare origo, vilket därmed innebär mindre mängd total nytta.
 
 ### Maximeringsproblemet
@@ -74,31 +83,34 @@ Låt oss nu ställa upp Eriks maximeringsproblem:
 $$\max_{m.h.t\ \ C,L}{C^{\frac{1}{2}}L^{\frac{1}{2}}} \tag{3}$$
 
 under villkoret $C \leq w(T - L)$
+
 Detta löser vi genom att ställa upp Lagrangefunktionen:
 
 
 $$\mathcal{L}(C,L):\ C^{\frac{1}{2}}L^{\frac{1}{2}} + \lambda(wT - wL - C) \tag{4}$$
 
 Vi tar derivatan av $\mathcal{L}$ med hänsyn till C respektive L:
-> $\mathcal{L}_{C}\':\frac{1}{2}C^{- \frac{1}{2}}L^{\frac{1}{2}} - \lambda$ (5)
+> $\mathcal{L}_{C}':\frac{1}{2}C^{- \frac{1}{2}}L^{\frac{1}{2}} - \lambda$ (5)
 >
-> $\mathcal{L}_{L}\':\frac{1}{2}C^{\frac{1}{2}}L^{- \frac{1}{2}} - \lambda w$
-Från $\mathcal{L}_{L}\'$ löser vi för $\lambda$:
+> $\mathcal{L}_{L}':\frac{1}{2}C^{\frac{1}{2}}L^{- \frac{1}{2}} - \lambda w$
+Från $\mathcal{L}_{L}'$ löser vi för $\lambda$:
 
 
 $$\lambda = \frac{1}{w}\frac{1}{2}C^{\frac{1}{2}}L^{- \frac{1}{2}} \tag{6}$$
 
-Denna definition av $\lambda$ sätter vi in i förstagradsvillkoret vi fick från $\mathcal{L}_{C}\'$:
+Denna definition av $\lambda$ sätter vi in i förstagradsvillkoret vi fick från $\mathcal{L}_{C}'$:
 
 
 $$\frac{1}{2}C^{- \frac{1}{2}}L^{\frac{1}{2}} = \frac{1}{w}\frac{1}{2}C^{\frac{1}{2}}L^{- \frac{1}{2}} \tag{7}$$
 
 $w = \frac{\frac{1}{2}C^{\frac{1}{2}}L^{- \frac{1}{2}}}{\frac{1}{2}C^{- \frac{1}{2}}L^{\frac{1}{2}}}$
-Denna ekvation visar hur lön *w* hänger ihop med Eriks värdering av konsumtion *C* och fritid *L* vid den punkt som maximerar Eriks nöjdhet *N*. I täljaren har vi förstaderivatan av nöjdhetsfunktionen med hänsyn till *L*, det vill säga $u_{L}\'$.
-I nämnaren har vi förstaderivatan av nöjdhetsfunktionen med hänsyn till *C*, vilket vi skriver som $u_{C}\'$. Vi kan därför skriva om denna ekvation till:
+
+Denna ekvation visar hur lön *w* hänger ihop med Eriks värdering av konsumtion *C* och fritid *L* vid den punkt som maximerar Eriks nöjdhet *N*. I täljaren har vi förstaderivatan av nöjdhetsfunktionen med hänsyn till *L*, det vill säga $u_{L}'$.
+
+I nämnaren har vi förstaderivatan av nöjdhetsfunktionen med hänsyn till *C*, vilket vi skriver som $u_{C}'$. Vi kan därför skriva om denna ekvation till:
 
 
-$$w = \frac{u_{L}\'}{u_{C}\'} \tag{8}$$
+$$w = \frac{u_{L}'}{u_{C}'} \tag{8}$$
 
 Detta innebär precis det vi gick igenom ovan, att den nyttomaximerande punkten på budgetlinjen är den där en av de böjda indifferenslinjerna tangerar budgetlinjen. I denna punkt är lutningen på budgetlinjen som bestäms av *w*, samma som lutningen på den indifferenslinje som tangerar budgetlinjen, vilken bestäms av nöjdhetsfunktionens form.
 

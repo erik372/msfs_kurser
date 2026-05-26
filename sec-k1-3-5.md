@@ -8,6 +8,7 @@ Detta avsnitt beskriver hur vi kan använda matematiken för att beskriva gruppt
 
 ### Teori
 Tidigare använde vi linjära ekvationssystem för att beskriva några exempel på samhällsvetenskapliga diskussioner. Även ickelinjära ekvationer och ekvationssystem förekommer rikligt i samhällsvetenskapen.
+
 Här följer ett exempel där vi har två vänner, Erik och Maria, som gör allt tillsammans. Båda funderar på om de ska börja röka. Eriks relation till rökning kan beskrivas med följande funktion:
 
 
@@ -39,7 +40,9 @@ Vi har lösningarna $x_{1} = 0$ och $x_{2} = 1$, vilket ger oss lösningarna fö
 $$\begin{matrix} & y_{1}^{*}\left( x_{1}^{*} \right) = 0^{2} = 0 \\ & y_{2}^{*}\left( x_{2}^{*} \right) = 1^{2} = 1 \end{matrix} \tag{6}$$
 
 Lösning 1 ger punkten $\left( x_{1},y_{1} \right) = (0,0)$ och lösning 2 ger punkten $\left( x_{2},y_{2} \right) =$ $(1,1)$. Lösningarna innebär att antingen röker ingen av vännerna $(0,0)$ eller röker båda dagligen (1, 1), där värdet 1 kan beskrivas som att de röker ett paket cigaretter per dag.
+
 Om någon av vännerna prövar rökning med mindre än 1 paket per dag, som till exempel att röka ett halvt paket, går ekvationssystemet mot lösningen $(0,0)$. Säg till exempel att $x = 0,5$. Detta ger $y = (0,5)^{2} = 0,25$.
+
 Det vill säga om den ena röker ett halvt paket så röker den andra endast ett fjärdedels paket. Eftersom båda vännerna tar efter varandra kommer vi nästa dag att få $x = (0,25)^{2} = 0,0625$, varpå $y = (0,0625)^{2} \approx 0,0039$ och så vidare allt närmare mot 0 i oändlighet. De två funktionerna och lösningarna illustreras i figur 1. Linjerna möts vid de två punkterna $(0,0)$ och $(1,1)$.
 
 **Figur 1. Två vänners rökvanor**

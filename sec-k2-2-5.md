@@ -10,8 +10,11 @@ Vi har regressionsmodellen:
 $$Y = a + bX + V \tag{1}$$
 
 där $Y$ och $X$ är variabler, $a$ och $b$ är koefficienter som vi vill estimera med minstakvadratmetoden och *V* är feltermen. Feltermen $V$ representerar variationen i vår förklarade variabel $Y$ som inte kan förklaras av regressionsmodellen och variationer i den förklarande variabeln $X$.
+
 Vår regressionsmodell ska idealiskt sett utformas på ett sådant sätt att all variation i *Y* som beror på andra faktorer ska vara jämnt och slumpmässigt fördelad över feltermernas olika värden.
+
 I föregående avsnitt definierade vi predikterade ${\widehat{Y}}_{i} = \widehat{a} + \widehat{b}X_{i}$ och residualen (uppskattade feltermen) som ${\widehat{V}}_{i} = Y_{i} - \widehat{Y_{i}}$.
+
 Vi sätter nu in definitionen av ${\widehat{Y}}_{i}$ i vår ekvation för residualen ${\widehat{V}}_{i}$:
 
 
@@ -31,9 +34,11 @@ Notera att även om summan av residualerna alltid är noll
 $$\sum_{i}^{\hat{}}V_{i} = 0 \tag{4}$$
 
 så är de ENSKILDA residualerna i regel skilda från noll. Om varje enskild residual vore lika med 0 ($\widehat{V_{i}} = 0$ för alla $i$) skulle alla observationer ligga exakt på regressionslinjen. Detta är i regel varken möjligt eller önskvärt. En regressionsmodell med perfekt fit ($\widehat{V_{i}} = 0$ för alla $i$) kan tyda på:
+
 - Överanpassning (overfitting)
 - Att vi endast har två observationer (en linje genom två punkter är alltid perfekt)
 - Att sambandet är deterministiskt (inget slumpmässigt brus)
+
 I praktiken har vi nästan alltid variation kring regressionslinjen, vilket är normalt och förväntat.
 
 ![](img/k2-2-5-image1.png)
@@ -97,18 +102,28 @@ I praktiken har vi nästan alltid variation kring regressionslinjen, vilket är 
 
 #### Räkna med minstakvadratmetoden
 Vi uppskattade tidigare $\widehat{a}$ och $\widehat{b}$ genom att jämföra en regressionslinje i ett diagram. Nu ska vi med hjälp av minstakvadratmetoden estimera koefficienterna $\widehat{a}$ och $\widehat{b}$ utifrån observationerna i våra variabler $X$ och $Y$.
+
 I praktiken utförs beräkningarna vanligtvis av en dator och många analysprogram har färdiga kommandon för detta. Metoden kräver ingen avancerad matematik men när vi har många variabler och observationer kan beräkningarna ta lång tid om vi gör det för hand.
-I detta exempel har vi bara fyra observationer och två variabler (figur 1), varför det är relativt enkelt att göra beräkningen för hand. Manuella beräkningar hjälper oss att förstå metoden bättre. Minstakvadratmetoden ger oss följande definitioner för att estimera koefficienterna $\widehat{a}$ och $\widehat{b}$:
+
+I detta exempel har vi bara fyra observationer och två variabler (figur 1), varför det är relativt enkelt att göra beräkningen för hand. Manuella beräkningar hjälper oss att förstå metoden bättre.
+
+Minstakvadratmetoden ger oss följande definitioner för att estimera koefficienterna $\widehat{a}$ och $\widehat{b}$:
 
 
 $$\widehat{a} = \overline{Y} - \widehat{b}\overline{X} \tag{5}$$
 
-$\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}}$
-Dessa ekvationer kallas för koefficienternas estimatorer. Med hjälp av urvalsdata kan vi estimera (uppskatta) koefficienterna i populationen. Låt oss gå igenom dessa ekvationer steg för steg. Definitionen för $\widehat{a}$:
+$$\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}}$$
+
+Dessa ekvationer kallas för koefficienternas estimatorer. Med hjälp av urvalsdata kan vi estimera (uppskatta) koefficienterna i populationen.
+
+Låt oss gå igenom dessa ekvationer steg för steg. Definitionen för $\widehat{a}$:
+
 - $\widehat{a}$ är estimerade konstanta koefficienten, som anger regressionslinjens y-skärning för $X = 0$.
 - $\overline{Y}$ och $\overline{X}$ är medelvärden av $Y$ och $X$, uppskattade med de urvalsdata vi har för respektive variabel.
 - $\widehat{b}$ är det estimerade värdet av konstanta koefficienten $b$, linjens lutning. Vi behöver $\widehat{b}$ för att skatta $\widehat{a}$.
+
 Definitionen av $\widehat{b}$:
+
 - $\sum_{i}^{}{}$ betyder summan av alla observationer, där bokstaven $i$ syftar på hur observationerna är indexerade: observation 1 till 4. Vi summerar alla observationer från 1 till 4, varför vi i detta fall har $\sum_{i}^{}{} = \sum_{i = 1}^{n = 4}{}$
 - Parentesen $(X_{i} - \overline{X})$ innebär att vi för varje observation $i$ av $X$ subtraherar medelvärdet $\overline{X}$. Parentesen $\left( Y_{i} - \overline{Y} \right)$ innebär samma sak för respektive observation $i$ av $Y$. För varje observation multiplicerar vi $(X_{i} - \overline{X})(Y_{i} - \overline{Y})$.
 - Täljaren i definitionen för $\widehat{b}$ innebär att vi för varje observation beräknar $(X_{i} - \overline{X})(Y_{i} - \overline{Y})$ och summerar dessa. Detta dividerar vi med $\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}$, där vi för respektive observation tar parentesen $\left( X_{i} - \overline{X} \right)$ i kvadrat och summerar över alla observationer.
@@ -196,6 +211,7 @@ Tabell 1 beskriver beräkningarna vi behöver för $\widehat{a}$ och $\widehat{b
 </tr>
 </tbody>
 </table>
+
 Summan av observationerna i variabel $X$ ges av $\sum_{i = 1}^{n = 4}X_{i} = 3 + 4 + 6 + 7 = 20$. Medelvärdet för $X$ ges av $\overline{X} = 20/4 = 5$. Vi börjar med $\widehat{b}$ som vi behöver värdet för att estimera $\widehat{a}$:
 
 
@@ -206,7 +222,9 @@ Resultat $\widehat{b} = 0,5$ innebär att en ökning av $X$ med en enhet i genom
 
 $$\widehat{a} = \overline{Y} - \widehat{b}\overline{X} = 3,5 - 0,5*5 = 1 \tag{7}$$
 
-Resultatet $\widehat{a} = 1$ innebär att för $X = 0$ är $\widehat{Y} = 1$. Resultaten $\widehat{a} = 1$ och $\widehat{b} = 0,5$  är samma som vi såg i föregående avsnitt. Låt oss nu beräkna punkterna på raka linjen genom att beräkna ${\widehat{Y}}_{i}$. Detta ges av regressionsmodellen, estimaten för $\widehat{a}$ och $\widehat{b}$ och observationerna från den förklarande variabeln $X$. Vi får följande definition för estimerade $\widehat{Y}$:
+Resultatet $\widehat{a} = 1$ innebär att för $X = 0$ är $\widehat{Y} = 1$. Resultaten $\widehat{a} = 1$ och $\widehat{b} = 0,5$  är samma som vi såg i föregående avsnitt.
+
+Låt oss nu beräkna punkterna på raka linjen genom att beräkna ${\widehat{Y}}_{i}$. Detta ges av regressionsmodellen, estimaten för $\widehat{a}$ och $\widehat{b}$ och observationerna från den förklarande variabeln $X$. Vi får följande definition för estimerade $\widehat{Y}$:
 
 
 $${\widehat{Y}}_{i} = \widehat{a} + \widehat{b}X = 1 + 0,5X_{i} \tag{8}$$
@@ -282,9 +300,10 @@ där $X_{i}$ är observationerna för $X$. Med $\widehat{Y}$ kan vi även estime
 I [avsnitt 2.3](https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&dl=0) introducerade vi kovarians. Estimatorn för koefficient $\widehat{b}$ för regressionsmodellen $Y = a + bX + V$ kan även definieras som kovariansen mellan $X$ och $Y$ dividerat med variansen för förklarande variabeln $X$:
 
 
-$$\frac{cov(X,Y)}{var(X)} = \frac{\frac{1}{n}\sum_{i}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\frac{1}{n}\sum_{i}^{n}\left( X_{i} - \overline{X} \right)}\  \tag{9}$$
-
-$= \frac{\sum_{i}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{n}\left( X_{i} - \overline{X} \right)} = \widehat{b}$
+$$\begin{aligned}
+\frac{cov(X,Y)}{var(X)} &= \frac{\frac{1}{n}\sum_{i}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\frac{1}{n}\sum_{i}^{n}\left( X_{i} - \overline{X} \right)} \tag{9}\\
+&= \frac{\sum_{i}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{n}\left( X_{i} - \overline{X} \right)} = \widehat{b}
+\end{aligned}$$
 
 
 ::: {.ex-section-title}

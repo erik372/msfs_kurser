@@ -5,6 +5,7 @@
 
 ### Teori
 I detta avsnitt ska vi introducera interaktionseffekt. Hittills har vi antagit att effekten av $X$ på $Y$ är densamma oavsett värdet på $Z$. Samvariationen (lutningskoefficienten för $X$) är densamma oavsett om $Z$ har höga eller låga värden.
+
 Men ibland påverkar andra fenomen (som $Z$) hur starkt $X$ samvarierar med $Y$. Detta kallas för interaktionseffekt. Exempel:
 - Kanske samvarierar inkomst och livslängd olika starkt för män vs kvinnor
 - Kanske har en medicin olika effekt beroende på patientens ålder
@@ -18,7 +19,9 @@ Låt oss utgå från följande regressionsmodell:
 $$y = a + bx + cz + \epsilon \tag{1}$$
 
 Observera att variablerna inte är skrivna med matriser utan i vanlig form. Modellen består av följande: $x$ och $z$ är förklarande variabler och $y$ är förklarad variabel, $a$, $b$ och $c$ är koefficienter och $\epsilon$ är feltermen.
+
 Vi tror att samvariationen mellan $y$ och $x$ kan bero på vilket värde variabeln $z$ har. Det vill säga, vi vill bland annat undersöka om samvariationen mellan $y$ och $x$ ser olika ut när den tredje variabeln $z$ har höga värden, jämfört med när $z$ har låga värden. Detta kallas för en interaktionseffekt. $z$ kan också samvariera med $y$ för sig.
+
 Interaktionseffekt mellan $x$ och $z$ kan vi estimera genom att skapa en ny variabel $k = x*z$, där vi för respektive observation multiplicerar värdet i $x$ med värdet i $z$. Den nya variabeln $k$ lägger vi till i vår regressionsmodell med en egen lutningskoefficient:
 
 
@@ -29,6 +32,7 @@ $$y = a + bx + cz + dxz \tag{2}$$
 $$= a + bx + cz + dk$$
 
 Koefficient $a$, modellens intercept, är precis som tidigare det värde som $y$ antar då alla andra variabler är lika med noll $(x = z = k = 0)$. Koefficient $d$ som är multiplicerad med $k = xz$ mäter den genomsnittliga förändring i $y$ som är associerad med en ökning av variabel $k$ med en enhet.
+
 Koefficient $b$ anger hur stor förändring i $y$ som är associerad med en enhet högre $x$. För att estimera den totala samvariationen mellan $x$ och $y$ adderar vi koefficient $b$ med $d*z$, eftersom variabel $z$ ingår som multiplikator i variabeln $k$. Den totala samvariationen mellan $x$ och $y$ är:
 
 
@@ -44,6 +48,7 @@ För värdena $x = 0$ anger lutningskoefficienten $c$ hur mycket $y$ ökar då $
 
 #### Ett exempel med data
 I [avsnitt 4.3](https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&dl=0) estimerade vi samvariationen mellan livslängd och inkomst för män och kvinnor i tre av Sveriges kommuner. Nu ska vi använda samma data igen men denna gång lägga till en interaktionseffekt.
+
 Tabell 1 beskriver våra variabler (samma som i [avsnitt 4.3](https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&dl=0)). Vi har nu en variabel som skapas genom att multiplicera de två variablerna inkomst $I$ och kön $K$. Den nya variabeln har rubriken "Interaktion: $I*K$". Eftersom $K$ är en dummy där tre av sex observationer har värdet 0 får även den nya variabeln värdet 0 i tre av sex fall.
 
 **Tabell 1: Variablerna** $\mathbf{L}$**,** $\mathbf{I}$**,** $\mathbf{K}$ **och** $\mathbf{KI}$
@@ -113,6 +118,7 @@ Tabell 1 beskriver våra variabler (samma som i [avsnitt 4.3](https://www.dropbo
 
 ::: {.fig-caption}
 Förklaring: Data från [www.kolada.se](http://www.kolada.se). Medianinkomst i 100 000-tals kr. Förväntad medellivslängd. Alla siffror avser 2019.
+
 I [avsnitt 4.3](https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&dl=0) estimerade vi två regressionsmodeller. Först en modell för samvariationen mellan livslängd och inkomst, med följande resultat:
 :::
 
@@ -136,6 +142,7 @@ där $c_{1}$, $c_{2}$, $c_{3}$ och $c_{4}$ är koefficienter vi ska estimera med
 $$L = CX + V \tag{8}$$
 
 $L$ är en kolumnmatris med värdena för förklarade variabeln livslängd $L$. $C$ är en kolumnmatris med samtliga koefficienterna i modellen, $c_{1}$ till $c_{4}$. $X$ är en matris med samtliga förklarande variabler i modellen och observationerna för respektive variabel i varsin kolumn. $V$ är en kolumnmatris med feltermerna $v_{1},v_{2},\ldots,v_{n}$ där n är antal observationer.
+
 För att estimera koefficienterna har vi estimatorn, som liknar de vi använt i tidigare avsnitt:
 
 
@@ -181,20 +188,25 @@ Interaktionseffekten för en variabel beskrev vi i ekvation 3 som $\frac{\Delta 
 $$\frac{\Delta L}{\Delta I} = \widehat{c_{2}} + \widehat{c_{4}}G = 26,9 - 21,8*G \tag{15}$$
 
 Total samvariation betyder effekten av inkomst på livslängd inklusive interaktionseffekten. En enhet ökad inkomst motsvarar en ökning av den genomsnittliga årsinkomsten med 100 000 kronor.
+
 För kvinnor $(G = 0)$: $\Delta L\text{/}\Delta I = 26,9$ → 100 000 kr högre inkomst = 26,9 år längre liv
+
 För män $(G = 1)$: $\Delta L\text{/}\Delta I = 26,9 - 21,8 = 5,1$ → 100 000 kr högre inkomst = 5,1 år längre liv
+
 Interaktionseffekten $- 21,8$ betyder att sambandet mellan inkomst och livslängd är svagare för män än för kvinnor. Samvariationen mellan livslängd och inkomst är således mer positiv för kvinnor jämfört med för män. Den totala samvariationen mellan kön $G$ och medellivslängd $L$ kan vi från vår regressionsmodell estimera till:
 
 
 $$\frac{\Delta L}{\Delta G} = \widehat{c_{3}} + \widehat{c_{4}}*I = 40,3 - 21,8*I \tag{16}$$
 
 Koefficienten $c_{1}$ i vår regressionsmodell skattade vi till 26,6 i ekvation 13. Detta är den genomsnittliga livslängd som vår regressionsmodell indikerar att kvinnor utan inkomst har, där variablerna $I$ och $G$ är lika med 0, det vill säga en kvinna $G = 0$ utan inkomst $I = 0$.
+
 Om personen utan inkomst är en man, $G = 1$, indikerar $\widehat{c_{3}} = 40,3$ att vi kan förvänta oss att en sådan person i genomsnitt lever 40,3 år längre. Vid högre inkomster får vi dock ett annorlunda resultat. Vid följande inkomstnivå blir nettoskillnaden av $G$ lika med 0:
 
 
 $$I = \frac{40,3}{21,8} = 1,85 \tag{17}$$
 
 rent matematiskt innebär detta att vår regressionsmodell predikterar att en man med 185 000 kronor i årsinkomst i genomsnitt lever lika länge som en kvinna med 0 kronor i inkomst. Detta reflekterar inte nödvändigtvis verkliga mekanismer. I praktiken har nästan ingen 0 kr i inkomst och ingen observation har detta i vårt datamaterial.
+
 Poängen är att visa var interaktionseffekten byter tecken (från plus till minus och tvärtom). Vi måste alltid vara försiktiga med att tolka resultaten och extra försiktiga att tolka resultat utanför de värden vi har data för. Vid högre inkomster än detta blir $\Delta L\text{/}\Delta G$ negativt, vilket innebär att vid högre inkomster är mäns genomsnittliga livslängd kortare än kvinnor.
 
 #### Illustration med diagram
@@ -217,7 +229,9 @@ där $\left( I \middle\| G = 1 \right)$ betyder att vi enbart använder de obser
 
 ::: {.fig-caption}
 Förklaring: Livslängd och inkomst för kvinnor respektive män.
+
 Regressionsresultaten för enbart kvinnor i ekvation 18 är samma som resultaten från regressionsmodellen i ekvation 14 med $G = 0$, då de två första koefficienterna i de båda regressionsmodellerna är desamma: $\widehat{c_{1}} = \widehat{a}$ och $\widehat{c_{2}} = \widehat{b}$.
+
 Resultaten i regressionsmodellen för män i ekvation 19 kan förenklat beskrivas som att vi lägger ihop koefficienterna i ekvation 14. Vi har koefficienterna:
 :::
 

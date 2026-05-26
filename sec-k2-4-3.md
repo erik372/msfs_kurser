@@ -5,11 +5,14 @@
 
 ### Teori
 Regressionsanalys med flera förklarande variabler är ofta användbart för att få en korrekt bild av samvariationen mellan flera fenomen. I [avsnitt 4.1](https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&dl=0) såg vi att om vi kontrollerar för flera variabler i vår regressionsmodell kan lutningskoefficienten för en annan variabel i modellen ändras. Detta kallas för att vi **konstanthåller** andra variabler.
+
 Att konstanthålla en variabel betyder att vi studerar sambandet mellan X och Y med hänsyn till Z. Vi frågar: \"Om alla observationer hade samma värde på Z, hur skulle X och Y samvariera då?\"
+
 Exempel: När vi studerar samvariationen mellan inkomst och livslängd med hänsyn till kön, frågar vi: \"Hur samvarierar inkomst och livslängd bland kvinnor?\" och \"Hur samvarierar inkomst och livslängd bland män?\" Detta är en av de centrala mekanismerna i regressionsanalys och i analytiskt arbete generellt.
 
 #### Illustrera med lite data
 Säg att vi har regressionsmodellen $Y = a + bX + cZ + V$, där $Y$, $X$ och $Z$ är variabler och $V$ är feltermen. Vi kan då beskriva detta som att vi håller variabeln $Z$ konstant när vi estimerar samvariationen mellan $Y$ och $X$. Och vi håller variabeln $X$ konstant när vi estimerar samvariationen mellan $Y$ och $Z$.
+
 Vi ska nu illustrera detta med hjälp av lite data över genomsnittlig livslängd och inkomst för kvinnor respektive män i tre av Sveriges kommuner, vilket beskrivs i tabell 1. Kolumnen längst till höger beskriver en dummyvariabel $G$ för kön där kvinnor = 0 och män = 1.
 
 **Tabell 1. Data över män och kvinnor i tre kommuner**
@@ -117,17 +120,24 @@ $$L = b_{1} + b_{2}I + b_{3}G + V \tag{5}$$
 
 där $L,\ \ I$ och $G$ är våra variabler, $b_{1}$, $b_{2}$ och $b_{3}$ är koefficienterna vi ska estimera med hjälp av minstakvadratmetoden, och $V$ är feltermen. För att estimera lutningskoefficienterna använder vi nu estimatorerna för en regressionsmodell med tre koefficienter som vi introducerade i [avsnitt 4.1](https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&dl=0). Vi börjar med lutningskoefficienten $b_{2}$:
 ${\widehat{b}}_{2} = \frac{\left( \sum_{}^{}{\widetilde{L_{i}}\widetilde{I_{i}}} \right)\left( \sum_{}^{}{\widetilde{G}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{L_{i}}\widetilde{G_{i}}} \right)\left( \sum_{}^{}{\widetilde{I_{i}}\widetilde{G_{i}}} \right)}{\left( \sum_{}^{}{\widetilde{I}}_{i}^{2} \right)\left( \sum_{}^{}{\widetilde{G}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{I_{i}}\widetilde{G_{i}}} \right)^{2}}$ (6)$ $$\approx \frac{( - 1,93)(0,46) - ( - 5,04)(0,75)}{(0,46)(1,5) - (0,75)^{2}} \approx 6,64$
+
 Tilde beskriver avvikelse från medelvärdet, som $\widetilde{G} = G_{i} - \overline{G}.$ För lutningskoefficient $b_{3}$ får vi:
+
 ${\widehat{b}}_{3} = \frac{\left( \sum_{}^{}{{\widetilde{L}}_{i}{\widetilde{G}}_{i}} \right)\left( \sum_{}^{}{\widetilde{I}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{L_{i}}\widetilde{I_{i}}} \right)\left( \sum_{}^{}{\widetilde{I_{i}}{\widetilde{G}}_{i}} \right)}{\left( \sum_{}^{}{\widetilde{I}}_{i}^{2} \right)\left( \sum_{}^{}{\widetilde{G}}_{i}^{2} \right) - \left( \sum_{}^{}{\widetilde{I_{i}}{\widetilde{G}}_{i}} \right)^{2}}$ (7)$ $$\approx \frac{( - 5,04)(0,46) - ( - 1,93)(0,75)}{(0,46)(1,5) - (0,75)^{2}} \approx - 6,66\ $
+
 Slutligen kan vi estimera koefficient $b_{1}$, konstanten:
+
 ${\widehat{b}}_{1} = \overline{L} - {\widehat{b}}_{2}\overline{I} - {\widehat{b}}_{3}\overline{G}$ (8)$ $${= 82 - 6,64*2,37 - ( - 6,66)*0,5 }{\approx 69,6}$
+
 Den estimerade versionen av regressionsmodellen i ekvation 5:
 
 
 $$L = {\widehat{b}}_{1} + {\widehat{b}}_{2}I + {\widehat{b}}_{3}G = 69,6 + 6,64I - 6,66G \tag{9}$$
 
 Resultatet indikerar nu en positiv samvariation mellan vår förklarade variabel livslängd $(L)$ och den förklarande variabeln inkomst $(I)$ med hänsyn till kön $(G)$. Människor med högre inkomst lever i genomsnitt längre liv. När vi estimerade regressionsmodellen i ekvation 1 fann vi att inkomst och livslängd samvarierade negativt.
+
 Detta är ett exempel på något som kallas [Simpsons paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox): När vi studerar inkomst och livslängd utan att ta hänsyn till kön får vi negativ samvariation. Men när vi tar hänsyn till kön (konstanthåller kön) får vi positiv samvariation.
+
 Varför? Kvinnor lever längre och har lägre inkomst. Män lever kortare och har högre inkomst. Om vi inte separerar könen ser det ut som att högre inkomst = kortare liv, vilket är felaktigt. Detta visar varför det är så viktigt att inkludera relevanta variabler i regressionsanalys. Det illustrerar även varför vi måste ta hänsyn till viktiga fenomen när vi vill förstå hur världen fungerar.
 
 #### Illustration i diagram

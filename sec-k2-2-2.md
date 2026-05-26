@@ -7,16 +7,24 @@
 - **Bessels korrigering:** För att undvika att vi underskattar populationsvärden kan vi dividera estimatorerna med $n - 1$ i stället för $n$.
 
 ### Teori
-I föregående avsnitt beskrev vi hur vi med urvalsdata kan uppskatta populationens medelvärde. Vi såg även exempel på hur vi kan beskriva spridning i en samling värden. I detta avsnitt ska vi nu introducera andra vanliga statistiska metoder för att studera spridning.
+I föregående avsnitt beskrev vi hur vi med urvalsdata kan uppskatta populationens medelvärde.
+
+Vi såg även exempel på hur vi kan beskriva spridning i en samling värden. I detta avsnitt ska vi nu introducera andra vanliga statistiska metoder för att studera spridning.
 
 #### Absolut avvikelse
 Ett sätt att mäta avvikelser från medelvärdet är att uppskatta *genomsnittlig absolut avvikelse* (engelska *mean absolute deviation*):
-Genomsnittlig absolut avvikelse $= \frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\|$ (1)
+
+$$\frac{1}{n}\sum\left\| x_{i} - \overline{x} \right\| \tag{1}$$
+
 Vi kan även byta ut medelvärdet $\overline{x}$ mot annat genomsnittsmått som median eller typvärde.
 
 #### Varians
-Ett annat sätt att summera avvikelser från medelvärdet till ett positivt värde är att kvadrera avvikelserna: $\left( x_{i} - \overline{x} \right)^{2}$. Dividerar vi summan av de kvadrerade differenserna med antal observationer $n$ får vi *variansen* för variabel *x*:
-> Varians:  $var(x) = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}$ (2)
+Ett annat sätt att summera avvikelser från medelvärdet till ett positivt värde är att kvadrera avvikelserna: $\left( x_{i} - \overline{x} \right)^{2}$.
+
+Dividerar vi summan av de kvadrerade differenserna med antal observationer $n$ får vi *variansen* för variabel *x*:
+
+$$var(x) = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} \tag{2}$$
+
 Parentesen $\left( x_{i} - \overline{x} \right)^{2}$ ska beräknas för varje observation och summeras:
 
 
@@ -26,39 +34,54 @@ På samma sätt som att medelvärdet $\overline{x}$ är en uppskattning av popul
 
 #### Standardavvikelse
 *Standardavvikelse* för en samling observationer är positiva kvadratroten av variansen. För population betecknas ofta standardavvikelse $\sigma_{x}$.
+
 Uppskattad standardavvikelse för variabel $x$ kan skrivas ${\widehat{\sigma}}_{x}$, $sd_{x}$ eller $s_{x}$:
-Standardavvikelse:  $s_{x} = + \sqrt{var(x)} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n} \right)^{\frac{1}{2}}$ (4)
+
+$$s_{x} = + \sqrt{var(x)} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n} \right)^{\frac{1}{2}} \tag{4}$$
 
 #### Bessels korrigering
 När vi estimerar medelvärdet med urvalsdata ($\overline{x}$) avviker ofta detta från populationens medelvärde ($\mu_{x}$). Denna avvikelse tenderar att leda till att vår uppskattning av populationens varians blir för liten.
+
 För att justera för detta när vi estimerar varians (ekvation 2) dividera med $n - 1$ i stället för $n$. Detta kallas för *korrigerad varians* eller *urvalsvarians* (engelska *sample variance*):
-Varians urval: $var(x) = \left( \frac{1}{n - 1} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}$ (5)
+
+$$var(x) = \left( \frac{1}{n - 1} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} \tag{5}$$
+
 Division med $n - 1$ kallas för *Bessels korrigering* och medför ofta att den uppskattade variansen hamnar närmare populationens varians.
+
 Många datorprogram har färdiga kommandon för att estimera (beräkna) varians och använder då Bessels korrigering, som i ekvation 5. Även för standardavvikelse kan vi använda Bessels korrigering:
-Standardavvikelse urval: $s_{x} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} \right)^{\frac{1}{2}}$ (6)
+
+$$s_{x} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} \right)^{\frac{1}{2}} \tag{6}$$
 
 #### Varians och standardavvikelse med konstant
-Om vi har en konstant $a$, ett valfritt värde, är variansen för denna $var(a) = 0$. Detta eftersom ett enskilt värde inte har någon spridning. Om $a$ är multiplicerad med en variabel $x$ är variansen för $ax$ lika med $a^{2}var(x)$. Detta kan vi se genom att ta:
+Om vi har en konstant $a$, ett valfritt värde, är variansen för denna $var(a) = 0$. Detta eftersom ett enskilt värde inte har någon spridning.
+
+Om $a$ är multiplicerad med en variabel $x$ är variansen för $ax$ lika med $a^{2}var(x)$. Detta kan vi se genom att ta:
 
 
-$$var(ax) = \left( \frac{1}{n} \right)\sum_{i}^{}\left( {ax}_{i} - a\overline{x} \right)^{2} \tag{7}$$
+$$\begin{aligned}
+var(ax) &= \left( \frac{1}{n} \right)\sum_{i}^{}\left( {ax}_{i} - a\overline{x} \right)^{2} \tag{7}\\
+&= \left( \frac{1}{n} \right)\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right)
+\end{aligned}$$
 
-$= \left( \frac{1}{n} \right)\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right)$
 Eftersom $a$ inte påverkas av summeringen kan vi flytta ut alla $a^{2}$:
 
 
-$$var(ax) = a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i}^{2} - 2\overline{x} + {\overline{x}}^{2} \right) \tag{8}$$
+$$\begin{aligned}
+var(ax) &= a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i}^{2} - 2\overline{x} + {\overline{x}}^{2} \right) \tag{8}\\
+&= a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i} - \overline{x} \right)^{2} \\
+&= a^{2}var(x)
+\end{aligned}$$
 
-$= a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i} - \overline{x} \right)^{2}$
-$= a^{2}var(x)$
 För standardavvikelse får vi:
 
 
-$$s_{x}(ax) = \left( \frac{1}{n}\sum_{i}^{n}\left( {ax}_{i} - a\overline{x} \right)^{2} \right)^{\frac{1}{2}} \tag{9}$$
+$$\begin{aligned}
+s_{x}(ax) &= \left( \frac{1}{n}\sum_{i}^{n}\left( {ax}_{i} - a\overline{x} \right)^{2} \right)^{\frac{1}{2}} \tag{9}\\
+&= \left( \frac{1}{n}\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right) \right)^{\frac{1}{2}} \\
+&= \left( a^{2} \right)^{\frac{1}{2}}\left( \frac{1}{n}\sum\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}} \\
+&= \|a\|s_{x}
+\end{aligned}$$
 
-$= \left( \frac{1}{n}\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right) \right)^{\frac{1}{2}}$
-$= \left( a^{2} \right)^{\frac{1}{2}}\left( \frac{1}{n}\sum\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}}$
-$= \|a\|s_{x}$
 där $\|a\|$ är absolutbeloppet av konstanten $a$.
 
 #### Ett exempel
@@ -153,16 +176,21 @@ Nu ska vi beräkna (skatta) variansen med fyra observationer för två variabler
 </tr>
 </tbody>
 </table>
+
 Vi använder ekvation 5 för att skatta varians:
 
 
-$$var(x) = \frac{\sum_{i}^{}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{10}{3}\  \tag{10}$$
+$$var(x) = \frac{\sum_{i}^{}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{10}{3} \tag{10}$$
 
-$var(y) = \frac{\sum_{i}^{}\left( y_{i} - \overline{y} \right)^{2}}{n - 1} = \frac{5}{3}$
+$$var(y) = \frac{\sum_{i}^{}\left( y_{i} - \overline{y} \right)^{2}}{n - 1} = \frac{5}{3}$$
+
 Variansen för variabel $x$ är större än variansen i variabel $y$. Detta indikerar att värdena i $x$ är mer utspridda från medelvärdet jämfört med spridningen i variabel $y$.
+
 För att beräkna standardavvikelse för variablerna $x$ och $y$ tar vi positiva kvadratroten av variansen:
-> $s_{x} = \sqrt{\frac{\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)^{2}\ }}{n - 1}} = + \sqrt{\frac{10}{3}} \approx 1,826$ (11)
-$s_{y} = + \sqrt{\frac{5}{3}} \approx 1,291$
+
+$$s_{x} = \sqrt{\frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1}} = + \sqrt{\frac{10}{3}} \approx 1{,}826 \tag{11}$$
+
+$$s_{y} = + \sqrt{\frac{5}{3}} \approx 1{,}291$$
 
 
 ::: {.ex-section-title}

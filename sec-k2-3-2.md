@@ -179,18 +179,21 @@ Förklaring: Vi har regressionsmodellen $Z = \alpha + \beta K + \epsilon$. Utifr
 
 #### Hur väl passar regressionsmodellen mot data?
 För att jämföra hur väl en regressionsmodell passar de data den syftar till att beskriva mönstret för finns det flera metoder. En viktig del i detta är att jämföra residualerna, det vill säga avståndet mellan de data vi använt i vår förklarade variabel $Y$ och de predikterade värdena för samma variabel  $\widehat{Y}$.
+
 Om vi har en regressionsmodell med förklarad variabel $Y$ och feltermen $V$ där residualen beräknas $\widehat{V} = Y - \widehat{Y}$ kan vi till exempel jämföra *residualernas kvadratsumma* (engelska *sum of squared residuals*, SSR):
 
 
 $$SSR = \sum_{i}^{n}\widehat{V_{i}^{2}} = \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{1}$$
 
 Vi kan tänka på SSR som mängden variation i förklarade variabeln $Y$ som inte kan förklaras av regressionsmodellen.
+
 Ett annat användbart mått är *kvadratsumman av den förklarade variationen* (engelska *sum of squares explained*, SSE):
 
 
 $$SSE = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2} \tag{2}$$
 
 SSE kan beskrivas som den variation i $Y$ som kan förklaras, eller tas bort, av regressionsmodellen. Begreppet "förklaras" innebär i detta sammanhang inte nödvändigtvis "kausal förklaring".
+
 *Totalsumman av kvadrater* (engelska *total sum of squares*, SST) är summan av SSR och SSE. SST kan tolkas som mängden variation som förekommer i $Y$ innan regressionsmodellen estimeras. SST skrivas som summan av den kvadrerade differensen mellan observerade $Y_{i}$ och medelvärdet $\overline{Y}$:
 
 
@@ -218,6 +221,7 @@ Utifrån kvadratsummorna kan vi skatta determinationskoefficienten (på engelska
 $$R^{2} = \frac{SSE}{SST} = \frac{SST - SSR}{SST} = 1 - \frac{SSR}{SST} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} \tag{4}$$
 
 $R^{2}$ mäter hur stor andel av variationen i den förklarade variabeln, till exempel $Y$, som kan förklaras av regressionsmodellen och variationen i den förklarande variabeln, till exempel $X$. $R^{2}$ kan anta värden mellan 0 och 1.
+
 $R^{2} = 0$ betyder att ingenting av variationen i $Y$ kan förklaras av regressionsmodellen och variationen i $X$. $R^{2} = 1$ betyder att all variation i variabel $Y$ förklaras av regressionsmodellen och variationen i variabel $X$.
 
 ### Observera att förkortningar varierar ibland. Vi använder här SSR = Sum of Squared Residuals. Andra använder till exempel RSS = Residual Sum of Squares. Båda betyder samma sak. När du läser andra texter, kontrollera alltid vad en förkortning syftar på matematiskt.

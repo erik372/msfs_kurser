@@ -126,10 +126,10 @@
 </h3>
 <p>Vi har regressionsmodellen:</p>
 <p><span class="math display">\[Y = a + bX + V \tag{1}\]</span></p>
-<p>där <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är variabler, <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är koefficienter som vi vill estimera med minstakvadratmetoden och <em>V</em> är feltermen. Feltermen <span class="math inline">\(V\)</span> representerar variationen i vår förklarade variabel <span class="math inline">\(Y\)</span> som inte kan förklaras av regressionsmodellen och variationer i den förklarande variabeln <span class="math inline">\(X\)</span>.
-Vår regressionsmodell ska idealiskt sett utformas på ett sådant sätt att all variation i <em>Y</em> som beror på andra faktorer ska vara jämnt och slumpmässigt fördelad över feltermernas olika värden.
-I föregående avsnitt definierade vi predikterade <span class="math inline">\({\widehat{Y}}_{i} = \widehat{a} + \widehat{b}X_{i}\)</span> och residualen (uppskattade feltermen) som <span class="math inline">\({\widehat{V}}_{i} = Y_{i} - \widehat{Y_{i}}\)</span>.
-Vi sätter nu in definitionen av <span class="math inline">\({\widehat{Y}}_{i}\)</span> i vår ekvation för residualen <span class="math inline">\({\widehat{V}}_{i}\)</span>:</p>
+<p>där <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är variabler, <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är koefficienter som vi vill estimera med minstakvadratmetoden och <em>V</em> är feltermen. Feltermen <span class="math inline">\(V\)</span> representerar variationen i vår förklarade variabel <span class="math inline">\(Y\)</span> som inte kan förklaras av regressionsmodellen och variationer i den förklarande variabeln <span class="math inline">\(X\)</span>.</p>
+<p>Vår regressionsmodell ska idealiskt sett utformas på ett sådant sätt att all variation i <em>Y</em> som beror på andra faktorer ska vara jämnt och slumpmässigt fördelad över feltermernas olika värden.</p>
+<p>I föregående avsnitt definierade vi predikterade <span class="math inline">\({\widehat{Y}}_{i} = \widehat{a} + \widehat{b}X_{i}\)</span> och residualen (uppskattade feltermen) som <span class="math inline">\({\widehat{V}}_{i} = Y_{i} - \widehat{Y_{i}}\)</span>.</p>
+<p>Vi sätter nu in definitionen av <span class="math inline">\({\widehat{Y}}_{i}\)</span> i vår ekvation för residualen <span class="math inline">\({\widehat{V}}_{i}\)</span>:</p>
 <p><span class="math display">\[\widehat{V_{i}} = Y_{i} - \widehat{Y_{i}} = Y_{i} - \left( \widehat{a} + \widehat{b}X_{i} \right) = Y_{i} - \widehat{a} - \widehat{b}X_{i} \tag{2}\]</span></p>
 <p>Detta visar att <span class="math inline">\({\widehat{V}}_{i}\)</span> är en funktion av observationerna i variablerna <span class="math inline">\(Y_{i}\)</span> och <span class="math inline">\(X_{i}\)</span> samt de skattade koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>.</p>
 <div id="beräkna-widehatv" class="section level4" number="29.0.2.1">
@@ -140,11 +140,13 @@ Vi sätter nu in definitionen av <span class="math inline">\({\widehat{Y}}_{i}\)
 <p><span class="math display">\[{\widehat{V}}_{3} = Y_{3} - {\widehat{Y}}_{3} = 5 - 4 = 1 \tag{3}\]</span></p>
 <p>Notera att även om summan av residualerna alltid är noll</p>
 <p><span class="math display">\[\sum_{i}^{\hat{}}V_{i} = 0 \tag{4}\]</span></p>
-<p>så är de ENSKILDA residualerna i regel skilda från noll. Om varje enskild residual vore lika med 0 (<span class="math inline">\(\widehat{V_{i}} = 0\)</span> för alla <span class="math inline">\(i\)</span>) skulle alla observationer ligga exakt på regressionslinjen. Detta är i regel varken möjligt eller önskvärt. En regressionsmodell med perfekt fit (<span class="math inline">\(\widehat{V_{i}} = 0\)</span> för alla <span class="math inline">\(i\)</span>) kan tyda på:
-- Överanpassning (overfitting)
-- Att vi endast har två observationer (en linje genom två punkter är alltid perfekt)
-- Att sambandet är deterministiskt (inget slumpmässigt brus)
-I praktiken har vi nästan alltid variation kring regressionslinjen, vilket är normalt och förväntat.</p>
+<p>så är de ENSKILDA residualerna i regel skilda från noll. Om varje enskild residual vore lika med 0 (<span class="math inline">\(\widehat{V_{i}} = 0\)</span> för alla <span class="math inline">\(i\)</span>) skulle alla observationer ligga exakt på regressionslinjen. Detta är i regel varken möjligt eller önskvärt. En regressionsmodell med perfekt fit (<span class="math inline">\(\widehat{V_{i}} = 0\)</span> för alla <span class="math inline">\(i\)</span>) kan tyda på:</p>
+<ul>
+<li>Överanpassning (overfitting)</li>
+<li>Att vi endast har två observationer (en linje genom två punkter är alltid perfekt)</li>
+<li>Att sambandet är deterministiskt (inget slumpmässigt brus)</li>
+</ul>
+<p>I praktiken har vi nästan alltid variation kring regressionslinjen, vilket är normalt och förväntat.</p>
 <div class="inline-figure"><img src="img/k2-2-5-image1.png"></div>
 <p><strong>Figur 1 Estimera</strong> <span class="math inline">\(\widehat{\mathbf{V}}\)</span></p>
 <div class="inline-table"><table class="table table-bordered" style="width:52%;">
@@ -256,19 +258,30 @@ Medelvärde
 <h4>
 <span class="header-section-number">29.0.2.2</span> Räkna med minstakvadratmetoden<a class="anchor" aria-label="anchor" href="#r%C3%A4kna-med-minstakvadratmetoden"><i class="fas fa-link"></i></a>
 </h4>
-<p>Vi uppskattade tidigare <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> genom att jämföra en regressionslinje i ett diagram. Nu ska vi med hjälp av minstakvadratmetoden estimera koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> utifrån observationerna i våra variabler <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>.
-I praktiken utförs beräkningarna vanligtvis av en dator och många analysprogram har färdiga kommandon för detta. Metoden kräver ingen avancerad matematik men när vi har många variabler och observationer kan beräkningarna ta lång tid om vi gör det för hand.
-I detta exempel har vi bara fyra observationer och två variabler (figur 1), varför det är relativt enkelt att göra beräkningen för hand. Manuella beräkningar hjälper oss att förstå metoden bättre. Minstakvadratmetoden ger oss följande definitioner för att estimera koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>:</p>
+<p>Vi uppskattade tidigare <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> genom att jämföra en regressionslinje i ett diagram. Nu ska vi med hjälp av minstakvadratmetoden estimera koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> utifrån observationerna i våra variabler <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span>.</p>
+<p>I praktiken utförs beräkningarna vanligtvis av en dator och många analysprogram har färdiga kommandon för detta. Metoden kräver ingen avancerad matematik men när vi har många variabler och observationer kan beräkningarna ta lång tid om vi gör det för hand.</p>
+<p>I detta exempel har vi bara fyra observationer och två variabler (figur 1), varför det är relativt enkelt att göra beräkningen för hand. Manuella beräkningar hjälper oss att förstå metoden bättre.</p>
+<p>Minstakvadratmetoden ger oss följande definitioner för att estimera koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>:</p>
 <p><span class="math display">\[\widehat{a} = \overline{Y} - \widehat{b}\overline{X} \tag{5}\]</span></p>
-<p><span class="math inline">\(\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}}\)</span>
-Dessa ekvationer kallas för koefficienternas estimatorer. Med hjälp av urvalsdata kan vi estimera (uppskatta) koefficienterna i populationen. Låt oss gå igenom dessa ekvationer steg för steg. Definitionen för <span class="math inline">\(\widehat{a}\)</span>:
-- <span class="math inline">\(\widehat{a}\)</span> är estimerade konstanta koefficienten, som anger regressionslinjens y-skärning för <span class="math inline">\(X = 0\)</span>.
-- <span class="math inline">\(\overline{Y}\)</span> och <span class="math inline">\(\overline{X}\)</span> är medelvärden av <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>, uppskattade med de urvalsdata vi har för respektive variabel.
-- <span class="math inline">\(\widehat{b}\)</span> är det estimerade värdet av konstanta koefficienten <span class="math inline">\(b\)</span>, linjens lutning. Vi behöver <span class="math inline">\(\widehat{b}\)</span> för att skatta <span class="math inline">\(\widehat{a}\)</span>.
-Definitionen av <span class="math inline">\(\widehat{b}\)</span>:
-- <span class="math inline">\(\sum_{i}^{}{}\)</span> betyder summan av alla observationer, där bokstaven <span class="math inline">\(i\)</span> syftar på hur observationerna är indexerade: observation 1 till 4. Vi summerar alla observationer från 1 till 4, varför vi i detta fall har <span class="math inline">\(\sum_{i}^{}{} = \sum_{i = 1}^{n = 4}{}\)</span>
-- Parentesen <span class="math inline">\((X_{i} - \overline{X})\)</span> innebär att vi för varje observation <span class="math inline">\(i\)</span> av <span class="math inline">\(X\)</span> subtraherar medelvärdet <span class="math inline">\(\overline{X}\)</span>. Parentesen <span class="math inline">\(\left( Y_{i} - \overline{Y} \right)\)</span> innebär samma sak för respektive observation <span class="math inline">\(i\)</span> av <span class="math inline">\(Y\)</span>. För varje observation multiplicerar vi <span class="math inline">\((X_{i} - \overline{X})(Y_{i} - \overline{Y})\)</span>.
-- Täljaren i definitionen för <span class="math inline">\(\widehat{b}\)</span> innebär att vi för varje observation beräknar <span class="math inline">\((X_{i} - \overline{X})(Y_{i} - \overline{Y})\)</span> och summerar dessa. Detta dividerar vi med <span class="math inline">\(\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}\)</span>, där vi för respektive observation tar parentesen <span class="math inline">\(\left( X_{i} - \overline{X} \right)\)</span> i kvadrat och summerar över alla observationer.</p>
+<p><span class="math display">\[\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}}\]</span></p>
+<p>Dessa ekvationer kallas för koefficienternas estimatorer. Med hjälp av urvalsdata kan vi estimera (uppskatta) koefficienterna i populationen.</p>
+<p>Låt oss gå igenom dessa ekvationer steg för steg. Definitionen för <span class="math inline">\(\widehat{a}\)</span>:</p>
+<ul>
+<li>
+<span class="math inline">\(\widehat{a}\)</span> är estimerade konstanta koefficienten, som anger regressionslinjens y-skärning för <span class="math inline">\(X = 0\)</span>.</li>
+<li>
+<span class="math inline">\(\overline{Y}\)</span> och <span class="math inline">\(\overline{X}\)</span> är medelvärden av <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>, uppskattade med de urvalsdata vi har för respektive variabel.</li>
+<li>
+<span class="math inline">\(\widehat{b}\)</span> är det estimerade värdet av konstanta koefficienten <span class="math inline">\(b\)</span>, linjens lutning. Vi behöver <span class="math inline">\(\widehat{b}\)</span> för att skatta <span class="math inline">\(\widehat{a}\)</span>.</li>
+</ul>
+<p>Definitionen av <span class="math inline">\(\widehat{b}\)</span>:</p>
+<ul>
+<li>
+<span class="math inline">\(\sum_{i}^{}{}\)</span> betyder summan av alla observationer, där bokstaven <span class="math inline">\(i\)</span> syftar på hur observationerna är indexerade: observation 1 till 4. Vi summerar alla observationer från 1 till 4, varför vi i detta fall har <span class="math inline">\(\sum_{i}^{}{} = \sum_{i = 1}^{n = 4}{}\)</span>
+</li>
+<li>Parentesen <span class="math inline">\((X_{i} - \overline{X})\)</span> innebär att vi för varje observation <span class="math inline">\(i\)</span> av <span class="math inline">\(X\)</span> subtraherar medelvärdet <span class="math inline">\(\overline{X}\)</span>. Parentesen <span class="math inline">\(\left( Y_{i} - \overline{Y} \right)\)</span> innebär samma sak för respektive observation <span class="math inline">\(i\)</span> av <span class="math inline">\(Y\)</span>. För varje observation multiplicerar vi <span class="math inline">\((X_{i} - \overline{X})(Y_{i} - \overline{Y})\)</span>.</li>
+<li>Täljaren i definitionen för <span class="math inline">\(\widehat{b}\)</span> innebär att vi för varje observation beräknar <span class="math inline">\((X_{i} - \overline{X})(Y_{i} - \overline{Y})\)</span> och summerar dessa. Detta dividerar vi med <span class="math inline">\(\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}\)</span>, där vi för respektive observation tar parentesen <span class="math inline">\(\left( X_{i} - \overline{X} \right)\)</span> i kvadrat och summerar över alla observationer.</li>
+</ul>
 </div>
 <div id="beräkna-widehata-och-widehatb" class="section level4" number="29.0.2.3">
 <h4>
@@ -448,7 +461,8 @@ Summa
 <p><span class="math display">\[\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}} = \frac{5}{10} = 0,5 \tag{6}\]</span></p>
 <p>Resultat <span class="math inline">\(\widehat{b} = 0,5\)</span> innebär att en ökning av <span class="math inline">\(X\)</span> med en enhet i genomsnitt associeras med ett 0,5 högre <span class="math inline">\(Y\)</span>. Eftersom vi nu har <span class="math inline">\(\widehat{b}\)</span> kan vi även estimera <span class="math inline">\(\widehat{a}\)</span>:</p>
 <p><span class="math display">\[\widehat{a} = \overline{Y} - \widehat{b}\overline{X} = 3,5 - 0,5*5 = 1 \tag{7}\]</span></p>
-<p>Resultatet <span class="math inline">\(\widehat{a} = 1\)</span> innebär att för <span class="math inline">\(X = 0\)</span> är <span class="math inline">\(\widehat{Y} = 1\)</span>. Resultaten <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>  är samma som vi såg i föregående avsnitt. Låt oss nu beräkna punkterna på raka linjen genom att beräkna <span class="math inline">\({\widehat{Y}}_{i}\)</span>. Detta ges av regressionsmodellen, estimaten för <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> och observationerna från den förklarande variabeln <span class="math inline">\(X\)</span>. Vi får följande definition för estimerade <span class="math inline">\(\widehat{Y}\)</span>:</p>
+<p>Resultatet <span class="math inline">\(\widehat{a} = 1\)</span> innebär att för <span class="math inline">\(X = 0\)</span> är <span class="math inline">\(\widehat{Y} = 1\)</span>. Resultaten <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>  är samma som vi såg i föregående avsnitt.</p>
+<p>Låt oss nu beräkna punkterna på raka linjen genom att beräkna <span class="math inline">\({\widehat{Y}}_{i}\)</span>. Detta ges av regressionsmodellen, estimaten för <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> och observationerna från den förklarande variabeln <span class="math inline">\(X\)</span>. Vi får följande definition för estimerade <span class="math inline">\(\widehat{Y}\)</span>:</p>
 <p><span class="math display">\[{\widehat{Y}}_{i} = \widehat{a} + \widehat{b}X = 1 + 0,5X_{i} \tag{8}\]</span></p>
 <p>där <span class="math inline">\(X_{i}\)</span> är observationerna för <span class="math inline">\(X\)</span>. Med <span class="math inline">\(\widehat{Y}\)</span> kan vi även estimera residualen <span class="math inline">\(\widehat{V}\)</span>. Resultaten presenteras i tabell 2. I kolumnen för <span class="math inline">\(\widehat{Y}\)</span> ser vi <span class="math inline">\(Y\)</span>-värdena längs med regressionslinjen. Vi har endast värden på regressionslinjen som sammanfaller med de värden vi har för variabeln <span class="math inline">\(X\)</span>. Pröva själv att i ett diagram rita ut punkterna <span class="math inline">\(\left( X_{1},{\widehat{Y}}_{1} \right) = (3,\ \ 2,5)\)</span>, (4,3) , (6,4) och (7, 4,5)</p>
 <p><strong>Tabell 2. Estimera</strong> <span class="math inline">\(\widehat{\mathbf{Y}}\)</span> <strong>och</strong> <span class="math inline">\(\widehat{\mathbf{V}}\)</span></p>
@@ -586,8 +600,10 @@ Summa
 <span class="header-section-number">29.0.2.4</span> Kopplingen till kovarians och varians<a class="anchor" aria-label="anchor" href="#kopplingen-till-kovarians-och-varians"><i class="fas fa-link"></i></a>
 </h4>
 <p>I <a href="https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&amp;dl=0">avsnitt 2.3</a> introducerade vi kovarians. Estimatorn för koefficient <span class="math inline">\(\widehat{b}\)</span> för regressionsmodellen <span class="math inline">\(Y = a + bX + V\)</span> kan även definieras som kovariansen mellan <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> dividerat med variansen för förklarande variabeln <span class="math inline">\(X\)</span>:</p>
-<p><span class="math display">\[\frac{cov(X,Y)}{var(X)} = \frac{\frac{1}{n}\sum_{i}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\frac{1}{n}\sum_{i}^{n}\left( X_{i} - \overline{X} \right)}\  \tag{9}\]</span></p>
-<p><span class="math inline">\(= \frac{\sum_{i}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{n}\left( X_{i} - \overline{X} \right)} = \widehat{b}\)</span></p>
+<p><span class="math display">\[\begin{aligned}
+\frac{cov(X,Y)}{var(X)} &amp;= \frac{\frac{1}{n}\sum_{i}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\frac{1}{n}\sum_{i}^{n}\left( X_{i} - \overline{X} \right)} \tag{9}\\
+&amp;= \frac{\sum_{i}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{n}\left( X_{i} - \overline{X} \right)} = \widehat{b}
+\end{aligned}\]</span></p>
 <div class="ex-section-title">
 <p>Övningar</p>
 </div>

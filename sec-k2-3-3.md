@@ -8,6 +8,7 @@
 
 ### Teori
 I tidigare avsnitt har vi estimerat två olika regressionsmodeller. Varje modell utgick från fyra observationer vardera. Regressionsanalys är ett sätt att studera mönster i data. Vi kan använda våra regressionsmodeller för att pröva i vilken utsträckning som det mönster som en regressionsmodell beskriver faktiskt återfinns i våra data.
+
 Att estimera koefficienterna i regressionsmodellen är då endast första steget i en regressionsanalys. Därefter vill vi jämföra hur väl mönstret i vår regressionsmodell faktiskt stämde med det mönster som fanns i observationerna. Detta är ett vanligt tillvägagångssätt och därför viktigt att känna till.
 
 #### Medelkvadratsumman
@@ -17,6 +18,7 @@ För att studera hur väl en regressionsmodell passar mot data kan vi även jäm
 $$MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p} \tag{5}$$
 
 Nämnaren $n - p$ visar antal frihetsgrader, där $n$ är antal observationer och $p$ är antal estimerade koefficienter i regressionsmodellen. Frihetsgrader anger hur många \"fria\" värden vi har kvar efter att ha estimerat koefficienterna: $n$ = antal observationer (här 4). $p$ = antal estimerade koefficienter (här 2: $a$ och $b$). $n - p$ = frihetsgrader $(4\ - \ 2\ = \ 2)$. Med 4 observationer och 2 koefficienter har vi \"använt upp\" 2 frihetsgrader för att estimera koefficienterna. Vi har 2 frihetsgrader kvar för att mäta variation kring regressionslinjen.
+
 Förenklat kan ett lågt MSR innebära att regressionsmodellens predikterade $\widehat{Y}$ hamnar relativt nära observationerna $Y$.
 
 #### Medelkvadratsumman av den förklarade variationen
@@ -29,8 +31,11 @@ I täljaren tar vi $p$, antal estimerade koefficienter, minus 1 eftersom koeffic
 
 #### Låt oss jämföra två regressionsmodeller
 I tidigare avsnitt har vi använt två olika samlingar med observationer för att utifrån minstakvadratmetoden estimera de två regressionsmodellerna från [avsnitt 2.4](https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&dl=0) och [avsnitt 3.2](https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&dl=0):
+
 Modell 1: $Y = a + bX + V$ (7)
+
 Modell 2: $Z = \alpha + \beta K + \epsilon$
+
 Tabell 2 och 3 återger observationerna vi använde för att estimera respektive tabell och några beräkningar vi nu ska använda i vår jämförelse.
 
 **Tabell 2: Observationer och beräkningar för modell 1**
@@ -202,6 +207,7 @@ Förklaring: se text.
 
 ::: {.fig-caption}
 Förklaring: se text.
+
 Nu ska vi jämföra vilken av modellerna som passar bäst mot deras respektive datapunkter. Vi börjar med att beräkna MSR för respektive regressionsmodell. Tabell 2 upprepar observationerna för modell 1 och variablerna $X$ och $Y$ samt några beräkningar som vi behöver. Detta ger MSR:
 :::
 
@@ -215,6 +221,7 @@ Låt oss beräkna MSR även för regressionsmodell 2: $Z = \alpha + \beta K + \e
 $$MSR_{modell\ 2} = \frac{5}{2} = 2,5 \tag{9}$$
 
 Eftersom $MSR_{modell\ 2} \> MSR_{modell\ 1}$ indikerar på att den första regressionsmodellens predikterade $\widehat{Y}$ ligger närmare observerade $Y$, jämfört med hur väl den andra regressionsmodellen lyckas prediktera den förklarade variabeln $Z$ i den modellen.
+
 MSR beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.
 
 ### Vi beräknar $R^{2}$ för båda modellerna
@@ -229,6 +236,7 @@ Resultat $R^{2} = \frac{1}{2}$ indikerar att hälften av variationen i $Y$ kan f
 $$R_{modell\ 2}^{2} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} = 1 - \frac{5}{9} = \frac{4}{9} \tag{11}$$
 
 Eftersom $\frac{4}{9} \< \frac{1}{2}$ indikerar detta att den första regressionsmodellen har högre förklaringsgrad jämfört med den andra modellen. Modell 1 passar därför, enligt detta mått, bättre mot den data som vi använde för att estimera modellen, jämfört med hur modell 2 passar mot den data vi använde för att estimera den modellen.
+
 Detta betyder att 50 % av variationen i $Y$ förklaras av $X$. 50 % av variationen i $Y$ beror på andra faktorer (residualerna). Ett högre $R^{2}$ betyder att modellen \"passar bättre\" mot data, men det betyder inte automatiskt att modellen är bra. Ett högt eller lågt $R^{2}$ säger inte heller nödvändigtvis något om orsakssamband.
 
 

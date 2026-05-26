@@ -7,16 +7,21 @@
 
 ### Teori
 Det finns flera sätt att mäta levnadsstandard, välstånd och rikedom. Ett vanligt mått är *Bruttonationalprodukt (BNP)*, vilket är värdet för alla varor och tjänster som produceras. Ofta anges BNP per land och år. År 2023 var Sveriges BNP ca 6 200 miljarder kronor. I Sverige [beräknas BNP av Statistiska centralbyrån](https://www.scb.se/hitta-statistik/sverige-i-siffror/samhallets-ekonomi/bnp-i-sverige/) (SCB).
+
 *BNP per invånare* (BNP per capita) beräknas genom att dividera BNP med antal invånare. Ett annat mått som används ibland är BNP per arbetad timme, vilket är BNP dividerat med en uppskattning av den totala mängden arbetstimmar som utfördes i Sverige under ett år.
 
 #### Real BNP
 Säg att BNP ökade med 4 %, men att hälften av detta var rena prishöjningar. Värdet av mängden producerade varor och tjänster ökade i så fall med 2 %.
+
 För att justera BNP för prisförändringar använder man i regel en [BNP-deflator](https://en.wikipedia.org/wiki/GDP_deflator), vilket är ett annat prisindex än konsumentprisindex (KPI). För att mäta mängden produktion justeras BNP för prisförändringar, deflateras ([här](https://www.scb.se/hitta-statistik/statistik-efter-amne/nationalrakenskaper/nationalrakenskaper/nationalrakenskaper-kvartals-och-arsberakningar/produktrelaterat/Fordjupad-information/vanliga-fragor--nationalrakenskaper/) kan du läsa mer om hur BNP deflateras).
+
 BNP är ett sätt att mäta inkomsterna i ett land. BNP per invånare är därför ett grovt mått på befolkningens genomsnittliga levnadsstandard. För att jämföra över tid använder vi real BNP, vilket är nominell BNP justerad (deflaterad) för rena prisförändringar. BNP per arbetstimme är ett grovt mått på produktivitet, det vill säga hur mycket som produceras (räknat i pengar) per arbetstimme.
 
 #### Sveriges ekonomiska tillväxt
 Under åren 2010---2019 ökade Sveriges reala BNP per capita från 444,8 tusen kr till 488,8 tusen kr, se tabell 1. Vi börjar med att räkna ut den procentuella förändringen av BNP per capita per år. Vi skriver BNP per capita år *t* som $y_{t}$. Vi kan beräkna årlig procentuell förändringstakt som:
+
 BNP-tillväxt $= \frac{y_{t}\ --y_{t - 1}}{y_{t\ - 1}}$
+
 För år 2010 får vi:
 
 
@@ -112,6 +117,7 @@ $$a = b^{x}$$
 
 [Tiologaritmen](https://www.matteboken.se/lektioner/matte-2/logaritmer/tiologaritmer#!/) syftar på logaritm med bas 10. [Naturliga logaritmen](https://www.matteboken.se/lektioner/matte-3/derivata/den-naturliga-logaritmen#!/) har basen $e \approx 2,718$, [Eulers tal](https://www.matteboken.se/lektioner/matte-3/derivata/talet-e#!/).
 Nu ska vi använda naturliga logaritmen för att jämföra BNP över tid. Tabell 2 visar Sveriges BNP i miljoner kronor år 1800--2000. Den tredje kolumnen visar [naturliga logaritmen](https://www.matteboken.se/lektioner/matte-3/derivata/den-naturliga-logaritmen#!/) av BNP. Första talet är 115 och $\ln(115) \approx 4,7$, vilket innebär att $e^{4,7} \approx 115$.
+
 I tabellen kan vi se hur en lika stor relativ förändring i $ln(BNP)$ motsvaras av samma absoluta förändring av den naturliga logaritmen. Varje gång BNP fördubblas, oavsett från vilken nivå, är förändringen i $ln(BNP)$ cirka 0,7. Varje gång BNP tredubblas ökar $\ln(BNP)$ med cirka 1,1. När BNP tiodubblas ökar $ln(BNP)$ med cirka 2,3.
 
 **Tabell 2: BNP och naturliga logaritmen av BNP**
@@ -242,8 +248,11 @@ I tabellen kan vi se hur en lika stor relativ förändring i $ln(BNP)$ motsvaras
 
 ::: {.fig-caption}
 Förklaring: Data från [www.historia.se](http://www.historia.se). Ln(BNP) är naturliga logaritmen av talen i kolumnen med BNP räknat i miljoner kr.
+
 Siffrorna från tabell 2 illustreras i figur 1 med två diagram: I det vänstra diagrammet visas en linje för BNP räknat i miljarder kronor. Under denna period ökade BNP exponentiellt. Från 115 miljoner kronor (0,115 miljarder) år 1800 till 2 013 311 miljoner kr (2 013 miljarder) år 2000. Det högra diagrammet visar samma sak i naturliga logaritmen, $ln(BNP)$, där linjen i stället är mer rak.
+
 I det vänstra diagrammet jämför vi absoluta förändringar, medan det högra diagrammet kan användas för att jämföra relativa förändringar. I det högra diagrammet kan vi se att Sveriges ekonomi växte snabbare under 1900-talet jämfört med 1800-talet.
+
 Om linjen i det högra diagrammet hade varit helt rät hade de inneburit att den relativa, procentuella, tillväxttakten på lång sikt hade varit konstant. Det finns inga enkla regler för vilket mått som är bäst. Vilket mått du bör använda beror på vad du vill mäta, jämföra eller visa. Men naturliga logaritmen används ofta för att just jämföra relativa skillnader och förändringar.
 :::
 

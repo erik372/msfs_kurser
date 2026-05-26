@@ -6,28 +6,47 @@
 - **Superpopulation:** Den större, ofta mer hypotetiska, populationen av människor eller saker vi vill kunna uttala oss om bortom den population vi hämtar våra urvalsdata från.
 
 ### Teori
-En avgörande fråga i analytiskt arbete är hur vi avgränsar vårt problem och hur stor del av världen och världshistorien som vi vill kunna uttala oss om. Dessa fenomen kan vi beskriva och resonera kring med hjälp av begreppen *population,* *urval* och *superpopulation*. Urval kallas även för *stickprov*. Se även Mattebokens avsnitt om [Stickprov och urvalsmetoder](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/stickprov-och-urvalsmetoder#!/).
+En avgörande fråga i analytiskt arbete är hur vi avgränsar vårt problem och hur stor del av världen och världshistorien som vi vill kunna uttala oss om. Dessa fenomen kan vi beskriva och resonera kring med hjälp av begreppen *population,* *urval* och *superpopulation*.
+
+Urval kallas även för *stickprov*. Se även Mattebokens avsnitt om [Stickprov och urvalsmetoder](https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/stickprov-och-urvalsmetoder#!/).
 
 #### Population och urval
-**Population** syftar i statistik på hela den samling av observationer som vi vill veta något om. Till exempel alla människor som just nu bor i Sverige. Eller alla kvinnor mellan 50 och 70 år gamla i Uppsala. Eller alla cancerpatienter i hela världen som just nu har en särskild diagnos. Population i statistik behöver inte vara en samling människor utan kan även bestå av saker, som åkrar eller bilar.
+**Population** syftar i statistik på hela den samling av observationer som vi vill veta något om. Till exempel alla människor som just nu bor i Sverige. Eller alla kvinnor mellan 50 och 70 år gamla i Uppsala. Eller alla cancerpatienter i hela världen som just nu har en särskild diagnos.
+
+Population i statistik behöver inte vara en samling människor utan kan även bestå av saker, som åkrar eller bilar.
+
 **Urval** är de observationer, det stickprov, vi hämtar från populationen. Vår förhoppning är att de mönster vi kan observera i urvalet är samma mönster som återfinns i hela populationen.
-**Superpopulation** är den teoretiska population som vi hoppas kunna uttala oss om bortom undersökningens urval och population. Säg att vi utför en analys på ett urval av observationer som vi hämtar från en population. Ofta vill vi kunna uttala oss både om populationen som existerar idag och olika tänkbara populationer som kan tänkas existera i framtiden.
+
+**Superpopulation** är den teoretiska population som vi hoppas kunna uttala oss om bortom undersökningens urval och population.
+
+Säg att vi utför en analys på ett urval av observationer som vi hämtar från en population. Ofta vill vi kunna uttala oss både om populationen som existerar idag och olika tänkbara populationer som kan tänkas existera i framtiden.
 
 #### Prediktera
 I vissa fall utför vi analyser för att kunna förutspå vad som kommer att hända om något ändras, det vill säga för att kunna *prediktera* olika tänkbara utfall. Dessa hypotetiska observationer tillhör det som kallas för superpopulationen.
+
 När vi arbetar med urval, vilket normalt är fallet inom samhällsvetenskap, finns alltid en viss risk att våra resultat är felaktiga och lika gärna kunde ha uppstått av en slump. Ju mindre urval, desto osäkrare resultat. Längre fram i denna kurs ska vi gå igenom hur vi kan arbeta med slump.
+
 Arbete med data under osäkerhet kallas för *statistisk inferens*. Ordet inferens betyder slutledning, att dra slutsatser. Att studera orsakssamband (kausalitet) kallas ibland för *kausal inferens*.
 
 #### Svårt att definiera
 Det kan ibland vara svårt att exakt definiera vad som är en undersöknings exakta population och superpopulation. Om vi studerar vilken effekt en medicin har på patienters sjukdomssymptom kan populationen till exempel bestå av alla patienter i hela världen med denna sjukdom.
-Från de patienter som existerar idag tar vi ett stickprov på 100 patienter, som vi delar in i behandlings- och kontrollgrupp. Genom att studera samvariationen mellan medicin och symptom i urvalet hoppas vi kunna uttala oss om samma samvariation i populationen. Utifrån dessa observationer vill vi uttala oss om den effekt medicinen har i urvalet, vilket är en uppskattning av den effekt medicinen har i populationen.
+
+Från de patienter som existerar idag tar vi ett stickprov på 100 patienter, som vi delar in i behandlings- och kontrollgrupp. Genom att studera samvariationen mellan medicin och symptom i urvalet hoppas vi kunna uttala oss om samma samvariation i populationen.
+
+Utifrån dessa observationer vill vi uttala oss om den effekt medicinen har i urvalet, vilket är en uppskattning av den effekt medicinen har i populationen.
+
 Genom att studera urvalet och uttala oss om populationen vill vi även uppskatta effekterna av medicinen i superpopulationen, som i detta fall är alla jämförbara patienter som kan tänkas komma att existera i framtiden. Eftersom människor är olika är det inte alltid så självklart hur generella våra resultat är och hur långtgående slutsatser vi kan dra.
 
 #### Exemplet utbildning
 Säg att vi i stället är intresserade av vilken effekt en utbildning har på människors framtida inkomster. Populationen skulle i detta fall kunna vara alla personer som kan tänkas delta i utbildningen, till exempel alla vuxna människor i åldrarna 18 till 64 år.
+
 Eller kanske vi enbart är intresserade av människor med vissa specifika förutsättningar. Beroende på vad som är undersökningens syfte och ambition kan det påverka hur vi definierar populationen.
+
 På samma sätt måste vi även vara noga med hur vi definierar de fenomen och utfall vi studerar. Studerar vi effekterna av en utbildning, endast utifrån hur den utbildningen såg ut på den platsen detta år? Eller menar vi att våra resultat är jämförbara med motsvarande utbildning på andra platser vid andra tidpunkter?
-Även superpopulation kan vara svårt att definiera. Säg att vi i vår analys finner att utbildningen har en positiv inverkan på deltagarnas framtida inkomster. Om ett stort antal människor läste utbildningen skulle det finnas massor med människor med samma utbildning. Då skulle utbildningen kanske inte ha samma effekt jämfört med en situation där endast en liten andel av befolkningen hade läst utbildningen.
+
+Även superpopulation kan vara svårt att definiera. Säg att vi i vår analys finner att utbildningen har en positiv inverkan på deltagarnas framtida inkomster.
+
+Om ett stort antal människor läste utbildningen skulle det finnas massor med människor med samma utbildning. Då skulle utbildningen kanske inte ha samma effekt jämfört med en situation där endast en liten andel av befolkningen hade läst utbildningen.
 
 
 ::: {.ex-section-title}

@@ -5,7 +5,9 @@
 
 ### Teori
 Ekvationerna i detta avsnitt är de mest komplexa i hela kursen. Huvudbudskapet här är följande: Standardfelet för varje koefficient vi estimerar i en regressionsmodell kan påverkas av alla andra variabler i regressionsmodellen. Och omvänt -- om vi utelämnar något relevant fenomen i en analys kan även detta inverka på våra resultat och slutsatser.
+
 Detta är återigen ett centralt argument för varför vetenskapliga experiment är en avgörande metod för att vi ska kunna uttala oss om orsak och verkan och förstå hur världen fungerar.
+
 Du behöver inte kunna beräkna detta för hand. Datorer gör sådana här beräkningar automatiskt på nolltid. Om matematiken känns överväldigande: Hoppa till rubrik \"Huvudpoängen igen\" nedan. Liksom tidigare är det dock rekommenderat att du oavsett gör ett försök att gå igenom även denna matematik för att bättre förstå metoderna och logiken bakom dessa.
 
 ### Utgångspunkter
@@ -76,6 +78,7 @@ Vi utgår från signifikansnivån $\alpha = 0,05$. Alla tre test är tvåsidiga 
 $$t_{\widehat{a}} = \frac{\widehat{a}}{s_{\widehat{a}}},\ \ \ \ \ \ t_{b} = \frac{\widehat{b}}{s_{\widehat{b}}},\ \ \ \ t_{\widehat{c}} = \frac{\widehat{c}}{s_{\widehat{c}}} \tag{4}$$
 
 I nämnaren har vi standardfelet för respektive estimator, $s_{\widehat{a}},s_{\widehat{b}}$ och $s_{\widehat{c}}$. Standardfelet är, i likhet med standardavvikelse, positiva kvadratroten av variansen, vilket är lättare att skriva ut ekvationen för, som $\text{var}\left( \widehat{a} \right)$ (se [avsnitt 5.5](https://www.dropbox.com/scl/fi/q6c5skce5272hw6sbohcr/5-5-Regressionsanalys-med-sannolikhet.docx?rlkey=p1ue537yaw3c5difdil7zmlrb&dl=0)).
+
 När vi nu har tre variabler i regressionsmodellen blir variansen för våra tre estimatorer $\widehat{a},\widehat{b}$ och $\widehat{c}$, följande:
 
 
@@ -85,8 +88,11 @@ där ${\widehat{s}}_{\widehat{V}}$ är estimerad standardfelet för residualerna
 
 #### Måste jag lära mig allt det här?
 Ekvation 5 är omfattande. Poängen med att gå igenom den här matematiken är dock inte att vi nödvändigtvis ska lära oss räkna allt detta för hand, utan för att vi ska få en bättre förståelse av hur metoderna fungerar och inte fungerar.
+
 En viktig sak med ekvation 5 är att vi kan se hur standardfelet (osäkerheten) för respektive koefficient är en funktion av både observationer för den variabel som hör till denna koefficient och observationer för de andra två variablerna som ingår i regressionsmodellen.
+
 I avsnitt [4.1](https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&dl=0), [4.4](https://www.dropbox.com/scl/fi/sdnc9eukta9tuiq1y6z0f/4-4-Regression-med-matriser.docx?rlkey=zmc4680olys9qe0zmn7i0vswc&dl=0) och [4.5](https://www.dropbox.com/scl/fi/mqe9yo4dnoh6k581l95ut/4-5-Estimera-med-matriser.docx?rlkey=j8hs4g14ujp401hkp5dg0fygs&dl=0) såg vi hur estimeringen av koefficienterna i regressionsmodellen, alltså samvariationen mellan varje förklarande variabel (som $X$ och $Z$) och den förklarade variabeln ($Y$), kan påverkas av observationerna för varje annan variabel i regressionsmodellen. I [avsnitt 4.7](https://www.dropbox.com/scl/fi/qpe35hc5zxm99tqxkt4q0/4-7-R-kna-p-orsak-och-effekt.docx?rlkey=eijkxl77yiu7lj0kbysw5yw5t&dl=0) såg vi att detta är avgörande när vi vill studera orsakssamband.
+
 Ekvation 5 illustrerar nu hur även det statistiska testet för respektive lutningskoefficient (t-testet) kan påverkas av observationer för samtliga variabler som ingår i regressionsmodellen. Detta är viktigt för att förstå analys och vetenskap och är centralt för hur vi tänker att världen fungerar.
 
 #### Beräkna estimaten
@@ -96,6 +102,7 @@ Låt oss beräkna t-testen för koefficienterna. Estimerat standardfel för resi
 $${\widehat{s}}_{\widehat{V}} = \frac{\sum_{}^{}\ \left( y_{i} - \widehat{y} \right)^{2}}{n - p} \approx \frac{0,338}{4 - 3} \approx 0,338 \tag{6}$$
 
 Resultatet för $\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}$ kan vi räkna ut med hjälp av uppgifterna i [avsnitt 4.1](https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&dl=0). Bokstaven $n$ är antal observationer och $p$ är antal koefficienter i regressionsmodellen, varför $n - p =$ $4 - 3 = 1$.
+
 Resultatet ${\widehat{s}}_{\widehat{V}} \approx 0,338$ använder vi för att skatta standardfelet för respektive koefficient $\widehat{a}$, $\widehat{b}$ och $\widehat{c}$. Vi tar positiva kvadratroten av variansen för respektive estimator:
 
 
@@ -107,13 +114,18 @@ Nu kan vi skatta t-värdena till t-testen för respektive lutningskoefficients e
 $$\begin{matrix} & t_{\widehat{a}} = \frac{2,89}{1,22} \approx 2,37 \\ & t_{\widehat{b}} = \frac{0,28}{0,203} \approx 1,4 \\ & t_{\widehat{c}} = \frac{- 0,54}{0,214} \approx - 2,52 \end{matrix} \tag{8}$$
 
 Nu har vi beräknat t-värdena för respektive estimator och kan jämföra dessa mot t-fördelningen, beroende på vald signifikansnivå. T-fördelningens form beror liksom tidigare på antal frihetsgrader. Om våra beräknade $t$ överstiger kritiska t-värdet, det vill säga $t^{*}$ $\|t\| \> t^{*}$, avvisar vi respektive $H_{0}$ som falsk.
+
 I [avsnitt 5.](https://www.dropbox.com/scl/fi/q6c5skce5272hw6sbohcr/5-4-Regressionsanalys-med-sannolikhet.docx?rlkey=p1ue537yaw3c5difdil7zmlrb&dl=0)5 illustrerade vi t-fördelningen för 2 respektive 1 000 frihetsgrader. För enkelhetens skull kan vi här jämföra med 2 frihetsgrader, som vi använde i föregående avsnitt. Egentligen har vi här 1 frihetsgrad och då är de kritiska t-värdena ännu längre bort från medelvärdet.
+
 Våra beräknade t-värden är långt ifrån konfidensnivåerna 90 respektive 95 %. Våra beräknade t-värden innebär att det är cirka 25 %, 39 % respektive 24 % sannolikhet att respektive $H_{0}$ är falsk (beräkning redovisas ej här).
+
 Vi avfärdar därför ingen av de tre nollhypoteserna. Våra resultat för estimerade koefficienterna är således inte statistiskt signifikanta. Vi har därför ingen anledning att tro att populationens koefficienter $a,b$ eller $c$ är skilda från noll.
 
 #### T-test för valfritt antal koefficienter
 Trots att vi endast hade två förklarande variabler i regressionsmodellen är de tre ekvationerna i ekvation 5 ovan omfattande. Ofta arbetar vi med flera variabler, varpå ekvationerna blir ännu mer omfattande. Vi kan beskriva matematiken för detta mer kompakt genom att använda matriser.
+
 Nu ska vi gå igenom hur vi kan beskriva matematiken för t-test med ett valfritt antal variabler i regressionsmodellen. På samma sätt som vi introducerade i [avsnitt 4.4](https://www.dropbox.com/scl/fi/sdnc9eukta9tuiq1y6z0f/4-4-Regression-med-matriser.docx?rlkey=zmc4680olys9qe0zmn7i0vswc&dl=0) ska vi därför återigen använda matriser för att beskriva vår regressionsmodell och analys. Poängen är återigen att vi ska få en ökad förståelse för metoderna.
+
 Säg att vi har följande regressionsmodell för en population:
 
 
@@ -124,13 +136,16 @@ Vi ska nu gå igenom hur vi kan beskriva varians och standardfel för samtliga k
 
 #### Varians-kovariansmatrisen
 Varians-kovariansmatrisen som vi ska arbeta med kan skrivas på följande sätt: $var\left( \widehat{B} \middle\| X \right)$, där $\widehat{B}$ och $X$ är matriser. Vi har alltså variansen, $var(\ )$, av estimatorn för koefficienterna $\widehat{B}$, givet värdena i de förklarande variablerna $X$.
+
 För populationens regressionsmodell kan detta skrivas på följande sätt:
 
 
 $$\text{var}\left( \widehat{B} \middle\| X \right) = \sigma_{V}^{2}\left( X^{T}X \right)^{- 1} \tag{10}$$
 
 som består av två delar: $\sigma_{V}^{2}$ och $\left( X^{T}X \right)^{- 1}$. Den första delen, $\sigma_{V}^{2}$, beskriver feltermernas varians (oförklarad variation) i populationen. Populationsvärdet är i regel okänt men vi kan estimera den med urvalsdata.
+
 Hela den andra delen, $\left( X^{T}X \right)^{- 1}$, beskriver en enda matris sammansatt av två andra matriser, nämligen $X$ (de förklarande variablerna) och transponerade $X^{T}$. Dessa två matrismultipliceras, $X^{T}X$. Därefter tar vi matrisinversen av resultatet: $\left( X^{T}X \right)^{- 1}$.
+
 Låt oss byta ut populationens varians $\sigma_{V}^{2}$ mot estimerade variansen: ${\widehat{s}}_{V}^{2}$. Vi får då estimerade varians-kovariansmatrisen:
 
 
@@ -140,18 +155,23 @@ Definitionen av ${\widehat{s}}_{V}^{2}$ använde vi i [avsnitt 5.4](https://www.
 
 ### Varför är varians-kovariansmatrisen viktig?
 Som vi gick igenom i avsnitt [4.1](https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&dl=0), [4.4](https://www.dropbox.com/scl/fi/sdnc9eukta9tuiq1y6z0f/4-4-Regression-med-matriser.docx?rlkey=zmc4680olys9qe0zmn7i0vswc&dl=0) och [4.5](https://www.dropbox.com/scl/fi/mqe9yo4dnoh6k581l95ut/4-5-Estimera-med-matriser.docx?rlkey=j8hs4g14ujp401hkp5dg0fygs&dl=0) såg vi att koefficienternas estimator $\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y$ innebär att varje annan variabel i regressionsmodellen kan påverka estimaten för samtliga koefficienter i modellen. Om någon variabel saknas som borde ingå i regressionsmodellen påverkar detta per definition också våra resultat.
+
 Varians-kovariansmatrisen $var(\widehat{B} \mid X)$ illustrerar hur varje förklarande variabel som inkluderas eller exkluderas i regressionsmodellen även kan påverka resultaten för de statistiska testen för samtliga koefficienter i modellen. Detta eftersom alla förklarande variabler är representerade i matris $X$, vars innehåll kan påverka resultaten för samtliga t-test.
+
 Betydelsen av detta för analytiskt arbete i allmänhet och samhällsvetenskapen i stort går inte att överskatta. I [avsnitt 4.7](https://www.dropbox.com/scl/fi/qpe35hc5zxm99tqxkt4q0/4-7-R-kna-p-orsak-och-effekt.docx?rlkey=eijkxl77yiu7lj0kbysw5yw5t&dl=0) gick vi igenom hur vi behöver särskilda metoder för att studera orsakssamband. Vi måste vara mycket noggranna när vi studerar och mäter kausala effekter, jämför orsak och verkan och jämför en behandlingsgrupp med en kontrollgrupp.
+
 Det finns ingen metod för att objektivt bevisa att ett fenomen bör inkluderas eller exkluderas i en analys. Varians-kovariansmatrisen illustrerar ännu tydligare varför denna typ av utmaningar är viktiga att fundera kring. Detta är förklaringen till vad det vetenskapliga experimentet fyller för funktion och varför samhällsvetenskapen behöver kvasiexperimentella metoder ([avsnitt 4.7](https://www.dropbox.com/scl/fi/qpe35hc5zxm99tqxkt4q0/4-7-R-kna-p-orsak-och-effekt.docx?rlkey=eijkxl77yiu7lj0kbysw5yw5t&dl=0)).
 
 #### Ett exempel
 För att bättre förstå innehållet i $var(\widehat{B} \mid X)$ kan vi illustrera med ett exempel. Huvudsaken med denna genomgång är främst de mer övergripande resonemangen.
+
 Säg att vi har regressionsmodellen $Y = a + bX + V$ med de två variablerna $X$ och $Y$ och de två koefficienterna $a$ och $b$ (det vill säga ej skriven med matriser) och feltermen $V$. Estimerade varians-kovariansmatrisen för denna regressionsmodell blir:
 
 
 $$var(\widehat{B} \mid X) = {\widehat{s}}_{\widehat{V}}^{2}\left( X^{T}X \right)^{- 1} = \begin{bmatrix} var(\widehat{a}) & cov(\widehat{a},\widehat{b}) \\ cov(\widehat{b},\widehat{a}) & var(\widehat{b}) \end{bmatrix} \tag{12}$$
 
 I matrisens diagonal (övre vänstra och nedre högra elementen) har vi variansen för estimatorerna för koefficienterna: $\widehat{a}$ och $\widehat{b}$. De två andra elementen är kovariansen mellan estimatorerna. Variansen i diagonalen ges av att $\text{cov}\left( \widehat{a},\widehat{a} \right) = \text{var}\left( \widehat{a} \right)$ (se [avsnitt 2.3](https://www.dropbox.com/scl/fi/357utiljgf7iuk78jxhtv/2-3-Samvariation-1.docx?rlkey=ewtjvwrihoflt8tlvf8dccppo&dl=0)).
+
 För att se detaljerna i $var(\widehat{B} \mid X)$ börjar vi med att beskriva inversmatrisen $\left( X^{T}X \right)^{- 1}$ :
 
 
@@ -163,6 +183,7 @@ Nu har vi ett uttryck för inversmatrisen $\left( X^{T}X \right)^{- 1}$. För at
 $$\begin{matrix} & {\widehat{s}}_{\widehat{V}}^{2}\left( X^{T}X \right)^{- 1} = \left( \frac{\sum_{}^{}\ \left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\begin{bmatrix} \frac{\sum_{}^{}x_{i}^{2}}{n\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \\ \frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \frac{1}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \end{bmatrix} \\ & = \begin{bmatrix} \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{\sum_{}^{}x_{i}^{2}}{n\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \\ \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{- \bar{x}}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} & \left( \frac{\sum_{}^{}\left( y_{i} - \widehat{y} \right)^{2}}{n - p} \right)\frac{1}{\left( \sum_{}^{}x_{i}^{2} - \bar{x}\sum_{}^{}x_{i} \right)} \end{bmatrix} = \\ & = \begin{bmatrix} var(\widehat{a}) & cov(\widehat{a},\widehat{b}) \\ cov(\widehat{b},\widehat{a}) & var(\widehat{b}) \end{bmatrix} \end{matrix} \tag{14}$$
 
 Varians-kovariansmatrisen ger oss, som sagt, variansen för koefficienternas estimatorer. Tar vi kvadratroten av detta får vi standardfelet för koefficienterna, vilket vi behöver för att beräkna de tvåsidiga t-testen för respektive koefficient.
+
 Ovan definierade vi variansen för estimatorerna $\widehat{a}$ och $\widehat{b}$ till:
 
 

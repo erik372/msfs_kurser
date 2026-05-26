@@ -9,6 +9,7 @@
 
 ### Teori
 I förra avsnittet gick vi igenom hur vi kan använda matematik för att beskriva och kvantifiera saker. Inom samhällsvetenskap, liksom i analytiskt arbete i allmänhet, använder vi även matematik för att beskriva relationer mellan olika fenomen. I analytiskt arbete vill vi ofta beskriva relationer i form av *orsakssamband.* Ett annat ord för orsakssamband är *kausalitet* eller *kausalt samband*.
+
 En teori om orsakssamband kan till exempel låta så här:
 - Fenomen A påverkar fenomen B.
 Eller:
@@ -21,9 +22,13 @@ Den här typen av vardagliga idéer om orsakssamband bygger ofta, i likhet med f
 
 #### En teori om lycka
 I forskning och analytiskt arbete måste vi vara noggranna med hur vi formulerar våra idéer. Låt oss ta följande påstående som exempel:
+
 *Ju högre inkomst en människa har, desto lyckligare är personen i genomsnitt.*
+
 Det framgår inte om denna mening beskriver ett orsakssamband eller om vi bara förväntar oss att det ska existera en relation, en samvariation, mellan fenomenen *inkomst* och *lycka*, och att denna relation egentligen förklaras av något annat. Detta kan låta onödigt petigt men är väldigt centralt om vi vill förstå hur världen fungerar.
+
 Om meningen beskriver ett orsakssamband framgår det inte hur stor effekten fkan tänkas vara. Som exempel, hur mycket lyckligare blir jag om min lön ökar med 1 000 kronor? Eller hur mycket lyckligare kan jag förvänta mig att bli om min lön fördubblas?
+
 Det framgår inte heller något om själva mekanismen bakom sambandet. Blir jag lyckligare om min inkomst ökar, utan att jag har gjort något för att den ska öka? Eller är det endast högre inkomst genom hårt arbete som gör människor lyckligare? Förändras min lycka så snart jag har högre inkomst eller ökar lyckan först när jag använder mina pengar till att köpa något?
 
 #### Samma teori med matematik
@@ -33,19 +38,27 @@ Låt oss pröva att använda följande [matematiska funktion](https://www.matteb
 $$Y = a*X$$
 
 Den beroende variabeln *Y* symboliserar här en persons lycka. Bokstaven *X* representerar en persons inkomst räknat i kronor. Bokstaven *a* är en koefficient och anger hur stor effekt en förändring av en persons inkomst har på samma persons lycka. Än så länge vet vi inte värdet för *a*.
+
 Ekvationen är uppställd med *Y* till vänster om likhetstecknet och *X* till höger, och beskriver därför hur variationer i inkomst (*X*) medför, eller förklarar, variationer i lycka (*Y*). I verkligheten kan så klart även *Y* påverka *X*: människor som är mår bättre (är lyckligare) har även bättre förutsättningar att tjäna pengar, jämfört med människor som mår dåligt.
+
 En stor fördel med matematik är att det blir tydligt exakt vad teorin påstår. Med hjälp av matematik kan vi även diskutera i detalj hur vi vill ändra vår teori. Vi kan lägga till fler variabler och skriva om ekvationen för att beskriva en mer komplex idé. Vi kanske vill beskriva hur en förändring av inkomst i 50-årsåldern påverkar lyckan på ett annat sätt än en förändring av inkomsten i 20-årsåldern, eller något annat.
 
 #### En förenkling av verkligheten
 Oavsett hur vi väljer att skriva vår funktion så kommer resultaten vara en förenkling av verkligheten.
+
 Ett vanligt missförstånd är att matematik per definition och nödvändigtvis innebär att vår beskrivning av relationer och teorier blir simplare än vad som är fallet om vi endast använder ord.
+
 Oavsett om vi använder ord eller matematik så innebär teorier om verkligheten alltid, per definition, en förenklad beskrivning. Verkligheten är helt enkelt för komplex för att beskrivas till fullo in i minsta detalj.
+
 Fördelen med att använda matematik är att matematiken kan hjälpa oss att förstå när vi förenklar och hur mycket. Många gånger är det svårare att lura sig själv när man använder matematik, jämfört med om man enbart använder ord.
 
 #### Begränsningar
 Låt oss säga att vi är intresserade av ett fenomen som av någon anledning inte är mätbart. Vi har ingen särskilt användbar information om fenomenet och kommer aldrig att få detta. Trots bristen på information kan matematiken även här vara användbar för att beskriva idéer. Matematiken kan hjälpa oss att resonera logiskt kring vår teori.
+
 En teori om lycka och inkomst säger inte nödvändigtvis något om alla andra saker som kan tänkas göra människor lyckliga. Detta är i sig inte nödvändigtvis något problem. Varje analys eller forskningsprojekt kan inte förklara allting i hela världen samtidigt.
+
 Tvärtom används analytiskt arbete och forskning i regel just för att studera en liten del av verkligheten i taget. Som exempel studerar vi ofta effekten av en medicin i taget, inte alla tänkbara mediciner och åtgärder på en och samma gång.
+
 Även om vi inte lyckas ge en fullständig förklaring till alla tänkbara orsaker bakom människors lycka så kanske vi ändå kan säga något intressant om ett tydligt avgränsat fenomen, som till exempel effekten av inkomst.
 
 
