@@ -309,7 +309,7 @@ Summa
 <p><span class="math display">\[\widehat{\beta} = \sum_{i}^{}{\frac{\left( K_{i} - \overline{K} \right)\left( Z_{i} - \overline{Z} \right)}{\sum_{i}^{}\left( K_{i} - \overline{K} \right)^{2}} = - \frac{8}{16} = - \frac{1}{2}} \tag{2}\]</span></p>
 <p>För koefficienten <span class="math inline">\(\widehat{\alpha}\)</span>:</p>
 <p><span class="math display">\[\widehat{\alpha} = \overline{Z} - \widehat{\beta}\overline{K} = 1,5 - \left( - \frac{1}{2} \right)2 = 2,5 \tag{3}\]</span></p>
-<p>Att <span class="math inline">\(\widehat{\beta} \&lt; 0\)</span> betyder att regressionslinjens lutning är negativ och att vi har en negativ samvariation mellan de fyra observationerna för <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span>. Vi kan nu ställa upp en ekvation för predikterade <span class="math inline">\(\widehat{Z}\)</span>:</p>
+<p>Att <span class="math inline">\(\widehat{\beta} &lt; 0\)</span> betyder att regressionslinjens lutning är negativ och att vi har en negativ samvariation mellan de fyra observationerna för <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span>. Vi kan nu ställa upp en ekvation för predikterade <span class="math inline">\(\widehat{Z}\)</span>:</p>
 <p><span class="math display">\[\widehat{Z_{i}} = \widehat{\alpha} + \widehat{\beta}K_{i} = 2,5 - \frac{1}{2}K_{i} \tag{4}\]</span></p>
 <p>Med hjälp av denna och de observerade värdena för variabeln <span class="math inline">\(K\)</span> kan vi estimera fyra värden för predikterade <span class="math inline">\(\widehat{Z}\)</span>, vilka beskrivs i tabell 2. Med <span class="math inline">\(\widehat{Z}\)</span> kan vi sedan estimera de fyra residualerna <span class="math inline">\(\widehat{\epsilon}\)</span>, vilka beskrivs i samma tabell. De fyra observationerna och regressionslinjen som kan ritas med ekvation 4 illustreras i figur 1.</p>
 <p><strong>Tabell 2. Beräkningar för att estimera</strong> <span class="math inline">\(\widehat{Z}\)</span> <strong>och</strong> <span class="math inline">\(\widehat{\epsilon}\)</span></p>
@@ -421,14 +421,16 @@ Observation i
 </h4>
 <p>För att jämföra hur väl en regressionsmodell passar de data den syftar till att beskriva mönstret för finns det flera metoder. En viktig del i detta är att jämföra residualerna, det vill säga avståndet mellan de data vi använt i vår förklarade variabel <span class="math inline">\(Y\)</span> och de predikterade värdena för samma variabel  <span class="math inline">\(\widehat{Y}\)</span>.</p>
 <p>Om vi har en regressionsmodell med förklarad variabel <span class="math inline">\(Y\)</span> och feltermen <span class="math inline">\(V\)</span> där residualen beräknas <span class="math inline">\(\widehat{V} = Y - \widehat{Y}\)</span> kan vi till exempel jämföra <em>residualernas kvadratsumma</em> (engelska <em>sum of squared residuals</em>, SSR):</p>
-<p><span class="math display">\[SSR = \sum_{i}^{n}\widehat{V_{i}^{2}} = \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{1}\]</span></p>
+<p><span class="math display">\[SSR = \sum_{i}^{n}\widehat{V_{i}^{2}} = \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{5}\]</span></p>
 <p>Vi kan tänka på SSR som mängden variation i förklarade variabeln <span class="math inline">\(Y\)</span> som inte kan förklaras av regressionsmodellen.</p>
 <p>Ett annat användbart mått är <em>kvadratsumman av den förklarade variationen</em> (engelska <em>sum of squares explained</em>, SSE):</p>
-<p><span class="math display">\[SSE = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2} \tag{2}\]</span></p>
+<p><span class="math display">\[SSE = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2} \tag{6}\]</span></p>
 <p>SSE kan beskrivas som den variation i <span class="math inline">\(Y\)</span> som kan förklaras, eller tas bort, av regressionsmodellen. Begreppet “förklaras” innebär i detta sammanhang inte nödvändigtvis “kausal förklaring”.</p>
 <p><em>Totalsumman av kvadrater</em> (engelska <em>total sum of squares</em>, SST) är summan av SSR och SSE. SST kan tolkas som mängden variation som förekommer i <span class="math inline">\(Y\)</span> innan regressionsmodellen estimeras. SST skrivas som summan av den kvadrerade differensen mellan observerade <span class="math inline">\(Y_{i}\)</span> och medelvärdet <span class="math inline">\(\overline{Y}\)</span>:</p>
-<p><span class="math display">\[SST = SSE + SSR \tag{3}\]</span></p>
-<p><span class="math inline">\(\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2} = \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2} + \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</span></p>
+<p><span class="math display">\[\begin{align}
+SST &amp;= SSE + SSR \tag{7}\\
+\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2} &amp;= \sum_{i}^{n}\left( \widehat{Y_{i}} - \overline{Y_{i}} \right)^{2} + \sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}
+\end{align}\]</span></p>
 </div>
 <div id="skillnaden-mellan-ssr-sse-och-sst" class="section level4" number="32.0.2.4">
 <h4>
@@ -448,7 +450,7 @@ Observation i
 <span class="header-section-number">32.0.2.5</span> Determinationskoefficienten, <span class="math inline">\(R^{2}\)</span><a class="anchor" aria-label="anchor" href="#determinationskoefficienten-r2"><i class="fas fa-link"></i></a>
 </h4>
 <p>Utifrån kvadratsummorna kan vi skatta determinationskoefficienten (på engelska <em>coefficient of determination</em>), vilken brukar skrivas som <span class="math inline">\(R^{2}\)</span>:</p>
-<p><span class="math display">\[R^{2} = \frac{SSE}{SST} = \frac{SST - SSR}{SST} = 1 - \frac{SSR}{SST} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} \tag{4}\]</span></p>
+<p><span class="math display">\[R^{2} = \frac{SSE}{SST} = \frac{SST - SSR}{SST} = 1 - \frac{SSR}{SST} = 1 - \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{\sum_{i}^{n}\left( Y_{i} - \overline{Y} \right)^{2}} \tag{8}\]</span></p>
 <p><span class="math inline">\(R^{2}\)</span> mäter hur stor andel av variationen i den förklarade variabeln, till exempel <span class="math inline">\(Y\)</span>, som kan förklaras av regressionsmodellen och variationen i den förklarande variabeln, till exempel <span class="math inline">\(X\)</span>. <span class="math inline">\(R^{2}\)</span> kan anta värden mellan 0 och 1.</p>
 <p><span class="math inline">\(R^{2} = 0\)</span> betyder att ingenting av variationen i <span class="math inline">\(Y\)</span> kan förklaras av regressionsmodellen och variationen i <span class="math inline">\(X\)</span>. <span class="math inline">\(R^{2} = 1\)</span> betyder att all variation i variabel <span class="math inline">\(Y\)</span> förklaras av regressionsmodellen och variationen i variabel <span class="math inline">\(X\)</span>.</p>
 </div>

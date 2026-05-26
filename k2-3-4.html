@@ -135,7 +135,7 @@
 </h4>
 <p>För regressionsmodellen <span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> där <span class="math inline">\(Y_{i}\)</span> och <span class="math inline">\(X_{i}\)</span> är variabler och <span class="math inline">\(V_{i}\)</span> är felterm, introducerade vi estimatorer för koefficienterna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> i avsnitt 2.5:</p>
 <p><span class="math display">\[\widehat{a} = \overline{Y} - \widehat{b}\overline{X} \tag{1}\]</span></p>
-<p><span class="math inline">\(\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}}\)</span></p>
+<p><span class="math display">\[\widehat{b} = \frac{\sum_{i}^{}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{i}^{}\left( X_{i} - \overline{X} \right)^{2}}\]</span></p>
 <p>Nu ska vi gå igenom hur vi kan härleda estimatorerna. Minstakvadratmetoden låter oss definiera estimatorerna <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span> så att vi minimerar summan av de kvadrerade residualerna</p>
 <p><span class="math display">\[\sum_{i}^{}{\widehat{V}}_{i}^{2} = \sum_{}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{2}\]</span></p>
 <p>Estimatorerna kan därför härledas ur ett minimeringsproblem. Om du känner dig osäker på maximeringsproblem och minimeringsproblem, se Mattebokens avsnitt om <a href="https://www.matteboken.se/lektioner/matte-3/derivatan-och-grafen/storsta-och-minsta-varde#!/">största och minsta värde under matte 3</a>.</p>
@@ -157,8 +157,10 @@
 <p>Nu har vi en ekvation där summan av kvadrerade residualerna <span class="math inline">\(\sum_{i}^{}\widehat{{V_{i}}^{2}}\)</span> är en funktion av estimerade <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Det är denna funktion som vi ska minimera med hänsyn till <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>, vilket vi kan skriva som ett minimeringsproblem:</p>
 <p><span class="math display">\[\min_{\text{m.h.t. }\widehat{a},\widehat{b}}{\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2}} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)^{2} \tag{5}\]</span></p>
 <p>Vi deriverar högerledet med hänsyn till <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Detta ger oss två ekvationer som kallas "förstagradsvillkor" (eller "första ordningens villkor"), alltså villkor som måste uppfyllas vid en minimumpunkt eller maximumpunkt.</p>
-<p><span class="math display">\[\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{a}}' = - 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0 \tag{6}\]</span></p>
-<p><span class="math inline">\(\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{b}}' = - 2\sum_{i = 1}^{n}{X_{i}(Y_{i} - \widehat{a} - \widehat{b}X_{i})} = 0\)</span>
+<p><span class="math display">\[\begin{align}
+\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{a}}' &amp;= - 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0 \tag{6}\\
+\left\lbrack \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} \right\rbrack_{\widehat{b}}' &amp;= - 2\sum_{i = 1}^{n}{X_{i}(Y_{i} - \widehat{a} - \widehat{b}X_{i})} = 0
+\end{align}\]</span>
 där båda resultaten uppstår genom att vi deriverar parentesen (flyttar ned exponent 2) och deriverar innehållet i respektive parentes. När vi deriverar med hänsyn till <span class="math inline">\(\widehat{a}\)</span> får vi –1. När vi deriverar med hänsyn till <span class="math inline">\(\widehat{b}\)</span> får vi <span class="math inline">\(--X_{i}\)</span>. Vi sätter -2 till vänster om summeringstecknet eftersom dessa saker inte berörs av summeringen.
 Notera att det första villkoret i ekvation 6 innebär att <span class="math inline">\(\sum_{i}^{}\widehat{V_{i}} = 0\)</span> och det andra villkoret kan beskrivas som: <span class="math inline">\(\sum_{}^{}X_{i}\widehat{V_{i}} = 0\)</span>. Detta kommer vi att ha användning av längre fram.</p>
 </div>
@@ -168,7 +170,7 @@ Notera att det första villkoret i ekvation 6 innebär att <span class="math inl
 </h4>
 <p>Från de två förstagradsvillkoren i ekvation 6 kan vi lösa ut <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Vi börjar med det första villkoret:</p>
 <p><span class="math display">\[- 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0 \tag{7}\]</span></p>
-<p><span class="math inline">\(( - 2)\sum_{i = 1}^{n}{Y_{i} - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}} = 0\)</span></p>
+<p><span class="math display">\[( - 2)\sum_{i = 1}^{n}{Y_{i} - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}} = 0\]</span></p>
 <p>Eftersom alla termer är multiplicerade med -2 kan vi stryka denna faktor. Eftersom <span class="math inline">\(\widehat{a}\)</span> är konstant över alla observationer är termen <span class="math inline">\(\sum_{i}^{n}\widehat{a}\)</span> samma sak som antal observationer gånger <span class="math inline">\(\widehat{a}\)</span>: <span class="math inline">\(\sum_{i}^{n}\widehat{a} = n\widehat{a}\)</span>. Vi kan nu skriva:</p>
 <p><span class="math display">\[\begin{align}
 0 &amp;= ( - 2)\sum_{i = 1}^{n}Y_{i} - ( - 2)\sum_{i = 1}^{n}\widehat{a} - ( - 2)\sum_{i = 1}^{n}{\widehat{b}X_{i}} \tag{8}\\
@@ -178,10 +180,12 @@ n\widehat{a} &amp;= \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}{\widehat{b}X_{i}}
 \end{align}\]</span></p>
 <p>Vi dividerar med <span class="math inline">\(n\)</span> så att termen längst till höger blir <span class="math inline">\(\frac{1}{n}\sum_{}^{}{\widehat{b}X_{i}}\)</span>. Medelvärdet för <span class="math inline">\(X\)</span> kan skrivas <span class="math inline">\(\overline{X} = \frac{1}{n}\sum_{i}^{n}X_{i}\)</span> vilket ger:</p>
 <p><span class="math display">\[\widehat{a} = \frac{1}{n}\sum_{i = 1}^{n}Y_{i} - \frac{1}{n}\sum_{i = 1}^{n}{\widehat{b}X} \tag{9}\]</span></p>
-<p><span class="math inline">\(\widehat{a} = \overline{Y} - \widehat{b}\overline{X}\)</span></p>
+<p><span class="math display">\[\widehat{a} = \overline{Y} - \widehat{b}\overline{X}\]</span></p>
 <p>Nu har vi ett uttryck för <span class="math inline">\(\widehat{a}\)</span>. För att härleda <span class="math inline">\(\widehat{b}\)</span> börjar vi med det andra förstagradsvillkoret i ekvation 7:</p>
-<p><span class="math display">\[0 = \sum_{i = 1}^{n}{- 2x_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)} \tag{10}\]</span></p>
-<p><span class="math inline">\(= \sum_{i = 1}^{n}X_{i}Y_{i} - \sum_{i = 1}^{n}X_{i}\widehat{a} - \sum_{i = 1}^{n}X_{i}\widehat{b}X_{i}\)</span></p>
+<p><span class="math display">\[\begin{align}
+0 &amp;= \sum_{i = 1}^{n}{- 2x_{i}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right)} \tag{10}\\
+&amp;= \sum_{i = 1}^{n}X_{i}Y_{i} - \sum_{i = 1}^{n}X_{i}\widehat{a} - \sum_{i = 1}^{n}X_{i}\widehat{b}X_{i}
+\end{align}\]</span></p>
 <p>Eftersom konstanterna inte summeras flyttar vi dessa till vänster om summatecknen. I termen längst till höger har vi <span class="math inline">\(x_{i}*x_{i} = x_{i}^{2}\)</span>. Vi byter ut <span class="math inline">\(\widehat{a}\)</span> mot definitionen från ekvation 9:</p>
 <p><span class="math display">\[0 = \sum_{i = 1}^{n}X_{i}Y_{i} - \widehat{a}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}X_{i} \tag{11}\]</span></p>
 <p><span class="math display">\[= \sum_{i = 1}^{n}X_{i}Y_{i} - \widehat{a}\sum_{i = 1}^{n}X_{i} - \widehat{b}\sum_{i = 1}^{n}X_{i}^{2}\]</span></p>
