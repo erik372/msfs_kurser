@@ -137,7 +137,7 @@
 <h3>
 <span class="header-section-number">42.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-41"><i class="fas fa-link"></i></a>
 </h3>
-<p>I <a href="https://www.dropbox.com/scl/fi/9jy8vypqisanjkto7wr3v/1-2-Experiment-och-observationsstudie.docx?rlkey=4xhcwh8s17u66tholxgf5qdaa&amp;dl=0">avsnitt 1.2</a> introducerade vi experiment och kvasiexperiment samt hur vi med hjälp av behandlings- och kontrollgrupp kan studera orsakssamband och effekter.</p>
+<p>I <a href="k2-1-2.html">avsnitt 1.2</a> introducerade vi experiment och kvasiexperiment samt hur vi med hjälp av behandlings- och kontrollgrupp kan studera orsakssamband och effekter.</p>
 <div id="kopplingen-mellan-sannolikhet-och-kausalitet" class="section level4" number="42.0.2.1">
 <h4>
 <span class="header-section-number">42.0.2.1</span> Kopplingen mellan sannolikhet och kausalitet<a class="anchor" aria-label="anchor" href="#kopplingen-mellan-sannolikhet-och-kausalitet"><i class="fas fa-link"></i></a>
@@ -184,9 +184,7 @@
 <p><span class="math display">\[P(X &gt; x) = 1 - F(2) = 1 - \frac{2}{6} = \frac{4}{6} \tag{5}\]</span></p>
 <p>Figur 1 illustrerar en likformig slumpmässig sannolikhetsfördelning, där alla värden har samma sannolikhet. Övre diagrammet visar funktion <span class="math inline">\(f(x)\)</span>. Nedre diagrammet visar <span class="math inline">\(F(x)\)</span>, den kumulativa sannolikheten att få ett värde lika med eller mindre än <span class="math inline">\(x\)</span>.</p>
 <p><strong>Figur 1: Sannolikhetsfunktion och kumulativa fördelningsfunktionen</strong></p>
-<div class="float">
-<img src="img/k2-5-1-image1.png" alt="En bild som visar text, skärmbild, diagram, linje Automatiskt genererad beskrivning"><div class="figcaption">En bild som visar text, skärmbild, diagram, linje Automatiskt genererad beskrivning</div>
-</div>
+<div class="inline-figure"><img src="img/k2-5-1-image1.png"></div>
 <div class="fig-caption">
 <p>Förklaring: Övre diagrammet beskriver sannolikheten 1/6 för respektive utfall i sannolikhetsfördelningen. Nedre diagrammet beskriver den kumulativa sannolikheten att få värdet på horisontella x-axeln eller mindre. Sannolikheten att få under 1 är 0. Sannolikheten att få värdet 3 är 0,5, det vill säga 50 %. Sannolikheten att få 6 eller lägre är 100 %.</p>
 </div>
@@ -198,10 +196,12 @@
 <p>För en slumpmässig variabel kan vi inte beräkna ett medelvärde på det sätt som vi kan göra för en samling diskreta värden, som en samling tal. För en tärning kan vi inte beräkna medelvärde förrän vi kastat den. Men vi kan beräkna vad vi förväntar oss, alltså det "genomsnitt" vi skulle få om vi kastade oändligt många gånger. Detta kallas för väntevärde, eller förväntat värde (engelska <em>expected value</em>).</p>
 <p>Väntevärdet för en slumpmässig variabel är summan av varje utfall multiplicerat med dess sannolikhet. Matematiskt är väntevärde en generalisering av <a href="https://www.matteboken.se/lektioner/matte-1/ovningsexempel/betygssnitt#!/">viktat medelvärde</a>. För en diskret slumpmässig variabel <span class="math inline">\(X\)</span> kan detta beskrivas som:</p>
 <p><span class="math display">\[E(X) = \sum_{i}^{n}x_{i}P\left( x_{i} \right) \tag{6}\]</span></p>
-<p>där <span class="math inline">\(E()\)</span> kallas för väntevärdesfunktionen, vilket även kan skrivas <span class="math inline">\(E\lbrack X\rbrack\)</span>, <span class="math inline">\(E(X)\)</span> eller <span class="math inline">\(EX\)</span>. I <a href="https://www.dropbox.com/scl/fi/clzr656ksjz2ut13zw9wx/2-1-Frekvens-och-f-rdelning.docx?rlkey=4ybbva8mkt5aj3envb6sb6xu3&amp;dl=0">avsnitt 2.1</a> introducerade vi populationens medelvärde <span class="math inline">\(\mu\)</span>. Detta är samma sak som väntevärdet för populationen för den slumpmässiga variabeln <span class="math inline">\(X\)</span>, det vill säga: <span class="math inline">\(E(X) = \mu_{X}\)</span>.
+<p>där <span class="math inline">\(E()\)</span> kallas för väntevärdesfunktionen, vilket även kan skrivas <span class="math inline">\(E\lbrack X\rbrack\)</span>, <span class="math inline">\(E(X)\)</span> eller <span class="math inline">\(EX\)</span>. I <a href="k2-2-1.html">avsnitt 2.1</a> introducerade vi populationens medelvärde <span class="math inline">\(\mu\)</span>. Detta är samma sak som väntevärdet för populationen för den slumpmässiga variabeln <span class="math inline">\(X\)</span>, det vill säga: <span class="math inline">\(E(X) = \mu_{X}\)</span>.
 Säg som exempel att vi har en slumpmässig variabel <span class="math inline">\(X\)</span> med utfallen 1, 2, 3, 4, 5 och 6, alla med sannolikheten 1/6. Väntevärdet för variabeln <span class="math inline">\(X\)</span> blir då:</p>
-<p><span class="math display">\[E(X) = x_{1}*P\left( x_{1} \right) + x_{2}*P\left( x_{2} \right) + x_{3}*P\left( x_{3} \right) + x_{4}*P\left( x_{4} \right) + x_{5}*P\left( x_{5} \right) + x_{6}*P\left( x_{6} \right) \tag{7}\]</span></p>
-<p><span class="math inline">\(= 1*\frac{1}{6} + 2*\frac{1}{6} + *\frac{1}{6} + 3*\frac{1}{6} + 4*\frac{1}{6} + 5*\frac{1}{6} + 6*\frac{1}{6} = 3,5\)</span></p>
+<p><span class="math display">\[\begin{align}
+E(X) &amp;= x_{1}*P\left( x_{1} \right) + x_{2}*P\left( x_{2} \right) + x_{3}*P\left( x_{3} \right) + x_{4}*P\left( x_{4} \right) + x_{5}*P\left( x_{5} \right) + x_{6}*P\left( x_{6} \right) \tag{7}\\
+&amp;= 1*\frac{1}{6} + 2*\frac{1}{6} + 3*\frac{1}{6} + 4*\frac{1}{6} + 5*\frac{1}{6} + 6*\frac{1}{6} = 3{,}5
+\end{align}\]</span></p>
 </div>
 <div id="väntevärdet-av-en-konstant" class="section level4" number="42.0.2.6">
 <h4>
@@ -218,7 +218,7 @@ Säg som exempel att vi har en slumpmässig variabel <span class="math inline">\
 <h4>
 <span class="header-section-number">42.0.2.7</span> Varians och standardavvikelse för slumpmässiga variabler<a class="anchor" aria-label="anchor" href="#varians-och-standardavvikelse-f%C3%B6r-slumpm%C3%A4ssiga-variabler"><i class="fas fa-link"></i></a>
 </h4>
-<p>I <a href="https://www.dropbox.com/scl/fi/1esn74n4y0c48moczz9mj/2-2-Avvikelse-varians-och-standardavvikelse.docx?rlkey=uv8lf1wj3u89yrguwkkss5ck6&amp;dl=0">avsnitt 2.2</a> introducerade vi varians som ett sätt att mäta spridning. Vi gick igenom hur vi kan uppskatta variansen i en population genom att räkna på observationer i ett urval.</p>
+<p>I <a href="k2-2-2.html">avsnitt 2.2</a> introducerade vi varians som ett sätt att mäta spridning. Vi gick igenom hur vi kan uppskatta variansen i en population genom att räkna på observationer i ett urval.</p>
 <p>Även för slumpmässiga variabler kan vi beskriva varians, men då på ett lite annorlunda sätt. För en slumpmässig diskret variabel <span class="math inline">\(X\)</span> kan varians definieras som:</p>
 <p><span class="math display">\[var(X) = \sum_{i}^{n}\left( x_{i} - \mu_{X} \right)^{2}P\left( x_{i} \right) \tag{11}\]</span></p>
 <p>där <span class="math inline">\(\mu_{X} = E(X)\)</span> och <span class="math inline">\(P\left( x_{i} \right)\)</span> är sannolikheten för respektive värde <span class="math inline">\(x_{i}\)</span>, där vi från ekvation 6 vet att <span class="math inline">\(E(X) = \sum_{i}^{n}x_{i}P\left( x_{i} \right)\)</span>.
@@ -234,7 +234,7 @@ Standardavvikelse ges, liksom tidigare, av positiva kvadratroten av variansen:</
 <p><span class="math display">\[var(aX + b) = a^{2}\text{var}(X) \tag{13}\]</span></p>
 <p>Det vill säga en konstant <span class="math inline">\(a\)</span> som multipliceras med den slumpmässiga variabeln kan flyttas ut ur variansfunktionen <span class="math inline">\(var()\)</span> och multipliceras med sig själv. Konstant <span class="math inline">\(b\)</span> försvinner. För standardavvikelse gäller att:</p>
 <p><span class="math display">\[s(aX + b) = \|a\|s(X) \tag{14}\]</span></p>
-<p>där <span class="math inline">\(\|a\|\)</span> är absolutvärdet av <span class="math inline">\(a\)</span>. Detta innebär att om vi multiplicerar en slumpmässig variabel <span class="math inline">\(X\)</span> med en konstant <span class="math inline">\(a\)</span> så multipliceras dess varians och standardavvikelse, men det förändrar inte spridningens form (jämför <a href="https://www.dropbox.com/scl/fi/1esn74n4y0c48moczz9mj/2-2-Avvikelse-varians-och-standardavvikelse.docx?rlkey=uv8lf1wj3u89yrguwkkss5ck6&amp;dl=0">avsnitt 2.2</a>).</p>
+<p>där <span class="math inline">\(\|a\|\)</span> är absolutvärdet av <span class="math inline">\(a\)</span>. Detta innebär att om vi multiplicerar en slumpmässig variabel <span class="math inline">\(X\)</span> med en konstant <span class="math inline">\(a\)</span> så multipliceras dess varians och standardavvikelse, men det förändrar inte spridningens form (jämför <a href="k2-2-2.html">avsnitt 2.2</a>).</p>
 </div>
 <div id="de-stora-talens-lag" class="section level4" number="42.0.2.9">
 <h4>

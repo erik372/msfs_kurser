@@ -316,6 +316,7 @@ exempel-med-kvinnor-och-mäns-medellivslängd
 hypotesprövning
 hypotestest-i-regressionsanalys
 signifikans-alfa-och-p-värde
+statistiskt-test-med-kvinnor-och-mäns-livslängd
 k2-5-5
 begrepp-45
 teori-45

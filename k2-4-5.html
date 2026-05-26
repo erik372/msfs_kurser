@@ -131,7 +131,7 @@
 <span class="header-section-number">39.0.2.1</span> Exempel nr 1<a class="anchor" aria-label="anchor" href="#exempel-nr-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>I föregående avsnitt definierade vi minstakvadratmetodens estimator för koefficienterna i en regressionsmodell beskriven med matriser. Låt oss prova hur vi kan använda detta för att estimera modeller utifrån data. Här följer tre exempel där vi återanvänder data och regressionsmodeller från tidigare exempel.</p>
-<p>Låt oss nu återanvända den första regressionsmodellen och observationerna för denna som vi introducerade i <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation-2.docx?rlkey=1ru7jf53mujl9y82mfzzkf7b2&amp;dl=0">avsnitt 2.4</a>: <span class="math inline">\(Y = a + bX + V\)</span>. Men denna gång ska vi estimera modellen med matriser. Samma observationer som vi använt tidigare upprepas i tabell 1.</p>
+<p>Låt oss nu återanvända den första regressionsmodellen och observationerna för denna som vi introducerade i <a href="k2-2-4.html">avsnitt 2.4</a>: <span class="math inline">\(Y = a + bX + V\)</span>. Men denna gång ska vi estimera modellen med matriser. Samma observationer som vi använt tidigare upprepas i tabell 1.</p>
 <p><strong>Tabell 1: Variablerna</strong> <span class="math inline">\(X\)</span> <strong>och</strong> <span class="math inline">\(Y\)</span></p>
 <div class="inline-table"><table class="table table-bordered" style="width:39%;">
 <colgroup>
@@ -221,7 +221,7 @@ Observation <span class="math inline"><span class="math inline">\(i\)</span></sp
 <h4>
 <span class="header-section-number">39.0.2.2</span> Exempel nr 2<a class="anchor" aria-label="anchor" href="#exempel-nr-2"><i class="fas fa-link"></i></a>
 </h4>
-<p>Låt oss även göra samma sak för regressionsmodellen från <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a>: <span class="math inline">\(Y = a + bX + cZ + V\)</span>, vilket vi kan skriva med matriser som:</p>
+<p>Låt oss även göra samma sak för regressionsmodellen från <a href="k2-4-1.html">avsnitt 4.1</a>: <span class="math inline">\(Y = a + bX + cZ + V\)</span>, vilket vi kan skriva med matriser som:</p>
 <p><span class="math display">\[Y = XB + V \tag{5}\]</span></p>
 <p>där matris <span class="math inline">\(X\)</span> innehåller variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> och matris <span class="math inline">\(B\)</span> innehåller koefficienterna <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> och <span class="math inline">\(c\)</span>. <span class="math inline">\(V\)</span> är feltermerna och <span class="math inline">\(Y\)</span> förklarande variabeln. Observationerna vi ska använda upprepas i tabell 2.</p>
 <p><strong>Tabell 2: Variablerna</strong> <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> <strong>och</strong> <span class="math inline">\(Z\)</span></p>
@@ -310,7 +310,7 @@ Observation <span class="math inline"><span class="math inline">\(i\)</span></sp
 <p><span class="math display">\[\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \\ \widehat{c} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 3 &amp; 4 &amp; 6 &amp; 7 \\ 1 &amp; 4 &amp; 0 &amp; 1 \end{bmatrix}\begin{bmatrix} 1 &amp; 3 &amp; 1 \\ 1 &amp; 4 &amp; 4 \\ 1 &amp; 6 &amp; 0 \\ 1 &amp; 7 &amp; 1 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 3 &amp; 4 &amp; 6 &amp; 7 \\ 1 &amp; 4 &amp; 0 &amp; 1 \end{bmatrix}\left\lbrack \begin{array}{r} 3 \\ 2 \\ 5 \\ 4 \end{array} \right\rbrack\]</span></p>
 <p><span class="math display">\[\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \\ \widehat{c} \end{array} \right\rbrack = \begin{bmatrix} 4 &amp; 20 &amp; 6 \\ 20 &amp; 110 &amp; 26 \\ 6 &amp; 26 &amp; 18 \end{bmatrix}^{- 1}\left\lbrack \begin{array}{r} 14 \\ 75 \\ 15 \end{array} \right\rbrack\]</span></p>
 <p><span class="math display">\[\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \\ \widehat{c} \end{array} \right\rbrack \approx \left\lbrack \begin{array}{r} 2,9 \\ 0,3 \\ - 0,5 \end{array} \right\rbrack\]</span></p>
-<p>Sista raden innehåller de avrundade resultaten <span class="math inline">\(\widehat{a} \approx 2,9\)</span>, <span class="math inline">\(\widehat{b} \approx 0,3\)</span> och <span class="math inline">\(\widehat{c} \approx - 0,5\)</span>. Detta är samma sak som vi kom fram till i <a href="https://www.dropbox.com/scl/fi/dkav9cmen93lfv9xnh5i1/4-1-Regressionsanalys-med-tre-variabler.docx?rlkey=womzymlqr70kjry66qltgkcph&amp;dl=0">avsnitt 4.1</a>.</p>
+<p>Sista raden innehåller de avrundade resultaten <span class="math inline">\(\widehat{a} \approx 2,9\)</span>, <span class="math inline">\(\widehat{b} \approx 0,3\)</span> och <span class="math inline">\(\widehat{c} \approx - 0,5\)</span>. Detta är samma sak som vi kom fram till i <a href="k2-4-1.html">avsnitt 4.1</a>.</p>
 </div>
 <div id="exempel-nr-3" class="section level4" number="39.0.2.3">
 <h4>
@@ -386,7 +386,7 @@ Observation i
 <p><span class="math display">\[\widehat{B} = \left( K^{T}K \right)^{- 1}K^{T}Z \tag{7}\]</span></p>
 <p>Detta ger oss följande estimat:</p>
 <p><span class="math display">\[\left\lbrack \begin{array}{r} \widehat{\alpha} \\ \widehat{\beta} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 4 &amp; 4 \end{bmatrix}\begin{bmatrix} 1 &amp; 0 \\ 1 &amp; 0 \\ 1 &amp; 4 \\ 1 &amp; 4 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 4 &amp; 4 \end{bmatrix}\left\lbrack \begin{array}{r} 1 \\ 4 \\ 0 \\ 1 \end{array} \right\rbrack = \left\lbrack \begin{array}{r} 2,5 \\ - 0,5 \end{array} \right\rbrack \tag{8}\]</span></p>
-<p>vilket är samma som vi kom fram till i <a href="https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-modell-till.docx?rlkey=pfuhm3ijlm56lxoq339rhms2c&amp;dl=0">avsnitt 3.2</a>.</p>
+<p>vilket är samma som vi kom fram till i <a href="k2-3-2.html">avsnitt 3.2</a>.</p>
 <div class="ex-section-title">
 <p>Övningar</p>
 </div>

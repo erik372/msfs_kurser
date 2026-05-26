@@ -128,11 +128,13 @@
 <span class="header-section-number">40.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-39"><i class="fas fa-link"></i></a>
 </h3>
 <p>I detta avsnitt ska vi introducera interaktionseffekt. Hittills har vi antagit att effekten av <span class="math inline">\(X\)</span> på <span class="math inline">\(Y\)</span> är densamma oavsett värdet på <span class="math inline">\(Z\)</span>. Samvariationen (lutningskoefficienten för <span class="math inline">\(X\)</span>) är densamma oavsett om <span class="math inline">\(Z\)</span> har höga eller låga värden.</p>
-<p>Men ibland påverkar andra fenomen (som <span class="math inline">\(Z\)</span>) hur starkt <span class="math inline">\(X\)</span> samvarierar med <span class="math inline">\(Y\)</span>. Detta kallas för interaktionseffekt. Exempel:
-- Kanske samvarierar inkomst och livslängd olika starkt för män vs kvinnor
-- Kanske har en medicin olika effekt beroende på patientens ålder
-- Kanske påverkar utbildning inkomst olika mycket i olika länder
-Matematiskt innebär interaktionseffekt att vi kombinerar två eller flera av de förklarande variablerna till en ny variabel, som att multiplicera <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>. Därigenom kan vi kontrollera om en förklarande variabels samvariation med den förklarade variabeln varierar beroende på värdena i en annan förklarande variabel.</p>
+<p>Men ibland påverkar andra fenomen (som <span class="math inline">\(Z\)</span>) hur starkt <span class="math inline">\(X\)</span> samvarierar med <span class="math inline">\(Y\)</span>. Detta kallas för interaktionseffekt. Exempel:</p>
+<ul>
+<li>Kanske samvarierar inkomst och livslängd olika starkt för män vs kvinnor</li>
+<li>Kanske har en medicin olika effekt beroende på patientens ålder</li>
+<li>Kanske påverkar utbildning inkomst olika mycket i olika länder</li>
+</ul>
+<p>Matematiskt innebär interaktionseffekt att vi kombinerar två eller flera av de förklarande variablerna till en ny variabel, som att multiplicera <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>. Därigenom kan vi kontrollera om en förklarande variabels samvariation med den förklarade variabeln varierar beroende på värdena i en annan förklarande variabel.</p>
 <div id="interaktionseffekten-mellan-x-och-z" class="section level4" number="40.0.2.1">
 <h4>
 <span class="header-section-number">40.0.2.1</span> Interaktionseffekten mellan x och z<a class="anchor" aria-label="anchor" href="#interaktionseffekten-mellan-x-och-z"><i class="fas fa-link"></i></a>
@@ -156,8 +158,8 @@ På motsvarande sätt får vi den totala samvariationen mellan variabel <span cl
 <h4>
 <span class="header-section-number">40.0.2.2</span> Ett exempel med data<a class="anchor" aria-label="anchor" href="#ett-exempel-med-data"><i class="fas fa-link"></i></a>
 </h4>
-<p>I <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a> estimerade vi samvariationen mellan livslängd och inkomst för män och kvinnor i tre av Sveriges kommuner. Nu ska vi använda samma data igen men denna gång lägga till en interaktionseffekt.</p>
-<p>Tabell 1 beskriver våra variabler (samma som i <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a>). Vi har nu en variabel som skapas genom att multiplicera de två variablerna inkomst <span class="math inline">\(I\)</span> och kön <span class="math inline">\(K\)</span>. Den nya variabeln har rubriken “Interaktion: <span class="math inline">\(I*K\)</span>”. Eftersom <span class="math inline">\(K\)</span> är en dummy där tre av sex observationer har värdet 0 får även den nya variabeln värdet 0 i tre av sex fall.</p>
+<p>I <a href="k2-4-3.html">avsnitt 4.3</a> estimerade vi samvariationen mellan livslängd och inkomst för män och kvinnor i tre av Sveriges kommuner. Nu ska vi använda samma data igen men denna gång lägga till en interaktionseffekt.</p>
+<p>Tabell 1 beskriver våra variabler (samma som i <a href="k2-4-3.html">avsnitt 4.3</a>). Vi har nu en variabel som skapas genom att multiplicera de två variablerna inkomst <span class="math inline">\(I\)</span> och kön <span class="math inline">\(K\)</span>. Den nya variabeln har rubriken “Interaktion: <span class="math inline">\(I*K\)</span>”. Eftersom <span class="math inline">\(K\)</span> är en dummy där tre av sex observationer har värdet 0 får även den nya variabeln värdet 0 i tre av sex fall.</p>
 <p><strong>Tabell 1: Variablerna</strong> <span class="math inline">\(\mathbf{L}\)</span><strong>,</strong> <span class="math inline">\(\mathbf{I}\)</span><strong>,</strong> <span class="math inline">\(\mathbf{K}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{KI}\)</span></p>
 <div class="inline-table"><table class="table table-bordered" style="width:97%;">
 <colgroup>
@@ -291,8 +293,8 @@ Oskarshamn, män
 </table></div>
 <div class="fig-caption">
 <p>Förklaring: Data från <a href="http://www.kolada.se">www.kolada.se</a>. Medianinkomst i 100 000-tals kr. Förväntad medellivslängd. Alla siffror avser 2019.</p>
-<p>I <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a> estimerade vi två regressionsmodeller. Först en modell för samvariationen mellan livslängd och inkomst, med följande resultat:</p>
 </div>
+<p>I <a href="k2-4-3.html">avsnitt 4.3</a> estimerade vi två regressionsmodeller. Först en modell för samvariationen mellan livslängd och inkomst, med följande resultat:</p>
 <p><span class="math display">\[L = \widehat{a_{1}} + \widehat{a_{2}}I = 92 - 4,2*I \tag{5}\]</span></p>
 <p>Den andra modellen inkluderade även dummyvariabeln kön G:</p>
 <p><span class="math display">\[L = \widehat{b_{1}} + \widehat{b_{2}}I + \widehat{b_{3}}G = 69,6 + 6,64I - 6,66G \tag{6}\]</span></p>
@@ -342,9 +344,9 @@ Interaktionseffekten för en variabel beskrev vi i ekvation 3 som <span class="m
 <div class="inline-figure"><img src="img/k2-4-6-image1.png"></div>
 <div class="fig-caption">
 <p>Förklaring: Livslängd och inkomst för kvinnor respektive män.</p>
+</div>
 <p>Regressionsresultaten för enbart kvinnor i ekvation 18 är samma som resultaten från regressionsmodellen i ekvation 14 med <span class="math inline">\(G = 0\)</span>, då de två första koefficienterna i de båda regressionsmodellerna är desamma: <span class="math inline">\(\widehat{c_{1}} = \widehat{a}\)</span> och <span class="math inline">\(\widehat{c_{2}} = \widehat{b}\)</span>.</p>
 <p>Resultaten i regressionsmodellen för män i ekvation 19 kan förenklat beskrivas som att vi lägger ihop koefficienterna i ekvation 14. Vi har koefficienterna:</p>
-</div>
 <p><span class="math display">\[\widehat{c} = \widehat{c_{1}} + \widehat{c_{3}} = 26,6 + 40,3 = 60,9 \tag{20}\]</span></p>
 <p><span class="math display">\[\widehat{d} = \widehat{c_{2}} + \widehat{c_{4}} = 26,9I - 21,8 = 5,1\]</span></p>
 <p>Lutningskoefficienten i regressionsmodellen för enbart män <span class="math inline">\(\widehat{d}\)</span> är samma värde som <span class="math inline">\(\Delta L\text{/}\Delta I\)</span> för <span class="math inline">\(G = 1\)</span> i ekvation 15. Detta innebär även att differensen mellan de två lutningskoefficienterna i regressionsmodellerna för kvinnor respektive män är <span class="math inline">\(\widehat{b} - \widehat{d} = 26,9 - 5,1 = 21,8\)</span>, vilket är samma värde som <span class="math inline">\(\widehat{c_{4}}\)</span> har i ekvation 14.</p>
