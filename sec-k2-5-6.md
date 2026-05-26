@@ -21,7 +21,7 @@ $$\widehat{a} \approx 2,89,\ \ \ \ \ \widehat{b} \approx 0,28,\ \ \ \ \ \ \wideh
 
 **Tabell 1: Fyra observationer för variablerna** $\mathbf{y}\mathbf{,}\mathbf{x}$ **och** $\mathbf{z}$**.**
 
-<table style="width:41%;">
+<table class="table table-bordered" style="width:41%;">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 10%" />
@@ -30,39 +30,36 @@ $$\widehat{a} \approx 2,89,\ \ \ \ \ \widehat{b} \approx 0,28,\ \ \ \ \ \ \wideh
 </colgroup>
 <thead>
 <tr>
-<th><span class="math display">\[i\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[Y_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[X_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[Z_{i}\]</span></th>
+<th>\(i\)</th>
+<th style="text-align: center;">\(Y_{i}\)</th>
+<th style="text-align: center;">\(X_{i}\)</th>
+<th style="text-align: center;">\(Z_{i}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">1</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(1\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">4</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(4\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">0</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(6\)</td>
+<td style="text-align: center;">\(0\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">1</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(7\)</td>
+<td style="text-align: center;">\(1\)</td>
 </tr>
 </tbody>
 </table>

@@ -9,7 +9,7 @@ Barnadödligheten har dock även minskat som mest i de afrikanska länderna, fr�
 
 **Tabell 1: Antal avlidna barn per 1 000 barn under 5 år**
 
-<table style="width:60%;">
+<table class="table table-bordered" style="width:60%;">
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -25,33 +25,33 @@ Barnadödligheten har dock även minskat som mest i de afrikanska länderna, fr�
 <tbody>
 <tr>
 <td>Afrika</td>
-<td>302</td>
-<td>62,7</td>
+<td>\(302\)</td>
+<td>\(62{,}7\)</td>
 </tr>
 <tr>
 <td>Asien</td>
-<td>234</td>
-<td>22,8</td>
+<td>\(234\)</td>
+<td>\(22{,}8\)</td>
 </tr>
 <tr>
 <td>Europa</td>
-<td>86,7</td>
-<td>4,9</td>
+<td>\(86{,}7\)</td>
+<td>\(4{,}9\)</td>
 </tr>
 <tr>
 <td>Nordamerika</td>
-<td>152</td>
-<td>15,9</td>
+<td>\(152\)</td>
+<td>\(15{,}9\)</td>
 </tr>
 <tr>
 <td>Oceanien</td>
-<td>140</td>
-<td>22,7</td>
+<td>\(140\)</td>
+<td>\(22{,}7\)</td>
 </tr>
 <tr>
 <td>Sydamerika</td>
-<td>181</td>
-<td>17,8</td>
+<td>\(181\)</td>
+<td>\(17{,}8\)</td>
 </tr>
 </tbody>
 </table>
@@ -82,7 +82,7 @@ Låt oss nu beräkna hur stor procentuell andel som respektive land tar emot av 
 
 **Tabell 2: Befolkning och antal asylsökande per land**
 
-<table style="width:97%;">
+<table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 22%" />

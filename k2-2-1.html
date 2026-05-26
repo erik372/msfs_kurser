@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>25 Frekvens och fördelning | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="25.0.1 Begrepp  Frekvensfördelning: Antal observationer (frekvens) som förekommer av varje unikt värde i ett material. Stapeldiagram: Diagram där staplar representerar värden, till exempel...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="25 Frekvens och fördelning | Matematik och statistik för samhällsvetare">
@@ -201,6 +201,17 @@ Med urvalsdata tar vi <span class="math inline">\(x_{i} - \overline{X}\)</span>.
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -323,6 +334,7 @@ Med urvalsdata tar vi <span class="math inline">\(x_{i} - \overline{X}\)</span>.
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -361,7 +373,7 @@ Med urvalsdata tar vi <span class="math inline">\(x_{i} - \overline{X}\)</span>.
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

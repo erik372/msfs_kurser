@@ -29,7 +29,7 @@ Låt oss nu estimera koefficienterna $\alpha$ och $\beta$. Observationerna för 
 
 **Tabell 1. Underlag för att estimera koefficienterna** $\mathbf{\alpha}$ **och** $\mathbf{\beta}$**.**
 
-<table style="width:97%;">
+<table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 7%" />
@@ -42,66 +42,59 @@ Låt oss nu estimera koefficienterna $\alpha$ och $\beta$. Observationerna för 
 <thead>
 <tr>
 <th>Observation i</th>
-<th style="text-align: center;"><span
-class="math display">\[Z_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[K_{i}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[Z_{i} -
-\overline{Z}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[K_{i} -
-\overline{K}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[\left(
-Z_{i} - \overline{Z} \right)\left( K_{i} - \overline{K}
-\right)\]</span></th>
-<th style="text-align: center;"><span class="math display">\[\left(
-K_{i} - \overline{K} \right)^{2}\]</span></th>
+<th style="text-align: center;">\(Z_{i}\)</th>
+<th style="text-align: center;">\(K_{i}\)</th>
+<th style="text-align: center;">\(Z_{i} - \overline{Z}\)</th>
+<th style="text-align: center;">\(K_{i} - \overline{K}\)</th>
+<th style="text-align: center;">\(\left( Z_{i} - \overline{Z} \right)\left( K_{i} - \overline{K} \right)\)</th>
+<th style="text-align: center;">\(\left( K_{i} - \overline{K} \right)^{2}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">–0,5</td>
-<td style="text-align: center;">–2</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">4</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(-2\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(4\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">2,5</td>
-<td style="text-align: center;">–2</td>
-<td style="text-align: center;">–5</td>
-<td style="text-align: center;">4</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(2{,}5\)</td>
+<td style="text-align: center;">\(-2\)</td>
+<td style="text-align: center;">\(-5\)</td>
+<td style="text-align: center;">\(4\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">–1,5</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">–3</td>
-<td style="text-align: center;">4</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(-1{,}5\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td style="text-align: center;">\(-3\)</td>
+<td style="text-align: center;">\(4\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">–0,5</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">–1</td>
-<td style="text-align: center;">4</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td style="text-align: center;">\(-1\)</td>
+<td style="text-align: center;">\(4\)</td>
 </tr>
 <tr>
 <td>Summa</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">8</td>
+<td style="text-align: center;">\(6\)</td>
+<td style="text-align: center;">\(8\)</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;">–8</td>
-<td style="text-align: center;">16</td>
+<td style="text-align: center;">\(-8\)</td>
+<td style="text-align: center;">\(16\)</td>
 </tr>
 </tbody>
 </table>
@@ -124,7 +117,7 @@ Med hjälp av denna och de observerade värdena för variabeln $K$ kan vi estime
 
 **Tabell 2. Beräkningar för att estimera** $\widehat{Z}$ **och** $\widehat{\epsilon}$
 
-<table style="width:97%;">
+<table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 19%" />
 <col style="width: 19%" />
@@ -135,45 +128,40 @@ Med hjälp av denna och de observerade värdena för variabeln $K$ kan vi estime
 <thead>
 <tr>
 <th>Observation i</th>
-<th style="text-align: center;"><span
-class="math display">\[Z_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[K_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widehat{Z_{i}}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widehat{\epsilon_{i}} = Z_{i} -
-\widehat{Z_{i}}\]</span></th>
+<th style="text-align: center;">\(Z_{i}\)</th>
+<th style="text-align: center;">\(K_{i}\)</th>
+<th style="text-align: center;">\(\widehat{Z_{i}}\)</th>
+<th style="text-align: center;">\(\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">2,5</td>
-<td style="text-align: center;">–1,5</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(2{,}5\)</td>
+<td style="text-align: center;">\(-1{,}5\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">2,5</td>
-<td style="text-align: center;">1,5</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(2{,}5\)</td>
+<td style="text-align: center;">\(1{,}5\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">–0,5</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">0,5</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
 </tr>
 </tbody>
 </table>

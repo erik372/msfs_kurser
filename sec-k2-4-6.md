@@ -48,7 +48,7 @@ Tabell 1 beskriver våra variabler (samma som i [avsnitt 4.3](https://www.dropbo
 
 **Tabell 1: Variablerna** $\mathbf{L}$**,** $\mathbf{I}$**,** $\mathbf{K}$ **och** $\mathbf{KI}$
 
-<table style="width:97%;">
+<table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 19%" />
 <col style="width: 19%" />
@@ -62,51 +62,51 @@ Tabell 1 beskriver våra variabler (samma som i [avsnitt 4.3](https://www.dropbo
 <th>Livslängd, <span class="math inline">\(L\)</span></th>
 <th>Inkomst, <span class="math inline">\(I\)</span></th>
 <th>Kön, <span class="math inline">\(K\)</span></th>
-<th><span class="math display">\[K*I\]</span></th>
+<th>\(K*I\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Jokkmokk, kvinnor</td>
-<td>81,55</td>
-<td>2,07</td>
-<td>0</td>
-<td>0</td>
+<td>\(81{,}55\)</td>
+<td>\(2{,}07\)</td>
+<td>\(0\)</td>
+<td>\(0\)</td>
 </tr>
 <tr>
 <td>Jokkmokk, män</td>
-<td>79,22</td>
-<td>2,40</td>
-<td>1</td>
-<td>2,40</td>
+<td>\(79{,}22\)</td>
+<td>\(2{,}40\)</td>
+<td>\(1\)</td>
+<td>\(2{,}40\)</td>
 </tr>
 <tr>
 <td>Oskarshamn, kvinnor</td>
-<td>84,64</td>
-<td>2,11</td>
-<td>0</td>
-<td>0</td>
+<td>\(84{,}64\)</td>
+<td>\(2{,}11\)</td>
+<td>\(0\)</td>
+<td>\(0\)</td>
 </tr>
 <tr>
 <td>Oskarshamn, män</td>
-<td>81,26</td>
-<td>2,79</td>
-<td>1</td>
-<td>2,79</td>
+<td>\(81{,}26\)</td>
+<td>\(2{,}79\)</td>
+<td>\(1\)</td>
+<td>\(2{,}79\)</td>
 </tr>
 <tr>
 <td>Örebro, kvinnor</td>
-<td>84,85</td>
-<td>2,18</td>
-<td>0</td>
-<td>0</td>
+<td>\(84{,}85\)</td>
+<td>\(2{,}18\)</td>
+<td>\(0\)</td>
+<td>\(0\)</td>
 </tr>
 <tr>
 <td>Örebro, män</td>
-<td>80,48</td>
-<td>2,66</td>
-<td>1</td>
-<td>2,66</td>
+<td>\(80{,}48\)</td>
+<td>\(2{,}66\)</td>
+<td>\(1\)</td>
+<td>\(2{,}66\)</td>
 </tr>
 </tbody>
 </table>

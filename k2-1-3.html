@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>23 Information och variabler | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="23.0.1 Begrepp  Data: Ett annat ord för information inom analytiskt arbete. Data kan bestå av allting vi kan uppfatta med våra sinnen, som text, ljud, bild etcetera. Datavariabel: Information...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="23 Information och variabler | Matematik och statistik för samhällsvetare">
@@ -146,7 +146,7 @@ Information kallas inom analytiskt arbete för <em>data</em>. Data kan alltså b
 Allt analytiskt arbete använder information om verkligheten i någon form eller utsträckning. All data måste i sin tur tolkas. Mycket analytiskt arbete består av att kartlägga verkligheten och samla in data.
 Exakt vilken typ av information som krävs för en analys beror på vad som är undersökningens <em>syfte</em>. Detta är helt centralt för allt analytiskt arbete men kommer inte diskuteras så noga i den här kursen.
 Vi har ofta glädje av att kategorisera information i <em>datavariabler</em>. Datavariabler placeras ofta som kolumner i en tabell med ett värd per rad, till exempel som i följande tabell:
-<div class="inline-table"><table style="width:35%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:35%;">
 <colgroup>
 <col style="width: 17%">
 <col style="width: 17%">
@@ -162,7 +162,7 @@ Vi har ofta glädje av att kategorisera information i <em>datavariabler</em>. Da
 <tbody>
 <tr>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td>
 Datavärde 1
@@ -170,7 +170,7 @@ Datavärde 1
 </tr>
 <tr>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td>
 Datavärde 2
@@ -194,7 +194,7 @@ Om vi blandar information i en variabel, till exempel längd och inkomst, blir d
 <p>Ett vanligt sätt att organisera data är tabeller, där varje kolumn representerar en variabel och varje rad en observation. Tabell 1 visar ett exempel där vi har tre datavariabler och kallar dessa för <span class="math inline">\(x,\ y\)</span> och <span class="math inline">\(z\)</span>.
 Observationerna numrerar vi <span class="math inline">\(y_{1}\)</span> till <span class="math inline">\(y_{4}\)</span>, <span class="math inline">\(x_{1}\)</span> till <span class="math inline">\(x_{4}\)</span> och <span class="math inline">\(z_{1}\)</span> till <span class="math inline">\(z_{4}\)</span>. Det finns inga regler för hur variabler ska namnges eller numreras. Det förekommer även att variabler kallas för samma bokstav och skiljs åt genom numrering, till exempel variablerna <span class="math inline">\(x_{1},\ x_{2}\)</span> och så vidare.</p>
 <p><strong>Tabell 1: Tre variabler med fyra observationer</strong></p>
-<div class="inline-table"><table style="width:71%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:71%;">
 <colgroup>
 <col style="width: 17%">
 <col style="width: 17%">
@@ -286,7 +286,7 @@ Till exempel kan en observation innehålla uppgifter för ett land ett specifikt
 - <em>Absolut nollpunkt</em>: Är variabeln definierad så att det finns ett minsta tänkbart värde?
 Beroende på svaren på dessa tre frågor kan vi placera vår variabel i någon av de fyra datatyperna. De tre kriterierna och de fyra datatyperna sammanfattas i tabell 2. Låt oss gå igenom de fyra datatyperna och ge några exempel.</p>
 <p><strong>Tabell 2: Fyra datatyper</strong></p>
-<div class="inline-table"><table style="width:76%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:76%;">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 19%">
@@ -389,6 +389,17 @@ Denna indelning i fyra typer av data är vanligt förekommande. Andra mer detalj
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -511,6 +522,7 @@ Denna indelning i fyra typer av data är vanligt förekommande. Andra mer detalj
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -549,7 +561,7 @@ Denna indelning i fyra typer av data är vanligt förekommande. Andra mer detalj
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

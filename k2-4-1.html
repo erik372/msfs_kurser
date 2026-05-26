@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>35 Regressionsanalys med tre variabler | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="35.0.1 Begrepp Inga nya begrepp i detta avsnitt.  35.0.2 Teori Varför behöver vi fler än två variabler? I analytiskt arbete (och i världen överhuvudtaget) påverkas det vi studerar nästan alltid av...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="35 Regressionsanalys med tre variabler | Matematik och statistik för samhällsvetare">
@@ -183,7 +183,7 @@ Det korrekta resultatet får vi inte förrän vi inkluderar <span class="math in
 </h4>
 <p>Nu ska vi estimera en regressionsmodell utifrån några observationer. För detta återanvänder vi de påhittade variablerna <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> med de fyra observationer vardera som vi använde tidigare när vi introducerade minstakvadratmetoden. Alla tre variablerna redovisas i tabell 1 med lite beräkningar som vi behöver.</p>
 <p><strong>Tabell 1: Variablerna Y, X och Z med lite beräkningar</strong></p>
-<div class="inline-table"><table style="width:95%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:95%;">
 <colgroup>
 <col style="width: 8%">
 <col style="width: 5%">
@@ -200,193 +200,193 @@ Det korrekta resultatet får vi inte förrän vi inkluderar <span class="math in
 </colgroup>
 <thead><tr>
 <th>
-<span class="math display"><span class="math display">\[i\]</span></span>
+<span class="math inline">\(i\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+<span class="math inline">\(Y_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[X_{i}\]</span></span>
+<span class="math inline">\(X_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Z_{i}\]</span></span>
+<span class="math inline">\(Z_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widetilde{Y_{i}}\]</span></span>
+<span class="math inline">\(\widetilde{Y_{i}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widetilde{X_{i}}\]</span></span>
+<span class="math inline">\(\widetilde{X_{i}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widetilde{Z_{i}}\]</span></span>
+<span class="math inline">\(\widetilde{Z_{i}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widetilde{Y_{i}}\widetilde{X_{i}}\]</span></span>
+<span class="math inline">\(\widetilde{Y_{i}}\widetilde{X_{i}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widetilde{Y_{i}}\widetilde{Z_{i}}\]</span></span>
+<span class="math inline">\(\widetilde{Y_{i}}\widetilde{Z_{i}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widetilde{X_{i}}\widetilde{Z_{i}}\]</span></span>
+<span class="math inline">\(\widetilde{X_{i}}\widetilde{Z_{i}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widetilde{{X_{i}}^{2}}\]</span></span>
+<span class="math inline">\(\widetilde{{X_{i}}^{2}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widetilde{{Z_{i}}^{2}}\]</span></span>
+<span class="math inline">\(\widetilde{{Z_{i}}^{2}}\)</span>
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-–0,5
+<span class="math inline">\(-0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-–2
+<span class="math inline">\(-2\)</span>
 </td>
 <td style="text-align: center;">
-–0,5
+<span class="math inline">\(-0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-0,25
+<span class="math inline">\(0{,}25\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-0,25
+<span class="math inline">\(0{,}25\)</span>
 </td>
 </tr>
 <tr>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-–1,5
+<span class="math inline">\(-1{,}5\)</span>
 </td>
 <td style="text-align: center;">
--1
+<span class="math inline">\(-1\)</span>
 </td>
 <td style="text-align: center;">
-2,5
+<span class="math inline">\(2{,}5\)</span>
 </td>
 <td style="text-align: center;">
-1,5
+<span class="math inline">\(1{,}5\)</span>
 </td>
 <td style="text-align: center;">
-–3,75
+<span class="math inline">\(-3{,}75\)</span>
 </td>
 <td style="text-align: center;">
-–2,5
+<span class="math inline">\(-2{,}5\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-6,25
+<span class="math inline">\(6{,}25\)</span>
 </td>
 </tr>
 <tr>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-5
+<span class="math inline">\(5\)</span>
 </td>
 <td style="text-align: center;">
-6
+<span class="math inline">\(6\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
-1,5
+<span class="math inline">\(1{,}5\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-–1,5
+<span class="math inline">\(-1{,}5\)</span>
 </td>
 <td style="text-align: center;">
-1,5
+<span class="math inline">\(1{,}5\)</span>
 </td>
 <td style="text-align: center;">
-–2,25
+<span class="math inline">\(-2{,}25\)</span>
 </td>
 <td style="text-align: center;">
-–1,5
+<span class="math inline">\(-1{,}5\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-2,25
+<span class="math inline">\(2{,}25\)</span>
 </td>
 </tr>
 <tr>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-7
+<span class="math inline">\(7\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-–0,25
+<span class="math inline">\(-0{,}25\)</span>
 </td>
 <td style="text-align: center;">
-–1
+<span class="math inline">\(-1\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-0,25
+<span class="math inline">\(0{,}25\)</span>
 </td>
 </tr>
 <tr>
@@ -394,13 +394,13 @@ Det korrekta resultatet får vi inte förrän vi inkluderar <span class="math in
 Medel
 </td>
 <td style="text-align: center;">
-3,5
+<span class="math inline">\(3{,}5\)</span>
 </td>
 <td style="text-align: center;">
-5
+<span class="math inline">\(5\)</span>
 </td>
 <td style="text-align: center;">
-1,5
+<span class="math inline">\(1{,}5\)</span>
 </td>
 <td style="text-align: center;">
 </td>
@@ -421,7 +421,7 @@ Medel
 </tr>
 <tr>
 <td>
-<span class="math display"><span class="math display">\[\sum_{}^{}{}\]</span></span>
+<span class="math inline">\(\sum_{}^{}{}\)</span>
 </td>
 <td style="text-align: center;">
 </td>
@@ -436,19 +436,19 @@ Medel
 <td style="text-align: center;">
 </td>
 <td style="text-align: center;">
-5
+<span class="math inline">\(5\)</span>
 </td>
 <td style="text-align: center;">
-–6
+<span class="math inline">\(-6\)</span>
 </td>
 <td style="text-align: center;">
-–4
+<span class="math inline">\(-4\)</span>
 </td>
 <td style="text-align: center;">
-10
+<span class="math inline">\(10\)</span>
 </td>
 <td style="text-align: center;">
-9
+<span class="math inline">\(9\)</span>
 </td>
 </tr>
 </tbody>
@@ -471,7 +471,7 @@ I <a href="https://www.dropbox.com/scl/fi/uzqiucdxx5eaka1hgni5z/2-4-Samvariation
 Vi kan sammanfatta våra estimerade koefficienter genom att sätta in resultaten i vår regressionsmodell:</p>
 <p><span class="math display">\[Y_{i} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} + V_{i} = 2,89 + 0,28X_{i} - 0,54Z_{i} + V_{i} \tag{11}\]</span></p>
 Nu kan vi även estimera predikterade <span class="math inline">\(\widehat{Y_{i}}\)</span> och residualen <span class="math inline">\(\widehat{V_{i}}\)</span>, vilket sammanfattas i tabell 2 med avrundade resultat.
-<div class="inline-table"><table style="width:78%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:78%;">
 <colgroup>
 <col style="width: 20%">
 <col style="width: 8%">
@@ -484,86 +484,85 @@ Nu kan vi även estimera predikterade <span class="math inline">\(\widehat{Y_{i}
 Observation <span class="math inline"><span class="math inline">\(i\)</span></span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+<span class="math inline">\(Y_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[X_{i}\]</span></span>
+<span class="math inline">\(X_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Z_{i}\]</span></span>
+<span class="math inline">\(Z_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} -
-0,54Z_{i}\]</span></span>
+<span class="math inline">\(\widehat{Y_{i}} \approx 2{,}89 + 0{,}28X_{i} - 0{,}54Z_{i}\)</span>
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-3,2
+<span class="math inline">\(3{,}2\)</span>
 </td>
 </tr>
 <tr>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-1,86
+<span class="math inline">\(1{,}86\)</span>
 </td>
 </tr>
 <tr>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-5
+<span class="math inline">\(5\)</span>
 </td>
 <td style="text-align: center;">
-6
+<span class="math inline">\(6\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
-4,59
+<span class="math inline">\(4{,}59\)</span>
 </td>
 </tr>
 <tr>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-7
+<span class="math inline">\(7\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-4,34
+<span class="math inline">\(4{,}34\)</span>
 </td>
 </tr>
 </tbody>
@@ -606,6 +605,17 @@ För att få bättre svar på dessa frågor behöver våra analysmetoder vara no
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -728,6 +738,7 @@ För att få bättre svar på dessa frågor behöver våra analysmetoder vara no
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -766,7 +777,7 @@ För att få bättre svar på dessa frågor behöver våra analysmetoder vara no
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

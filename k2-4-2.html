@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>36 Faktorvariabler | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="36.0.1 Begrepp  Faktorvariabel: Kallas även kategoriska variabler. Variabler som beskriver grupper (kategorier), till exempel kön, kommuner, yrkesgrupper, utbildningsnivåer med mera....">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="36 Faktorvariabler | Matematik och statistik för samhällsvetare">
@@ -146,7 +146,7 @@ Data som endast kan anta två värden kallas för binär. Ofta används just 0 e
 </h4>
 <p>Tabell 1 redovisar genomsnittlig årsinkomst för män respektive kvinnor i tre kommuner för år 2019, räknat i tusentals kronor.</p>
 <p><strong>Tabell 1: Genomsnittlig inkomst 2019, 1 000-tals kr</strong></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:99%;">
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -169,10 +169,10 @@ Kvinnor
 Danderyd
 </td>
 <td>
-435
+<span class="math inline">\(435\)</span>
 </td>
 <td>
-314
+<span class="math inline">\(314\)</span>
 </td>
 </tr>
 <tr>
@@ -180,10 +180,10 @@ Danderyd
 Mörbylånga
 </td>
 <td>
-277
+<span class="math inline">\(277\)</span>
 </td>
 <td>
-219
+<span class="math inline">\(219\)</span>
 </td>
 </tr>
 <tr>
@@ -191,10 +191,10 @@ Mörbylånga
 Oskarshamn
 </td>
 <td>
-279
+<span class="math inline">\(279\)</span>
 </td>
 <td>
-211
+<span class="math inline">\(211\)</span>
 </td>
 </tr>
 </tbody>
@@ -211,7 +211,7 @@ Vi kan estimera regressionsmodellen på samma sätt som tidigare, där koefficie
 <p>Koefficienten <span class="math inline">\(\widehat{b}\)</span> är negativ, vilket innebär att kön <span class="math inline">\((G)\)</span> har en negativ samvariation med lön <span class="math inline">\((W)\)</span>. Vi valde att definiera vår dummyvariabel <span class="math inline">\(G = 1\)</span> för kvinnor. Variabel W är associerat med ett 82,3 enheter lägre värde för kvinnor jämfört med män. Kvinnor har i genomsnitt 82 300 kr lägre inkomst än män i dessa tre kommuner.
 Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från män <span class="math inline">\((G = 0)\)</span> till kvinnor <span class="math inline">\((G = 1)\)</span> längs den horisontella axeln, går inkomsten nedåt längs den vertikala axeln. Därför är lutningen negativ. Detta betyder att kvinnor <span class="math inline">\((G = 1)\)</span> har lägre genomsnittsinkomst än män <span class="math inline">\((G = 0)\)</span> i dessa tre kommuner.</p>
 <p><strong>Tabell 2. Beräkningar för regressionsanalysen</strong></p>
-<div class="inline-table"><table style="width:97%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 16%">
 <col style="width: 14%">
@@ -225,22 +225,19 @@ Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från m�
 Kommun
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[W_{i}\]</span></span>
+<span class="math inline">\(W_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[G_{i}\]</span></span>
+<span class="math inline">\(G_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[W_{i} -
-\overline{W_{i}}\]</span></span>
+<span class="math inline">\(W_{i} - \overline{W_{i}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[G_{i} -
-\overline{G_{i}}\]</span></span>
+<span class="math inline">\(G_{i} - \overline{G_{i}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\left(
-G_{i} - \overline{G_{i}} \right)^{2}\]</span></span>
+<span class="math inline">\(\left( G_{i} - \overline{G_{i}} \right)^{2}\)</span>
 </th>
 </tr></thead>
 <tbody>
@@ -249,19 +246,19 @@ G_{i} - \overline{G_{i}} \right)^{2}\]</span></span>
 Danderyd
 </td>
 <td style="text-align: center;">
-435
+<span class="math inline">\(435\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
-145,8
+<span class="math inline">\(145{,}8\)</span>
 </td>
 <td style="text-align: center;">
--0,5
+<span class="math inline">\(-0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-0,25
+<span class="math inline">\(0{,}25\)</span>
 </td>
 </tr>
 <tr>
@@ -269,19 +266,19 @@ Danderyd
 Mörbylånga
 </td>
 <td style="text-align: center;">
-277
+<span class="math inline">\(277\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
--12,2
+<span class="math inline">\(-12{,}2\)</span>
 </td>
 <td style="text-align: center;">
--0,5
+<span class="math inline">\(-0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-0,25
+<span class="math inline">\(0{,}25\)</span>
 </td>
 </tr>
 <tr>
@@ -289,19 +286,19 @@ Mörbylånga
 Oskarshamn
 </td>
 <td style="text-align: center;">
-279
+<span class="math inline">\(279\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
--10,2
+<span class="math inline">\(-10{,}2\)</span>
 </td>
 <td style="text-align: center;">
--0,5
+<span class="math inline">\(-0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-0,25
+<span class="math inline">\(0{,}25\)</span>
 </td>
 </tr>
 <tr>
@@ -309,19 +306,19 @@ Oskarshamn
 Danderyd
 </td>
 <td style="text-align: center;">
-314
+<span class="math inline">\(314\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-24,8
+<span class="math inline">\(24{,}8\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-0,25
+<span class="math inline">\(0{,}25\)</span>
 </td>
 </tr>
 <tr>
@@ -329,19 +326,19 @@ Danderyd
 Mörbylånga
 </td>
 <td style="text-align: center;">
-219
+<span class="math inline">\(219\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
--70,2
+<span class="math inline">\(-70{,}2\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-0,25
+<span class="math inline">\(0{,}25\)</span>
 </td>
 </tr>
 <tr>
@@ -349,19 +346,19 @@ Mörbylånga
 Oskarshamn
 </td>
 <td style="text-align: center;">
-211
+<span class="math inline">\(211\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
--78,2
+<span class="math inline">\(-78{,}2\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-0,25
+<span class="math inline">\(0{,}25\)</span>
 </td>
 </tr>
 <tr>
@@ -383,10 +380,10 @@ Oskarshamn
 Medelvärde
 </td>
 <td style="text-align: center;">
-289,2
+<span class="math inline">\(289{,}2\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 <td style="text-align: center;">
 </td>
@@ -408,7 +405,7 @@ Summa
 <td style="text-align: center;">
 </td>
 <td style="text-align: center;">
-1,5
+<span class="math inline">\(1{,}5\)</span>
 </td>
 </tr>
 </tbody>
@@ -432,7 +429,7 @@ Tabell 3 redovisar variablerna, där <span class="math inline">\(Y_{i}\)</span> 
 <p>där <span class="math inline">\(e\)</span> är feltermen. Våra dummyvariabler representerar kommunerna Mörbylånga och Oskarshamn, en dummyvariabel mindre än antal kommuner. När båda dummyvariablerna i modellen är lika med 0 får vi estimaten för den tredje kommunen, Danderyd.
 Om vi har 3 kommuner använder vi bara 2 dummyvariabler. Varför? Om både Mörbylånga-dummyn = 0 OCH Oskarshamn-dummyn = 0, vet vi automatiskt att det måste vara Danderyd. Den tredje kommunen blir "referenskategori", i detta fall den kommun vi jämför de andra kommunerna mot. Om vi hade använt 3 dummyvariabler skulle regressionen inte fungera (matematiskt kallas detta "perfekt multikolinjäritet"). Datorn kan inte skilja på vilken effekt som kommer från vilken dummy.</p>
 <p><strong>Tabell 3: Genomsnittlig inkomst 2019, 1 000-tals kr</strong></p>
-<div class="inline-table"><table style="width:70%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:70%;">
 <colgroup>
 <col style="width: 17%">
 <col style="width: 17%">
@@ -444,13 +441,13 @@ Om vi har 3 kommuner använder vi bara 2 dummyvariabler. Varför? Om både Mörb
 Kommun
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+<span class="math inline">\(Y_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[K_{\text{Mörbylånga}}\]</span></span>
+<span class="math inline">\(K_{\text{Mörbylånga}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[K_{\text{Oskarshamn}}\]</span></span>
+<span class="math inline">\(K_{\text{Oskarshamn}}\)</span>
 </th>
 </tr></thead>
 <tbody>
@@ -459,13 +456,13 @@ Kommun
 Danderyd
 </td>
 <td style="text-align: center;">
-364,9
+<span class="math inline">\(364{,}9\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 </tr>
 <tr>
@@ -473,13 +470,13 @@ Danderyd
 Mörbylånga
 </td>
 <td style="text-align: center;">
-243,6
+<span class="math inline">\(243{,}6\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 </tr>
 <tr>
@@ -487,13 +484,13 @@ Mörbylånga
 Oskarshamn
 </td>
 <td style="text-align: center;">
-246
+<span class="math inline">\(246\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 </tr>
 </tbody>
@@ -524,6 +521,17 @@ Den sista kommunens resultat ges av att alla dummyvariablerna = 0. I dessa situa
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -646,6 +654,7 @@ Den sista kommunens resultat ges av att alla dummyvariablerna = 0. I dessa situa
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -684,7 +693,7 @@ Den sista kommunens resultat ges av att alla dummyvariablerna = 0. I dessa situa
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

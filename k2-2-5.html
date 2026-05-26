@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>29 Felterm, residual och ett räkneexempel | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="29.0.1 Begrepp Inga nya begrepp i detta avsnitt.  29.0.2 Teori Vi har regressionsmodellen: \[Y = a + bX + V \tag{1}\] där \(Y\) och \(X\) är variabler, \(a\) och \(b\) är koefficienter som vi vill...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="29 Felterm, residual och ett räkneexempel | Matematik och statistik för samhällsvetare">
@@ -147,7 +147,7 @@ Vi sätter nu in definitionen av <span class="math inline">\({\widehat{Y}}_{i}\)
 I praktiken har vi nästan alltid variation kring regressionslinjen, vilket är normalt och förväntat.</p>
 <div class="inline-figure"><img src="img/k2-2-5-image1.png"></div>
 <p><strong>Figur 1 Estimera</strong> <span class="math inline">\(\widehat{\mathbf{V}}\)</span></p>
-<div class="inline-table"><table style="width:52%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:52%;">
 <colgroup>
 <col style="width: 18%">
 <col style="width: 7%">
@@ -159,71 +159,70 @@ I praktiken har vi nästan alltid variation kring regressionslinjen, vilket är 
 Observation i
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+<span class="math inline">\(Y_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[{\widehat{Y}}_{i}\]</span></span>
+<span class="math inline">\({\widehat{Y}}_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[{\widehat{V}}_{i} = Y_{i} -
-{\widehat{Y}}_{i}\]</span></span>
+<span class="math inline">\({\widehat{V}}_{i} = Y_{i} - {\widehat{Y}}_{i}\)</span>
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-2,5
+<span class="math inline">\(2{,}5\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 </tr>
 <tr>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
--1
+<span class="math inline">\(-1\)</span>
 </td>
 </tr>
 <tr>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-5
+<span class="math inline">\(5\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 </tr>
 <tr>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-4,5
+<span class="math inline">\(4{,}5\)</span>
 </td>
 <td style="text-align: center;">
--0,5
+<span class="math inline">\(-0{,}5\)</span>
 </td>
 </tr>
 <tr>
@@ -235,7 +234,7 @@ Summa
 <td style="text-align: center;">
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 </tr>
 <tr>
@@ -247,7 +246,7 @@ Medelvärde
 <td style="text-align: center;">
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 </tr>
 </tbody>
@@ -277,7 +276,7 @@ Definitionen av <span class="math inline">\(\widehat{b}\)</span>:
 </h4>
 <p>Tabell 1 beskriver beräkningarna vi behöver för <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Gå noga igenom varje steg i tabellen och försäkra dig om att du förstår vad som sker i varje kolumn.</p>
 <p><strong>Tabell 1. Beräkningar för att estimera</strong> <span class="math inline">\(\widehat{\mathbf{a}}\)</span> <strong>och</strong> <span class="math inline">\(\widehat{\mathbf{b}}\)</span></p>
-<div class="inline-table"><table style="width:97%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 7%">
@@ -292,119 +291,115 @@ Definitionen av <span class="math inline">\(\widehat{b}\)</span>:
 Observation
 </th>
 <th style="text-align: right;">
-<span class="math display"><span class="math display">\[X_{i}\]</span></span>
+<span class="math inline">\(X_{i}\)</span>
 </th>
 <th style="text-align: right;">
-<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+<span class="math inline">\(Y_{i}\)</span>
 </th>
 <th style="text-align: right;">
-<span class="math display"><span class="math display">\[X_{i} -
-\overline{X}\]</span></span>
+<span class="math inline">\(X_{i} - \overline{X}\)</span>
 </th>
 <th style="text-align: right;">
-<span class="math display"><span class="math display">\[Y_{i} -
-\overline{Y}\]</span></span>
+<span class="math inline">\(Y_{i} - \overline{Y}\)</span>
 </th>
 <th style="text-align: right;">
-<span class="math display"><span class="math display">\[\left( X_{i}
-- \overline{X} \right)^{2}\]</span></span>
+<span class="math inline">\(\left( X_{i} - \overline{X} \right)^{2}\)</span>
 </th>
 <th style="text-align: right;">
-<span class="math display"><span class="math display">\[(X_{i} -
-\overline{X})(Y_{i} - \overline{Y})\]</span></span>
+<span class="math inline">\((X_{i} - \overline{X})(Y_{i} - \overline{Y})\)</span>
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: right;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: right;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: right;">
--2
+<span class="math inline">\(-2\)</span>
 </td>
 <td style="text-align: right;">
--0,5
+<span class="math inline">\(-0{,}5\)</span>
 </td>
 <td style="text-align: right;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: right;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 </tr>
 <tr>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: right;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: right;">
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: right;">
--1
+<span class="math inline">\(-1\)</span>
 </td>
 <td style="text-align: right;">
--1,5
+<span class="math inline">\(-1{,}5\)</span>
 </td>
 <td style="text-align: right;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: right;">
-1,5
+<span class="math inline">\(1{,}5\)</span>
 </td>
 </tr>
 <tr>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: right;">
-6
+<span class="math inline">\(6\)</span>
 </td>
 <td style="text-align: right;">
-5
+<span class="math inline">\(5\)</span>
 </td>
 <td style="text-align: right;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: right;">
-1,5
+<span class="math inline">\(1{,}5\)</span>
 </td>
 <td style="text-align: right;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: right;">
-1,5
+<span class="math inline">\(1{,}5\)</span>
 </td>
 </tr>
 <tr>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: right;">
-7
+<span class="math inline">\(7\)</span>
 </td>
 <td style="text-align: right;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: right;">
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: right;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 <td style="text-align: right;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: right;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 </tr>
 <tr>
@@ -412,10 +407,10 @@ Observation
 Medelvärde
 </td>
 <td style="text-align: right;">
-5
+<span class="math inline">\(5\)</span>
 </td>
 <td style="text-align: right;">
-3,5
+<span class="math inline">\(3{,}5\)</span>
 </td>
 <td style="text-align: right;">
 </td>
@@ -431,20 +426,20 @@ Medelvärde
 Summa
 </td>
 <td style="text-align: right;">
-20
+<span class="math inline">\(20\)</span>
 </td>
 <td style="text-align: right;">
-14
+<span class="math inline">\(14\)</span>
 </td>
 <td style="text-align: right;">
 </td>
 <td style="text-align: right;">
 </td>
 <td style="text-align: right;">
-10
+<span class="math inline">\(10\)</span>
 </td>
 <td style="text-align: right;">
-5
+<span class="math inline">\(5\)</span>
 </td>
 </tr>
 </tbody>
@@ -457,7 +452,7 @@ Summa
 <p><span class="math display">\[{\widehat{Y}}_{i} = \widehat{a} + \widehat{b}X = 1 + 0,5X_{i} \tag{8}\]</span></p>
 <p>där <span class="math inline">\(X_{i}\)</span> är observationerna för <span class="math inline">\(X\)</span>. Med <span class="math inline">\(\widehat{Y}\)</span> kan vi även estimera residualen <span class="math inline">\(\widehat{V}\)</span>. Resultaten presenteras i tabell 2. I kolumnen för <span class="math inline">\(\widehat{Y}\)</span> ser vi <span class="math inline">\(Y\)</span>-värdena längs med regressionslinjen. Vi har endast värden på regressionslinjen som sammanfaller med de värden vi har för variabeln <span class="math inline">\(X\)</span>. Pröva själv att i ett diagram rita ut punkterna <span class="math inline">\(\left( X_{1},{\widehat{Y}}_{1} \right) = (3,\ \ 2,5)\)</span>, (4,3) , (6,4) och (7, 4,5)</p>
 <p><strong>Tabell 2. Estimera</strong> <span class="math inline">\(\widehat{\mathbf{Y}}\)</span> <strong>och</strong> <span class="math inline">\(\widehat{\mathbf{V}}\)</span></p>
-<div class="inline-table"><table style="width:96%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:96%;">
 <colgroup>
 <col style="width: 16%">
 <col style="width: 9%">
@@ -471,102 +466,100 @@ Summa
 Observation
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[X_{i}\]</span></span>
+<span class="math inline">\(X_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+<span class="math inline">\(Y_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widehat{Y_{i}} = 1 + 0,5X_{i}\]</span></span>
+<span class="math inline">\(\widehat{Y_{i}} = 1 + 0{,}5X_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widehat{V_{i}} = Y_{i} -
-\widehat{Y_{i}}\]</span></span>
+<span class="math inline">\(\widehat{V_{i}} = Y_{i} - \widehat{Y_{i}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\left(
-\widehat{V_{i}} \right)^{2}\]</span></span>
+<span class="math inline">\(\left( \widehat{V_{i}} \right)^{2}\)</span>
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-2,5
+<span class="math inline">\(2{,}5\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-0,25
+<span class="math inline">\(0{,}25\)</span>
 </td>
 </tr>
 <tr>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
--1
+<span class="math inline">\(-1\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 </tr>
 <tr>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-6
+<span class="math inline">\(6\)</span>
 </td>
 <td style="text-align: center;">
-5
+<span class="math inline">\(5\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 </tr>
 <tr>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-7
+<span class="math inline">\(7\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-4,5
+<span class="math inline">\(4{,}5\)</span>
 </td>
 <td style="text-align: center;">
--0,5
+<span class="math inline">\(-0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-0,25
+<span class="math inline">\(0{,}25\)</span>
 </td>
 </tr>
 <tr>
@@ -582,8 +575,7 @@ Summa
 <td style="text-align: center;">
 </td>
 <td style="text-align: center;">
-<span class="math display"><span class="math display">\[\sum_{i}^{}{{\widehat{V}}_{i}}^{2} =
-2,5\]</span></span>
+<span class="math inline">\(\sum_{i}^{}{{\widehat{V}}_{i}}^{2} = 2{,}5\)</span>
 </td>
 </tr>
 </tbody>
@@ -612,6 +604,17 @@ Summa
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -734,6 +737,7 @@ Summa
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -772,7 +776,7 @@ Summa
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -104,7 +104,7 @@ Detta exempel syftar enbart till att illustrera metoden. För att göra det mer 
 
 **Tabell 1. Fyra observationer för X och Y**
 
-<table style="width:39%;">
+<table class="table table-bordered" style="width:39%;">
 <colgroup>
 <col style="width: 16%" />
 <col style="width: 10%" />
@@ -113,32 +113,30 @@ Detta exempel syftar enbart till att illustrera metoden. För att göra det mer 
 <thead>
 <tr>
 <th>Observation <em>i</em></th>
-<th style="text-align: center;"><span
-class="math display">\[X\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[Y\]</span></th>
+<th style="text-align: center;">\(X\)</th>
+<th style="text-align: center;">\(Y\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">3</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(3\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">2</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(2\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">5</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(6\)</td>
+<td style="text-align: center;">\(5\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">4</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(7\)</td>
+<td style="text-align: center;">\(4\)</td>
 </tr>
 </tbody>
 </table>

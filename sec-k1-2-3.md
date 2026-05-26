@@ -26,7 +26,7 @@ Detta och resultaten för övriga årtal visas i tabell 1. Som syns i tabellen v
 
 **Tabell 1: Sveriges BNP år 2010---2019**
 
-<table style="width:55%;">
+<table class="table table-bordered" style="width:55%;">
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 19%" />
@@ -45,42 +45,42 @@ Detta och resultaten för övriga årtal visas i tabell 1. Som syns i tabellen v
 </thead>
 <tbody>
 <tr>
-<td>2009</td>
+<td>\(2009\)</td>
 <td style="text-align: center;">423 400</td>
 <td></td>
-<td>2015</td>
+<td>\(2015\)</td>
 <td style="text-align: center;">474 000</td>
 </tr>
 <tr>
-<td>2010</td>
+<td>\(2010\)</td>
 <td style="text-align: center;">444 800</td>
 <td></td>
-<td>2016</td>
+<td>\(2016\)</td>
 <td style="text-align: center;">477 800</td>
 </tr>
 <tr>
-<td>2011</td>
+<td>\(2011\)</td>
 <td style="text-align: center;">455 600</td>
 <td></td>
-<td>2017</td>
+<td>\(2017\)</td>
 <td style="text-align: center;">483 500</td>
 </tr>
 <tr>
-<td>2012</td>
+<td>\(2012\)</td>
 <td style="text-align: center;">449 600</td>
 <td></td>
-<td>2018</td>
+<td>\(2018\)</td>
 <td style="text-align: center;">487 300</td>
 </tr>
 <tr>
-<td>2013</td>
+<td>\(2013\)</td>
 <td style="text-align: center;">451 100</td>
 <td></td>
-<td>2019</td>
+<td>\(2019\)</td>
 <td style="text-align: center;">488 800</td>
 </tr>
 <tr>
-<td>2014</td>
+<td>\(2014\)</td>
 <td style="text-align: center;">458 500</td>
 <td></td>
 <td style="text-align: center;"></td>
@@ -116,7 +116,7 @@ I tabellen kan vi se hur en lika stor relativ förändring i $ln(BNP)$ motsvaras
 
 **Tabell 2: BNP och naturliga logaritmen av BNP**
 
-<table style="width:89%;">
+<table class="table table-bordered" style="width:89%;">
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -139,99 +139,99 @@ I tabellen kan vi se hur en lika stor relativ förändring i $ln(BNP)$ motsvaras
 </thead>
 <tbody>
 <tr>
-<td>1800</td>
-<td>115</td>
-<td>4,7</td>
+<td>\(1800\)</td>
+<td>\(115\)</td>
+<td>\(4{,}7\)</td>
 <td></td>
-<td>1910</td>
+<td>\(1910\)</td>
 <td>3 302</td>
-<td>8,1</td>
+<td>\(8{,}1\)</td>
 </tr>
 <tr>
-<td>1810</td>
-<td>178</td>
-<td>5,2</td>
+<td>\(1810\)</td>
+<td>\(178\)</td>
+<td>\(5{,}2\)</td>
 <td></td>
-<td>1920</td>
+<td>\(1920\)</td>
 <td>12 200</td>
-<td>9,4</td>
+<td>\(9{,}4\)</td>
 </tr>
 <tr>
-<td>1820</td>
-<td>278</td>
-<td>5,6</td>
+<td>\(1820\)</td>
+<td>\(278\)</td>
+<td>\(5{,}6\)</td>
 <td></td>
-<td>1930</td>
+<td>\(1930\)</td>
 <td>9 271</td>
-<td>9,1</td>
+<td>\(9{,}1\)</td>
 </tr>
 <tr>
-<td>1830</td>
-<td>306</td>
-<td>5,7</td>
+<td>\(1830\)</td>
+<td>\(306\)</td>
+<td>\(5{,}7\)</td>
 <td></td>
-<td>1940</td>
+<td>\(1940\)</td>
 <td>13 979</td>
-<td>9,5</td>
+<td>\(9{,}5\)</td>
 </tr>
 <tr>
-<td>1840</td>
-<td>382</td>
-<td>5,9</td>
+<td>\(1840\)</td>
+<td>\(382\)</td>
+<td>\(5{,}9\)</td>
 <td></td>
-<td>1950</td>
+<td>\(1950\)</td>
 <td>31 827</td>
-<td>10,4</td>
+<td>\(10{,}4\)</td>
 </tr>
 <tr>
-<td>1850</td>
-<td>461</td>
-<td>6,1</td>
+<td>\(1850\)</td>
+<td>\(461\)</td>
+<td>\(6{,}1\)</td>
 <td></td>
-<td>1960</td>
+<td>\(1960\)</td>
 <td>72 272</td>
-<td>11,2</td>
+<td>\(11{,}2\)</td>
 </tr>
 <tr>
-<td>1860</td>
-<td>743</td>
-<td>6,6</td>
+<td>\(1860\)</td>
+<td>\(743\)</td>
+<td>\(6{,}6\)</td>
 <td></td>
-<td>1970</td>
+<td>\(1970\)</td>
 <td>175 222</td>
-<td>12,1</td>
+<td>\(12{,}1\)</td>
 </tr>
 <tr>
-<td>1870</td>
-<td>938</td>
-<td>6,8</td>
+<td>\(1870\)</td>
+<td>\(938\)</td>
+<td>\(6{,}8\)</td>
 <td></td>
-<td>1980</td>
+<td>\(1980\)</td>
 <td>531 884</td>
-<td>13,2</td>
+<td>\(13{,}2\)</td>
 </tr>
 <tr>
-<td>1880</td>
+<td>\(1880\)</td>
 <td>1 314</td>
-<td>7,2</td>
+<td>\(7{,}2\)</td>
 <td></td>
-<td>1990</td>
+<td>\(1990\)</td>
 <td>1 365 700</td>
-<td>14,1</td>
+<td>\(14{,}1\)</td>
 </tr>
 <tr>
-<td>1890</td>
+<td>\(1890\)</td>
 <td>1 477</td>
-<td>7,3</td>
+<td>\(7{,}3\)</td>
 <td></td>
-<td>2000</td>
+<td>\(2000\)</td>
 <td>2 013 311</td>
-<td>14,5</td>
+<td>\(14{,}5\)</td>
 </tr>
 <tr>
-<td>1900</td>
+<td>\(1900\)</td>
 <td>2 245</td>
-<td>7,7</td>
+<td>\(7{,}7\)</td>
 <td></td>
 <td></td>
 <td></td>

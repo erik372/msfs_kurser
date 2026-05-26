@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>20 Nätverksanalys | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="20.0.1 Begrepp Nätverk: Input-output:  20.0.2 Teori I detta avsnitt ska vi använda linjär algebra för att beskriva ett nätverk av företag i olika branscher som handlar med varandra. För detta kan...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="20 Nätverksanalys | Matematik och statistik för samhällsvetare">
@@ -139,7 +139,7 @@ Dessa metoder har en lång historia men började framför allt spridas inom samh
 <p>Tabell 1 visar ett exempel på en IO-tabell med de två branscherna A och B. Respektive bransch har en egen rad och en egen kolumn. Siffrorna i tabellen visar värdet av den produktion som levereras till respektive bransch samt till slutkonsumtion hos hushåll och offentlig sektor.
 I raden för bransch A visar siffrorna värdet av den produktion som A säljer till andra företag i samma bransch (värdet 2) och till företag i bransch B (värdet 1). Den fjärde kolumnen beskriver mängden produktion till slutkonsumtion medan den femte kolumnen summerar kolumn 2–4.</p>
 <p><strong>Tabell 1. Input och output från och till företagen i de två branscherna A och B.</strong></p>
-<div class="inline-table"><table style="width:82%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:82%;">
 <colgroup>
 <col style="width: 16%">
 <col style="width: 16%">
@@ -175,16 +175,16 @@ Summa
 Bransch A
 </td>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td>
-6
+<span class="math inline">\(6\)</span>
 </td>
 </tr>
 <tr>
@@ -192,16 +192,16 @@ Bransch A
 Bransch B
 </td>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td>
-7
+<span class="math inline">\(7\)</span>
 </td>
 </tr>
 <tr>
@@ -209,16 +209,16 @@ Bransch B
 Summa
 </td>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td>
-6
+<span class="math inline">\(6\)</span>
 </td>
 <td>
-13
+<span class="math inline">\(13\)</span>
 </td>
 </tr>
 </tbody>
@@ -284,6 +284,17 @@ Punkternas storlek representerar respektive branschs totala produktion, kolumnen
 
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -406,6 +417,7 @@ Punkternas storlek representerar respektive branschs totala produktion, kolumnen
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -444,7 +456,7 @@ Punkternas storlek representerar respektive branschs totala produktion, kolumnen
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

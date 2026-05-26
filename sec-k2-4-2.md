@@ -19,7 +19,7 @@ Tabell 1 redovisar genomsnittlig årsinkomst för män respektive kvinnor i tre 
 
 **Tabell 1: Genomsnittlig inkomst 2019, 1 000-tals kr**
 
-<table style="width:99%;">
+<table class="table table-bordered" style="width:99%;">
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -35,18 +35,18 @@ Tabell 1 redovisar genomsnittlig årsinkomst för män respektive kvinnor i tre 
 <tbody>
 <tr>
 <td>Danderyd</td>
-<td>435</td>
-<td>314</td>
+<td>\(435\)</td>
+<td>\(314\)</td>
 </tr>
 <tr>
 <td>Mörbylånga</td>
-<td>277</td>
-<td>219</td>
+<td>\(277\)</td>
+<td>\(219\)</td>
 </tr>
 <tr>
 <td>Oskarshamn</td>
-<td>279</td>
-<td>211</td>
+<td>\(279\)</td>
+<td>\(211\)</td>
 </tr>
 </tbody>
 </table>
@@ -75,7 +75,7 @@ Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från m�
 
 **Tabell 2. Beräkningar för regressionsanalysen**
 
-<table style="width:97%;">
+<table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 16%" />
 <col style="width: 14%" />
@@ -87,66 +87,61 @@ Resultatet illustreras i figur 1. Diagrammet visar att när vi rör oss från m�
 <thead>
 <tr>
 <th>Kommun</th>
-<th style="text-align: center;"><span
-class="math display">\[W_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[G_{i}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[W_{i} -
-\overline{W_{i}}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[G_{i} -
-\overline{G_{i}}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[\left(
-G_{i} - \overline{G_{i}} \right)^{2}\]</span></th>
+<th style="text-align: center;">\(W_{i}\)</th>
+<th style="text-align: center;">\(G_{i}\)</th>
+<th style="text-align: center;">\(W_{i} - \overline{W_{i}}\)</th>
+<th style="text-align: center;">\(G_{i} - \overline{G_{i}}\)</th>
+<th style="text-align: center;">\(\left( G_{i} - \overline{G_{i}} \right)^{2}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Danderyd</td>
-<td style="text-align: center;">435</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">145,8</td>
-<td style="text-align: center;">-0,5</td>
-<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">\(435\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(145{,}8\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
 <td>Mörbylånga</td>
-<td style="text-align: center;">277</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">-12,2</td>
-<td style="text-align: center;">-0,5</td>
-<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">\(277\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(-12{,}2\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
 <td>Oskarshamn</td>
-<td style="text-align: center;">279</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">-10,2</td>
-<td style="text-align: center;">-0,5</td>
-<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">\(279\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(-10{,}2\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
 <td>Danderyd</td>
-<td style="text-align: center;">314</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">24,8</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">\(314\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(24{,}8\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
 <td>Mörbylånga</td>
-<td style="text-align: center;">219</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">-70,2</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">\(219\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(-70{,}2\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
 <td>Oskarshamn</td>
-<td style="text-align: center;">211</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">-78,2</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">\(211\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(-78{,}2\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
 <td></td>
@@ -158,8 +153,8 @@ G_{i} - \overline{G_{i}} \right)^{2}\]</span></th>
 </tr>
 <tr>
 <td>Medelvärde</td>
-<td style="text-align: center;">289,2</td>
-<td style="text-align: center;">0,5</td>
+<td style="text-align: center;">\(289{,}2\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -170,7 +165,7 @@ G_{i} - \overline{G_{i}} \right)^{2}\]</span></th>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;">1,5</td>
+<td style="text-align: center;">\(1{,}5\)</td>
 </tr>
 </tbody>
 </table>
@@ -202,7 +197,7 @@ Om vi har 3 kommuner använder vi bara 2 dummyvariabler. Varför? Om både Mörb
 
 **Tabell 3: Genomsnittlig inkomst 2019, 1 000-tals kr**
 
-<table style="width:70%;">
+<table class="table table-bordered" style="width:70%;">
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -212,32 +207,29 @@ Om vi har 3 kommuner använder vi bara 2 dummyvariabler. Varför? Om både Mörb
 <thead>
 <tr>
 <th>Kommun</th>
-<th style="text-align: center;"><span
-class="math display">\[Y_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[K_{\text{Mörbylånga}}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[K_{\text{Oskarshamn}}\]</span></th>
+<th style="text-align: center;">\(Y_{i}\)</th>
+<th style="text-align: center;">\(K_{\text{Mörbylånga}}\)</th>
+<th style="text-align: center;">\(K_{\text{Oskarshamn}}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Danderyd</td>
-<td style="text-align: center;">364,9</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;">\(364{,}9\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(0\)</td>
 </tr>
 <tr>
 <td>Mörbylånga</td>
-<td style="text-align: center;">243,6</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;">\(243{,}6\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(0\)</td>
 </tr>
 <tr>
 <td>Oskarshamn</td>
-<td style="text-align: center;">246</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;">\(246\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(1\)</td>
 </tr>
 </tbody>
 </table>

@@ -95,7 +95,7 @@ Tabell 1 visar våra beräkningar för att estimera $\widehat{Y}$ med de observe
 
 **Tabell 1: Estimering av** $\widehat{\mathbf{Y}}$
 
-<table style="width:72%;">
+<table class="table table-bordered" style="width:72%;">
 <colgroup>
 <col style="width: 16%" />
 <col style="width: 10%" />
@@ -105,41 +105,35 @@ Tabell 1 visar våra beräkningar för att estimera $\widehat{Y}$ med de observe
 <thead>
 <tr>
 <th>Observation <em>i</em></th>
-<th style="text-align: center;"><span
-class="math display">\[X\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[Y\]</span></th>
-<th><span class="math display">\[\widehat{Y} = 1 + 0,5*X\]</span></th>
+<th style="text-align: center;">\(X\)</th>
+<th style="text-align: center;">\(Y\)</th>
+<th>\(\widehat{Y} = 1 + 0{,}5*X\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">3</td>
-<td><span class="math display">\[\widehat{Y} = 1 + 0,5*3 =
-2,5\]</span></td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td>\(\widehat{Y} = 1 + 0{,}5*3 = 2{,}5\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">2</td>
-<td><span class="math display">\[\widehat{Y} = 1 + 0,5*4 =
-3\]</span></td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td>\(\widehat{Y} = 1 + 0{,}5*4 = 3\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">5</td>
-<td><span class="math display">\[\widehat{Y} = 1 + 0,5*6 =
-4\]</span></td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(6\)</td>
+<td style="text-align: center;">\(5\)</td>
+<td>\(\widehat{Y} = 1 + 0{,}5*6 = 4\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">4</td>
-<td><span class="math display">\[\widehat{Y} = 1 + 0,5*7 =
-4,5\]</span></td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(7\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td>\(\widehat{Y} = 1 + 0{,}5*7 = 4{,}5\)</td>
 </tr>
 </tbody>
 </table>

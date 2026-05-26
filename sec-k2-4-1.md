@@ -90,7 +90,7 @@ Nu ska vi estimera en regressionsmodell utifrån några observationer. För dett
 
 **Tabell 1: Variablerna Y, X och Z med lite beräkningar**
 
-<table style="width:95%;">
+<table class="table table-bordered" style="width:95%;">
 <colgroup>
 <col style="width: 8%" />
 <col style="width: 5%" />
@@ -107,93 +107,82 @@ Nu ska vi estimera en regressionsmodell utifrån några observationer. För dett
 </colgroup>
 <thead>
 <tr>
-<th><span class="math display">\[i\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[Y_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[X_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[Z_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widetilde{Y_{i}}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widetilde{X_{i}}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widetilde{Z_{i}}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widetilde{Y_{i}}\widetilde{X_{i}}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widetilde{Y_{i}}\widetilde{Z_{i}}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widetilde{X_{i}}\widetilde{Z_{i}}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widetilde{{X_{i}}^{2}}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widetilde{{Z_{i}}^{2}}\]</span></th>
+<th>\(i\)</th>
+<th style="text-align: center;">\(Y_{i}\)</th>
+<th style="text-align: center;">\(X_{i}\)</th>
+<th style="text-align: center;">\(Z_{i}\)</th>
+<th style="text-align: center;">\(\widetilde{Y_{i}}\)</th>
+<th style="text-align: center;">\(\widetilde{X_{i}}\)</th>
+<th style="text-align: center;">\(\widetilde{Z_{i}}\)</th>
+<th style="text-align: center;">\(\widetilde{Y_{i}}\widetilde{X_{i}}\)</th>
+<th style="text-align: center;">\(\widetilde{Y_{i}}\widetilde{Z_{i}}\)</th>
+<th style="text-align: center;">\(\widetilde{X_{i}}\widetilde{Z_{i}}\)</th>
+<th style="text-align: center;">\(\widetilde{{X_{i}}^{2}}\)</th>
+<th style="text-align: center;">\(\widetilde{{Z_{i}}^{2}}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">–0,5</td>
-<td style="text-align: center;">–2</td>
-<td style="text-align: center;">–0,5</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0,25</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0,25</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(-2\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">–1,5</td>
-<td style="text-align: center;">-1</td>
-<td style="text-align: center;">2,5</td>
-<td style="text-align: center;">1,5</td>
-<td style="text-align: center;">–3,75</td>
-<td style="text-align: center;">–2,5</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">6,25</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(-1{,}5\)</td>
+<td style="text-align: center;">\(-1\)</td>
+<td style="text-align: center;">\(2{,}5\)</td>
+<td style="text-align: center;">\(1{,}5\)</td>
+<td style="text-align: center;">\(-3{,}75\)</td>
+<td style="text-align: center;">\(-2{,}5\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(6{,}25\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1,5</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">–1,5</td>
-<td style="text-align: center;">1,5</td>
-<td style="text-align: center;">–2,25</td>
-<td style="text-align: center;">–1,5</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">2,25</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(6\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(1{,}5\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(-1{,}5\)</td>
+<td style="text-align: center;">\(1{,}5\)</td>
+<td style="text-align: center;">\(-2{,}25\)</td>
+<td style="text-align: center;">\(-1{,}5\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(2{,}25\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">–0,25</td>
-<td style="text-align: center;">–1</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0,25</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(7\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(-0{,}25\)</td>
+<td style="text-align: center;">\(-1\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
 <td>Medel</td>
-<td style="text-align: center;">3,5</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">1,5</td>
+<td style="text-align: center;">\(3{,}5\)</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(1{,}5\)</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -204,18 +193,18 @@ class="math display">\[\widetilde{{Z_{i}}^{2}}\]</span></th>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><span class="math display">\[\sum_{}^{}{}\]</span></td>
+<td>\(\sum_{}^{}{}\)</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">–6</td>
-<td style="text-align: center;">–4</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">9</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(-6\)</td>
+<td style="text-align: center;">\(-4\)</td>
+<td style="text-align: center;">\(10\)</td>
+<td style="text-align: center;">\(9\)</td>
 </tr>
 </tbody>
 </table>
@@ -247,7 +236,7 @@ Vi kan sammanfatta våra estimerade koefficienter genom att sätta in resultaten
 $$Y_{i} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} + V_{i} = 2,89 + 0,28X_{i} - 0,54Z_{i} + V_{i} \tag{11}$$
 
 Nu kan vi även estimera predikterade $\widehat{Y_{i}}$ och residualen $\widehat{V_{i}}$, vilket sammanfattas i tabell 2 med avrundade resultat.
-<table style="width:78%;">
+<table class="table table-bordered" style="width:78%;">
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 8%" />
@@ -258,45 +247,40 @@ Nu kan vi även estimera predikterade $\widehat{Y_{i}}$ och residualen $\widehat
 <thead>
 <tr>
 <th>Observation <span class="math inline">\(i\)</span></th>
-<th style="text-align: center;"><span
-class="math display">\[Y_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[X_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[Z_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widehat{Y_{i}} \approx 2,89 + 0,28X_{i} -
-0,54Z_{i}\]</span></th>
+<th style="text-align: center;">\(Y_{i}\)</th>
+<th style="text-align: center;">\(X_{i}\)</th>
+<th style="text-align: center;">\(Z_{i}\)</th>
+<th style="text-align: center;">\(\widehat{Y_{i}} \approx 2{,}89 + 0{,}28X_{i} - 0{,}54Z_{i}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">3,2</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(3{,}2\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1,86</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(1{,}86\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">4,59</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(6\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(4{,}59\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">4,34</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(7\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(4{,}34\)</td>
 </tr>
 </tbody>
 </table>

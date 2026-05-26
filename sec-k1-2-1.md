@@ -62,7 +62,7 @@ Ett närliggande begrepp är *kumulativ summa*, vilket beskriver en summa som be
 
 **Tabell 1: Illustration av kumulativ summa.**
 
-<table style="width:75%;">
+<table class="table table-bordered" style="width:75%;">
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 18%" />
@@ -77,23 +77,23 @@ Ett närliggande begrepp är *kumulativ summa*, vilket beskriver en summa som be
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>23</td>
-<td>23</td>
+<td>\(1\)</td>
+<td>\(23\)</td>
+<td>\(23\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td>32</td>
+<td>\(2\)</td>
+<td>\(32\)</td>
 <td>23+32=55</td>
 </tr>
 <tr>
-<td>3</td>
-<td>11</td>
+<td>\(3\)</td>
+<td>\(11\)</td>
 <td>23+32+11=66</td>
 </tr>
 <tr>
-<td>4</td>
-<td>14</td>
+<td>\(4\)</td>
+<td>\(14\)</td>
 <td>23+32+11+14=80</td>
 </tr>
 <tr>

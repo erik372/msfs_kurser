@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>2 Hur beskriva en teori med matte? | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="2.0.1 Begrepp  Vetenskaplig teori: I vardagligt tal kan ordet teori syfta på olika typer av idéer. En vetenskaplig teori syftar på en idé som kan prövas med vetenskapliga metoder, är testbar och...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="2 Hur beskriva en teori med matte? | Matematik och statistik för samhällsvetare">
@@ -198,6 +198,17 @@ Tvärtom används analytiskt arbete och forskning i regel just för att studera 
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -320,6 +331,7 @@ Tvärtom används analytiskt arbete och forskning i regel just för att studera 
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -358,7 +370,7 @@ Tvärtom används analytiskt arbete och forskning i regel just för att studera 
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

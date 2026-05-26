@@ -16,7 +16,7 @@ Information kallas inom analytiskt arbete för *data*. Data kan alltså bestå a
 Allt analytiskt arbete använder information om verkligheten i någon form eller utsträckning. All data måste i sin tur tolkas. Mycket analytiskt arbete består av att kartlägga verkligheten och samla in data.
 Exakt vilken typ av information som krävs för en analys beror på vad som är undersökningens *syfte*. Detta är helt centralt för allt analytiskt arbete men kommer inte diskuteras så noga i den här kursen.
 Vi har ofta glädje av att kategorisera information i *datavariabler*. Datavariabler placeras ofta som kolumner i en tabell med ett värd per rad, till exempel som i följande tabell:
-<table style="width:35%;">
+<table class="table table-bordered" style="width:35%;">
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -29,11 +29,11 @@ Vi har ofta glädje av att kategorisera information i *datavariabler*. Datavaria
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td>\(1\)</td>
 <td>Datavärde 1</td>
 </tr>
 <tr>
-<td>2</td>
+<td>\(2\)</td>
 <td>Datavärde 2</td>
 </tr>
 </tbody>
@@ -50,7 +50,7 @@ Observationerna numrerar vi $y_{1}$ till $y_{4}$, $x_{1}$ till $x_{4}$ och $z_{1
 
 **Tabell 1: Tre variabler med fyra observationer**
 
-<table style="width:71%;">
+<table class="table table-bordered" style="width:71%;">
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 17%" />
@@ -104,7 +104,7 @@ Beroende på svaren på dessa tre frågor kan vi placera vår variabel i någon 
 
 **Tabell 2: Fyra datatyper**
 
-<table style="width:76%;">
+<table class="table table-bordered" style="width:76%;">
 <colgroup>
 <col style="width: 19%" />
 <col style="width: 19%" />

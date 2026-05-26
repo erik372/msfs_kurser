@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>9 Banadödlighet och flyktingar | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="9.0.1 Begrepp Inga nya matematiska begrepp i detta avsnitt.  9.0.2 Teori De senaste decennierna har barnadödligheten i hela världen sjunkit kraftigt. Den varierar dock fortfarande stort bland...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="9 Banadödlighet och flyktingar | Matematik och statistik för samhällsvetare">
@@ -127,7 +127,7 @@
 <p>De senaste decennierna har barnadödligheten i hela världen sjunkit kraftigt. Den varierar dock fortfarande stort bland världens länder. Tabell 1 beskriver den genomsnittliga barnadödligheten per kontinent år 1950 och 2016. Både år 1950 och 2016 var barnadödligheten störst i Afrika.
 Barnadödligheten har dock även minskat som mest i de afrikanska länderna, från cirka 300 per 1 000 barn år 1950, till att år 2016 vara nere på 62,7 avlidna barn per 1 000 under 5 års ålder. Under samma period minskade barnadödligheten i länderna i Europa från 86,7 år 1950 till 4,9 år 2016.</p>
 <p><strong>Tabell 1: Antal avlidna barn per 1 000 barn under 5 år</strong></p>
-<div class="inline-table"><table style="width:60%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:60%;">
 <colgroup>
 <col style="width: 20%">
 <col style="width: 20%">
@@ -149,10 +149,10 @@ Barnadödligheten har dock även minskat som mest i de afrikanska länderna, fr�
 Afrika
 </td>
 <td>
-302
+<span class="math inline">\(302\)</span>
 </td>
 <td>
-62,7
+<span class="math inline">\(62{,}7\)</span>
 </td>
 </tr>
 <tr>
@@ -160,10 +160,10 @@ Afrika
 Asien
 </td>
 <td>
-234
+<span class="math inline">\(234\)</span>
 </td>
 <td>
-22,8
+<span class="math inline">\(22{,}8\)</span>
 </td>
 </tr>
 <tr>
@@ -171,10 +171,10 @@ Asien
 Europa
 </td>
 <td>
-86,7
+<span class="math inline">\(86{,}7\)</span>
 </td>
 <td>
-4,9
+<span class="math inline">\(4{,}9\)</span>
 </td>
 </tr>
 <tr>
@@ -182,10 +182,10 @@ Europa
 Nordamerika
 </td>
 <td>
-152
+<span class="math inline">\(152\)</span>
 </td>
 <td>
-15,9
+<span class="math inline">\(15{,}9\)</span>
 </td>
 </tr>
 <tr>
@@ -193,10 +193,10 @@ Nordamerika
 Oceanien
 </td>
 <td>
-140
+<span class="math inline">\(140\)</span>
 </td>
 <td>
-22,7
+<span class="math inline">\(22{,}7\)</span>
 </td>
 </tr>
 <tr>
@@ -204,10 +204,10 @@ Oceanien
 Sydamerika
 </td>
 <td>
-181
+<span class="math inline">\(181\)</span>
 </td>
 <td>
-17,8
+<span class="math inline">\(17{,}8\)</span>
 </td>
 </tr>
 </tbody>
@@ -231,7 +231,7 @@ En person som befinner sig på flykt i ett annat land än sitt hemland kan söka
 Den fjärde kolumnen (<strong>Asylsökande / befolkning</strong>) visar antal asylsökande dividerat med antal invånare i respektive land, uttryckt som procent. Jämfört med landets inhemska befolkning tog Peru emot flest asylsökande och Sverige minst, bland länderna i denna tabell.
 Låt oss nu beräkna hur stor procentuell andel som respektive land tar emot av hela gruppen asylsökande i denna tabell. Resultaten redovisas i kolumnen längst till höger. Räknat på detta sätt tar USA emot störst andel och Sverige tar emot minst, bland länderna i tabellen.</p>
 <p><strong>Tabell 2: Befolkning och antal asylsökande per land</strong></p>
-<div class="inline-table"><table style="width:97%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 22%">
@@ -361,6 +361,17 @@ Sverige
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -483,6 +494,7 @@ Sverige
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -521,7 +533,7 @@ Sverige
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -35,7 +35,7 @@ Tabell 2 och 3 återger observationerna vi använde för att estimera respektive
 
 **Tabell 2: Observationer och beräkningar för modell 1**
 
-<table style="width:96%;">
+<table class="table table-bordered" style="width:96%;">
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 11%" />
@@ -48,61 +48,55 @@ Tabell 2 och 3 återger observationerna vi använde för att estimera respektive
 <thead>
 <tr>
 <th>Observation i</th>
-<th style="text-align: center;"><span
-class="math display">\[X_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[Y_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widehat{Y_{i}}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[Y_{i} -
-\widehat{Y_{i}}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[Y_{i} -
-\overline{Y}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[\left(
-Y_{i} - \widehat{Y_{i}} \right)^{2}\]</span></th>
+<th style="text-align: center;">\(X_{i}\)</th>
+<th style="text-align: center;">\(Y_{i}\)</th>
+<th style="text-align: center;">\(\widehat{Y_{i}}\)</th>
+<th style="text-align: center;">\(Y_{i} - \widehat{Y_{i}}\)</th>
+<th style="text-align: center;">\(Y_{i} - \overline{Y}\)</th>
+<th style="text-align: center;">\(\left( Y_{i} - \widehat{Y_{i}} \right)^{2}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">2,5</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">-0,5</td>
-<td style="text-align: center;">0,25</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(2{,}5\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">-1</td>
-<td style="text-align: center;">-1,5</td>
-<td style="text-align: center;">1</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(-1\)</td>
+<td style="text-align: center;">\(-1{,}5\)</td>
+<td style="text-align: center;">\(1\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1,5</td>
-<td style="text-align: center;">1</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(6\)</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(1{,}5\)</td>
+<td style="text-align: center;">\(1\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">4,5</td>
-<td style="text-align: center;">-0,5</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">0,25</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(7\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(4{,}5\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
 <td>Medel</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">3,5</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(3{,}5\)</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -114,8 +108,8 @@ Y_{i} - \widehat{Y_{i}} \right)^{2}\]</span></th>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;">2,5</td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">\(2{,}5\)</td>
+<td style="text-align: center;">\(5\)</td>
 </tr>
 </tbody>
 </table>
@@ -127,7 +121,7 @@ Förklaring: se text.
 
 **Tabell 3: Observationer och beräkningar för modell 2**
 
-<table style="width:95%;">
+<table class="table table-bordered" style="width:95%;">
 <colgroup>
 <col style="width: 15%" />
 <col style="width: 9%" />
@@ -140,62 +134,55 @@ Förklaring: se text.
 <thead>
 <tr>
 <th>Observation i</th>
-<th style="text-align: center;"><span
-class="math display">\[Z_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[K_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widehat{Z_{i}}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widehat{\epsilon_{i}} = Z_{i} -
-\widehat{Z_{i}}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[Z_{i} -
-\overline{Z_{i}}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[\left(
-Z_{i} - \widehat{Z_{i}} \right)^{2}\]</span></th>
+<th style="text-align: center;">\(Z_{i}\)</th>
+<th style="text-align: center;">\(K_{i}\)</th>
+<th style="text-align: center;">\(\widehat{Z_{i}}\)</th>
+<th style="text-align: center;">\(\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}\)</th>
+<th style="text-align: center;">\(Z_{i} - \overline{Z_{i}}\)</th>
+<th style="text-align: center;">\(\left( Z_{i} - \widehat{Z_{i}} \right)^{2}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">2,5</td>
-<td style="text-align: center;">–1,5</td>
-<td style="text-align: center;">–0,5</td>
-<td style="text-align: center;">2,25</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(2{,}5\)</td>
+<td style="text-align: center;">\(-1{,}5\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(2{,}25\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">2,5</td>
-<td style="text-align: center;">1,5</td>
-<td style="text-align: center;">2,5</td>
-<td style="text-align: center;">2,25</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(2{,}5\)</td>
+<td style="text-align: center;">\(1{,}5\)</td>
+<td style="text-align: center;">\(2{,}5\)</td>
+<td style="text-align: center;">\(2{,}25\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">-0,5</td>
-<td style="text-align: center;">–1,5</td>
-<td style="text-align: center;">0,25</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(0\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(-1{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">–0,5</td>
-<td style="text-align: center;">0,25</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
 <td>Medel</td>
-<td style="text-align: center;">1,5</td>
-<td style="text-align: center;">2</td>
+<td style="text-align: center;">\(1{,}5\)</td>
+<td style="text-align: center;">\(2\)</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -207,8 +194,8 @@ Z_{i} - \widehat{Z_{i}} \right)^{2}\]</span></th>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">9</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(9\)</td>
 </tr>
 </tbody>
 </table>

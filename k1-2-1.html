@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>5 Räkna med ränta | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="5.0.1 Begrepp  Ränta: Den ersättning vi betalar när vi lånar, eller den ersättning vi får om vi lånar ut pengar. Ränta på ränta: Kallas även sammansatt ränta eller kumulativ ränta. Beskriver den...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="5 Räkna med ränta | Matematik och statistik för samhällsvetare">
@@ -180,7 +180,7 @@ Räntan börjar i detta exempel läggas på ditt lån genast vid början av varj
 <p>Uttrycket “kumulativ ränta” syftar på att ränta läggs på ränta och bildar en ny total ränta, en ny summa som vi måste betala eller får betalt som ersättning för att vi lånar eller lånar ut pengar.
 Ett närliggande begrepp är <em>kumulativ summa</em>, vilket beskriver en summa som beräknas per värde i en serie, inklusive alla värden i serien fram till dess. Tabell 1 visar några tal och en kolumn med en kumulativ summa och en kolumn med en vanlig summa.</p>
 <p><strong>Tabell 1: Illustration av kumulativ summa.</strong></p>
-<div class="inline-table"><table style="width:75%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:75%;">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 18%">
@@ -200,21 +200,21 @@ Ett närliggande begrepp är <em>kumulativ summa</em>, vilket beskriver en summa
 <tbody>
 <tr>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td>
-23
+<span class="math inline">\(23\)</span>
 </td>
 <td>
-23
+<span class="math inline">\(23\)</span>
 </td>
 </tr>
 <tr>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td>
-32
+<span class="math inline">\(32\)</span>
 </td>
 <td>
 23+32=55
@@ -222,10 +222,10 @@ Ett närliggande begrepp är <em>kumulativ summa</em>, vilket beskriver en summa
 </tr>
 <tr>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td>
-11
+<span class="math inline">\(11\)</span>
 </td>
 <td>
 23+32+11=66
@@ -233,10 +233,10 @@ Ett närliggande begrepp är <em>kumulativ summa</em>, vilket beskriver en summa
 </tr>
 <tr>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td>
-14
+<span class="math inline">\(14\)</span>
 </td>
 <td>
 23+32+11+14=80
@@ -287,6 +287,17 @@ Observera att detta exempel visar en förenklad beräkning av den totala låneko
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -409,6 +420,7 @@ Observera att detta exempel visar en förenklad beräkning av den totala låneko
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -449,7 +461,7 @@ Observera att detta exempel visar en förenklad beräkning av den totala låneko
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

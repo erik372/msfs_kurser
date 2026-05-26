@@ -20,7 +20,7 @@ I kolumnerna till höger ser vi resultatet i form av ett befolkningsindex per la
 
 **Tabell 1: Befolkning och befolkningsindex i Sverige och Frankrike**
 
-<table style="width:75%;">
+<table class="table table-bordered" style="width:75%;">
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 13%" />
@@ -46,52 +46,52 @@ index 100 = år 1960</strong></td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>1960</strong></td>
-<td style="text-align: right;">7,49</td>
-<td style="text-align: right;">45,66</td>
-<td style="text-align: right;">100,0</td>
-<td style="text-align: right;">100,0</td>
+<td style="text-align: right;">\(7{,}49\)</td>
+<td style="text-align: right;">\(45{,}66\)</td>
+<td style="text-align: right;">\(100{,}0\)</td>
+<td style="text-align: right;">\(100{,}0\)</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>1970</strong></td>
-<td style="text-align: right;">8,03</td>
-<td style="text-align: right;">50,52</td>
-<td style="text-align: right;">107,1</td>
-<td style="text-align: right;">110,7</td>
+<td style="text-align: right;">\(8{,}03\)</td>
+<td style="text-align: right;">\(50{,}52\)</td>
+<td style="text-align: right;">\(107{,}1\)</td>
+<td style="text-align: right;">\(110{,}7\)</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>1980</strong></td>
-<td style="text-align: right;">8,31</td>
-<td style="text-align: right;">53,71</td>
-<td style="text-align: right;">110,9</td>
-<td style="text-align: right;">117,6</td>
+<td style="text-align: right;">\(8{,}31\)</td>
+<td style="text-align: right;">\(53{,}71\)</td>
+<td style="text-align: right;">\(110{,}9\)</td>
+<td style="text-align: right;">\(117{,}6\)</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>1990</strong></td>
-<td style="text-align: right;">8,55</td>
-<td style="text-align: right;">56,41</td>
-<td style="text-align: right;">114,1</td>
-<td style="text-align: right;">123,6</td>
+<td style="text-align: right;">\(8{,}55\)</td>
+<td style="text-align: right;">\(56{,}41\)</td>
+<td style="text-align: right;">\(114{,}1\)</td>
+<td style="text-align: right;">\(123{,}6\)</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>2000</strong></td>
-<td style="text-align: right;">8,87</td>
-<td style="text-align: right;">58,67</td>
-<td style="text-align: right;">118,4</td>
-<td style="text-align: right;">128,5</td>
+<td style="text-align: right;">\(8{,}87\)</td>
+<td style="text-align: right;">\(58{,}67\)</td>
+<td style="text-align: right;">\(118{,}4\)</td>
+<td style="text-align: right;">\(128{,}5\)</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>2010</strong></td>
-<td style="text-align: right;">9,38</td>
-<td style="text-align: right;">62,44</td>
-<td style="text-align: right;">125,2</td>
-<td style="text-align: right;">136,8</td>
+<td style="text-align: right;">\(9{,}38\)</td>
+<td style="text-align: right;">\(62{,}44\)</td>
+<td style="text-align: right;">\(125{,}2\)</td>
+<td style="text-align: right;">\(136{,}8\)</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>2020</strong></td>
-<td style="text-align: right;">10,37</td>
-<td style="text-align: right;">64,48</td>
-<td style="text-align: right;">138,4</td>
-<td style="text-align: right;">141,2</td>
+<td style="text-align: right;">\(10{,}37\)</td>
+<td style="text-align: right;">\(64{,}48\)</td>
+<td style="text-align: right;">\(138{,}4\)</td>
+<td style="text-align: right;">\(141{,}2\)</td>
 </tr>
 </tbody>
 </table>
@@ -108,7 +108,7 @@ Inkomsterna i tabellen är beskrivna i kronor per konsumtionsenhet. Kronor per k
 
 **Tabell 2: Inkomst per decilgrupp. 1 000-tals kr i 2019 års priser**
 
-<table style="width:54%;">
+<table class="table table-bordered" style="width:54%;">
 <colgroup>
 <col style="width: 12%" />
 <col style="width: 20%" />
@@ -116,55 +116,55 @@ Inkomsterna i tabellen är beskrivna i kronor per konsumtionsenhet. Kronor per k
 </colgroup>
 <thead>
 <tr>
-<th style="text-align: right;"> </th>
+<th style="text-align: right;"> </th>
 <th style="text-align: center;"><strong>Decilgrupp 1</strong></th>
 <th style="text-align: center;"><strong>Decilgrupp 10</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">1995</td>
-<td style="text-align: center;">63,2</td>
-<td style="text-align: center;">311,9</td>
+<td style="text-align: right;">\(1995\)</td>
+<td style="text-align: center;">\(63{,}2\)</td>
+<td style="text-align: center;">\(311{,}9\)</td>
 </tr>
 <tr>
-<td style="text-align: right;">2000</td>
-<td style="text-align: center;">74,4</td>
-<td style="text-align: center;">519,3</td>
+<td style="text-align: right;">\(2000\)</td>
+<td style="text-align: center;">\(74{,}4\)</td>
+<td style="text-align: center;">\(519{,}3\)</td>
 </tr>
 <tr>
-<td style="text-align: right;">2005</td>
-<td style="text-align: center;">84,5</td>
-<td style="text-align: center;">511,4</td>
+<td style="text-align: right;">\(2005\)</td>
+<td style="text-align: center;">\(84{,}5\)</td>
+<td style="text-align: center;">\(511{,}4\)</td>
 </tr>
 <tr>
-<td style="text-align: right;">2010</td>
-<td style="text-align: center;">83,3</td>
-<td style="text-align: center;">619,3</td>
+<td style="text-align: right;">\(2010\)</td>
+<td style="text-align: center;">\(83{,}3\)</td>
+<td style="text-align: center;">\(619{,}3\)</td>
 </tr>
 <tr>
-<td style="text-align: right;">2015</td>
-<td style="text-align: center;">97,9</td>
-<td style="text-align: center;">798,9</td>
+<td style="text-align: right;">\(2015\)</td>
+<td style="text-align: center;">\(97{,}9\)</td>
+<td style="text-align: center;">\(798{,}9\)</td>
 </tr>
 <tr>
-<td style="text-align: right;">2019</td>
-<td style="text-align: center;">99,6</td>
-<td style="text-align: center;">803,3</td>
+<td style="text-align: right;">\(2019\)</td>
+<td style="text-align: center;">\(99{,}6\)</td>
+<td style="text-align: center;">\(803{,}3\)</td>
 </tr>
 </tbody>
 </table>
 
 ::: {.fig-caption}
 Förklaring: Data från [SCB](https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__HE__HE0110__HE0110F/), genomsnittlig disponibel inkomst inklusive kapitalvinst per konsumtionsenhet. Decilgrupp 1 = den tiondel av befolkningen som respektive år hade lägst inkomster. Decilgrupp 10 = den tiondel av befolkningen som respektive år hade högst inkomster. Enskilda personer kan ha bytt decilgrupp mellan åren.
-Decilgrupp 1 hade år 1995 i genomsnitt 63 200 kr. Decilgrupp 10 hade samma år en genomsnittlig inkomst på 311 900 kr. Nu ska vi skapa ett index vardera för de två decilgrupperna 1 och 10 med 1995 som basår. Indexvärdet för respektive grupp kommer år 1995 att bli 100.
+Decilgrupp 1 hade år 1995 i genomsnitt 63 200 kr. Decilgrupp 10 hade samma år en genomsnittlig inkomst på 311 900 kr. Nu ska vi skapa ett index vardera för de två decilgrupperna 1 och 10 med 1995 som basår. Indexvärdet för respektive grupp kommer år 1995 att bli 100.
 Tabell 3 visar resultatet. Inkomsterna för decilgrupp 1 ökade med 57,6 % och för decilgrupp 10 med 157,6 %. Väljer vi ett annat basår blir resultaten annorlunda.
 :::
 
 
 **Tabell 3: Indexerad inkomstutveckling per decilgrupp**
 
-<table style="width:72%;">
+<table class="table table-bordered" style="width:72%;">
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 28%" />
@@ -172,45 +172,41 @@ Tabell 3 visar resultatet. Inkomsterna för decilgrupp 1 ökade med 57,6 % och f
 </colgroup>
 <thead>
 <tr>
-<th style="text-align: right;"> </th>
-<th><strong>Decilgrupp 1</strong></th>
-<th><strong>Decilgrupp 10</strong></th>
+<th style="text-align: right;"> </th>
+<th style="text-align: center;"><strong>Decilgrupp 1</strong></th>
+<th style="text-align: center;"><strong>Decilgrupp 10</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: right;"><strong>1995</strong></td>
-<td><span class="math display">\[\frac{63,2}{63,2}*100 =
-100\]</span></td>
-<td><span class="math display">\[\frac{311,9}{311,9}*100 =
-100\]</span></td>
+<td style="text-align: center;">\(\frac{63{,}2}{63{,}2} \cdot 100 = 100\)</td>
+<td style="text-align: center;">\(\frac{311{,}9}{311{,}9} \cdot 100 = 100\)</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>2000</strong></td>
-<td style="text-align: right;">117,7</td>
-<td style="text-align: right;">166,5</td>
+<td style="text-align: center;">\(117{,}7\)</td>
+<td style="text-align: center;">\(166{,}5\)</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>2005</strong></td>
-<td style="text-align: right;">133,7</td>
-<td style="text-align: right;">164</td>
+<td style="text-align: center;">\(133{,}7\)</td>
+<td style="text-align: center;">\(164\)</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>2010</strong></td>
-<td style="text-align: right;">131,8</td>
-<td style="text-align: right;">198,6</td>
+<td style="text-align: center;">\(131{,}8\)</td>
+<td style="text-align: center;">\(198{,}6\)</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>2015</strong></td>
-<td style="text-align: right;">154,9</td>
-<td style="text-align: right;">256,1</td>
+<td style="text-align: center;">\(154{,}9\)</td>
+<td style="text-align: center;">\(256{,}1\)</td>
 </tr>
 <tr>
 <td style="text-align: right;"><strong>2019</strong></td>
-<td><span class="math display">\[\frac{99,6}{63,2}*100 =
-157,6\]</span></td>
-<td><span class="math display">\[\frac{803,3}{311,9}*100 =
-257,6\]</span></td>
+<td style="text-align: center;">\(\frac{99{,}6}{63{,}2} \cdot 100 = 157{,}6\)</td>
+<td style="text-align: center;">\(\frac{803{,}3}{311{,}9} \cdot 100 = 257{,}6\)</td>
 </tr>
 </tbody>
 </table>
@@ -250,7 +246,7 @@ Sedan 2004 har lönerna ökat nominellt med lite mer än 60 procent, vilket vi k
 Reallön år *t* = nominell lön år *t* * ( prisnivån 2022 / prisnivån år *t*)
 Detta ger oss den blå linjen. Där kan vi se att reallönerna ökade lite mer än 20 procent under perioden. Med en nedgång 2022. Jämför vi längre tillbaka har både priser, löner och reallöner ökat mycket mer.
 
-**Diagram 2: Priser och löner i Sverige år 2004---2022** 
+**Diagram 2: Priser och löner i Sverige år 2004---2022**
 
 
 ![](img/k1-2-2-image2.png)

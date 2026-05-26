@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>32 En modell till | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="32.0.1 Begrepp Från regressionsmodellen \(Y = a + bX + V\) kan vi beräkna följande: Residualernas kvadratsumma (engelska residual sum of squares, SSR):\(SSR = \sum_{i}^{n}\widehat{V_{i}^{2}} =...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="32 En modell till | Matematik och statistik för samhällsvetare">
@@ -156,7 +156,7 @@
 </h4>
 <p>Låt oss nu estimera koefficienterna <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span>. Observationerna för variablerna <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span> beskrivs i tabell 1, tillsammans med beräkningarna vi behöver för våra beräkningar.</p>
 <p><strong>Tabell 1. Underlag för att estimera koefficienterna</strong> <span class="math inline">\(\mathbf{\alpha}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{\beta}\)</span><strong>.</strong></p>
-<div class="inline-table"><table style="width:97%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 17%">
 <col style="width: 7%">
@@ -171,120 +171,115 @@
 Observation i
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Z_{i}\]</span></span>
+<span class="math inline">\(Z_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[K_{i}\]</span></span>
+<span class="math inline">\(K_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Z_{i} -
-\overline{Z}\]</span></span>
+<span class="math inline">\(Z_{i} - \overline{Z}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[K_{i} -
-\overline{K}\]</span></span>
+<span class="math inline">\(K_{i} - \overline{K}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\left(
-Z_{i} - \overline{Z} \right)\left( K_{i} - \overline{K}
-\right)\]</span></span>
+<span class="math inline">\(\left( Z_{i} - \overline{Z} \right)\left( K_{i} - \overline{K} \right)\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\left(
-K_{i} - \overline{K} \right)^{2}\]</span></span>
+<span class="math inline">\(\left( K_{i} - \overline{K} \right)^{2}\)</span>
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
-–0,5
+<span class="math inline">\(-0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-–2
+<span class="math inline">\(-2\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 </tr>
 <tr>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
-2,5
+<span class="math inline">\(2{,}5\)</span>
 </td>
 <td style="text-align: center;">
-–2
+<span class="math inline">\(-2\)</span>
 </td>
 <td style="text-align: center;">
-–5
+<span class="math inline">\(-5\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 </tr>
 <tr>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-–1,5
+<span class="math inline">\(-1{,}5\)</span>
 </td>
 <td style="text-align: center;">
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-–3
+<span class="math inline">\(-3\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 </tr>
 <tr>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-–0,5
+<span class="math inline">\(-0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-–1
+<span class="math inline">\(-1\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 </tr>
 <tr>
@@ -292,20 +287,20 @@ K_{i} - \overline{K} \right)^{2}\]</span></span>
 Summa
 </td>
 <td style="text-align: center;">
-6
+<span class="math inline">\(6\)</span>
 </td>
 <td style="text-align: center;">
-8
+<span class="math inline">\(8\)</span>
 </td>
 <td style="text-align: center;">
 </td>
 <td style="text-align: center;">
 </td>
 <td style="text-align: center;">
-–8
+<span class="math inline">\(-8\)</span>
 </td>
 <td style="text-align: center;">
-16
+<span class="math inline">\(16\)</span>
 </td>
 </tr>
 </tbody>
@@ -318,7 +313,7 @@ Summa
 <p><span class="math display">\[\widehat{Z_{i}} = \widehat{\alpha} + \widehat{\beta}K_{i} = 2,5 - \frac{1}{2}K_{i} \tag{4}\]</span></p>
 <p>Med hjälp av denna och de observerade värdena för variabeln <span class="math inline">\(K\)</span> kan vi estimera fyra värden för predikterade <span class="math inline">\(\widehat{Z}\)</span>, vilka beskrivs i tabell 2. Med <span class="math inline">\(\widehat{Z}\)</span> kan vi sedan estimera de fyra residualerna <span class="math inline">\(\widehat{\epsilon}\)</span>, vilka beskrivs i samma tabell. De fyra observationerna och regressionslinjen som kan ritas med ekvation 4 illustreras i figur 1.</p>
 <p><strong>Tabell 2. Beräkningar för att estimera</strong> <span class="math inline">\(\widehat{Z}\)</span> <strong>och</strong> <span class="math inline">\(\widehat{\epsilon}\)</span></p>
-<div class="inline-table"><table style="width:97%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 19%">
@@ -331,86 +326,85 @@ Summa
 Observation i
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Z_{i}\]</span></span>
+<span class="math inline">\(Z_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[K_{i}\]</span></span>
+<span class="math inline">\(K_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widehat{Z_{i}}\]</span></span>
+<span class="math inline">\(\widehat{Z_{i}}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[\widehat{\epsilon_{i}} = Z_{i} -
-\widehat{Z_{i}}\]</span></span>
+<span class="math inline">\(\widehat{\epsilon_{i}} = Z_{i} - \widehat{Z_{i}}\)</span>
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
-2,5
+<span class="math inline">\(2{,}5\)</span>
 </td>
 <td style="text-align: center;">
-–1,5
+<span class="math inline">\(-1{,}5\)</span>
 </td>
 </tr>
 <tr>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
-2,5
+<span class="math inline">\(2{,}5\)</span>
 </td>
 <td style="text-align: center;">
-1,5
+<span class="math inline">\(1{,}5\)</span>
 </td>
 </tr>
 <tr>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-–0,5
+<span class="math inline">\(-0{,}5\)</span>
 </td>
 </tr>
 <tr>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 </tr>
 </tbody>
@@ -478,6 +472,17 @@ Ett annat användbart mått är <em>kvadratsumman av den förklarade variationen
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -600,6 +605,7 @@ Ett annat användbart mått är <em>kvadratsumman av den förklarade variationen
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -639,7 +645,7 @@ Ett annat användbart mått är <em>kvadratsumman av den förklarade variationen
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -13,7 +13,7 @@ Låt oss nu återanvända den första regressionsmodellen och observationerna f�
 
 **Tabell 1: Variablerna** $X$ **och** $Y$
 
-<table style="width:39%;">
+<table class="table table-bordered" style="width:39%;">
 <colgroup>
 <col style="width: 23%" />
 <col style="width: 7%" />
@@ -28,24 +28,24 @@ Låt oss nu återanvända den första regressionsmodellen och observationerna f�
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>3</td>
-<td>3</td>
+<td>\(1\)</td>
+<td>\(3\)</td>
+<td>\(3\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td>4</td>
-<td>2</td>
+<td>\(2\)</td>
+<td>\(4\)</td>
+<td>\(2\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td>6</td>
-<td>5</td>
+<td>\(3\)</td>
+<td>\(6\)</td>
+<td>\(5\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td>7</td>
-<td>4</td>
+<td>\(4\)</td>
+<td>\(7\)</td>
+<td>\(4\)</td>
 </tr>
 </tbody>
 </table>
@@ -87,7 +87,7 @@ där matris $X$ innehåller variablerna $X$ och $Z$ och matris $B$ innehåller k
 
 **Tabell 2: Variablerna** $Y$, $X$ **och** $Z$
 
-<table style="width:49%;">
+<table class="table table-bordered" style="width:49%;">
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 9%" />
@@ -97,35 +97,35 @@ där matris $X$ innehåller variablerna $X$ och $Z$ och matris $B$ innehåller k
 <thead>
 <tr>
 <th>Observation <span class="math inline">\(i\)</span></th>
-<th><span class="math display">\[Y\]</span></th>
-<th><span class="math display">\[X\]</span></th>
-<th><span class="math display">\[Z\]</span></th>
+<th>\(Y\)</th>
+<th>\(X\)</th>
+<th>\(Z\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>3</td>
-<td>3</td>
-<td>1</td>
+<td>\(1\)</td>
+<td>\(3\)</td>
+<td>\(3\)</td>
+<td>\(1\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td>2</td>
-<td>4</td>
-<td>4</td>
+<td>\(2\)</td>
+<td>\(2\)</td>
+<td>\(4\)</td>
+<td>\(4\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td>5</td>
-<td>6</td>
-<td>0</td>
+<td>\(3\)</td>
+<td>\(5\)</td>
+<td>\(6\)</td>
+<td>\(0\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td>4</td>
-<td>7</td>
-<td>1</td>
+<td>\(4\)</td>
+<td>\(4\)</td>
+<td>\(7\)</td>
+<td>\(1\)</td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ I [avsnitt 3.2](https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-mode
 
 **Tabell 3: Variablerna** $Z$ **och** $K$
 
-<table style="width:33%;">
+<table class="table table-bordered" style="width:33%;">
 <colgroup>
 <col style="width: 18%" />
 <col style="width: 7%" />
@@ -168,24 +168,24 @@ I [avsnitt 3.2](https://www.dropbox.com/scl/fi/mvvykgc4cvkvdgxcbcq4x/3-2-En-mode
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
+<td>\(1\)</td>
+<td>\(1\)</td>
+<td>\(0\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td>4</td>
-<td>0</td>
+<td>\(2\)</td>
+<td>\(4\)</td>
+<td>\(0\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td>0</td>
-<td>4</td>
+<td>\(3\)</td>
+<td>\(0\)</td>
+<td>\(4\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td>1</td>
-<td>4</td>
+<td>\(4\)</td>
+<td>\(1\)</td>
+<td>\(4\)</td>
 </tr>
 </tbody>
 </table>

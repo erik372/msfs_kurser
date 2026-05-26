@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>3 Hur testa om en teori stämmer? | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="3.0.1 Begrepp  Samvariation: Samvariation syftar på att 2 eller flera fenomen varierar i någon form av mönster eller med någon form av regelbundenhet. Positiv samvariation mellan 2 fenomen råder...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="3 Hur testa om en teori stämmer? | Matematik och statistik för samhällsvetare">
@@ -201,6 +201,17 @@ Vetenskapssamhället är idag överens om att jordens stigande medeltemperatur �
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -323,6 +334,7 @@ Vetenskapssamhället är idag överens om att jordens stigande medeltemperatur �
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -361,7 +373,7 @@ Vetenskapssamhället är idag överens om att jordens stigande medeltemperatur �
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

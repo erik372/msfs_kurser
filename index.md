@@ -1,6 +1,6 @@
 ---
 title: "Matematik och statistik för samhällsvetare"
-author: ""
+author: "Erik Hegelund"
 date: ""
 site: bookdown::bookdown_site
 documentclass: book

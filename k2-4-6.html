@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>40 Interaktion | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="40.0.1 Begrepp  Interaktionseffekt: Analys av hur effekten av ett fenomen beror på tillståndet för ett annat fenomen.  40.0.2 Teori I detta avsnitt ska vi introducera interaktionseffekt. Hittills...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="40 Interaktion | Matematik och statistik för samhällsvetare">
@@ -159,7 +159,7 @@ På motsvarande sätt får vi den totala samvariationen mellan variabel <span cl
 <p>I <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a> estimerade vi samvariationen mellan livslängd och inkomst för män och kvinnor i tre av Sveriges kommuner. Nu ska vi använda samma data igen men denna gång lägga till en interaktionseffekt.
 Tabell 1 beskriver våra variabler (samma som i <a href="https://www.dropbox.com/scl/fi/r78jsccc1j8axt3qqcn3c/4-3-Konstanth-lla.docx?rlkey=saxn8mtkh28j4s7xr13tryyy3&amp;dl=0">avsnitt 4.3</a>). Vi har nu en variabel som skapas genom att multiplicera de två variablerna inkomst <span class="math inline">\(I\)</span> och kön <span class="math inline">\(K\)</span>. Den nya variabeln har rubriken “Interaktion: <span class="math inline">\(I*K\)</span>”. Eftersom <span class="math inline">\(K\)</span> är en dummy där tre av sex observationer har värdet 0 får även den nya variabeln värdet 0 i tre av sex fall.</p>
 <p><strong>Tabell 1: Variablerna</strong> <span class="math inline">\(\mathbf{L}\)</span><strong>,</strong> <span class="math inline">\(\mathbf{I}\)</span><strong>,</strong> <span class="math inline">\(\mathbf{K}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{KI}\)</span></p>
-<div class="inline-table"><table style="width:97%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 19%">
@@ -181,7 +181,7 @@ Inkomst, <span class="math inline"><span class="math inline">\(I\)</span></span>
 Kön, <span class="math inline"><span class="math inline">\(K\)</span></span>
 </th>
 <th>
-<span class="math display"><span class="math display">\[K*I\]</span></span>
+<span class="math inline">\(K*I\)</span>
 </th>
 </tr></thead>
 <tbody>
@@ -190,16 +190,16 @@ Kön, <span class="math inline"><span class="math inline">\(K\)</span></span>
 Jokkmokk, kvinnor
 </td>
 <td>
-81,55
+<span class="math inline">\(81{,}55\)</span>
 </td>
 <td>
-2,07
+<span class="math inline">\(2{,}07\)</span>
 </td>
 <td>
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td>
-0
+<span class="math inline">\(0\)</span>
 </td>
 </tr>
 <tr>
@@ -207,16 +207,16 @@ Jokkmokk, kvinnor
 Jokkmokk, män
 </td>
 <td>
-79,22
+<span class="math inline">\(79{,}22\)</span>
 </td>
 <td>
-2,40
+<span class="math inline">\(2{,}40\)</span>
 </td>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td>
-2,40
+<span class="math inline">\(2{,}40\)</span>
 </td>
 </tr>
 <tr>
@@ -224,16 +224,16 @@ Jokkmokk, män
 Oskarshamn, kvinnor
 </td>
 <td>
-84,64
+<span class="math inline">\(84{,}64\)</span>
 </td>
 <td>
-2,11
+<span class="math inline">\(2{,}11\)</span>
 </td>
 <td>
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td>
-0
+<span class="math inline">\(0\)</span>
 </td>
 </tr>
 <tr>
@@ -241,16 +241,16 @@ Oskarshamn, kvinnor
 Oskarshamn, män
 </td>
 <td>
-81,26
+<span class="math inline">\(81{,}26\)</span>
 </td>
 <td>
-2,79
+<span class="math inline">\(2{,}79\)</span>
 </td>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td>
-2,79
+<span class="math inline">\(2{,}79\)</span>
 </td>
 </tr>
 <tr>
@@ -258,16 +258,16 @@ Oskarshamn, män
 Örebro, kvinnor
 </td>
 <td>
-84,85
+<span class="math inline">\(84{,}85\)</span>
 </td>
 <td>
-2,18
+<span class="math inline">\(2{,}18\)</span>
 </td>
 <td>
-0
+<span class="math inline">\(0\)</span>
 </td>
 <td>
-0
+<span class="math inline">\(0\)</span>
 </td>
 </tr>
 <tr>
@@ -275,16 +275,16 @@ Oskarshamn, män
 Örebro, män
 </td>
 <td>
-80,48
+<span class="math inline">\(80{,}48\)</span>
 </td>
 <td>
-2,66
+<span class="math inline">\(2{,}66\)</span>
 </td>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td>
-2,66
+<span class="math inline">\(2{,}66\)</span>
 </td>
 </tr>
 </tbody>
@@ -364,6 +364,17 @@ Resultaten i regressionsmodellen för män i ekvation 19 kan förenklat beskriva
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -486,6 +497,7 @@ Resultaten i regressionsmodellen för män i ekvation 19 kan förenklat beskriva
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -524,7 +536,7 @@ Resultaten i regressionsmodellen för män i ekvation 19 kan förenklat beskriva
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

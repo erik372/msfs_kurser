@@ -17,7 +17,7 @@ I raden för bransch A visar siffrorna värdet av den produktion som A säljer t
 
 **Tabell 1. Input och output från och till företagen i de två branscherna A och B.**
 
-<table style="width:82%;">
+<table class="table table-bordered" style="width:82%;">
 <colgroup>
 <col style="width: 16%" />
 <col style="width: 16%" />
@@ -38,24 +38,24 @@ I raden för bransch A visar siffrorna värdet av den produktion som A säljer t
 <tbody>
 <tr>
 <td>Bransch A</td>
-<td>2</td>
-<td>1</td>
-<td>3</td>
-<td>6</td>
+<td>\(2\)</td>
+<td>\(1\)</td>
+<td>\(3\)</td>
+<td>\(6\)</td>
 </tr>
 <tr>
 <td>Bransch B</td>
-<td>1</td>
-<td>3</td>
-<td>3</td>
-<td>7</td>
+<td>\(1\)</td>
+<td>\(3\)</td>
+<td>\(3\)</td>
+<td>\(7\)</td>
 </tr>
 <tr>
 <td>Summa</td>
-<td>3</td>
-<td>4</td>
-<td>6</td>
-<td>13</td>
+<td>\(3\)</td>
+<td>\(4\)</td>
+<td>\(6\)</td>
+<td>\(13\)</td>
 </tr>
 </tbody>
 </table>

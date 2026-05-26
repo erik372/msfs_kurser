@@ -40,7 +40,7 @@ I praktiken har vi nästan alltid variation kring regressionslinjen, vilket är 
 
 **Figur 1 Estimera** $\widehat{\mathbf{V}}$
 
-<table style="width:52%;">
+<table class="table table-bordered" style="width:52%;">
 <colgroup>
 <col style="width: 18%" />
 <col style="width: 7%" />
@@ -50,51 +50,47 @@ I praktiken har vi nästan alltid variation kring regressionslinjen, vilket är 
 <thead>
 <tr>
 <th>Observation i</th>
-<th style="text-align: center;"><span
-class="math display">\[Y_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[{\widehat{Y}}_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[{\widehat{V}}_{i} = Y_{i} -
-{\widehat{Y}}_{i}\]</span></th>
+<th style="text-align: center;">\(Y_{i}\)</th>
+<th style="text-align: center;">\({\widehat{Y}}_{i}\)</th>
+<th style="text-align: center;">\({\widehat{V}}_{i} = Y_{i} - {\widehat{Y}}_{i}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">2,5</td>
-<td style="text-align: center;">0,5</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(2{,}5\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">-1</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(-1\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(1\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">4,5</td>
-<td style="text-align: center;">-0,5</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(4{,}5\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
 </tr>
 <tr>
 <td>Summa</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;">\(0\)</td>
 </tr>
 <tr>
 <td>Medelvärde</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;">\(0\)</td>
 </tr>
 </tbody>
 </table>
@@ -122,7 +118,7 @@ Tabell 1 beskriver beräkningarna vi behöver för $\widehat{a}$ och $\widehat{b
 
 **Tabell 1. Beräkningar för att estimera** $\widehat{\mathbf{a}}$ **och** $\widehat{\mathbf{b}}$
 
-<table style="width:97%;">
+<table class="table table-bordered" style="width:97%;">
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 7%" />
@@ -135,61 +131,55 @@ Tabell 1 beskriver beräkningarna vi behöver för $\widehat{a}$ och $\widehat{b
 <thead>
 <tr>
 <th>Observation</th>
-<th style="text-align: right;"><span
-class="math display">\[X_{i}\]</span></th>
-<th style="text-align: right;"><span
-class="math display">\[Y_{i}\]</span></th>
-<th style="text-align: right;"><span class="math display">\[X_{i} -
-\overline{X}\]</span></th>
-<th style="text-align: right;"><span class="math display">\[Y_{i} -
-\overline{Y}\]</span></th>
-<th style="text-align: right;"><span class="math display">\[\left( X_{i}
-- \overline{X} \right)^{2}\]</span></th>
-<th style="text-align: right;"><span class="math display">\[(X_{i} -
-\overline{X})(Y_{i} - \overline{Y})\]</span></th>
+<th style="text-align: right;">\(X_{i}\)</th>
+<th style="text-align: right;">\(Y_{i}\)</th>
+<th style="text-align: right;">\(X_{i} - \overline{X}\)</th>
+<th style="text-align: right;">\(Y_{i} - \overline{Y}\)</th>
+<th style="text-align: right;">\(\left( X_{i} - \overline{X} \right)^{2}\)</th>
+<th style="text-align: right;">\((X_{i} - \overline{X})(Y_{i} - \overline{Y})\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">-2</td>
-<td style="text-align: right;">-0,5</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1</td>
+<td>\(1\)</td>
+<td style="text-align: right;">\(3\)</td>
+<td style="text-align: right;">\(3\)</td>
+<td style="text-align: right;">\(-2\)</td>
+<td style="text-align: right;">\(-0{,}5\)</td>
+<td style="text-align: right;">\(4\)</td>
+<td style="text-align: right;">\(1\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">-1</td>
-<td style="text-align: right;">-1,5</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1,5</td>
+<td>\(2\)</td>
+<td style="text-align: right;">\(4\)</td>
+<td style="text-align: right;">\(2\)</td>
+<td style="text-align: right;">\(-1\)</td>
+<td style="text-align: right;">\(-1{,}5\)</td>
+<td style="text-align: right;">\(1\)</td>
+<td style="text-align: right;">\(1{,}5\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1,5</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1,5</td>
+<td>\(3\)</td>
+<td style="text-align: right;">\(6\)</td>
+<td style="text-align: right;">\(5\)</td>
+<td style="text-align: right;">\(1\)</td>
+<td style="text-align: right;">\(1{,}5\)</td>
+<td style="text-align: right;">\(1\)</td>
+<td style="text-align: right;">\(1{,}5\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">0,5</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1</td>
+<td>\(4\)</td>
+<td style="text-align: right;">\(7\)</td>
+<td style="text-align: right;">\(4\)</td>
+<td style="text-align: right;">\(2\)</td>
+<td style="text-align: right;">\(0{,}5\)</td>
+<td style="text-align: right;">\(4\)</td>
+<td style="text-align: right;">\(1\)</td>
 </tr>
 <tr>
 <td>Medelvärde</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">3,5</td>
+<td style="text-align: right;">\(5\)</td>
+<td style="text-align: right;">\(3{,}5\)</td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -197,12 +187,12 @@ class="math display">\[Y_{i}\]</span></th>
 </tr>
 <tr>
 <td>Summa</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">14</td>
+<td style="text-align: right;">\(20\)</td>
+<td style="text-align: right;">\(14\)</td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">5</td>
+<td style="text-align: right;">\(10\)</td>
+<td style="text-align: right;">\(5\)</td>
 </tr>
 </tbody>
 </table>
@@ -225,7 +215,7 @@ där $X_{i}$ är observationerna för $X$. Med $\widehat{Y}$ kan vi även estime
 
 **Tabell 2. Estimera** $\widehat{\mathbf{Y}}$ **och** $\widehat{\mathbf{V}}$
 
-<table style="width:96%;">
+<table class="table table-bordered" style="width:96%;">
 <colgroup>
 <col style="width: 16%" />
 <col style="width: 9%" />
@@ -237,51 +227,45 @@ där $X_{i}$ är observationerna för $X$. Med $\widehat{Y}$ kan vi även estime
 <thead>
 <tr>
 <th>Observation</th>
-<th style="text-align: center;"><span
-class="math display">\[X_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[Y_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widehat{Y_{i}} = 1 + 0,5X_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[\widehat{V_{i}} = Y_{i} -
-\widehat{Y_{i}}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[\left(
-\widehat{V_{i}} \right)^{2}\]</span></th>
+<th style="text-align: center;">\(X_{i}\)</th>
+<th style="text-align: center;">\(Y_{i}\)</th>
+<th style="text-align: center;">\(\widehat{Y_{i}} = 1 + 0{,}5X_{i}\)</th>
+<th style="text-align: center;">\(\widehat{V_{i}} = Y_{i} - \widehat{Y_{i}}\)</th>
+<th style="text-align: center;">\(\left( \widehat{V_{i}} \right)^{2}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">2,5</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">0,25</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(2{,}5\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">-1</td>
-<td style="text-align: center;">1</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(-1\)</td>
+<td style="text-align: center;">\(1\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(6\)</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(1\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">4,5</td>
-<td style="text-align: center;">-0,5</td>
-<td style="text-align: center;">0,25</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(7\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(4{,}5\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(0{,}25\)</td>
 </tr>
 <tr>
 <td>Summa</td>
@@ -289,9 +273,7 @@ class="math display">\[\widehat{V_{i}} = Y_{i} -
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;"><span
-class="math display">\[\sum_{i}^{}{{\widehat{V}}_{i}}^{2} =
-2,5\]</span></td>
+<td style="text-align: center;">\(\sum_{i}^{}{{\widehat{V}}_{i}}^{2} = 2{,}5\)</td>
 </tr>
 </tbody>
 </table>

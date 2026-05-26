@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>8 Leder rikedom till lycka? | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="8.0.1 Begrepp  Logaritmering kan underlätta relativa jämförelser. Detta eftersom det relativa avståndet mellan två värden motsvaras av samma differens mellan de två logaritmerade värdena. Rikare...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="8 Leder rikedom till lycka? | Matematik och statistik för samhällsvetare">
@@ -153,7 +153,7 @@ Om vi godtar detta blir möjligen även mönstret i det högra diagrammet mer lo
 Tabell 1 visar värdena för länderna som är färgmarkerade i de båda diagrammen: Bolivia, Brasilien, Liberia, Senegal och Sverige. Brasilien har ungefär dubbelt så stort BNP per capita som Bolivia (cirka 15,1 respektive 8,2). Differensen mellan deras BNP-värden i logaritmerad form är cirka 0,3, vilket vi får om vi tar 1,2 – 0,9.
 Bolivia har i sin tur dubbelt så stor BNP per capita som Senegal (8,2 respektive 3,6). Differensen mellan deras BNP-värden i logaritmerad form: 0,9 – 0,6 = 0,3. Som syns tydligt i diagrammen är det för dessa länder även så att ju högre BNP per capita landet har, desto mer nöjda med livet är invånarna.</p>
 <p><strong>Tabell 1: Lycka och BNP i sex länder.</strong></p>
-<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:99%;">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -181,13 +181,13 @@ per\ capita}\mathbf{)}\)</span></span>
 Bolivia
 </td>
 <td>
-5,7
+<span class="math inline">\(5{,}7\)</span>
 </td>
 <td>
-8,2
+<span class="math inline">\(8{,}2\)</span>
 </td>
 <td>
-0,9
+<span class="math inline">\(0{,}9\)</span>
 </td>
 </tr>
 <tr>
@@ -195,13 +195,13 @@ Bolivia
 Brasilien
 </td>
 <td>
-6,1
+<span class="math inline">\(6{,}1\)</span>
 </td>
 <td>
-15,1
+<span class="math inline">\(15{,}1\)</span>
 </td>
 <td>
-1,2
+<span class="math inline">\(1{,}2\)</span>
 </td>
 </tr>
 <tr>
@@ -209,13 +209,13 @@ Brasilien
 Liberia
 </td>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td>
-1,5
+<span class="math inline">\(1{,}5\)</span>
 </td>
 <td>
-0,2
+<span class="math inline">\(0{,}2\)</span>
 </td>
 </tr>
 <tr>
@@ -223,13 +223,13 @@ Liberia
 Senegal
 </td>
 <td>
-4,9
+<span class="math inline">\(4{,}9\)</span>
 </td>
 <td>
-3,6
+<span class="math inline">\(3{,}6\)</span>
 </td>
 <td>
-0,6
+<span class="math inline">\(0{,}6\)</span>
 </td>
 </tr>
 <tr>
@@ -237,13 +237,13 @@ Senegal
 Sverige
 </td>
 <td>
-7,4
+<span class="math inline">\(7{,}4\)</span>
 </td>
 <td>
-55,4
+<span class="math inline">\(55{,}4\)</span>
 </td>
 <td>
-1,7
+<span class="math inline">\(1{,}7\)</span>
 </td>
 </tr>
 </tbody>
@@ -283,6 +283,17 @@ För att kunna mäta vilken förändring av lycka som en förändring av inkomst
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -405,6 +416,7 @@ För att kunna mäta vilken förändring av lycka som en förändring av inkomst
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -443,7 +455,7 @@ För att kunna mäta vilken förändring av lycka som en förändring av inkomst
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

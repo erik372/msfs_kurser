@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>47 T-test för regression med flera variabler | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="47.0.1 Begrepp  Varians-kovariansmatrisen: Kallas även kovariansmatrisen. För regressionsmodell \(Y = XB + V\) beskriven med matriser kan vi estimera modellen med minstakvadratmetoden. Elementen i...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="47 T-test för regression med flera variabler | Matematik och statistik för samhällsvetare">
@@ -140,7 +140,7 @@ Du behöver inte kunna beräkna detta för hand. Datorer gör sådana här berä
 <p>Utifrån de fyra observationerna i tabell 1 estimerade vi då följande värden för koefficienterna:</p>
 <p><span class="math display">\[\widehat{a} \approx 2,89,\ \ \ \ \ \widehat{b} \approx 0,28,\ \ \ \ \ \ \widehat{c} \approx - 0,54 \tag{2}\]</span></p>
 <p><strong>Tabell 1: Fyra observationer för variablerna</strong> <span class="math inline">\(\mathbf{y}\mathbf{,}\mathbf{x}\)</span> <strong>och</strong> <span class="math inline">\(\mathbf{z}\)</span><strong>.</strong></p>
-<div class="inline-table"><table style="width:41%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:41%;">
 <colgroup>
 <col style="width: 10%">
 <col style="width: 10%">
@@ -149,73 +149,73 @@ Du behöver inte kunna beräkna detta för hand. Datorer gör sådana här berä
 </colgroup>
 <thead><tr>
 <th>
-<span class="math display"><span class="math display">\[i\]</span></span>
+<span class="math inline">\(i\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Y_{i}\]</span></span>
+<span class="math inline">\(Y_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[X_{i}\]</span></span>
+<span class="math inline">\(X_{i}\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Z_{i}\]</span></span>
+<span class="math inline">\(Z_{i}\)</span>
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 </tr>
 <tr>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 </tr>
 <tr>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-5
+<span class="math inline">\(5\)</span>
 </td>
 <td style="text-align: center;">
-6
+<span class="math inline">\(6\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 </tr>
 <tr>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-7
+<span class="math inline">\(7\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 </tr>
 </tbody>
@@ -325,6 +325,17 @@ Ovan definierade vi variansen för estimatorerna <span class="math inline">\(\wi
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -447,6 +458,7 @@ Ovan definierade vi variansen för estimatorerna <span class="math inline">\(\wi
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -487,7 +499,7 @@ Ovan definierade vi variansen för estimatorerna <span class="math inline">\(\wi
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

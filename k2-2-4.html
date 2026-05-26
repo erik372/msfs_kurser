@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>28 Samvariation 2 | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="28.0.1 Begrepp  Regressionsanalys: En statistisk metod för att studera samvariation mellan en beroende (förklarad) variabel och en eller flera oberoende (förklarande) variabler. Regressionsmodell:...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="28 Samvariation 2 | Matematik och statistik för samhällsvetare">
@@ -208,7 +208,7 @@ Nu har vi en definition för <span class="math inline">\(\widehat{a}\)</span>. I
 <p><span class="math display">\[{\widehat{Y}}_{i} = \widehat{a} + \widehat{b}X_{i} \tag{8}\]</span></p>
 <p>Tabell 1 visar våra beräkningar för att estimera <span class="math inline">\(\widehat{Y}\)</span> med de observerade värden för <span class="math inline">\(X = \left\{ 3,4,6,7 \right\}\)</span>. Värdena i tabellen är samma som i figur 1. Den punkt på den diagonala linjen som de vertikala streckade linjerna träffar är värdena för <span class="math inline">\(\widehat{Y}\)</span>. Beräknar vi <span class="math inline">\(\widehat{Y}\)</span> för andra värden för <span class="math inline">\(X\)</span> får vi andra punkter längs med regressionslinjen. Pröva gärna detta själv.</p>
 <p><strong>Tabell 1: Estimering av</strong> <span class="math inline">\(\widehat{\mathbf{Y}}\)</span></p>
-<div class="inline-table"><table style="width:72%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:72%;">
 <colgroup>
 <col style="width: 16%">
 <col style="width: 10%">
@@ -220,74 +220,70 @@ Nu har vi en definition för <span class="math inline">\(\widehat{a}\)</span>. I
 Observation <em>i</em>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[X\]</span></span>
+<span class="math inline">\(X\)</span>
 </th>
 <th style="text-align: center;">
-<span class="math display"><span class="math display">\[Y\]</span></span>
+<span class="math inline">\(Y\)</span>
 </th>
 <th>
-<span class="math display"><span class="math display">\[\widehat{Y} = 1 + 0,5*X\]</span></span>
+<span class="math inline">\(\widehat{Y} = 1 + 0{,}5*X\)</span>
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td>
-1
+<span class="math inline">\(1\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td>
-<span class="math display"><span class="math display">\[\widehat{Y} = 1 + 0,5*3 =
-2,5\]</span></span>
+<span class="math inline">\(\widehat{Y} = 1 + 0{,}5*3 = 2{,}5\)</span>
 </td>
 </tr>
 <tr>
 <td>
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-2
+<span class="math inline">\(2\)</span>
 </td>
 <td>
-<span class="math display"><span class="math display">\[\widehat{Y} = 1 + 0,5*4 =
-3\]</span></span>
+<span class="math inline">\(\widehat{Y} = 1 + 0{,}5*4 = 3\)</span>
 </td>
 </tr>
 <tr>
 <td>
-3
+<span class="math inline">\(3\)</span>
 </td>
 <td style="text-align: center;">
-6
+<span class="math inline">\(6\)</span>
 </td>
 <td style="text-align: center;">
-5
+<span class="math inline">\(5\)</span>
 </td>
 <td>
-<span class="math display"><span class="math display">\[\widehat{Y} = 1 + 0,5*6 =
-4\]</span></span>
+<span class="math inline">\(\widehat{Y} = 1 + 0{,}5*6 = 4\)</span>
 </td>
 </tr>
 <tr>
 <td>
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td style="text-align: center;">
-7
+<span class="math inline">\(7\)</span>
 </td>
 <td style="text-align: center;">
-4
+<span class="math inline">\(4\)</span>
 </td>
 <td>
-<span class="math display"><span class="math display">\[\widehat{Y} = 1 + 0,5*7 =
-4,5\]</span></span>
+<span class="math inline">\(\widehat{Y} = 1 + 0{,}5*7 = 4{,}5\)</span>
 </td>
 </tr>
 </tbody>
@@ -319,6 +315,17 @@ Estimerade <span class="math inline">\(\widehat{Y}\)</span> kallas även för <e
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -441,6 +448,7 @@ Estimerade <span class="math inline">\(\widehat{Y}\)</span> kallas även för <e
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -479,7 +487,7 @@ Estimerade <span class="math inline">\(\widehat{Y}\)</span> kallas även för <e
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

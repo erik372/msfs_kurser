@@ -66,7 +66,7 @@ Nu ska vi beräkna (skatta) variansen med fyra observationer för två variabler
 
 **Tabell 1: Några beräkningar för variablerna** $\mathbf{x}$ **och** $\mathbf{y}$
 
-<table style="width:88%;">
+<table class="table table-bordered" style="width:88%;">
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 12%" />
@@ -79,52 +79,50 @@ Nu ska vi beräkna (skatta) variansen med fyra observationer för två variabler
 <thead>
 <tr>
 <th>Observation</th>
-<th><span class="math display">\[x_{i}\]</span></th>
-<th><span class="math display">\[y_{i}\]</span></th>
-<th><span class="math display">\[x_{i} - \overline{x}\]</span></th>
-<th><span class="math display">\[y_{i} - \overline{y}\]</span></th>
-<th><span class="math display">\[\left( x_{i} - \overline{x}
-\right)^{2}\]</span></th>
-<th><span class="math display">\[\left( y_{i} - \overline{y}
-\right)^{2}\]</span></th>
+<th>\(x_{i}\)</th>
+<th>\(y_{i}\)</th>
+<th>\(x_{i} - \overline{x}\)</th>
+<th>\(y_{i} - \overline{y}\)</th>
+<th>\(\left( x_{i} - \overline{x} \right)^{2}\)</th>
+<th>\(\left( y_{i} - \overline{y} \right)^{2}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>3</td>
-<td>3</td>
-<td>-2</td>
-<td>-0,5</td>
-<td>4</td>
-<td>0,25</td>
+<td>\(1\)</td>
+<td>\(3\)</td>
+<td>\(3\)</td>
+<td>\(-2\)</td>
+<td>\(-0{,}5\)</td>
+<td>\(4\)</td>
+<td>\(0{,}25\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td>4</td>
-<td>2</td>
-<td>-1</td>
-<td>-1,5</td>
-<td>1</td>
-<td>2,25</td>
+<td>\(2\)</td>
+<td>\(4\)</td>
+<td>\(2\)</td>
+<td>\(-1\)</td>
+<td>\(-1{,}5\)</td>
+<td>\(1\)</td>
+<td>\(2{,}25\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td>6</td>
-<td>5</td>
-<td>1</td>
-<td>1,5</td>
-<td>1</td>
-<td>2,25</td>
+<td>\(3\)</td>
+<td>\(6\)</td>
+<td>\(5\)</td>
+<td>\(1\)</td>
+<td>\(1{,}5\)</td>
+<td>\(1\)</td>
+<td>\(2{,}25\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td>7</td>
-<td>4</td>
-<td>2</td>
-<td>0,5</td>
-<td>4</td>
-<td>0,25</td>
+<td>\(4\)</td>
+<td>\(7\)</td>
+<td>\(4\)</td>
+<td>\(2\)</td>
+<td>\(0{,}5\)</td>
+<td>\(4\)</td>
+<td>\(0{,}25\)</td>
 </tr>
 <tr>
 <td></td>
@@ -137,8 +135,8 @@ Nu ska vi beräkna (skatta) variansen med fyra observationer för två variabler
 </tr>
 <tr>
 <td>Medelvärde</td>
-<td>5</td>
-<td>3,5</td>
+<td>\(5\)</td>
+<td>\(3{,}5\)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -146,12 +144,12 @@ Nu ska vi beräkna (skatta) variansen med fyra observationer för två variabler
 </tr>
 <tr>
 <td>Summa</td>
-<td>20</td>
-<td>14</td>
+<td>\(20\)</td>
+<td>\(14\)</td>
 <td></td>
 <td></td>
-<td>10</td>
-<td>5</td>
+<td>\(10\)</td>
+<td>\(5\)</td>
 </tr>
 </tbody>
 </table>

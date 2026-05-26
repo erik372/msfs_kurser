@@ -32,7 +32,7 @@ Rad 1 i tabellen består av första värdet för $x$ respektive $y$ och represen
 
 ![](img/k2-2-3-image1.png)
 
-<table style="width:42%;">
+<table class="table table-bordered" style="width:42%;">
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 12%" />
@@ -41,32 +41,30 @@ Rad 1 i tabellen består av första värdet för $x$ respektive $y$ och represen
 <thead>
 <tr>
 <th>Observation i</th>
-<th style="text-align: center;"><span
-class="math display">\[x_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[y_{i}\]</span></th>
+<th style="text-align: center;">\(x_{i}\)</th>
+<th style="text-align: center;">\(y_{i}\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">3</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(3\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">2</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(2\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">5</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(6\)</td>
+<td style="text-align: center;">\(5\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">4</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(7\)</td>
+<td style="text-align: center;">\(4\)</td>
 </tr>
 </tbody>
 </table>
@@ -80,7 +78,7 @@ Det finns inte några begränsningar för vilka värden som kovarians kan anta. 
 
 **Tabell 1. Beräkningar för kovariansen mellan** $\mathbf{x}$ **och** $\mathbf{y}$
 
-<table style="width:98%;">
+<table class="table table-bordered" style="width:98%;">
 <colgroup>
 <col style="width: 16%" />
 <col style="width: 13%" />
@@ -92,55 +90,50 @@ Det finns inte några begränsningar för vilka värden som kovarians kan anta. 
 <thead>
 <tr>
 <th>Observation</th>
-<th style="text-align: center;"><span
-class="math display">\[x_{i}\]</span></th>
-<th style="text-align: center;"><span
-class="math display">\[y_{i}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[x_{i} -
-\overline{x}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[y_{i} -
-\overline{y}\]</span></th>
-<th style="text-align: center;"><span class="math display">\[(x_{i} -
-\overline{x})(y_{i} - \overline{y})\]</span></th>
+<th style="text-align: center;">\(x_{i}\)</th>
+<th style="text-align: center;">\(y_{i}\)</th>
+<th style="text-align: center;">\(x_{i} - \overline{x}\)</th>
+<th style="text-align: center;">\(y_{i} - \overline{y}\)</th>
+<th style="text-align: center;">\((x_{i} - \overline{x})(y_{i} - \overline{y})\)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">-2</td>
-<td style="text-align: center;">-0,5</td>
-<td style="text-align: center;">1</td>
+<td>\(1\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(3\)</td>
+<td style="text-align: center;">\(-2\)</td>
+<td style="text-align: center;">\(-0{,}5\)</td>
+<td style="text-align: center;">\(1\)</td>
 </tr>
 <tr>
-<td>2</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">-1</td>
-<td style="text-align: center;">-1,5</td>
-<td style="text-align: center;">1,5</td>
+<td>\(2\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td style="text-align: center;">\(-1\)</td>
+<td style="text-align: center;">\(-1{,}5\)</td>
+<td style="text-align: center;">\(1{,}5\)</td>
 </tr>
 <tr>
-<td>3</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1,5</td>
-<td style="text-align: center;">1,5</td>
+<td>\(3\)</td>
+<td style="text-align: center;">\(6\)</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(1\)</td>
+<td style="text-align: center;">\(1{,}5\)</td>
+<td style="text-align: center;">\(1{,}5\)</td>
 </tr>
 <tr>
-<td>4</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">0,5</td>
-<td style="text-align: center;">1</td>
+<td>\(4\)</td>
+<td style="text-align: center;">\(7\)</td>
+<td style="text-align: center;">\(4\)</td>
+<td style="text-align: center;">\(2\)</td>
+<td style="text-align: center;">\(0{,}5\)</td>
+<td style="text-align: center;">\(1\)</td>
 </tr>
 <tr>
 <td>Medelvärde</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">3,5</td>
+<td style="text-align: center;">\(5\)</td>
+<td style="text-align: center;">\(3{,}5\)</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -151,7 +144,7 @@ class="math display">\[y_{i}\]</span></th>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;">5</td>
+<td style="text-align: center;">\(5\)</td>
 </tr>
 </tbody>
 </table>

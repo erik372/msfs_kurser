@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>37 Konstannhålla | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
+<meta name="author" content="Erik Hegelund">
 <meta name="description" content="37.0.1 Begrepp  Konstanthålla: Regressionsanalys med modell \(Y = a + bX + Z + \epsilon\) innebär att vi uppskattar samvariationen mellan X och Y, med hänsyn till variationer i Z. Detta kallas för...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="37 Konstannhålla | Matematik och statistik för samhällsvetare">
@@ -137,7 +137,7 @@ Exempel: När vi studerar samvariationen mellan inkomst och livslängd med häns
 <p>Säg att vi har regressionsmodellen <span class="math inline">\(Y = a + bX + cZ + V\)</span>, där <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span> är variabler och <span class="math inline">\(V\)</span> är feltermen. Vi kan då beskriva detta som att vi håller variabeln <span class="math inline">\(Z\)</span> konstant när vi estimerar samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span>. Och vi håller variabeln <span class="math inline">\(X\)</span> konstant när vi estimerar samvariationen mellan <span class="math inline">\(Y\)</span> och <span class="math inline">\(Z\)</span>.
 Vi ska nu illustrera detta med hjälp av lite data över genomsnittlig livslängd och inkomst för kvinnor respektive män i tre av Sveriges kommuner, vilket beskrivs i tabell 1. Kolumnen längst till höger beskriver en dummyvariabel <span class="math inline">\(G\)</span> för kön där kvinnor = 0 och män = 1.</p>
 <p><strong>Tabell 1. Data över män och kvinnor i tre kommuner</strong></p>
-<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<div class="inline-table"><table class="table table-bordered" style="width:98%;">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 24%">
@@ -164,13 +164,13 @@ Kön <span class="math inline"><span class="math inline">\((G)\)</span></span>
 Jokkmokk, kvinnor
 </td>
 <td style="text-align: center;">
-81,6
+<span class="math inline">\(81{,}6\)</span>
 </td>
 <td style="text-align: center;">
-2,07
+<span class="math inline">\(2{,}07\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 </tr>
 <tr>
@@ -178,13 +178,13 @@ Jokkmokk, kvinnor
 Jokkmokk, män
 </td>
 <td style="text-align: center;">
-79,2
+<span class="math inline">\(79{,}2\)</span>
 </td>
 <td style="text-align: center;">
-2,4
+<span class="math inline">\(2{,}4\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 </tr>
 <tr>
@@ -192,13 +192,13 @@ Jokkmokk, män
 Oskarshamn, kvinnor
 </td>
 <td style="text-align: center;">
-84,6
+<span class="math inline">\(84{,}6\)</span>
 </td>
 <td style="text-align: center;">
-2,11
+<span class="math inline">\(2{,}11\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 </tr>
 <tr>
@@ -206,13 +206,13 @@ Oskarshamn, kvinnor
 Oskarshamn, män
 </td>
 <td style="text-align: center;">
-81,3
+<span class="math inline">\(81{,}3\)</span>
 </td>
 <td style="text-align: center;">
-2,79
+<span class="math inline">\(2{,}79\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 </tr>
 <tr>
@@ -220,13 +220,13 @@ Oskarshamn, män
 Örebro, kvinnor
 </td>
 <td style="text-align: center;">
-84,8
+<span class="math inline">\(84{,}8\)</span>
 </td>
 <td style="text-align: center;">
-2,18
+<span class="math inline">\(2{,}18\)</span>
 </td>
 <td style="text-align: center;">
-0
+<span class="math inline">\(0\)</span>
 </td>
 </tr>
 <tr>
@@ -234,13 +234,13 @@ Oskarshamn, män
 Örebro, män
 </td>
 <td style="text-align: center;">
-80,5
+<span class="math inline">\(80{,}5\)</span>
 </td>
 <td style="text-align: center;">
-2,66
+<span class="math inline">\(2{,}66\)</span>
 </td>
 <td style="text-align: center;">
-1
+<span class="math inline">\(1\)</span>
 </td>
 </tr>
 <tr>
@@ -258,13 +258,13 @@ Oskarshamn, män
 Medelvärde
 </td>
 <td style="text-align: center;">
-82
+<span class="math inline">\(82\)</span>
 </td>
 <td style="text-align: center;">
-2,368
+<span class="math inline">\(2{,}368\)</span>
 </td>
 <td style="text-align: center;">
-0,5
+<span class="math inline">\(0{,}5\)</span>
 </td>
 </tr>
 </tbody>
@@ -336,6 +336,17 @@ Om <span class="math inline">\(G = 0\)</span> får vi den övre regressionslinje
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -458,6 +469,7 @@ Om <span class="math inline">\(G = 0\)</span> får vi den övre regressionslinje
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -496,7 +508,7 @@ Om <span class="math inline">\(G = 0\)</span> får vi den övre regressionslinje
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

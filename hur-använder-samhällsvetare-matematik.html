@@ -5,15 +5,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Hur använder samhällsvetare matematik | Matematik och statistik för samhällsvetare</title>
-<meta name="author" content="">
-<meta name="description" content="Avsnitt i detta kapitel: Kan vi mäta lycka? Hur beskriva en teori med matte? Hur testa om en teori stämmer? Varför räkna?  (function () {  function translateUI() {   // Vänster sidopanel rubrik  ...">
+<meta name="author" content="Erik Hegelund">
+<meta name="description" content="Avsnitt i detta kapitel: Kan vi mäta lycka? Hur beskriva en teori med matte? Hur testa om en teori stämmer? Varför räkna?  (function () {  function translateFooter() {   var footer =...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="Hur använder samhällsvetare matematik | Matematik och statistik för samhällsvetare">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Avsnitt i detta kapitel: Kan vi mäta lycka? Hur beskriva en teori med matte? Hur testa om en teori stämmer? Varför räkna?  (function () {  function translateUI() {   // Vänster sidopanel rubrik  ...">
+<meta property="og:description" content="Avsnitt i detta kapitel: Kan vi mäta lycka? Hur beskriva en teori med matte? Hur testa om en teori stämmer? Varför räkna?  (function () {  function translateFooter() {   var footer =...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hur använder samhällsvetare matematik | Matematik och statistik för samhällsvetare">
-<meta name="twitter:description" content="Avsnitt i detta kapitel: Kan vi mäta lycka? Hur beskriva en teori med matte? Hur testa om en teori stämmer? Varför räkna?  (function () {  function translateUI() {   // Vänster sidopanel rubrik  ...">
+<meta name="twitter:description" content="Avsnitt i detta kapitel: Kan vi mäta lycka? Hur beskriva en teori med matte? Hur testa om en teori stämmer? Varför räkna?  (function () {  function translateFooter() {   var footer =...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -123,6 +123,17 @@
 </div>
 <script src="js/exercises.js"></script><script>
 (function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.querySelectorAll('p').forEach(function (p) {
+      p.innerHTML = p.innerHTML
+        .replace('was written by', 'är skriven av')
+        .replace('This book was built by the', 'Boken är byggd med')
+        .replace('R package.', 'R-paketet.');
+    });
+  }
+
   function translateUI() {
     // Vänster sidopanel rubrik
     var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
@@ -245,6 +256,7 @@
   }
 
   function init() {
+    translateFooter();
     translateUI();
     colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
     buildCollapsibleTOC();
@@ -278,7 +290,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by . </p>
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
