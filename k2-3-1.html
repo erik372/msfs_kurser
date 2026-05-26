@@ -135,11 +135,11 @@
 </h4>
 <p>Detta kan vi illustrera med hjälp av exempel där vi använder samma fyra observationer för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> i som vi använde i tidigare avsnitt, där <span class="math inline">\(X = 3,\ 4,\ 6,\ 7\)</span> och <span class="math inline">\(Y = 3,\ 4,\ 5,\ 6\)</span>. Men i stället för regressionslinjen som vi skattade utifrån minstakvadratmetoden har vi nu en horisontell linje där <span class="math inline">\(\widehat{Y} = 3,5\)</span> för alla <span class="math inline">\(Y_{i}\)</span>, vilket är samma som medelvärdet för Y i våra fyra observationer: <span class="math inline">\(\overline{Y} = (3 + 4 + 5 + 6)\text{/}4 = 3,5\)</span>.</p>
 <p>En horisontell linje har lutningskoefficient <span class="math inline">\(b = 0\)</span>. Låt oss beräkna summan av de kvadrerade residualerna <span class="math inline">\(\left( \sum_{i}^{}\widehat{{V_{i}}^{2}} \right)\)</span> för denna linje:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 \sum_{i}^{}\widehat{{V_{i}}^{2}} &amp;= \sum_{i}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{2}\\
 &amp;= (3 - 3{,}5)^{2} + (4 - 3{,}5)^{2} + (5 - 3{,}5)^{2} + (6 - 3{,}5)^{2} \\
 &amp;= 9
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>vilket är mer än 2,5. Regressionslinjen vi kunde rita utifrån vår regressionsmodell som vi skattade med minstakvadratmetoden är därför bättre om vi ska minimera det summerade vertikala avståndet.</p>
 <p>Låt oss exemplifiera med en till linje, som passerar observation 1 och 4, det vill säga punkterna <span class="math inline">\((X,Y) = (3,3)\)</span> och (7,4). Utifrån dessa värden för <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> vet vi att då <span class="math inline">\(X\)</span> ökar från 3 till 7 är detta associerat med en genomsnittlig förändring i <span class="math inline">\(Y\)</span> från 3 till 4, varför linjens lutning är:</p>
 <p><span class="math display">\[\widehat{b} = \frac{Y_{4} - Y_{1}}{X_{4} - X_{1}} = \frac{4 - 3}{7 - 3} = \frac{1}{4} \tag{3}\]</span></p>
@@ -150,12 +150,12 @@
 <p>För observation 3 har vi <span class="math inline">\(X = 6\)</span> vilket ger:</p>
 <p><span class="math display">\[\widehat{Y_{3}} = \frac{9}{4} + \frac{1}{4} \cdot 6 = \frac{15}{4} \tag{6}\]</span></p>
 <p>För observation 2 och 3 har vi att <span class="math inline">\(\left( Y_{2} = 2 \right)\)</span> och <span class="math inline">\(\left( Y_{3} = 5 \right)\)</span>:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 \sum_{i}^{}{\widehat{V}}_{i}^{2} &amp;= \sum_{i}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{7}\\
 &amp;= \left( Y_{1} - \widehat{Y}_{1} \right)^{2} + \left( Y_{2} - \widehat{Y}_{2} \right)^{2} + \left( Y_{3} - \widehat{Y}_{3} \right)^{2} + \left( Y_{4} - \widehat{Y}_{4} \right)^{2} \\
 &amp;= 0 + \left( 2 - \frac{13}{4} \right)^{2} + \left( 5 - \frac{15}{4} \right)^{2} + 0 \\
 &amp;= 3{,}1875 &gt; 2{,}5
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>Figur 1 illustrerar de tre linjer vi nu har jämfört. Linje A i diagrammet är den vi skattade utifrån minstakvadratmetoden. Linje B är den horisontella linjen där <span class="math inline">\(\widehat{Y} = \overline{Y} = 3,5\)</span>. Linje C ritas av funktionen <span class="math inline">\(Y = 9\text{/}4 + \frac{1}{4}X\)</span> och går igenom två av punkterna.</p>
 <p><strong>Figur 1. Tre linjer, varav en är regressionslinjen</strong></p>
 <div class="inline-figure"><img src="img/k2-3-1-image1.png"></div>

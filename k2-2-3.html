@@ -385,12 +385,12 @@ Summa
 <p>Om vi arbetar med urvalsdata betecknas korrelationskoefficienten <span class="math inline">\(r_{xy}\)</span> eller <span class="math inline">\(corr(x,y)\)</span>, förkortning för engelska <em>correlation</em>:</p>
 <p><span class="math display">\[r_{xy} = \frac{cov(x,y)}{s_{x}s_{y}} \tag{6}\]</span></p>
 <p>där vi i stället har uppskattad kovarians i täljaren och uppskattad standard­avvikelse för de två variablerna i nämnaren. De olika delarna i denna ekvation har vi definierat tidigare i detta kapitel. Vi skriver ut ekvationerna och lägger till Bessels korrigering:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 r_{xy} &amp;= \frac{cov(x,y)}{s_{x}s_{y}} \tag{7}\\
 &amp;= \frac{\left( \frac{1}{n - 1} \right)\sum_{i}^{}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)}}{\left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} \right)^{\frac{1}{2}}\left( \frac{\sum_{i}^{n}\left( y_{i} - \overline{y} \right)^{2}}{n - 1} \right)^{\frac{1}{2}}} \\
 &amp;= \frac{(n - 1)^{- 1}\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)}}{(n - 1)^{- 1}\left( \sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}}\left( \sum_{i}^{n}\left( y_{i} - \overline{y} \right)^{2} \right)^{\frac{1}{2}}} \\
 &amp;= \frac{\sum_{i}^{n}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)}}{\left( \sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}}\left( \sum_{i}^{n}\left( y_{i} - \overline{y} \right)^{2} \right)^{\frac{1}{2}}}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>Eftersom Bessels korrigering ingår i alla tre måtten kan vi i sista raden stryka <span class="math inline">\((n - 1)^{- 1}\)</span> från både täljare och nämnare.</p>
 <p>Låt oss återigen demonstrera genom att uppskatta <span class="math inline">\(r_{xy}\)</span> för de två variablerna <em>x</em> och <em>y</em> och deras fyra observationer från figur 1. Vi återanvänder resultaten för kovarians ovan samt standardavvikelse för <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>, vilket vi beräknade i föregående avsnitt:</p>
 <p><span class="math display">\[r_{xy} = \frac{cov(x,y)}{s_{x}s_{y}} \approx \frac{\frac{5}{3}}{\left( + \sqrt{\frac{10}{3}} \right)\left( + \sqrt{\frac{5}{3}} \right)} \approx 0,71 \tag{8}\]</span></p>

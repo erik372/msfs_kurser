@@ -180,23 +180,23 @@
 </h4>
 <p>Om vi har en konstant <span class="math inline">\(a\)</span>, ett valfritt värde, är variansen för denna <span class="math inline">\(var(a) = 0\)</span>. Detta eftersom ett enskilt värde inte har någon spridning.</p>
 <p>Om <span class="math inline">\(a\)</span> är multiplicerad med en variabel <span class="math inline">\(x\)</span> är variansen för <span class="math inline">\(ax\)</span> lika med <span class="math inline">\(a^{2}var(x)\)</span>. Detta kan vi se genom att ta:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 var(ax) &amp;= \left( \frac{1}{n} \right)\sum_{i}^{}\left( {ax}_{i} - a\overline{x} \right)^{2} \tag{7}\\
 &amp;= \left( \frac{1}{n} \right)\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right)
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>Eftersom <span class="math inline">\(a\)</span> inte påverkas av summeringen kan vi flytta ut alla <span class="math inline">\(a^{2}\)</span>:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 var(ax) &amp;= a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i}^{2} - 2\overline{x} + {\overline{x}}^{2} \right) \tag{8}\\
 &amp;= a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i} - \overline{x} \right)^{2} \\
 &amp;= a^{2}var(x)
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>För standardavvikelse får vi:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 s_{x}(ax) &amp;= \left( \frac{1}{n}\sum_{i}^{n}\left( {ax}_{i} - a\overline{x} \right)^{2} \right)^{\frac{1}{2}} \tag{9}\\
 &amp;= \left( \frac{1}{n}\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right) \right)^{\frac{1}{2}} \\
 &amp;= \left( a^{2} \right)^{\frac{1}{2}}\left( \frac{1}{n}\sum\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}} \\
 &amp;= \|a\|s_{x}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>där <span class="math inline">\(\|a\|\)</span> är absolutbeloppet av konstanten <span class="math inline">\(a\)</span>.</p>
 </div>
 <div id="ett-exempel-1" class="section level4" number="26.0.2.6">

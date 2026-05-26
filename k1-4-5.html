@@ -239,22 +239,22 @@ Summa
 <p>För att göra denna beräkning med matriser beräknar vi först den multiplikativa inversen av varje element i S, det vill säga placerar värdena som nämnare i varsitt bråk med täljaren 1. Bransch A får <span class="math inline">\(\frac{1}{6}\)</span> och bransch B <span class="math inline">\(\frac{1}{7}\)</span>. Dessa värden samlar vi i en kolumnmatris <span class="math inline">\(S_{m}\)</span> och placerar i en diagonalmatris, vilket vi kan beskriva som <span class="math inline">\(\operatorname{diag}(S_{m})\)</span>:</p>
 <p><span class="math display">\[\operatorname{diag}\left( S_{m} \right) = \begin{bmatrix} \frac{1}{6} &amp; 0 \\ 0 &amp; \frac{1}{7} \end{bmatrix} \tag{3}\]</span></p>
 <p>För att beräkna A matrismultiplicerar vi nu Z med <span class="math inline">\(\operatorname{diag}\left( S_{m} \right)\)</span>:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 A &amp;= Z * \operatorname{diag}\left( S_{m} \right) \tag{4}\\
 &amp;= \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}\begin{bmatrix} \frac{1}{6} &amp; 0 \\ 0 &amp; \frac{1}{7} \end{bmatrix} \\
 &amp;= \begin{bmatrix} \frac{2}{6} &amp; \frac{1}{7} \\ \frac{1}{6} &amp; \frac{3}{7} \end{bmatrix}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>För varje bransch <em>j</em> kan vi definiera totalproduktion <span class="math inline">\(y_{j}\)</span> som summan av insatsproduktion till alla branscher plus produktion till slutkonsumtion, vilket i detta fall blir:</p>
 <p><span class="math display">\[y_{j} = a_{j1}y_{1} + a_{j2}y_{2} + c_{j} \tag{5}\]</span></p>
 <p>där <span class="math inline">\(a\)</span> är vikterna vi definierade i ekvation 2, <span class="math inline">\(y_{1}\)</span> är totalproduktionen från bransch 1 och <span class="math inline">\(y_{2}\)</span> är totalproduktion från bransch 2, eller bransch A och B som vi kallade dem.</p>
 <p>Vi vet inte värdena för <span class="math inline">\(y_{j}\)</span> än men vi kan beräkna det med hjälp av matriserna. Vi samlar elementen av totalproduktion i kolumnmatris <span class="math inline">\(Y\)</span> och kan nu beskriva <span class="math inline">\(Y\)</span> som:</p>
 <p><span class="math display">\[Y = AY + C \tag{6}\]</span></p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 Y - AY &amp;= C \\
 IY - AY &amp;= C \\
 (I - A)Y &amp;= C \\
 Y &amp;= (I - A)^{-1}C
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>Identitetsmatris <em>I</em> har samma dimensioner som <em>A</em>. Kolumnmatris <em>Y</em> beskriver hur mycket produktion som krävs från respektive bransch till företagen i samma och andra branscher samt till slutkonsumtion:</p>
 <p><span class="math display">\[Y = (I - A)^{-1}C = \begin{bmatrix} \frac{8}{5} &amp; \frac{2}{5} \\ \frac{7}{15} &amp; \frac{28}{15} \end{bmatrix}\begin{bmatrix} 3 \\ 3 \end{bmatrix} \approx \begin{bmatrix} 6 \\ 7 \end{bmatrix} \tag{7}\]</span></p>
 <p>Detta resultat är konsistent med tabell 1, där vi ser att bransch A producerar totalt 6 enheter och bransch B producerar totalt 7 enheter. Detta visar hur mycket bransch A och B måste producera totalt för insatsvaror och slutkonsumtion. Vi kallar den inverterade matrisen för <span class="math inline">\(B = (I - A)^{-1}\)</span>. Matris <em>B</em> har samma dimensioner som matris <em>A</em>.</p>
@@ -264,12 +264,12 @@ Y &amp;= (I - A)^{-1}C
 <span class="header-section-number">20.0.2.3</span> Produktions- och insatsmultiplikatorerna<a class="anchor" aria-label="anchor" href="#produktions--och-insatsmultiplikatorerna"><i class="fas fa-link"></i></a>
 </h4>
 <p>Låt oss beräkna <em>B</em> med värdena från tabell 1:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 B &amp;= (I - A)^{-1} \tag{8}\\
 &amp;= \left( \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} - \begin{bmatrix} \frac{2}{6} &amp; \frac{1}{7} \\ \frac{1}{6} &amp; \frac{3}{7} \end{bmatrix} \right)^{-1} \\
 &amp;= \begin{bmatrix} \frac{4}{6} &amp; -\frac{1}{7} \\ -\frac{1}{6} &amp; \frac{4}{7} \end{bmatrix}^{-1} \\
 &amp;= \begin{bmatrix} \frac{8}{5} &amp; \frac{2}{5} \\ \frac{7}{15} &amp; \frac{28}{15} \end{bmatrix}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>Om vi nu i matris <span class="math inline">\(B\)</span> beräknar summan av en kolumn för en bransch <span class="math inline">\(j\)</span> får vi den totala mängden produktion för alla branscher som skulle krävas om slutkonsumtionen för bransch <span class="math inline">\(j\)</span> skulle öka med en enhet. Detta visar hur mycket andra branscher måste leverera i insatsvaror till branschen <span class="math inline">\(j\)</span>. Detta mått kallas i det här sammanhanget för <em>produktionsmultiplikator</em>.</p>
 <p>Om vi för matris <span class="math inline">\(B\)</span> beräknar summan av en rad för en bransch <span class="math inline">\(j\)</span> i matris <span class="math inline">\(B\)</span> får vi ett mått på hur mycket extra produktion totalt i samhället som möjliggörs om branschen <span class="math inline">\(j\)</span> ökar sin produktion av insatsvaror med en enhet. Detta kallas för <em>insatsmultiplikator</em>.</p>
 </div>

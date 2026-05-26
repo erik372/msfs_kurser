@@ -140,11 +140,11 @@
 <p><span class="math display">\[\sum_{i}^{}{\widehat{V}}_{i}^{2} = \sum_{}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{2}\]</span></p>
 <p>Estimatorerna kan därför härledas ur ett minimeringsproblem. Om du känner dig osäker på maximeringsproblem och minimeringsproblem, se Mattebokens avsnitt om <a href="https://www.matteboken.se/lektioner/matte-3/derivatan-och-grafen/storsta-och-minsta-varde#!/">största och minsta värde under matte 3</a>.</p>
 <p>Summan av de kvadrerade residualerna blir:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 \sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} &amp;= {\widehat{V}}_{i}^{2} + {\widehat{V}}_{i}^{2} + \ldots + {\widehat{V}}_{i}^{2} \tag{3}\\
 &amp;= \left( Y_{1} - \widehat{Y_{1}} \right)^{2} + \left( Y_{2} - \widehat{Y_{2}} \right)^{2} + \ldots + \left( Y_{n} - \widehat{Y_{n}} \right)^{2} \\
 &amp;= \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>där n är antal observationer, <span class="math inline">\(\widehat{Y}\)</span> är predikterade <span class="math inline">\(Y\)</span>. För att kunna skatta <span class="math inline">\(\widehat{Y} = \widehat{a} + \widehat{b}X\)</span> behöver vi estimera <span class="math inline">\(\widehat{a}\)</span> och <span class="math inline">\(\widehat{b}\)</span>. Vi börjar med att sätta in denna definition av <span class="math inline">\(\widehat{Y}\)</span> i uttrycket från ekvation 3:</p>
 <p><span class="math display">\[\sum_{i = 1}^{n}{\widehat{V}}_{i}^{2} = \sum_{i = 1}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{4}\]</span></p>
 <p><span class="math display">\[= \sum_{i = 1}^{n}\left( Y_{i} - \left( \widehat{a} + \widehat{b}X_{i} \right) \right)^{2}\]</span></p>
@@ -170,12 +170,12 @@ Notera att det första villkoret i ekvation 6 innebär att <span class="math inl
 <p><span class="math display">\[- 2\sum_{i = 1}^{n}\left( Y_{i} - \widehat{a} - \widehat{b}X_{i} \right) = 0 \tag{7}\]</span></p>
 <p><span class="math inline">\(( - 2)\sum_{i = 1}^{n}{Y_{i} - ( - 2)}\sum_{i = 1}^{n}{\widehat{a} - ( - 2)}\sum_{i = 1}^{n}{\widehat{b}X_{i}} = 0\)</span></p>
 <p>Eftersom alla termer är multiplicerade med -2 kan vi stryka denna faktor. Eftersom <span class="math inline">\(\widehat{a}\)</span> är konstant över alla observationer är termen <span class="math inline">\(\sum_{i}^{n}\widehat{a}\)</span> samma sak som antal observationer gånger <span class="math inline">\(\widehat{a}\)</span>: <span class="math inline">\(\sum_{i}^{n}\widehat{a} = n\widehat{a}\)</span>. Vi kan nu skriva:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 0 &amp;= ( - 2)\sum_{i = 1}^{n}Y_{i} - ( - 2)\sum_{i = 1}^{n}\widehat{a} - ( - 2)\sum_{i = 1}^{n}{\widehat{b}X_{i}} \tag{8}\\
 0 &amp;= \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}\widehat{a} - \sum_{i = 1}^{n}{\widehat{b}X_{i}} \\
 0 &amp;= \sum_{i = 1}^{n}Y_{i} - n\widehat{a} - \sum_{i = 1}^{n}{\widehat{b}X_{i}} \\
 n\widehat{a} &amp;= \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}{\widehat{b}X_{i}}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>Vi dividerar med <span class="math inline">\(n\)</span> så att termen längst till höger blir <span class="math inline">\(\frac{1}{n}\sum_{}^{}{\widehat{b}X_{i}}\)</span>. Medelvärdet för <span class="math inline">\(X\)</span> kan skrivas <span class="math inline">\(\overline{X} = \frac{1}{n}\sum_{i}^{n}X_{i}\)</span> vilket ger:</p>
 <p><span class="math display">\[\widehat{a} = \frac{1}{n}\sum_{i = 1}^{n}Y_{i} - \frac{1}{n}\sum_{i = 1}^{n}{\widehat{b}X} \tag{9}\]</span></p>
 <p><span class="math inline">\(\widehat{a} = \overline{Y} - \widehat{b}\overline{X}\)</span></p>
