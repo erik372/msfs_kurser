@@ -125,10 +125,12 @@
 <span class="header-section-number">34.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-33"><i class="fas fa-link"></i></a>
 </h3>
 <p>Detta avsnitt är matematiskt intensivt och INTE nödvändigt för att använda regressionsanalys i praktiken. Om du känner att matematiken blir för tung kan du hoppa över detta avsnitt för nu och komma tillbaka senare om du vill förstå metoderna mer på djupet. Fokusera på att förstå vad estimatorerna gör. Det är inte avgörande att förstå varje steg i härledningarna.</p>
-<p>Varför bry sig om härledningen?
-1. Det ger djupare förståelse för minstakvadratmetodens logik.
-2. Det visar att metoderna bygger på genomtänkt matematik.
-3. Det förbereder dig för mer avancerade metoder senare.</p>
+<p>Varför bry sig om härledningen?</p>
+<ol style="list-style-type: decimal">
+<li>Det ger djupare förståelse för minstakvadratmetodens logik.</li>
+<li>Det visar att metoderna bygger på genomtänkt matematik.</li>
+<li>Det förbereder dig för mer avancerade metoder senare.</li>
+</ol>
 <div id="utgångspunkter" class="section level4" number="34.0.2.1">
 <h4>
 <span class="header-section-number">34.0.2.1</span> Utgångspunkter<a class="anchor" aria-label="anchor" href="#utg%C3%A5ngspunkter"><i class="fas fa-link"></i></a>
@@ -197,7 +199,7 @@ n\widehat{a} &amp;= \sum_{i = 1}^{n}Y_{i} - \sum_{i = 1}^{n}{\widehat{b}X_{i}}
 <p>Nu har vi ett uttryck för <span class="math inline">\(\widehat{b}\)</span>. För att visa att detta är samma som uttrycket i ekvation 1 och <a href="k2-2-5.html">avsnitt 2.5</a> kan vi skriva om täljaren och nämnaren. Detta ger:</p>
 <p><span class="math display">\[\widehat{b} = \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i = 1}^{n}Y_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i}} \tag{13}\]</span></p>
 <p><span class="math display">\[= \frac{\sum_{i = 1}^{n}X_{i}Y_{i} - \overline{Y}\sum_{i}^{}X_{i} - \overline{X}\sum_{i = 1}^{n}Y_{i} + \overline{X}\sum_{i = 1}^{n}Y_{i}}{\sum_{i = 1}^{n}X_{i}^{2} - \overline{X}\sum_{i = 1}^{n}X_{i} - n\overline{X^{2}} + n\overline{X^{2}}}\]</span></p>
-<p><span class="math display">\[\frac{\sum_{i = 1}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{I = 1}^{n}\left( X_{i} - \overline{X} \right)^{2}}\]</span></p>
+<p><span class="math display">\[= \frac{\sum_{i = 1}^{n}{\left( X_{i} - \overline{X} \right)\left( Y_{i} - \overline{Y} \right)}}{\sum_{I = 1}^{n}\left( X_{i} - \overline{X} \right)^{2}}\]</span></p>
 <p>Nu har vi samma sak som ekvation 1.</p>
 <div class="ex-section-title">
 <p>Övningar</p>

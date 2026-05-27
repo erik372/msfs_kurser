@@ -143,12 +143,14 @@
 </h4>
 <p>Låt oss nu estimera följande regressionsmodell:</p>
 <p><span class="math display">\[Z = \alpha + \beta K + \epsilon \tag{1}\]</span></p>
-<p>där <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span> är variabler, <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span> är koefficienterna som vi ska estimera utifrån minstakvadratmetoden och <span class="math inline">\(\epsilon\)</span> är feltermen. En del av poängen här är att vi nu använder andra bokstäver men att matematiken ändå är densamma. Låt oss repetera vår metod:
-1. Vi har en idé om att <span class="math inline">\(K\)</span> samvarierar med <span class="math inline">\(Z\)</span>. Detta är ett påstående om samvariation, inte en teori om ett orsakssamband. Samvariation kan i sin tur vara baserad på en teori om ett orsakssamband, vilket i så fall i regel brukar formuleras som att den förklarande variabeln <span class="math inline">\(K\)</span> orsakar förändringar i den förklarade variabeln <span class="math inline">\(Z\)</span>.
-2. Vi formulerar vårt påstående om samvariation i form av en regressionsmodell i ekvation 1.
-3. Vi använder minstakvadratmetoden för att hitta estimatorerna (ekvationerna) för <span class="math inline">\(\widehat{\alpha}\)</span> och <span class="math inline">\(\widehat{\beta}\)</span>. Hattsymbolen <span class="math inline">\(\widehat{}\)</span> indikerar att det är estimerade versioner av koefficienterna <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span> som finns i populationen.
-4. Efter att vi har estimerat koefficienterna kan vi estimera regressionslinjens ekvation <span class="math inline">\(\widehat{Z} = \widehat{\alpha} + \widehat{\beta}K\)</span> och rita ut regressionslinjen i ett diagram. Värdena för <span class="math inline">\(\widehat{Z}\)</span> anger regressionslinjens värden på den vertikala axeln.
-5. Residualen <span class="math inline">\(\widehat{\epsilon} = Z - \widehat{Z}\)</span> är det vertikala avståndet (y-axeln) mellan regressionslinjens <span class="math inline">\(\widehat{Z}\)</span> och respektive observation <span class="math inline">\(Z\)</span>.</p>
+<p>där <span class="math inline">\(Z\)</span> och <span class="math inline">\(K\)</span> är variabler, <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span> är koefficienterna som vi ska estimera utifrån minstakvadratmetoden och <span class="math inline">\(\epsilon\)</span> är feltermen. En del av poängen här är att vi nu använder andra bokstäver men att matematiken ändå är densamma. Låt oss repetera vår metod:</p>
+<ol style="list-style-type: decimal">
+<li>Vi har en idé om att <span class="math inline">\(K\)</span> samvarierar med <span class="math inline">\(Z\)</span>. Detta är ett påstående om samvariation, inte en teori om ett orsakssamband. Samvariation kan i sin tur vara baserad på en teori om ett orsakssamband, vilket i så fall i regel brukar formuleras som att den förklarande variabeln <span class="math inline">\(K\)</span> orsakar förändringar i den förklarade variabeln <span class="math inline">\(Z\)</span>.</li>
+<li>Vi formulerar vårt påstående om samvariation i form av en regressionsmodell i ekvation 1.</li>
+<li>Vi använder minstakvadratmetoden för att hitta estimatorerna (ekvationerna) för <span class="math inline">\(\widehat{\alpha}\)</span> och <span class="math inline">\(\widehat{\beta}\)</span>. Hattsymbolen <span class="math inline">\(\widehat{}\)</span> indikerar att det är estimerade versioner av koefficienterna <span class="math inline">\(\alpha\)</span> och <span class="math inline">\(\beta\)</span> som finns i populationen.</li>
+<li>Efter att vi har estimerat koefficienterna kan vi estimera regressionslinjens ekvation <span class="math inline">\(\widehat{Z} = \widehat{\alpha} + \widehat{\beta}K\)</span> och rita ut regressionslinjen i ett diagram. Värdena för <span class="math inline">\(\widehat{Z}\)</span> anger regressionslinjens värden på den vertikala axeln.</li>
+<li>Residualen <span class="math inline">\(\widehat{\epsilon} = Z - \widehat{Z}\)</span> är det vertikala avståndet (y-axeln) mellan regressionslinjens <span class="math inline">\(\widehat{Z}\)</span> och respektive observation <span class="math inline">\(Z\)</span>.</li>
+</ol>
 </div>
 <div id="estimera-koefficienterna" class="section level4" number="32.0.2.2">
 <h4>
@@ -437,9 +439,7 @@ SST &amp;= SSE + SSR \tag{7}\\
 </h4>
 <p>Ett sätt att illustrera skillnaderna mellan SSR, SSE och SST ges i figur 2. Vi använder här återigen de fyra observationerna för <span class="math inline">\(X = 3,4,6,7\)</span> och <span class="math inline">\(Y = 2,3,4,5\)</span> som vi använde i vårt första exempel på regressionsanalys (se <a href="k2-2-4.html">avsnitt 2.4</a>). I diagrammet i figur 1 markerar vi residualerna med streckade vertikala linjer mellan <span class="math inline">\(Y_{i}\ \)</span> och regressionslinjens <span class="math inline">\(\widehat{Y_{i}}\)</span>.</p>
 <p><strong>Figur 2. Differenserna mellan</strong> <span class="math inline">\(\overline{Y}\)</span>, <span class="math inline">\(\widehat{Y}\)</span> och <span class="math inline">\(Y_{i}\)</span></p>
-<div class="float">
-<img src="img/k2-3-2-image2.png" alt="A graph of a function Description automatically generated"><div class="figcaption">A graph of a function Description automatically generated</div>
-</div>
+<div class="inline-figure"><img src="img/k2-3-2-image2.png"></div>
 <div class="fig-caption">
 <p>Beskrivning: Figuren illustrerar hur avstånden i diagrammet motsvaras av differenser mellan värdena för observationerna <span class="math inline">\(Y_{i}\)</span>, deras medelvärde <span class="math inline">\(\overline{Y}\)</span> och estimerade <span class="math inline">\(\widehat{Y}\)</span>.</p>
 </div>
