@@ -143,11 +143,16 @@
 <span class="header-section-number">41.0.2.2</span> Illustration med diagram<a class="anchor" aria-label="anchor" href="#illustration-med-diagram-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>Men det finns även ytterligare några fenomen som vi har starka skäl att tro att de är viktiga för både medicinen och symptomen, men som vi saknar data för. Om vi saknar data så kan vi inte kontrollera för det i regressionsmodellen.</p>
-<p>Figur 1 illustrerar ett exempel på hur den här sortens problem kan se ut. Pilen från <span class="math inline">\(X\)</span> till <span class="math inline">\(Y\)</span> beskriver det orsakssamband som vi är intresserade av. Pilar visar påverkans riktning (kausalitet). Så här ska figuren läsas:
-- <span class="math inline">\(X \rightarrow Y\)</span>: Medicinen påverkar symptom. Det vi vill mäta!
-- <span class="math inline">\(P \rightarrow X\)</span> och <span class="math inline">\(P \rightarrow Y\)</span>: Fenomen <span class="math inline">\(P\)</span> (observerbart, som ålder) påverkar både vem som får medicin och sjuka de är
-- <span class="math inline">\(Z \rightarrow X\)</span> och <span class="math inline">\(Z \rightarrow Y\)</span>: Fenomen <span class="math inline">\(Z\)</span> (icke-observerbart, som medfödd förmåga) påverkar både vem som får medicin och hur sjuka de är.
-Om vi inte kontrollerar för <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> kommer den samvariation vi observerar mellan <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> att vara en blandning av (1) medicinens faktiska effekt (det vi vill mäta), (2) effekten av <span class="math inline">\(P\)</span> (kan vi fixa genom att inkludera <span class="math inline">\(P\)</span> i regressionen) och (3) effekten av Z (kan vi inte fixa).</p>
+<p>Figur 1 illustrerar ett exempel på hur den här sortens problem kan se ut. Pilen från <span class="math inline">\(X\)</span> till <span class="math inline">\(Y\)</span> beskriver det orsakssamband som vi är intresserade av. Pilar visar påverkans riktning (kausalitet). Så här ska figuren läsas:</p>
+<ul>
+<li>
+<span class="math inline">\(X \rightarrow Y\)</span>: Medicinen påverkar symptom. Det vi vill mäta!</li>
+<li>
+<span class="math inline">\(P \rightarrow X\)</span> och <span class="math inline">\(P \rightarrow Y\)</span>: Fenomen <span class="math inline">\(P\)</span> (observerbart, som ålder) påverkar både vem som får medicin och sjuka de är</li>
+<li>
+<span class="math inline">\(Z \rightarrow X\)</span> och <span class="math inline">\(Z \rightarrow Y\)</span>: Fenomen <span class="math inline">\(Z\)</span> (icke-observerbart, som medfödd förmåga) påverkar både vem som får medicin och hur sjuka de är.</li>
+</ul>
+<p>Om vi inte kontrollerar för <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> kommer den samvariation vi observerar mellan <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> att vara en blandning av (1) medicinens faktiska effekt (det vi vill mäta), (2) effekten av <span class="math inline">\(P\)</span> (kan vi fixa genom att inkludera <span class="math inline">\(P\)</span> i regressionen) och (3) effekten av Z (kan vi inte fixa).</p>
 <p>Detta är varför randomiserade experiment är så viktiga: de "bryter" pilarna från <span class="math inline">\(P\)</span> och <span class="math inline">\(Z\)</span> till <span class="math inline">\(X\)</span>. För att vi ska kunna uppskatta vilken effekt <span class="math inline">\(X\)</span> har på <span class="math inline">\(Y\)</span> måste vi dels fastställa att när det sker en variation i <span class="math inline">\(X\)</span>, orsakad utan koppling till <span class="math inline">\(Y\)</span>, så sker det även en variation i <span class="math inline">\(Y\)</span>.</p>
 </div>
 </div>
