@@ -172,10 +172,8 @@
 <span class="header-section-number">35.0.2.3</span> Vad spelar allt det här för roll?<a class="anchor" aria-label="anchor" href="#vad-spelar-allt-det-h%C3%A4r-f%C3%B6r-roll"><i class="fas fa-link"></i></a>
 </h4>
 <p>Huvudpoängen är enkel men avgörande: När vi lägger till eller tar bort variabler i en regressionsmodell ändras resultaten för de andra variablerna.</p>
-<p>I detta exempel såg vi att lutningskoefficienten för <span class="math inline">\(X\)</span> gick från <span class="math inline">\(0,5\)</span> till <span class="math inline">\(0,28\)</span> när vi lade till <span class="math inline">\(Z\)</span>. Detta betyder att om vi inte inkluderar viktiga variabler får vi felaktiga resultat.</p>
-<p>Hade vi haft fler variabler och koefficienter i vår regressionsmodell hade ekvationerna blivit ännu mer omfattande. Längre fram ska vi gå igenom hur vi kan räkna när vi har en regressionsmodell med valfritt antal variabler och koefficienter.</p>
-<p>Om vi tillför en variabel till vår analys kan detta påverka resultaten för alla koefficienter som ingår i modellen. Säg att variabeln <span class="math inline">\(Z\)</span> bör ingå i modellen men att denna av någon anledning inte är med i analysen. I så fall kommer resultatet för variabeln <span class="math inline">\(X\)</span> att bli missvisande.</p>
-<p>Det korrekta resultatet får vi inte förrän vi inkluderar <span class="math inline">\(Z\)</span>. Detta är centralt för att förstå den här typen av metoder, forskning och analytiskt arbete i största allmänhet.</p>
+<p>I detta exempel såg vi att lutningskoefficienten för <span class="math inline">\(X\)</span> gick från <span class="math inline">\(0,5\)</span> till <span class="math inline">\(0,28\)</span> när vi lade till <span class="math inline">\(Z\)</span>. Detta betyder att om vi inte inkluderar viktiga variabler får vi felaktiga resultat. Hade vi haft fler variabler och koefficienter i vår regressionsmodell hade ekvationerna blivit ännu mer omfattande. Längre fram ska vi gå igenom hur vi kan räkna när vi har en regressionsmodell med valfritt antal variabler och koefficienter.</p>
+<p>Om vi tillför en variabel till vår analys kan detta påverka resultaten för alla koefficienter som ingår i modellen. Säg att variabeln <span class="math inline">\(Z\)</span> bör ingå i modellen men att denna av någon anledning inte är med i analysen. I så fall kommer resultatet för variabeln <span class="math inline">\(X\)</span> att bli missvisande. Det korrekta resultatet får vi inte förrän vi inkluderar <span class="math inline">\(Z\)</span>. Detta är centralt för att förstå den här typen av metoder, forskning och analytiskt arbete i största allmänhet.</p>
 </div>
 <div id="estimera-en-modell" class="section level4" number="35.0.2.4">
 <h4>
@@ -454,7 +452,7 @@ Medel
 </tbody>
 </table></div>
 <div class="fig-caption">
-<p>Förklaring: <span class="math inline">\(\widetilde{Y_{i}} = Y_{i} - \overline{Y}\)</span> och motsvarande för <span class="math inline">\(\widetilde{X_{i}}\)</span> och <span class="math inline">\(\widetilde{Z_{i}}\)</span>.</p>
+<p>Beskrivning: <span class="math inline">\(\widetilde{Y_{i}} = Y_{i} - \overline{Y}\)</span> och motsvarande för <span class="math inline">\(\widetilde{X_{i}}\)</span> och <span class="math inline">\(\widetilde{Z_{i}}\)</span>.</p>
 </div>
 <p>I avsnitt 2.4 använde vi variablerna <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> för att estimera regressionsmodellen <span class="math inline">\(Y_{i} = a + bX_{i} + V_{i}\)</span> och fann då att <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>. Nu ska vi estimera koefficienterna för följande regressionsmodell:</p>
 <p><span class="math display">\[Y_{i} = a + bX_{i} + cZ_{i} + V_{i} \tag{8}\]</span></p>
@@ -583,7 +581,7 @@ Observation <span class="math inline"><span class="math inline">\(i\)</span></sp
 <iframe src="Eriks_3d_graf/3dscatter.html" width="100%" height="550px" style="border:none;">
 </iframe>
 <div class="fig-caption">
-<p>Förklaring: Diagrammet illustrerar <span class="math inline">\(\widehat{Y} = 2,89 + 0,28X - 0,54Z\)</span>. Klicka och dra i diagrammet för att vrida på det.</p>
+<p>Beskrivning: Diagrammet illustrerar <span class="math inline">\(\widehat{Y} = 2,89 + 0,28X - 0,54Z\)</span>. Klicka och dra i diagrammet för att vrida på det.</p>
 </div>
 </div>
 <div id="vad-spelar-allt-det-här-för-roll-1" class="section level4" number="35.0.2.7">
