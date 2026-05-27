@@ -163,7 +163,7 @@ Bokstaven <span class="math inline">\(z\)</span> representerar ett värde som vi
 <h4>
 <span class="header-section-number">45.0.2.3</span> Exempel med kvinnor och mäns medellivslängd<a class="anchor" aria-label="anchor" href="#exempel-med-kvinnor-och-m%C3%A4ns-medellivsl%C3%A4ngd"><i class="fas fa-link"></i></a>
 </h4>
-<p>I föregående <a href="k2-5-3.html">avsnitt 5.1</a> beräknade vi sannolikheten att två estimerade medelvärden kom från samma population, genom att räkna på differensen mellan genomsnittlig livslängd för män respektive kvinnor.</p>
+<p>I föregående <a href="k2-5-3.html">avsnitt 5.3</a> beräknade vi sannolikheten att två estimerade medelvärden kom från samma population, genom att räkna på differensen mellan genomsnittlig livslängd för män respektive kvinnor.</p>
 <p>Konfidensintervallet för differensen mellan de estimerade medelvärdena för dessa två populationer kan vi estimera med följande ekvation:</p>
 <p><span class="math display">\[\left( {\bar{X}}_{1} - {\bar{X}}_{2} \right) \pm z*\sqrt{\frac{s_{X_{1}}^{2}}{n_{1}} + \frac{s_{X_{2}}^{2}}{n_{2}}} \tag{4}\]</span></p>
 <p>där <span class="math inline">\({\overline{X}}_{1}\)</span> och <span class="math inline">\({\bar{X}}_{2}\)</span> är de två estimerade medelvärdena för män och kvinnor, <span class="math inline">\(z\)</span> är värdet från standardiserade normalfördelningens kumulativa fördelningsfunktion <span class="math inline">\(F\)</span>, <span class="math inline">\(s^{2}\)</span> är estimerad varians (standardavvikelse i kvadrat) och <span class="math inline">\(n\)</span> är antal observationer i respektive urval. Vi får nu:
@@ -171,7 +171,7 @@ Bokstaven <span class="math inline">\(z\)</span> representerar ett värde som vi
 <p><span class="math display">\[s_{\text{män}}^{2} = 1{,}663 \quad s_{\text{kvinnor}}^{2} = 1{,}032\]</span></p>
 <p><span class="math display">\[n_{\text{män}} = 290 \quad n_{\text{kvinnor}} = 290\]</span></p>
 <p>Vi väljer konfidensgrad <span class="math inline">\(95\ \%\)</span>, vilket ger <span class="math inline">\(z = 1,96\)</span>. Konfidensintervallets nedre och övre gräns blir:</p>
-<p><span class="math display">\[\begin{matrix} \text{Konfidensintervallets nedre gräns:} &amp; \ (80,38 - 83,95) + 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,76 \\ \text{Konfidensintervallets }\text{övre }\text{gräns:} &amp; \ (80,38 - 83,95) - 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,38 \end{matrix} \tag{6}\]</span></p>
+<p><span class="math display">\[\begin{matrix} \text{Konfidensintervallets övre gräns:} &amp; \ (80,38 - 83,95) + 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,76 \\ \text{Konfidensintervallets nedre gräns:} &amp; \ (80,38 - 83,95) - 1,96\sqrt{\frac{1,032}{290} + \frac{1,663}{290}} \approx 3,38 \end{matrix} \tag{6}\]</span></p>
 <p>Estimatet indikerar att vid upprepade urval (stickprov) från samma population kommer differensen mellan de två populationerna i <span class="math inline">\(95\ \%\)</span> av fallen vara <span class="math inline">\(3,38 &lt; \left( \mu_{\text{kvinnor}\ } - \mu_{\text{män}\ } \right) &lt; 3,76\)</span>. Detta indikerar alltså att kvinnor i genomsnitt lever mellan 3,38 och 3,76 år längre än män.</p>
 <p>Detta gäller endast om de upprepade urvalen verkligen kommer från samma population. Om vi till exempel upprepade gånger under en tioårsperiod mäter medellivslängden för män och kvinnor så kommer befolkningen (populationen) och deras livslängd också att förändras.</p>
 </div>
