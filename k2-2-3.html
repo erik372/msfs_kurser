@@ -143,7 +143,6 @@
 <p>Det spelar ingen roll i vilken ordning vi skriver variablerna i parentesen: <span class="math inline">\(\text{cov}(x,y) = \text{cov}(y,x)\)</span>. Om vi tar kovariansen för <span class="math inline">\(x\)</span> och samma variabel <span class="math inline">\(x\)</span>, får vi variansen av <span class="math inline">\(x\)</span>:</p>
 <p><span class="math display">\[\text{cov}(x,x) = \left( \frac{1}{n} \right)\sum_{i}^{n}{(x_{i} - \overline{x})(x_{i} - \overline{x})} = \left( \frac{1}{n} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} = \text{var}(x) \tag{2}\]</span></p>
 <p>I föregående avsnitt använde vi Bessels korrigering <span class="math inline">\(\left( \frac{1}{n - 1} \right)\)</span> för att undvika att underskatta spridningen i populationen alltför mycket. Även här kan vi av samma skäl använda korrigeringen. Detta ger oss det som kallas för <em>urvalskovarians</em> (engelska <em>sample covariance</em>):</p>
-<p><strong>Urvalskovarians:</strong></p>
 <p><span class="math display">\[\text{cov}(x,y) = \left( \frac{1}{n - 1} \right)\sum_{i}^{}{(x_{i} - \overline{x})(y_{i} - \overline{y})} \tag{3}\]</span></p>
 </div>
 <div id="räkneexempel" class="section level4" number="27.0.2.2">
@@ -154,8 +153,9 @@
 <p>I diagrammet är varje observation representerad av en punkt. Punkten längst till vänster är observation 1: <span class="math inline">\((x,y) = (3,3)\)</span>. Punkten längst till höger är observation 4: <span class="math inline">\((x,y) = (4,7)\)</span>. Rad 1 i tabellen består av första värdet för <span class="math inline">\(x\)</span> respektive <span class="math inline">\(y\)</span> och representerar värden som på något sätt hänger ihop.</p>
 <p>Om vi arbetar med observerade data, insamlad information, representerar varje observation en observationsenhet, till exempel uppgifter om en person eller kanske ett land. Våra fyra observationer skulle alltså kunna representera fyra personer, fyra länder eller något annat.</p>
 <p><strong>Figur 1. Fyra observationer för att uppskatta kovarians</strong></p>
-<div class="inline-figure"><img src="img/k2-2-3-image1.png"></div>
-<div class="inline-table"><table class="table table-bordered" style="width:42%;">
+<div style="display:flex; gap:2em; align-items:flex-start;">
+<div style="flex:0 0 auto;">
+<div class="inline-table"><table class="table table-bordered" style="width:auto;">
 <colgroup>
 <col style="width: 17%">
 <col style="width: 12%">
@@ -219,6 +219,11 @@ Observation i
 </tr>
 </tbody>
 </table></div>
+</div>
+<div style="flex:1;">
+<div class="inline-figure"><img src="img/k2-2-3-image1.png" style="width:100%;"></div>
+</div>
+</div>
 <p>I tabell 1 har vi beräknat de delar vi behöver för att skatta kovariansen mellan <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> (ekvation 3):</p>
 <p><span class="math display">\[\text{cov}(x,y) = \left( \frac{1}{n - 1} \right)\sum_{i}^{}{\left( x_{i} - \overline{x} \right)\left( y_{i} - \overline{y} \right)} = \left( \frac{1}{3} \right) \times 5 = \frac{5}{3} \tag{4}\]</span></p>
 <p>Vi finner att <span class="math inline">\(\text{cov}(x,y) = \frac{5}{3}\)</span>. Detta värde är över 0 och innebär en positiv samvariation. Kovarians är användbart för att få en uppskattning om samvariationen mellan två variabler är positiv eller negativ, men det är svårt att säga så mycket mer än så.</p>
