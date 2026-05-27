@@ -130,8 +130,7 @@
 <p>I detta avsnitt ska vi använda linjär algebra för att beskriva ett nätverk av företag i olika branscher som handlar med varandra. För detta kan vi använda det som kallas för <a href="https://en.wikipedia.org/wiki/Input%E2%80%93output_model"><em>input-output-</em>analys</a> (IO).</p>
 <p>IO-analys utgår från en beskrivning av in- och utflödet (input och output) av varor och tjänster mellan olika branscher. Samma matematiska metoder kan användas för att beskriva och resonera om andra typer av nätverk, som till exempel ett nätverk av vänner.</p>
 <p>Vi kan även lägga till annan information till våra matriser och beräkna andra mekanismer. Input-output-analys används bland annat för att beskriva hur en produktionskedja påverkar och påverkas av andra delar av ekonomin.</p>
-<p>Till exempel hur förändringar för företagen i en del av ekonomin kan påverka mängden jobb i andra branscher. Eller vilken klimatpåverkan som företagen i en bransch har indirekt genom deras handel med andra företag och branscher.</p>
-<p>Dessa metoder har en lång historia men började framför allt spridas inom samhällsvetenskap under 1920-talet, tack vare bland andra nationalekonomen <a href="https://en.wikipedia.org/wiki/Wassily_Leontief">Wassily Leontief</a>.</p>
+<p>Till exempel hur förändringar för företagen i en del av ekonomin kan påverka mängden jobb i andra branscher. Eller vilken klimatpåverkan som företagen i en bransch har indirekt genom deras handel med andra företag och branscher. Dessa metoder har en lång historia men började framför allt spridas inom samhällsvetenskap under 1920-talet, tack vare bland andra nationalekonomen <a href="https://en.wikipedia.org/wiki/Wassily_Leontief">Wassily Leontief</a>.</p>
 <div id="ett-exempel-med-siffror" class="section level4" number="20.0.2.1">
 <h4>
 <span class="header-section-number">20.0.2.1</span> Ett exempel med siffror<a class="anchor" aria-label="anchor" href="#ett-exempel-med-siffror"><i class="fas fa-link"></i></a>
@@ -238,16 +237,13 @@ Summa
 </h4>
 <p>För att göra denna beräkning med matriser beräknar vi först den multiplikativa inversen av varje element i S, det vill säga placerar värdena som nämnare i varsitt bråk med täljaren 1. Bransch A får <span class="math inline">\(\frac{1}{6}\)</span> och bransch B <span class="math inline">\(\frac{1}{7}\)</span>. Dessa värden samlar vi i en kolumnmatris <span class="math inline">\(S_{m}\)</span> och placerar i en diagonalmatris, vilket vi kan beskriva som <span class="math inline">\(\operatorname{diag}(S_{m})\)</span>:</p>
 <p><span class="math display">\[\operatorname{diag}\left( S_{m} \right) = \begin{bmatrix} \frac{1}{6} &amp; 0 \\ 0 &amp; \frac{1}{7} \end{bmatrix} \tag{3}\]</span></p>
-<p>För att beräkna A matrismultiplicerar vi nu Z med <span class="math inline">\(\operatorname{diag}\left( S_{m} \right)\)</span>:</p>
-<p><span class="math display">\[\begin{align}
+<p>För att beräkna A matrismultiplicerar vi nu Z med <span class="math inline">\(\operatorname{diag}\left( S_{m} \right)\)</span>: <span class="math display">\[\begin{align}
 A &amp;= Z * \operatorname{diag}\left( S_{m} \right) \tag{4}\\
 &amp;= \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}\begin{bmatrix} \frac{1}{6} &amp; 0 \\ 0 &amp; \frac{1}{7} \end{bmatrix} \\
 &amp;= \begin{bmatrix} \frac{2}{6} &amp; \frac{1}{7} \\ \frac{1}{6} &amp; \frac{3}{7} \end{bmatrix}
-\end{align}\]</span></p>
-<p>För varje bransch <em>j</em> kan vi definiera totalproduktion <span class="math inline">\(y_{j}\)</span> som summan av insatsproduktion till alla branscher plus produktion till slutkonsumtion, vilket i detta fall blir:</p>
+\end{align}\]</span> För varje bransch <em>j</em> kan vi definiera totalproduktion <span class="math inline">\(y_{j}\)</span> som summan av insatsproduktion till alla branscher plus produktion till slutkonsumtion, vilket i detta fall blir:</p>
 <p><span class="math display">\[y_{j} = a_{j1}y_{1} + a_{j2}y_{2} + c_{j} \tag{5}\]</span></p>
-<p>där <span class="math inline">\(a\)</span> är vikterna vi definierade i ekvation 2, <span class="math inline">\(y_{1}\)</span> är totalproduktionen från bransch 1 och <span class="math inline">\(y_{2}\)</span> är totalproduktion från bransch 2, eller bransch A och B som vi kallade dem.</p>
-<p>Vi vet inte värdena för <span class="math inline">\(y_{j}\)</span> än men vi kan beräkna det med hjälp av matriserna. Vi samlar elementen av totalproduktion i kolumnmatris <span class="math inline">\(Y\)</span> och kan nu beskriva <span class="math inline">\(Y\)</span> som:</p>
+<p>där <span class="math inline">\(a\)</span> är vikterna vi definierade i ekvation 2, <span class="math inline">\(y_{1}\)</span> är totalproduktionen från bransch 1 och <span class="math inline">\(y_{2}\)</span> är totalproduktion från bransch 2, eller bransch A och B som vi kallade dem. Vi vet inte värdena för <span class="math inline">\(y_{j}\)</span> än men vi kan beräkna det med hjälp av matriserna. Vi samlar elementen av totalproduktion i kolumnmatris <span class="math inline">\(Y\)</span> och kan nu beskriva <span class="math inline">\(Y\)</span> som:</p>
 <p><span class="math display">\[Y = AY + C \tag{6}\]</span></p>
 <p><span class="math display">\[\begin{align}
 Y - AY &amp;= C \\

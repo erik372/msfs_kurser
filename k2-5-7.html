@@ -126,16 +126,14 @@
 </h3>
 <p>Vi började denna kurs med att studera orsakssamband (kapitel 1), där vi gick igenom kontrafaktisk analys, behandling och kontroll samt experiment och observationsstudier. I kapitel 2 och 3 gick vi igenom hur vi kan mäta och jämföra samvariation, introducerade kovarians och korrelation samt regressionsanalys med minstakvadratmetoden.</p>
 <p>I kapitel 4 utökade vi regressionsanalysen till flera variabler för att kunna konstanthålla andra faktorer, använda dummyvariabler och interaktion, samt utföra regressionsanalys med matriser, vilket gav oss en generalisering av minstakvadratmetoden för valfritt antal variabler och observationer. Vi har gått igenom hur regressionsanalys är nära förknippat med analys av orsakssamband.</p>
-<p>I kapitel 5 har vi introducerade analys under osäkerhet och hur vi kan hantera detta genom att arbeta med sannolikhetsfördelningar, statistiska test, punktestimat samt skatta konfidensintervall. Vi har även gått igenom hur vi kan kombinera regressionsanalys med sannolikhet.</p>
-<p>I detta sista avsnitt ska vi nu reflektera över vad som egentligen är poängen med allt detta?</p>
+<p>I kapitel 5 har vi introducerade analys under osäkerhet och hur vi kan hantera detta genom att arbeta med sannolikhetsfördelningar, statistiska test, punktestimat samt skatta konfidensintervall. Vi har även gått igenom hur vi kan kombinera regressionsanalys med sannolikhet. I detta sista avsnitt ska vi nu reflektera över vad som egentligen är poängen med allt detta?</p>
 </div>
 <div id="från-mönster-till-kausalitet" class="section level3" number="48.0.3">
 <h3>
 <span class="header-section-number">48.0.3</span> Från mönster till kausalitet<a class="anchor" aria-label="anchor" href="#fr%C3%A5n-m%C3%B6nster-till-kausalitet"><i class="fas fa-link"></i></a>
 </h3>
 <p>I denna kurs har vi utgått från att vi ska använda regressionsanalys för att förstå orsakssamband. Men som vi gått igenom flera gånger är själva orsakssambandet något vi lägger till som en tolkning.</p>
-<p>Regressionsanalysen är i grund och botten en metod för att spåra mönster i information (data). Vi berörde detta i <a href="k2-2-3.html">avsnitt 2.3</a>, där vi även kort gick igenom andra metoder för att studera samvariation.</p>
-<p>Men kombinerat med rätt forskningsdesign, med kontroll och behandling, är dock regressionsanalys ett kraftfullt verktyg för att studera orsak och verkan.</p>
+<p>Regressionsanalysen är i grund och botten en metod för att spåra mönster i information (data). Vi berörde detta i <a href="k2-2-3.html">avsnitt 2.3</a>, där vi även kort gick igenom andra metoder för att studera samvariation. Men kombinerat med rätt forskningsdesign, med kontroll och behandling, är dock regressionsanalys ett kraftfullt verktyg för att studera orsak och verkan.</p>
 <div id="linjära-associationer" class="section level4" number="48.0.3.1">
 <h4>
 <span class="header-section-number">48.0.3.1</span> Linjära associationer<a class="anchor" aria-label="anchor" href="#linj%C3%A4ra-associationer"><i class="fas fa-link"></i></a>
@@ -154,16 +152,14 @@
 <span class="header-section-number">48.0.3.2</span> BNP och logaritmerad BNP<a class="anchor" aria-label="anchor" href="#bnp-och-logaritmerad-bnp"><i class="fas fa-link"></i></a>
 </h4>
 <p>Även om modellen BLIR ickelinjär i originalskala, kan vi ofta estimera den med minstakvadratmetoden genom att transformera variablerna först.</p>
-<p>Ett sätt att illustrera detta är att jämföra BNP för Sverige var tionde år under perioden 1800–2000, se tabell 1 med årtal, BNP och logaritmerad BNP. I figur 1 illustreras den linjära trenden över tid för BNP respektive <span class="math inline">\(\ln(BNP)\)</span> i varsitt diagram.</p>
-<p>I det vänstra diagrammet är trenden skattad utifrån följande regressionsmodell:</p>
+<p>Ett sätt att illustrera detta är att jämföra BNP för Sverige var tionde år under perioden 1800–2000, se tabell 1 med årtal, BNP och logaritmerad BNP. I figur 1 illustreras den linjära trenden över tid för BNP respektive <span class="math inline">\(\ln(BNP)\)</span> i varsitt diagram. I det vänstra diagrammet är trenden skattad utifrån följande regressionsmodell:</p>
 <p><span class="math display">\[Y_{t} = a + b\text{ÅR}_{t} + V_{t} \tag{2}\]</span></p>
 <p>där <span class="math inline">\(Y_{t}\)</span> är BNP år <span class="math inline">\(t,\text{ÅR}_{t}\)</span> är en variabel för årtalen <span class="math inline">\(1800,1810,\ldots,1990\)</span>, 2000. Bokstäverna <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är koefficienterna och <span class="math inline">\(V_{t}\)</span> är feltermen. I det högra diagrammet har vi estimerat regressionsmodellen:</p>
 <p><span class="math display">\[\ln Y_{t} = c + d\text{ÅR}_{t} + U_{t} \tag{3}\]</span></p>
 <p>där <span class="math inline">\(\ln Y_{t}\)</span> är logaritmerad BNP år <span class="math inline">\(t,c\)</span> och <span class="math inline">\(d\)</span> är koefficienterna och <span class="math inline">\(U_{t}\)</span> är feltermen.
 En linjär modell passar relativt dåligt när vi använder nominell BNP i kronor, vilket vi kan se i det vänstra diagrammet. Datapunkterna i diagrammet är placerade ungefär i formen av ett liggande <span class="math inline">\(L\)</span>. Utvecklingen är exponentiell och inte linjär.</p>
 <p>Regressionslinjen fångar visserligen den positiva utvecklingen men ger inte en representativ bild av den långsiktiga trenden i BNP. Under åren 1800—1850, till vänster i diagrammet, är regressionslinjen under 0.</p>
-<p>Detta innebär att regressionsmodellen predikterar att BNP var negativ alla år före 1850. Eftersom BNP är ett mått på allting som produceras, köps och säljs, i ett samhälle så är detta inte möjligt.</p>
-<p>Den linjära modellen fångar dock den långsiktiga trenden i logaritmerad BNP relativt väl, vilket syns i det högra diagrammet där punkterna följer regressionslinjen för alla åren 1800–2000.</p>
+<p>Detta innebär att regressionsmodellen predikterar att BNP var negativ alla år före 1850. Eftersom BNP är ett mått på allting som produceras, köps och säljs, i ett samhälle så är detta inte möjligt. Den linjära modellen fångar dock den långsiktiga trenden i logaritmerad BNP relativt väl, vilket syns i det högra diagrammet där punkterna följer regressionslinjen för alla åren 1800–2000.</p>
 <p><strong>Tabell 1: BNP och logarimterad BNP</strong></p>
 <div class="inline-table"><table class="table table-bordered" style="width:89%;">
 <colgroup>
@@ -481,8 +477,7 @@ En linjär modell passar relativt dåligt när vi använder nominell BNP i krono
 <p><span class="math display">\[y = a + bx + v \tag{6}\]</span></p>
 <p>Nu är linjerna horisontella, vilket innebär att lutningskoefficienterna är lika med 0 i båda fallen. När <span class="math inline">\(x\)</span> ökar är detta inte associerat med någon förändring i variabel <span class="math inline">\(y\)</span>.</p>
 <p>Men när vi tittar på diagrammen i figuren kan vi tydligt se att prickarna i de båda diagrammen samvarierar i olika mönster. I det vänstra diagrammet är relationen mellan variablerna tydligt positiv, men endast om vi studerar observationerna som två grupper.</p>
-<p>I det högra diagrammet syns en ickelinjär samvariation när vi tittar på alla observationer. Tittar vi enbart på den vänstra halvan av diagrammet syns en positiv samvariation, medan punkterna i den högra halvan av diagrammet har en negativ samvariation.</p>
-<p>Nu är data påhittade men om dessa punkter representerade någon typ av verklig information skulle det till exempel kunna vara en indikation på ett kausalt samband – som vår linjära regressionsmodell alltså missar.</p>
+<p>I det högra diagrammet syns en ickelinjär samvariation när vi tittar på alla observationer. Tittar vi enbart på den vänstra halvan av diagrammet syns en positiv samvariation, medan punkterna i den högra halvan av diagrammet har en negativ samvariation. Nu är data påhittade men om dessa punkter representerade någon typ av verklig information skulle det till exempel kunna vara en indikation på ett kausalt samband – som vår linjära regressionsmodell alltså missar.</p>
 <p>Detta innebär inte att regressionsanalys är dåligt. Men vi måste vara noga med hur vi formulerar våra regressionsmodeller. Vi måste inspektera data både genom att beräkna resultat och jämföra dom i diagram och tabeller. Om associationen mellan variabler inte är linjär kan vi behöva transformera variablerna (till exempel ta naturliga logaritmen) eller ändra i vår regressionsmodell. Vi kan till exempel behöva lägga till kvadratiska termer i vår regressionsmodell eller använda andra metoder, vilket inte ryms att gå igenom här.</p>
 <p><strong>Figur 2: Två exempel på mönster som inte fångas av vår regressionsmodell</strong></p>
 <div class="float">
@@ -497,8 +492,7 @@ En linjär modell passar relativt dåligt när vi använder nominell BNP i krono
 <span class="header-section-number">48.0.4.2</span> Linjära regressioner är ändå väldigt användbara<a class="anchor" aria-label="anchor" href="#linj%C3%A4ra-regressioner-%C3%A4r-%C3%A4nd%C3%A5-v%C3%A4ldigt-anv%C3%A4ndbara"><i class="fas fa-link"></i></a>
 </h4>
 <p>Utifrån ovanstående beskrivning kanske vissa får känslan att det är meningslöst med linjära regressioner. Men ickelinjära regressionsmodeller är inte heller en universallösning.</p>
-<p>På samma sätt som vi riskerar att missa viktiga delar när vi använder linjära regressionsmodeller riskerar vi att missa viktiga slutsatser om vi enbart använder ickelinjära regressionsmodeller.</p>
-<p>Linjära regressioner är mycket användbara – till rätt typ av problem. Många gånger är vi intresserade av samvariationen inom ett avgränsat område, där just den linjära samvariationen är det intressanta.</p>
+<p>På samma sätt som vi riskerar att missa viktiga delar när vi använder linjära regressionsmodeller riskerar vi att missa viktiga slutsatser om vi enbart använder ickelinjära regressionsmodeller. Linjära regressioner är mycket användbara – till rätt typ av problem. Många gånger är vi intresserade av samvariationen inom ett avgränsat område, där just den linjära samvariationen är det intressanta.</p>
 </div>
 <div id="vi-behöver-både-diagram-och-beräkningar" class="section level4" number="48.0.4.3">
 <h4>

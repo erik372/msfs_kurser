@@ -202,20 +202,17 @@ Observation <span class="math inline"><span class="math inline">\(i\)</span></sp
 <p><span class="math display">\[\begin{bmatrix} 3 \\ 4 \\ 6 \\ 7 \end{bmatrix} = \begin{bmatrix} 1 &amp; 3 \\ 1 &amp; 2 \\ 1 &amp; 5 \\ 1 &amp; 4 \end{bmatrix}\begin{bmatrix} a \\ b \end{bmatrix} + \begin{bmatrix} v_{1} \\ v_{2} \\ v_{3} \\ v_{4} \end{bmatrix}\]</span></p>
 <p>Vår estimator för koefficienterna skriven med matriser är följande:</p>
 <p><span class="math display">\[\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y \tag{2}\]</span></p>
-<p>Vi ska nu visa alla beräkningssteg här för att du ska förstå vad som händer. I praktiken gör datorer detta automatiskt. Fokusera på att förstå strukturen. Du måste inte förstå varje enskilt räknesteg.</p>
-<p>Om vi dessa matriserna i ekvation 2 får vi estimaten av (de uppskattade) koefficienterna:</p>
+<p>Vi ska nu visa alla beräkningssteg här för att du ska förstå vad som händer. I praktiken gör datorer detta automatiskt. Fokusera på att förstå strukturen. Du måste inte förstå varje enskilt räknesteg. Om vi dessa matriserna i ekvation 2 får vi estimaten av (de uppskattade) koefficienterna:</p>
 <p><span class="math display">\[\widehat{B} = \left( X^{T}X \right)^{- 1}X^{T}Y \tag{3}\]</span></p>
 <p><span class="math display">\[\left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbrack = \left( \begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 3 &amp; 4 &amp; 6 &amp; 7 \end{bmatrix}\begin{bmatrix} 1 &amp; 3 \\ 1 &amp; 4 \\ 1 &amp; 6 \\ 1 &amp; 7 \end{bmatrix} \right)^{- 1}\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 3 &amp; 4 &amp; 6 &amp; 7 \end{bmatrix}\begin{bmatrix} 3 \\ 2 \\ 5 \\ 4 \end{bmatrix}\]</span></p>
-<p>Vi beräknar inversen <span class="math inline">\(\left( X^{T}X \right)^{- 1}\)</span> först:</p>
-<p><span class="math display">\[\begin{align}
+<p>Vi beräknar inversen <span class="math inline">\(\left( X^{T}X \right)^{- 1}\)</span> först: <span class="math display">\[\begin{align}
 \left\lbrack \begin{array}{r} \widehat{a} \\ \widehat{b} \end{array} \right\rbrack &amp;= \begin{bmatrix} 4 &amp; 20 \\ 20 &amp; 110 \end{bmatrix}^{- 1}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack \tag{4}\\
 &amp;= \frac{1}{4 \cdot 110 - ( - 20) \cdot ( - 20)}\begin{bmatrix} 110 &amp; - 20 \\ - 20 &amp; 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack\\
 &amp;= \frac{1}{440 - 400}\begin{bmatrix} 110 &amp; - 20 \\ - 20 &amp; 4 \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack\\
 &amp;= \begin{bmatrix} \frac{110}{40} &amp; \frac{- 20}{40} \\ \frac{- 20}{40} &amp; \frac{4}{40} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack\\
 &amp;= \begin{bmatrix} \frac{11}{4} &amp; - \frac{1}{2} \\ - \frac{1}{2} &amp; \frac{1}{10} \end{bmatrix}\left\lbrack \begin{array}{r} 14 \\ 75 \end{array} \right\rbrack\\
 &amp;= \left\lbrack \begin{array}{r} 1 \\ 0{,}5 \end{array} \right\rbrack
-\end{align}\]</span></p>
-<p>Vårt resultat visar att <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>, vilket är samma sak som vi kom fram till tidigare.</p>
+\end{align}\]</span> Vårt resultat visar att <span class="math inline">\(\widehat{a} = 1\)</span> och <span class="math inline">\(\widehat{b} = 0,5\)</span>, vilket är samma sak som vi kom fram till tidigare.</p>
 </div>
 <div id="exempel-nr-2" class="section level4" number="39.0.2.2">
 <h4>

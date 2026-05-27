@@ -158,8 +158,7 @@
 <p><span class="math display">\[0 = - 2\sum_{}^{}Y + \sum_{}^{}â + \sum_{}^{}\widehat{b}X_{i} + \sum_{}^{}{\widehat{c}Z_{i}} \tag{6}\]</span></p>
 <p><span class="math display">\[n\widehat{a} = nY - \widehat{b}nX_{i} - \widehat{c}nZ_{i}\]</span></p>
 <p><span class="math display">\[\widehat{a} = \overline{Y} - \widehat{b}\overline{X} - \widehat{c}\overline{Z}\]</span></p>
-<p>Koefficient <span class="math inline">\(\widehat{a}\)</span> är en funktion av observationerna i alla tre variabler i regressionsmodellen: <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>.</p>
-<p>Härifrån kan vi fortsätta lösa ut lutningskoefficienterna <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. Här nöjer vi oss dock med att enbart jämföra slutresultaten, alltså deras estimatorer, och hoppar över själva härledningarna.</p>
+<p>Koefficient <span class="math inline">\(\widehat{a}\)</span> är en funktion av observationerna i alla tre variabler i regressionsmodellen: <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\)</span> och <span class="math inline">\(Z\)</span>. Härifrån kan vi fortsätta lösa ut lutningskoefficienterna <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. Här nöjer vi oss dock med att enbart jämföra slutresultaten, alltså deras estimatorer, och hoppar över själva härledningarna.</p>
 <p>För att estimera lutningskoefficienterna med tre variabler behöver vi mer komplexa formler än tidigare. Oroa dig inte om formeln ser skrämmande ut. Poängen är att förstå principen här, nämligen att varje koefficient beräknas med hänsyn till de andra variablerna i regressionsmodellen.</p>
 <p>Ekvationerna nedan beskriver estimatorerna för lutningskoefficienterna <span class="math inline">\(\widehat{b}\)</span> och <span class="math inline">\(\widehat{c}\)</span>. För att komprimera algebran skriver vi <span class="math inline">\(\widetilde{X_{i}} = X_{i} - \overline{X}\)</span> och motsvarande för <span class="math inline">\(\widetilde{Y_{i}}\)</span> och <span class="math inline">\(\widetilde{Z_{i}}\)</span>. Detta innebär att koefficienternas estimatorer beskrivs utifrån observationernas avvikelser från respektive medelvärde:</p>
 <p><span class="math display">\[\widehat{b} = \frac{\left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{X_{i}}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{Y_{i}}\widetilde{Z_{i}}} \right)\left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)}{\left( \sum_{}^{}\widetilde{X_{i}^{2}} \right)\left( \sum_{}^{}\widetilde{Z_{i}^{2}} \right) - \left( \sum_{}^{}{\widetilde{X_{i}}\widetilde{Z_{i}}} \right)^{2}} \tag{7}\]</span></p>
@@ -468,8 +467,7 @@ Medel
 <p><span class="math display">\[\begin{align}
 \widehat{a} &amp;= 3{,}5 - \widehat{b} \cdot 5 - \widehat{c} \cdot 1{,}5 \tag{10}\\
 &amp;= 3{,}5 - 0{,}28 \cdot 5 - (-0{,}54) \cdot 1{,}5 \approx 2{,}89
-\end{align}\]</span></p>
-<p>Vi kan sammanfatta våra estimerade koefficienter genom att sätta in resultaten i vår regressionsmodell:</p>
+\end{align}\]</span> Vi kan sammanfatta våra estimerade koefficienter genom att sätta in resultaten i vår regressionsmodell:</p>
 <p><span class="math display">\[Y_{i} = \widehat{a} + \widehat{b}X_{i} + \widehat{c}Z_{i} + V_{i} = 2,89 + 0,28X_{i} - 0,54Z_{i} + V_{i} \tag{11}\]</span></p>
 <p>Nu kan vi även estimera predikterade <span class="math inline">\(\widehat{Y_{i}}\)</span> och residualen <span class="math inline">\(\widehat{V_{i}}\)</span>, vilket sammanfattas i tabell 2 med avrundade resultat.</p>
 <p><strong>Tabell 2: Predikterade värden</strong> <span class="math inline">\(\widehat{Y_{i}}\)</span></p>
@@ -590,8 +588,7 @@ Observation <span class="math inline"><span class="math inline">\(i\)</span></sp
 </h4>
 <p>När vi la till en ny variabel i vår regressionsmodell ändras samvariationen mellan de variabler vi hade i regressionsmodellen sedan innan. Poängen med denna genomgång är att visa att detta även gäller om vi skulle lägga till ytterligare variabler förutom de tre vi använt här. Och om vi tar bort en variabel från en regressionstabell så kan detta leda till att samvariationen för de kvarvarande variablerna ändras.</p>
 <p>Syftet med regressionsanalys är att studera mönster i data. Att saker samvarierar betyder inte nödvändigtvis någonting alls. Men i många situationer tolkar vi samvariation som tecken på orsakssamband. Ibland har vi goda skäl att göra så. Ibland inte.</p>
-<p>När vi studerar orsakssamband vill vi inte bara veta om “fenomen A påverkar B”. Ofta vill vi veta mer i detalj vad som händer. Orsakssamband ligger till grund för alla möjliga beslut som människor fattar. Om jag har huvudvärk – ska jag ta 1 tablett, 100 tabletter eller inga tabletter? Ska regeringen spendera 1 miljon kr eller 100 miljarder på att förbättra matematikundervisningen?</p>
-<p>För att få bättre svar på dessa frågor behöver våra analysmetoder vara noggranna och genomtänkta på samma gång.</p>
+<p>När vi studerar orsakssamband vill vi inte bara veta om “fenomen A påverkar B”. Ofta vill vi veta mer i detalj vad som händer. Orsakssamband ligger till grund för alla möjliga beslut som människor fattar. Om jag har huvudvärk – ska jag ta 1 tablett, 100 tabletter eller inga tabletter? Ska regeringen spendera 1 miljon kr eller 100 miljarder på att förbättra matematikundervisningen? För att få bättre svar på dessa frågor behöver våra analysmetoder vara noggranna och genomtänkta på samma gång.</p>
 <div class="ex-section-title">
 <p>Övningar</p>
 </div>

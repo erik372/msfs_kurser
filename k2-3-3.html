@@ -140,8 +140,7 @@
 </h4>
 <p>För att studera hur väl en regressionsmodell passar mot data kan vi även jämföra medelkvadratsumman. Medelkvadratsumman för residualerna (engelska <em>mean squared residuals</em>, MSR) beräknas:</p>
 <p><span class="math display">\[MSR = \frac{SSR}{n - p} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p} \tag{5}\]</span></p>
-<p>Nämnaren <span class="math inline">\(n - p\)</span> visar antal frihetsgrader, där <span class="math inline">\(n\)</span> är antal observationer och <span class="math inline">\(p\)</span> är antal estimerade koefficienter i regressionsmodellen. Frihetsgrader anger hur många "fria" värden vi har kvar efter att ha estimerat koefficienterna: <span class="math inline">\(n\)</span> = antal observationer (här 4). <span class="math inline">\(p\)</span> = antal estimerade koefficienter (här 2: <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>). <span class="math inline">\(n - p\)</span> = frihetsgrader <span class="math inline">\((4\ - \ 2\ = \ 2)\)</span>. Med 4 observationer och 2 koefficienter har vi "använt upp" 2 frihetsgrader för att estimera koefficienterna. Vi har 2 frihetsgrader kvar för att mäta variation kring regressionslinjen.</p>
-<p>Förenklat kan ett lågt MSR innebära att regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> hamnar relativt nära observationerna <span class="math inline">\(Y\)</span>.</p>
+<p>Nämnaren <span class="math inline">\(n - p\)</span> visar antal frihetsgrader, där <span class="math inline">\(n\)</span> är antal observationer och <span class="math inline">\(p\)</span> är antal estimerade koefficienter i regressionsmodellen. Frihetsgrader anger hur många "fria" värden vi har kvar efter att ha estimerat koefficienterna: <span class="math inline">\(n\)</span> = antal observationer (här 4). <span class="math inline">\(p\)</span> = antal estimerade koefficienter (här 2: <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span>). <span class="math inline">\(n - p\)</span> = frihetsgrader <span class="math inline">\((4\ - \ 2\ = \ 2)\)</span>. Med 4 observationer och 2 koefficienter har vi "använt upp" 2 frihetsgrader för att estimera koefficienterna. Vi har 2 frihetsgrader kvar för att mäta variation kring regressionslinjen. Förenklat kan ett lågt MSR innebära att regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> hamnar relativt nära observationerna <span class="math inline">\(Y\)</span>.</p>
 </div>
 <div id="medelkvadratsumman-av-den-förklarade-variationen" class="section level4" number="33.0.2.2">
 <h4>
@@ -156,9 +155,7 @@
 <span class="header-section-number">33.0.2.3</span> Låt oss jämföra två regressionsmodeller<a class="anchor" aria-label="anchor" href="#l%C3%A5t-oss-j%C3%A4mf%C3%B6ra-tv%C3%A5-regressionsmodeller"><i class="fas fa-link"></i></a>
 </h4>
 <p>I tidigare avsnitt har vi använt två olika samlingar med observationer för att utifrån minstakvadratmetoden estimera de två regressionsmodellerna från <a href="k2-2-4.html">avsnitt 2.4</a> och <a href="k2-3-2.html">avsnitt 3.2</a>:</p>
-<p>Modell 1: <span class="math inline">\(Y = a + bX + V\)</span> (7)</p>
-<p>Modell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span></p>
-<p>Tabell 2 och 3 återger observationerna vi använde för att estimera respektive tabell och några beräkningar vi nu ska använda i vår jämförelse.</p>
+<p>Modell 1: <span class="math inline">\(Y = a + bX + V\)</span> (7) Modell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span> Tabell 2 och 3 återger observationerna vi använde för att estimera respektive tabell och några beräkningar vi nu ska använda i vår jämförelse.</p>
 <p><strong>Tabell 2: Observationer och beräkningar för modell 1</strong></p>
 <div class="inline-table"><table class="table table-bordered" style="width:96%;">
 <colgroup>
@@ -503,8 +500,7 @@ Summa
 <p><span class="math display">\[MSR_{modell\ 1} = \frac{\sum_{i}^{n}\left( Y_{i} - \widehat{Y_{i}} \right)^{2}}{n - p} = \frac{2,5}{2} = 1,25 \tag{8}\]</span></p>
 <p>Låt oss beräkna MSR även för regressionsmodell 2: <span class="math inline">\(Z = \alpha + \beta K + \epsilon\)</span>. Tabell 3 upprepar variablernas värden och sammanfattar några beräkningar. Detta ger följande MSR:</p>
 <p><span class="math display">\[MSR_{modell\ 2} = \frac{5}{2} = 2,5 \tag{9}\]</span></p>
-<p>Eftersom <span class="math inline">\(MSR_{modell\ 2} &gt; MSR_{modell\ 1}\)</span> indikerar på att den första regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> ligger närmare observerade <span class="math inline">\(Y\)</span>, jämfört med hur väl den andra regressionsmodellen lyckas prediktera den förklarade variabeln <span class="math inline">\(Z\)</span> i den modellen.</p>
-<p>MSR beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.</p>
+<p>Eftersom <span class="math inline">\(MSR_{modell\ 2} &gt; MSR_{modell\ 1}\)</span> indikerar på att den första regressionsmodellens predikterade <span class="math inline">\(\widehat{Y}\)</span> ligger närmare observerade <span class="math inline">\(Y\)</span>, jämfört med hur väl den andra regressionsmodellen lyckas prediktera den förklarade variabeln <span class="math inline">\(Z\)</span> i den modellen. MSR beräknas med hjälp av observationerna vi använder och resultatet kan därför ändras om vi lägger till eller drar ifrån observationer, alternativt om vi specificerar våra regressionsmodeller på något annat sätt.</p>
 </div>
 </div>
 <div id="vi-beräknar-r2-för-båda-modellerna" class="section level3" number="33.0.3">

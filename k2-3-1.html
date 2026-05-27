@@ -127,8 +127,7 @@
 <p>I föregående avsnitt lärde vi oss hur minstakvadratmetoden ger oss en specifik regressionslinje. Men varför just denna linje? Kunde vi inte bara ha valt en annan? I det här avsnittet ska vi visa varför regressionslinjen är unik och bättre än alla andra möjliga raka linjer.</p>
 <p>Vi har regressionsmodellen:</p>
 <p><span class="math display">\[Y = a + bX + V \tag{1}\]</span></p>
-<p>där <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är variabler, <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är koefficienter vi vill estimera med minstakvadratmetoden och <span class="math inline">\(V\)</span> är feltermen. Med hjälp av minstakvadratmetoden kan vi hitta den regressionslinje som minimerar summan av det vertikala avståndet mellan regressionslinjen och observationerna.</p>
-<p>Alla andra raka linjer resulterar i ett större summerat värde för det kvadrerade avståndet mellan dessa linjer och punkterna.</p>
+<p>där <span class="math inline">\(Y\)</span> och <span class="math inline">\(X\)</span> är variabler, <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är koefficienter vi vill estimera med minstakvadratmetoden och <span class="math inline">\(V\)</span> är feltermen. Med hjälp av minstakvadratmetoden kan vi hitta den regressionslinje som minimerar summan av det vertikala avståndet mellan regressionslinjen och observationerna. Alla andra raka linjer resulterar i ett större summerat värde för det kvadrerade avståndet mellan dessa linjer och punkterna.</p>
 <div id="två-exempel" class="section level4" number="31.0.2.1">
 <h4>
 <span class="header-section-number">31.0.2.1</span> Två exempel<a class="anchor" aria-label="anchor" href="#tv%C3%A5-exempel"><i class="fas fa-link"></i></a>
@@ -149,8 +148,7 @@
 <p><span class="math display">\[\widehat{Y_{2}} = \frac{9}{4} + \frac{1}{4} \cdot 4 = \frac{13}{4} \tag{5}\]</span></p>
 <p>För observation 3 har vi <span class="math inline">\(X = 6\)</span> vilket ger:</p>
 <p><span class="math display">\[\widehat{Y_{3}} = \frac{9}{4} + \frac{1}{4} \cdot 6 = \frac{15}{4} \tag{6}\]</span></p>
-<p>För observation 2 och 3 har vi att <span class="math inline">\(\left( Y_{2} = 2 \right)\)</span> och <span class="math inline">\(\left( Y_{3} = 5 \right)\)</span>:</p>
-<p><span class="math display">\[\begin{align}
+<p>För observation 2 och 3 har vi att <span class="math inline">\(\left( Y_{2} = 2 \right)\)</span> och <span class="math inline">\(\left( Y_{3} = 5 \right)\)</span>: <span class="math display">\[\begin{align}
 \sum_{i}^{}{\widehat{V}}_{i}^{2} &amp;= \sum_{i}^{}\left( Y_{i} - \widehat{Y_{i}} \right)^{2} \tag{7}\\
 &amp;= \left( Y_{1} - \widehat{Y}_{1} \right)^{2} + \left( Y_{2} - \widehat{Y}_{2} \right)^{2} + \left( Y_{3} - \widehat{Y}_{3} \right)^{2} + \left( Y_{4} - \widehat{Y}_{4} \right)^{2} \\
 &amp;= 0 + \left( 2 - \frac{13}{4} \right)^{2} + \left( 5 - \frac{15}{4} \right)^{2} + 0 \\

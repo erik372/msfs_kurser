@@ -170,8 +170,7 @@
 <p>När vi estimerar medelvärdet med urvalsdata (<span class="math inline">\(\overline{x}\)</span>) avviker ofta detta från populationens medelvärde (<span class="math inline">\(\mu_{x}\)</span>). Denna avvikelse tenderar att leda till att vår uppskattning av populationens varians blir för liten.</p>
 <p>För att justera för detta när vi estimerar varians (ekvation 2) dividera med <span class="math inline">\(n - 1\)</span> i stället för <span class="math inline">\(n\)</span>. Detta kallas för <em>korrigerad varians</em> eller <em>urvalsvarians</em> (engelska <em>sample variance</em>):</p>
 <p><span class="math display">\[var(x) = \left( \frac{1}{n - 1} \right)\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2} \tag{5}\]</span></p>
-<p>Division med <span class="math inline">\(n - 1\)</span> kallas för <em>Bessels korrigering</em> och medför ofta att den uppskattade variansen hamnar närmare populationens varians.</p>
-<p>Många datorprogram har färdiga kommandon för att estimera (beräkna) varians och använder då Bessels korrigering, som i ekvation 5. Även för standardavvikelse kan vi använda Bessels korrigering:</p>
+<p>Division med <span class="math inline">\(n - 1\)</span> kallas för <em>Bessels korrigering</em> och medför ofta att den uppskattade variansen hamnar närmare populationens varians. Många datorprogram har färdiga kommandon för att estimera (beräkna) varians och använder då Bessels korrigering, som i ekvation 5. Även för standardavvikelse kan vi använda Bessels korrigering:</p>
 <p><span class="math display">\[s_{x} = \left( \frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} \right)^{\frac{1}{2}} \tag{6}\]</span></p>
 </div>
 <div id="varians-och-standardavvikelse-med-konstant" class="section level4" number="26.0.2.5">
@@ -184,20 +183,17 @@
 var(ax) &amp;= \left( \frac{1}{n} \right)\sum_{i}^{}\left( {ax}_{i} - a\overline{x} \right)^{2} \tag{7}\\
 &amp;= \left( \frac{1}{n} \right)\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right)
 \end{align}\]</span></p>
-<p>Eftersom <span class="math inline">\(a\)</span> inte påverkas av summeringen kan vi flytta ut alla <span class="math inline">\(a^{2}\)</span>:</p>
-<p><span class="math display">\[\begin{align}
+<p>Eftersom <span class="math inline">\(a\)</span> inte påverkas av summeringen kan vi flytta ut alla <span class="math inline">\(a^{2}\)</span>: <span class="math display">\[\begin{align}
 var(ax) &amp;= a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i}^{2} - 2\overline{x} + {\overline{x}}^{2} \right) \tag{8}\\
 &amp;= a^{2}\left( \frac{1}{n} \right)\sum\left( x_{i} - \overline{x} \right)^{2} \\
 &amp;= a^{2}var(x)
-\end{align}\]</span></p>
-<p>För standardavvikelse får vi:</p>
+\end{align}\]</span> För standardavvikelse får vi:</p>
 <p><span class="math display">\[\begin{align}
 s_{x}(ax) &amp;= \left( \frac{1}{n}\sum_{i}^{n}\left( {ax}_{i} - a\overline{x} \right)^{2} \right)^{\frac{1}{2}} \tag{9}\\
 &amp;= \left( \frac{1}{n}\sum_{i}^{}\left( {a^{2}x}_{i}^{2} - 2a^{2}\overline{x} + a^{2}{\overline{x}}^{2} \right) \right)^{\frac{1}{2}} \\
 &amp;= \left( a^{2} \right)^{\frac{1}{2}}\left( \frac{1}{n}\sum\left( x_{i} - \overline{x} \right)^{2} \right)^{\frac{1}{2}} \\
 &amp;= \|a\|s_{x}
-\end{align}\]</span></p>
-<p>där <span class="math inline">\(\|a\|\)</span> är absolutbeloppet av konstanten <span class="math inline">\(a\)</span>.</p>
+\end{align}\]</span> där <span class="math inline">\(\|a\|\)</span> är absolutbeloppet av konstanten <span class="math inline">\(a\)</span>.</p>
 </div>
 <div id="ett-exempel-1" class="section level4" number="26.0.2.6">
 <h4>
@@ -392,8 +388,7 @@ Summa
 <p>Vi använder ekvation 5 för att skatta varians:</p>
 <p><span class="math display">\[var(x) = \frac{\sum_{i}^{}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{10}{3} \tag{10}\]</span></p>
 <p><span class="math display">\[var(y) = \frac{\sum_{i}^{}\left( y_{i} - \overline{y} \right)^{2}}{n - 1} = \frac{5}{3}\]</span></p>
-<p>Variansen för variabel <span class="math inline">\(x\)</span> är större än variansen i variabel <span class="math inline">\(y\)</span>. Detta indikerar att värdena i <span class="math inline">\(x\)</span> är mer utspridda från medelvärdet jämfört med spridningen i variabel <span class="math inline">\(y\)</span>.</p>
-<p>För att beräkna standardavvikelse för variablerna <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> tar vi positiva kvadratroten av variansen:</p>
+<p>Variansen för variabel <span class="math inline">\(x\)</span> är större än variansen i variabel <span class="math inline">\(y\)</span>. Detta indikerar att värdena i <span class="math inline">\(x\)</span> är mer utspridda från medelvärdet jämfört med spridningen i variabel <span class="math inline">\(y\)</span>. För att beräkna standardavvikelse för variablerna <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span> tar vi positiva kvadratroten av variansen:</p>
 <p><span class="math display">\[s_{x} = \sqrt{\frac{\sum_{i}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1}} = + \sqrt{\frac{10}{3}} \approx 1{,}826 \tag{11}\]</span></p>
 <p><span class="math display">\[s_{y} = + \sqrt{\frac{5}{3}} \approx 1{,}291\]</span></p>
 <div class="ex-section-title">
