@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sv">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -608,12 +608,7 @@ Observation <span class="math inline"><span class="math inline">\(i\)</span></sp
   function translateFooter() {
     var footer = document.querySelector('footer.bg-primary');
     if (!footer) return;
-    footer.querySelectorAll('p').forEach(function (p) {
-      p.innerHTML = p.innerHTML
-        .replace('was written by', 'är skriven av')
-        .replace('This book was built by the', 'Boken är byggd med')
-        .replace('R package.', 'R-paketet.');
-    });
+    footer.innerHTML = '<div class="container"><div class="row"><div class="col-12 mt-3"><p>Detta kursmaterial är skapat av Erik Hegelund. Byggd med R-paketet bookdown. Se även min gratis <a class="text-light" href="https://erik372.github.io/cheatcode/">lärobok</a>.</p></div></div></div>';
   }
 
   function translateUI() {
