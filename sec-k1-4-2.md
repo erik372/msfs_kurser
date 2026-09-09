@@ -68,7 +68,11 @@ Beskrivning: Indifferenslinjerna är fortfarande illustrationer av kombinationer
 #### Budgetlinjens relation till indifferenskurvorna
 Ju längre bort från origo (noll konsumtion och noll fritid) som budgetlinjen ligger, desto mer kan Erik konsumera. Alla kombinationer av konsumtion och fritid, *C* och *L*, innanför budgetlinjen har Erik råd med.
 
-Givet att Erik vill maximera sin nöjdhet och denna fungerar på det sätt som den beskrivs i nöjdhetsfunktionen kommer Erik att välja en kombination av konsumtion och fritid där en av indifferenslinjerna precis *tangerar* budgetlinjen. Så länge Erik har samma inkomst, samma budgetlinje, och Eriks nöjdhet kan beskrivas som den görs i nöjdhetsfunktionen, samma form på indifferenslinjerna, är detta det enda logiska resultatet. **Varför väljer han inte en punkt innanför budgetlinjen?** Vid varje punkt innanför budgetlinjen, den gråa ytan i figur 2, finns det en annan punkt längre bort från origo där Erik kan få en större mängd nytta. **Varför väljer han inte en annan punkt längs med budgetlinjen?** Vid varje punkt på budgetlinjen närmare vertikala eller horisontella axeln kommer Eriks nöjdhet i stället att definieras av en annan indifferenslinje som i sin tur är närmare origo, vilket därmed innebär mindre mängd total nytta.
+Givet att Erik vill maximera sin nöjdhet och denna fungerar på det sätt som den beskrivs i nöjdhetsfunktionen kommer Erik att välja en kombination av konsumtion och fritid där en av indifferenslinjerna precis *tangerar* budgetlinjen. Så länge Erik har samma inkomst, samma budgetlinje, och Eriks nöjdhet kan beskrivas som den görs i nöjdhetsfunktionen, samma form på indifferenslinjerna, är detta det enda logiska resultatet. 
+
+**Varför väljer han inte en punkt innanför budgetlinjen?** Vid varje punkt innanför budgetlinjen, den rosa ytan i figur 2, finns det en annan punkt längre bort från origo där Erik kan få en större mängd nytta. 
+
+**Varför väljer han inte en annan punkt längs med budgetlinjen?** Vid varje punkt på budgetlinjen närmare vertikala eller horisontella axeln kommer Eriks nöjdhet i stället att definieras av en annan indifferenslinje som i sin tur är närmare origo, vilket därmed innebär mindre mängd total nytta.
 
 ### Maximeringsproblemet
 Låt oss nu ställa upp Eriks maximeringsproblem:
