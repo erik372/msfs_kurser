@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>42 Slumpmässiga variabler och diskreta sannolikhetsfördelningar | Matematik och statistik för samhällsvetare</title>
+<meta name="author" content="Erik Hegelund">
+<meta name="description" content="42.0.1 Begrepp  Statistik: kallas den del av matematiken som handlar om att samla in och studera data (information). En samling data kallas ofta också för statistik. Slumpmässig variabel: En...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="42 Slumpmässiga variabler och diskreta sannolikhetsfördelningar | Matematik och statistik för samhällsvetare">
+<meta property="og:type" content="book">
+<meta property="og:description" content="42.0.1 Begrepp  Statistik: kallas den del av matematiken som handlar om att samla in och studera data (information). En samling data kallas ofta också för statistik. Slumpmässig variabel: En...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="42 Slumpmässiga variabler och diskreta sannolikhetsfördelningar | Matematik och statistik för samhällsvetare">
+<meta name="twitter:description" content="42.0.1 Begrepp  Statistik: kallas den del av matematiken som handlar om att samla in och studera data (information). En samling data kallas ofta också för statistik. Slumpmässig variabel: En...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Matematik och statistik för samhällsvetare</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Välkommen</a></li>
+<li class="book-part">Kurs 1 — Matematik för samhällsvetare</li>
+<li><a class="" href="hur-anv%C3%A4nder-samh%C3%A4llsvetare-matematik.html">Hur använder samhällsvetare matematik</a></li>
+<li><a class="" href="k1-1-1.html"><span class="header-section-number">1</span> Kan vi mäta lycka?</a></li>
+<li><a class="" href="k1-1-2.html"><span class="header-section-number">2</span> Hur beskriva en teori med matte?</a></li>
+<li><a class="" href="k1-1-3.html"><span class="header-section-number">3</span> Hur testa om en teori stämmer?</a></li>
+<li><a class="" href="k1-1-4.html"><span class="header-section-number">4</span> Varför räkna?</a></li>
+<li><a class="" href="exempel-fr%C3%A5n-samh%C3%A4llet.html">Exempel från samhället</a></li>
+<li><a class="" href="k1-2-1.html"><span class="header-section-number">5</span> Räkna med ränta</a></li>
+<li><a class="" href="k1-2-2.html"><span class="header-section-number">6</span> Nominella och reala priser</a></li>
+<li><a class="" href="k1-2-3.html"><span class="header-section-number">7</span> Ekonomiskt välstånd och relativa förändringar</a></li>
+<li><a class="" href="k1-2-4.html"><span class="header-section-number">8</span> Leder rikedom till lycka?</a></li>
+<li><a class="" href="k1-2-5.html"><span class="header-section-number">9</span> Banadödlighet och flyktingar</a></li>
+<li><a class="" href="beskriva-teorier-med-ekvationssystem.html">Beskriva teorier med ekvationssystem</a></li>
+<li><a class="" href="k1-3-1.html"><span class="header-section-number">10</span> Utbud, efterfrågan och kakor</a></li>
+<li><a class="" href="k1-3-2.html"><span class="header-section-number">11</span> Hur hitta den rätta?</a></li>
+<li><a class="" href="k1-3-3.html"><span class="header-section-number">12</span> En teori om arbete</a></li>
+<li><a class="" href="k1-3-4.html"><span class="header-section-number">13</span> Externa effekter</a></li>
+<li><a class="" href="k1-3-5.html"><span class="header-section-number">14</span> Rökning</a></li>
+<li><a class="" href="k1-3-6.html"><span class="header-section-number">15</span> Relationer</a></li>
+<li><a class="" href="hur-f%C3%A5-ut-det-mesta-av-livet.html">Hur få ut det mesta av livet</a></li>
+<li><a class="" href="k1-4-1.html"><span class="header-section-number">16</span> Den optimala mängden tårta</a></li>
+<li><a class="" href="k1-4-2.html"><span class="header-section-number">17</span> Hur mycket jobb är lagom?</a></li>
+<li><a class="" href="k1-4-3.html"><span class="header-section-number">18</span> Hur höga skatter vill vi ha?</a></li>
+<li><a class="" href="k1-4-4.html"><span class="header-section-number">19</span> Vinstmaximerande företag</a></li>
+<li><a class="" href="k1-4-5.html"><span class="header-section-number">20</span> Nätverksanalys</a></li>
+<li class="book-part">Kurs 2 — Statistik för samhällsvetare</li>
+<li><a class="" href="kontrafaktisk-analys.html">Kontrafaktisk analys</a></li>
+<li><a class="" href="k2-1-1.html"><span class="header-section-number">21</span> Orsak och effekt</a></li>
+<li><a class="" href="k2-1-2.html"><span class="header-section-number">22</span> Experiment och observationsstudie</a></li>
+<li><a class="" href="k2-1-3.html"><span class="header-section-number">23</span> Information och variabler</a></li>
+<li><a class="" href="k2-1-4.html"><span class="header-section-number">24</span> Population, superpopulation och urval</a></li>
+<li><a class="" href="variation-och-samvariation.html">Variation och samvariation</a></li>
+<li><a class="" href="k2-2-1.html"><span class="header-section-number">25</span> Frekvens och fördelning</a></li>
+<li><a class="" href="k2-2-2.html"><span class="header-section-number">26</span> Avvikelse, varians och standardavvikelse</a></li>
+<li><a class="" href="k2-2-3.html"><span class="header-section-number">27</span> Samvariation 1</a></li>
+<li><a class="" href="k2-2-4.html"><span class="header-section-number">28</span> Samvariation 2</a></li>
+<li><a class="" href="k2-2-5.html"><span class="header-section-number">29</span> Felterm, residual och ett räkneexempel</a></li>
+<li><a class="" href="k2-2-6.html"><span class="header-section-number">30</span> Varför ska vi räkna nu igen?</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-1.html">Minstakvadratmetoden — fördjupning 1</a></li>
+<li><a class="" href="k2-3-1.html"><span class="header-section-number">31</span> Andra linjer</a></li>
+<li><a class="" href="k2-3-2.html"><span class="header-section-number">32</span> En modell till</a></li>
+<li><a class="" href="k2-3-3.html"><span class="header-section-number">33</span> Hur väl passar modellerna mot data?</a></li>
+<li><a class="" href="k2-3-4.html"><span class="header-section-number">34</span> Härled estimatorerna</a></li>
+<li><a class="" href="minstakvadratmetoden-f%C3%B6rdjupning-2.html">Minstakvadratmetoden — fördjupning 2</a></li>
+<li><a class="" href="k2-4-1.html"><span class="header-section-number">35</span> Regressionsanalys med tre variabler</a></li>
+<li><a class="" href="k2-4-2.html"><span class="header-section-number">36</span> Faktorvariabler</a></li>
+<li><a class="" href="k2-4-3.html"><span class="header-section-number">37</span> Konstanthålla</a></li>
+<li><a class="" href="k2-4-4.html"><span class="header-section-number">38</span> Regression med matriser</a></li>
+<li><a class="" href="k2-4-5.html"><span class="header-section-number">39</span> Estimera med matriser</a></li>
+<li><a class="" href="k2-4-6.html"><span class="header-section-number">40</span> Interaktion</a></li>
+<li><a class="" href="k2-4-7.html"><span class="header-section-number">41</span> Räkna på orsak och effekt</a></li>
+<li><a class="" href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></li>
+<li><a class="active" href="k2-5-1.html"><span class="header-section-number">42</span> Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-2.html"><span class="header-section-number">43</span> Kontinuerliga sannolikhetsfördelningar</a></li>
+<li><a class="" href="k2-5-3.html"><span class="header-section-number">44</span> Statistisk analys 1</a></li>
+<li><a class="" href="k2-5-4.html"><span class="header-section-number">45</span> Statistisk analys 2</a></li>
+<li><a class="" href="k2-5-5.html"><span class="header-section-number">46</span> Regressionsanalys med sannolikhet</a></li>
+<li><a class="" href="k2-5-6.html"><span class="header-section-number">47</span> T-test för regression med flera variabler</a></li>
+<li><a class="" href="k2-5-7.html"><span class="header-section-number">48</span> Vad är egentligen regressionsanalys?</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="k2-5-1" class="section level1" number="42">
+<h1>
+<span class="header-section-number">42</span> Slumpmässiga variabler och diskreta sannolikhetsfördelningar<a class="anchor" aria-label="anchor" href="#k2-5-1"><i class="fas fa-link"></i></a>
+</h1>
+<div id="begrepp-41" class="section level3" number="42.0.1">
+<h3>
+<span class="header-section-number">42.0.1</span> Begrepp<a class="anchor" aria-label="anchor" href="#begrepp-41"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>
+<strong>Statistik:</strong> kallas den del av matematiken som handlar om att samla in och studera data (information). En samling data kallas ofta också för statistik.</li>
+<li>
+<strong>Slumpmässig variabel:</strong> En matematisk variabel som styrs av en slumpmässig process.</li>
+<li>
+<strong>Sannolikhetsfördelning:</strong> En fördelning av möjliga slumpmässiga utfall, definierad av en matematisk funktion.</li>
+<li>
+<strong>Diskret sannolikhetsfördelning:</strong> En slumpmässig variabel med en ändlig mängd möjliga utfall. Varje utfall har en sannolikhet.</li>
+<li>
+<strong>Kontinuerlig sannolikhetsfördelning:</strong> En sannolikhetsfördelning där en slumpmässig variabel kan anta en oändlig mängd värden. Varje enskilt utfall har noll sannolikhet, medan intervall av utfall har en sannolikhet över noll.</li>
+<li>
+<strong>De stora talens lag:</strong> medelvärdet av en stor samling slumpmässiga urval kommer närma sig det sanna medelvärdet.</li>
+</ul>
+</div>
+<div id="teori-41" class="section level3" number="42.0.2">
+<h3>
+<span class="header-section-number">42.0.2</span> Teori<a class="anchor" aria-label="anchor" href="#teori-41"><i class="fas fa-link"></i></a>
+</h3>
+<p>I <a href="k2-1-2.html">avsnitt 1.2</a> introducerade vi experiment och kvasiexperiment samt hur vi med hjälp av behandlings- och kontrollgrupp kan studera orsakssamband och effekter.</p>
+<div id="kopplingen-mellan-sannolikhet-och-kausalitet" class="section level4" number="42.0.2.1">
+<h4>
+<span class="header-section-number">42.0.2.1</span> Kopplingen mellan sannolikhet och kausalitet<a class="anchor" aria-label="anchor" href="#kopplingen-mellan-sannolikhet-och-kausalitet"><i class="fas fa-link"></i></a>
+</h4>
+<p>Säg att vi utformar ett experiment där vi vill studera effekterna av en medicin och har två patienter till vårt förfogande. Den ena patienten får medicinen (behandlingen) och den andra får inte någon medicin (kontroll).</p>
+<p>Eftersom vi endast jämför två personer är risken stor att studiens resultat lika gärna kan vara ett resultat av slump. När vi studerar verkligheten kan vi aldrig undvika denna osäkerhet fullständigt. Men vi kan räkna på <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet/sannolikhet-for-en-handelse#!/">sannolikheten</a> för att våra resultat är en slump och därigenom bedöma hur trovärdig vår analys är.</p>
+<p>I detta kapitel ska vi gå igenom hur vi med hjälp av sannolikhetslära och matematiska beräkningar kan arbeta med denna typ av frågor. Delar av det som beskrivs här känner du igen från <a href="https://www.matteboken.se/lektioner/matte-1/statistik-och-sannolikhet#!/">Matte 1: Statistik och sannolikhet</a>, <a href="https://www.matteboken.se/lektioner/matte-2/statistik#!/">Matte 2: Statistik</a> och <a href="https://www.matteboken.se/lektioner/matte-4/integraler-och-tillampningar/sannolikhetsfordelning#!/">Matte 4: Sannolikhetsfördelning</a>.</p>
+</div>
+<div id="slumpmässiga-variabler-och-sannolikhetsfördelningar" class="section level4" number="42.0.2.2">
+<h4>
+<span class="header-section-number">42.0.2.2</span> Slumpmässiga variabler och sannolikhetsfördelningar<a class="anchor" aria-label="anchor" href="#slumpm%C3%A4ssiga-variabler-och-sannolikhetsf%C3%B6rdelningar"><i class="fas fa-link"></i></a>
+</h4>
+<p>Tidigare har vi arbetat med variabler definierade av en matematisk funktion över en domän, till exempel funktionen <span class="math inline">\(y = x^{2}\)</span> definierad över alla reella tal. Vi har arbetat med datavariabler bestående av insamlade uppgifter, observationer. När vi gick igenom regressionsanalys i tidigare avsnitt arbetade vi med variabler som vi predikterade med hjälp av regressionsmodeller.</p>
+<p>När vi nu ska arbeta med sannolikhet och slump ska vi använda <em>slumpmässiga variabler</em>. En slumpmässig variabel är en variabel vars resultat bestäms av en slumpmässig process. Slumpmässiga variabler definieras av matematiska funktioner som beskriver sannolikheten för de värden (utfall) som variabeln kan anta.</p>
+<p>Sannolikhetsfördelning beskriver med hjälp av en matematisk funktion alla möjliga utfall för en slumpmässig variabel. Sannolikhetsfördelningar kan vara <em>diskreta</em> och <em>kontinuerliga</em>. Diskreta sannolikhetsfördelningar har ett begränsat antal möjliga utfall, som en tärning. Kontinuerliga sannolikhetsfördelningar har ett oändligt antal möjliga utfall, som alla decimaler mellan 0 och 1.</p>
+<p>Det finns oändligt många sannolikhetsfördelningar. För att hitta på en ny sannolikhetsfördelning behöver vi bara beskriva den. Vissa sannolikhetsfördelningar har fått kända namn, till exempel <a href="https://www.matteboken.se/lektioner/matte-2/statistik/normalfordelning#!/">normalfördelningen</a>. Även normalfördelningen är namnet på en oändlig mängd sannolikhetsfördelningar som alla har vissa gemensamma egenskaper.</p>
+</div>
+<div id="funktionerna-p-f-och-f" class="section level4" number="42.0.2.3">
+<h4>
+<span class="header-section-number">42.0.2.3</span> Funktionerna <span class="math inline">\(P\)</span>, <span class="math inline">\(f\)</span> och <span class="math inline">\(F\)</span><a class="anchor" aria-label="anchor" href="#funktionerna-p-f-och-f"><i class="fas fa-link"></i></a>
+</h4>
+<p>Funktionen <span class="math inline">\(P()\)</span> används ofta för att beskriva sannolikheten för ett utfall. Från och med nu ska vi använda funktionen <span class="math inline">\(f()\)</span> för att beskriva sannolikheten för ett specifikt värde i en slumpmässig variabel. De två funktionerna <span class="math inline">\(f\)</span> och <span class="math inline">\(P\)</span> beskriver så här långt samma sak: <span class="math inline">\(f(m) = P(M = m)\)</span>.</p>
+<p>För diskreta sannolikhetsfördelningar kallas sannolikhetsfunktionen <span class="math inline">\(f\)</span> för <em>probability mass function</em>, PMF. En annan central funktion är det som kallas för kumulativa fördelningsfunktionen (engelska <em>cumulative distribtuion function</em>, CDF), eller bara <em>fördelningsfunktionen</em>.</p>
+<p>Fördelningsfunktionen beskriver sannolikheten att en slumpvis variabel antar ett värde lika med eller mindre än värdet <span class="math inline">\(m\)</span>, vilket vi kan beskriva <span class="math inline">\(P(M \leq m)\)</span>. Vi kallar fördelningsfunktionen för <span class="math inline">\(F\)</span>:</p>
+<p><span class="math display">\[F(m) = P(M \leq m) \tag{1}\]</span></p>
+<p>Varför har vi tre olika funktioner för sannolikhet? Notera att funktionerna beskriver olika saker:</p>
+<ul>
+<li>
+<span class="math inline">\(P()\)</span> eller <span class="math inline">\(f()\)</span>: Sannolikheten för ett specifikt utfall, till exempel exakt 3 på tärningen.</li>
+<li>
+<span class="math inline">\(F()\)</span>: Den kumulativa sannolikheten, som 3 eller lägre på tärningen</li>
+</ul>
+</div>
+<div id="exempel-med-likformig-sannolikhetsfördelning" class="section level4" number="42.0.2.4">
+<h4>
+<span class="header-section-number">42.0.2.4</span> Exempel med likformig sannolikhetsfördelning<a class="anchor" aria-label="anchor" href="#exempel-med-likformig-sannolikhetsf%C3%B6rdelning"><i class="fas fa-link"></i></a>
+</h4>
+<p>Nu ska vi gå igenom lite matematik rörande slumpmässiga variabler och sannolikhetsfördelningar. Syftet med detta är enbart för att få en bättre förståelse för vad fenomenet innebär. Om något känns extra krångligt – prova att hoppa över detta för nu och kanske prova att läsa det senare.</p>
+<p>Säg att vi har en variabel <span class="math inline">\(X\)</span> som följer en diskret sannolikhetsfördelning som kan anta utfall <span class="math inline">\(\{ 1,2,3,4,5,6\}\)</span> med samma sannolikhet. När alla utfall har samma sannolikhet kallas det för att sannolikhetsfördelningen är likformig. Fördelningsfunktionen för en likformig diskret sannolikhetsfördelning kan generellt beskrivas som:</p>
+<p><span class="math display">\[F(x) = P(X \leq x) = \frac{x - a + 1}{b - a + 1},\,\, x = a,a + 1,\ldots,b \tag{2}\]</span></p>
+<p>där <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är lägsta respektive högsta heltalet som <span class="math inline">\(X\)</span> kan anta. I detta fall är <span class="math inline">\(a = 1\)</span> respektive <span class="math inline">\(b = 6\)</span>. Fördelningsfunktionen för vår slumpmässiga variabel <span class="math inline">\(X\)</span> är:</p>
+<p><span class="math display">\[F(x) = P(X \leq x) = \frac{x}{6},\,\, x = 1,2,3,4,5,6 \tag{3}\]</span></p>
+<p>Till exempel har vi att <span class="math inline">\(F(2) = 2\text{/}6\)</span>, vilket innebär att den kumulativa sannolikheten för att få utfall 1 eller 2 är lika med 2/6. Från och med <span class="math inline">\(x = 6\)</span> och uppåt är <span class="math inline">\(F(x) = 1\)</span>, det vill säga 100 %.</p>
+<p>Den kumulativa sannolikheten <span class="math inline">\(P(X \leq x)\)</span> måste per definition vara ett värde mellan 0 och 1, mellan 0 och 100 %. Ett annat sätt att beskriva <span class="math inline">\(P(X \leq x)\)</span> är att från 100 % sannolikhet (talet 1) subtraherar vi sannolikheten för <span class="math inline">\(P(X &gt; x)\)</span>:</p>
+<p><span class="math display">\[F(x) = P(X \leq x) = 1 - P(X &gt; x) \tag{4}\]</span></p>
+<p>För att beräkna sannolikheten <span class="math inline">\(P(X &gt; x)\)</span> kan vi därför ta <span class="math inline">\(1 - F(x)\)</span>. För variabel <span class="math inline">\(X\)</span> är sannolikheten att få 3 till 6 poäng:</p>
+<p><span class="math display">\[P(X &gt; x) = 1 - F(2) = 1 - \frac{2}{6} = \frac{4}{6} \tag{5}\]</span></p>
+<p>Figur 1 illustrerar en likformig slumpmässig sannolikhetsfördelning, där alla värden har samma sannolikhet. Övre diagrammet visar funktion <span class="math inline">\(f(x)\)</span>. Nedre diagrammet visar <span class="math inline">\(F(x)\)</span>, den kumulativa sannolikheten att få ett värde lika med eller mindre än <span class="math inline">\(x\)</span>.</p>
+<p><strong>Figur 1: Sannolikhetsfunktion och kumulativa fördelningsfunktionen</strong></p>
+<div class="inline-figure"><img src="img/k2-5-1-image1.png"></div>
+<div class="fig-caption">
+<p>Beskrivning: Övre diagrammet beskriver sannolikheten 1/6 för respektive utfall i sannolikhetsfördelningen. Nedre diagrammet beskriver den kumulativa sannolikheten att få värdet på horisontella x-axeln eller mindre. Sannolikheten att få under 1 är 0. Sannolikheten att få värdet 3 är 0,5, det vill säga 50 %. Sannolikheten att få 6 eller lägre är 100 %.</p>
+</div>
+</div>
+<div id="väntevärde-i-stället-för-medelvärde" class="section level4" number="42.0.2.5">
+<h4>
+<span class="header-section-number">42.0.2.5</span> Väntevärde i stället för medelvärde<a class="anchor" aria-label="anchor" href="#v%C3%A4ntev%C3%A4rde-i-st%C3%A4llet-f%C3%B6r-medelv%C3%A4rde"><i class="fas fa-link"></i></a>
+</h4>
+<p>För en slumpmässig variabel kan vi inte beräkna ett medelvärde på det sätt som vi kan göra för en samling diskreta värden, som en samling tal. För en tärning kan vi inte beräkna medelvärde förrän vi kastat den. Men vi kan beräkna vad vi förväntar oss, alltså det "genomsnitt" vi skulle få om vi kastade oändligt många gånger. Detta kallas för väntevärde, eller förväntat värde (engelska <em>expected value</em>).</p>
+<p>Väntevärdet för en slumpmässig variabel är summan av varje utfall multiplicerat med dess sannolikhet. Matematiskt är väntevärde en generalisering av <a href="https://www.matteboken.se/lektioner/matte-1/ovningsexempel/betygssnitt#!/">viktat medelvärde</a>. För en diskret slumpmässig variabel <span class="math inline">\(X\)</span> kan detta beskrivas som:</p>
+<p><span class="math display">\[E(X) = \sum_{i}^{n}x_{i}P\left( x_{i} \right) \tag{6}\]</span></p>
+<p>där <span class="math inline">\(E()\)</span> kallas för väntevärdesfunktionen, vilket även kan skrivas <span class="math inline">\(E\lbrack X\rbrack\)</span>, <span class="math inline">\(E(X)\)</span> eller <span class="math inline">\(EX\)</span>. I <a href="k2-2-1.html">avsnitt 2.1</a> introducerade vi populationens medelvärde <span class="math inline">\(\mu\)</span>. Detta är samma sak som väntevärdet för populationen för den slumpmässiga variabeln <span class="math inline">\(X\)</span>, det vill säga: <span class="math inline">\(E(X) = \mu_{X}\)</span>.
+Säg som exempel att vi har en slumpmässig variabel <span class="math inline">\(X\)</span> med utfallen 1, 2, 3, 4, 5 och 6, alla med sannolikheten 1/6. Väntevärdet för variabeln <span class="math inline">\(X\)</span> blir då:</p>
+<p><span class="math display">\[\begin{align}
+E(X) &amp;= x_{1}*P\left( x_{1} \right) + x_{2}*P\left( x_{2} \right) + x_{3}*P\left( x_{3} \right) + x_{4}*P\left( x_{4} \right) + x_{5}*P\left( x_{5} \right) + x_{6}*P\left( x_{6} \right) \tag{7}\\
+&amp;= 1*\frac{1}{6} + 2*\frac{1}{6} + 3*\frac{1}{6} + 4*\frac{1}{6} + 5*\frac{1}{6} + 6*\frac{1}{6} = 3{,}5
+\end{align}\]</span></p>
+</div>
+<div id="väntevärdet-av-en-konstant" class="section level4" number="42.0.2.6">
+<h4>
+<span class="header-section-number">42.0.2.6</span> Väntevärdet av en konstant<a class="anchor" aria-label="anchor" href="#v%C3%A4ntev%C3%A4rdet-av-en-konstant"><i class="fas fa-link"></i></a>
+</h4>
+<p>Väntevärdesfunktionen <span class="math inline">\(E()\)</span> är en linjär funktion. Om vi har de slumpmässiga variablerna <span class="math inline">\(X\)</span> och <span class="math inline">\(Y\)</span> så gäller följande:</p>
+<p><span class="math display">\[E(X + Y) = E(X) + E(Y) \tag{8}\]</span></p>
+<p>Säg nu att vi har en valfri konstant, <span class="math inline">\(a\)</span>. Om vi multiplicerar väntevärdet <span class="math inline">\(E(X)\)</span> med <span class="math inline">\(a\)</span> är detta samma sak som <span class="math inline">\(a\)</span> multiplicerat med respektive enskilt värde i variabeln <span class="math inline">\(X\)</span>:</p>
+<p><span class="math display">\[E(aX) = aE(X) \tag{9}\]</span></p>
+<p>Om vi adderar en konstant <span class="math inline">\(b\)</span> kan vi flytta ut även denna ur väntevärdesfunktionen:</p>
+<p><span class="math display">\[E(aX + b) = aE(X) + b \tag{10}\]</span></p>
+</div>
+<div id="varians-och-standardavvikelse-för-slumpmässiga-variabler" class="section level4" number="42.0.2.7">
+<h4>
+<span class="header-section-number">42.0.2.7</span> Varians och standardavvikelse för slumpmässiga variabler<a class="anchor" aria-label="anchor" href="#varians-och-standardavvikelse-f%C3%B6r-slumpm%C3%A4ssiga-variabler"><i class="fas fa-link"></i></a>
+</h4>
+<p>I <a href="k2-2-2.html">avsnitt 2.2</a> introducerade vi varians som ett sätt att mäta spridning. Vi gick igenom hur vi kan uppskatta variansen i en population genom att räkna på observationer i ett urval.</p>
+<p>Även för slumpmässiga variabler kan vi beskriva varians, men då på ett lite annorlunda sätt. För en slumpmässig diskret variabel <span class="math inline">\(X\)</span> kan varians definieras som:</p>
+<p><span class="math display">\[var(X) = \sum_{i}^{n}\left( x_{i} - \mu_{X} \right)^{2}P\left( x_{i} \right) \tag{11}\]</span></p>
+<p>där <span class="math inline">\(\mu_{X} = E(X)\)</span> och <span class="math inline">\(P\left( x_{i} \right)\)</span> är sannolikheten för respektive värde <span class="math inline">\(x_{i}\)</span>, där vi från ekvation 6 vet att <span class="math inline">\(E(X) = \sum_{i}^{n}x_{i}P\left( x_{i} \right)\)</span>.
+Standardavvikelse ges, liksom tidigare, av positiva kvadratroten av variansen:</p>
+<p><span class="math display">\[\sigma_{x} = s(x) = \sqrt{var(x)} \tag{12}\]</span></p>
+<p>där <span class="math inline">\(\sigma\)</span> representerar variansen i populationen.</p>
+</div>
+<div id="varians-för-en-konstant" class="section level4" number="42.0.2.8">
+<h4>
+<span class="header-section-number">42.0.2.8</span> Varians för en konstant<a class="anchor" aria-label="anchor" href="#varians-f%C3%B6r-en-konstant"><i class="fas fa-link"></i></a>
+</h4>
+<p>Om vi har <span class="math inline">\(var(aX + b)\)</span>, där <span class="math inline">\(a\)</span> och <span class="math inline">\(b\)</span> är konstanter, får vi:</p>
+<p><span class="math display">\[var(aX + b) = a^{2}\text{var}(X) \tag{13}\]</span></p>
+<p>Det vill säga en konstant <span class="math inline">\(a\)</span> som multipliceras med den slumpmässiga variabeln kan flyttas ut ur variansfunktionen <span class="math inline">\(var()\)</span> och multipliceras med sig själv. Konstant <span class="math inline">\(b\)</span> försvinner. För standardavvikelse gäller att:</p>
+<p><span class="math display">\[s(aX + b) = \|a\|s(X) \tag{14}\]</span></p>
+<p>där <span class="math inline">\(\|a\|\)</span> är absolutvärdet av <span class="math inline">\(a\)</span>. Detta innebär att om vi multiplicerar en slumpmässig variabel <span class="math inline">\(X\)</span> med en konstant <span class="math inline">\(a\)</span> så multipliceras dess varians och standardavvikelse, men det förändrar inte spridningens form (jämför <a href="k2-2-2.html">avsnitt 2.2</a>).</p>
+</div>
+<div id="de-stora-talens-lag" class="section level4" number="42.0.2.9">
+<h4>
+<span class="header-section-number">42.0.2.9</span> De stora talens lag<a class="anchor" aria-label="anchor" href="#de-stora-talens-lag"><i class="fas fa-link"></i></a>
+</h4>
+<p>Säg nu att vi har en sexsidig perfekt balanserad tärning och kastar denna 1 000 gånger. Givet att tärningen verkligen är perfekt balanserad och fortsätter att vara så under hela processen så är sannolikheten hög att vi kommer att få ungefär lika många utfall för varje sida (1 till 6).</p>
+<p>Medelvärdet av våra 1 000 resultat kommer att vara mycket nära 3,5, vilket är medelvärdet om varje tärningssida kommer upp exakt lika många gånger: (1+2+3+4+5+6)/6 = 3,5. Detta fenomen kallas inom statistik för <a href="https://sv.wikipedia.org/wiki/De_stora_talens_lag">De stora talens lag</a>. Lagen säger att medelvärdet av en stor samling slumpmässiga urval kommer närma sig det väntevärdet (det sanna medelvärdet).</p>
+<p>Små samlingar med värden, som till exempel 3 kast, löper större risk att avvika från medelvärdet, jämfört med samlingar med många värden. De stora talens lag är ingen fysisk lag som måste gälla i varje verkligt exempel. Till exempel, om vi skulle samla ihop 1 000 olika perfekt balanserade tärningar och slå varje tärning 1 000 gånger, så skulle några få av dessa resultat avvika kraftigt från medelvärdet.</p>
+<p>Och slår vi tillräckligt många tärningar kommer vi till slut även få de mest extrema resultaten, som till exempel 1 000 kast med värdet 6 varje gång och 1 000 kast med värdet 1 varje gång. Mer formaliserat kan stora talens lag formuleras på följande sätt: säg att vi har en oändlig sekvens av slumpmässiga variabler <span class="math inline">\(X_{1},X_{2},\ldots,X_{n}\)</span> som har samma väntevärde <span class="math inline">\(\mu\)</span>:</p>
+<p><span class="math display">\[E\left( X_{1} \right) = E\left( X_{2} \right) = \ldots = \mu \tag{15}\]</span></p>
+<p>Medelvärdet för <span class="math inline">\(n\)</span> av dessa variabler är:</p>
+<p><span class="math display">\[\overline{X_{n}} = \frac{1}{n}\sum_{i}^{n}X_{i} \tag{16}\]</span></p>
+<p>Stora talens lag kan då uttryckas som att följande <a href="https://www.matteboken.se/lektioner/matte-3/algebraiska-uttryck/gransvarde#!/">gränsvärde</a> är 1 då <span class="math inline">\(n\)</span> går mot oändlighet:</p>
+<p><span class="math display">\[\lim_{n \rightarrow \infty}{P\left( \left\| \overline{X_{n}} - \mu \right\| &lt; \epsilon \right)} = 1 \tag{17}\]</span></p>
+<p>där <span class="math inline">\(\left\| \overline{X_{n}} - \mu \right\|\)</span> är absolutbeloppet av medelvärdet <span class="math inline">\(\overline{X_{n}}\)</span> minus väntevärdet <span class="math inline">\(\mu\)</span>. Funktionen <span class="math inline">\(P()\)</span> beskriver sannolikheten för ett utfall. Termen <span class="math inline">\(\epsilon\)</span> är ett valfritt positivt tal, till exempel ett mycket lågt värde nära 0.
+Hela ekvationen kan läsas som att sannolikheten för att <span class="math inline">\(\left\| \overline{X_{n}} - \mu \right\|\)</span> är mindre än <span class="math inline">\(\epsilon\)</span> närmar sig 100 % då antalet slumpmässiga variabler <span class="math inline">\(X_{i}\)</span> växer till oändligt många, det vill säga <span class="math inline">\(n \rightarrow \infty\)</span>. Ett annat sätt att beskriva detta är att skillnaden mellan <span class="math inline">\(\overline{X_{n}}\)</span> och <span class="math inline">\(\mu\)</span> närmar sig 0 och denna skillnad kommer att vara mindre än det låga värdet <span class="math inline">\(\epsilon\)</span>.</p>
+<div class="ex-section-title">
+<p>Övningar</p>
+</div>
+<script>window.exerciseData=window.exerciseData||{};window.exerciseData["k2-5-1"]=[  {    "id": "k2-5-1-001",    "name": "Uppgift 1",    "exercise": "En variabel \\(X\\) följer en diskret likformig sannolikhetsfördelning med utfallen \\(\\{1, 2, 3, 4, 5, 6\\}\\). Vad är den kumulativa sannolikheten \\(F(3) = P(X \\leq 3)\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "\\(1/6\\)",          "\\(2/6\\)",          "\\(3/6\\)",          "\\(4/6\\)"        ],        "correct": "\\(3/6\\)"      }    },    "error": { "message": "För en likformig fördelning på \\(\\{1,...,6\\}\\) ges fördelningsfunktionen av \\(F(x) = x/6\\). Sätt in \\(x = 3\\)." },    "correct": { "message": "Rätt! \\(F(3) = P(X \\leq 3) = 3/6 = 0{,}5\\), det vill säga 50 %. Formeln \\(F(x) = x/6\\) gäller eftersom varje utfall har sannolikheten \\(1/6\\) och vi summerar upp till och med \\(x\\)." }  },  {    "id": "k2-5-1-002",    "name": "Uppgift 2",    "exercise": "Vad beskriver den kumulativa fördelningsfunktionen \\(F(m) = P(M \\leq m)\\)?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Sannolikheten för exakt utfall \\(m\\)",          "Sannolikheten att variabeln antar ett värde lika med eller mindre än \\(m\\)",          "Sannolikheten att variabeln antar ett värde större än \\(m\\)",          "Det förväntade värdet av variabeln"        ],        "correct": "Sannolikheten att variabeln antar ett värde lika med eller mindre än \\(m\\)"      }    },    "error": { "message": "Skillnaden mellan \\(f\\) och \\(F\\) är viktig: \\(f\\) beskriver sannolikheten för ett enskilt utfall, medan \\(F\\) är kumulativ." },    "correct": { "message": "Rätt! \\(F(m) = P(M \\leq m)\\) är den kumulativa fördelningsfunktionen och beskriver sannolikheten att variabeln \\(M\\) antar ett värde som är \\(m\\) eller lägre." }  },  {    "id": "k2-5-1-003",    "name": "Uppgift 3",    "exercise": "Vad säger De stora talens lag?",    "image": null,    "inputtype": "button",    "multichoice": {      "q1": {        "label": "Välj ett alternativ:",        "options": [          "Att medelvärdet av ett litet urval alltid är exakt lika med populationens väntevärde",          "Att medelvärdet av en stor samling slumpmässiga urval kommer att närma sig väntevärdet",          "Att alla slumpmässiga variabler följer en normalfördelning om urvalet är tillräckligt stort",          "Att variansen i ett urval minskar till noll när antalet observationer ökar"        ],        "correct": "Att medelvärdet av en stor samling slumpmässiga urval kommer att närma sig väntevärdet"      }    },    "error": { "message": "De stora talens lag handlar om vad som händer med medelvärdet när antalet observationer ökar mot oändligheten." },    "correct": { "message": "Rätt! De stora talens lag säger att \\(\\lim_{n \\rightarrow \\infty} P(|\\overline{X_n} - \\mu| < \\epsilon) = 1\\). Medelvärdet av tillräckligt många slumpmässiga urval konvergerar mot populationens väntevärde \\(\\mu\\)." }  },  {    "id": "k2-5-1-004",    "name": "Uppgift 4",    "exercise": "En slumpmässig variabel \\(X\\) kan anta värdena 1, 2, 3, 4, 5 och 6 med lika sannolikhet \\(1/6\\) vardera. Beräkna väntevärdet \\(E(X)\\) enligt formeln \\[E(X) = \\sum_{i}^{n} x_i P(x_i)\\] Ange ditt svar med en decimal.",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "3.5" },    "answerformat": "Ange svaret med en decimal, t.ex. 3.5",    "error": { "message": "Multiplicera varje utfall med sannolikheten \\(1/6\\) och summera: \\(1 \\cdot \\frac{1}{6} + 2 \\cdot \\frac{1}{6} + \\ldots + 6 \\cdot \\frac{1}{6}\\)." },    "correct": { "message": "Rätt! \\(E(X) = (1 + 2 + 3 + 4 + 5 + 6) \\cdot \\frac{1}{6} = \\frac{21}{6} = 3{,}5\\). Väntevärdet 3,5 är vad vi förväntar oss i genomsnitt om vi kastar tärningen oändligt många gånger." }  },  {    "id": "k2-5-1-005",    "name": "Uppgift 5",    "exercise": "Vi har en slumpmässig variabel \\(X\\) med \\(E(X) = 4\\). Vi definierar en ny variabel \\(W = 3X + 2\\). Vad är \\(E(W)\\)?",    "image": null,    "inputtype": "field",    "expectedanswer": { "Svar": "14" },    "answerformat": "Ange ett heltal",    "error": { "message": "Använd linearitetsregeln: \\(E(aX + b) = aE(X) + b\\). Vad är \\(a\\) och \\(b\\) i detta fall?" },    "correct": { "message": "Rätt! Eftersom \\(E(aX + b) = aE(X) + b\\) får vi \\(E(3X + 2) = 3 \\cdot E(X) + 2 = 3 \\cdot 4 + 2 = 14\\). Konstanter kan 'plockas ut' ur väntevärdesfunktionen." }  }];</script><div class="exercise-section" data-section-id="k2-5-1">
+
+</div>
+<hr>
+<div class="next-section-link">
+<p><a href="k2-5-2.html">→ Nästa avsnitt: <strong>Kontinuerliga sannolikhetsfördelningar</strong></a></p>
+</div>
+
+</div>
+</div>
+</div>
+<script src="js/exercises.js"></script><script>
+(function () {
+  function translateFooter() {
+    var footer = document.querySelector('footer.bg-primary');
+    if (!footer) return;
+    footer.innerHTML = '<div class="container"><div class="row"><div class="col-12 mt-3"><p>Detta kursmaterial är skapat av Erik Hegelund. Byggd med R-paketet bookdown. Se även min gratis <a class="text-light" href="https://erik372.github.io/cheatcode/">lärobok</a>.</p></div></div></div>';
+  }
+
+  function translateUI() {
+    // Vänster sidopanel rubrik
+    var tocLeft = document.querySelector('nav[aria-label="Table of contents"] h2');
+    if (tocLeft) tocLeft.textContent = 'Innehållsförteckning';
+    var navLeft = document.querySelector('nav.sidebar');
+    if (navLeft) navLeft.setAttribute('aria-label', 'Innehållsförteckning');
+
+    // Sökfält
+    var search = document.getElementById('search');
+    if (search) {
+      search.setAttribute('placeholder', 'Sök');
+      search.setAttribute('aria-label', 'Sök');
+    }
+
+    // Navigeringspilarna
+    var prev = document.querySelector('.chapter-nav .prev');
+    if (prev) prev.setAttribute('aria-label', 'Föregående');
+    var next = document.querySelector('.chapter-nav .next');
+    if (next) next.setAttribute('aria-label', 'Nästa');
+
+    // Ta bort source/edit-länkarna
+    ['book-source', 'book-edit', 'book-repo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var container = el.closest('li') || el.closest('p') || el.parentElement;
+      if (container && container !== document.body) container.remove();
+      else el.remove();
+    });
+  }
+
+  function colorNavSections() {
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+    var items = navList.querySelectorAll('li');
+    var currentClass = '';
+    items.forEach(function (li) {
+      if (li.classList.contains('book-part')) {
+        var text = li.textContent || '';
+        if (text.indexOf('Kurs 1') !== -1) currentClass = 'nav-kurs1';
+        else if (text.indexOf('Kurs 2') !== -1) currentClass = 'nav-kurs2';
+        else currentClass = '';
+        li.classList.add(currentClass);
+      } else if (currentClass) {
+        li.classList.add(currentClass);
+      }
+    });
+  }
+
+  // Gör kapitellistan kollapsbar: avsnitt döljs under sin kapitelrubrik.
+  // Avsnittssidor har href-mönstret k1-1-1.html / k2-3-4.html.
+  function buildCollapsibleTOC() {
+    var navList = document.querySelector('ul.book-toc');
+    if (!navList) return;
+
+    var sectionRe = /^k[12]-\d+-\d+\.html/;
+    var items = Array.from(navList.children);
+
+    var chapterLi = null;
+    var pending = [];
+
+    function flush() {
+      if (!chapterLi || pending.length === 0) { pending = []; return; }
+
+      // Expandera om ett avsnitt i kapitlet är aktivt, eller om kapitelövervyn är aktiv
+      var hasActive = chapterLi.querySelector('a.active') !== null ||
+        pending.some(function (li) { return li.querySelector('a.active') !== null; });
+
+      var sub = document.createElement('ul');
+      sub.className = 'toc-sections';
+      sub.style.display = hasActive ? '' : 'none';
+
+      pending.forEach(function (li) {
+        navList.removeChild(li);
+        sub.appendChild(li);
+      });
+      chapterLi.appendChild(sub);
+
+      if (hasActive) chapterLi.classList.add('toc-chapter-open');
+
+      // Pil-span inuti länken: togglar sektioner utan att navigera.
+      // Klick på länktexten navigerar till kapitelöversiktssidan som vanligt.
+      var a = chapterLi.querySelector('a');
+      if (a) {
+        a.classList.add('toc-chapter-toggle');
+        var arrow = document.createElement('span');
+        arrow.className = 'toc-toggle-btn';
+        arrow.textContent = hasActive ? '▾' : '▸';
+        arrow.setAttribute('aria-hidden', 'true');
+        a.appendChild(arrow);
+
+        arrow.addEventListener('click', function (e) {
+          e.stopPropagation();
+          e.preventDefault();
+          var isOpen = sub.style.display !== 'none';
+          sub.style.display = isOpen ? 'none' : '';
+          chapterLi.classList.toggle('toc-chapter-open', !isOpen);
+          arrow.textContent = isOpen ? '▸' : '▾';
+        });
+      }
+      pending = [];
+    }
+
+    items.forEach(function (li) {
+      var a = li.querySelector('a');
+      if (!a) {
+        // book-part-delare: avsluta föregående kapitel
+        flush();
+        chapterLi = null;
+        return;
+      }
+      var href = decodeURIComponent(a.getAttribute('href') || '');
+      if (sectionRe.test(href)) {
+        if (chapterLi) pending.push(li);
+      } else {
+        flush();
+        chapterLi = li;
+      }
+    });
+    flush();
+  }
+
+  function init() {
+    translateFooter();
+    translateUI();
+    colorNavSections();   // Färgsätt innan vi flyttar om DOM-noder
+    buildCollapsibleTOC();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script><div class="chapter-nav">
+<div class="prev"><a href="regressionsanalys-med-sannolikhet.html">Regressionsanalys med sannolikhet</a></div>
+<div class="next"><a href="k2-5-2.html"><span class="header-section-number">43</span> Kontinuerliga sannolikhetsfördelningar</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#k2-5-1"><span class="header-section-number">42</span> Slumpmässiga variabler och diskreta sannolikhetsfördelningar</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#begrepp-41"><span class="header-section-number">42.0.1</span> Begrepp</a></li>
+<li><a class="nav-link" href="#teori-41"><span class="header-section-number">42.0.2</span> Teori</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/blob/master/sec-k2-5-1.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/edit/master/sec-k2-5-1.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Matematik och statistik för samhällsvetare</strong>" was written by Erik Hegelund. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
