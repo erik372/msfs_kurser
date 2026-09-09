@@ -39,7 +39,7 @@ där *q* och *p* är våra variabler och siffrorna är våra koefficienter. Ekva
 #### Jämviktspriset
 Nu söker vi jämviktspriset, vilket är det värde för *p* som ger att $q_{\text{utbud}} = q_{\text{efterfrågan}}$. I denna situation är alltså utbud och efterfrågan lika och marknaden är i jämvikt.
 
-Vi kan börja med att rita upp ekvationssystemet i ett diagram, se figur 1. I diagrammet har vi två linjer, en per ekvation i ekvationssystemet. Kurvan som lutar uppåt till höger är den första ekvationen i systemet, funktionen för $q_{\text{utbud}}$. Den andra linjen, som lutar ned åt höger i bilden, är funktionen för $q_{\text{efterfrågan}}$. I diagrammet möts linjerna vid en unik punkt, som definierar jämviktspriset $p^{*}$ och jämviktskvantiteten $q^{*}$.
+Vi kan börja med att rita upp ekvationssystemet i ett diagram, se figur 1. I diagrammet har vi två linjer, en per ekvation i ekvationssystemet. Kurvan som lutar uppåt till höger är den första ekvationen i systemet, funktionen för $q_{\text{utbud}}$. Den andra linjen, som lutar ned åt höger i bilden, är funktionen för $q_{\text{efterfrågan}}$. I diagrammet möts linjerna vid en unik punkt, som definierar jämviktspriset $p^{*}$ och jämviktskvantiteten $q^{*}$. Vi markerar jämviktsnivån, lösningen på ekvationssystemet, med upphöjd stjärna (asterisk).
 
 Så länge beteendet hos säljare och köpare är konstant kommer jämviktspriset och jämviktsutbudet att vara detsamma. Om villkoren för köpare och säljare ändras, så ändras också marknadens pris och kvantitet. Vi kan tänka på denna teoretiska figur som ett resonemang om var pris och såld kvantitet kommer att befinna sig i genomsnitt på lång sikt, så länge de mer långsiktiga villkoren för köpare och säljare inte ändras.
 
@@ -50,9 +50,9 @@ Så länge beteendet hos säljare och köpare är konstant kommer jämviktsprise
 
 ::: {.fig-caption}
 Beskrivning: Diagrammet illustrerar ett ekvationssystem med två funktioner och en linje i diagrammet per funktion. Linjerna för utbud och efterfrågan kallas ofta för utbudskurvan och efterfrågekurvan. Där linjerna möts är systemet i jämvikt. I detta fall har vi jämviktspris $p^{*} = 4$ och jämviktsutbud $q^{*} = 12$.
+:::
 
 För att räkna ut jämviktspris sätter vi $q_{\text{utbud}}$ och $q_{\text{efterfrågan}}$ lika med varandra och löser för *p*:
-:::
 
 
 
